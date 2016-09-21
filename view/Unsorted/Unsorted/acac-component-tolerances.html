@@ -1,0 +1,28 @@
+<h2>How to take component tolerances into account</h2>
+
+<p>When designing any circuit, it is necessary to take account of the unavoidable variations that arise as part of the manufacturing process which lead to the value of some characteristic of the component - the resistance of a resistor or the voltage of a regulator - differing from the desired value.</p>
+
+<p>We&#39;ll use the voltage input circuit as an example.</p>
+
+<p><img alt="Arduino AC voltage input circuit diagram" src="http://localhost/docs/files/tolerances example.png" style="width: 400px; height: 290px; " /></p>
+
+<p>To enable the best use of the Arduino analog input range, the input voltage should swing between 0&nbsp;V and the supply voltage, nominally +5&nbsp;V. To do that successfully, we must take the worst case conditions into account when we do the calculation.</p>
+
+<ol>
+	<li>The AC mains voltage isn&#39;t always 240&nbsp;V (or whatever it should be in your locality).<br />
+	Normally, the voltage will vary by up to 10% either side of the nominal value. For safety, we must use the highest possible voltage for the calculations.</li>
+	<li>The adapter is not working at full load.<br />
+	If the unloaded voltage of the adapter is known, use that. Otherwise, for the type of adapter normally used, add 20% to the nominal voltage.</li>
+	<li>The Arduino voltage supply may not be exactly 5&nbsp;V.<br />
+	The voltage regulator output may lie between 4.8&nbsp;V and 5.2&nbsp;V. The worst case is when the voltage is low, so we must use 4.8&nbsp;V in the calculations.</li>
+	<li>The bias chain resistors might not be equal.<br />
+	Each resistor may be wrong by 1%, the worst case is if they are wrong in opposite directions, when the midpoint will be 1% wrong.</li>
+	<li>The divider chain resistors might be wrong.<br />
+	Each resistor may be wrong by 1%, the worst case is if R2 is low and R1 is high. In this case because they are significantly different values, the divided voltage will be 2% high.</li>
+</ol>
+
+<p>How does this work in practice? Let us assume we have a Mascot adapter and we are in the UK. The highest UK mains voltage is 240&nbsp;V&nbsp;+&nbsp;6%, or&nbsp;254.4&nbsp;V. The adapter is labelled &quot;Input:&nbsp;230&nbsp;V, Output&nbsp;9&nbsp;V&quot;, so the output voltage might be as high as 9&nbsp;&times;&nbsp;254.4&nbsp;/&nbsp;230&nbsp;=&nbsp;9.95&nbsp;V, to which we must add 20% because there is no load, so 11.95&nbsp;V. This is the rms value, the peak value is 11.95&nbsp;V&nbsp;&times;&nbsp;&radic;2&nbsp;=&nbsp;16.9&nbsp;V.</p>
+
+<p>The voltage we want at the Arduino input is 4.8&nbsp;V peak-to-peak, but the entire range is available only if the bias is exactly at the midpoint of 2.4&nbsp;V. The midpoint may be as low as 2.376 or as high as 2.424&nbsp;V (it doesn&#39;t matter which), so our peak AC voltage is restricted to 2.376&nbsp;V.</p>
+
+<p>Let&#39;s choose an R1 value of 10 k&Omega;, except of course, it isn&#39;t, it is high by 1%, so the actual value is 10.1&nbsp;k&Omega;. That means the peak current in R1 is 2.376&nbsp;V&nbsp;&divide;&nbsp;10.1&nbsp;k&Omega;&nbsp;=&nbsp;0.235&nbsp;mA. This current also flows in R2 and the voltage across R2 is 16.9&nbsp;V -&nbsp;2.376&nbsp;V, so the exact value for R2 is (16.9&nbsp;-&nbsp;2.376)&nbsp;V&nbsp;&divide;&nbsp;0.235&nbsp;mA&nbsp;=&nbsp;61.8&nbsp;k&Omega;. Under our worst-case conditions, this is 1% low, so the ideal resistor should be 62.42&nbsp;k&Omega;. Unfortunately, this is a little above a standard value. If it is acceptable to risk clipping the waveform under very worst case conditions, a 62&nbsp;k&Omega; resistor could be used. Otherwise the next higher, standard value, 68&nbsp;k&Omega;, must be chosen.</p>

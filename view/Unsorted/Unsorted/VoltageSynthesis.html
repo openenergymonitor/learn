@@ -1,0 +1,46 @@
+<h2>Investigation of using Voltage Synthesis to approximate real power and power factor in mains AC energy measurement.</h2>
+<p><strong>Download</strong> </p>
+<p><a href="http://localhost/docs/files/CTSynth.pde">Voltage Synthesis Arduino Sketch</a></p>
+<h3>Main points</h3>
+<p>The voltage synthesis method works for resistive loads and loads with switched mode power supplies that give an apparent power factor of less than 1.0. It does not however work for &ldquo;real&rdquo; reactive loads like washing machines and fridges.</p>
+<p>For household use were there is a mix of laptops, lights, washing machines and fridges, etc it is probably better to go with a method that measures the voltage waveform directly using a power adapter or other method which will be one of the next steps of development.</p>
+<p>If your loads are only laptops and lights then voltage synthesis does add a little extra functionality without the added cost and complication of measuring the voltage directly and so I will leave the details of this method and investigation here in-case it is of any use.</p>
+<h3>Details</h3>
+<p>Laptops (switched mode power supplies) and all the resistive loads connected gave the correct real power and power factor. Switched mode power supplies if I understand correctly have what is called apparent power factor were the power factor can be less than 1.0 yet the voltage and current waveforms are still completely in -phase which is due to non-linear current draw as described in this article:</p>
+<p><a href="http://www.ecnasiamag.com/article-26246-understandingpowerfactorandinputcurrentharmonicsinswitchedmodepowersupplies-Asia.html">Understanding power factor and input current harmonics in switched mode power supplies</a></p>
+<p>Food mixers were not reactive enough to be a visible problem, they gave power factors of around 0.92</p>
+<p>The fridge and washing machine were highly reactive, causing the voltage synthesis method to give completely erroneous results due to the fact that the voltage synthesis method was aligning the synthesised voltage waveform to be in phase with the current waveform that was out of phase with the real voltage phase. In the first test I performed I did not check fridges or washing machines ... a large error :)</p>
+<p>Further significant errors that should not have been present were present in the results for Irms and Apparent power that are likely to be due to crude experimental method.</p>
+<p>Below is a discussion of the power factor graph and the Irms graph, real power and apparent power graphs can be found at the end.</p>
+<h3>Power Factor graph.</h3>
+<p><img width="350" height="350" align="left" alt="" src="http://localhost/docs/files/pf01.png" /><img width="350" height="350" alt="" src="http://localhost/docs/files/pf_0.png" /></p>
+<p><strong>Left:</strong> power factor comparison the first time around with a mixture of laptops and incandescent light bulbs.</p>
+<p><strong>Right:</strong> power factor comparison showing results of laptop, small light bulb, food mixers, fridge and washing machine.</p>
+<p>The results clearly show that voltage synthesis does not work well for &ldquo;real&rdquo; reactive loads like fridges and washing machines but does work for appliances with switched mode power supplies that have apparent power factor.</p>
+<p>An interesting point to note though is that when the fridge is measured by itself the power factor calculated is much more erroneous than when it is measured alongside the laptop. This is due to the current spike of the laptop being higher than the highest point on the fridges current waveform, and so the voltage synthesis method which aligns the synthesised voltage waveform with the overall peak of the current waveform aligns to the laptop spike which is in phase with the real voltage waveform. As long as the peak of the current waveform is in phase the voltage synthesis method works.</p>
+<p>The first investigation tested many variations of different light bulbs and laptops and heating elements and hence the linearity is a lot more evident. In the second experiment the only thing connected with a power factor of 1.0 was a toasty maker that had a large enough current draw to drown out the effects of the laptop.</p>
+<h3>Experimental method</h3>
+<p><strong>and discussion of errors arising from crude experimental method.  </strong></p>
+<p>Measurements from the mains AC non-invasive method were compared with measurements from a cheap commercial plug in power meter.</p>
+<p>The mains AC non-invasive method calculated values for real power apparent power, power factor, irms and vrms twice a second. These values are then fed into KST graphing software and a mean is calculated for the last 10 measurements of each value. This makes it easier to note the values down by hand since they don't change so much.</p>
+<p>The mains plug meter updates once a second and appears to be more stable than the AC non-invasive method, although its stability varies significantly with the type of load connected as does the AC non-invasive method.</p>
+<p>Measurements were recorded in OpenOffice Calc manually one after the other in the following order:</p>
+<p>Mains AC non invasive method:</p>
+<p class="rteindent1"><em>Vrms (set manually) &rarr; Irms &rarr; Power Factor &rarr; Real Power &rarr; Apparent Power  </em></p>
+<p>and then straight on to  Commercial plug in meter</p>
+<p class="rteindent1"><em>Vrms &rarr; Irms &rarr; Power Factor &rarr; Real Power  </em></p>
+<p>The plug in meter does not display apparent power and so apparent power was calculated by dividing real power by the power factor.</p>
+<p>I tried to note down the values as quick as I could but there was I think about 2 to 3 second between each measurement.</p>
+<p>This delay between each measurement meant that the Irms calculated by the non-invasive method which is already an average of the preceding 5 seconds was compared to an Irms about 10 seconds later on the power meter.</p>
+<p>This wasn't a large problem when the values displayed by both methods were quite stable but became a problem with the washing machine since it kept changing the spin speed and kept switching various things on and off. The washing machine also seemed to have significant variation over the second time scale going from 1.05A to 1.79A and then back down randomly. The data points circled in red in the figure below of rms current of the power meter against the rms current calculated by the non-invasive method are all washing machine data points, I would expect them to all fall on the line had I been able to take simultaneous measurement, this problem also afflicts the apparent power graph which one would also expect the data points to fall on the straight line.&nbsp;</p>
+<p><img width="350" height="350" alt="" src="http://localhost/docs/files/Irms.png" /></p>
+<h3>Other graphs</h3>
+<p><strong>Real Power  </strong></p>
+<p>erroneous result from reactive loads are clearly visible as discussed in the section on the power factor graph.</p>
+<p><img width="350" height="350" alt="" src="http://localhost/docs/files/real power.png" /></p>
+<p><strong>Apparent power</strong></p>
+<p>Errors due to crude experimental method as discussed above are clearly visible.</p>
+<p><img width="350" height="350" alt="" src="http://localhost/docs/files/apparentpower.png" /></p>
+<h3>Download the results</h3>
+<p>First investigation - no &quot;real&quot; reactive loads<a href="http://localhost/docs/files/Results01.ods"> Results01.ods</a></p>
+<p>Second investigation - with fridge and washing machine <a href="http://localhost/docs/files/Results02.ods">Results02.ods</a></p>

@@ -1,0 +1,104 @@
+<h2>Overview</h2>
+
+<p>SMA is a German company who produces DC to AC inverters used with PV systems and other renewable energy sources (for grid connection etc.). &nbsp;Many models include a <a href="https://en.wikipedia.org/wiki/Bluetooth">Bluetooth</a> interface.</p>
+
+<h2>Importing data into Open Energy Monitor</h2>
+
+<p>Two approaches have been used to make this data available&nbsp;to Open Energy Monitor:</p>
+
+<ol>
+	<li>Stuart Pittaway&#39;s code (see below) runs on Arduino / <a href="http://www.nanode.eu/what-is-nanode/">Nanode</a> hardware.</li>
+	<li>Using <a href="https://github.com/sma-bluetooth">sma-bluetooth</a>&nbsp;(see bottom of&nbsp;article) running on a suitable computer (e.g. a Raspberry&nbsp;Pi).</li>
+</ol>
+
+<p>?The choice of which one to use will be determined by the other components in use in your Open Energy Monitor system, and whether they can reliably communicate with the Inverter using the Bluetooth protocol.</p>
+
+<h2>Arduino / Nanode based</h2>
+
+<p><span style="line-height: 1.6;">I&#39;ve just ordered a </span>Nanode<span style="line-height: 1.6;"> in preparation for my contribution to the </span>OpenEnergyMonitor<span style="line-height: 1.6;"> project. (Oct 2011)</span></p>
+
+<p>I&#39;m going to be looking at interfacing a Nanode to the SMA&nbsp;SunnyBoy range of PV&nbsp;inverters (<a href="http://www.sma.de/en/products/solar-inverters/sunny-boy.html">http://www.sma.de/en/products/solar-inverters/sunny-boy.html</a>)</p>
+
+<p>Newer inverters have a Bluetooth interface for accessing their internal readings, including measurements for DC voltage/current (from solar panels) mains AC, current, voltage and generation history.</p>
+
+<p>Most of the inverters also contain an inbuilt relay which can be toggled via bluetooth by issuing the proper commands.</p>
+
+<p>Unfortunately the protocols used via Bluetooth have not been released to the public, but I&#39;ve managed to create a working prototype (written in C# also ported to Python) that exports PV data to my website (<a href="http://www.solarstats.co.uk">www.solarstats.co.uk</a>) every 10 minutes.</p>
+
+<p>Hopefully, OpenEnergyMonitor can eventually display PV performance on its gLCD display as well as the other measurements.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Update Feb 7th 2012</strong></p>
+
+<p>I&#39;ve uploaded the first version of my monitoring code to Github https://github.com/stuartpittaway/nanodesmapvmonitor</p>
+
+<p>Its a big sketch - compiles to nearly 30.5Kbytes !</p>
+
+<p>https://github.com/stuartpittaway/nanodesmapvmonitor/blob/master/README&nbsp; on GITHUB has more detail.</p>
+
+<p>Tested with SMA3000HF, 3000TL, 4000TL - but in theory should work with all Bluetooth enabled inverters. Please email me your success/failure stories and I&#39;ll update/fix!</p>
+
+<p>You will need to modify the code (see APIKey.h for constants) to configure your passwords/keys for Pachube/SolarStats.co.uk and PVOutput.org sites and disable the ones you don&rsquo;t need.<br />
+<br />
+You can set your location&#39;s lat/long and the code will automatically determine when to start monitoring your PV system.<br />
+<br />
+Once the code is uploaded to the Arduino/nanode device, make PIN14 high, and power on the board. This forces an automatic SMA inverter Bluetoth scan/discovery. Once the address has been retrieved, it is stored in EEPROM.<br />
+<br />
+Connect a serial cable to the Nanode board (115000,8,n,1 baud rates) to see debug messages.<br />
+<br />
+You should see messages like...<br />
+PWR UP<br />
+free mem=401<br />
+MAC=0004A32C1F88<br />
+DHCP<br />
+IP:192.168.1.102<br />
+GW:192.168.1.1<br />
+DNS:8.8.8.8<br />
+LOOP..<br />
+free mem=341<br />
+*Logon*<br />
+Fake time resync<br />
+*LOOP*<br />
+22:16:27 20120207<br />
+22:16:29 20120207<br />
+22:16:32 20120207<br />
+22:16:34 20120207<br />
+<br />
+The code needs integration with OpenEnergyMonitor and heavy reduction in program space. Approximately 300 bytes of RAM are free during operation.<br />
+<br />
+Its currently updating emonCMS, Pachube, SolarStats.co.uk and PVOutput.org at the same time <img alt="" src="https://openenergymonitor.org/emon/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/teeth_smile.gif" /></p>
+
+<p>On Pachube, I&#39;m uploading the free RAM and millis() counter once per minut. So far, I&#39;ve managed to go 4 days without a restart.</p>
+
+<p>You can see the output at</p>
+
+<p>http://pvoutput.org/list.jsp?userid=4206</p>
+
+<p>https://pachube.com/feeds/40789</p>
+
+<p>&nbsp;<img alt="Graph" src="https://api.pachube.com/v2/feeds/40789/datastreams/4.png?width=700&amp;height=330&amp;colour=%23f15a24&amp;duration=48hours&amp;title=Solar%20PV%20Generation%20-%20Instant%20Power%20%28watts%29&amp;stroke_size=3&amp;show_axis_labels=true&amp;detailed_grid=true&amp;scale=auto&amp;timezone=London" /></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Update 21 Feb</strong></p>
+
+<p>Happy to report my code and Nanode 5 have been running continuously for 10 days straight now without a single reboot or restart of the BT&nbsp;chip.&nbsp; I&#39;m using Pachube to monitor uptime.&nbsp;<a href="http://binaereoptionen.over-blog.com/">http://binaereoptionen.over-blog.com/</a></p>
+
+<p>You can see where the code &quot;goes to sleep&quot; (dotted line) then wakes up at sunrise to begin data capture - during this time, the Bluetooth and Ethernet are kept awake, although I plan to shut both of them down and put the CPU in sleep mode.</p>
+
+<p>There&#39;s no RAM leaks. I&#39;m also logging this to Pachube, and the value has been constant for 10 days.</p>
+
+<p><img alt="" src="https://api.pachube.com/v2/feeds/40789/datastreams/2.png?width=700&amp;height=300&amp;colour=%23f124b3&amp;duration=30days&amp;title=Nanode%205%20uptime&amp;stroke_size=3&amp;show_axis_labels=true&amp;detailed_grid=true&amp;scale=datastream&amp;timezone=London" /></p>
+
+<p>&nbsp;</p>
+
+<h2>Using sma-bluetooth on a Raspberry Pi etc.</h2>
+
+<p>Your chosen hardware will require a Bluetooth radio (a &pound;5 GPB USB &lt;-&gt; Bluetooth&nbsp;adaptor has been used successfully). &nbsp;Known-working on Debian&nbsp;8.0&nbsp;i386.</p>
+
+<ol>
+	<li>Compile and install the code at&nbsp;<a href="https://github.com/sma-bluetooth">https://github.com/sma-bluetooth</a>&nbsp;- verify standalone operation via the command&nbsp;line.</li>
+	<li>Use the emonhub patches&nbsp;detailed in&nbsp;<a href="https://openenergymonitor.org/emon/node/10683">https://openenergymonitor.org/emon/node/10683</a>&nbsp;to&nbsp;import data into Open Energy Monitor.</li>
+	<li>Improve this documentation.</li>
+</ol>

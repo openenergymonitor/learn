@@ -1,0 +1,51 @@
+<h1>HopeRF RFM69CW - wireless transceiver&nbsp;</h1>
+
+<p>The RFM69CW&nbsp;is a&nbsp;pin-compatiable replacement for the RFM12B. The module is manufactured by HopeRF with SEMTEC&nbsp;silicon.</p>
+
+<p><a href="http://www.hoperf.com/upload/rf/RFM69CW-V1.1.pdf">Download Datasheet</a></p>
+
+<p><a href="http://www.hoperf.com/rf/fsk_module/RFM69CW.htm">Hope RF Product Page</a></p>
+
+<p>With the updated RF12&nbsp;driver from JeeLabs the RFM69CW can be backwards compatible with the RFM12B&nbsp;</p>
+
+<p><a href="http://localhost/docs/files/RFM69C.jpg"><img alt="" src="http://localhost/docs/files/RFM69C.jpg" style="height:145px; width:150px" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>Credit to <a href="http://lowpowerlab.com/">LowPowerLab.com</a> for comparison table:&nbsp;</p>
+
+<p><a href="http://localhost/docs/files/comparison.jpg"><img alt="" src="http://localhost/docs/files/comparison.jpg" style="height:309px; width:400px" /></a></p>
+
+<p>Another RFM12B comparison from&nbsp;<a href="http://www.mikrocontroller.net/articles/RFM69">http://www.mikrocontroller.net/articles/</a>RFM69</p>
+
+<p><a href="http://localhost/docs/files/Selection_081.jpg"><img alt="" src="http://localhost/docs/files/Selection_081.jpg" style="height:156px; width:700px" /></a></p>
+
+<p>The native frequency of the RFM69CW can be identified by the addition of an RF network capacitor on the 433Mhz&nbsp;unit.</p>
+
+<p><a href="http://localhost/docs/files/RFM69CW_RF.png"><img alt="" src="http://localhost/docs/files/RFM69CW_RF.png" style="width: 400px; height: 194px;" /></a></p>
+
+<p><a href="http://localhost/docs/files/RFM69CW-V1.1_Hope_pinouts.jpg"><img alt="" src="http://localhost/docs/files/RFM69CW-V1.1_Hope_pinouts.jpg" style="width: 435px; height: 253px;" /></a></p>
+
+<p><a href="http://localhost/docs/files/RFM%20Radios.png"><img alt="" src="http://localhost/docs/files/RFM%20Radios.png" style="width: 580px; height: 118px;" /></a></p>
+
+<h2>Software:</h2>
+
+<p>JeeLabs RF12 JeeLib RF12&nbsp;Arduino Library Driver:<a href="https://github.com/jcw/jeelib">&nbsp;https://github.com/jcw/jeelib</a></p>
+
+<p>?JeeLabs Forum RF12 RFM69CW discussion topic:<a href="http://jeelabs.net/boards/6/topics/4050">&nbsp;http://jeelabs.net/boards/6/topics/4050</a></p>
+
+<p>?<strong>To make existing sketches work with RFM69CW&nbsp;, update to latest JeeLib and&nbsp;add&nbsp;<em>#define RF69_COMPAT 1</em>&nbsp; before&nbsp;<em>#include &lt;JeeLib.h&gt; . <a href="https://github.com/jcw/jeelib/blob/master/examples/RF12/RF12demo/RF12demo.ino#L9">See JeeLib example&nbsp;</a>.&nbsp;</em></strong><em>(RF69_COMPAT 0 if using RFM12B)</em></p>
+
+<p>&nbsp;</p>
+
+<h2>Links:</h2>
+
+<p>Hope RF Product Page:&nbsp;<a href="http://www.hoperf.com/rf/fsk_module/RFM69CW.htm">http://www.hoperf.com/rf/fsk_module/RFM69CW.htm</a></p>
+
+<p>RFM69CW Datasheet:&nbsp;<a href="http://www.hoperf.com/upload/rf/RFM69CW-V1.1.pdf">http://www.hoperf.com/upload/rf/RFM69CW-V1.1.pdf</a></p>
+
+<h2>&nbsp;</h2>
+
+<h2>Issues</h2>
+
+<p>The RFM69CW&nbsp;requires a&nbsp;10K-100K pull-up resistor on the SEL to de-select it from the SPI bus to allow ISP uploading:&nbsp;<a href="https://openenergymonitor.org/emon/node/5345">https://openenergymonitor.org/emon/node/5345</a></p>

@@ -1,0 +1,259 @@
+<h1>Optical Utility Meter LED Pulse Sensor</h1>
+
+<p>The Optical Pulse Sensor&nbsp;works by sensing a utility meter&#39;s pulsed LED output. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses the meters KWh value can be calculated.</p>
+
+<p>Unlike&nbsp;clip-on&nbsp;CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. The pulse counting cannot provide an instantaneous power reading like CT based monitoring can. Where possible, we&nbsp;recommend using pulse counting in conjunction with CT monitoring. The emonPi&nbsp;and emonTx can simultaneously&nbsp;perform pulse counting and CT based monitoring.&nbsp;</p>
+
+<p><img alt="" src="http://localhost/docs/files/optical_pulse.JPG" style="width: 350px; height: 289px;" />&nbsp; &nbsp; &nbsp;<a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/" style="line-height: 20.7999992370605px;"><img alt="" src="http://localhost/docs/files/Trolley.png" style="width: 64px; height: 64px;" /></a><strong><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Store</a></strong></p>
+
+<h2>Specifications:</h2>
+
+<ul>
+	<li>Pulse Output: TTL synchronised with the LED light pulses of energy meter.</li>
+	<li>Sensing Spectrum: IR to Light</li>
+	<li>Indicator: LED light at the top which synchronises with the pulses</li>
+	<li>Suitable for: all types of utility meters with pulse output: single-phase, multi-phase meters, water gas and electricity</li>
+	<li>Sticky attachment&nbsp;</li>
+	<li>Power supply: 3.3V - 5V&nbsp;</li>
+	<li>Diameter: 22mm&nbsp;</li>
+	<li>RJ45 Connector</li>
+	<li>1m Cable</li>
+</ul>
+
+<h2>RJ45 Connector Pin-out:</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>RJ45 Pin 2 - VCC</li>
+	<li>RJ45 Pin 5 - GND</li>
+	<li>RJ45 Pin 6 - TTL Data</li>
+</ul>
+
+<h1>Compatibility&nbsp;&amp; Firmware Update</h1>
+
+<p>The pulse sensor is compatible with the&nbsp;emonPi and&nbsp;emonTx V3.4 (with RJ45&nbsp;socket) . A firmware update may be required if the unit was purchased before July 2015.&nbsp;</p>
+
+<p><em>The sensor will also work with the older&nbsp;emonTx&nbsp;V3.2 if the&nbsp;RJ45&nbsp;plug is snipped then wired&nbsp;direct into the terminal block.&nbsp;Or, an RJ45 breakout board could be used.</em></p>
+
+<h2 style="line-height: 23.1111106872559px;">emonPi</h2>
+
+<p style="line-height: 23.1111106872559px;"><u>emonPi&nbsp;min firmware: V1.7</u></p>
+
+<p style="line-height: 23.1111106872559px;">emonPi&nbsp;firmware is displayed on the LCD at boot-up&nbsp;or can be requested via serial:<br />
+$&nbsp;minicom&nbsp;-D /dev/ttyAMA0&nbsp;-b38400<br />
+then send the command &#39;v&#39; to return the firmware version and RF settings.&nbsp;</p>
+
+<p style="line-height: 23.1111106872559px;">emonPi&nbsp;firmware can easily by updated by clicking &#39;Update&#39; in the Admin section of&nbsp;Emoncms&nbsp;once logged in locally. See&nbsp;<a href="https://openenergymonitor.org/emon/modules/emonpi#update">Firmware&nbsp;Update&nbsp;section of&nbsp;emonPi&nbsp;Getting Started Guide</a>.&nbsp;</p>
+
+<h2>emonTx</h2>
+
+<p>emonTx<span style="line-height: 23.1111106872559px;">&nbsp;firmware version can be checked by viewing serial output using a USB to&nbsp;</span>UART<span style="line-height: 23.1111106872559px;">&nbsp;cable&nbsp;</span><a href="https://openenergymonitor.org/emon/modules/emonTxV3" style="line-height: 23.1111106872559px;">see debugging section at bottom&nbsp;of&nbsp;emonTx&nbsp;page</a><span style="line-height: 23.1111106872559px;">.&nbsp;</span></p>
+
+<p><u>emonTx&nbsp;V3.4&nbsp;min firmware: V1.8</u></p>
+
+<p><span style="line-height: 23.1111106872559px;">&nbsp;To update the emonTx V3.4&nbsp;firmware see:&nbsp;</span></p>
+
+<ul>
+	<li><a href="https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_DiscreteSampling/update_scripts">Updating&nbsp;emonTx&nbsp;V3.4 using a Raspberry Pi</a>&nbsp;(easiest)</li>
+	<li><a href="https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment">Compiling &amp; Uploading using&nbsp;Arduino&nbsp;IDE</a>.</li>
+</ul>
+
+<p><u><span style="line-height: 23.1111106872559px;">emonTx V3.2 min firmware: V2.0</span></u></p>
+
+<p>&nbsp;To update emonTx V3.2&nbsp;firmware see:&nbsp;</p>
+
+<ul>
+	<li><a href="https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.2/emonTxV3_2_DiscreteSampling/update_scripts">Updating&nbsp;emonTx&nbsp;V3.2 using a&nbsp;Raspberry&nbsp;Pi</a>&nbsp;(easiest)</li>
+	<li><a href="https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment">Compiling &amp; Uploading using&nbsp;Arduino&nbsp;IDE.</a></li>
+</ul>
+
+<h1>Sensor Installation</h1>
+
+<p><a href="Ciseco FAO Matt Lloyd Nottingham CleanTech Center St Peters Street Nottingham  NG7 3EN  UK"><img alt="" src="http://localhost/docs/files/optical_pulse_emonpi.JPG" style="width: 500px; height: 371px;" /></a></p>
+
+<p>1. Identify your utility meter&#39;s pulse output, usually a red flashing LED marked&nbsp;&#39;KWh&#39;.&nbsp;Stick the supplied self&nbsp;adhesive&nbsp;base-pad over the LED, carefully&nbsp;aligning the hole in the center of the circle so the flashing LED shines through clearly. Be sure to clean any dust or debris from the meter face before attaching the sensor.&nbsp;</p>
+
+<p>2. Attach the sensor to the circular base sticker by pressing the sensor head firmly in place. Take care to ensure sensor is centered over the pad.</p>
+
+<p>3. TEST</p>
+
+<p><strong>EmonTX&nbsp;V3.4 onwards or emonPi:</strong>&nbsp; Plug the &nbsp;sensor cable into the &nbsp;RJ45 socket (left side on the emonPi). With the unit powered up, switch on a large load such as a cooker or kettle. The green LED on the rear of the sensor should now flash in sync with the utility meter LED to indicate successful detection. Units with firmware from July 2015 allow the sensor to be plugged in without powering off the emonPi first.</p>
+
+<p><strong>EmonTX&nbsp;V3.2: </strong>Cut off the RJ45 plug, strip the insulation from the wires and connect them to the emonTx terminal block as follows:</p>
+
+<pre>
+emonTx Terminal 2 = 3.3V  Red wire
+emonTx Terminal 3 = GND   Black wire
+emonTx Terminal 4 = IRQ1?  Blue wire
+Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="display: none;"> </span></pre>
+
+<p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/vq5EmMRrOY0" width="560"></iframe></p>
+
+<h1>&nbsp;</h1>
+
+<h1>Configure Emoncms</h1>
+
+<p>After logging into the local Emoncms, the pulse input (Node 5 on emonPi) at the bottom of the list should be a number greater than zero :&nbsp;</p>
+
+<p><a href="Ciseco FAO Matt Lloyd Nottingham CleanTech Center St Peters Street Nottingham  NG7 3EN  UK"><img alt="" src="http://localhost/docs/files/emonPi_pulse.png" style="width: 600px; height: 525px;" /></a></p>
+
+<p>Clicking the spanner icon brings up the feed input processor. It&#39;s a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scalar&nbsp;to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scalar has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won&#39;t return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning&nbsp;to zero.&nbsp;</p>
+
+<p><a href="http://localhost/docs/files/emonpi_pulse_wh_log.png"><img alt="" src="http://localhost/docs/files/emonpi_pulse_wh_log.png" style="width: 600px; height: 238px;" /></a></p>
+
+<p>Viewing the Wh accumulator feed:&nbsp;</p>
+
+<p><a href="http://localhost/docs/files/emonpi_pulse_wh_log.png"><img alt="" src="http://localhost/docs/files/wh_feed.png" style="width: 600px; height: 342px;" /></a></p>
+
+<p>To convert the wh accumulator feed to daily KWh bargraph&nbsp;use the bargraph&nbsp;visualization&nbsp;with delta = 1 and scale = 0.001</p>
+
+<p><a href="http://localhost/docs/files/emonpi_pulse_wh_log.png"><img alt="" src="http://localhost/docs/files/wh_daily_wkhd.png" style="width: 600px; height: 392px;" /></a></p>
+
+<p>&nbsp;</p>
+
+<h1>Appendix A&nbsp;</h1>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+	<caption>&nbsp;</caption>
+	<tbody>
+		<tr>
+			<td><strong>Meter</strong></td>
+			<td><strong>Image</strong></td>
+			<td><strong>Pulses Per KWh</strong></td>
+			<td>
+			<p><strong>Multiplication factor for </strong></p>
+
+			<p><strong>Wh Accumulator feed</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Elster&nbsp;A100c</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/a100c.png"><img alt="" src="http://localhost/docs/files/a100c.png" style="width: 100px; height: 78px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 1000 = <strong>1</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Actaris ace9000</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/Actaris_ace9000.JPG"><img alt="" src="http://localhost/docs/files/Actaris_ace9000.JPG" style="width: 100px; height: 118px;" /></a></td>
+			<td>800</td>
+			<td>1000 / 800 = <strong>1.25</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Xil&nbsp;XLA12</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/Xil_XLA12.jpg"><img alt="" src="http://localhost/docs/files/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
+			<td>800</td>
+			<td>1000 / 800 =&nbsp;<strong>1.25</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Elster A1100</p>
+
+			<p>(3-phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/ElsterA1100.jpg"><img alt="" src="http://localhost/docs/files/ElsterA1100.jpg" style="width: 100px; height: 69px;" /></a></td>
+			<td>500</td>
+			<td>1000 / 500 = <b>2</b></td>
+		</tr>
+		<tr>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Elster&nbsp;A1140</p>
+
+			<p>(3-phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/Elster_A1140.JPG"><img alt="" src="http://localhost/docs/files/Elster_A1140.JPG" style="width: 100px; height: 75px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 5000 = <b>1</b></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Landis &amp; Gyr 5254E</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/Landis &amp; Gyr 5254E.png"><img alt="" src="http://localhost/docs/files/Landis &amp; Gyr 5254E.png" style="width: 100px; height: 100px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 1000 = <strong>1</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>&nbsp;Inepro PRO1D</p>
+			</td>
+			<td><a href="http://localhost/docs/files/Inepro_PRO1D.JPG"><img alt="" src="http://localhost/docs/files/Inepro_PRO1D.JPG" style="width: 50px; height: 109px;" /></a></td>
+			<td>2000</td>
+			<td>1000/2000 = <strong>0.5</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>EDMI&nbsp;MK7C&nbsp;</p>
+
+			<p>AMR Smart Meter</p>
+			</td>
+			<td><a href="http://localhost/docs/files/edmi_mk7c.jpg"><img alt="" src="http://localhost/docs/files/edmi_mk7c.jpg" style="width: 80px; height: 130px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 1000 =&nbsp;<strong>1</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Landis &amp; Gyr E110</p>
+
+			<p>(Single Phase)</p>
+			</td>
+			<td><a href="http://localhost/docs/files/Original-Landis_E110_1__1.jpg"><img alt="" src="http://localhost/docs/files/Original-Landis_E110_1__1.jpg" style="width: 100px; height: 66px;" /></a></td>
+			<td>1000</td>
+			<td>
+			<p>1000 / 1000 =&nbsp;<strong>1</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="mailto:http://localhost/docs/files/emonpi_pulse_wh_log.png?subject=pulse%20output%20utility%20meter">support@openenergymonitor.zendesk.com</a></p>
+
+<p>&nbsp;</p>
+
+<h1>Appendix B - Technical Info&nbsp;</h1>
+
+<p>Voltage: 3.3 - 5V DC</p>
+
+<p>Current Consumption -&nbsp;no Pulse (sensor in darkness): 0mA&nbsp;</p>
+
+<p>Current Consumption -&nbsp;Pulse: 5.3mA for duration of pulse (standard meter 100ms)&nbsp;</p>
+
+<p>Output:&nbsp;Positive pulses output in TTL, is synchronized with the LED light pulses.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Optical Sensor RJ45 Pinout&nbsp;</strong></p>
+
+<p><strong><a href="https://wiki.openenergymonitor.org/images/thumb/Optical_rj45_pinout.jpg/500px-Optical_rj45_pinout.jpg"><img alt="" src="https://wiki.openenergymonitor.org/images/thumb/Optical_rj45_pinout.jpg/500px-Optical_rj45_pinout.jpg" style="width: 200px; height: 168px;" /></a>&nbsp;&nbsp;<img alt="" src="http://www.ertyu.org/steven_nikkel/images/rj45pinout.gif" style="width: 138px; height: 103px;" /></strong></p>
+
+<ul>
+	<li>Pin 2 = VCC</li>
+	<li>Pin 5 = GND</li>
+	<li>Pin 6 = IRQ1</li>
+</ul>
+
+<p><strong>Teardown:</strong></p>
+
+<p><a href="http://localhost/docs/files/inside_optical_pulse.jpg"><img alt="" src="http://localhost/docs/files/inside_optical_pulse.jpg" style="width: 200px; height: 193px;" /></a></p>

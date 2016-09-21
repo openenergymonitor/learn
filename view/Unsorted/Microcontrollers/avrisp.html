@@ -1,0 +1,25 @@
+<h1>AVR ISP Programmers&nbsp;</h1>
+
+<p>AVR&nbsp;ISP programmers are used to flash data to AVR&nbsp;microcontrollers that are not running an Arduino bootloader.&nbsp;</p>
+
+<p>We use ISP programmers to get the Arduino bootloder onto the chip and to upload sketches to ATtiny chips which don&#39;t support uploading via FTDI.&nbsp;</p>
+
+<p>When choosing an ISP programmer, it&#39;s important to consider the voltage of the chip you are uploading to.</p>
+
+<p>Here is a list of programmers we have used, and our experiences with them:</p>
+
+<p>1.<strong> Arduino as ISP</strong>: This is the most basic form of ISP programmer. There are instructions on the Arduino website for this (<a href="http://arduino.cc/en/Tutorial/ArduinoISP">http://arduino.cc/en/Tutorial/ArduinoISP</a>). We have had variable results when using Arduino as ISP. We have found using the Sparkfun&nbsp;ISP shield improves things (it has a built in reset capacitor):&nbsp;<a href="https://www.sparkfun.com/products/11168">https://www.sparkfun.com/products/11168</a>. It also has a nice ZIF socket.&nbsp;</p>
+
+<p>2. <strong>USB Tiny</strong>: This seems to be a popular cheap ISP programmer used by many people. However, we failed to get it working on Ubuntu Linux 12.04.&nbsp;</p>
+
+<p>3. <strong>AVR ISP V2</strong>&nbsp;-&nbsp;Pololu USB AVR Programmer (<a href="http://www.pololu.com/catalog/product/1300">http://www.pololu.com/catalog/product/1300</a>). This is quite a cheap programmer that works well onUbuntu&nbsp; Linux, it can only program at 5v (needs 4V&nbsp;on MOSI pin to initialize) and requires the board to be externally powered. The following lines need to be added to programmers.txt in the Arduino Hardware folder:</p>
+
+<p><em>avrispv2.name=AVR ISP v2<br />
+avrispv2.communication=serial<br />
+avrispv2.protocol=avrispv2</em></p>
+
+<p>4.<strong>&nbsp;ATmel AVR MK2</strong> - this is the official&nbsp;ATmel&nbsp;ISP programmer. It supports programming between 1.8V - 5.5V. It works out of the box with Ubuntu Linux 12.04 as long as you run Arduino or avrdude as the root user. I&#39;m pretty sure there is a fix for this but this works ok for us. The AVR MKII does not supply power to the ISP&nbsp;VCC pin The target board will need to be externally powered. This is good, as it allows you to choose the voltage level.&nbsp;</p>
+
+<p>As an example this is the avrdude command line required to program an ATtiny84 to run at 8Mhz&nbsp;with BOD disabled and flash the RF12 demo sketch using an AVR MKII&nbsp;programmer:</p>
+
+<p><em>sudo avrdude -c avrispmkII -p t84 -P usb -e -Uefuse:w:0xFF:m -Uhfuse:w:0xD7:m -Ulfuse:w:0xE2:m -U flash:w:ATtiny84_RF12_Demo.cpp.hex</em></p>

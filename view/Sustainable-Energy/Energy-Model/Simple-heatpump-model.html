@@ -1,0 +1,36 @@
+<h1>
+	A very simple heat pump model</h1>
+<p>This model starts from the heat output that we want the heat pump to provide to our building and works backwards to calculate the electrical power input required to provide this heat output for a given ambient temperature and room temperature.</p>
+<h2>
+	Model steps:</h2>
+<p><strong>1) Calculate the flow temperature</strong> <strong>required by the radiators to achieve the desired heat output</strong>.</p>
+<p>See <a href="http://localhost/docs/node/3011">radiator model</a> for full explanation of the following equations:</p>
+<pre>
+Delta_T = ((Heat_output / Rated_Heat_Output) ^ 1/1.3 )  x Rated_Delta_T
+MWT = T_room + Delta_T
+T_flow = MWT + Heat_output / (2 x specific_heat x massflowrate)</pre>
+<p><strong>2) Calculate the <strong>refrigerant</strong> condensing temperature (hot side)</strong> as the flow temperature plus an 4K (approximate difference)</p>
+<pre>
+T_condensing = T_flow + 4K</pre>
+<p><strong>3) Calculate the refrigerant <strong>evaporating </strong>temperature (cold side) </strong>as the external temperature minus 6K (approximate difference)</p>
+<pre>
+T_refrigerant = T_ambient - 6K</pre>
+<p>(note, the difference may be lower (closer) with quality/expensive units.)</p>
+<p><strong>4) Calculate the Carnot COP</strong></p>
+<pre>
+Carnot_COP = (T_condensing + 273) / ((T_condensing+273) &ndash; (T_evaporating + 273))</pre>
+<p>Where T_condensing and T_evaporating are in degrees Celsius. The +273 converts Celsius to Kelvin.</p>
+<p><strong>5) Calculate the practical COP</strong></p>
+<pre>
+Practical_COP = 0.5 x  Carnot_COP (a real-life heat pump achieves about 50% its &#39;ideal&#39; efficiency)</pre>
+<p>The correction factor of 0.5 will vary from heat pump to heat pump depending on the efficiency of each thermodynamic process going on inside the heatpump.</p>
+<p><strong>6) Calculate power input</strong></p>
+<pre>
+Power_input =  Heat_output /  Practical_COP</pre>
+<p>The model results will be more accurate when the heatpump is nearer steady sate conditions as it does not take into account startup and heatup times of the heatump and dhw system or heatpump defrost cycles. The carnot efficiency equation is used to calculate the ideal COP which is then multiplied by a correction factor to estimate the attainable COP.</p>
+<p>The following graph is an example that illustrates that the carnot efficiency equation multiplied by a correction factor can largely reproduce the measured COP under &#39;normal&#39; operating conditions. The black line is the COP as calculated by the above model and the red line is the COP as measured using an electric meter on the input and heat meter on the output.</p>
+<p><strong>Note</strong>, the above calculates the compressor power, but added to that will be fan and circulation pump power. This can vary considerably. It should be between 5 and 10% of the power input.</p>
+<p>For our indicative model this may be sufficient for our requirements.</p>
+<p><img alt="" src="http://localhost/docs/files/calc_cop_vs_measured.png" style="width: 700px; height: 276px;" /></p>
+<p><strong>References</strong></p>
+<p>1. <a href="http://www.heatpumps.co.uk/HeatPumpBook.htm">Heatpumps for the home by John Cantor</a></p>

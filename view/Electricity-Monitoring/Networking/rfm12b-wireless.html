@@ -1,0 +1,107 @@
+<h1>RFM12B - Part 1 - Hardware Overview</h1>
+
+<h3>HopeRF RFM12B - wireless transceiver &nbsp;</h3>
+
+<p><img alt="" src="http://localhost/docs/files/rfm12.png" /></p>
+
+<p>To see how RFM12B wireless compares to other similar wireless options (e.g Xbee, XRF etc..) check out this well compiled comparison overview by&nbsp;Stuart Poulton:&nbsp;<a href="http://blog.homelabs.org.uk/wireless-connectivity/">http://blog.homelabs.org.uk/wireless-connectivity/</a>.</p>
+
+<h2>Overview</h2>
+
+<p>Made by Hope RF, re-branded by RFsolutions in the UK.&nbsp;Sometimes called &#39;Alpha RF&#39;</p>
+
+<p>Low cost RF transceiver (from Rapid, Farnell, or RS in the UK)&nbsp;</p>
+
+<p>Up to 300m range</p>
+
+<p>Up to 115Kbps bit rate</p>
+
+<p>Up to 30 nodes per network* &nbsp;&nbsp;</p>
+
+<p>Up to 250 different network groups</p>
+
+<p>3 ISM band frequencies: 433MHz (worldwide), 868MHz (Europe), 915MHz (USA &amp; Australia only) . Note: The module&#39;s operating frequency is set in software. For best performance, the frequency chosen should match the module&#39;s design frequency.&nbsp;</p>
+
+<p><em>*node ID&#39;s can be 0-31 with 1-30 used for normal operation. </em></p>
+
+<p><em>ID 31 is special, as it can communicate with nodes on any network. ID 0 is reserved for OOK operation.</em></p>
+
+<h2>Hardware</h2>
+
+<p>SPI interface&nbsp;</p>
+
+<p>2.2-3.8V supply voltage</p>
+
+<p>Low power &ndash; 0.3&micro;A standby current&nbsp;</p>
+
+<p>Datasheet:&nbsp;<a href="http://www.hoperf.com/pro/rf/cob/RFM12B.htm">http://www.hoperf.com/pro/rf/cob/RFM12B.htm</a></p>
+
+<p>&nbsp;</p>
+
+<h2>Identifying the frequency of your module</h2>
+
+<p>Includes additional capacitor = 433 MHz</p>
+
+<p>Missing capactior = 868 MHz</p>
+
+<p><img alt="" src="http://localhost/docs/files/identify_rfm12_module.jpg" style="height:223px; width:400px" /></p>
+
+<p><a href="http://localhost/docs/files/RFM%20Radios.png"><img alt="" src="http://localhost/docs/files/RFM%20Radios.png" style="width: 580px; height: 118px;" /></a></p>
+
+<h2>&nbsp;</h2>
+
+<h2>Antenna&nbsp;</h2>
+
+<p>433 1/4 wave = 164.7mm<br />
+433 1/2 wave = 329.4mm<br />
+433 full wave = 692.7mm</p>
+
+<p>868 1/4 wave = 82.2mm<br />
+868 1/2 wave = 164.3mm<br />
+868 full wave = 345.5mm</p>
+
+<p>915 1/4 wave = 77.9mm<br />
+915 1/2 wave = 155.9mm<br />
+915 full wave = 327.8mm</p>
+
+<p>&nbsp;</p>
+
+<h2>Arduino Uno Connections</h2>
+
+<p><a href="http://localhost/docs/files/Cookbook_RFM12B_connections.png"><img alt="" src="http://localhost/docs/files/Cookbook_RFM12B_connections.png" style="height:233px; width:400px" /></a></p>
+
+<p>Credit to Michael Margolis from&nbsp;<a href="https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=arduino%20cookbook&amp;source=web&amp;cd=3&amp;ved=0CFEQFjAC&amp;url=http%3A%2F%2Fwww.amazon.co.uk%2FArduino-Cookbook-Michael-Margolis%2Fdp%2F0596802471&amp;ei=WuqvTvppzsa0BqW-zFo&amp;usg=AFQjCNHpgR7fNyKaGbD2cdFYktu9xSx47A&amp;sig2=h6h3Pj-0Xy30PzFc0IT7dg">Arduino Cookbook</a> for Arduino connection diagram.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Alternative connection diagram (only for when Atmega328 is running at 3.3V):</p>
+
+<p><a href="http://localhost/docs/files/connections.png"><img alt="" src="http://localhost/docs/files/connections.png" style="height:283px; width:400px" /></a></p>
+
+<p>&nbsp;</p>
+
+<h3>Update: The Arduino&nbsp;Leonardo (ATmega32U4) requires different connections. See&nbsp;<a href="http://openenergymonitor.blogspot.fr/2012/06/arduino-leonardo-atmega32u4-and-rfm12b.html">this</a> blog post for details.&nbsp;</h3>
+
+<h2>Software&nbsp;</h2>
+
+<p>Code example:&nbsp;<a href="https://github.com/openenergymonitor/RFM12B_Simple">https://github.com/openenergymonitor/RFM12B_Simple</a></p>
+
+<p>RFM12 Arduino library from JeeLabs:&nbsp;<a href="https://github.com/jcw/jeelib">https://github.com/jcw/jeelib</a>&nbsp;- credit to JCW&nbsp;for this great work</p>
+
+<p>See this post by JCW describing the Nodes, Addresses and operation of the JeeLib RFM12 Arduino Library: <a href="http://jeelabs.org/2011/01/14/nodes-addresses-and-interference/">http://jeelabs.org/2011/01/14/nodes-addresses-and-interference/&nbsp;</a></p>
+
+<p>JeeLib library reference:&nbsp;<a href="http://jeelabs.net/pub/docs/jeelib/RF12_8cpp.html">http://jeelabs.net/pub/docs/jeelib/RF12_8cpp.html</a></p>
+
+<p>&nbsp;</p>
+
+<h2>Further&nbsp;Information&nbsp;</h2>
+
+<p>Lots of information on RFM12B and the RFM12&nbsp;Arduino driver library on <a href="http://jeelabs.org">jeelabs.org</a>.&nbsp;</p>
+
+<p>Here are the values of the capacitors on the RFM12B as measured:</p>
+
+<p><a href="http://localhost/docs/files/RFM12B_Capacitor_Values.png"><img alt="" src="http://localhost/docs/files/RFM12B_Capacitor_Values.png" style="height:200px; width:197px" /></a></p>
+
+<p>&nbsp;</p>
+
+<h2><a href="https://openenergymonitor.org/emon/buildingblocks/rfm12b2">Continue to Part 2 - Sending Data Between Modules</a></h2>

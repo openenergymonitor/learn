@@ -1,0 +1,104 @@
+<p>&nbsp;</p>
+
+<p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/MnH_ifcRJq4" width="560"></iframe></p>
+
+<p><meta charset="UTF-8" /></p>
+
+<h2>3-Phase Power</h2>
+
+<h3>History</h3>
+
+<p>The first electrical systems generated direct current by means of dynamos. It was soon realised that there were serious limits to the area and the number of customers that could be served, and alternating current took over &ndash; which as we all know can be transformed from one voltage to another with minimal loss. Very quickly, (in 1885) Italian Galileo Ferraris realised that two windings set at an angle to each other could produce a rotating magnetic field, something of great help when motion is required, and just two years later the 3-phase alternator appeared.</p>
+
+<h3>What is Three Phase Power?</h3>
+
+<p>Three phase power is is comprised of 3 related voltage sources supplying the same load. It is a significant improvement over single or two-phase power. The three voltage or current waves follow each other ⅓ cycle apart, and <em>(ideally)</em> if you sum the currents together at any instant, they balance perfectly. For a mechanical analogy, think of a wheel with three elastic bands fixed to the rim 120&deg; apart, all tied together in the centre. The forces there are perfectly balanced, the knot stays at the centre of the wheel. The bands represent the voltages or currents, and it&#39;s easy to see that everything balances perfectly.</p>
+
+<p>More importantly, the power is continuous and constant, so three phase motors run more smoothly (we&#39;ve all heard bottles rattling in the refrigerator, which is usually powered by a single phase motor that vibrates as a result of the power pulses at twice mains frequency).</p>
+
+<p>There are important advantages for the power companies. If all the currents balance exactly, they don&#39;t need a neutral conductor. Look at a high voltage overhead line and you&#39;ll see 6 bunches of main conductors and a thin single conductor at the top. The three bunches on one side are the three phases of one circuit, a second circuit is on the other side, and the single conductor is an earth which has probably an optical fibre core for signaling and communications. There is no neutral conductor. Likewise, there are also savings to be made on the amount of iron in transformers, because the magnetic fluxes balance where they meet.</p>
+
+<p>The main advantage comes with motors. The three phase currents set up a rotating magnetic field inside the motor and so the motor will start to rotate on its own. No special mechanism is required. e.g. A phase shift capacitor and extra winding usually used with a single-phase motor.</p>
+
+<h3>Naming.</h3>
+
+<p>Traditionally in the UK, the three phases were identified by the colours Red, Yellow (or White) and Blue; with Black for the neutral and Green for earth. Pan-European harmonisation in 2004 led to the standard becoming: Line 1 &ndash; Brown, Line 2 &ndash; Black, Line 3 &ndash; Grey, Neutral &ndash; Blue, Earth &ndash; Green/Yellow stripes. [A comprehensive table of the colours used in various countries can be found here: <a href="https://en.wikipedia.org/wiki/Three-phase_electric_power">https://en.wikipedia.org/wiki/Three-phase_electric_power</a>].</p>
+
+<p>Note: The phase conductor is &ldquo;Line&rdquo;, not &ldquo;Live&rdquo;. Live refers to the state of the circuit, a neutral conductor that is carrying current is considered &ldquo;live.&rdquo;</p>
+
+<h3>Identifying a 3-phase supply.</h3>
+
+<p>The obvious way to tell if you have a 3-phase supply is to locate your meter and distribution board / consumer unit. Not counting green or green/yellow earth cables, if you have four reasonably thick cables connecting to the meter, two of which go to your consumer unit or fuse-board, you don&rsquo;t have a three- phase supply. If you have eight reasonably thick cables connecting to the meter, four of which go to your consumer unit or fuse-board, and your main circuit breaker has 3 or 4 sections with one operating lever working all three or four &ndash; known as a 3-pole or 4-pole linked MCB, then you have a three-phase supply.</p>
+
+<p><img alt="Single- and 3-phase meters &amp; incomers" src="http://localhost/docs/files/meters-incomers.png" style="width: 600px; height: 600px; " /></p>
+
+<p>(a) Single phase meter (UK)<br />
+(b) Single phase double pole circuit breaker<br />
+(c) Terminal block of a 3-phase meter, showing 8 main &amp; 2 auxiliary terminals.<br />
+(d) 3-pole linked circuit breaker, in a 3-phase installation. (Germany)</p>
+
+<h3>Mathematics of a 3-phase supply.</h3>
+
+<p>When dealing with a single-phase mains supply and purely resistive (or nearly so) loads, normal maths (V = I.R, P = V&sup2; / R, etc) is adequate. When reactive components (inductors, capacitors) are taken into account, we need a graphical representation to help us visualise the relationship between voltage and current in different parts of the circuit. To do that, we employ a device called a &lsquo;phasor&rsquo;. A phasor is quite simply a line that has a length, a direction, and rotates. The length represents the magnitude of the voltage or current, the angle represents its relationship to some reference (that we can choose to suit our circumstances). We can illustrate the relationship between the three voltages of a 3-phase electrical supply with three phasors 120&deg; apart. If we connected a 3-channel oscilloscope to the supply we might see something like this:</p>
+<!--[if !IE]><!-->
+
+<p><embed alt="animated diagram of 3-phase waveforms" height="250" src="http://localhost/docs/files/phasors.svg" type="image/svg+xml" width="500"></embed><!--<![endif]--><!--[if IE]>
+<img src="http://localhost/docs/files/phasors.png" alt="diagram of 3-phase waveforms" height="250" width="500">
+<!--<![endif]--></p>
+
+<p>The phasors rotate at the supply frequency. The three phasors are 120&deg; apart, and the three voltage waveforms are 120&deg; apart &mdash; 1 complete cycle being 360&deg;.</p>
+
+<p>The diagram illustrates one of the fundamental properties of a 3-phase supply. If the voltage is the UK standard 240 V, that is, the voltage between one line and neutral, the length of the arrow represents this. The voltage between any two phases is clearly larger. Trigonometry will show that it is in fact &radic;3 times larger &ndash; the distance between the tips of the arrows, so the line&ndash;line voltage is 415.7 V (usually given as 415 V). Also, the line-to&ndash;line voltages are shifted in phase by 30&deg; relative to the line&ndash;neutral voltages. The power delivered by a 3-phase system is three times the power per phase, or assuming a unity power factor, 3 &times; line-neutral voltage &times; line current or &radic;3 &times; line-to-line voltage &times; line current.</p>
+
+<p>As it stands, that diagram illustrates the relationship between the 3 voltages. It need not be restricted to voltage, we can use it for current too. Its real value comes when we show both together.</p>
+
+<h3>Effect of unbalanced loads.</h3>
+
+<p>Suppose a small factory is supplied by an electricity sub-station. In the sub-station, the neutral point of the transformer secondary windings is earthed. Cables feed two factories, the first of which has loads connected between each of the phases and neutral. The question is, what effect does this have on the voltage the second factory receives?</p>
+
+<p><img alt="Line diagram of a factory estate power distribution system" src="http://localhost/docs/files/unbalanced-load.png" style="width: 649px; height: 487px; " /></p>
+
+<p>The sub-station transformer windings and the cable all have impedances (for simplicity we&rsquo;ll assume it is resistance only, and they are equal), which add together and are represented by R<sub>line</sub>. We&rsquo;ll also assume that the factory loads are all equal resistances too.</p>
+
+<p>The combination forms a voltage divider, so the voltage received by the first factory is reduced by the factor R<sub>load</sub> / (R<sub>line</sub> + R<sub>load</sub>). Because the loads are equal, there is no neutral current, so the neutral voltage is zero.</p>
+
+<p>If the loads are unequal, it starts to get complicated so use our phasor diagram. We&rsquo;ll assume for clarity in the diagram, that the load on Line 3 is very small, but that the other two loads are very large (much larger than would be permitted in the real world). The phasor diagram looks like this:</p>
+<!--[if !IE]><!-->
+
+<p><embed alt="animated diagram of unbalanced 3-phase waveforms" height="250" src="http://localhost/docs/files/phasors-unbalanced.svg" type="image/svg+xml" width="500"></embed><!--<![endif]--><!--[if IE]>
+<img src="http://localhost/docs/files/phasors-unbalanced.png" alt="diagram of unbalanced 3-phase waveforms" height="250" width="500">
+<!--<![endif]--></p>
+
+<p>In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red) is reduced by the voltage drop in R<sub>line 1</sub>, at the same time the neutral voltage is raised towards line 1 (the short arrows). A similar thing happens to line 2 (yellow). Line 3 (blue) carries a very small current that we ignore, so its voltage remains the same. The result (b) is the neutral point is moved towards the midpoint between lines 1 &amp; 2 (i.e away from line 3), the voltages between Line 1 and neutral, and between Line 2 and neutral, are much reduced while the voltage between Line 3 and neutral is much increased. There is now a voltage on the neutral conductor, in anti-phase with line 3. The angles between the three voltages are no longer 120&deg;.</p>
+
+<p>In the real world, while the cables are to a first approximation purely resistive, the same cannot be said of the transformer impedance and the load, both of which are likely to be inductive to varying degrees. That would mean the voltage drop phasors are no longer parallel to the line voltages, and further phase shifts are introduced. However, the principle remains the same.</p>
+
+<h3>Measuring 3-phase power.</h3>
+
+<p>To measure 3-phase power you need 3 wattmeters or &mdash; in OpenEnergyMonitor terms &mdash; 3 emonTxs <sub>(See note)</sub>. You simply measure the three phases in the same way as you would measure three single-phase installations. You need a current transformer and a voltage monitor on each phase, and the total power is the sum of the 3 powers.</p>
+
+<p><img alt="Measuring 3-phase power with 3 emonTxs" src="http://localhost/docs/files/3-phase-power.png" style="width: 576px; height: 505px; " /></p>
+
+<p>If you have a 3-wire balanced system and no neutral connection, then it can be shown that you need only two wattmeters or emonTxs, and the total power is <em>still</em> the sum of the two powers. In this case, you will be measuring the line-to-line voltage rather than the line-to-neutral voltage, so you need voltage transformers that can operate safely at 440 Volts.</p>
+<!-- 
+<p><small>(Note: One emonTx with an off-board extension to accommodate two additional voltage sensor inputs, connected to the two unused analogue inputs on the I2C connector, and suitable modifications to the library and sketch, should also work).</small></p>
+-->
+
+<h4>An approximate method to estimate 3-phase power with an unmodified emonTx</h4>
+
+<p>If access to measure the voltages of the three phases is difficult, or you do not want to add extra hardware or use 3 emonTxs, then it is possible to measure the voltage on one phase and use that measurement to derive an approximate value for the voltages on the other two phases. The method assumes the voltages will be relatively close to each other, and the phase disturbances small - though as we&#39;ve seen above, neither of these are necessarily the case. If the power system is reasonably well balanced (which it should be), it is likely this method will nevertheless be more accurate than simply relying on a nominal assumed voltage and power factor.</p>
+
+<p>The principle is to sample the voltage of the first phase at intervals (as per the normal sketch and library routines). The measured voltage is used immediately to calculate the power etc. in the first phase, then immediately stored. ⅓ cycle later, the stored value is retrieved and used with the current measurement of the second phase to calculate the power there, and ⅓ cycle after that, with the current measurement of the third phase to calculate that power.</p>
+
+<p>The power and other measurements on the first phase (the one we measured the voltage of) will be accurate (to within the normal limits). The accuracy of the measurements for the other two phases will be degraded because primarily, as has already been mentioned, the voltages of the three phases will not track each other exactly. There is also an inherent assumption that the phase relationships of the voltages remain constant, which will not necessarily be true, and finally a phase error will be introduced in the two unmonitored phases when the mains frequency changes.</p>
+
+<p><a href="https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage">See emonTx V3.4 approximate three-phase firmware</a></p>
+
+<p><a href="https://openenergymonitor.org/emon/node/1170">&#39;Full Fat&#39; three-phase monitor using 3 x emonTx units</a></p>
+
+<h3>Dangers.</h3>
+
+<p>The principal danger of course, is the higher voltage that exists between lines &mdash; around 400 V. The probability that an electric shock resulting from accidental contact would be lethal, is that much higher. For this reason, it is not a good idea to have outlets supplied from different phases in the same room.</p>
+
+<p>There is a less obvious danger from the possibility that one phase may become disconnected, then a 3-phase motor would be likely to suffer damage as it would be running on only one phase. A <em><u>linked</u></em> 3-pole or 4-pole circuit breaker (breaking also the neutral), is essential for any such load. Fuses are not a good idea. If one fuse &#39;blows&rsquo; the result is single-phasing.</p>
+

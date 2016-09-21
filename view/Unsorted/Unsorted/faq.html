@@ -1,0 +1,207 @@
+<p><strong><em>Q:</em></strong><em><strong>&nbsp;&nbsp; There&#39;s a lot of info here. It&#39;s overwhelming! Where do I start?</strong></em></p>
+
+<p><strong><em>A:</em></strong></p>
+
+<ul>
+	<li>See <u><a href="https://guide.openenergymonitor.org"><em><strong>Getting Started</strong></em></a></u> for an overview of the OEM system.</li>
+	<li>See the articles in <a href="http://localhost/docs/buildingblocks"><b><i><u>Resources</u></i></b></a>&nbsp;for detailed info on hardware,<br />
+	schematic diagrams, sketches, and theory of operation.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong><strong><em>Q:&nbsp;&nbsp; I&#39;m having trouble with... Can you help me?</em></strong></strong></p>
+
+<p><strong><em>A:</em></strong></p>
+
+<ul>
+	<li>Search the <a href="http://community.openenergymonitor.org">forums</a> first. Someone else may have had the same issue you&#39;re having,<br />
+	and the solution might be documented there.</li>
+	<li>Search the web.<em>&nbsp;<u><a href="http://stackoverflow.com/">stackoverflow.com</a></u></em> and <u><em><a href="http://www.linuxquestions.org/">linuxquestions.org</a></em></u> are two examples of sites<br />
+	with<em> <u>l</u>arge</em> collections of answers to <em>many</em> computer related issues.</li>
+	<li>DO NOT write &quot;I&#39;m using the latest... or I followed the guide...&quot; and expect us to know what you are referring to. There are many guides and everything was the latest once upon a time. You must&nbsp;tell us exactly which guide and which download you used.</li>
+	<li>Tell us as much as you can about the problem you&#39;re having and the results you are<br />
+	expecting. For example: A full list of your hardware, including the version(s),<br />
+	and any changes or substitutions you&#39;ve made.</li>
+	<li>Be as specific as you can. For example: Are you trying to send data to emoncms.org, to<br />
+	emoncms on your Raspberry Pi, or to emoncms running on a shared Linux host?</li>
+	<li>The version of the software/sketch you&#39;re running.</li>
+	<li>The OS are you running it on. Linux? Unix? Windows? What version of Windows?</li>
+	<li>If possible, attach the relevant log file to your post.</li>
+	<li>If applicable, attach a screenshot to your post.&nbsp;</li>
+	<li>If you bought items from the OEM Shop, include your order number and purchase date.<br />
+	This will help us identify exactly what hardware you are using.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <strong><em>Do I need any special skills, knowledge, tools, etc. to use OEM?</em></strong></strong></strong></p>
+
+<p><strong><em>A:</em></strong></p>
+
+<ul>
+	<li>While not <em>absolutely</em> necessary, experience with, and/or knowledge of, the following<br />
+	subject matter/tools <em>will</em> help a great deal, especially with configuring your system,<br />
+	troubleshooting and calibration.</li>
+	<li>Read through the <em><u><a href="http://guide.openenergymonitor.org">Getting Started Guide</a></u></em> to see what&#39;s required</li>
+	<li>Linux - modifying scripts, installing software, updating your OS etc.</li>
+	<li>Raspberry&nbsp;Pi hardware and software environment.</li>
+	<li>Arduino hardware and the Arduino programming environment - modifying/uploading sketches.</li>
+	<li>The Python programming language - configuring/troubleshooting emonHub issues.</li>
+	<li>Applicable terminology. e.g. script, sketch, CT, kWh, VA, etc.</li>
+	<li>Electronics in general, soldering, using a multimeter.</li>
+	<li>Basic Radio Frequency theory - calculate antenna length, maximum range, RF obstacles, etc.</li>
+	<li>Serial communication.</li>
+	<li>Networking and/or WiFi.</li>
+	<li>An accurate multimeter.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <strong><em>I want to ask a question about my electricity supply. What information do you need to know?</em></strong></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>As much as possible! Knowing which country you are in is helpful. Is your supply single phase or three-phase? If it&#39;s three-phase, is it 3-wire or 4-wire? What voltage and frequency? What current do you want to measure? e.g. PV production?, house consumption?</li>
+	<li>If you can&#39;t find the answers by looking at your electricity meter or your distribution board, posting a good picture of both, and telling us what country you live in, might give us enough information.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <strong><em>Why doesn&#39;t my CT work?</em></strong></strong></strong></p>
+
+<ul>
+	<li><strong><em><strong>Why do I read only a few watts when I should read a lot more</strong></em>?</strong></li>
+	<li><strong><em><strong>Why can&#39;t I get a power reading?</strong></em></strong></li>
+	<li><strong><em><strong>Why doesn&#39;t the reading change when I switch the load on and off?</strong></em></strong></li>
+</ul>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>The CT must be clipped around a <em>single</em> current-carrying wire (either Line or Neutral).</li>
+	<li>Ensure the CT is fully closed, i.e. no air gap exists where the core faces meet.</li>
+	<li>Ensure the plug is pushed into its socket completely.</li>
+	<li>See the <u><em><a href="http://localhost/docs/Current_Transformer_Installation">CT installation guide</a></em></u>.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em><strong>Why are my readings negative when they should be positive? (or vice-versa)</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>Detach the CT from the wire, flip it over and re-attach it to the wire,</li>
+	<li>OR</li>
+	<li>If access to the CT isn&#39;t possible,&nbsp;the value can be multiplied by -1, in emoncms.</li>
+	<li>Do one or the other, but <em>not</em> both</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em><strong>Why do I see power readings when the CT is not clipped around a wire?</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>What you&#39;re seeing is noise generated by the Arduino electronics, or possibly your USB power supply.<br />
+	Unless the value you&#39;re seeing is more than a few Watts, it can be ignored.</li>
+	<li>If you search the forums for &quot;noise&quot;, you&#39;ll find many references to this problem.</li>
+	<li>See&nbsp;<em><u><a href="http://localhost/docs/buildingblocks/measurement-implications-of-adc-resolution-at-low-current-values">Measurement implications of ADC resolution at low current values</a>.</u></em></li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em><strong>The YHDC CT sold in the shop won&#39;t fit my wires. Are CTs with larger openings available?</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>Yes. <u><em><a href="http://www.magnelab.com/products/ac-split-core-current-sensor-sct-1250/">Magnelab</a></em></u>, <u><em><a href="http://www.byramlabs.com/store/wattcore_WC3.php">Wattcore</a></em></u> and <u><em><a href="http://www.ccontrolsys.com/w/Current_Transformers">CCS</a></em></u> make CTs that fit AWG 4/0 wire. (~0.63 inches OD)</li>
+	<li>North American users can find additional info <u><em><a href="http://localhost/docs/buildingblocks/EmonTx-in-North-America">here</a></em></u>.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em><strong>I&#39;m trying to calibrate my system with a 60 Watt lamp. Why are my readings wrong?</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>You need to use a <u><em>resistive</em></u> load much larger than 60 Watts, e.g. a 2000 Watt heater.</li>
+	<li>Attempting calibration with a motorized load, <em>especially</em> one that draws a substantial amount of current, such as a vacuum cleaner or air conditioner, will not yield correct results.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em><strong>I calibrated my system with a 2000 Watt heater, but my low power readings are still wrong!</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>All CTs are inherently inaccurate at low currents. Most are accurate down to about 5% of their max current rating. To improve on that, you&#39;d need a &quot;revenue&quot; grade one, which will be costly.</li>
+	<li>When the current is very low, below about 2% of the CT&#39;s max current rating, errors in the analog to digital converter start to become significant too.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp; <em><strong>I can&#39;t buy an AC&nbsp;- AC&nbsp;adapter with the correct plug. Will an ordinary transformer work?</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>Yes. You need a low power mains isolation transformer with a 9 V secondary. Don&#39;t worry if the output voltage is higher than 9 V, it&#39;s normal for this type of transformer to give about 11 V with no load. You&#39;ll need to put it in a proper enclosure, and add a fuse (~500 mA) to the primary side circuit. You will also need to calibrate the output. The adapters sold via the Online Store are pre-calibrated for use with emonTx / emonPi.&nbsp;</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em><strong>Can I use a voltage divider and connect straight to the mains instead of using an A.C. - A.C. adapter? Surely it would be more accurate and cheaper.</strong></em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li><b style="color:red; font-size:120%;">NO!</b> For safety, you MUST <i>isolate</i> your low voltage circuit from the mains supply. If you don&#39;t, it is possible with certain fault conditions, to have lethal voltage where you normally expect a safe 3.3 V or 5 V.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <strong><em>I want to monitor multiple circuits, but the emonTx has only four inputs.</em></strong></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>Although OEM was designed for whole-house monitoring, multi-circuit monitoring <em>is</em> possible</li>
+	<li>You can use more than one emonTx</li>
+	<li>You can build a custom front-end for an Arduino with multiple analog inputs.</li>
+	<li>More info <u><a href="http://localhost/docs/node/11222#comment-33960"><em>here</em></a></u> and <u><em><a href="http://localhost/docs/node/10755">here</a></em></u>.</li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:</em>&nbsp;&nbsp; <em>I deleted the mysql database and the emoncms&nbsp;folder, then reinstalled emoncms. I still have the inputs from the previous installation. How do I delete them?</em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>Execute the command: <em><strong>sudo redis-cli FLUSHALL</strong></em></li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:&nbsp;&nbsp; Where can I find the emonCMS installation instructions?</em></strong></strong></p>
+
+<p><strong><strong><em>A:</em></strong></strong></p>
+
+<ul>
+	<li>The emoncms installation guides are <u><em><a href="https://github.com/emoncms/emoncms/">here</a></em></u></li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><strong><em>Q:&nbsp;&nbsp; Ubuntu Linux gives me this error: The requested URL /emoncms was not found on this server.</em></strong></strong></p>
+
+<p><strong>&nbsp;<strong><em>A:&nbsp;</em></strong></strong><em>&nbsp; </em>See <em><u><a href="http://localhost/docs/node/10895">this</a></u></em> forum thread.</p>

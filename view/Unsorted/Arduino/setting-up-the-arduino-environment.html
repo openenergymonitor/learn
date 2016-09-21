@@ -1,0 +1,100 @@
+<h1>Setting up the Arduino Environments</h1>
+
+<p>This guide details how prepare your computer for uploading firmware to the OpenEnergyMonitor hardware modules after you&#39;ve assembled them.&nbsp;The hardware modules are all based on an open source prototyping platform called&nbsp;Arduino.</p>
+
+<p><a href="http://arduino.cc">Arduino</a>&nbsp;is one of the projects that really&nbsp;kickstarted the open hardware movement. The simplicity of programming and uploading code to the ATMEL microcontroller made possible by the Arduino hardware and&nbsp;Arduino IDE (Integrated Development Environment) made electronics accessible to a much wider audience, from programmers to artists. The decision to open source it inspired and enabled others, including us, to do so in turn.</p>
+
+<h2>1) Install the Arduino IDE</h2>
+
+<p>If your OS is Windows, there&#39;s a dedicated guide here: <a href="https://openenergymonitor.org/emon/node/3727">Installing the Arduino IDE &ndash; Windows 8.1 &amp; 10</a></p>
+
+<p>The &quot;Get Started&quot; section of the Arduino website has a wealth of information on installing the IDE on most operating systems:&nbsp;<a href="http://arduino.cc/en/Guide/HomePage">http://arduino.cc/en/Guide/HomePage</a>. Be sure to read that before continuing.</p>
+
+<p><b>USB to UART cable drivers</b></p>
+
+<p>If you&#39;re using the cable sold through the OpenEnergyMonitor Shop, the drivers for Windows and Mac can be downloaded here:&nbsp;<a href="http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx</a>&nbsp;.</p>
+
+<p>No drivers are needed for Linux.</p>
+
+<p>Make sure you restart the Arduino IDE after installing the drivers.</p>
+
+<p><strong>Set the sketchbook location</strong></p>
+
+<p>When you first start the IDE, you may be asked if you would like it to create a sketchbook.&nbsp;Arduino calls the programs you write <em>sketches</em> and the sketchbook is the default folder that holds them. The sketchbook will likely be located in your home directory on Linux, and your &quot;My Documents&quot; folder on Windows.</p>
+
+<p>If you need to check or change the location e.g. moving it to your desktop for easy access, go to <em>File&nbsp;&gt; Preferences </em>and set the location. When you click OK at this point, the IDE will automatically create a libraries folder in your sketchbook if one does not already exist,</p>
+
+<h2>2) Installing the required software libraries and firmware</h2>
+
+<p>There are two different ways of installing the required libraries and firmware. The first is the familiar method of using your internet browser to download the required files, The second, which may seem complicated, will save you a great deal of time, is using a software tool called <strong>git. </strong>Once you are familiar with git, it&#39;s easy to keep the software up to date.</p>
+
+<h3>Installing Libraries and Firmware with your browser</h3>
+
+<p>a)&nbsp;<a href="https://openenergymonitor.org/emon/buildingblocks/installing-arduino-libraries">Installing Arduino Libraries</a></p>
+
+<p>b)&nbsp;<a href="https://openenergymonitor.org/emon/buildingblocks/uploading-arduino-firmware">Downloading and Uploading Firmware</a></p>
+
+<h3>Installing Libraries and Firmware using git</h3>
+
+<p><strong>Introduction to git:</strong>&nbsp;<a href="http://quick2wire.com/articles/a-gentle-guide-to-git-and-github/">A gentle guide to Git and GitHub</a></p>
+
+<p><a href="https://openenergymonitor.org/emon/buildingblocks/installing-libraries-and-firmware-using-git-on-ubuntu-linux">Step by step guide to downloading all the libraries and firmware using git on ubuntu linux</a></p>
+
+<p>To update any of the libraries or downloaded firmware with git, execute the command<em> git pull origin master</em> in the library or firmware folder, via a terminal session.</p>
+
+<p><strong>Git clients for windows and mac:</strong>&nbsp;<a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
+
+<h2>3) Uploading code to your hardware</h2>
+
+<h3>Board and Serial Port</h3>
+
+<p>Make sure the <em>Board</em> is set to <em>Arduino UNO </em>and that tools <em>Serial Port</em> is set to the serial port that appeared when you connected your emonTx.</p>
+
+<p><img alt="" height="347" src="http://localhost/docs/files/firmware05.jpg" width="600" /></p>
+
+<h3>Upload the code</h3>
+
+<p>Click on the &#39;arrow pointing to the right&#39; button.</p>
+
+<p><strong>Troubleshooting</strong></p>
+
+<p>On Linux, if Serial Port is disabled, make sure you have permissions to access serial ports. On Ubuntu 12.04 I had to add my user to the &quot;dialout&quot; group.&nbsp;</p>
+
+<p>There is a wealth of information online regarding installing Ubuntu. A Google search of: Arduino + your OS + version may help you resolve problems.</p>
+
+<h2>4) Installation summary</h2>
+
+<p>You should now have the Arduino IDE installed on your computer (version 1.0.3 or later) and a folder called sketchbook with the following items in it:</p>
+
+<p><strong>sketchbook</strong></p>
+
+<ul>
+	<li>libraries
+	<ul>
+		<li>DallasTemperature</li>
+		<li>ElsterMeterReader</li>
+		<li>EmonLib</li>
+		<li>ethercard</li>
+		<li>glcdlib</li>
+		<li>jeelib</li>
+		<li>RFu_JeeLib</li>
+		<li>?Onewire</li>
+		<li>rtclib</li>
+	</ul>
+	</li>
+	<li>OpenEnergyMonitor
+	<ul>
+		<li>emonTxFirmware</li>
+		<li>EmonGLCD</li>
+		<li>NanodeRF</li>
+	</ul>
+	</li>
+</ul>
+
+<p>If they are all there, restart the Arduino IDE, then you&#39;ll be ready to upload code to the hardware modules.</p>
+
+<h2>Advanced topics</h2>
+
+<p><a href="https://openenergymonitor.org/emon/buildingblocks/attiny">Setting up Arduino IDE for use with ATtiny&#39;s</a></p>
+
+<p><a href="https://openenergymonitor.org/emon/buildingblocks/avrisp">AVR ISP programmers&nbsp;</a></p>

@@ -1,0 +1,256 @@
+<h1>Calibration Procedure</h1>
+
+<h3>Why calibrate?</h3>
+
+<p>It is impossible to manufacture anything with absolute precision. In general terms, the more precisely something is manufactured, the more expensive it is. Consider the emonTx current input as a relatively simple example. If we assume for now that we don&#39;t have any errors in the sketch, we have 3 physical factors that will each contribute to the uncertainty in the value that we read for the current. These are:</p>
+
+<ol>
+	<li>the transfer ratio of the current transformer,</li>
+	<li>the value of the burden resistor, and</li>
+	<li>the accuracy with which the burden voltage is measured.</li>
+</ol>
+
+<p>Item 3 above, has two components &ndash; ADC non-linearity and reference uncertainty. Normally, both of these have three components that contribute to the possible error to a greater or lesser extent:</p>
+
+<ul>
+	<li>an initial uncertainty in the value at the time of manufacture,</li>
+	<li>drift due to physical changes over time, and</li>
+	<li>external influences</li>
+</ul>
+
+<p>Calibration is a means of correcting the first of these, and if performed regularly, it will also correct for the second. Unless you are able to remove or shield your device from external influences, there is generally very little you can do to counter their effects.</p>
+
+<p>A full appraisal of the sources of error in the emonTx measurement is <a href="http://localhost/docs/buildingblocks/emontx-error-sources">here</a>. In the worst case, the measurement of real or apparent power could be in error by nearly 40% without calibration. With calibration against a reasonably-priced multimeter, the accuracy should be around 6%.</p>
+
+<h4>Calibrating the internal reference voltage</h4>
+
+<p>This procedure is not applicable to the emonTx V3 using the default sketch. For all other variants, it is recommended if you are using batteries to power your emonTx; it is optional if you are using a mains power supply. You should do this first, before adjusting the calibration constants. If you change the calibration of the internal reference, the calibration constants will need to be corrected.</p>
+
+<p>Looking at the table in the <a href="http://localhost/docs/buildingblocks/how-good-is-your-multimeter">Multimeters article</a>, every meter gave the best accuracy when measuring the 3.3V supply, and the worst had a possible error of about 1%. In the emonLib library, we have a method that can measure the supply compared to the internal reference. Therefore, using this method and measuring the supply with a multimeter, it is possible to calibrate the internal band-gap reference to the accuracy of our multimeter, simply by changing the constant &ldquo;1126400L&rdquo; in readVcc( ) so that it returns the same value as the multimeter. A simple sketch CalVref [<a href="https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/CalVref">download</a>] to calculate the calibration constant given the measured value of V<sub>CC</sub>, is all that is needed.</p>
+
+<p>When we do this, we dramatically improve the accuracy within which the value of the internal band-gap reference is known, hence the accuracy of the battery voltage.</p>
+
+<h3>Recommended calibration method</h3>
+
+<p>(This applies equally to the emonTx, the emonTx shield and an Arduino board, or a custom or prototype version)</p>
+
+<p>You will need:</p>
+
+<ul>
+	<li>A multimeter or voltmeter to measure your mains voltage</li>
+	<li>The same multimeter or an ammeter to measure current</li>
+	<li>A resistive load or loads (e.g. a kettle, electric heater, etc) that draw a current close to but less than the maximum that your meter can measure</li>
+</ul>
+
+<p>If you do not have a multimeter, or you are not confident that you can measure your mains safely, you can use a plug-in energy meter. In that case in the procedure that follows, you use the energy meter&#39;s readings for voltage and current instead of the multimeter&#39;s. If you don&#39;t have any form of meter, then see below for common calibration coefficients. You might then, over time, be able to make small adjustments so that the total energy recorded agrees with your energy supplier&#39;s meter.</p>
+
+<h4>Procedure:</h4>
+
+<p>Take great care when working with mains voltages. If you are using batteries to power your emonTx, you should calibrate the internal reference first.</p>
+
+<ol>
+	<li>Load one of the demonstration sketches from <a href="https://github.com/openenergymonitor/emonTxFirmware">emonTxFirmware</a>. You will need to choose the one appropriate to your version of the emonTx. If you have the emonTx V3, use the default sketch (check the Wiki to see which that is), but you will need to add some print statements in order to read separately the values for current and power factor. Note, however, that some special-purpose sketches have their own particular calibration procedure. Where this is the case, it will be described in a comment in the sketch.</li>
+	<li>Measure the mains voltage and adjust either the voltage constant 240.0 (emonTx_CT123) in lines like this<br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">emontx.power1 = ct1.calcIrms(1480) * 240.0; (emonTx V2)</span><br />
+	<em>or</em><br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">const byte Vrms=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 230; &nbsp; &nbsp;&nbsp; (emonTx V3)</span><br />
+	&nbsp;<br />
+	to the average value that you read<br />
+	<i>or</i><br />
+	adjust the voltage calibration constant 236.39 (emonTx_CT123_Voltage) in lines like this<br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">ct1.voltageTX(236.39, 1.7);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (emonTx V2)</span><br />
+	<em>or</em><br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">const float Vcal=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 284.9667; (emonTx V3)</span><br />
+	so that the voltage reported by the emonTx is the same as the voltage you measure with your meter.<br />
+	The new calibration coefficient can be calculated by:
+	<pre>
+New calibration = existing calibration &times; (correct reading &divide; emonTx reading)</pre>
+	</li>
+	<li>Insert your meter in series with the load and clip the current transformer over one of the leads. Connect to the mains supply, measure the current and adjust the current calibration constant 111.1 (or 90.9 or 60.6)&nbsp; in lines like this<br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">ct1.currentTX(1, 111.1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (emonTx V2)</span><br />
+	<em>or</em><br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">const float Ical=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90.9; (emonTx V3)</span><br />
+	so that the current reported is the same as the current you measure. Check the instructions for your meter in case there is a time limit for making the measurement. If there is, you must make the measurement quickly and allow sufficient time for the meter to cool before repeating.</li>
+	<li>If you are using the voltage input, with the load connected adjust the phase angle calibration 1.7 in lines like this<br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">ct1.voltageTX(236.39, 1.7);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (emonTx V2)</span><br />
+	<em>or</em><br />
+	&nbsp;&nbsp;<span style="font-family: monospace; font-size: 10pt">const float phase_shift=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.7; (emonTx V3)</span><br />
+	so that real power and apparent power read the same value (and power factor is as close to 1.00 as possible). Your meter is not needed for this.<br />
+	The phase calibration coefficient should not normally go outside the range 0.0 &ndash; 2.0</li>
+	<li>Check the voltage calibration again. It might need a slight adjustment if the phase angle calibration was altered significantly. Recheck the phase angle calibration.</li>
+</ol>
+
+<h2><strong>Theoretical CT sensor calibration</strong></h2>
+
+<pre>
+CT Ratio / Burden resistance = (100A / 0.05A) / 18 Ohms = 111.1 (for the emonTx V2)</pre>
+
+<pre>
+CT Ratio / Burden resistance = (100A / 0.05A) / 22 Ohms = 90.9 (for the emonTx V3 CT1-3)</pre>
+
+<pre>
+CT Ratio / Burden resistance = (100A / 0.05A) / 120 Ohms = 16.67 (for the emonTx V3 CT4)
+
+CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx Shield)</pre>
+
+<p><strong>In practice</strong></p>
+
+<div>The CT has a stated accuracy of &plusmn;3%. The CT burden resistor is a 1% tolerance component, so the total error should be less than&nbsp;4%. Therefore, the expected range for the CT calibration for the emonTx is 106.66 &ndash; 115.54 (58.18 &ndash; 63.02 for the emonTx Shield), provided the internal reference has been calibrated accurately. Because the emonTx V3 firmware does not use the internal reference by default, an additional 1% must be added for the voltage regulator tolerance and so the expected range should be 86.35 &ndash; 95.45.</div>
+
+<div>&nbsp;</div>
+
+<table border="1" cellpadding="1" cellspacing="1" height="277" width="501">
+	<tbody>
+		<tr>
+			<td style="width: 347px;"><strong>Burden Resistor</strong></td>
+			<td style="width: 140px;"><strong>Current Calibration Coefficient</strong></td>
+		</tr>
+		<tr>
+			<td style="width: 347px;">15&nbsp;&Omega;&nbsp;&plusmn;1% - old</td>
+			<td style="width: 140px;"><span style="line-height: 14px; white-space: pre;">133.3</span></td>
+		</tr>
+		<tr>
+			<td style="width: 347px;">18&nbsp;&Omega;&nbsp;&plusmn;1% - shipped as standard in emonTx V2 kit</td>
+			<td style="width: 140px;">
+			<p>111.1</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 347px;">22&nbsp;&Omega;&nbsp;&plusmn;1% - standard in emonTx V3 for CTs 1-3</td>
+			<td style="width: 140px;">
+			<p>90.9</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 347px;">120&nbsp;&Omega;&nbsp;&plusmn;1% - standard in emonTx V3 for CT 4</td>
+			<td style="width: 140px;"><span style="line-height: 14px; white-space: pre;">16.67</span></td>
+		</tr>
+		<tr>
+			<td style="width: 347px;">33&nbsp;&Omega;&nbsp;&plusmn;1% - shipped as standard in emonTx Shield kit</td>
+			<td style="width: 140px;">
+			<p>60.6</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>&nbsp;</h2>
+
+<h2>Theoretical AC-AC Adapter calibration</h2>
+
+<h3>Ideal Power AC-AC Adapters</h3>
+
+<p>Datasheet:&nbsp;<a href="http://localhost/docs/files/77DB-06-09.pdf">Ideal Power 77DB-06-09</a>&nbsp;(UK Plug type)</p>
+
+<p>Datasheet: <a href="http://localhost/docs/files/77DE-06-09.pdf">Ideal Power&nbsp;77DE-06-09</a>&nbsp;(EURO Plug type)</p>
+
+<p>Datasheet: <a href="http://files.openenergymonitor.org/77DA-10-09.pdf">Ideal Power&nbsp;77DA-10-09</a>&nbsp;(US Plug type)</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 563px;">
+	<tbody>
+		<tr>
+			<td style="width: 300px;"><strong>Adapter Type</strong></td>
+			<td style="width: 155px;"><strong>Voltage calibration coefficient<br />
+			EmonTx V2</strong></td>
+			<td style="width: 155px;"><strong>Voltage calibration coefficient<br />
+			EmonTx V3</strong></td>
+			<td style="width: 155px;"><strong>Voltage calibration coefficient<br />
+			EmonTx Shield V2.5</strong></td>
+		</tr>
+		<tr>
+			<td style="width: 300px;">Ideal Power 77DB-06-09&nbsp;(UK Plug type)</td>
+			<td style="width: 155px;">227.59</td>
+			<td style="width: 155px;">268.97</td>
+			<td style="width: 155px;">268.97</td>
+		</tr>
+		<tr>
+			<td style="width: 300px;">Ideal Power 77DE-06-09&nbsp;(EURO Plug type)</td>
+			<td style="width: 155px;">220.0</td>
+			<td style="width: 155px;">260.0</td>
+			<td style="width: 155px;">260.0</td>
+		</tr>
+		<tr>
+			<td style="width: 250px;">Ideal Power 77DA-10-09&nbsp;(US Plug type)</td>
+			<td style="width: 155px;">110.0</td>
+			<td style="width: 155px;">130.0</td>
+			<td style="width: 155px;">130.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="width: 600px;">[Note: The values are derived from manufacturer&#39;s data and are subject to normal manufacturing tolerances. The coefficient might be in error by up to &plusmn;6% (77DA-10-09 &amp; 77DE-06-09) or &plusmn;4% (77DB-06-09) when resistor tolerances are added.]</p>
+
+<h3>&nbsp;</h3>
+
+<h3>Other AC-AC Adapters</h3>
+
+<p><p? border="1" cellpadding="1" cellspacing="1" style="width: 400px; " table=""></p?></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 303px; ">
+	<tbody>
+		<tr>
+			<td><strong>Ac-AC Adapter</strong></td>
+			<td style="width: 48px; "><strong>Plug</strong></td>
+			<td style="width: 141px; "><strong>Voltage Calibration Coefficient</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MW</p>
+
+			<p><a href="http://localhost/docs/files/MW1.jpg"><img alt="" src="http://localhost/docs/files/MW1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			</td>
+			<td style="width: 48px; ">UK</td>
+			<td style="width: 141px; ">
+			<p style="text-align: left;"><strong><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif"><span style="font-size: 15px; line-height: 17px;">233.67</span></font></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Strontronics</p>
+
+			<p><a href="http://localhost/docs/files/Stontronics1.jpg"><img alt="" src="http://localhost/docs/files/Stontronics1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			</td>
+			<td style="width: 48px; ">UK</td>
+			<td style="width: 141px; "><strong style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; text-align: left; ">238.56</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Mascot 9580</p>
+
+			<p><a href="http://localhost/docs/files/mascot1.jpg"><img alt="" src="http://localhost/docs/files/mascot1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			</td>
+			<td style="width: 48px; ">UK</td>
+			<td style="width: 141px; "><strong style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; text-align: left; ">234.26</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>FP AD 3515</p>
+
+			<p><a href="http://localhost/docs/files/FP1.jpg"><img alt="" src="http://localhost/docs/files/FP1.jpg" style="width: 100px; height: 133px; " /></a></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="width: 48px; ">Euro</td>
+			<td style="width: 141px; "><strong style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; text-align: left; ">212.658</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Ideal Power / TDC</p>
+
+			<p><img alt="" src="http://localhost/docs/files/TDC DB-06-09_small.jpg" style="width: 150px; height: 113px;" /></p>
+
+			<p><a href="http://shop.openenergymonitor.com/components/">Currently adapter sold in the OpenEnergyMonitor&nbsp;shop</a></p>
+			</td>
+			<td style="width: 48px; ">UK/Euro/US</td>
+			<td style="width: 141px; ">see above</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>See&nbsp;<a href="http://localhost/docs/buildingblocks/emontx-error-sources">EmonTx errors</a>&nbsp;for a full analysis of the sources of error in the emonTx.</p>
+
+<p>See&nbsp;<a href="http://localhost/docs/buildingblocks/different-acac-power-adapters">http://localhost/docs/buildingblocks/different-acac-power-adapters</a>&nbsp;for more detailed information on the different AC-AC adapters.</p>
+
+<p>See&nbsp;<a href="http://localhost/docs/buildingblocks/ct-and-ac-power-adaptor-installation-and-calibration-theory">CT and AC power adaptor installation and calibration theory</a> for detailed information on the theoretical basis for the calculation of the calibration coefficients.</p>

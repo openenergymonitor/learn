@@ -1,0 +1,72 @@
+<h2>Appliance Inference</h2>
+
+<p><em>Draft created 2 August 2010 by Trystan Lea</em></p>
+
+<h3>The idea</h3>
+
+<p>This page details an ongoing investigation into the possibility of inferring what appliances are on and how much energy they use (especially their kwh per day usage) &nbsp;from one measurement point at the supply to the house/building. If this can be done effectively it would be a much cheaper and less intrusive way to find out such information than placing a separate meter on each appliance.</p>
+
+<p><strong>Measuring changes in power consumption and power factor</strong></p>
+
+<p>A 40W incandescent light bulb should be distinguishable because it would cause a power consumption change of ~ 40W of power, it is a resistive load so its effect on power factor should be either no change or positive change (depending on overall electricity use magnitude and power factor).</p>
+
+<p>A 3kW immersion heater should be distinguishable because it would cause a power consumption change of ~ 3000W of power, it is a resistive load so its effect on power factor should be either no change or positive change (depending on overall electricity use magnitude and power factor).</p>
+
+<p>My refrigerator uses 142W when it starts, then gradually drops to&nbsp;105W.</p>
+
+<p>The washing machine has a heating element that uses ~2kW for a couple of minutes, and a spin cycle that is highly reactive causing power factor changes of approximately &plusmn;0.45</p>
+
+<p>By building up a profile of the types of power consumption and power factor changes that happen in a building, it may be possible to make a rough breakdown of energy used by the different appliances.</p>
+
+<h3>Attempted solution 1</h3>
+
+<p><img alt="" src="http://localhost/docs/files/appinfer.png" /></p>
+
+<p><strong>Example of it running</strong> <a href="https://power.openenergymonitor.org/infer.php">here</a></p>
+
+<p>This is both a description of the solution as it currently stands, and a how-to-set-it-up guide. There are still lots of errors and lots of work to do!</p>
+
+<p>1) Set up a database on a server to log events with the following columns: timestamp (TIME), real power change (RP), power factor change (PF), current real power (CRP).</p>
+
+<p><img alt="" height="129" src="http://localhost/docs/files/eventlog.png" width="200" /></p>
+
+<p>2) Create a script to relay this data from an Arduino GET request, to the database. Place the script on the server.</p>
+
+<p><strong>Download</strong> the php script: <a href="http://localhost/docs/files/emonphp.tar.gz">emonphp.tar.gz</a></p>
+
+<p>3) Get the energy monitoring hardware to send this GET request to the server (minus timestamp which is generated in the script)</p>
+
+<p><strong>Download</strong> the ethernet arduino sketch:&nbsp;<a href="http://localhost/docs/files/inferSketch.tar.gz">inferSketch.tar.gz</a></p>
+
+<p><strong>Download</strong> EmonEvent Library (detects step changes in a value): <a href="http://localhost/docs/files/EmonEvent.tar.gz">EmonEvent.tar.gz</a></p>
+
+<p>4) Create a table that stores event types.</p>
+
+<p><img alt="" height="103" src="http://localhost/docs/files/eventTypes.png" width="780" /></p>
+
+<p>5) Create a php script that:</p>
+
+<ul>
+	<li>selects both the data in the event type table and the event log table</li>
+	<li>checks the event log data for events of the type described in the event type table.&nbsp;</li>
+	<li>calculates how much energy each appliance (event type) has consumed.</li>
+	<li>outputs this information in a useful way.</li>
+</ul>
+
+<p><strong>Download</strong> the event analysis php scripts: <a href="http://localhost/docs/files/appInfer.tar.gz">appInfer.tar.gz</a></p>
+
+<p><strong>Download</strong> the page theme files: <a href="http://localhost/docs/files/theme.zip">theme.zip</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>ToDo</strong></p>
+
+<ul>
+	<li>Add password security to emonphp relay script.</li>
+	<li>Get the chart to show only kwh of appliances &gt; 0 kwh</li>
+	<li>Work on layout</li>
+	<li>Add a check that turns off appliances if the calculated power is larger than the actual power. At the moment, the inference code often thinks there are more appliances powered on, than actually are. Especially 40W light bulbs!</li>
+	<li>this is by no means a finished list.</li>
+</ul>
+
+<p>&nbsp;</p>

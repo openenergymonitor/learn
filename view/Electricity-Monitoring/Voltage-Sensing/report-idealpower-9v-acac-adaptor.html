@@ -1,0 +1,58 @@
+<h2>
+	Ideal Power 9V AC-AC Adaptor (Voltage Transformer)</h2>
+<h3>
+	By Robert Wall&nbsp; B.Sc., C.Eng., MIEE.<br />
+	Issue 2&nbsp; 20th December, 2013</h3>
+<p><a href="http://localhost/docs/files/TDC DB-06-09_small.jpg"><img alt="" src="http://localhost/docs/files/TDC DB-06-09_small.jpg" style="width: 200px; height: 150px;" /></a></p>
+<p>Also branded as TDC, these adapters are identical&nbsp;</p>
+<h3>
+	Synopsis</h3>
+<p>The Ideal Power Adaptor is manufactured in China and supplied by Ideal Power Ltd.<br />
+	It has an integral mains plug to BS.1363. Output is on a flying lead terminated in a coaxial DC Power plug.<br />
+	The rated input is 230-240 V AC 50 Hz and the output is 9 V a.c, 6VA. The transformer exhibits a phase lead that varies from 4&deg; at the lower limit of the supply range up to 7&frac12;&deg; at the upper limit. Two samples have now been measured, one supplied in July 2012 (No.1) and a second supplied in December 2013 (No.2).</p>
+<h3>
+	Test Rig</h3>
+<p><a href="http://localhost/docs/files/mascotreport/mascot_report06.png"><img alt="" src="http://localhost/docs/files/mascotreport/mascot_report06.png" style="width: 600px; height: 287px;" /></a></p>
+<h3>
+	WARNING</h3>
+<p style="border: 5px solid red; padding: 5px">In any attempt to replicate these tests, due care must be taken with regard to personal safety as potentially lethal voltages may be encountered.</p>
+<p>The primary voltage is monitored by a potential divider comprising two fixed resistors and a potentiometer. The transformer is loaded with a 1 k&Omega; potentiometer. The potentiometers, current limiting resistor and diodes in both voltage monitor circuits are to protect the computer sound card from over-voltage and switching transients, the potentiometers were adjusted such that the voltage did not exceed 800 mV peak and at this voltage, the diodes did not affect the shape of the monitored waveform.<br />
+	When the shape of the waveform was of interest, the primary voltage and PT output voltage waveform were recorded using a software oscilloscope (Soundcard Oscilloscope from http://www.zeitnitz.de/Christian/scope_en) and the recorded waveform imported into a spreadsheet and subsequently calibrated against the actual voltage read either by a multimeter or a real oscilloscope connected directly across the PT output.</p>
+<h3>
+	Winding Phase</h3>
+<p>The transformer is supplied with a DC Power supply plug, the output voltage is in antiphase with the input.</p>
+<h3>
+	Tests</h3>
+<p>The following tests were conducted:<br />
+	1. Check the ratio<br />
+	2. Establish the regulation<br />
+	3. Establish the phase error</p>
+<h4>
+	1. Ratio</h4>
+<p>The transformer was checked at 240 V. The open-circuit output voltage was measured at 11.36 V. Output voltage tracked the input voltage exactly over the range 185.5 V to 253 V.</p>
+<h4>
+	2. Regulation.</h4>
+<p>At 240 V input and the rated full-load current of 666 mA, the output voltage fell to 9.09 V. This gives a value for regulation of 27%.</p>
+<h3>
+	Measurement errors.</h3>
+<p>The voltages were measured with a digital multimeter having an accuracy of (1% + 3 digits) above 200 V and (0.8% + 3 digits) below.<br />
+	Therefore, the maximum uncertainty in the ratio measurement is 2.25% for the primary voltage and 1% for the secondary, a total of 3.25%.<br />
+	The measured output at full load fell well within the band of uncertainty.</p>
+<h4>
+	3. Phase error.</h4>
+<p>As the primary voltage increased, the secondary voltage waveform showed increasing distortion due to saturation of the transformer core. This was accompanied by the output voltage phase advancing. The distortion of the secondary voltage waveform, barely visible at 185 V, is clearly visible at 253 V in the second screen-shot.</p>
+<p><a href="http://localhost/docs/files/IdealPower_Phase.2.png"><img alt="" src="http://localhost/docs/files/IdealPower_Phase.2.png" style="width: 578px; height: 325px;" /></a></p>
+<p>Secondary Phase against Primary Voltage</p>
+<p><a href="http://localhost/docs/files/IdealPower_Phase_scope.2.png"><img alt="" src="http://localhost/docs/files/IdealPower_Phase_scope.2.png" style="width: 600px; height: 267px;" /></a></p>
+<p>(The green trace is primary voltage, the red trace is secondary voltage. Note: the vertical scale is uncalibrated).</p>
+<h3>
+	Conclusions</h3>
+<p>The Adaptor is suitable for use with the OpenEnergyMonitor emonTx, though the poor regulation, to be expected of this type of transformer, does mean that the output voltage may be higher than expected (33.8 V peak-peak) at the upper limit of supply voltage. The maximum phase error of 7.6&ordm; may be significant in certain circumstances, representing an error of 0.066 when the power factor is 0.9 or better, but a greater error as the power factor worsens.</p>
+<p>The adapter consumes approx 0.33 W of power in normal operation.</p>
+<h3>
+	Appendix</h3>
+<p>Mains voltage limits.</p>
+<p>The standard domestic mains supply for Europe is 230 V &plusmn;&nbsp; 10%, giving a lower limit of 207 V and an upper limit of 253 V.&nbsp; It is permissible under BS 7671 to have a voltage drop within the installation of 5%, which would give a lower limit of 195.5 V.<br />
+	The UK standard prior to harmonization was 240 V &plusmn;&nbsp; 6%, giving an upper limit of 254.4 V.<br />
+	Although the UK nominal standard is now 230 V, the supply system has not generally been adjusted and the voltage centers around 240 V.</p>
+<p>&nbsp;</p>

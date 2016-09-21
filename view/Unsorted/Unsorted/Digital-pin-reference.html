@@ -1,0 +1,421 @@
+<h2>Digital pin numbers for OEM devices</h2>
+
+<p>This lookup table provides a quick way to find the &quot;Arduino&quot; digital&nbsp;pin numbers used in firmware&nbsp;sketches, most of these designations are defined either by the&nbsp;internal makeup of&nbsp;the ATmega328P or&nbsp;by the device&#39;s hardware circuitry and components.</p>
+
+<p>Digital pins 14 and up are ADC inputs that can be referenced by an analog pin number by subtracting 14&nbsp;</p>
+
+<table border="2" cellpadding="1" cellspacing="1" style="width: 700px;">
+	<thead>
+		<tr>
+			<th colspan="3" rowspan="2" scope="row" style="text-align: center; vertical-align: middle;">&nbsp;</th>
+			<th colspan="3" rowspan="1" scope="col" style="text-align: center; vertical-align: middle;">EmonTx</th>
+			<th colspan="2" rowspan="1" scope="col" style="text-align: center; vertical-align: middle;">EmonTH</th>
+			<th colspan="2" rowspan="1" scope="col" style="text-align: center; vertical-align: middle;">EmonPi</th>
+			<th colspan="2" rowspan="1" scope="col" style="text-align: center; vertical-align: middle;">RFM2Pi</th>
+			<th colspan="2" rowspan="1" scope="col" style="text-align: center; vertical-align: middle;">Shield</th>
+		</tr>
+		<tr>
+			<th scope="col" style="text-align: center; vertical-align: middle;">2.2</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">3.2</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">3.4</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">1.4</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">1.5</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">1.5</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">1.6</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">2.6</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">3.1</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">1.0</th>
+			<th scope="col" style="text-align: center; vertical-align: middle;">2.5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RX</th>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+			<td style="text-align: center; vertical-align: middle;">0</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">TX</th>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RFM_IRQ</th>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">2/3</td>
+			<td style="text-align: center; vertical-align: middle;">2/3</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">PULSE</th>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">2</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">3</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">1W_IO</th>
+			<td style="text-align: center; vertical-align: middle;">4</td>
+			<td style="text-align: center; vertical-align: middle;">4</td>
+			<td style="text-align: center; vertical-align: middle;">5</td>
+			<td style="text-align: center; vertical-align: middle;">5</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">4</td>
+			<td style="text-align: center; vertical-align: middle;">4</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">1W_PWR</th>
+			<td style="text-align: center; vertical-align: middle;">5</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">5</td>
+			<td style="text-align: center; vertical-align: middle;">5</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">DHT_PWR</th>
+			<td colspan="1" rowspan="2" style="text-align: center; vertical-align: middle;">6</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">6</td>
+			<td style="text-align: center; vertical-align: middle;">6</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">OOK</th>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">6</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">SW1</th>
+			<td style="text-align: center; vertical-align: middle;">7</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">8</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">7</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">SW2</th>
+			<td colspan="1" rowspan="2" style="text-align: center; vertical-align: middle;">8</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">8</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">BTN</th>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">8</td>
+			<td style="text-align: center; vertical-align: middle;">8</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">LED</th>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">6</td>
+			<td style="text-align: center; vertical-align: middle;">6</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+			<td style="text-align: center; vertical-align: middle;">9</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RFM_SEL</th>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">4</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">4</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">10</td>
+			<td style="text-align: center; vertical-align: middle;">10/5</td>
+			<td style="text-align: center; vertical-align: middle;">10/5</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RFM_SDI</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+			<td style="text-align: center; vertical-align: middle;">11</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RFM_SDO</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+			<td style="text-align: center; vertical-align: middle;">12</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RFM_SCK</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+			<td style="text-align: center; vertical-align: middle;">13</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">VAC</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">CT1</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">17</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">CT2</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">14</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+			<td style="text-align: center; vertical-align: middle;">16</td>
+		</tr>
+		<tr>
+			<th colspan="2" rowspan="1" scope="row" style="text-align: center; vertical-align: middle;">CT3</th>
+			<td colspan="1" rowspan="1" scope="row" style="text-align: center; vertical-align: middle;">17</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">17</td>
+			<td style="text-align: center; vertical-align: middle;">17</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">17</td>
+			<td style="text-align: center; vertical-align: middle;">17</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">SCL</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">SDA</th>
+			<td scope="row" style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">19</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">CT4</th>
+			<td colspan="1" rowspan="2" scope="row" style="text-align: center; vertical-align: middle;">20</td>
+			<td style="text-align: center; vertical-align: middle;">NA</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">DHT_IO</th>
+			<td style="text-align: center; vertical-align: middle;">NA</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">18</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">BATT</th>
+			<td colspan="1" rowspan="2" scope="row" style="text-align: center; vertical-align: middle;">21</td>
+			<td style="text-align: center; vertical-align: middle;">NA</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">21</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">15</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+		<tr>
+			<th colspan="2" scope="row" style="text-align: center; vertical-align: middle;">RJ45p8</th>
+			<td style="text-align: center; vertical-align: middle;">NA</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">20</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">20</td>
+			<td style="text-align: center; vertical-align: middle;">20</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+			<td style="text-align: center; vertical-align: middle;">-</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>

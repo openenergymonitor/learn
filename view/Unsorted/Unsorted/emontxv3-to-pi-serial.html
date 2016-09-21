@@ -1,0 +1,92 @@
+<h1>Connect an EmonTx v3 to RaspberryPI via serial</h1>
+
+<p>The standard OEM system setup is to use a RaspberryPI base station next to your internet router connected via Ethernet, and an emonTx near your meter cabinet with a wireless link between them. In some instances it may make sense to connect the emonTx directly to the RaspberryPI via a serial link.</p>
+
+<p>Both the RaspberryPI and emonTx v3 run at 3.3V, so the serial RX and TX lines can be connected without issue. The RaspberryPI can power the emonTx as well.</p>
+
+<p>In the picture below, the RaspberryPI&#39;s 5V supply is connected via the red wire to the emontx 5V input, which is then regulated by the emonTx to 3.3V. The ground connection is the black wire, and the data going from the emonTx to the RaspberryPI is the green wire. An additional wire could be connected to allow the RaspberryPI to send data to the emonTx, but in this example, it&#39;s not needed.</p>
+
+<p><strong>Note: </strong>connecting the emonTx via serial to the RaspberryPI is not part of the standard configuration, so this documentation may go out of date as changes are made to the emonTx and RaspberryPI over time, and may be a bit more involved than the wireless rfm12/69 approach.</p>
+
+<p><img alt="" src="http://localhost/docs/files/emontx_to_pi_serial.JPG" style="width: 600px; height: 471px;" /></p>
+
+<p><strong>Useful hardware pin-out reference documentation</strong></p>
+
+<p>Reference design for the RaspberryPI adapter board which connects via serial to the RaspberryPI<br />
+http://wiki.openenergymonitor.org/index.php?title=RFM12Pi_V2#Design_Files_.26_Reference</p>
+
+<p>RaspberryPi GPIO pinout:<br />
+http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/two.html</p>
+
+<p>EmonTx v3.2 schematic<br />
+http://localhost/docs/files/emonTxV3.2_sch.png</p>
+
+<p>EmonTx v3.4 schematic<br />
+https://github.com/openenergymonitor/Hardware/blob/master/emonTxV3/emonTx_V3.4/schematic.jpg<br />
+<em>Note: The FTDI connector Tx and Rx pins are reversed on the EmonTx v3.4 PCB legend and on the Schematic. Data is received by the emonTx on the Tx pin and transmitted by the emonTx on the Rx pin.</em></p>
+
+<h2>EmonTx Firmware</h2>
+
+<p>A simple, direct serial output Arduino sketch/firmware for the emonTx v3 can be found here:</p>
+
+<p><a href="https://github.com/openenergymonitor/emonTxFirmware/blob/master/emonTxV3/noRF/emonTxV3_DirectSerial/emonTxV3_DirectSerial.ino">https://github.com/openenergymonitor/emonTxFirmware/blob/master/emonTxV3/noRF/emonTxV3_DirectSerial/emonTxV3_DirectSerial.ino</a></p>
+
+<p>This prints power values and mains voltage to the serial port as space separated values:</p>
+
+<p>100 100 200 240<br />
+105 100 200 242</p>
+
+<p>...</p>
+
+<p>Where the values are: CT1 Power, CT2 Power, CT3 Power, CT4 Power, Mains Voltage</p>
+
+<p>The direct serial output Arduino sketch/firmware for the emonTx v3 can be uploaded with a USB-to- serial adapter. Once uploaded, use the Arduino IDE serial monitor - set to 9600 bps - to verify the emonTx is printing values to the serial port.</p>
+
+<h2>RaspberryPI to emoncms link</h2>
+
+<p>If you just want to forward the emonTx data to a remote emoncms, thiat can be done with emonHub on the RaspberryPi</p>
+
+<p>To install emonHub on the RaspberryPi run:</p>
+
+<p><strong>git clone https://github.com/emonhub/dev-emonhub.git ~/dev-emonhub &amp;&amp; ~/dev-emonhub/install</strong></p>
+
+<p><em>See the emonHub Github page if the above does not work.</em></p>
+
+<p>The next part involves setting up emonHub in a manner similar to the way emonHub is used in the HomeEnergyMonitor documentation here: https://github.com/openenergymonitor/documentation/blob/master/Applications/HomeEnergyMonitor/HomeEnergyMonitor.md</p>
+
+<p>If you have an pre-built OpenEnergyMonitor sd card, you will find the emonHub configuration file on the boot partition. To edit it, enter:</p>
+
+<p><strong>sudo nano /boot/emonhub.conf</strong></p>
+
+<p>If you installed emonHub yourself on a generic raspbian install, the emonhub.conf file can be found in the /etc/emonhub directory.</p>
+
+<p>sudo nano /etc/emonhub/emonhub.conf</p>
+
+<p>Add the serial config to the emonhub.conf&nbsp;interfacers section:</p>
+
+<pre>
+[[Serial]]
+    type = EmonHubSerialInterfacer
+    [[[init_settings]]]
+        com_port = /dev/ttyAMA0
+        com_baud = 9600
+    [[[runtime_settings]]]</pre>
+
+<p>Next, add the location and apikey of the emoncms server you&#39;re posting to in the reporters section.</p>
+
+<pre>
+[[emonCMS]]
+    type = EmonHubEmoncmsReporter
+    [[[init_settings]]]
+    [[[runtime_settings]]]
+        url = http://localhost/emoncms
+        apikey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</pre>
+
+<p>It&#39;s worth noting the standard emonTx firmware which has all the rfm12b radio packet sending code, also prints a space separated string to its serial port which should work the same as the cut down serial only example above, although you&#39;ll still be transmitting radio packets.</p>
+
+<p>Here&#39;s a picture of both units in their cases, connected, a tidy system!</p>
+
+<p>Pi case: http://shop.pimoroni.com/products/blackberry-case-for-raspberry-pi</p>
+
+<p><img alt="" src="http://localhost/docs/files/piplusemontx.JPG" style="width: 600px; height: 416px;" /></p>

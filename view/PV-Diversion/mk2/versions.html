@@ -1,0 +1,169 @@
+<h2>Diverting surplus PV Power, by Robin Emley</h2>
+
+<p style="float: left"><a href="build">&lt;&lt; 8: Building a Mk2 PV Router</a></p>
+
+<h3 style="clear: both">9: Different versions of the software sketch</h3>
+
+<p>All versions of the Mk2 PV Router sketch (apart from the phase-angle variant) will work with the original hardware. The difference between them is simply their efficiency. Mk2i offers substantially better performance than the original Mk2. It may therefore be a better choice for an application where additional workload is to be placed on the processor. Having said which, all versions can be relied on to heat up a tankful of water in similar times. Every version that has been posted to date is included in the list at <a href="https://openenergymonitor.org/emon/node/1757">https://openenergymonitor.org/emon/node/1757</a></p>
+
+<p>Note that the <a href="http://localhost/docs/files/Mk2_PV_phaseAngle.ino_.zip">phase-angle variant of the Mk2 sketch</a> requires slightly different hardware. These differences are given in the associated post which accompanies that particular version.</p>
+
+<p>A summary of the operation of the <a href="http://localhost/docs/files/Mk2_PV_Router_mini.ino_.zip">Mk2_PV_Router_mini.ino</a> version now follows. The line numbers are as shown in the editor that forms part of the Arduino&rsquo;s IDE. Full guidance for setting up this environment is available at <a href="https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment">https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment</a>.</p>
+
+<p style="text-decoration: underline">Line Nos.</p>
+
+<p style="text-decoration: underline; margin: -4ex 0 0 15ex">Content</p>
+
+<p style="margin-top: 0.6ex">1 - 74</p>
+
+<p style="margin: -4ex 0 0 15ex">Global definitions</p>
+
+<p style="margin-top: 0.6ex">77 - 102</p>
+
+<p style="margin: -4ex 0 0 15ex">setup() which includes:</p>
+
+<p style="margin-top: 0.6ex">&nbsp;</p>
+
+<p style="margin: -4ex 0 0 17ex;">- initialisation of the Serial interface</p>
+
+<p style="margin-top: 0.6ex">&nbsp;</p>
+
+<p style="margin: -4ex 0 0 17ex;">- pin definitions for outputs</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-top: 0.6ex">105 - 241</p>
+
+<p style="margin: -4ex 0 0 15ex;">- loop(), which is executed for each per pair of V &amp; I samples (~ 400 &micro;S)</p>
+
+<p style="margin-top: 0.6ex">108</p>
+
+<p style="margin: -4ex 0 0 17ex;">- update the # of samples, for the calculation of average power</p>
+
+<p style="margin-top: 0.6ex">111 - 113</p>
+
+<p style="margin: -4ex 0 0 17ex;">- copy values from previous loop, to avoid them being overwritten</p>
+
+<p style="margin-top: 0.6ex">117 - 118</p>
+
+<p style="margin: -4ex 0 0 17ex;">- get the next pair of voltage and current samples</p>
+
+<p style="margin-top: 0.6ex">121 - 122</p>
+
+<p style="margin: -4ex 0 0 17ex;">- subtract the known DC offset (assumes a shared 2.5V reference)</p>
+
+<p style="margin-top: 0.6ex">125</p>
+
+<p style="margin: -4ex 0 0 17ex;">- update the HPF for voltage (used with a LPF to find the DC offset)</p>
+
+<p style="margin-top: 0.6ex">128 - 132</p>
+
+<p style="margin: -4ex 0 0 17ex;">- determine the polarity of the latest voltage sample</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-top: 0.6ex">135 - 227</p>
+
+<p style="margin: -4ex 0 0 17ex;">- if the polarity now is positive:</p>
+
+<p style="margin-top: 0.6ex">138 - 195</p>
+
+<p style="margin: -4ex 0 0 19ex;">- if this is the first positive sample of a new mains cycle:</p>
+
+<p style="margin-top: 0.6ex">144 - 145</p>
+
+<p style="margin: -4ex 0 0 21ex;">- update the LP filter with the net sum of &plusmn;deltas from last cycle</p>
+
+<p style="margin-top: 0.6ex">149 - 150</p>
+
+<p style="margin: -4ex 0 0 21ex;">- calculate the energy content of the previous mains cycle</p>
+
+<p style="margin-top: 0.6ex">153 - 163</p>
+
+<p style="margin: -4ex 0 0 21ex;">- a convenient place to display data, if required</p>
+
+<p style="margin-top: 0.6ex">165 - 187</p>
+
+<p style="margin: -4ex 0 0 21ex;">- if the system has had time to settle since start-up:</p>
+
+<p style="margin-top: 0.6ex">169</p>
+
+<p style="margin: -4ex 0 0 23ex;">- update the &quot;energy bucket&quot; with the latest contribution</p>
+
+<p style="margin-top: 0.6ex">170</p>
+
+<p style="margin: -4ex 0 0 23ex;">- update a parallel bucket for LED use (this one has no limits)</p>
+
+<p style="margin-top: 0.6ex">174</p>
+
+<p style="margin: -4ex 0 0 23ex;">- adjust the energy bucket&#39;s level by any desired safety margin</p>
+
+<p style="margin-top: 0.6ex">177 - 180</p>
+
+<p style="margin: -4ex 0 0 21ex;">- apply upper and lower limits to the bucket&#39;s level</p>
+
+<p style="margin-top: 0.6ex">189</p>
+
+<p style="margin: -4ex 0 0 19ex;">- set a flag to show that the trigger needs to be armed</p>
+
+<p style="margin-top: 0.6ex">192 - 194</p>
+
+<p style="margin: -4ex 0 0 19ex;">- clear the per-cycle accumulators</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-top: 0.6ex">198 - 226</p>
+
+<p style="margin: -4ex 0 0 17ex;">- if the trigger needs to be armed:</p>
+
+<p style="margin-top: 0.6ex">201 - 225</p>
+
+<p style="margin: -4ex 0 0 19ex;">- if the voltage is OK for arming the trigger (&gt;20V typical)</p>
+
+<p style="margin-top: 0.6ex">208 - 217</p>
+
+<p style="margin: -4ex 0 0 21ex;">- if bucket is at least half full, the trigger is to be &#39;on&#39;, else &#39;off&#39;</p>
+
+<p style="margin-top: 0.6ex">220</p>
+
+<p style="margin: -4ex 0 0 21ex;">- write this decision to the pin for the external trigger</p>
+
+<p style="margin-top: 0.6ex">223</p>
+
+<p style="margin: -4ex 0 0 21ex;">- clear the flag (the trigger is armed only once per mains cycle)</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-top: 0.6ex">235 - 236</p>
+
+<p style="margin: -4ex 0 0 15ex;">- apply the phasecal algorithm to correct for phase-shift between V and I</p>
+
+<p style="margin-top: 0.6ex">237</p>
+
+<p style="margin: -4ex 0 0 15ex;">- determine the instantaneous power (using P = V &times; I)</p>
+
+<p style="margin-top: 0.6ex">238</p>
+
+<p style="margin: -4ex 0 0 15ex;">- add this latest contribution to the accumulated total for this mains cycle</p>
+
+<p style="margin-top: 0.6ex">240</p>
+
+<p style="margin: -4ex 0 0 15ex;">- update the per-cycle accumulator for &plusmn;deltas</p>
+
+<p style="margin-top: 0.6ex">241</p>
+
+<p style="margin: -4ex 0 0 15ex;">- end of loop(), and end of the main code</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-top: 0.6ex">246 - 306</p>
+
+<p style="margin: -4ex 0 0 15ex; width: 620px;">checkLedStatus(). This is an optional function which allows LED events at the supply meter to be monitored. By displaying the value of <code>energyInBucket_4led</code>, the operation of the measurement system can be compared directly with the operation of the supply meter.</p>
+
+<h4>Help and Assistance</h4>
+
+<p>When building a Mk2 PV Router for the first time, the OEM forum at <a href="https://openenergymonitor.org/emon/forum">https://openenergymonitor.org/emon/forum</a> is a valuable resource. The Open Energy Monitor is an open-source project, and most constructors are only too happy to provide assistance to anyone whose project has yet to get off the ground.</p>
+
+<p style="float: left"><a href="build">&lt;&lt; 8: Building a Mk2 PV Router</a></p>
+
+<p style="clear: both">&nbsp;</p>

@@ -1,0 +1,43 @@
+<h2>Downloading and Uploading Arduino Firmware</h2>
+
+<p>In this example, we will install the emonTxFirmware, however the same procedure is used for the EmonGLCD and NanodeRF firmware, and is applicable for most Arduino sketches.</p>
+
+<p>Most of the steps below are the same for Linux, Windows and Mac.</p>
+
+<p>Make sure you have installed the relevant Arduino libraries first:&nbsp;<a href="http://localhost/docs/buildingblocks/installing-arduino-libraries">installing-arduino-libraries</a></p>
+
+<h3>1) Download the emonTxFirmware from github</h3>
+
+<h3><a href="https://github.com/openenergymonitor/emonTxFirmware">https://github.com/openenergymonitor/emonTxFirmware</a></h3>
+
+<p>Click on zip to get a zip file download:</p>
+
+<p><img alt="" height="352" src="http://localhost/docs/files/firmware01.jpg" width="600" /></p>
+
+<h3>2) If you have downloaded the zip file you will need to unzip it and rename it to have a more sensible name, then place it in your Arduino sketchbook folder.</h3>
+
+<p>You may want to place it in a subfolder called OpenEnergyMonitor to make things a little easier to navigate. Not shown in the screenshot below, is the libraries folder that should also be in your sketchbook folder. See step 3 of setting up the Arduino&nbsp;environment for a summary of the final directory structure you should have: <a href="http://localhost/docs/buildingblocks/setting-up-the-arduino-environment">setting up the arduino environment</a></p>
+
+<p><img alt="" height="352" src="http://localhost/docs/files/firmware02.jpg" width="600" /></p>
+
+<h3>3) Open one of the examples inside the emonTxFirmware folder in the Arduino IDE.&nbsp;</h3>
+
+<p>Notice how there are two files in the folder emonTx_CT123_Voltage:&nbsp;emonTx_CT123_Voltage.ino and emontx_lib.ino. Open emonTx_CT123_Voltage.ino</p>
+
+<p><img alt="" height="352" src="http://localhost/docs/files/firmware03.jpg" width="600" /></p>
+
+<h3>4) Check that you have the right files</h3>
+
+<p>If the file opened sucessfully, you should now see emonTx_CT123_Voltage in the first tab and emontx_lib should be in the second tab. Make sure that emontx_lib is there, otherwise the code will not compile.</p>
+
+<p><img alt="" height="352" src="http://localhost/docs/files/firmware04.jpg" width="600" /></p>
+
+<h3>5) Download firmware for the EmonGLCD,&nbsp;NanodeRF&nbsp;and OpenKontrolGateway, if needed</h3>
+
+<h3 class="rteindent1"><a href="https://github.com/openenergymonitor/emonTxFirmware">https://github.com/openenergymonitor/emonTxFirmware</a></h3>
+
+<h3 class="rteindent1"><a href="https://github.com/openenergymonitor/EmonGLCD">https://github.com/openenergymonitor/EmonGLCD</a></h3>
+
+<h3 class="rteindent1"><a href="https://github.com/openenergymonitor/NanodeRF">https://github.com/openenergymonitor/NanodeRF</a></h3>
+
+<h3 class="rteindent1"><a href="https://github.com/openenergymonitor/Open-Kontrol-Gateway">?https://github.com/openenergymonitor/Open-Kontrol-Gateway</a></h3>

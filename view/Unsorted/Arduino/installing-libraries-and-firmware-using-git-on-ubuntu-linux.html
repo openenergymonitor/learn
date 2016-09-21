@@ -1,0 +1,86 @@
+<h2>Installing Libraries and Firmware using git on Ubuntu Linux</h2>
+
+<h3>1) Install git</h3>
+
+<pre>
+$ sudo apt-get install git-core</pre>
+
+<p>Follow this tutorial on creating SSH keys:<br />
+<a href="https://help.github.com/articles/generating-ssh-keys">https://help.github.com/articles/generating-ssh-keys</a></p>
+
+<p><strong>Helpful tip:</strong> If doing this via SSH, use <strong>cat /home/pi/.ssh/id_rsa.pub</strong> to display the SSH key in the terminal window, then select and copy to clipboard with Ctrl-Shift-C so you&#39;ll be ready to paste it into the Github settings page.</p>
+
+<h3>2) Installing Libraries</h3>
+
+<p>Before continuing, ina terminal window, locate your Arduino sketchbook directory.</p>
+
+<p>CD to the libraries folder in sketchbook that should have been created automatically by the Arduino IDE:</p>
+
+<pre>
+$ cd libraries</pre>
+
+<p>Download the jeelib library from jeelabs.(contains everything for operating the RFM12 wireless board as well jeenode ports) Recent changes introduce a conflict with GLCDLib. See http://localhost/docs/node/3850 for more information.</p>
+
+<pre>
+$ git clone https://github.com/jcw/jeelib.git
+
+Openenergymonitor emonlib library, contains the ac power calculations for electricity monitoring.</pre>
+
+<pre>
+$ git clone https://github.com/openenergymonitor/EmonLib.git</pre>
+
+<p>One wire DS18B20 temperature sensor library</p>
+
+<pre>
+$ git clone https://github.com/milesburton/Arduino-Temperature-Control-Library.git</pre>
+
+<p>Real time clock library</p>
+
+<pre>
+$ git clone https://github.com/jcw/rtclib.git</pre>
+
+<p>LCD Display library for EmonGLCD (see note re. JeeLib above.)</p>
+
+<pre>
+$ git clone https://github.com/jcw/glcdlib.git</pre>
+
+<p>Ethercard library for the NanodeRF and Open Kontrol Gateway</p>
+
+<pre>
+$ git clone https://github.com/jcw/ethercard.git</pre>
+
+<p>This one can&#39;t be done with git as it&#39;s not on github. Download the OneWire library from pjrc.com and unzip it into the libraries folder in your sketchbook:</p>
+
+<pre>
+http://www.pjrc.com/teensy/td_libs_OneWire.html</pre>
+
+<h3>2) Installing Firmware</h3>
+
+<p>Again, start by locating your Arduino sketchbook directory in a terminal window.</p>
+
+<p>Create a new folder to hold the firmware. (makes navigation easier)</p>
+
+<pre>
+$ mkdir OpenEnergyMonitor</pre>
+
+<pre>
+$ cd OpenEnergyMonitor</pre>
+
+<p>Download the emonTxFirmware:</p>
+
+<pre>
+$ git clone https://github.com/openenergymonitor/emonTxFirmware.git</pre>
+
+<p>The EmonGLCD Firmware</p>
+
+<pre>
+$ git clone https://github.com/openenergymonitor/EmonGLCD.git</pre>
+
+<p>The NanodeRF firmware (if your using a NanodeRF basestation)</p>
+
+<pre>
+$ git clone https://github.com/openenergymonitor/NanodeRF.git</pre>
+
+<p>&nbsp;</p>
+
+<p>That should be everything, check step 3 of <a href="http://localhost/docs/buildingblocks/setting-up-the-arduino-environment">setting up the arduino programming environment here </a>to ensure your directory structure is the same,</p>

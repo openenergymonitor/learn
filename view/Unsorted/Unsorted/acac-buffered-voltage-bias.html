@@ -1,0 +1,18 @@
+<h2>Buffered Voltage Bias</h2>
+
+<h3>Improving the quality of the bias source</h3>
+
+<p>The relatively simple voltage bias source illustrated in &ldquo;<a href="http://localhost/docs/buildingblocks/measuring-voltage-with-an-acac-power-adapter">Measuring AC Voltage with an AC to AC power adapter</a>&rdquo; does have some limitations if high accuracy is required. It can be improved by adding an operational amplifier. The op.amp isolates the mid-point voltage at the junction of R3 &amp; R4 from the AC-AC adapter and voltage divider. This significantly reduces the impedance of the voltage source, resulting in enhanced performance. Only one op.amp is needed, the current sensors can share the bias supply and connect to amplifier output (&ldquo;mid-point&rdquo;) with little fear of interaction between the inputs (which can be troublesome in some circumstances).</p>
+
+<p><img alt="Improved voltage bias circuit diagram" src="http://localhost/docs/files/buffered bias.png" style="width: 650px; height: 315px; " /></p>
+
+<p>Notes:</p>
+
+<ol>
+	<li>This modification might not be suitable if the power source is batteries,</li>
+	<li>Any pair of equal resistors up to 100 k&Omega; may be used for R3 &amp; R4, and C1 can be reduced to 100 nF for resistor values at the high end of the range.
+	<p>&nbsp;</p>
+	</li>
+</ol>
+
+<p><i>[This design was originally published by <a href="http://localhost/docs/user/956">calypso_rae</a> at <a href="http://localhost/docs/node/673">http://localhost/docs/node/673</a>]</i></p>

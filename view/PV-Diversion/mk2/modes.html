@@ -1,0 +1,25 @@
+<h2>Diverting surplus PV Power, by Robin Emley</h2>
+
+<p style="float: left;"><a href="switchdev">&lt;&lt; 4: Switching High Current Loads using a Triac</a></p>
+
+<p style="float: right;"><a href="vimeasurement">6: Different ways of Measuring Voltage and Current &gt;&gt;</a></p>
+
+<h3 style="clear: both;">5: Mk2 Controller Operating Modes</h3>
+
+<p>The principle on which the Mk2 controller operates works equally well using either Burst Mode or Phase Angle Control to regulate the dump load.</p>
+
+<p>When running in <b>&ldquo;burst mode&rdquo;</b> the basic Mk2 PV Router has a single energy threshold. The algorithm for diverting power is very simple. Whenever the energy bucket&rsquo;s level is above this threshold value, power for the dump load is turned on; otherwise it&rsquo;s turned off. A new decision is made every mains cycle, i.e. 50 times per second. By switching the load on or off in whole cycles, complications with DC are avoided.</p>
+
+<p>When a good amount of surplus power is available, the load is turned on and off many times per second. At half power, the switching rate is likely to be approximately 12.5 Hz. Although the dump load is not adversely affected by this kind of switching, any nearby incandescent lights are likely to &ldquo;flicker&rdquo; because of the slight reduction in mains voltage that occurs whenever a high-power load is on and drawing current. This is a fundamental problem which affects all burst mode systems.</p>
+
+<p>An <b>anti-flicker option</b> has therefore been included in all recent releases of the Mk2 code. When running in this mode, the frequency at which the dump load is switched on and off is greatly reduced. Correct calibration of the system is essential when running in anti-flicker mode. If the 1Wh &lsquo;sweet zone&rsquo; of the supply meter is exceeded, then some surplus energy would be permanently lost, or the user would be charged for some consumption, or both.</p>
+
+<p>Anti-flicker is a topic of ongoing development, a forum thread may be found at <a href="https://openenergymonitor.org/emon/node/1637">https://openenergymonitor.org/emon/node/1637</a>. There is a video demonstration of the problem and a possible solution <a href="http://www.youtube.com/watch?v=U-gW0ccroYc">here</a>.</p>
+
+<p>The <b>&ldquo;phase-angle control&rdquo;</b> version works slightly differently. The conduction angle of the triac is made proportional to the amount of energy in the bucket, with a correction built in to compensate for the inherent non-linearity of phase control, so that as the energy in the bucket rises and falls, the firing point steadily advances and retards. The phase-angle variant of my Mk2 PV Router can be seen working in a video <a href="https://www.youtube.com/watch?v=p_IoNohZJAY">here</a>.</p>
+
+<p style="float: left;"><a href="switchdev">&lt;&lt; 4: Switching High Current Loads using a Triac</a></p>
+
+<p style="float: right;"><a href="vimeasurement">6: Different ways of Measuring Voltage and Current &gt;&gt;</a></p>
+
+<p style="clear: both;">&nbsp;</p>

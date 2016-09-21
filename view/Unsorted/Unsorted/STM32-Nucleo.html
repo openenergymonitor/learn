@@ -1,0 +1,95 @@
+<p>&nbsp;</p>
+
+<ul>
+	<li>
+	<h2><strong>Nucleo STM32F103 dev board with built in STlinkV2-1 programmer&nbsp;</strong></h2>
+	</li>
+	<li>
+	<h2><strong>Ubuntu 14.04 LTS 64bit&nbsp;</strong></h2>
+	</li>
+</ul>
+
+<p><br />
+<strong>1. GNU ARM Tool Chain<br />
+2. IDE Eclipse&nbsp;<br />
+3. STmicro libraries&nbsp;<br />
+4. GDB Serve</strong>r&nbsp;<br />
+<br />
+<strong>1.&nbsp;GNU ARM Tool Chain</strong><br />
+https://launchpad.net/~terry.guo/+archive/ubuntu/gcc-arm-embedded<br />
+$ sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded<br />
+(if using 14.04 follow&nbsp;extras&nbsp;steps&nbsp;when adding PPA)<br />
+$ sudo apt-get update<br />
+$ sudo apt-get install gcc-arm-none-eabi<br />
+if 64bit, we need 32-bit libs<br />
+$ sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0<br />
+&nbsp;<br />
+<strong>2. Eclipse IDE &amp; ARM plugin&nbsp;</strong><br />
+Verify Java version is 1.7 or newer<br />
+$&nbsp;java -version<br />
+http://www.eclipse.org/downloads/<br />
+Choose IDE for C/C++ for 32 / 64 bit<br />
+Extract and run $ ./eclipse<br />
+http://gnuarmeclipse.livius.net/blog/plugins-install/<br />
+Add c++ dev tools<br />
+Help &rarr; Install New Software &gt; releases&nbsp;<br />
+Select &#39;Luna&#39; eclipse release&nbsp;<br />
+Group by category &gt; programming languages &gt; C/C++ dev tools&nbsp;<br />
+Add ARM plugin&nbsp;<br />
+Help &rarr; Install New Software &gt; releases&nbsp;<br />
+http://gnuarmeclipse.sourceforge.net/updates<br />
+<br />
+<strong>3. STmicro libraries&nbsp;</strong><br />
+firmware:&nbsp;http://www.st.com/web/en/catalog/tools/PF257890#<br />
+template makefile compile environment:&nbsp;<br />
+git clone git://github.com/geoffreymbrown/STM32-Template.git</p>
+
+<p><strong>4.&nbsp;GDB Server</strong>&nbsp;<br />
+GDB Server - debugging&nbsp;- ST link is not native compatible with Linux however, it&#39;s been reverse engineered:<br />
+git clone git://github.com/texane/stlink.git<br />
+$ sudo apt-get install libusb-1.0<br />
+$ sudo apt-get install autoreconf<br />
+$ cd stlink&nbsp;<br />
+$ ./autogen.sh<br />
+$ ./configure<br />
+$ make<br />
+$ sudo cp&nbsp;49-stlinkv2-1.rules&nbsp;/etc/udev/rules.d<br />
+$ sudo udevadm control --reload-rules<br />
+$ sudo udevadm trigger<br />
+$ sudo ./st-util</p>
+
+<p><br />
+<strong>GUI - QSTLink2</strong><br />
+https://github.com/fpoussin/QStlink2<br />
+https://launchpad.net/~fpoussin/+archive/ubuntu/ppa<br />
+$ sudo add-apt-repository ppa:fpoussin/ppa<br />
+$ sudo apt-get install qstlink2<br />
+To flash code to the board<br />
+http://stackoverflow.com/questions/2427011/what-is-the-difference-between-elf-files-and-bin-files</p>
+
+<p><strong>Binary Flash&nbsp;</strong><br />
+./st-flash write blinky.bin 0x8000000<br />
+<br />
+<strong>ELF&nbsp;Executable Linkable Format</strong><br />
+1. Start ST-link server on port 4242<br />
+$ ./st-util #check ST link is connected ok&nbsp;<br />
+$ ./st-util 4242 /dev/stlink<br />
+2. Start GDB and connect to ST-link server on port 4242<br />
+start an instance of arm-noneeabi-gdb<br />
+in a separate window and execute the following<br />
+$ arm-none-eabi-gdb BlinkingLights.elf<br />
+$(gdb)&nbsp;target extended-remote :4242<br />
+$(gdb) load&nbsp;<br />
+$(gdb) continue&nbsp;</p>
+
+<p><br />
+<strong>Serial Output&nbsp;</strong><br />
+Nucleo board serial output can be viewed by opening serial port /dev/ttyACM0</p>
+
+<p><strong>Getting started wtih&nbsp;Eclipse</strong><br />
+1. Select new C++ project for STMF10x project<br />
+2. Check through default options&nbsp;<br />
+3. select blinky example<br />
+4. in BlinkLed.h change port number to be &#39;0&#39; for A and pin number to be 5 (on the necleo board the LED is on A5)&nbsp;&nbsp;&nbsp;<br />
+5. Click build<br />
+6. .elf file is now in the debug folder&nbsp;</p>

@@ -1,0 +1,35 @@
+<h2>
+	Notes on ESP-R Open Source building simulation program</h2>
+<p><a href="http://www.esru.strath.ac.uk/Programs/ESP-r.htm">http://www.esru.strath.ac.uk/Programs/ESP-r.htm</a></p>
+<p><img alt="" src="http://localhost/docs/files/espr.png" style="width: 600px; height: 478px;" /></p>
+<h3>
+	Installation on Ubuntu 11.04</h3>
+<p>If you dont have these already, you will need:</p>
+<pre>
+$ sudo apt-get install subversion
+$ sudo apt-get install build-essential
+$ sudo apt-get install gfortran
+$ sudo apt-get install xfig
+</pre>
+<p>Installation of esp-r as decribed on page 18 (4.2)&nbsp;http://www.esru.strath.ac.uk/Documents/ESP-r_developers_doc.pdf</p>
+<pre>
+$ cd
+$ mkdir Src
+$ cd Src
+$ mkdir cvsdude
+$ cd cvsdude
+$ svn checkout https://espr.svn.cvsdude.com/esp-r/branches/development_branch
+$ cd development_branch/src
+$ sudo ./Install -d /opt/esru --gcc4 --reuse_ish_calcs</pre>
+<p>Add path to <em>.bashrc</em></p>
+<pre>
+$ cd
+$ nano .bashrc</pre>
+<p>Add the path below to the end of the file:</p>
+<pre>
+export PATH=$PATH:/opt/esru/bin:/opt/esru/esp-r/bin</pre>
+<p><strong>Run:</strong></p>
+<pre>
+$ esp-r</pre>
+<p><strong>Cookbook</strong></p>
+<p><a href="http://www.esru.strath.ac.uk/Documents/ESP-r_cookbook_july_2011.pdf">http://www.esru.strath.ac.uk/Documents/ESP-r_cookbook_july_2011.pdf</a></p>

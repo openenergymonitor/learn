@@ -1,0 +1,24 @@
+<h2>1) Installing the Arduino IDE &ndash; Windows Vista,&nbsp;7,&nbsp;8.1 &amp; 10</h2>
+
+<p>Follow Arduino windows install guide:&nbsp;<a href="https://www.arduino.cc/en/Guide/Windows">https://www.arduino.cc/en/Guide/Windows</a></p>
+
+<p>This will download a file with a name like &ldquo;Arduino-1.0.5-r2-windows.exe&rdquo; (the name will change depending on the version) to your usual location. Double-click on that file and allow it to install in the normal way. Part way through the installation, it will ask for the components to install. It does not appear to make any difference whether you select Install USB driver or not, you still need later to install the SILabs drivers.</p>
+
+<p><img alt="Arduino IDE Installation options" height="292" src="http://localhost/docs/files/IDE_Win 2.PNG" width="426" /></p>
+
+<p>When the installation finishes, the screen will show &ldquo;Arduino Setup:Completed&rdquo;.</p>
+
+<h2>2) Download and install the FTDI Drivers</h2>
+
+<p>If you are using <a href="http://shop.openenergymonitor.com/programmer-usb-to-serial-uart/">USB to UART&nbsp;programming&nbsp;cable sold through the OpenEnergyMonitor shop</a>, <strong>do not follow the instructions for installing the drivers on the Arduino website</strong>, instead download the drivers from <a href="http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx</a><br />
+Click on &ldquo;Download VCP&hellip;&rdquo;</p>
+
+<p><img alt="Downloading the SILabs Drivers" height="414" src="http://localhost/docs/files/IDE_Win 3.png" width="600" /></p>
+
+<p>This will download a zip file &ldquo;CP210x_VCP_Windows&rdquo; to your usual location. Extract the contents to a convenient place and you will find two installers, one for 32-bit computers (CP210xVCPInstaller_x86.exe) and one for 64-bit (CP210xVCPInstaller_x64.exe). Double-click on the correct one for your machine and allow it to install the drivers in the normal way.</p>
+
+<p>Make sure you restart the Arduino IDE after installing the drivers. Before you connect the programmer, check Tools &gt; Serial Port. If Serial Port is greyed out, that&rsquo;s OK, if not and any serial ports are listed, make a note of which they are. Now connect the programmer and your module (emonTx, NanodeRF or emonGLCD). Go back to the main menu and select Tools again. Serial Port should be available and showing a new port. Select that port. Under Tools &gt; Board ensure &ldquo;Arduino Uno&rdquo; is selected.</p>
+
+<p>If you have a favorite text editor, you can use it instead of the built-in editor. Select File &gt; Preferences and tick the box &ldquo;Use external editor&rdquo;. When you use an external editor, your workflow is slightly different. You must still open the sketch in the IDE, but the IDE does not open your editor - you must yourself open the sketch file in your external editor, and save the file when editing is done. Then you switch to the IDE, where you can click &ldquo;Verify&rdquo; or &ldquo;Upload&rdquo;. The IDE will read the file again and then proceed to compile it (&ldquo;Verify&rdquo;) or compile and upload it (&ldquo;Upload&rdquo;).</p>
+
+<p>Read the section on <a href="http://localhost/docs/buildingblocks/installing-arduino-libraries#Windows">Installing the Libraries under Windows</a> and install the libraries before you set your Sketchbook location (under Preferences).</p>

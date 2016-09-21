@@ -1,0 +1,184 @@
+<h2>Installing Arduino Libraries - Linux &amp; Mac</h2>
+
+<p>In this example we will install the EmonLib Library which is an OpenEnergyMonitor library used by the emonTX for doing AC Voltage and Current sampling and calculations. The OEM project requires several libraries, from Ethernet to LCD, and 1 wire temperature sensing, most of these are listed at the bottom of this page for quick reference, but always check the&nbsp;Arduino sketch and accompanying docs for latest versions and links.</p>
+
+<p>In this example, we use Ubuntu Linux. The procedure is exactly the same on a Mac. The Windows procedure follows in the <a href="#Windows">next section</a>.</p>
+
+<h3>1) Download the Library</h3>
+
+<h3>EmonLib can be found here:&nbsp;<a href="https://github.com/openenergymonitor/EmonLib">https://github.com/openenergymonitor/EmonLib</a></h3>
+
+<p><img alt="" height="352" src="http://localhost/docs/files/gettingstarted_Arduino_03.png" width="600" /></p>
+
+<h3>2) Locate your Arduino sketchbook folder and unzip EmonLib into the libraries sub directory</h3>
+
+<p><em>Note: Version 1.6.7 of the Arduino IDE (and probably some earlier versions too) assumes that the folder, which it calls &quot;Sketchbook&quot;, must be the parent of both the user&#39;s top level sketch directory and the &quot;libraries&quot; directory.&nbsp; This can be (but need not be) the &quot;Arduino&quot; directory. If this convention is not observed, the libraries that you are about to install will not be found.</em></p>
+
+<p>When downloading from github, some extra folders are added that need to be removed.</p>
+
+<p><img alt="" src="http://localhost/docs/files/libraries_p2.png" style="width: 600px; height: 352px;" /></p>
+
+<h3>3) Rename the Library to EmonLib</h3>
+
+<p>Only ASCII&nbsp;characters are valid in Arduino library names, so you have to rename after extracting.</p>
+
+<p>&nbsp;<img alt="" src="http://localhost/docs/files/libraries_p3.png" style="width: 600px; height: 352px;" /></p>
+
+<h3>4) Important step: Shut down and restart the IDE.&nbsp;</h3>
+
+<p>For this example click on <em>File&gt;Examples&gt;EmonLib&gt;Voltage_and_current </em>to load the EmonLib Voltage and current measurement example. Click on the tick button or<em> Sketch&gt;Verify/Compile</em>. If everything is setup correctly it should compile and show the message <em>Done Compiling</em> as in the screenshot below.</p>
+
+<p><img alt="" src="http://localhost/docs/files/install_arduino_lib_4.png" width="600" /></p>
+
+<h3>5) Repeat the above steps for all the other libraries needed:</h3>
+
+<table border="2" cellpadding="5" cellspacing="1" width="600">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>JeeLib</strong></p>
+
+			<p><strong>RFu_JeeLib&nbsp;</strong></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>
+			<p><a href="https://github.com/jcw/jeelib">https://github.com/jcw/jeelib</a></p>
+
+			<p><a href="https://github.com/openenergymonitor/RFu_jeelib">https://github.com/openenergymonitor/RFu_jeelib</a></p>
+
+			<p>RFu JeeLib is used for emonTx&nbsp;V3 and emonTH&nbsp;using the RFu328 module</p>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>EmonLib</strong></td>
+			<td><a href="https://github.com/openenergymonitor/EmonLib.git">https://github.com/openenergymonitor/EmonLib</a></td>
+		</tr>
+		<tr>
+			<td><strong>OneWire</strong></td>
+			<td><a href="http://www.pjrc.com/teensy/td_libs_OneWire.html">http://www.pjrc.com/teensy/td_libs_OneWire.html</a></td>
+		</tr>
+		<tr>
+			<td><strong>DallasTemperature</strong></td>
+			<td>
+			<p><a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>RTClib</strong></td>
+			<td><a href="https://github.com/jcw/rtclib">https://github.com/jcw/rtclib</a></td>
+		</tr>
+		<tr>
+			<td><strong>GLCD_ST7565</strong></td>
+			<td><a href="https://github.com/jcw/glcdlib">https://github.com/jcw/glcdlib</a></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>EtherCard</strong></p>
+
+			<p><strong>DHT22&nbsp;</strong></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>
+			<p><a href="https://github.com/jcw/ethercard/">https://github.com/jcw/ethercard/</a></p>
+
+			<p><a href="https://github.com/adafruit/DHT-sensor-library">https://github.com/adafruit/DHT-sensor-library</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>Update: if you want an easy install all the required libraries can be <a href="https://www.dropbox.com/sh/2p17ejgjsd0i4w9/AAAE3MyuM3aVCQAtNfPEiCAEa?dl=0">downloaded from our Dropbox folder</a>.</strong></p>
+
+<p>&nbsp;</p>
+
+<p><a id="Windows"> </a></p>
+
+<h2>Installing Arduino Libraries - Windows 8.1 &amp; 10</h2>
+
+<p><em>Although this guide shows screenshots from both Windows 8.1 &amp; Windows 10, there are no significant differences between the versions.</em></p>
+
+<p>Before you install the libraries, it would be a good idea to think about how you will organise your Emon data.</p>
+
+<p>When you install the Arduino IDE (V1.6.7 and later), it creates an &quot;Arduino&quot; folder in your files area &quot;This PC &gt; Documents &gt; Arduino&quot;. You may utilise this structure, in which case the &quot;Arduino&quot; folder becomes your &quot;Sketchbook&quot; and you create a hierarchy for your sketches starting below the Arduino folder and at the same level as the &quot;libraries&quot; folder. You may choose to keep your sketches elsewhere, but the relationship between the &quot;Sketchbook&quot; folder, your sketches and your libraries must be preserved, otherwise the libraries that you are about to install will not be found.</p>
+
+<p>This is the structure:<br />
+<img src="http://localhost/docs/files/IDE1.6.7_structure.png" /></p>
+
+<p>[Important Note: This is NOT the same &lsquo;libraries&rsquo; folder that is part of the Arduino IDE. If you put the OEM libraries in there, they will work, but when you update the Arduino IDE, by default it completely deletes the old installation including any other files you might have put there, and you will have to download and install these libraries again. For that reason, it is not recommended.]</p>
+
+<p>My preference is to have a folder that contains everything related to OpenEnergyMonitor. That folder, which I&rsquo;ve called &lsquo;OEM&rsquo; is at the top level in my personal area, i.e. &hellip;\Documents and Settings\[user]\OEM.&nbsp; Contained in the OEM folder, I have folders for Drawings, Manuals &amp; Leaflets, and importantly, Software. That Software folder is the equivalent of the &quot;Arduino&quot; folder in the default configuration and is my &quot;Sketchbook&quot; folder.</p>
+
+<h2>1) Downloading the Libraries</h2>
+
+<p>Many libraries are required, this is the full list again:</p>
+
+<table border="2" cellpadding="5" cellspacing="1" width="600">
+	<tbody>
+		<tr>
+			<td>
+			<p><a id="Windows"><strong>JeeLib</strong></a></p>
+
+			<p><a id="Windows"><strong>RFu_JeeLib&nbsp;</strong></a></p>
+
+			<p><a id="Windows">&nbsp;</a></p>
+			</td>
+			<td>
+			<p><a href="https://github.com/jcw/jeelib">https://github.com/jcw/jeelib</a></p>
+
+			<p><a href="https://github.com/openenergymonitor/RFu_jeelib">https://github.com/openenergymonitor/RFu_jeelib</a></p>
+
+			<p>RFu JeeLib is used for emonTx&nbsp;V3 and emonTH&nbsp;using the RFu328 module</p>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>EmonLib</strong></td>
+			<td><a href="https://github.com/openenergymonitor/EmonLib.git">https://github.com/openenergymonitor/EmonLib</a></td>
+		</tr>
+		<tr>
+			<td><strong>OneWire</strong></td>
+			<td><a href="http://www.pjrc.com/teensy/td_libs_OneWire.html">http://www.pjrc.com/teensy/td_libs_OneWire.html</a></td>
+		</tr>
+		<tr>
+			<td><strong>DallasTemperature</strong></td>
+			<td>
+			<p><a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>RTClib</strong></td>
+			<td><a href="https://github.com/jcw/rtclib">https://github.com/jcw/rtclib</a></td>
+		</tr>
+		<tr>
+			<td><strong>GLCD_ST7565</strong></td>
+			<td><a href="https://github.com/jcw/glcdlib">https://github.com/jcw/glcdlib</a></td>
+		</tr>
+		<tr>
+			<td><strong>EtherCard</strong></td>
+			<td><a href="https://github.com/jcw/ethercard/">https://github.com/jcw/ethercard/</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Go to each of the websites in turn. The OneWire library is not on GitHub, all the rest are. Download the zip file for each to your usual place &ndash; on GitHub the button is on the right-hand side and you may need to scroll down the page to see it:</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="screenshot - downloading from Github" height="323" src="http://localhost/docs/files/GitDownload.png" width="600" /></p>
+
+<h2>2) Installing the Libraries</h2>
+
+<p>When you have downloaded all the files, go to your download location and extract the contents of each Zip file in turn: Double-click on the zip file, a window will open showing the contents. Drag that folder into the &ldquo;libraries&rdquo; folder.</p>
+
+<h2>3) Renaming the Libraries</h2>
+
+<p>The Arduino IDE does not allow hyphens &lsquo;-&rsquo; in the library folder names. You must rename the folders to the names in this screen-shot. You should end up with:</p>
+
+<p><img alt="" src="http://localhost/docs/files/Libraries2_Win10.png" style="width: 702px; height: 385px;" /></p>
+
+<p>[If you wish, you can now delete the zip files you downloaded.]</p>
+
+<h2>4) Check the Libraries</h2>
+
+<p>If your Arduino IDE is running, shut it down. Start (or restart) the IDE. First you must tell the IDE where your &lsquo;Sketchbook&rsquo; is located. Click on File &gt; Preferences and at the top for &ldquo;Sketchbook location&rdquo; browse to, and select your &ldquo;Software&rdquo; folder, then click OK. Click on Sketch &gt; Include Library and you should see the list of your libraries listed below &quot;Contributed libraries&quot;. Note: The IDE only checks the libraries at start-up. Each time you change or add a library, you must shut down and restart the IDE.</p>

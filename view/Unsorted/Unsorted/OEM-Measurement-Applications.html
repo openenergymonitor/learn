@@ -1,0 +1,69 @@
+<h2>Things that have been measured with Open Energy Monitor.</h2>
+
+<p>A long-time member of the OEM forums, <a href="http://localhost/docs/user/4207">Vster</a>, <a href="http://localhost/docs/node/11845">asked</a>:</p>
+
+<p>&ldquo;Obviously lots of different people are measuring lots of different &#39;things&#39; with official and unofficial OEM modules, but there doesn&#39;t appear to be a big list/directory somewhere where all these &#39;things&#39; are listed. We&#39;ve all done the &#39;usual&#39;, electricity usage and house temperature, some have gone further to monitor the output of their solar PV systems and heat pumps. I was wondering what others were monitoring and today I came across a chap who has temperature sensors in the flow/return pipes of his gas boiler to monitor efficiency. But I was wondering what others are doing?&rdquo;</p>
+
+<p>&nbsp;</p>
+
+<p>To prevent the list from getting buried in the forum, here it is in consolidated form. Thanks to all who contributed.</p>
+
+<h3>Utility Monitoring</h3>
+
+<ul>
+	<li>Water flow [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Water meter [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Gas meter [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+</ul>
+
+<h3>Environmental</h3>
+
+<ul>
+	<li>Beehive monitor. [<a href="http://localhost/docs/user/10">Glyn Hudson</a>]</li>
+	<li>Wind speed, wind direction, rain fall [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Soil moisture level [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Humidity (int and ext) [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Air quality [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>I have a (very) remote weather station running WeeWx on a Pi, sending data to Wunderground. I use the Emoncms extension to Weewx just to keep an eye on the weather station&#39;s battery status, which Wunderground doesn&#39;t log. [<a href="http://localhost/docs/user/7971">Derekb</a>]</li>
+	<li>Brightness (day/night) [<a href="http://localhost/docs/user/3464">Bra1n</a>]</li>
+</ul>
+
+<h3>Heating &amp; Air Conditioning</h3>
+
+<ul>
+	<li>Heating oil tank level [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Heatpumps (http://openenergymonitor.blogspot.co.uk/2015/12/heat-pump-monitoring.html). [<a href="http://localhost/docs/user/5542">Gwil</a>]</li>
+	<li>Central heating boiler, flow and return temperatures, heating on/off, burner and pump status [<a href="http://localhost/docs/user/3464">Bra1n</a>]</li>
+	<li>I came across a chap who has temperature sensors in the flow/return pipes of his gas boiler to monitor efficiency - so I&#39;ve add that to the list.[<a href="http://localhost/docs/user/4207">Vster</a>]</li>
+	<li>Mine probably seems on the face of it fairly conventional&mdash;a temp. monitor on my solar-heated water tank. The only difference from the norm being that, in order to see the temperature from a different room, I &quot;hacked&quot; a small wireless weather station (3&euro; from a bootsale!) by removing the sensor from the transmitter, extending it a couple of feet &amp; popping it behind the insulation near the top of the tank. Somewhat less hi-tech than the Pi versions I see here, but 2 AAA batteries last about 2 - 3 years. [<a href="http://localhost/docs/user/9165">Trevortron</a>]</li>
+</ul>
+
+<h3>Other Building Services</h3>
+
+<ul>
+	<li>Occupancy / movement [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Monitoring the hallway and landing temperature is pretty standard, then it&#39;s interesting to have the outside temperature too. [<a href="http://localhost/docs/user/4207">Vster</a>]</li>
+	<li>We&#39;ve all done the &#39;usual&#39;, electricity usage and house temperature, some have gone further to monitor the output of their solar PV systems and heat pumps. I monitor the power going to my electric car charger (seemed like a good idea &amp; it&#39;s next to the grid meter and the PV meter). [<a href="http://localhost/docs/user/4207">Vster</a>]</li>
+	<li>I also monitor the temperature inside my rain water harvesting tank - it freezes during very cold weather and destroys the pump. [<a href="http://localhost/docs/user/4207">Vster</a>]</li>
+	<li>Rain water harvesting tank level [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+<li>My wireless sensor tags temperature moisture and battery level using a kumoapp that I wrote that sends the sensor data to emoncms and mqtt for home assistant. Kumoapps are little javascript apps that run on a cloud server of the wireless sensor tags (http://www.wirelesstag.net/) [<a href="http://localhost/docs/user/8839">joyrider3774</a>]</li>
+<li>Wemo insight and smart maginon sp1 smart wall plugs. (Those are wifi on/off switches but can monitor energy use of appliances attached to them.) [<a href="http://localhost/docs/user/8839">joyrider3774</a>]</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+
+<ul>
+	<li>Server temperature, cpu and ram usage [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>Wi-fi signal and quality [<a href="http://localhost/docs/user/4440">pb66</a>]</li>
+	<li>I know of a company that has used the system to measure the power consumption on-board train carriages. [<a href="http://localhost/docs/user/5542">Gwil</a>]</li>
+	<li>Caravan battery voltage, temperature and charge/discharge current [<a href="http://localhost/docs/user/3464">Bra1n</a>]</li>
+	<li>Drip irrigation system pressure<br />
+	Pressure drop across irrigation filter (to detect when the filter is plugged)<br />
+	Liquid level in sump (to sound alarm if sump pump fails)<br />
+	<br />
+	<a href="http://localhost/docs/files/PM garden.jpeg"><img alt="PM garden.jpeg" class="imagecache imagecache-avatar" height="50" src="http://localhost/docs/files/imagecache/avatar/PM%20garden.jpeg" title="PM garden.jpeg" width="50" /></a> [<a href="http://localhost/docs/user/6518">JD</a>]</li>
+<li>My phone's battery level using combination of tasker + mqtt [<a href="http://localhost/docs/user/8839">joyrider3774</a>]</li>
+
+</ul>
+
+<p><em>If you have, or have heard of, an application that should be added to this list, please contribute in <a href="http://localhost/docs/node/11845">the original thread</a>. This page will be updated from time to time as necessary.</em></p>

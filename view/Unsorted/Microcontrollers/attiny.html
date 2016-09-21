@@ -1,0 +1,37 @@
+<h1>Setting up Arduino IDE for use with ATtinys</h1>
+
+<h2>You will need:</h2>
+
+<ul>
+	<li>Ubuntu 12.04 - setup will be very similar on other OSes</li>
+	<li>Arduino&nbsp;1.0.1:&nbsp;<a href="http://arduino.cc/en/Main/Software">http://arduino.cc/en/Main/Software</a></li>
+	<li>TinyCore 100-15:&nbsp;<a href="http://code.google.com/p/arduino-tiny/downloads/list">http://code.google.com/p/arduino-tiny/downloads/list</a></li>
+	<li>AVR ISP programmer - see <a href="http://localhost/docs/buildingblocks/avrisp">AVR ISP programmer building blocks page</a></li>
+</ul>
+
+<ol>
+	<li>Download TinyCore and extract the &#39;tiny&#39; folder to &#39;arduino-1.0.1/hardware/tiny&#39;</li>
+	<li>In the Hardware folder you should now have three folders: &#39;arduino&#39;, &#39;tiny&#39; and &#39;tools&#39;</li>
+	<li>Double check you have the folders <em>bootloader</em> and <em>cores</em>, and the file <em>boards.txt</em> inside the &#39;tiny&#39; folder</li>
+	<li>Open <em>boards.txt</em> and select the your&nbsp;AVR programmer by un-commenting the correct line, save and close.</li>
+	<li>Open Arduino, and you should see the ATtiny boards in the Tools&gt;Board menu</li>
+</ol>
+
+<h2>To burn the bootloader (set fuses)</h2>
+
+<p>This doesn&#39;t actually burn a bootloader to enable any sort of serial sketch uploading as in the case of the ATmega328, it just sets the fuses on the ATtiny:</p>
+
+<ol>
+	<li>Select the correct board (we use ATtiny84 with 8Mhz internal crystal,&nbsp;BOD disabled for RFM12pi), select your programmer in Tools&gt;Programmer then Tools&gt;Burn Bootloader</li>
+	<li>You should now be able to upload sketches to the ATtiny wih ISP programmer</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>This guide is a condensed version of the info from these sites:&nbsp;</p>
+
+<p><a href="http://hlt.media.mit.edu/?p=1695">http://hlt.media.mit.edu/?p=1695</a></p>
+
+<p><a href="http://harizanov.com/2012/08/setting-up-arduino-ide-for-working-with-attinys/">http://harizanov.com/2012/08/setting-up-arduino-ide-for-working-with-attinys/</a></p>
+
+<p>&nbsp;</p>

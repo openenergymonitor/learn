@@ -1,0 +1,52 @@
+<h2>Explanation of the phase correction algorithm</h2>
+
+<p>The correction algorithm in the software applies a proportion (the constant) of the difference between the present sampled value and the previous sampled value to the previous sample. The result generates a new waveform, shifted in time relative to the original (it also has a small effect on the amplitude, which may need to be corrected).</p>
+
+<div>It is best explained with a diagram:</div>
+
+<div>&nbsp;</div>
+
+<div><img alt="" src="http://localhost/docs/files/phaseshift.png" style="width: 600px; height: 271px; " /></div>
+
+<div>&nbsp;</div>
+
+<div>In the standard library routine, the wave is sampled about 53 times per cycle. To simplify the diagram, we have reduced this to 18 times per cycle. Time and samples run from left to right.&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>The first sample is read from the analogue input, filtered, and becomes &#39;filteredV&#39;. Ignore for now what happens in the remainder of the first loop of the program. At the start of the second loop, that first sample is copied to the program variable &#39;lastFilteredV&#39;. We now have the first two points on the diagram. The program calculates &#39;phaseShiftedV&#39; from the formula</div>
+
+<div>&nbsp;</div>
+
+<pre>
+phaseShiftedV = lastFilteredV + PHASECAL * (filteredV - lastFilteredV); </pre>
+
+<div>&nbsp;</div>
+
+<div>In the diagram, we have chosen a value of 1.5 for PHASECAL. This puts the point phaseShiftedV above the previous point by 1&frac12; times the vertical distance between this point and the previous point. It is shown by the red dot.</div>
+
+<div>&nbsp;</div>
+
+<div>The next time around the program loop, this point will become &#39;lastFilteredV&#39; and the point we read now is the new &#39;filteredV&#39;. We calculate the next phaseShiftedV and continue like this. You can see that a new waveform has been made that is shifted to the left. This is equivalent to a phase shift.</div>
+
+<div>&nbsp;</div>
+
+<div>Three special values of PHASECAL stand out:</div>
+
+<div>&nbsp;</div>
+
+<div class="rteindent1">1 gives filteredV each time &ndash; no change, the waveform is unaltered,</div>
+
+<div class="rteindent1">0<span class="Apple-tab-span" style="white-space:pre"> </span>gives lastFilteredV each time &ndash; equivalent to moving the waveform to the <em>right</em> by one sample period,</div>
+
+<div class="rteindent1">2<span class="Apple-tab-span" style="white-space:pre"> </span>gives (approximately) a move to the <em>left</em> of one sample period.</div>
+
+<div>&nbsp;</div>
+
+<div><strong>Theoretical values for PHASECAL.</strong></div>
+
+<div>By modifying the software to report the time it takes to complete the inner measurement loop and the number of samples recorded, the time between samples was measured as 377 &mu;s. This equates to 6.79&deg; (at 50 Hz, a full cycle, i.e. 360&deg;, takes 20 ms).</div>
+
+<div>&nbsp;</div>
+
+<div>Therefore, a value of 1 applies no correction, Zero and 2 apply approximately 7&deg; of correction in opposite directions. A value of 1.28 will correct the 2&deg; error caused by the delay between sampling voltage and current.</div>
