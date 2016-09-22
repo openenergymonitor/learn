@@ -24,8 +24,6 @@ if (isset($_GET['q'])) $q = $_GET['q'];
 $format = "html";
 $content = "Sorry page not found";
 
-$format = "html";
-
 if (file_exists("view/".$q)) {
 
     $filename_parts = explode(".",$q);
