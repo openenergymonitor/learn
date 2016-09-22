@@ -2,7 +2,7 @@
 
 <p><em>Last Update 3 November&nbsp;</em><em>- by Trystan Lea</em></p>
 
-<p><img alt="" height="328" src="http://localhost/docs/files/pulseimg.jpg" width="350" /></p>
+<p><img alt="" height="328" src="http://lab.megni.co.uk/oemdocs/files/pulseimg.jpg" width="350" /></p>
 
 <p><em>Pulse counting shield: includes a dedicated barebones Arduino and pull down resistors (detailed below)</em></p>
 
@@ -34,7 +34,7 @@
 
 <p>I decided to opt for a configuration where the pulse counting Arduino displays its pulse times in microseconds and pulse counts of all 12 inputs via 115200 bps serial, once per second. This string is sent to, and decoded by, the main Arduino, then sent via Ethernet, to a web-conected energy display:</p>
 
-<p><img alt="" height="218" src="http://localhost/docs/files/12pulse.png" width="400" /></p>
+<p><img alt="" height="218" src="http://lab.megni.co.uk/oemdocs/files/12pulse.png" width="400" /></p>
 
 <h3>Hardware</h3>
 
@@ -44,7 +44,7 @@
 
 <p>A pull down 10k resistor on each digital input to bring the digital signal to zero when the pulse output relay is in its off/disconnected state.</p>
 
-<p><img alt="" height="206" src="http://localhost/docs/files/pocircuit.png" width="400" /></p>
+<p><img alt="" height="206" src="http://lab.megni.co.uk/oemdocs/files/pocircuit.png" width="400" /></p>
 
 <p><strong>LED Pulse counting</strong></p>
 
@@ -58,19 +58,19 @@
 
 <p>Measures pulses from up to 12 pulse output meters, sends a string to the serial port at a specified time interval (1s default) with pulse times and pulse counts. The string is in semi-JSON format to keep it lightweight.&nbsp;</p>
 
-<p><strong>Download:</strong> <a href="http://localhost/docs/files/MultipleInputPulseCounter_24Oct.zip">MultipleInputPulseCounter_24Oct.zip</a></p>
+<p><strong>Download:</strong> <a href="http://lab.megni.co.uk/oemdocs/files/MultipleInputPulseCounter_24Oct.zip">MultipleInputPulseCounter_24Oct.zip</a></p>
 
 <p><strong>Base Arduino sketch</strong></p>
 
 <p>The following sketch decodes the semi-JSON string sent from the dedicated pulse counting Arduino and calculates power and energy values from the pulse times and pulse counts.&nbsp;</p>
 
-<p><strong>Download:</strong> <a href="http://localhost/docs/files/pulseDecoder.zip">PulseDecoder.zip</a></p>
+<p><strong>Download:</strong> <a href="http://lab.megni.co.uk/oemdocs/files/pulseDecoder.zip">PulseDecoder.zip</a></p>
 
 <p><strong>Pulse Decoder + Ethernet</strong></p>
 
 <p>The above sketch, plus&nbsp;sending these values via a JSON string to the web using the official Ethernet shield.</p>
 
-<p><strong>Download:</strong> <a href="http://localhost/docs/files/pulseDecoderEthernet.zip">PulseDecoderEthernet.zip</a></p>
+<p><strong>Download:</strong> <a href="http://lab.megni.co.uk/oemdocs/files/pulseDecoderEthernet.zip">PulseDecoderEthernet.zip</a></p>
 
 <p>To read more about the web side of things, have a look here: <a href="https://openenergymonitor.org/emon/node/88">Energy Monitor + Simple Web Based graphing</a></p>
 

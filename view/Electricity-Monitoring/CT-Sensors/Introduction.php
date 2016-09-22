@@ -3,7 +3,7 @@
 <p>Often referred to as a current clamp, a CT is in fact, <u><em><strong>not</strong></em></u> a clamp.</p>
 
 <p><em>These</em> are Clamps. On the left are two busbar clamps, on the right, a carpenter&#39;s G-clamp:<br />
-<img alt="" src="http://localhost/docs/files/bbar_clamp.jpg" /><img alt="" height="249" src="http://localhost/docs/files/g_clamp.jpg" width="229" /><br />
+<img alt="" src="http://lab.megni.co.uk/oemdocs/files/bbar_clamp.jpg" /><img alt="" height="249" src="http://lab.megni.co.uk/oemdocs/files/g_clamp.jpg" width="229" /><br />
 <em>Note the tensioning screws.</em></p>
 
 <p>&nbsp;</p>
@@ -12,19 +12,19 @@
 
 <p><u><em><a href="https://openenergymonitor.org/emon/buildingblocks/report-yhdc-sct-013-000-current-transformer">YHDC Current Transformer SCT-013-000 test report</a></em></u></p>
 
-<p><img alt="" height="225" src="http://localhost/docs/files/current100a.jpg" width="300" /></p>
+<p><img alt="" height="225" src="http://lab.megni.co.uk/oemdocs/files/current100a.jpg" width="300" /></p>
 
 <p>&nbsp;</p>
 
 <p>Here&#39;s an example of a <em>Magnelab</em> <em><strong>split-core</strong></em> CT</p>
 
-<p><img alt="" src="http://localhost/docs/files/SCT-1250_CT.jpg" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/SCT-1250_CT.jpg" /></p>
 
 <p>&nbsp;</p>
 
 <p>In addition to the split-core type, solid core, (aka <em><strong>ring core</strong></em>) CTs are available.<br />
 Here&#39;s an example of a <em>Magnelab <strong>solid-core</strong> </em>CT<br />
-<img alt="" src="http://localhost/docs/files/solid_core_ct.jpg" style="margin-top: 5px; margin-bottom: 5px;" /></p>
+<img alt="" src="http://lab.megni.co.uk/oemdocs/files/solid_core_ct.jpg" style="margin-top: 5px; margin-bottom: 5px;" /></p>
 
 <p><strong>Basics</strong></p>
 

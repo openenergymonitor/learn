@@ -6,17 +6,17 @@
 
 <p>It&#39;s because the analogue to digital converter (ADC) in the Arduino chip is not perfect.</p>
 
-<p><img alt="" src="http://localhost/docs/files/current.png" style="width: 400px; height: 203px; " /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/current.png" style="width: 400px; height: 203px; " /></p>
 
 
 
-<p><img alt="" src="http://localhost/docs/files/Fig A.png" style="margin-left: 5px; margin-right: 5px; float: right; width: 200px; height: 162px; " />Imagine a very small current flowing, and the bias voltage divider resistors in the current input stage circuit above, make the average voltage sit exactly in the middle of the Arduino ADC input range. At this point, you need to know that each number out of the analogue to digital converter represents not a voltage but a <em>band</em> of voltages. The analogue to digital converter will measure the waveform at many points &ndash; about 50 in practice &ndash; and if the amplitude of the wave is small enough, each sample of the wave (sampleI) will have the value 511.&nbsp;</p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Fig A.png" style="margin-left: 5px; margin-right: 5px; float: right; width: 200px; height: 162px; " />Imagine a very small current flowing, and the bias voltage divider resistors in the current input stage circuit above, make the average voltage sit exactly in the middle of the Arduino ADC input range. At this point, you need to know that each number out of the analogue to digital converter represents not a voltage but a <em>band</em> of voltages. The analogue to digital converter will measure the waveform at many points &ndash; about 50 in practice &ndash; and if the amplitude of the wave is small enough, each sample of the wave (sampleI) will have the value 511.&nbsp;</p>
 
 
 
 <p>The high pass filter in the software will shift the wave so that the average value is zero. This is equivalent to subtracting the average value from each sample. The average is 511, so each filtered sample will now be 0.</p>
 
-<p><img alt="" src="http://localhost/docs/files/Fig B.png" style="margin-left: 5px; margin-right: 5px; float: right; width: 200px; height: 162px; " />Let&#39;s see what happens if the bias voltage drifts a little. Now the average value is just above the change from 511 to 512. This time, when the analogue to digital converter measures the wave, the samples in the first half cycle (and maybe one or two more) will take the value 512, and the remainder will have the value 511. The sampling process has turned our sine wave into a square wave.</p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Fig B.png" style="margin-left: 5px; margin-right: 5px; float: right; width: 200px; height: 162px; " />Let&#39;s see what happens if the bias voltage drifts a little. Now the average value is just above the change from 511 to 512. This time, when the analogue to digital converter measures the wave, the samples in the first half cycle (and maybe one or two more) will take the value 512, and the remainder will have the value 511. The sampling process has turned our sine wave into a square wave.</p>
 
 <p>The high pass filter in the software will again shift the wave, so the average value is zero, and again this is equivalent to subtracting the average value from each sample. But this time, the average is 511.6 (remember, now we&#39;re using floating point decimal values in the software), so each sample in the first half will be 512 - 511.6 = 0.4, and each sample in the second half will be 511 - 511.6 = -0.6 .&nbsp;</p>
 

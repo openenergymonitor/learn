@@ -23,7 +23,7 @@ for ($i=2; $i<count($result); $i++) {
                     $nicename = str_replace(".php","",$nicename);
                     if (is_file("view/$dir/$dir2/$dir3")) {
                         $body = file_get_contents("view/$dir/$dir2/$dir3");
-                        $body = str_replace("https://openenergymonitor.org/emon/sites/default/","http://localhost/docs/",$body);
+                        $body = str_replace("http://lab.megni.co.uk/oemconcept/","http://lab.megni.co.uk/oemdocs/",$body);
                         echo "view/$dir/$dir2/$dir3\n";
                         $fh = fopen("view/$dir/$dir2/$dir3","w");
                         fwrite($fh,$body);

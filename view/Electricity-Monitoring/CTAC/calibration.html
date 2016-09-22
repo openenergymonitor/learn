@@ -20,13 +20,13 @@
 
 <p>Calibration is a means of correcting the first of these, and if performed regularly, it will also correct for the second. Unless you are able to remove or shield your device from external influences, there is generally very little you can do to counter their effects.</p>
 
-<p>A full appraisal of the sources of error in the emonTx measurement is <a href="http://localhost/docs/buildingblocks/emontx-error-sources">here</a>. In the worst case, the measurement of real or apparent power could be in error by nearly 40% without calibration. With calibration against a reasonably-priced multimeter, the accuracy should be around 6%.</p>
+<p>A full appraisal of the sources of error in the emonTx measurement is <a href="http://lab.megni.co.uk/oemdocs/buildingblocks/emontx-error-sources">here</a>. In the worst case, the measurement of real or apparent power could be in error by nearly 40% without calibration. With calibration against a reasonably-priced multimeter, the accuracy should be around 6%.</p>
 
 <h4>Calibrating the internal reference voltage</h4>
 
 <p>This procedure is not applicable to the emonTx V3 using the default sketch. For all other variants, it is recommended if you are using batteries to power your emonTx; it is optional if you are using a mains power supply. You should do this first, before adjusting the calibration constants. If you change the calibration of the internal reference, the calibration constants will need to be corrected.</p>
 
-<p>Looking at the table in the <a href="http://localhost/docs/buildingblocks/how-good-is-your-multimeter">Multimeters article</a>, every meter gave the best accuracy when measuring the 3.3V supply, and the worst had a possible error of about 1%. In the emonLib library, we have a method that can measure the supply compared to the internal reference. Therefore, using this method and measuring the supply with a multimeter, it is possible to calibrate the internal band-gap reference to the accuracy of our multimeter, simply by changing the constant &ldquo;1126400L&rdquo; in readVcc( ) so that it returns the same value as the multimeter. A simple sketch CalVref [<a href="https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/CalVref">download</a>] to calculate the calibration constant given the measured value of V<sub>CC</sub>, is all that is needed.</p>
+<p>Looking at the table in the <a href="http://lab.megni.co.uk/oemdocs/buildingblocks/how-good-is-your-multimeter">Multimeters article</a>, every meter gave the best accuracy when measuring the 3.3V supply, and the worst had a possible error of about 1%. In the emonLib library, we have a method that can measure the supply compared to the internal reference. Therefore, using this method and measuring the supply with a multimeter, it is possible to calibrate the internal band-gap reference to the accuracy of our multimeter, simply by changing the constant &ldquo;1126400L&rdquo; in readVcc( ) so that it returns the same value as the multimeter. A simple sketch CalVref [<a href="https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/CalVref">download</a>] to calculate the calibration constant given the measured value of V<sub>CC</sub>, is all that is needed.</p>
 
 <p>When we do this, we dramatically improve the accuracy within which the value of the internal band-gap reference is known, hence the accuracy of the battery voltage.</p>
 
@@ -140,9 +140,9 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 
 <h3>Ideal Power AC-AC Adapters</h3>
 
-<p>Datasheet:&nbsp;<a href="http://localhost/docs/files/77DB-06-09.pdf">Ideal Power 77DB-06-09</a>&nbsp;(UK Plug type)</p>
+<p>Datasheet:&nbsp;<a href="http://lab.megni.co.uk/oemdocs/files/77DB-06-09.pdf">Ideal Power 77DB-06-09</a>&nbsp;(UK Plug type)</p>
 
-<p>Datasheet: <a href="http://localhost/docs/files/77DE-06-09.pdf">Ideal Power&nbsp;77DE-06-09</a>&nbsp;(EURO Plug type)</p>
+<p>Datasheet: <a href="http://lab.megni.co.uk/oemdocs/files/77DE-06-09.pdf">Ideal Power&nbsp;77DE-06-09</a>&nbsp;(EURO Plug type)</p>
 
 <p>Datasheet: <a href="http://files.openenergymonitor.org/77DA-10-09.pdf">Ideal Power&nbsp;77DA-10-09</a>&nbsp;(US Plug type)</p>
 
@@ -199,7 +199,7 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 			<td>
 			<p>MW</p>
 
-			<p><a href="http://localhost/docs/files/MW1.jpg"><img alt="" src="http://localhost/docs/files/MW1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			<p><a href="http://lab.megni.co.uk/oemdocs/files/MW1.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/MW1.jpg" style="width: 100px; height: 133px; " /></a></p>
 			</td>
 			<td style="width: 48px; ">UK</td>
 			<td style="width: 141px; ">
@@ -210,7 +210,7 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 			<td>
 			<p>Strontronics</p>
 
-			<p><a href="http://localhost/docs/files/Stontronics1.jpg"><img alt="" src="http://localhost/docs/files/Stontronics1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			<p><a href="http://lab.megni.co.uk/oemdocs/files/Stontronics1.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Stontronics1.jpg" style="width: 100px; height: 133px; " /></a></p>
 			</td>
 			<td style="width: 48px; ">UK</td>
 			<td style="width: 141px; "><strong style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; text-align: left; ">238.56</strong></td>
@@ -219,7 +219,7 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 			<td>
 			<p>Mascot 9580</p>
 
-			<p><a href="http://localhost/docs/files/mascot1.jpg"><img alt="" src="http://localhost/docs/files/mascot1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			<p><a href="http://lab.megni.co.uk/oemdocs/files/mascot1.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/mascot1.jpg" style="width: 100px; height: 133px; " /></a></p>
 			</td>
 			<td style="width: 48px; ">UK</td>
 			<td style="width: 141px; "><strong style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; text-align: left; ">234.26</strong></td>
@@ -228,7 +228,7 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 			<td>
 			<p>FP AD 3515</p>
 
-			<p><a href="http://localhost/docs/files/FP1.jpg"><img alt="" src="http://localhost/docs/files/FP1.jpg" style="width: 100px; height: 133px; " /></a></p>
+			<p><a href="http://lab.megni.co.uk/oemdocs/files/FP1.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/FP1.jpg" style="width: 100px; height: 133px; " /></a></p>
 
 			<p>&nbsp;</p>
 			</td>
@@ -239,7 +239,7 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 			<td>
 			<p>Ideal Power / TDC</p>
 
-			<p><img alt="" src="http://localhost/docs/files/TDC DB-06-09_small.jpg" style="width: 150px; height: 113px;" /></p>
+			<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/TDC DB-06-09_small.jpg" style="width: 150px; height: 113px;" /></p>
 
 			<p><a href="http://shop.openenergymonitor.com/components/">Currently adapter sold in the OpenEnergyMonitor&nbsp;shop</a></p>
 			</td>
@@ -249,8 +249,8 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 	</tbody>
 </table>
 
-<p>See&nbsp;<a href="http://localhost/docs/buildingblocks/emontx-error-sources">EmonTx errors</a>&nbsp;for a full analysis of the sources of error in the emonTx.</p>
+<p>See&nbsp;<a href="http://lab.megni.co.uk/oemdocs/buildingblocks/emontx-error-sources">EmonTx errors</a>&nbsp;for a full analysis of the sources of error in the emonTx.</p>
 
-<p>See&nbsp;<a href="http://localhost/docs/buildingblocks/different-acac-power-adapters">http://localhost/docs/buildingblocks/different-acac-power-adapters</a>&nbsp;for more detailed information on the different AC-AC adapters.</p>
+<p>See&nbsp;<a href="http://lab.megni.co.uk/oemdocs/buildingblocks/different-acac-power-adapters">http://lab.megni.co.uk/oemdocs/buildingblocks/different-acac-power-adapters</a>&nbsp;for more detailed information on the different AC-AC adapters.</p>
 
-<p>See&nbsp;<a href="http://localhost/docs/buildingblocks/ct-and-ac-power-adaptor-installation-and-calibration-theory">CT and AC power adaptor installation and calibration theory</a> for detailed information on the theoretical basis for the calculation of the calibration coefficients.</p>
+<p>See&nbsp;<a href="http://lab.megni.co.uk/oemdocs/buildingblocks/ct-and-ac-power-adaptor-installation-and-calibration-theory">CT and AC power adaptor installation and calibration theory</a> for detailed information on the theoretical basis for the calculation of the calibration coefficients.</p>

@@ -57,6 +57,7 @@
                           $nicename = str_replace("-"," ",$dir3);
                           $nicename = str_replace(".html","",$nicename);
                           $nicename = str_replace(".php","",$nicename);
+                          $nicename = str_replace(".md","",$nicename);
                           if (is_file("view/$dir/$dir2/$dir3")) {
                               echo "<li name='$dir3'><a href='".$path."$dir/$dir2/$dir3'>$nicename</a></li>";
                           }

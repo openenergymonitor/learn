@@ -4,9 +4,9 @@
 
 <p><em>by&nbsp;Robert&nbsp;Wall&nbsp;B.Sc.,&nbsp;C.Eng.,&nbsp;MIEE.</em></p>
 
-<p><img alt="" src="http://localhost/docs/files/CT6.jpg" style="height:392px; width:500px" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/CT6.jpg" style="height:392px; width:500px" /></p>
 
-<p>Datasheet: <a href="http://localhost/docs/files/SCT013-000_datasheet_0.pdf">download</a></p>
+<p>Datasheet: <a href="http://lab.megni.co.uk/oemdocs/files/SCT013-000_datasheet_0.pdf">download</a></p>
 
 <h2>Synopsis</h2>
 
@@ -16,7 +16,7 @@
 
 <h2>Test Rig</h2>
 
-<p><img alt="" src="http://localhost/docs/files/C.T. Test Rig.160705.svg" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/C.T. Test Rig.160705.svg" /></p>
 
 <p>For test currents up to 100 A, the CT primary consists of from 1 to 20 turns of insulated 16/0.2mm wire. The majority of tests were made at 5 A &ndash; thus the primary current seen by the CT could be adjusted in steps of 5 A by enclosing a variable number of turns inside the core. For saturation tests up to 250 A, the primary consists of 50 passes of enamelled copper wire, the current being adjusted in this case.</p>
 
@@ -32,11 +32,11 @@
 
 <p>Internal Components.</p>
 
-<p><img alt="Internal Components of 'new' black-cable YHDC-013-000" src="http://localhost/docs/files/CT6-inside.jpg" style="width: 300px; height: 217px;" /></p>
+<p><img alt="Internal Components of 'new' black-cable YHDC-013-000" src="http://lab.megni.co.uk/oemdocs/files/CT6-inside.jpg" style="width: 300px; height: 217px;" /></p>
 
 <p>Circuit Diagram.</p>
 
-<p><img alt="" src="http://localhost/docs/files/Circuit.svg" style="height:144px; width:300px" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Circuit.svg" style="height:144px; width:300px" /></p>
 
 <p>The current arrow represents current flowing out of the face of the transformer labelled &ldquo;SCT-013-000&rdquo;, i.e. in the direction of the arrows moulded into the housing, then the plug tip (white wire) is positive with respect to the sleeve (red wire).</p>
 
@@ -66,7 +66,7 @@
 	</li>
 </ul>
 
-<p>Some tests that were carried out on the earlier versions have not been repeated. Details of the results of those tests can be found in the earlier issue of this report, which is available for download as a PDF file <a href="http://localhost/docs/files/Yhdc CT Report (Iss 6).pdf">here</a>.</p>
+<p>Some tests that were carried out on the earlier versions have not been repeated. Details of the results of those tests can be found in the earlier issue of this report, which is available for download as a PDF file <a href="http://lab.megni.co.uk/oemdocs/files/Yhdc CT Report (Iss 6).pdf">here</a>.</p>
 <!-- A second link at the end also! -->
 
 <p>&nbsp;</p>
@@ -412,15 +412,15 @@
 
 <p>The saturation curve (showing rms current or voltage) fails to reveal the true situation because in any case, the peak-peak burden voltage &ndash; which in saturation is no longer directly related to the rms voltage &ndash; exceeds the emonTx &amp; emonPi input range at a little over 100 A, and currents above this maximum value risk damaging the ADC input.</p>
 
-<p><img src="http://localhost/docs/files/CT6-lin.svg" style="width:528px; height:347px" /></p>
+<p><img src="http://lab.megni.co.uk/oemdocs/files/CT6-lin.svg" style="width:528px; height:347px" /></p>
 
-<p><img src="http://localhost/docs/files/CT6-sat.svg" style="width:528px; height:337px" /></p>
+<p><img src="http://lab.megni.co.uk/oemdocs/files/CT6-sat.svg" style="width:528px; height:337px" /></p>
 
 <h3>2. Phase error.</h3>
 
 <p>The phase error was measured for 3 values of burden resistor. The values chosen were 22&nbsp;&Omega; as used in the emonPi and emonTx Version&nbsp;3; 120&nbsp;&Omega;, which is the value used for the high sensitivity input of the emonTx V3; and 220&nbsp;&Omega;, which would give a maximum current of about 10 A with the emonTx or 16 A with the emonTx Shield (with the burden resistor changed appropriately).</p>
 
-<p><img src="http://localhost/docs/files/CT6-phase.svg" style="width:531px; height:330px" /></p>
+<p><img src="http://lab.megni.co.uk/oemdocs/files/CT6-phase.svg" style="width:531px; height:330px" /></p>
 
 <p>&nbsp;</p>
 
@@ -440,7 +440,7 @@
 
 <p>&nbsp;</p>
 
-<p>The earlier report is available for download as a PDF file <a href="http://localhost/docs/files/Yhdc CT Report (Iss 6).pdf">here</a>.</p>
+<p>The earlier report is available for download as a PDF file <a href="http://lab.megni.co.uk/oemdocs/files/Yhdc CT Report (Iss 6).pdf">here</a>.</p>
 
 <h2>Appendix</h2>
 

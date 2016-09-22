@@ -103,7 +103,7 @@ filtered_value = ((n&lt;&lt;8)-n)&gt;&gt;8</pre>
 <p>If you watch the filter settle, it <em>almost</em> works, it appears to be settling correctly, but there&#39;s a problem.<br />
 filtered_value continues to decrease until it has a positive amplitude of around 0 and a negative amplitude of -200</p>
 
-<p><img alt="" src="http://localhost/docs/files/integermath01.png" style="width: 500px; height: 226px;" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/integermath01.png" style="width: 500px; height: 226px;" /></p>
 
 <p>This is partly due to rounding error, we can improve things by adding 128 before bit-shifting right, a trick to round to the nearest integer:</p>
 
@@ -122,7 +122,7 @@ filtered_value = ((n&lt;&lt;8)-n+128)&gt;&gt;8;</pre>
 
 <p>Plotting the result gives:</p>
 
-<p><img alt="" src="http://localhost/docs/files/integermath02.png" style="width: 500px; height: 226px;" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/integermath02.png" style="width: 500px; height: 226px;" /></p>
 
 <p>But it&#39;s still not correct. The problem is the filtered_value variable does not have enough resolution to work correctly. With floating point maths the resolution is in the decimal points, with integer maths we&#39;re rounding to the nearest integer value.</p>
 
@@ -208,11 +208,11 @@ long filtered_value = (shifted_filter+128)&gt;&gt;8;</pre>
 
 <p>Here&#39;s the output:</p>
 
-<p><img alt="" src="http://localhost/docs/files/integermath03_0.png" style="width: 500px; height: 228px;" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/integermath03_0.png" style="width: 500px; height: 228px;" /></p>
 
 <p>Here&#39;s an example to show that the filter works well with a more complex waveform. The waveform below is what you&#39;d expect from a mixture of resistive loads and a non-linear switch mode power supply for say, a laptop computer.</p>
 
-<p><img alt="" src="http://localhost/docs/files/integermath04.png" style="width: 500px; height: 227px;" /></p>
+<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/integermath04.png" style="width: 500px; height: 227px;" /></p>
 
 <p>&nbsp;</p>
 <!--
@@ -263,11 +263,11 @@ filtered_value = last_filtered_value + 0.004 &times; (sample - last_filtered_val
 
 </pre>
 
-<p><img src="http://localhost/docs/files/lowpass_1.png" /></p>
+<p><img src="http://lab.megni.co.uk/oemdocs/files/lowpass_1.png" /></p>
 
 <p>Unfortunately, this takes quite a long time to settle and there is still a significant ripple present. Reducing the filter constant will improve the ripple but worsen the settling time; however because we have a good idea of what the final value should be, it is possible to pre-load the filter by setting the initial value of the output to 512. Now that we have pre-loaded the filter, the filter constant can be reduced to a very small value without forcing a long wait whilst the filter settles before useful readings can be had. This is what the output looks like with a filter &alpha; of 0.000122 &ndash; the ripple is &frac14; count.</p>
 
-<p><img src="http://localhost/docs/files/lowpass_2.png" /></p>
+<p><img src="http://lab.megni.co.uk/oemdocs/files/lowpass_2.png" /></p>
 
 <p>This too can be converted to use the much faster integer maths, and here the filter is updated from the voltage input each time the voltage is read. This snippet appears in the interrupt service routine of MartinR&rsquo;s PLL implementation of the Mk2 router. Rather than multiplying the difference between the current sample and the last filtered value by a small number &alpha; &lt;&lt; 1, the &lsquo;filtered value&rsquo; is multiplied by 1/&alpha; ( = 2<sup>13</sup>) instead. This gives an &alpha; of 0.000122 and a time constant of 8191 samples. The ripple is 0.1%, which is about 1 count with the normal amplitude of voltage input. It includes the fix for integer rounding:</p>
 

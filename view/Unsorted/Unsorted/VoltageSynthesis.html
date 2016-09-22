@@ -1,6 +1,6 @@
 <h2>Investigation of using Voltage Synthesis to approximate real power and power factor in mains AC energy measurement.</h2>
 <p><strong>Download</strong> </p>
-<p><a href="http://localhost/docs/files/CTSynth.pde">Voltage Synthesis Arduino Sketch</a></p>
+<p><a href="http://lab.megni.co.uk/oemdocs/files/CTSynth.pde">Voltage Synthesis Arduino Sketch</a></p>
 <h3>Main points</h3>
 <p>The voltage synthesis method works for resistive loads and loads with switched mode power supplies that give an apparent power factor of less than 1.0. It does not however work for &ldquo;real&rdquo; reactive loads like washing machines and fridges.</p>
 <p>For household use were there is a mix of laptops, lights, washing machines and fridges, etc it is probably better to go with a method that measures the voltage waveform directly using a power adapter or other method which will be one of the next steps of development.</p>
@@ -13,7 +13,7 @@
 <p>Further significant errors that should not have been present were present in the results for Irms and Apparent power that are likely to be due to crude experimental method.</p>
 <p>Below is a discussion of the power factor graph and the Irms graph, real power and apparent power graphs can be found at the end.</p>
 <h3>Power Factor graph.</h3>
-<p><img width="350" height="350" align="left" alt="" src="http://localhost/docs/files/pf01.png" /><img width="350" height="350" alt="" src="http://localhost/docs/files/pf_0.png" /></p>
+<p><img width="350" height="350" align="left" alt="" src="http://lab.megni.co.uk/oemdocs/files/pf01.png" /><img width="350" height="350" alt="" src="http://lab.megni.co.uk/oemdocs/files/pf_0.png" /></p>
 <p><strong>Left:</strong> power factor comparison the first time around with a mixture of laptops and incandescent light bulbs.</p>
 <p><strong>Right:</strong> power factor comparison showing results of laptop, small light bulb, food mixers, fridge and washing machine.</p>
 <p>The results clearly show that voltage synthesis does not work well for &ldquo;real&rdquo; reactive loads like fridges and washing machines but does work for appliances with switched mode power supplies that have apparent power factor.</p>
@@ -33,14 +33,14 @@
 <p>I tried to note down the values as quick as I could but there was I think about 2 to 3 second between each measurement.</p>
 <p>This delay between each measurement meant that the Irms calculated by the non-invasive method which is already an average of the preceding 5 seconds was compared to an Irms about 10 seconds later on the power meter.</p>
 <p>This wasn't a large problem when the values displayed by both methods were quite stable but became a problem with the washing machine since it kept changing the spin speed and kept switching various things on and off. The washing machine also seemed to have significant variation over the second time scale going from 1.05A to 1.79A and then back down randomly. The data points circled in red in the figure below of rms current of the power meter against the rms current calculated by the non-invasive method are all washing machine data points, I would expect them to all fall on the line had I been able to take simultaneous measurement, this problem also afflicts the apparent power graph which one would also expect the data points to fall on the straight line.&nbsp;</p>
-<p><img width="350" height="350" alt="" src="http://localhost/docs/files/Irms.png" /></p>
+<p><img width="350" height="350" alt="" src="http://lab.megni.co.uk/oemdocs/files/Irms.png" /></p>
 <h3>Other graphs</h3>
 <p><strong>Real Power  </strong></p>
 <p>erroneous result from reactive loads are clearly visible as discussed in the section on the power factor graph.</p>
-<p><img width="350" height="350" alt="" src="http://localhost/docs/files/real power.png" /></p>
+<p><img width="350" height="350" alt="" src="http://lab.megni.co.uk/oemdocs/files/real power.png" /></p>
 <p><strong>Apparent power</strong></p>
 <p>Errors due to crude experimental method as discussed above are clearly visible.</p>
-<p><img width="350" height="350" alt="" src="http://localhost/docs/files/apparentpower.png" /></p>
+<p><img width="350" height="350" alt="" src="http://lab.megni.co.uk/oemdocs/files/apparentpower.png" /></p>
 <h3>Download the results</h3>
-<p>First investigation - no &quot;real&quot; reactive loads<a href="http://localhost/docs/files/Results01.ods"> Results01.ods</a></p>
-<p>Second investigation - with fridge and washing machine <a href="http://localhost/docs/files/Results02.ods">Results02.ods</a></p>
+<p>First investigation - no &quot;real&quot; reactive loads<a href="http://lab.megni.co.uk/oemdocs/files/Results01.ods"> Results01.ods</a></p>
+<p>Second investigation - with fridge and washing machine <a href="http://lab.megni.co.uk/oemdocs/files/Results02.ods">Results02.ods</a></p>

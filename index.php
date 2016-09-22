@@ -25,13 +25,23 @@ $format = "html";
 $content = "Sorry page not found";
 
 $format = "html";
-if (file_exists("view/".$q)) {
-    $content = view("view/".$q,array());
-}
 
-if ($content=="Sorry page not found" && !$session) {
-    $format = "html";
-    $content = view("view/login.php",array());
+if (file_exists("view/".$q)) {
+
+    $filename_parts = explode(".",$q);
+    $doc_ext = $filename_parts[count($filename_parts)-1];
+    
+    $content = file_get_contents("view/".$q);
+    
+    // Parse markdown if page is markdown
+    if ($doc_ext=="md") {
+        include "lib/Parsedown.php";
+        $Parsedown = new Parsedown();
+        $content = $Parsedown->text($content);
+    }
+    
+    if ($doc_ext=="png") $format = "png";
+    if ($doc_ext=="jpg") $format = "jpg";
 }
 
 switch ($format) 
@@ -48,4 +58,13 @@ switch ($format)
         header('Content-Type: application/json');
         print json_encode($content);
         break;
+    case "png":
+        header('Content-Type: image/png');
+        print $content;
+        break;
+    case "jpg":
+        header('Content-Type: image/jpeg');
+        print $content;
+        break;
+        
 }

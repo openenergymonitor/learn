@@ -55,7 +55,7 @@
 
 <p>The emonTx provides an RF-ready sensor platform with multiple inputs. The AC/AC adaptor for the voltage sensor needs to be purchased separately. This adapter has been formally tested as being suitable for this application and is inherently safe. Full <a href="https://openenergymonitor.org/emon/emontx/make/assemble/buildguide22">construction details</a> are available. It is possible to use the pulse input jack socket (DIO 3) to connect to the opto-isolator I.C and if that is done, the emonTx can be assembled exactly according to the build guide. In the unlikely event that the pulse input is required, or if extra outputs are needed, then a 3-pin header needs to be added to the port or ports of your choice (DIO 4-7) to provide the connection.</p>
 
-<p><img alt="emonTx annotated to show IO ports" height="374" src="http://localhost/docs/files/emonTx-io_1.png" width="460" /><br />
+<p><img alt="emonTx annotated to show IO ports" height="374" src="http://lab.megni.co.uk/oemdocs/files/emonTx-io_1.png" width="460" /><br />
 <i>The emonTx I/O connections.</i></p>
 
 <h4>Using the emonTx V3</h4>
@@ -70,17 +70,17 @@
 
 <p>If it is not convenient to route the power wiring close to the measurement point, it is easy to separate the controller from the triac assembly. A simple low voltage twisted pair (&lsquo;telephone&rsquo; or CAT5) cable is all that is required to link the two parts, and it should be good for many tens of metres. If the two parts are in the same enclosure, the current limiting resistor may be more conveniently located on the output circuit board, as shown for the emonTx V3.</p>
 
-<p><img alt="Output stage circuit diagram - emonTx V2" height="339" src="http://localhost/docs/files/Mk2Switchelectrical.png" width="740" /><br />
+<p><img alt="Output stage circuit diagram - emonTx V2" height="339" src="http://lab.megni.co.uk/oemdocs/files/Mk2Switchelectrical.png" width="740" /><br />
 <i>Output stage circuit diagram for emonTx V2.</i></p>
 
-<p><img alt="Output stage circuit diagram - emonTx V3" height="354" src="http://localhost/docs/files/Switch_V3_electrical.png" width="740" /><br />
+<p><img alt="Output stage circuit diagram - emonTx V3" height="354" src="http://lab.megni.co.uk/oemdocs/files/Switch_V3_electrical.png" width="740" /><br />
 <i>Output stage circuit diagram for emonTx V3.</i> The differences between this and the emonTx V2 are explained in the <a href="https://openenergymonitor.org/emon/Choosing%20an%20Energy%20Diverter">overview</a>.</p>
 
 <p>The pcb for the output components mentioned above may be used with both the Arduino Uno and emonTx variants, and is available separately. Details can be found at <a href="https://openenergymonitor.org/emon/node/2044">https://openenergymonitor.org/emon/node/2044</a>.</p>
 
 <p>Alternatively, &lsquo;Stripboard&rsquo; is the favoured method for many home construction projects.</p>
 
-<p><img alt="Output stage stripboard layout" height="379" src="http://localhost/docs/files/Mk2TriggerBoard.png" width="450" /><br />
+<p><img alt="Output stage stripboard layout" height="379" src="http://lab.megni.co.uk/oemdocs/files/Mk2TriggerBoard.png" width="450" /><br />
 <i>Suggested stripboard layout &ndash; component side. The 75 &Omega; or 180 &Omega; current-limiting resistor may be mounted here if desired (with a minor modification to the low voltage side).</i></p>
 
 <p>The optoisolator I.C. provides adequate isolation between the low voltage circuit and the mains <strong>provided</strong> its integrity is not compromised by the circuit board layout. You should have at least 7 mm of &ldquo;creepage distance&rdquo; between the high voltage and low voltage sides, and the only way to achieve this will be to cut a slot beneath the opto-isolator I.C, as shown.</p>
@@ -108,7 +108,7 @@
 <ul>
 	<li>check that you can communicate with your Arduino. Does the &ldquo;blink&rdquo; sketch work?</li>
 	<li>connect the voltage and current sensors to suitable test circuits</li>
-	<li>run the <a href="http://localhost/docs/files/minAndMaxValues.ino_.zip">MinAndMaxValues</a> tool to check that the ADC&rsquo;s output values are scaled appropriately for the values of voltage and current that are to be measured (80-90% of full scale is ideal). A second tool, <a href="http://localhost/docs/files/rawSamplesTool.ino_.zip">RawSamplesTool</a>, provides a one-shot display of the samples that are taken during a single mains cycle</li>
+	<li>run the <a href="http://lab.megni.co.uk/oemdocs/files/minAndMaxValues.ino_.zip">MinAndMaxValues</a> tool to check that the ADC&rsquo;s output values are scaled appropriately for the values of voltage and current that are to be measured (80-90% of full scale is ideal). A second tool, <a href="http://lab.megni.co.uk/oemdocs/files/rawSamplesTool.ino_.zip">RawSamplesTool</a>, provides a one-shot display of the samples that are taken during a single mains cycle</li>
 	<li>adjust the value for voltageCal if necessary (see sketch for details)</li>
 	<li>run &ldquo;Tallymode&rdquo; in any of the later sketches to check/adjust the calibration for power</li>
 	<li>check the o/p stage. The load should go on at 1800&nbsp;J. If it doesn&rsquo;t, try reversing the CT.</li>

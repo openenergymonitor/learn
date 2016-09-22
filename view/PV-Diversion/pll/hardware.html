@@ -6,13 +6,13 @@
 
 <h3 style="clear: both">9: Hardware</h3>
 
-<p><img alt="Power Diverter General Arrangement Drawing" src="http://localhost/docs/files/powerDiverterGA.png" style="width: 740px; height: 680px;" /></p>
+<p><img alt="Power Diverter General Arrangement Drawing" src="http://lab.megni.co.uk/oemdocs/files/powerDiverterGA.png" style="width: 740px; height: 680px;" /></p>
 
 <h3 style="font-style: italic">Original triac switch output stage</h3>
 
 <p>The original sketch uses the pulse jack socket on the emonTx V2 as the output to the triac driver. For the test setup Martin used a 68 &Omega; resistor in series with a normal LED and the MOC3063 triac driver. The MOC3063 is a low current device.</p>
 
-<p><img alt="Martin's Output Stage Circuit Diagram" src="http://localhost/docs/files/Switchelectrical.png" style="width: 740px; height: 354px;" /></p>
+<p><img alt="Martin's Output Stage Circuit Diagram" src="http://lab.megni.co.uk/oemdocs/files/Switchelectrical.png" style="width: 740px; height: 354px;" /></p>
 
 <p>For the emonTx V3 using the ac adapter as the power supply, the circuit in <a href="https://openenergymonitor.org/emon/Choosing%20an%20Energy%20Diverter">Choosing an energy diverter</a> must be used on account of the limited current available from the rectifier circuit (note the use of the more sensitive MOC3043M and the increased value of the series resistor).</p>
 
@@ -20,13 +20,13 @@
 
 <p>It is possible to use exactly the same output stage as Robin Emley&rsquo;s design, in which the driver is wired to the tip and ring of the plug, but a small change is required to invert the triac signal in the sketch: in the three places where &ldquo;digitalWrite(TRIACPIN, &hellip;)&rdquo; appears, change LOW to HIGH and vice versa. The higher current required by the driver means that the series LED cannot be used. If a indication of operation is required, then a LED with its own series resistor in parallel with the driver should be employed.</p>
 
-<p><img alt="Robin's Output Stage Circuit Diagram" height="339" src="http://localhost/docs/files/Mk2Switchelectrical.png" width="740" /></p>
+<p><img alt="Robin's Output Stage Circuit Diagram" height="339" src="http://lab.megni.co.uk/oemdocs/files/Mk2Switchelectrical.png" width="740" /></p>
 
 <p>The pcb for the output components mentioned in Robin&rsquo;s article may be used and is available separately. Details can be found at <a href="https://openenergymonitor.org/emon/node/2044">https://openenergymonitor.org/emon/node/2044</a> (but note that there is no provision for the LED to be mounted on-board).</p>
 
 <p>Alternatively, &lsquo;Stripboard&rsquo; is the favoured method for many home construction projects.</p>
 
-<p><img alt="Output stage stripboard layout" height="379" src="http://localhost/docs/files/Mk2TriggerBoard.png" width="450" /><br />
+<p><img alt="Output stage stripboard layout" height="379" src="http://lab.megni.co.uk/oemdocs/files/Mk2TriggerBoard.png" width="450" /><br />
 <i>Suggested stripboard layout &ndash; component side. The current-limiting resistor (68 &Omega;, 75 &Omega; or 180 &Omega;) and the LED may be mounted here if desired (with a minor modification to the low voltage side).</i></p>
 
 <p>The optoisolator I.C. provides adequate isolation between the low voltage circuit and the mains <strong>provided</strong> its integrity is not compromised by the circuit board layout. You should have at least 7 mm of &ldquo;creepage distance&rdquo; between the high voltage and low voltage sides, and the only way to achieve this will be to cut a slot beneath the opto-isolator I.C, as shown.</p>

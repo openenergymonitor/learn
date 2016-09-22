@@ -30,7 +30,7 @@
 
 <p>The obvious way to tell if you have a 3-phase supply is to locate your meter and distribution board / consumer unit. Not counting green or green/yellow earth cables, if you have four reasonably thick cables connecting to the meter, two of which go to your consumer unit or fuse-board, you don&rsquo;t have a three- phase supply. If you have eight reasonably thick cables connecting to the meter, four of which go to your consumer unit or fuse-board, and your main circuit breaker has 3 or 4 sections with one operating lever working all three or four &ndash; known as a 3-pole or 4-pole linked MCB, then you have a three-phase supply.</p>
 
-<p><img alt="Single- and 3-phase meters &amp; incomers" src="http://localhost/docs/files/meters-incomers.png" style="width: 600px; height: 600px; " /></p>
+<p><img alt="Single- and 3-phase meters &amp; incomers" src="http://lab.megni.co.uk/oemdocs/files/meters-incomers.png" style="width: 600px; height: 600px; " /></p>
 
 <p>(a) Single phase meter (UK)<br />
 (b) Single phase double pole circuit breaker<br />
@@ -42,8 +42,8 @@
 <p>When dealing with a single-phase mains supply and purely resistive (or nearly so) loads, normal maths (V = I.R, P = V&sup2; / R, etc) is adequate. When reactive components (inductors, capacitors) are taken into account, we need a graphical representation to help us visualise the relationship between voltage and current in different parts of the circuit. To do that, we employ a device called a &lsquo;phasor&rsquo;. A phasor is quite simply a line that has a length, a direction, and rotates. The length represents the magnitude of the voltage or current, the angle represents its relationship to some reference (that we can choose to suit our circumstances). We can illustrate the relationship between the three voltages of a 3-phase electrical supply with three phasors 120&deg; apart. If we connected a 3-channel oscilloscope to the supply we might see something like this:</p>
 <!--[if !IE]><!-->
 
-<p><embed alt="animated diagram of 3-phase waveforms" height="250" src="http://localhost/docs/files/phasors.svg" type="image/svg+xml" width="500"></embed><!--<![endif]--><!--[if IE]>
-<img src="http://localhost/docs/files/phasors.png" alt="diagram of 3-phase waveforms" height="250" width="500">
+<p><embed alt="animated diagram of 3-phase waveforms" height="250" src="http://lab.megni.co.uk/oemdocs/files/phasors.svg" type="image/svg+xml" width="500"></embed><!--<![endif]--><!--[if IE]>
+<img src="http://lab.megni.co.uk/oemdocs/files/phasors.png" alt="diagram of 3-phase waveforms" height="250" width="500">
 <!--<![endif]--></p>
 
 <p>The phasors rotate at the supply frequency. The three phasors are 120&deg; apart, and the three voltage waveforms are 120&deg; apart &mdash; 1 complete cycle being 360&deg;.</p>
@@ -56,7 +56,7 @@
 
 <p>Suppose a small factory is supplied by an electricity sub-station. In the sub-station, the neutral point of the transformer secondary windings is earthed. Cables feed two factories, the first of which has loads connected between each of the phases and neutral. The question is, what effect does this have on the voltage the second factory receives?</p>
 
-<p><img alt="Line diagram of a factory estate power distribution system" src="http://localhost/docs/files/unbalanced-load.png" style="width: 649px; height: 487px; " /></p>
+<p><img alt="Line diagram of a factory estate power distribution system" src="http://lab.megni.co.uk/oemdocs/files/unbalanced-load.png" style="width: 649px; height: 487px; " /></p>
 
 <p>The sub-station transformer windings and the cable all have impedances (for simplicity we&rsquo;ll assume it is resistance only, and they are equal), which add together and are represented by R<sub>line</sub>. We&rsquo;ll also assume that the factory loads are all equal resistances too.</p>
 
@@ -65,8 +65,8 @@
 <p>If the loads are unequal, it starts to get complicated so use our phasor diagram. We&rsquo;ll assume for clarity in the diagram, that the load on Line 3 is very small, but that the other two loads are very large (much larger than would be permitted in the real world). The phasor diagram looks like this:</p>
 <!--[if !IE]><!-->
 
-<p><embed alt="animated diagram of unbalanced 3-phase waveforms" height="250" src="http://localhost/docs/files/phasors-unbalanced.svg" type="image/svg+xml" width="500"></embed><!--<![endif]--><!--[if IE]>
-<img src="http://localhost/docs/files/phasors-unbalanced.png" alt="diagram of unbalanced 3-phase waveforms" height="250" width="500">
+<p><embed alt="animated diagram of unbalanced 3-phase waveforms" height="250" src="http://lab.megni.co.uk/oemdocs/files/phasors-unbalanced.svg" type="image/svg+xml" width="500"></embed><!--<![endif]--><!--[if IE]>
+<img src="http://lab.megni.co.uk/oemdocs/files/phasors-unbalanced.png" alt="diagram of unbalanced 3-phase waveforms" height="250" width="500">
 <!--<![endif]--></p>
 
 <p>In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red) is reduced by the voltage drop in R<sub>line 1</sub>, at the same time the neutral voltage is raised towards line 1 (the short arrows). A similar thing happens to line 2 (yellow). Line 3 (blue) carries a very small current that we ignore, so its voltage remains the same. The result (b) is the neutral point is moved towards the midpoint between lines 1 &amp; 2 (i.e away from line 3), the voltages between Line 1 and neutral, and between Line 2 and neutral, are much reduced while the voltage between Line 3 and neutral is much increased. There is now a voltage on the neutral conductor, in anti-phase with line 3. The angles between the three voltages are no longer 120&deg;.</p>
@@ -77,7 +77,7 @@
 
 <p>To measure 3-phase power you need 3 wattmeters or &mdash; in OpenEnergyMonitor terms &mdash; 3 emonTxs <sub>(See note)</sub>. You simply measure the three phases in the same way as you would measure three single-phase installations. You need a current transformer and a voltage monitor on each phase, and the total power is the sum of the 3 powers.</p>
 
-<p><img alt="Measuring 3-phase power with 3 emonTxs" src="http://localhost/docs/files/3-phase-power.png" style="width: 576px; height: 505px; " /></p>
+<p><img alt="Measuring 3-phase power with 3 emonTxs" src="http://lab.megni.co.uk/oemdocs/files/3-phase-power.png" style="width: 576px; height: 505px; " /></p>
 
 <p>If you have a 3-wire balanced system and no neutral connection, then it can be shown that you need only two wattmeters or emonTxs, and the total power is <em>still</em> the sum of the two powers. In this case, you will be measuring the line-to-line voltage rather than the line-to-neutral voltage, so you need voltage transformers that can operate safely at 440 Volts.</p>
 <!-- 
