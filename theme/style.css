@@ -172,9 +172,7 @@ ul {
 
 p {color:#333; font-size:14px}
 h2,h3 {color:#333;}
-a {
-  text-decoration:none;
-}
+a { text-decoration:none; }
 
 pre {
     border: 1px solid #aaa;
@@ -183,12 +181,15 @@ pre {
 }
 
 ol {
-    color:#333; font-size:14px
+    color:#333; 
+    font-size:14px
 }
 
-ol li {
-    padding-bottom:10px;
-}
+ol li { padding-bottom:10px; }
+img { max-width:100%; }
 
-img {
-max-width:100%; }
+#topnav {
+  background-color: #44b3e2;
+  height:42px;
+  text-align:left;
+}

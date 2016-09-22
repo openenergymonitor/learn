@@ -27,6 +27,11 @@
 
 <body>
 
+  <div id="topnav" style="display:none">
+  <img id="sidebar-open" style="height:100%; cursor:pointer" src="<?php echo $path; ?>theme/list-menu-icon.png">
+  </div>
+  </div>
+
   <div id="mySidenav" class="sidenav" style="display:none">
     <div class="sidenav_inner">
       <img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/>
@@ -90,10 +95,12 @@
 <script>
     // Enable sidebar, set body background
     $(".sidenav").show();
-    $(".container").css({margin:"0 0 0 300px"});
+    sidebar_resize();
+    
     $("body").css('background-color','WhiteSmoke');
     $(".container").css('background-color','#fff');
-        $(".sublevel").hide();
+    
+    $(".sublevel").hide();
     $(".toplevel").hide();
 
     var q = "<?php echo $q; ?>";
@@ -126,4 +133,41 @@
         $(".toplevel").hide();
         if (toplevel.is(":visible")) toplevel.hide(); else toplevel.show();
     });
+    
+// ----------------------------------------------------------------------------------------
+// Sidebar
+// ----------------------------------------------------------------------------------------
+$("#sidebar-open").click(function(){
+$("#topnav").hide();
+$(".sidenav").css("width","300px");
+        $(".container").css("margin-left","300px");
+});
+
+$("#sidebar-close").click(function(){
+    $("#sidebar-wrapper").css("left","0");
+    $("#sidebar-close").hide();
+});
+
+function sidebar_resize() {
+    var width = $(window).width();
+    var height = $(window).height();
+    $("#sidenav").height(height-41);
+    
+    if (width<1260) {
+        $(".sidenav").css("width","0");
+        $(".container").css("margin","0 auto");
+        //$("#sidebar-open").show();
+        $("#topnav").show();
+    } else {
+        $(".sidenav").css("width","300px");
+        $(".container").css("margin-left","300px");
+        //$("#sidebar-open").hide();
+        //$("#sidebar-close").hide();
+        $("#topnav").hide();
+    }
+}
+
+$(window).resize(function(){
+    sidebar_resize();
+});
 </script>
