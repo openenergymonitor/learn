@@ -30,6 +30,10 @@
             "ct-sensors": {
                 "nicename": "CT Sensors",
                 "pages": {
+                    "Introduction.php": {
+                        "nicename": "Introduction",
+                        "url": "electricity-monitoring/ct-sensors/Introduction.php"
+                    },
                     "Installation.php": {
                         "nicename": "Installation",
                         "url": "electricity-monitoring/ct-sensors/Installation.php"
@@ -38,9 +42,9 @@
                         "nicename": "Interface with arduino",
                         "url": "electricity-monitoring/ct-sensors/Interface-with-arduino.php"
                     },
-                    "Introduction.php": {
-                        "nicename": "Introduction",
-                        "url": "electricity-monitoring/ct-sensors/Introduction.php"
+                    "how-to-build-an-arduino-energy-monitor-measuring-current-only.html": {
+                        "nicename": "How to build an arduino energy monitor measuring current only",
+                        "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only.html"
                     },
                     "Measurement-implications-of-ADC-resolution-at-low-current-values.php": {
                         "nicename": "Measurement implications of ADC resolution at low current values",
@@ -55,20 +59,20 @@
             "voltage-sensing": {
                 "nicename": "Voltage Sensing",
                 "pages": {
-                    "different-acac-power-adapters.html": {
-                        "nicename": "Different acac power adapters",
-                        "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters.html"
-                    },
                     "measuring-voltage-with-an-acac-power-adapter.html": {
-                        "nicename": "Measuring voltage with an acac power adapter",
+                        "nicename": "Measuring voltage with an AC-AC power adapter",
                         "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter.html"
                     },
+                    "different-acac-power-adapters.html": {
+                        "nicename": "Different AC-AC power adapters",
+                        "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters.html"
+                    },
                     "report-idealpower-9v-acac-adaptor.html": {
-                        "nicename": "Report idealpower 9v acac adaptor",
+                        "nicename": "Report IdealPower 9V AC-AC adaptor",
                         "url": "electricity-monitoring/voltage-sensing/report-idealpower-9v-acac-adaptor.html"
                     },
                     "report-mascot-9v-acac-adaptor.html": {
-                        "nicename": "Report mascot 9v acac adaptor",
+                        "nicename": "Report mascot 9v AC-AC adaptor",
                         "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor.html"
                     }
                 }
@@ -100,10 +104,6 @@
                         "nicename": "How good is your multimeter",
                         "url": "electricity-monitoring/ctac/how-good-is-your-multimeter.html"
                     },
-                    "how-to-build-an-arduino-energy-monitor-measuring-current-only.html": {
-                        "nicename": "How to build an arduino energy monitor measuring current only",
-                        "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor-measuring-current-only.html"
-                    },
                     "how-to-build-an-arduino-energy-monitor.html": {
                         "nicename": "How to build an arduino energy monitor",
                         "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor.html"
@@ -117,7 +117,7 @@
                         "url": "electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits.html"
                     },
                     "sma-webbox-data-extractor.html": {
-                        "nicename": "Sma webbox data extractor",
+                        "nicename": "SMA webbox data extractor",
                         "url": "electricity-monitoring/ctac/sma-webbox-data-extractor.html"
                     }
                 }
@@ -208,36 +208,32 @@
             "timeseries": {
                 "nicename": "Timeseries",
                 "pages": {
-                    "Fixed-interval-averaging.md": {
-                        "nicename": "Fixed interval averaging",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging.md"
-                    },
-                    "Fixed-interval.md": {
-                        "nicename": "Fixed interval",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval.md"
-                    },
                     "History.md": {
-                        "nicename": "History",
+                        "nicename": "Timeseries storage history in emoncms",
                         "url": "electricity-monitoring/timeseries/History.md"
                     },
+                    "Fixed-interval.md": {
+                        "nicename": "Fixed interval timeseries",
+                        "url": "electricity-monitoring/timeseries/Fixed-interval.md"
+                    },
+                    "Fixed-interval-averaging.md": {
+                        "nicename": "Fixed interval with averaging",
+                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging.md"
+                    },
                     "Variable-interval.md": {
-                        "nicename": "Variable interval",
+                        "nicename": "Variable interval timeseries",
                         "url": "electricity-monitoring/timeseries/Variable-interval.md"
                     },
                     "Write-load-investigation.md": {
                         "nicename": "Write load investigation",
                         "url": "electricity-monitoring/timeseries/Write-load-investigation.md"
-                    },
-                    "readme.md": {
-                        "nicename": "Readme",
-                        "url": "electricity-monitoring/timeseries/readme.md"
                     }
                 }
             }
         }
     },
     "pv-diversion": {
-        "nicename": "Pv Diversion",
+        "nicename": "PV Diversion",
         "chapters": {
             "Choosing an Energy Diverter.html": {
                 "nicename": "Choosing An Energy Diverter.html",
@@ -246,102 +242,98 @@
                 }
             },
             "mk2": {
-                "nicename": "Mk2",
+                "nicename": "MK2 PV Diverter",
                 "pages": {
-                    "build.html": {
-                        "nicename": "Build",
-                        "url": "pv-diversion/mk2/build.html"
-                    },
-                    "calibration.html": {
-                        "nicename": "Calibration",
-                        "url": "pv-diversion/mk2/calibration.html"
-                    },
-                    "diversion.html": {
-                        "nicename": "Diversion",
-                        "url": "pv-diversion/mk2/diversion.html"
-                    },
                     "intro.html": {
-                        "nicename": "Intro",
+                        "nicename": "1. Introduction",
                         "url": "pv-diversion/mk2/intro.html"
                     },
-                    "modes.html": {
-                        "nicename": "Modes",
-                        "url": "pv-diversion/mk2/modes.html"
-                    },
                     "pvmeasurement.html": {
-                        "nicename": "Pvmeasurement",
+                        "nicename": "2. Measurement of surplus PV",
                         "url": "pv-diversion/mk2/pvmeasurement.html"
                     },
+                    "diversion.html": {
+                        "nicename": "3. Diversion and Use of surplus PV",
+                        "url": "pv-diversion/mk2/diversion.html"
+                    },
                     "switchdev.html": {
-                        "nicename": "Switchdev",
+                        "nicename": "4. Switching High Current Loads (Triac)",
                         "url": "pv-diversion/mk2/switchdev.html"
                     },
-                    "versions.html": {
-                        "nicename": "Versions",
-                        "url": "pv-diversion/mk2/versions.html"
+                    "modes.html": {
+                        "nicename": "5. Mk2 Controller Operating Modes",
+                        "url": "pv-diversion/mk2/modes.html"
                     },
                     "vimeasurement.html": {
-                        "nicename": "Vimeasurement",
+                        "nicename": "6. Voltage and current measurement",
                         "url": "pv-diversion/mk2/vimeasurement.html"
-                    }
-                }
-            },
-            "mk2.html": {
-                "nicename": "Mk2.html",
-                "pages": {
+                    },
+                    "calibration.html": {
+                        "nicename": "7. Calibration",
+                        "url": "pv-diversion/mk2/calibration.html"
+                    },
+                    "build.html": {
+                        "nicename": "8. Building a Mk2 PV Router",
+                        "url": "pv-diversion/mk2/build.html"
+                    },
 
+                    "versions.html": {
+                        "nicename": "9. Software Versions",
+                        "url": "pv-diversion/mk2/versions.html"
+                    }
+                    
                 }
             },
             "pll": {
-                "nicename": "Pll",
+                "nicename": "PLL Diverter",
                 "pages": {
-                    "adcinterrupts.html": {
-                        "nicename": "Adcinterrupts",
-                        "url": "pv-diversion/pll/adcinterrupts.html"
-                    },
-                    "advantagesoveremonlib.html": {
-                        "nicename": "Advantagesoveremonlib",
-                        "url": "pv-diversion/pll/advantagesoveremonlib.html"
-                    },
-                    "derivatives.html": {
-                        "nicename": "Derivatives",
-                        "url": "pv-diversion/pll/derivatives.html"
-                    },
-                    "features.html": {
-                        "nicename": "Features",
-                        "url": "pv-diversion/pll/features.html"
-                    },
-                    "hardware.html": {
-                        "nicename": "Hardware",
-                        "url": "pv-diversion/pll/hardware.html"
-                    },
-                    "implementation.html": {
-                        "nicename": "Implementation",
-                        "url": "pv-diversion/pll/implementation.html"
-                    },
-                    "integermaths.html": {
-                        "nicename": "Integermaths",
-                        "url": "pv-diversion/pll/integermaths.html"
-                    },
-                    "operatingprinciple.html": {
-                        "nicename": "Operatingprinciple",
-                        "url": "pv-diversion/pll/operatingprinciple.html"
-                    },
                     "pll.html": {
-                        "nicename": "Pll",
+                        "nicename": "Contents",
                         "url": "pv-diversion/pll/pll.html"
                     },
-                    "references.html": {
-                        "nicename": "References",
-                        "url": "pv-diversion/pll/references.html"
-                    },
-                    "sketchdetail.html": {
-                        "nicename": "Sketchdetail",
-                        "url": "pv-diversion/pll/sketchdetail.html"
+                    "features.html": {
+                        "nicename": "1. Features",
+                        "url": "pv-diversion/pll/features.html"
                     },
                     "softwaredesign.html": {
-                        "nicename": "Softwaredesign",
+                        "nicename": "2. Software Design Overview",
                         "url": "pv-diversion/pll/softwaredesign.html"
+                    },
+                    "operatingprinciple.html": {
+                        "nicename": "3. What is a PLL? – operating principle",
+                        "url": "pv-diversion/pll/operatingprinciple.html"
+                    },
+                    "adcinterrupts.html": {
+                        "nicename": "4. The ADC and interrupts",
+                        "url": "pv-diversion/pll/adcinterrupts.html"
+                    },
+                    "integermaths.html": {
+                        "nicename": "5. Integer maths",
+                        "url": "pv-diversion/pll/integermaths.html"
+                    },
+                    "advantagesoveremonlib.html": {
+                        "nicename": "6. Advantages over emonLib",
+                        "url": "pv-diversion/pll/advantagesoveremonlib.html"
+                    },
+                    "implementation.html": {
+                        "nicename": "7. Implementation",
+                        "url": "pv-diversion/pll/implementation.html"
+                    },
+                    "sketchdetail.html": {
+                        "nicename": "8. The sketch explained in detail.",
+                        "url": "pv-diversion/pll/sketchdetail.html"
+                    },
+                    "hardware.html": {
+                        "nicename": "9. Hardware",
+                        "url": "pv-diversion/pll/hardware.html"
+                    },
+                    "derivatives.html": {
+                        "nicename": "10. Derivatives",
+                        "url": "pv-diversion/pll/derivatives.html"
+                    },
+                    "references.html": {
+                        "nicename": "11. References",
+                        "url": "pv-diversion/pll/references.html"
                     }
                 }
             }
