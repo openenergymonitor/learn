@@ -39,34 +39,8 @@
       <br><br>
       <div id="appmenu"></div>
       
-      
-      
-      
       <?php
       
-      $menu = json_decode(file_get_contents("menu.json"));
-      
-      foreach ($menu as $mk1=>$mv1)
-      {
-          echo "<div class='toplevelhead'><img src='".$path."theme/electricity-icon.png' style='width:24px; padding-right:5px; '>".$mv1->nicename."</div>";
-          echo "<div class='toplevel' name='$mk1'>";
-
-          foreach ($mv1->chapters as $mk2=>$mv2)
-          {
-              echo "<div class='sublevelhead'><img src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
-              echo "<div class='sublevel' name='$mk2'><ul>";
-              
-              foreach ($mv2->pages as $mk3=>$mv3)
-              {
-                  echo "<li name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-              }
-              echo "</div>"; 
-          }
-          echo "</div>"; 
-      }
-      
-      
-      /*
       $result = scandir("view");
       for ($i=2; $i<count($result); $i++) {
           $dir = $result[$i];
@@ -85,13 +59,13 @@
                       $l3 = scandir("view/$dir/$dir2");
                       for ($i3=2; $i3<count($l3); $i3++) {
                           $dir3 = $l3[$i3];
-                          $nicename = str_replace("-"," ",$dir3);
-                          $nicename = str_replace(".html","",$nicename);
-                          $nicename = str_replace(".php","",$nicename);
-                          $nicename = str_replace(".md","",$nicename);
-                          if (is_file("view/$dir/$dir2/$dir3")) {
-                              echo "<li name='$dir3'><a href='".$path."$dir/$dir2/$dir3'>$nicename</a></li>";
-                          }
+                          $name_parts = explode(".",$l3[$i3]);
+
+                          if (count($name_parts)==2) $name = $name_parts[0];                        
+                          if (count($name_parts)==3) $name = $name_parts[1]; 
+                          $nicename = str_replace("-"," ",$name);
+                          $link = strtolower($path."$dir/$dir2/$name");
+                          echo "<li name='$dir3'><a href='$link'>$nicename</a></li>";
                       }
                       echo "</ul></div>";
                   }
@@ -99,7 +73,6 @@
               echo "</div>";
           }
       }
-      */
       
       ?>
 
