@@ -342,72 +342,60 @@
     "sustainable-energy": {
         "nicename": "Sustainable Energy",
         "chapters": {
-            "Energy-Model": {
-                "nicename": "Energy Model",
+            "energy-model": {
+                "nicename": "Building Energy Modelling",
                 "pages": {
-                    "Cylinder-heat-flux.html": {
-                        "nicename": "Cylinder heat flux",
-                        "url": "sustainable-energy/Energy-Model/Cylinder-heat-flux.html"
-                    },
-                    "Dynamic-building-model.html": {
-                        "nicename": "Dynamic building model",
-                        "url": "sustainable-energy/Energy-Model/Dynamic-building-model.html"
-                    },
-                    "ESPR.html": {
-                        "nicename": "ESPR",
-                        "url": "sustainable-energy/Energy-Model/ESPR.html"
-                    },
-                    "ElementLibrary.md": {
-                        "nicename": "ElementLibrary",
-                        "url": "sustainable-energy/Energy-Model/ElementLibrary.md"
-                    },
                     "Overview.html": {
                         "nicename": "Overview",
-                        "url": "sustainable-energy/Energy-Model/Overview.html"
+                        "url": "sustainable-energy/energy-model/Overview.html"
                     },
-                    "Radiator-model.html": {
-                        "nicename": "Radiator model",
-                        "url": "sustainable-energy/Energy-Model/Radiator-model.html"
-                    },
-                    "Simple-heatpump-model.html": {
-                        "nicename": "Simple heatpump model",
-                        "url": "sustainable-energy/Energy-Model/Simple-heatpump-model.html"
-                    },
-                    "SimpleJSModel.md": {
-                        "nicename": "SimpleJSModel",
-                        "url": "sustainable-energy/Energy-Model/SimpleJSModel.md"
-                    },
-                    "dynamicmodel.md": {
-                        "nicename": "Dynamicmodel",
-                        "url": "sustainable-energy/Energy-Model/dynamicmodel.md"
+                    "readme.md": {
+                        "nicename": "1. Introduction",
+                        "url": "sustainable-energy/energy-model/readme.md"
                     },
                     "fabricheatloss.md": {
-                        "nicename": "Fabricheatloss",
-                        "url": "sustainable-energy/Energy-Model/fabricheatloss.md"
+                        "nicename": "2. Fabric heat loss",
+                        "url": "sustainable-energy/energy-model/fabricheatloss.md"
+                    },
+                    "ventilation.md": {
+                        "nicename": "3. Ventilation heat loss",
+                        "url": "sustainable-energy/energy-model/ventilation.md"
+                    },
+                    "SimpleJSModel.md": {
+                        "nicename": "4. A simple building energy model",
+                        "url": "sustainable-energy/energy-model/SimpleJSModel.md"
+                    },
+                    "ElementLibrary.md": {
+                        "nicename": "Fabric Element Library",
+                        "url": "sustainable-energy/energy-model/ElementLibrary.md"
+                    },
+                    "radiatormodel.md": {
+                        "nicename": "Basic radiator model",
+                        "url": "sustainable-energy/energy-model/radiatormodel.md"
                     },
                     "heatpumpmodel.md": {
-                        "nicename": "Heatpumpmodel",
-                        "url": "sustainable-energy/Energy-Model/heatpumpmodel.md"
+                        "nicename": "Basic heatpump model",
+                        "url": "sustainable-energy/energy-model/heatpumpmodel.md"
+                    },
+                    "dynamicmodel.md": {
+                        "nicename": "Dynamic building model",
+                        "url": "sustainable-energy/energy-model/dynamicmodel.md"
                     },
                     "history.md": {
                         "nicename": "History",
-                        "url": "sustainable-energy/Energy-Model/history.md"
+                        "url": "sustainable-energy/energy-model/history.md"
                     },
                     "modelexamples.md": {
-                        "nicename": "Modelexamples",
-                        "url": "sustainable-energy/Energy-Model/modelexamples.md"
+                        "nicename": "Model examples",
+                        "url": "sustainable-energy/energy-model/modelexamples.md"
+                    },                    
+                    "Cylinder-heat-flux.html": {
+                        "nicename": "Cylinder heat flux",
+                        "url": "sustainable-energy/energy-model/Cylinder-heat-flux.html"
                     },
-                    "radiatormodel.md": {
-                        "nicename": "Radiatormodel",
-                        "url": "sustainable-energy/Energy-Model/radiatormodel.md"
-                    },
-                    "readme.md": {
-                        "nicename": "Readme",
-                        "url": "sustainable-energy/Energy-Model/readme.md"
-                    },
-                    "ventilation.md": {
-                        "nicename": "Ventilation",
-                        "url": "sustainable-energy/Energy-Model/ventilation.md"
+                    "ESPR.html": {
+                        "nicename": "ESPR",
+                        "url": "sustainable-energy/energy-model/ESPR.html"
                     }
                 }
             },
