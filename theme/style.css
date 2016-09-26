@@ -193,3 +193,14 @@ img { max-width:100%; }
   height:42px;
   text-align:left;
 }
+
+#bodyfade {
+    display:none;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%; /* 100% Full-height */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    z-index: 0;
+}

@@ -32,8 +32,8 @@
   </div>
   </div>
 
-  <div id="mySidenav" class="sidenav" style="display:none">
-    <div class="sidenav_inner">
+  <div id="mySidenav" class="sidenav">
+    <div class="sidenav_inner" style="width:300px">
       <img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/>
       <div style="font-weight:bold; font-size:22px">Open Energy<br>Monitor</div>
       <br><br>
@@ -86,6 +86,8 @@
       <?php echo $content; ?>
     </div>
   </div>
+  
+  <div id="bodyfade"></div>
 
 </body>
 
@@ -94,7 +96,8 @@
 
 <script>
     // Enable sidebar, set body background
-    $(".sidenav").show();
+    // $(".sidenav").show();
+    var fixsidebar = false;
     sidebar_resize();
     
     $("body").css('background-color','WhiteSmoke');
@@ -138,14 +141,16 @@
 // Sidebar
 // ----------------------------------------------------------------------------------------
 $("#sidebar-open").click(function(){
-$("#topnav").hide();
-$(".sidenav").css("width","300px");
-        $(".container").css("margin-left","300px");
+  $("#topnav").hide();
+  // $(".sidenav").css("transition","width 2s");
+  $(".sidenav").css("width","300px");
+  fixsidebar = true;
+  // $(".container").css("background-color","rgba(0,0,0,0.4)");
+  $("#bodyfade").show();
 });
 
 $("#sidebar-close").click(function(){
-    $("#sidebar-wrapper").css("left","0");
-    $("#sidebar-close").hide();
+    $(".sidenav").css("width","0px");
 });
 
 function sidebar_resize() {
@@ -154,16 +159,18 @@ function sidebar_resize() {
     $("#sidenav").height(height-41);
     
     if (width<1260) {
-        $(".sidenav").css("width","0");
+        if (fixsidebar===false) {
+            $(".sidenav").css("width","0px");
+            $("#topnav").show();
+        } else {
+            $("#bodyfade").show();
+        }
         $(".container").css("margin","0 auto");
-        //$("#sidebar-open").show();
-        $("#topnav").show();
     } else {
         $(".sidenav").css("width","300px");
-        $(".container").css("margin-left","300px");
-        //$("#sidebar-open").hide();
-        //$("#sidebar-close").hide();
         $("#topnav").hide();
+        $(".container").css("margin-left","300px");
+        $("#bodyfade").hide();
     }
 }
 

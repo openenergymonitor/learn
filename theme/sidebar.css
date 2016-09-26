@@ -11,6 +11,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     color:#fff;
     text-align:left;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 .sidenav_inner {
@@ -21,10 +22,8 @@
 .sidenav a {
     padding: 8px 8px 0px 0px;
     text-decoration: none;
-
     color: #fff;
     display: block;
-    transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
