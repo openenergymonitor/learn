@@ -342,63 +342,6 @@
     "sustainable-energy": {
         "nicename": "Sustainable Energy",
         "chapters": {
-            "energy-model": {
-                "nicename": "Building Energy Modelling",
-                "pages": {
-                    "Overview.html": {
-                        "nicename": "Overview",
-                        "url": "sustainable-energy/energy-model/Overview.html"
-                    },
-                    "readme.md": {
-                        "nicename": "1. Introduction",
-                        "url": "sustainable-energy/energy-model/readme.md"
-                    },
-                    "fabricheatloss.md": {
-                        "nicename": "2. Fabric heat loss",
-                        "url": "sustainable-energy/energy-model/fabricheatloss.md"
-                    },
-                    "ventilation.md": {
-                        "nicename": "3. Ventilation heat loss",
-                        "url": "sustainable-energy/energy-model/ventilation.md"
-                    },
-                    "SimpleJSModel.md": {
-                        "nicename": "4. A simple building energy model",
-                        "url": "sustainable-energy/energy-model/SimpleJSModel.md"
-                    },
-                    "ElementLibrary.md": {
-                        "nicename": "Fabric Element Library",
-                        "url": "sustainable-energy/energy-model/ElementLibrary.md"
-                    },
-                    "radiatormodel.md": {
-                        "nicename": "Basic radiator model",
-                        "url": "sustainable-energy/energy-model/radiatormodel.md"
-                    },
-                    "heatpumpmodel.md": {
-                        "nicename": "Basic heatpump model",
-                        "url": "sustainable-energy/energy-model/heatpumpmodel.md"
-                    },
-                    "dynamicmodel.md": {
-                        "nicename": "Dynamic building model",
-                        "url": "sustainable-energy/energy-model/dynamicmodel.md"
-                    },
-                    "history.md": {
-                        "nicename": "History",
-                        "url": "sustainable-energy/energy-model/history.md"
-                    },
-                    "modelexamples.md": {
-                        "nicename": "Model examples",
-                        "url": "sustainable-energy/energy-model/modelexamples.md"
-                    },                    
-                    "Cylinder-heat-flux.html": {
-                        "nicename": "Cylinder heat flux",
-                        "url": "sustainable-energy/energy-model/Cylinder-heat-flux.html"
-                    },
-                    "ESPR.html": {
-                        "nicename": "ESPR",
-                        "url": "sustainable-energy/energy-model/ESPR.html"
-                    }
-                }
-            },
             "zcem": {
                 "nicename": "Zero Carbon Energy Model",
                 "pages": {
@@ -448,28 +391,85 @@
                     } 
                 }
             },
-            "intro": {
-                "nicename": "Intro",
+            "building-energy-model": {
+                "nicename": "Building Energy Modelling",
                 "pages": {
-                    "Electricity-audit-and-savings-case-study.html": {
-                        "nicename": "Electricity audit and savings case study",
-                        "url": "sustainable-energy/intro/Electricity-audit-and-savings-case-study.html"
+                    "readme.md": {
+                        "nicename": "1. Introduction",
+                        "url": "sustainable-energy/building-energy-model/readme.md"
                     },
-                    "UK-Energy-2008.html": {
-                        "nicename": "UK Energy 2008",
-                        "url": "sustainable-energy/intro/UK-Energy-2008.html"
+                    "fabricheatloss.md": {
+                        "nicename": "2. Fabric heat loss",
+                        "url": "sustainable-energy/building-energy-model/fabricheatloss.md"
                     },
-                    "UK-Energy-2012.html": {
-                        "nicename": "UK Energy 2012",
-                        "url": "sustainable-energy/intro/UK-Energy-2012.html"
+                    "ventilation.md": {
+                        "nicename": "3. Ventilation heat loss",
+                        "url": "sustainable-energy/building-energy-model/ventilation.md"
                     },
-                    "energy-stack-maker.html": {
-                        "nicename": "Energy stack maker",
-                        "url": "sustainable-energy/intro/energy-stack-maker.html"
+                    "SimpleJSModel.md": {
+                        "nicename": "4. A simple building energy model",
+                        "url": "sustainable-energy/building-energy-model/SimpleJSModel.md"
+                    },
+                    "ElementLibrary.md": {
+                        "nicename": "Fabric Element Library",
+                        "url": "sustainable-energy/building-energy-model/ElementLibrary.md"
+                    },
+                    "radiatormodel.md": {
+                        "nicename": "Basic radiator model",
+                        "url": "sustainable-energy/building-energy-model/radiatormodel.md"
+                    },
+                    "heatpumpmodel.md": {
+                        "nicename": "Basic heatpump model",
+                        "url": "sustainable-energy/building-energy-model/heatpumpmodel.md"
+                    },
+                    "dynamicmodel.md": {
+                        "nicename": "Dynamic building model",
+                        "url": "sustainable-energy/building-energy-model/dynamicmodel.md"
+                    },
+                    "history.md": {
+                        "nicename": "History",
+                        "url": "sustainable-energy/building-energy-model/history.md"
+                    },
+                    "modelexamples.md": {
+                        "nicename": "Model examples",
+                        "url": "sustainable-energy/building-energy-model/modelexamples.md"
+                    },                    
+                    "Cylinder-heat-flux.html": {
+                        "nicename": "Cylinder heat flux",
+                        "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux.html"
+                    },
+                    "ESPR.html": {
+                        "nicename": "ESPR",
+                        "url": "sustainable-energy/building-energy-model/ESPR.html"
+                    }
+                }
+            },
+            "unsorted": {
+                "nicename": "Unsorted",
+                "pages": {
+                    "Overview.html": {
+                        "nicename": "Overview",
+                        "url": "sustainable-energy/unsorted/Overview.html"
                     },
                     "sustainable-energy.html": {
                         "nicename": "Sustainable energy",
-                        "url": "sustainable-energy/intro/sustainable-energy.html"
+                        "url": "sustainable-energy/unsorted/sustainable-energy.html"
+                    },
+                    "Electricity-audit-and-savings-case-study.html": {
+                        "nicename": "Electricity audit and savings case study",
+                        "url": "sustainable-energy/unsorted/Electricity-audit-and-savings-case-study.html"
+                    },
+                    "UK-Energy-2008.html": {
+                        "nicename": "UK Energy 2008",
+                        "url": "sustainable-energy/unsorted/UK-Energy-2008.html"
+                    },
+                    "UK-Energy-2012.html": {
+                        "nicename": "UK Energy 2012",
+                        "url": "sustainable-energy/unsorted/UK-Energy-2012.html"
+                    },
+                    "energy-stack-maker.html": {
+                        "nicename": "Energy stack maker",
+                        "url": "sustainable-energy/unsorted/energy-stack-maker.html"
                     }
                 }
             }
