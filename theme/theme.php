@@ -19,10 +19,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/buttons.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/table.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/forms.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/sidebar.css" />
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="<?php echo $path; ?>lib/feed.js"></script>
 
 
 <body>
@@ -117,8 +115,6 @@
 
 </body>
 
-<script type="text/javascript" src="<?php echo $path; ?>view/appmenu3.js"></script>
-
 
 <script>
     // Enable sidebar, set body background
@@ -137,17 +133,6 @@
     if (q[0]!="") $(".toplevel[name="+q[0]+"]").show();
     if (q[1]!="") $(".sublevel[name="+q[1]+"]").show();
     if (q[2]!="") $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
-
-    $(".logout").click(function() {
-        $.ajax({                   
-            url: path+"/logout",
-            dataType: 'text',
-            success: function(result) {
-                window.location = "";
-            }
-        });
-    });
-
 
     $(".sublevelhead").click(function() {
         var sublevel = $(this).next();

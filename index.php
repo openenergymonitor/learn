@@ -40,16 +40,30 @@ if (file_exists("view/".$q)) {
     
     if ($doc_ext=="png") $format = "png";
     if ($doc_ext=="jpg") $format = "jpg";
+    if ($doc_ext=="js") $format = "js";
+    if ($doc_ext=="zip") $format = "zip";
 }
 
 switch ($format) 
 {
     case "html":
         header('Content-Type: text/html');
-        print view("theme/theme.php", array("content"=>$content));
+        if (!isset($_GET['raw'])) {
+            print view("theme/theme.php", array("content"=>$content));
+        } else {
+            print $content;
+        }
         break;
     case "text":
         header('Content-Type: text/plain');
+        print $content;
+        break;
+    case "zip":
+        header("Content-Type: application/zip");
+        print $content;
+        break;
+    case "js":
+        header('Content-Type: application/javascript');
         print $content;
         break;
     case "json":

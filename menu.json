@@ -399,6 +399,55 @@
                     }
                 }
             },
+            "zcem": {
+                "nicename": "Zero Carbon Energy Model",
+                "pages": {
+                    "integrated.html#introduction": {
+                        "nicename": "Introduction",
+                        "url": "sustainable-energy/zcem/integrated.html#introduction"
+                    },
+                    "integrated.html#ukcontext": {
+                        "nicename": "UK Context",
+                        "url": "sustainable-energy/zcem/integrated.html#ukcontext"
+                    },
+                    "integrated.html#varsupply": {
+                        "nicename": "1. Variable Supply",
+                        "url": "sustainable-energy/zcem/integrated.html#varsupply"
+                    },
+                    "integrated.html#varsupply_flatdemand": {
+                        "nicename": "2. Variable supply and flat demand",
+                        "url": "sustainable-energy/zcem/integrated.html#varsupply_flatdemand"
+                    },
+                    "integrated.html#varsupply_traddemand": {
+                        "nicename": "3. Variable supply, traditional electricity demand and oversupply",
+                        "url": "sustainable-energy/zcem/integrated.html#varsupply_traddemand"
+                    },
+                    "integrated.html#windandsun_flatdemand": {
+                        "nicename": "4. Mixed supply and flat demand",
+                        "url": "sustainable-energy/zcem/integrated.html#windandsun_flatdemand"
+                    },
+                    "integrated.html#electricvehicles": {
+                        "nicename": "6. Electric Vehicles",
+                        "url": "sustainable-energy/zcem/integrated.html#electricvehicles"
+                    },
+                    "integrated.html#all": {
+                        "nicename": "7. All",
+                        "url": "sustainable-energy/zcem/integrated.html#all"
+                    },
+                    "integrated.html#aggregation": {
+                        "nicename": "Aggregation",
+                        "url": "sustainable-energy/zcem/integrated.html#aggregation"
+                    },   
+                    "integrated.html#dataset": {
+                        "nicename": "ZCB Dataset",
+                        "url": "sustainable-energy/zcem/integrated.html#dataset"
+                    },
+                    "integrated.html#python": {
+                        "nicename": "Python models",
+                        "url": "sustainable-energy/zcem/integrated.html#python"
+                    } 
+                }
+            },
             "intro": {
                 "nicename": "Intro",
                 "pages": {
