@@ -12,6 +12,18 @@ body {
     /* Negative indent footer by it's height */
     margin: 0 auto -40px;
     text-align:left;
+    float:left;
+}
+
+
+#rightpanel {
+    float:left;
+    width:500px;
+    text-align:left;
+}
+
+#rightpanel-inner {
+    padding:20px;
 }
 
 .row {
@@ -32,12 +44,16 @@ body {
     /*width: 450px;*/
     width: 100%;
   }
+  
+  #rightpanel { width:100% }
 }
     
 @media (min-width: 450px) and (max-width: 960px) {
   .container {
     width: 100%;
   }
+  
+  #rightpanel { width:100% }
 }
 
 @media (min-width: 960px) {
@@ -204,3 +220,4 @@ img { max-width:100%; }
     left: 0;
     z-index: 0;
 }
+

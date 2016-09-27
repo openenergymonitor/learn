@@ -104,11 +104,16 @@
     </div>
   </div>
 
-
+  
+  
   <div class="container">
     <div class="row">
       <?php echo $content; ?>
     </div>
+  </div>
+  
+  <div id="rightpanel">
+      <div id="rightpanel-inner"></div>
   </div>
   
   <div id="bodyfade"></div>
