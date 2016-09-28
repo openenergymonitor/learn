@@ -12,12 +12,10 @@ body {
     /* Negative indent footer by it's height */
     margin: 0 auto -40px;
     text-align:left;
-    float:left;
 }
 
 
 #rightpanel {
-    float:left;
     width:500px;
     text-align:left;
 }

@@ -188,6 +188,23 @@ function sidebar_resize() {
         $(".container").css("margin-left","300px");
         $("#bodyfade").hide();
     }
+    
+    if (width<(1260)) {
+        $("#rightpanel").css("margin","0 auto");
+        $("#rightpanel").css("width","960px");
+        $(".container").css("float","none");
+        $("#rightpanel").css("float","none");
+    } else if (width<(1260+500)) {
+        $("#rightpanel").css("margin-left","300px");
+        $("#rightpanel").css("width","960px");
+        $(".container").css("float","none");
+        $("#rightpanel").css("float","none");
+    } else {
+        $("#rightpanel").css("margin-left","0px");
+        $("#rightpanel").css("width","500px");
+        $(".container").css("float","left");
+        $("#rightpanel").css("float","left");
+    }
 }
 
 $(window).resize(function(){
