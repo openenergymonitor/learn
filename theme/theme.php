@@ -189,19 +189,26 @@ function sidebar_resize() {
         $("#bodyfade").hide();
     }
     
-    if (width<(1260)) {
+    // Responsive right hand panel
+    if (width<960) {
+        $("#rightpanel").css("margin","0 auto");
+        $("#rightpanel").css("width","100%");
+        $(".container").css("float","none");
+        $("#rightpanel").css("float","none");
+    } else if (width<1260) {
         $("#rightpanel").css("margin","0 auto");
         $("#rightpanel").css("width","960px");
         $(".container").css("float","none");
         $("#rightpanel").css("float","none");
-    } else if (width<(1260+500)) {
+    } else if (width<(1260+400)) {
         $("#rightpanel").css("margin-left","300px");
         $("#rightpanel").css("width","960px");
         $(".container").css("float","none");
         $("#rightpanel").css("float","none");
     } else {
+        var rightwidth = width - 300 - 960 - 20;
         $("#rightpanel").css("margin-left","0px");
-        $("#rightpanel").css("width","500px");
+        $("#rightpanel").css("width",rightwidth+"px");
         $(".container").css("float","left");
         $("#rightpanel").css("float","left");
     }
