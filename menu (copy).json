@@ -276,10 +276,12 @@
                         "nicename": "8. Building a Mk2 PV Router",
                         "url": "pv-diversion/mk2/build.html"
                     },
+
                     "versions.html": {
                         "nicename": "9. Software Versions",
                         "url": "pv-diversion/mk2/versions.html"
                     }
+                    
                 }
             },
             "pll": {
@@ -298,7 +300,7 @@
                         "url": "pv-diversion/pll/softwaredesign.html"
                     },
                     "operatingprinciple.html": {
-                        "nicename": "3. What is a PLL? \u2013 operating principle",
+                        "nicename": "3. What is a PLL? – operating principle",
                         "url": "pv-diversion/pll/operatingprinciple.html"
                     },
                     "adcinterrupts.html": {
@@ -378,7 +380,7 @@
                     "integrated.html#aggregation": {
                         "nicename": "Aggregation",
                         "url": "sustainable-energy/zcem/integrated.html#aggregation"
-                    },
+                    },   
                     "integrated.html#dataset": {
                         "nicename": "ZCB Dataset",
                         "url": "sustainable-energy/zcem/integrated.html#dataset"
@@ -386,7 +388,7 @@
                     "integrated.html#python": {
                         "nicename": "Python models",
                         "url": "sustainable-energy/zcem/integrated.html#python"
-                    }
+                    } 
                 }
             },
             "building-energy-model": {
@@ -431,7 +433,7 @@
                     "modelexamples.md": {
                         "nicename": "Model examples",
                         "url": "sustainable-energy/building-energy-model/modelexamples.md"
-                    },
+                    },                    
                     "Cylinder-heat-flux.html": {
                         "nicename": "Cylinder heat flux",
                         "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux.html"
@@ -445,33 +447,33 @@
             "unsorted": {
                 "nicename": "Unsorted",
                 "pages": {
-                    "energy-101.html": {
-                        "nicename": "1. Energy 101",
-                        "url": "sustainable-energy/unsorted/energy-101.html"
+                    "energy.html": {
+                        "nicename": "Energy",
+                        "url": "sustainable-energy/unsorted/energy.html"
                     },
-                    "snowdonia-energy-study.md": {
-                        "nicename": "2. Snowdonia Energy Study",
-                        "url": "sustainable-energy/unsorted/snowdonia-energy-study.md"
+                    "Overview.html": {
+                        "nicename": "Overview",
+                        "url": "sustainable-energy/unsorted/Overview.html"
                     },
-                    "electricity-audit-and-savings-case-study.html": {
+                    "sustainable-energy.html": {
+                        "nicename": "Sustainable energy",
+                        "url": "sustainable-energy/unsorted/sustainable-energy.html"
+                    },
+                    "Electricity-audit-and-savings-case-study.html": {
                         "nicename": "Electricity audit and savings case study",
-                        "url": "sustainable-energy/unsorted/electricity-audit-and-savings-case-study.html"
+                        "url": "sustainable-energy/unsorted/Electricity-audit-and-savings-case-study.html"
                     },
-                    "energy-use-in-context.md": {
-                        "nicename": "Appendix: Energy use in context",
-                        "url": "sustainable-energy/unsorted/energy-use-in-context.md"
+                    "UK-Energy-2008.html": {
+                        "nicename": "UK Energy 2008",
+                        "url": "sustainable-energy/unsorted/UK-Energy-2008.html"
                     },
-                    "energy-101-ref.md": {
-                        "nicename": "Appendix: Energy 101 Reference",
-                        "url": "sustainable-energy/unsorted/energy-101-ref.md"
+                    "UK-Energy-2012.html": {
+                        "nicename": "UK Energy 2012",
+                        "url": "sustainable-energy/unsorted/UK-Energy-2012.html"
                     },
-                    "uk-energy-2015.md": {
-                        "nicename": "Appendix: UK Energy 2015",
-                        "url": "sustainable-energy/unsorted/uk-energy-2015.md"
-                    },
-                    "further-reading.html": {
-                        "nicename": "Further reading",
-                        "url": "sustainable-energy/unsorted/further-reading.html"
+                    "energy-stack-maker.html": {
+                        "nicename": "Energy stack maker",
+                        "url": "sustainable-energy/unsorted/energy-stack-maker.html"
                     }
                 }
             }
