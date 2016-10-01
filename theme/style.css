@@ -180,6 +180,8 @@ ul {
     list-style-type: circle;
 }
 
+
+
 .active {
     font-weight:bold;
 }
@@ -196,11 +198,18 @@ pre {
 
 ol {
     color:#333; 
-    font-size:14px
+    font-size:14px;
+    padding-bottom:8px;
 }
 
-ol li { padding-bottom:10px; }
+li {
+    font-size:14px;
+    padding-bottom:8px;
+}
+
 img { max-width:100%; }
+
+.menu { padding-bottom:0px; }
 
 #topnav {
   background-color: #44b3e2;
@@ -219,3 +228,24 @@ img { max-width:100%; }
     z-index: 0;
 }
 
+.appendix-section {
+    background-color:rgba(68,179,226,0.1);
+}
+
+.appendix-section .title {
+    background-color:rgba(68,179,226,1.0);
+    padding:10px;
+    color:#fff;
+    font-size:14px
+}
+
+.appendix-section .content {
+    padding:10px;
+    padding-top:0px;
+}
+
+hr {
+border: 0; height: 1px; background: #ccc;
+margin:0px;
+padding:0px;
+}

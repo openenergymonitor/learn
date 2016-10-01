@@ -245,7 +245,7 @@ The following table shows estimated breakdown of domestic transport energy:
 | kWh/d               | 13.2  | 0.4   | 0.2   | 3.7    | 17.4  |
 | kWh/year            | 4804  | 153   | 61    | 1344   | 6362  |
 
-There are 9.7 kWh per Litre of petrol, 4804 kWh/year / 9.7 kWh per Litre = 495 Litres. The cost of petrol is now around 110p/kWh down from an average of around 120p/kWh over the last 10 years. If we use the 110p/kWh value this would result in an estimated annual petrol cost per person of £545, or **£1312 per household**.
+There are 9.7 kWh per Litre of petrol, 4804 kWh/year / 9.7 kWh per Litre = 495 Litres. The cost of petrol is now around 110p/litre down from an average of around 120p/litre over the last 10 years. If we use the 110p/litre value this would result in an estimated annual petrol cost per person of £545, or **£1312 per household**.
 
 Further insight into transport energy use can be gained by looking at the Department for Transports National Travel Survey data, nts0410 provides average travel data in miles per person by different modes:
 
@@ -277,7 +277,31 @@ There are also 25.8 million cars on the road which works out to an average of 94
 
 https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/487689/annual-road-traffic-estimates-2014.pdf
 
-**Calculating kWh/d per person from tonnes of oil equivalent**
+### Primary energy factors for electricity generation
+
+Electricity generated and supplied, 1970 to 2015 (DUKES 5.1.3)<br>
+[https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/541291/DUKES_5.1.3.xls](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/541291/DUKES_5.1.3.xls)
+
+Fuel input for electricity generation, 1970 to 2015 (DUKES 5.1.1)<br>
+[https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/541289/DUKES_5.1.1.xls](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/541289/DUKES_5.1.1.xls)
+
+**Primary energy requirement for grid electricity in 2015**
+
+- Total fuel input for electricity generation 2015: 66.53 mtoe
+- Converted to Gwh: 773,744 GWh
+- Total electricity generated 2015: 295,742 GWh
+- Primary energy factor =  773,744 /  295,742 = **2.616**
+
+**Primary energy requirement for grid electricity in 2010**
+
+- Total fuel input for electricity generation 2010: 79.33 mtoe
+- Converted to Gwh: 922,608 GWh
+- Total electricity generated 2010: 347,846 GWh
+- Primary energy factor =  922,608 /  347,846 = 2.652
+
+There are 11,630 kWh's per ton of oil equivalent (1 mtoe = 11,630 GWh)
+
+### Calculating kWh/d per person from tonnes of oil equivalent
 
 1 ton of oil equivalent = 11,630 kWh<br>
 1 thousand tonnes of oil equivalent = 11630000 kWh<br>

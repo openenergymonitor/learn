@@ -17,7 +17,6 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/buttons.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/table.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/sidebar.css" />
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
@@ -35,10 +34,6 @@
       <img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/>
       <div style="font-weight:bold; font-size:22px">Open Energy<br>Monitor</div>
       <br><br>
-      <div id="appmenu"></div>
-      
-      
-      
       
       <?php
       
@@ -56,48 +51,12 @@
               
               foreach ($mv2->pages as $mk3=>$mv3)
               {
-                  echo "<li name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+                  echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
               }
               echo "</div>"; 
           }
           echo "</div>"; 
       }
-      
-      
-      /*
-      $result = scandir("view");
-      for ($i=2; $i<count($result); $i++) {
-          $dir = $result[$i];
-          $nicename = str_replace("-"," ",$dir);
-          if (is_dir("view/$dir")) {
-              echo "<div class='toplevelhead'><img src='".$path."theme/electricity-icon.png' style='width:24px; padding-right:5px; '>$nicename</div>";
-              echo "<div class='toplevel' name='$dir'>";
-              $l2 = scandir("view/$dir");
-              for ($i2=2; $i2<count($l2); $i2++) {
-                  $dir2 = $l2[$i2];
-                  $nicename = str_replace("-"," ",$dir2);
-                  
-                  if (is_dir("view/$dir/$dir2")) {
-                      echo "<div class='sublevelhead'><img src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>$nicename</div>";
-                      echo "<div class='sublevel' name='$dir2'><ul>";
-                      $l3 = scandir("view/$dir/$dir2");
-                      for ($i3=2; $i3<count($l3); $i3++) {
-                          $dir3 = $l3[$i3];
-                          $nicename = str_replace("-"," ",$dir3);
-                          $nicename = str_replace(".html","",$nicename);
-                          $nicename = str_replace(".php","",$nicename);
-                          $nicename = str_replace(".md","",$nicename);
-                          if (is_file("view/$dir/$dir2/$dir3")) {
-                              echo "<li name='$dir3'><a href='".$path."$dir/$dir2/$dir3'>$nicename</a></li>";
-                          }
-                      }
-                      echo "</ul></div>";
-                  }
-              }
-              echo "</div>";
-          }
-      }
-      */
       
       ?>
 

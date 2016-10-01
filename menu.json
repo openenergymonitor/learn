@@ -340,6 +340,39 @@
     "sustainable-energy": {
         "nicename": "Sustainable Energy",
         "chapters": {
+            "energy": {
+                "nicename": "Energy",
+                "pages": {
+                    "energy-101.html": {
+                        "nicename": "1. Energy 101",
+                        "url": "sustainable-energy/energy/energy-101.html"
+                    },
+                    "snowdonia-energy-study.md": {
+                        "nicename": "2. Snowdonia Energy Study",
+                        "url": "sustainable-energy/energy/snowdonia-energy-study.md"
+                    },
+                    "snowdonia-energy-study-data.html": {
+                        "nicename": "3. Snowdonia Energy Study: Data",
+                        "url": "sustainable-energy/energy/snowdonia-energy-study-data.html"
+                    },
+                    "energy-use-in-context.md": {
+                        "nicename": "Appendix: Energy use in context",
+                        "url": "sustainable-energy/energy/energy-use-in-context.md"
+                    },
+                    "energy-101-ref.md": {
+                        "nicename": "Appendix: Energy 101 Reference",
+                        "url": "sustainable-energy/energy/energy-101-ref.md"
+                    },
+                    "uk-energy-2015.md": {
+                        "nicename": "Appendix: UK Energy 2015",
+                        "url": "sustainable-energy/energy/uk-energy-2015.md"
+                    },
+                    "further-reading.html": {
+                        "nicename": "Further reading",
+                        "url": "sustainable-energy/energy/further-reading.html"
+                    }
+                }
+            },
             "zcem": {
                 "nicename": "Zero Carbon Energy Model",
                 "pages": {
@@ -442,40 +475,17 @@
                     }
                 }
             },
-            "unsorted": {
-                "nicename": "Unsorted",
+            "tools": {
+                "nicename": "Tools",
                 "pages": {
-                    "energy-101.html": {
-                        "nicename": "1. Energy 101",
-                        "url": "sustainable-energy/unsorted/energy-101.html"
-                    },
-                    "snowdonia-energy-study.md": {
-                        "nicename": "2. Snowdonia Energy Study",
-                        "url": "sustainable-energy/unsorted/snowdonia-energy-study.md"
-                    },
                     "electricity-audit-and-savings-case-study.html": {
                         "nicename": "Electricity audit and savings case study",
-                        "url": "sustainable-energy/unsorted/electricity-audit-and-savings-case-study.html"
-                    },
-                    "energy-use-in-context.md": {
-                        "nicename": "Appendix: Energy use in context",
-                        "url": "sustainable-energy/unsorted/energy-use-in-context.md"
-                    },
-                    "energy-101-ref.md": {
-                        "nicename": "Appendix: Energy 101 Reference",
-                        "url": "sustainable-energy/unsorted/energy-101-ref.md"
-                    },
-                    "uk-energy-2015.md": {
-                        "nicename": "Appendix: UK Energy 2015",
-                        "url": "sustainable-energy/unsorted/uk-energy-2015.md"
-                    },
-                    "further-reading.html": {
-                        "nicename": "Further reading",
-                        "url": "sustainable-energy/unsorted/further-reading.html"
+                        "url": "sustainable-energy/tools/electricity-audit-and-savings-case-study.html"
                     }
                 }
             }
         }
+
     },
     "tools": {
         "nicename": "Tools",
