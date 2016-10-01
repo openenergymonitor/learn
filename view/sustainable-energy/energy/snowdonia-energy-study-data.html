@@ -1,0 +1,526 @@
+<script type="text/javascript" src="energystacks/stack_lib/stacks.js"></script>
+<script language="javascript" type="text/javascript" src="energystacks/data.js"></script>
+<script language="javascript" type="text/javascript" src="energystacks/measures.js"></script>
+<script language="javascript" type="text/javascript" src="energystacks/drawdetail.js"></script>
+<script language="javascript" type="text/javascript" src="energystacks/drawprogressbar.js"></script>
+
+<style>
+.popover {
+  width:250px;
+  font-size:12px;
+  line-height:16px;
+}
+
+.table td:nth-of-type(1) { width:42%;}
+.table td:nth-of-type(2) { width:22%;}
+.table td:nth-of-type(3) { width:12%;}
+.table td:nth-of-type(4) { width:12%;}
+.table td:nth-of-type(4) { width:12%;}
+
+.table {
+    font-size:14px;
+}
+
+</style>
+
+  <h2>Snowdonia household energy study: Data</h2>
+
+  <div class="btn-group" style="float:left">
+    <button id="allenergy" class="btn" type="button">All Energy</button>
+    <button id="heating" class="btn" type="button">Heating</button>
+    <button id="transport" class="btn" type="button">Transport</button>
+  </div>
+  <div class="btn-group" style="float:left; padding-left:10px">
+  <span class="add-on"><b>Mode:</b></span>
+    <button id="energy" class="btn" type="button">Energy</button>
+    <button id="co2" class="btn" type="button">CO2</button>
+    <button id="cost" class="btn" type="button">Cost</button>
+    <!--<button id="notransport" class="btn" type="button">Heating & Electric</button>-->
+  </div>
+  <div class="input-prepend" style="float:right">
+    <span class="add-on"><b>Arrange by:</b></span>
+    <button id="occupancy" class="btn" type="button" >Occupancy</button>
+    <button id="floor-area" class="btn" type="button">Floor Area</button> 
+    <button id="total" class="btn" type="button">Total</button>
+  </div>
+  <br>
+  <br>
+  
+  <div id="progress_can_bound" style="width:100%; height:80;">
+    <canvas id="progressbar" height="80" style="float:right"></canvas>
+  </div>
+
+  <div id="can_bound" style="width:100%; height:600; position:relative;">
+    <canvas id="can" height="600"></canvas>
+  </div>
+  
+  <table class="table">
+  <tr>
+  <td style="width:50%">
+  
+  <h3>Household action</h3><hr>
+  <p><input key="action_greenelectric" type="checkbox" autocomplete="off"/> Switch to 100% green electricity supplier</p>
+  <p><input key="action_heating" type="checkbox" autocomplete="off"/> Oil, Gas, Coal heating is replaced with heatpumps powered by green electric</p>
+  <p><input key="action_retrofit" type="checkbox" autocomplete="off"/> Improve insulation and air-tightness to achieve at least 120 kWh/m2/year primary energy requirements<br>(including heatpump ambient energy)</p>
+  <p><input key="action_gascooking" type="checkbox" autocomplete="off"/> Gas cooking replaced with electric cooking</p>
+  <p><input key="action_electricvehicles" type="checkbox" autocomplete="off"/> Cars and motorbikes are replaced with electric vehicles powered by green electric</p>
+  <p><input key="action_planestotrains" type="checkbox" autocomplete="off"/> Plane and boat journeys are replaced with train journeys</p>
+  
+  <h3>Wider national action</h3><hr>
+  <p><input key="action_greentrains" type="checkbox" autocomplete="off"/> Train networks are completely electrified with electricity supply from green energy and running the most efficient trains</p>
+  <p><input key="action_greenbuses" type="checkbox" autocomplete="off"/> Bus networks use 100% electric buses with electricity supply from green energy</p>
+  
+  <h3>View control</h3>
+  <p><input key="show_savings" type="checkbox" checked autocomplete="off"/> Show energy saving's achieved by application of measures</p>
+  
+  </td><td  style="width:50%" valign=top>
+  <h3>Total's</h3><hr>
+  <p><b>Total energy cost:</b> £<span id="totalcost"></span>/year</p>
+  <p><b>Total co2:</b> <span id="totalco2"></span> tonnes/year</p>
+  <!--
+  <p><b>Heatpumps installed:</b> <span id="heatpumpsinstalled"></span></p>
+  <p><b>Electric cars bought:</b> <span id="electriccarsbought"></span></p>
+  -->
+  <br>
+  <p><b>Total Primary Energy Demand:</b> <span id="totalkwhd"></span> kWh/d</p>
+  <p><b>Total Green Electric Demand:</b> <span id="totalgreenelectric"></span> of hafod y llan hydro plant</p>
+  <p><b>Total wood logs demand:</b> <span id="total_wood_logs"></span>m3/year</p>
+  <p><b>Total wood pellets demand:</b> <span id="total_wood_pellets"></span>m3/year</p>
+  <br><br>
+  <h3>Electricity supply settings</h3><hr>
+  <p><input key="electricity-intensity-2010" type="checkbox" autocomplete="off"/> All electricity at 2010 intensity of 444gCO2/kWh</p>
+  <p><input key="electricity-intensity-2015" type="checkbox" autocomplete="off"/> All electricity at 2015 intensity of 367gCO2/kWh</p>
+  <p><input key="electricity-intensity-g1" type="checkbox" autocomplete="off" checked/> Green electricity at 120% renewable oversupply plus backup natural gas for 20% backup requirement 72gCO2/kWh</p>
+  <p><input key="electricity-intensity-g2" type="checkbox" autocomplete="off"/> Green electricity at 120% renewable oversupply plus backup synthetic methane + biomass for 20% backup requirement 0gCO2/kWh</p>
+  </td>
+  </tr>
+  </table>
+
+<div id="test"></div>
+
+<script type="application/javascript">
+
+// $(".row").css("background-color","#eee");
+
+var order = ["Electric","Storage Heaters","Heatpump","Wood Logs","Wood Pellets","Bottled Gas Heating","LPG","Oil","Coal","Electric Cooking","Bottled Gas Cooking","Electric Car","Car 1","Car 2","Car 3","Motorbike","Plane","Boat","Electric Bus","Bus","Electric Train","Train","E Loss"];
+
+var house_primaryenergy = ["Electric","Storage Heaters","Heatpump","Wood Logs","Wood Pellets","Bottled Gas Heating","LPG","Oil","Coal","Electric Cooking","Bottled Gas Cooking","E Loss"];
+
+var house_spaceheating = ["Storage Heaters","Heatpump","Wood Logs","Wood Pellets","Bottled Gas Heating","LPG","Oil","Coal"];
+
+var house_transport = ["Electric Car","Car 1","Car 2","Car 3","Motorbike","Plane","Boat","Electric Bus","Bus","Electric Train","Train"];
+
+
+var backupdata = data;
+var units = "kWh/d";
+var scale = 1;
+var sortmode = '';
+var viewmode = 'allenergy';
+var typemode = 'energy';
+var conversions = {};
+
+var heatpumps_installed = 0;
+var electric_cars_bought = 0;
+
+var width = $('#can_bound').width();
+$('#can')[0].width = width;
+
+$(window).resize(function(){
+    width = $('#can_bound').width();
+    $('#can')[0].width = width;
+    draw_stacks(stacks,"can",width,600,units);
+});
+
+var stacks = [];
+var energyitems = [];
+var context;
+var stackid = 0;
+
+var input = {};
+input.show_savings = true;
+
+$("input[type=checkbox]").each(function(){
+    var key = $(this).attr('key');
+    input[key] = $(this)[0].checked;
+});
+
+preprocess();
+var totalinitalkwhd = [];
+for (z in data) totalinitalkwhd[z] = parseFloat(data[z].totalkwhd);
+prepare();
+
+
+
+
+function preprocess()
+{
+    heatpumps_installed = 0;
+    electric_cars_bought = 0;
+    
+    data = JSON.parse(JSON.stringify(backupdata));
+
+    measures();
+
+    totalgreen = 0;
+    totalkwhd = 0;
+    totalcost = 0;
+    totalco2 = 0;
+    
+    total_green_electric = 0;
+    total_wood_logs = 0;
+    total_wood_pellets = 0;
+    
+    electricity_unit_cost = 0.1537;
+
+    grid_electric_co2 = 0.444;  // Average grid intensity 2010
+    grid_electric_primary = 2.652;
+    
+    green_electric_co2 = 0.072; // 20% gas backup on wind/solar supply
+    green_electric_primary = 1.4;
+    
+    if (input['electricity-intensity-2010']) {
+        grid_electric_co2 = 0.444;
+    }
+    
+    if (input['electricity-intensity-2015']) {
+        grid_electric_co2 = 0.367;
+    }
+
+    if (input['electricity-intensity-g1']) {
+        green_electric_co2 = 0.072;
+    }
+    
+    if (input['electricity-intensity-g2']) {
+        green_electric_co2 = 0.000;
+    }
+    
+    conversions = {
+    
+        "Electric":                             {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+        "Electric Cooking":                     {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+        "Storage Heaters":             {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+        "Heatpump":                    {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+        "Electric Car":                         {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+
+        "Wood Logs":                            {baseunit: 'm3', kwh:1380, co2: 0.0, cost: 50, color:1},
+        "Wood Pellets":                         {baseunit: 'm3', kwh:4800, co2: 0.0, cost: 78, color:1},
+        
+        "Bottled Gas Cooking":                  {baseunit: 'kg', kwh:13.90, co2: 1.5,   cost: 1.14},
+        "Bottled Gas Heating":                  {baseunit: 'kg', kwh:13.90, co2: 1.5,   cost: 1.14},
+        "LPG":                                  {baseunit: 'l', kwh:11.00, co2: 1.5,   cost: 0.4085},
+        "Oil":                                  {baseunit: 'l', kwh:10.27, co2: 2.518, cost: 0.54},
+        "Coal":                                 {baseunit: 'kg', kwh:8.0, co2: 2.523, cost: 0.32},
+        
+        "Car 1":                                {baseunit: 'miles', kwh:4.54609*9.7, co2: 4.54609*2.31, cost: 4.54609*1.10},
+        "Car 2":                                {baseunit: 'miles', kwh:4.54609*9.7, co2: 4.54609*2.31, cost: 4.54609*1.10},
+        "Car 3":                                {baseunit: 'miles', kwh:4.54609*9.7, co2: 4.54609*2.31, cost: 4.54609*1.10},
+        "Motorbike":                            {baseunit: 'miles', kwh:4.54609*9.7, co2: 4.54609*2.31, cost: 4.54609*1.10},
+        
+        "Plane":                                {baseunit: 'miles', kwh:0.69, co2: 0.430, cost: 0.08},
+        "Boat":                                 {baseunit: 'miles', kwh:1, co2: 0.192, cost: 0.15},
+        "Bus":                                  {baseunit: 'miles', kwh:1, co2: 0.140, cost: 0.15},
+        "100% Green Electric Bus":              {baseunit: 'miles', kwh:1, co2: 0.0, cost: 0.15, color:1},
+        "Train":                                {baseunit: 'miles', kwh:0.096, co2: 0.096, cost: 0.15, color:0},    // Trains in the UK now
+        "100% Green Electric Train":            {baseunit: 'miles', kwh:0.028, co2: 0.0, cost: 0.10, color:1}       // Efficient train 1.7kWh per 100 person km
+    };
+      
+    var household_green_elec_status = 0;    
+    for (z in data)
+    {
+        if (data[z].greenelectric) {
+            conversions["Electric"].co2 = green_electric_co2;
+            conversions["Electric Cooking"].co2 = green_electric_co2;
+            conversions["Storage Heaters"].co2 = green_electric_co2;
+            conversions["Heatpump"].co2 = green_electric_co2;
+            conversions["Electric Car"].co2 = green_electric_co2;
+        } else {
+            conversions["Electric"].co2 = grid_electric_co2;
+            conversions["Electric Cooking"].co2 = grid_electric_co2;
+            conversions["Storage Heaters"].co2 = grid_electric_co2;
+            conversions["Heatpump"].co2 = grid_electric_co2;
+            conversions["Electric Car"].co2 = grid_electric_co2;
+        }
+        
+        data[z].totalgreen = 0;
+        data[z].totalkwhd = 0;
+        data[z].totalco2 = 0;
+        data[z].totalcost = 0;
+        data[z].spaceheating = 0;
+        data[z].spaceheatingfinal = 0;
+        data[z].primaryenergyhouse = 0;
+        data[z].house_co2 = 0;
+       
+        var eloss_kwhd = 0;
+       
+        for (i in data[z].energydata)
+        {
+            data[z].energydata[i].kwhd = 0;
+            data[z].energydata[i].co2 = 0;
+            data[z].energydata[i].cost = 0;
+            data[z].energydata[i].color = 0;
+            
+            if (conversions[i]!=undefined) {
+                
+                var quantity = data[z].energydata[i][conversions[i].baseunit];
+                if (data[z].energydata[i].mpg) quantity = quantity / data[z].energydata[i].mpg;
+                
+                data[z].energydata[i].kwhd = quantity * conversions[i].kwh / 365.0;
+                data[z].energydata[i].co2 = quantity * conversions[i].co2;
+                data[z].energydata[i].cost = quantity * conversions[i].cost;
+                
+                if (conversions[i].color!=undefined) data[z].energydata[i].color = conversions[i].color;
+                if (conversions[i].color==1) data[z].totalgreen += data[z].energydata[i].kwhd;
+            }
+            
+            if (i=="Electric"|| i=="Electric Cooking" || i=="Storage Heaters" || i=="Heatpump" || i=="Electric Car" || i=="Electric Train" || i=="Electric Bus") {
+                if (data[z].greenelectric) {
+                    total_green_electric += data[z].energydata[i].kwhd;
+                    eloss_kwhd += data[z].energydata[i].kwhd * (green_electric_primary-1);
+                    data[z].energydata[i].color = 1;
+                } else {
+                    eloss_kwhd += data[z].energydata[i].kwhd * (grid_electric_primary-1);
+                    data[z].energydata[i].color = 0;
+                }
+            }
+            
+            if (i=="Wood Logs") total_wood_logs += data[z].energydata[i].m3;
+            if (i=="Wood Pellets") total_wood_pellets += data[z].energydata[i].m3;
+                        
+            data[z].totalcost += data[z].energydata[i].cost;
+            data[z].totalco2 += data[z].energydata[i].co2;
+            data[z].totalkwhd += data[z].energydata[i].kwhd;
+            
+            if (house_spaceheating.indexOf(i) > -1) data[z].spaceheating += data[z].energydata[i].kwhd;
+            if (house_spaceheating.indexOf(i) > -1) {
+                if (data[z].energydata[i].efficiency!=undefined) {
+                    data[z].spaceheatingfinal += data[z].energydata[i].kwhd * (data[z].energydata[i].efficiency/100);
+                } else if (data[z].energydata[i].cop!=undefined) {
+                    data[z].spaceheatingfinal += data[z].energydata[i].kwhd * data[z].energydata[i].cop;
+                } else {
+                    data[z].spaceheatingfinal += data[z].energydata[i].kwhd;
+                }
+            }
+            if (house_primaryenergy.indexOf(i) > -1) {
+                data[z].primaryenergyhouse += data[z].energydata[i].kwhd;
+                data[z].house_co2 += data[z].energydata[i].co2;
+            }
+        }
+
+        data[z].energydata["E Loss"] = {kwhd:eloss_kwhd, kwh:0, cost:0, co2:0, color:2};
+        if (data[z].greenelectric) data[z].energydata["E Loss"].color = 3;
+        if (data[z].greenelectric) data[z].totalgreen += data[z].energydata["E Loss"].kwhd;
+        data[z].totalkwhd += data[z].energydata["E Loss"].kwhd;
+        
+        totalkwhd += data[z].totalkwhd;
+        totalgreen += data[z].totalgreen;
+        totalcost += data[z].totalcost;
+        totalco2 += data[z].totalco2;
+    }
+    
+    for (z in data)
+    {
+        var items = data[z].energydata;
+        var energydata = {};
+        for (i in order)
+        {
+            if (data[z].energydata[order[i]]!=undefined) energydata[order[i]] = data[z].energydata[order[i]];
+        }
+        data[z].energydata = energydata;
+    }
+}
+    
+    
+
+function prepare()
+{
+
+    $("#totalkwhd").html(Math.round(totalkwhd));
+    $("#totalcost").html(Math.round(totalcost));
+    $("#totalco2").html(Math.round(totalco2/1000));
+
+    $("#heatpumpsinstalled").html(heatpumps_installed+"x £6500 = £"+(heatpumps_installed*6500));
+    $("#electriccarsbought").html(electric_cars_bought+"x £12000 = £"+(electric_cars_bought*12000));
+    $("#totalgreenelectric").html(Math.round(total_green_electric)+" kwh/d "+Math.round(total_green_electric*365/1000)+" MWh/year "+Math.round(((total_green_electric*365/1000)/1900)*100)+"%");
+
+    $("#total_wood_logs").html(total_wood_logs.toFixed(1));
+    $("#total_wood_pellets").html(total_wood_pellets.toFixed(1));
+    
+    stacks = [];
+    stackid = 0;
+
+    // For each household in data object
+    for (var z in data)
+    {
+        var saving = 0;
+        if (input.show_savings) saving = totalinitalkwhd[z] - data[z].totalkwhd;
+        if (saving<0) saving = 0;
+        var sortscale = 1;
+        if (sortmode=='occupancy') sortscale = 1.0/data[z].occupancy;
+        if (sortmode=='floorarea' && typemode=='energy') sortscale = 365.0/data[z].floorarea;
+        if (sortmode=='floorarea' && typemode=='co2') sortscale = 1.0/data[z].floorarea;
+        if (sortmode=='floorarea' && typemode=='cost') sortscale = 1.0/data[z].floorarea;
+        
+        var household = {
+            name: data[z].name,
+            height: 0,
+            saving: saving * sortscale,
+            stack: [] 
+        };
+
+        // For each energy item in household
+        for (var i in data[z].energydata) 
+        {
+            var block = {
+                kwhd:data[z].energydata[i].kwhd * sortscale,
+                name:i,
+                color:data[z].energydata[i].color
+            };
+      
+            if (typemode=="co2") block.kwhd = data[z].energydata[i].co2 * sortscale;
+            if (typemode=="cost") block.kwhd = data[z].energydata[i].cost * sortscale;
+      
+            if (viewmode=="heating") {
+                if (house_spaceheating.indexOf(i)!=-1) household.stack.push(block);
+            } else if (viewmode=="transport") {
+                if (house_transport.indexOf(i)!=-1) household.stack.push(block);
+            } else {
+                household.stack.push(block);
+            }
+        }
+        
+
+        if (typemode=="energy" && input.show_savings) 
+        {
+            var block = {
+                kwhd:saving * sortscale,
+                name:"Saving",
+                color:7
+            };
+            household.stack.push(block);
+        }
+        
+        for (var z in household.stack) household.height += household.stack[z].kwhd;
+        stacks.push(household);
+    }
+
+    stacks.sort(function(a,b) {
+        if(a['height']<b['height']) return 1;
+        if(a['height']>b['height']) return -1;
+        return 0;
+    });
+
+    drawprogressbar('progressbar',width*0.4,(totalgreen / totalkwhd))
+    draw_stacks(stacks,"can",width,600,units);
+    
+    $("#test").html(drawdetail());
+}
+
+
+
+
+$("input[type=checkbox]").click(function(){
+    var key = $(this).attr('key');
+    input[key] = $(this)[0].checked;
+    
+    if (key=="electricity-intensity-2010") {
+        input["action_greenelectric"] = false;
+        $("[key=action_greenelectric]")[0].checked = false;
+        
+        input["electricity-intensity-2015"] = false;
+        $("[key=electricity-intensity-2015]")[0].checked = false;
+    }
+    
+    if (key=="electricity-intensity-2015") {
+        input["action_greenelectric"] = false;
+        $("[key=action_greenelectric]")[0].checked = false;
+        
+        input["electricity-intensity-2010"] = false;
+        $("[key=electricity-intensity-2010]")[0].checked = false;
+    }
+    
+    if (key=="electricity-intensity-g2") {
+        if (input[key]) {
+            input["electricity-intensity-g1"] = false;
+            $("[key=electricity-intensity-g1]")[0].checked = false;
+        } else {
+            input["electricity-intensity-g1"] = true;
+            $("[key=electricity-intensity-g1]")[0].checked = true;
+        }
+    }
+
+    if (key=="electricity-intensity-g1") {
+        if (input[key]) {
+            input["electricity-intensity-g2"] = false;
+            $("[key=electricity-intensity-g2]")[0].checked = false;
+        } else {
+            input["electricity-intensity-g2"] = true;
+            $("[key=electricity-intensity-g2]")[0].checked = true;
+        }
+    }    
+
+    preprocess();
+    prepare();
+    
+});
+
+$("#occupancy").click(function() {
+    if (typemode=='energy') units = "kWh/d/pp";
+    if (typemode=='co2') units = "kgCO2/pp";
+    sortmode='occupancy';
+    prepare();
+});
+
+$("#floor-area").click(function() {
+    if (typemode=='energy') units = "kWh/y/m2";
+    if (typemode=='co2') units = "kgCO2/m2";
+    sortmode='floorarea';
+    prepare();
+});
+
+$("#total").click(function() {
+    if (typemode=='energy') units = "kWh/d";
+    if (typemode=='co2') units = "kgCO2";
+    width = $('#can_bound').width();
+    sortmode='';
+    prepare();
+});
+
+$("#energy").click(function() {
+    units = "kWh/d";
+    typemode='energy';
+    prepare();
+});
+
+$("#co2").click(function() {
+    units = "kgCO2";
+    typemode='co2';
+    prepare();
+});
+
+$("#cost").click(function() {
+    units = "£";
+    typemode='cost';
+    prepare();
+});
+
+$("#allenergy").click(function() {
+    units = "kWh/d";
+    viewmode = 'allenergy';
+    sortmode='';
+    prepare();
+});
+
+$("#heating").click(function() {
+    units = "kWh/d";
+    viewmode = 'heating';
+    sortmode='';
+    prepare();
+});
+
+$("#transport").click(function() {
+    units = "kWh/d";
+    viewmode = 'transport';
+    sortmode='';
+    prepare();
+});
+</script>
