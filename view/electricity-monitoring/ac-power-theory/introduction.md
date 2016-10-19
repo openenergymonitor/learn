@@ -64,7 +64,7 @@ which is true for pure sine waves, is no longer correct. Neither is _power facto
 
 **The power factor value measures how much the mains efficiency is affected by BOTH phase lag φ AND harmonic content of the input current.**
 
-[Ref: understanding power factor by L Wuidart](http://lab.megni.co.uk/oemdocs/files/Wuidart.pdf)
+[Ref: understanding power factor by L Wuidart](files/Wuidart.pdf)
 
 ### Determining the direction of power flow.
 
@@ -82,7 +82,7 @@ The sign of the power therefore indicates whether power is being consumed or gen
 
 There are many parameters we can measure regarding energy use in AC systems. Each one has its merits. For the household energy metering, real power is likely to be the most useful value, as it is tells you how much power all your appliances are actually consuming, and it is what the utility bills you for.
 
-Next: [AC Power Theory - Arduino maths](https://openenergymonitor.org/emon/buildingblocks/ac-power-arduino-maths) - How real and apparent power, rms voltage and current, and power factor are calculated.
+Next: [AC Power Theory - Arduino maths](arduino-maths) - How real and apparent power, rms voltage and current, and power factor are calculated.
 
 **Further reading**
 

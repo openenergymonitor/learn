@@ -5,25 +5,25 @@
             "ac-power-theory": {
                 "nicename": "AC Power Theory",
                 "pages": {
-                    "introduction.md": {
+                    "introduction": {
                         "nicename": "Introduction",
-                        "url": "electricity-monitoring/ac-power-theory/introduction.md"
+                        "url": "electricity-monitoring/ac-power-theory/introduction"
                     },
-                    "arduino-maths.html": {
+                    "arduino-maths": {
                         "nicename": "Arduino maths",
-                        "url": "electricity-monitoring/ac-power-theory/arduino-maths.html"
+                        "url": "electricity-monitoring/ac-power-theory/arduino-maths"
                     },
-                    "advanced-maths.html": {
+                    "advanced-maths": {
                         "nicename": "Advanced maths",
-                        "url": "electricity-monitoring/ac-power-theory/advanced-maths.html"
+                        "url": "electricity-monitoring/ac-power-theory/advanced-maths"
                     },
-                    "3-phase-power.html": {
+                    "3-phase-power": {
                         "nicename": "3 phase power",
-                        "url": "electricity-monitoring/ac-power-theory/3-phase-power.html"
+                        "url": "electricity-monitoring/ac-power-theory/3-phase-power"
                     },
-                    "emonTx-in-north-america.html": {
+                    "emonTx-in-north-america": {
                         "nicename": "EmonTx in north america",
-                        "url": "electricity-monitoring/ac-power-theory/emonTx-in-north-america.html"
+                        "url": "electricity-monitoring/ac-power-theory/emonTx-in-north-america"
                     }
                 }
             },
@@ -42,9 +42,9 @@
                         "nicename": "Interface with arduino",
                         "url": "electricity-monitoring/ct-sensors/Interface-with-arduino.php"
                     },
-                    "how-to-build-an-arduino-energy-monitor-measuring-current-only.html": {
+                    "how-to-build-an-arduino-energy-monitor-measuring-current-only": {
                         "nicename": "How to build an arduino energy monitor measuring current only",
-                        "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only.html"
+                        "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only"
                     },
                     "Measurement-implications-of-ADC-resolution-at-low-current-values.php": {
                         "nicename": "Measurement implications of ADC resolution at low current values",
@@ -59,174 +59,174 @@
             "voltage-sensing": {
                 "nicename": "Voltage Sensing",
                 "pages": {
-                    "measuring-voltage-with-an-acac-power-adapter.html": {
+                    "measuring-voltage-with-an-acac-power-adapter": {
                         "nicename": "Measuring voltage with an AC-AC power adapter",
-                        "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter.html"
+                        "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter"
                     },
-                    "different-acac-power-adapters.html": {
+                    "different-acac-power-adapters": {
                         "nicename": "Different AC-AC power adapters",
-                        "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters.html"
+                        "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters"
                     },
-                    "report-idealpower-9v-acac-adaptor.html": {
+                    "report-idealpower-9v-acac-adaptor": {
                         "nicename": "Report IdealPower 9V AC-AC adaptor",
-                        "url": "electricity-monitoring/voltage-sensing/report-idealpower-9v-acac-adaptor.html"
+                        "url": "electricity-monitoring/voltage-sensing/report-idealpower-9v-acac-adaptor"
                     },
-                    "report-mascot-9v-acac-adaptor.html": {
+                    "report-mascot-9v-acac-adaptor": {
                         "nicename": "Report mascot 9v AC-AC adaptor",
-                        "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor.html"
+                        "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor"
                     }
                 }
             },
             "ctac": {
                 "nicename": "Current & Voltage",
                 "pages": {
-                    "calibration.html": {
+                    "calibration": {
                         "nicename": "Calibration",
-                        "url": "electricity-monitoring/ctac/calibration.html"
+                        "url": "electricity-monitoring/ctac/calibration"
                     },
-                    "ct-and-ac-power-adaptor-installation-and-calibration-theory.html": {
+                    "ct-and-ac-power-adaptor-installation-and-calibration-theory": {
                         "nicename": "Ct and ac power adaptor installation and calibration theory",
-                        "url": "electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory.html"
+                        "url": "electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory"
                     },
-                    "digital-filters-for-offset-removal.html": {
+                    "digital-filters-for-offset-removal": {
                         "nicename": "Digital filters for offset removal",
-                        "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal.html"
+                        "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal"
                     },
-                    "emontx-error-sources.html": {
+                    "emontx-error-sources": {
                         "nicename": "Emontx error sources",
-                        "url": "electricity-monitoring/ctac/emontx-error-sources.html"
+                        "url": "electricity-monitoring/ctac/emontx-error-sources"
                     },
-                    "explanation-of-the-phase-correction-algorithm.html": {
+                    "explanation-of-the-phase-correction-algorithm": {
                         "nicename": "Explanation of the phase correction algorithm",
-                        "url": "electricity-monitoring/ctac/explanation-of-the-phase-correction-algorithm.html"
+                        "url": "electricity-monitoring/ctac/explanation-of-the-phase-correction-algorithm"
                     },
-                    "how-good-is-your-multimeter.html": {
+                    "how-good-is-your-multimeter": {
                         "nicename": "How good is your multimeter",
-                        "url": "electricity-monitoring/ctac/how-good-is-your-multimeter.html"
+                        "url": "electricity-monitoring/ctac/how-good-is-your-multimeter"
                     },
-                    "how-to-build-an-arduino-energy-monitor.html": {
+                    "how-to-build-an-arduino-energy-monitor": {
                         "nicename": "How to build an arduino energy monitor",
-                        "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor.html"
+                        "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor"
                     },
-                    "meters.html": {
+                    "meters": {
                         "nicename": "Meters",
-                        "url": "electricity-monitoring/ctac/meters.html"
+                        "url": "electricity-monitoring/ctac/meters"
                     },
-                    "overload-protection-of-mains-electrical-circuits.html": {
+                    "overload-protection-of-mains-electrical-circuits": {
                         "nicename": "Overload protection of mains electrical circuits",
-                        "url": "electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits.html"
+                        "url": "electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits"
                     },
-                    "sma-webbox-data-extractor.html": {
+                    "sma-webbox-data-extractor": {
                         "nicename": "SMA webbox data extractor",
-                        "url": "electricity-monitoring/ctac/sma-webbox-data-extractor.html"
+                        "url": "electricity-monitoring/ctac/sma-webbox-data-extractor"
                     }
                 }
             },
             "networking": {
                 "nicename": "Networking",
                 "pages": {
-                    "rfm12b-wireless.html": {
+                    "rfm12b-wireless": {
                         "nicename": "Rfm12b wireless",
-                        "url": "electricity-monitoring/networking/rfm12b-wireless.html"
+                        "url": "electricity-monitoring/networking/rfm12b-wireless"
                     },
-                    "rfm12b2.html": {
+                    "rfm12b2": {
                         "nicename": "Rfm12b2",
-                        "url": "electricity-monitoring/networking/rfm12b2.html"
+                        "url": "electricity-monitoring/networking/rfm12b2"
                     },
-                    "rfm69cw.html": {
+                    "rfm69cw": {
                         "nicename": "Rfm69cw",
-                        "url": "electricity-monitoring/networking/rfm69cw.html"
+                        "url": "electricity-monitoring/networking/rfm69cw"
                     },
-                    "which-radio-module.html": {
+                    "which-radio-module": {
                         "nicename": "Which radio module",
-                        "url": "electricity-monitoring/networking/which-radio-module.html"
+                        "url": "electricity-monitoring/networking/which-radio-module"
                     },
-                    "wifi.html": {
+                    "wifi": {
                         "nicename": "Wifi",
-                        "url": "electricity-monitoring/networking/wifi.html"
+                        "url": "electricity-monitoring/networking/wifi"
                     }
                 }
             },
             "pulse-counting": {
                 "nicename": "Pulse Counting",
                 "pages": {
-                    "12-input-pulse-counting.html": {
+                    "12-input-pulse-counting": {
                         "nicename": "12 input pulse counting",
-                        "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting.html"
+                        "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting"
                     },
-                    "accuracy-and-precision.html": {
+                    "accuracy-and-precision": {
                         "nicename": "Accuracy and precision",
-                        "url": "electricity-monitoring/pulse-counting/accuracy-and-precision.html"
+                        "url": "electricity-monitoring/pulse-counting/accuracy-and-precision"
                     },
-                    "gas-meter-monitoring.html": {
+                    "gas-meter-monitoring": {
                         "nicename": "Gas meter monitoring",
-                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring.html"
+                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
                     },
-                    "interrupt-based-pulse-counter.html": {
+                    "interrupt-based-pulse-counter": {
                         "nicename": "Interrupt based pulse counter",
-                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter.html"
+                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter"
                     },
-                    "introduction-to-pulse-counting.html": {
+                    "introduction-to-pulse-counting": {
                         "nicename": "Introduction to pulse counting",
-                        "url": "electricity-monitoring/pulse-counting/introduction-to-pulse-counting.html"
+                        "url": "electricity-monitoring/pulse-counting/introduction-to-pulse-counting"
                     },
-                    "opticalpulsesensor.html": {
+                    "opticalpulsesensor": {
                         "nicename": "Opticalpulsesensor",
-                        "url": "electricity-monitoring/pulse-counting/opticalpulsesensor.html"
+                        "url": "electricity-monitoring/pulse-counting/opticalpulsesensor"
                     },
-                    "pulse-counting-sleep.html": {
+                    "pulse-counting-sleep": {
                         "nicename": "Pulse counting sleep",
-                        "url": "electricity-monitoring/pulse-counting/pulse-counting-sleep.html"
+                        "url": "electricity-monitoring/pulse-counting/pulse-counting-sleep"
                     },
-                    "testing.html": {
+                    "testing": {
                         "nicename": "Testing",
-                        "url": "electricity-monitoring/pulse-counting/testing.html"
+                        "url": "electricity-monitoring/pulse-counting/testing"
                     },
-                    "water.html": {
+                    "water": {
                         "nicename": "Water",
-                        "url": "electricity-monitoring/pulse-counting/water.html"
+                        "url": "electricity-monitoring/pulse-counting/water"
                     }
                 }
             },
             "temperature": {
                 "nicename": "Temperature",
                 "pages": {
-                    "DS18B20-temperature-sensing-2.html": {
+                    "DS18B20-temperature-sensing-2": {
                         "nicename": "DS18B20 temperature sensing 2",
-                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2.html"
+                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2"
                     },
-                    "DS18B20-temperature-sensing.html": {
+                    "DS18B20-temperature-sensing": {
                         "nicename": "DS18B20 temperature sensing",
-                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing.html"
+                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing"
                     },
-                    "rtd-temperature-sensing.html": {
+                    "rtd-temperature-sensing": {
                         "nicename": "Rtd temperature sensing",
-                        "url": "electricity-monitoring/temperature/rtd-temperature-sensing.html"
+                        "url": "electricity-monitoring/temperature/rtd-temperature-sensing"
                     }
                 }
             },
             "timeseries": {
                 "nicename": "Timeseries",
                 "pages": {
-                    "History.md": {
+                    "History": {
                         "nicename": "Timeseries storage history in emoncms",
-                        "url": "electricity-monitoring/timeseries/History.md"
+                        "url": "electricity-monitoring/timeseries/History"
                     },
-                    "Fixed-interval.md": {
+                    "Fixed-interval": {
                         "nicename": "Fixed interval timeseries",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval.md"
+                        "url": "electricity-monitoring/timeseries/Fixed-interval"
                     },
-                    "Fixed-interval-averaging.md": {
+                    "Fixed-interval-averaging": {
                         "nicename": "Fixed interval with averaging",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging.md"
+                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging"
                     },
-                    "Variable-interval.md": {
+                    "Variable-interval": {
                         "nicename": "Variable interval timeseries",
-                        "url": "electricity-monitoring/timeseries/Variable-interval.md"
+                        "url": "electricity-monitoring/timeseries/Variable-interval"
                     },
-                    "Write-load-investigation.md": {
+                    "Write-load-investigation": {
                         "nicename": "Write load investigation",
-                        "url": "electricity-monitoring/timeseries/Write-load-investigation.md"
+                        "url": "electricity-monitoring/timeseries/Write-load-investigation"
                     }
                 }
             }
@@ -235,8 +235,8 @@
     "pv-diversion": {
         "nicename": "PV Diversion",
         "chapters": {
-            "Choosing an Energy Diverter.html": {
-                "nicename": "Choosing An Energy Diverter.html",
+            "Choosing an Energy Diverter": {
+                "nicename": "Choosing An Energy Diverter",
                 "pages": {
 
                 }
@@ -244,94 +244,94 @@
             "mk2": {
                 "nicename": "MK2 PV Diverter",
                 "pages": {
-                    "intro.html": {
+                    "intro": {
                         "nicename": "1. Introduction",
-                        "url": "pv-diversion/mk2/intro.html"
+                        "url": "pv-diversion/mk2/intro"
                     },
-                    "pvmeasurement.html": {
+                    "pvmeasurement": {
                         "nicename": "2. Measurement of surplus PV",
-                        "url": "pv-diversion/mk2/pvmeasurement.html"
+                        "url": "pv-diversion/mk2/pvmeasurement"
                     },
-                    "diversion.html": {
+                    "diversion": {
                         "nicename": "3. Diversion and Use of surplus PV",
-                        "url": "pv-diversion/mk2/diversion.html"
+                        "url": "pv-diversion/mk2/diversion"
                     },
-                    "switchdev.html": {
+                    "switchdev": {
                         "nicename": "4. Switching High Current Loads (Triac)",
-                        "url": "pv-diversion/mk2/switchdev.html"
+                        "url": "pv-diversion/mk2/switchdev"
                     },
-                    "modes.html": {
+                    "modes": {
                         "nicename": "5. Mk2 Controller Operating Modes",
-                        "url": "pv-diversion/mk2/modes.html"
+                        "url": "pv-diversion/mk2/modes"
                     },
-                    "vimeasurement.html": {
+                    "vimeasurement": {
                         "nicename": "6. Voltage and current measurement",
-                        "url": "pv-diversion/mk2/vimeasurement.html"
+                        "url": "pv-diversion/mk2/vimeasurement"
                     },
-                    "calibration.html": {
+                    "calibration": {
                         "nicename": "7. Calibration",
-                        "url": "pv-diversion/mk2/calibration.html"
+                        "url": "pv-diversion/mk2/calibration"
                     },
-                    "build.html": {
+                    "build": {
                         "nicename": "8. Building a Mk2 PV Router",
-                        "url": "pv-diversion/mk2/build.html"
+                        "url": "pv-diversion/mk2/build"
                     },
-                    "versions.html": {
+                    "versions": {
                         "nicename": "9. Software Versions",
-                        "url": "pv-diversion/mk2/versions.html"
+                        "url": "pv-diversion/mk2/versions"
                     }
                 }
             },
             "pll": {
                 "nicename": "PLL Diverter",
                 "pages": {
-                    "pll.html": {
+                    "pll": {
                         "nicename": "Contents",
-                        "url": "pv-diversion/pll/pll.html"
+                        "url": "pv-diversion/pll/pll"
                     },
-                    "features.html": {
+                    "features": {
                         "nicename": "1. Features",
-                        "url": "pv-diversion/pll/features.html"
+                        "url": "pv-diversion/pll/features"
                     },
-                    "softwaredesign.html": {
+                    "softwaredesign": {
                         "nicename": "2. Software Design Overview",
-                        "url": "pv-diversion/pll/softwaredesign.html"
+                        "url": "pv-diversion/pll/softwaredesign"
                     },
-                    "operatingprinciple.html": {
+                    "operatingprinciple": {
                         "nicename": "3. What is a PLL? \u2013 operating principle",
-                        "url": "pv-diversion/pll/operatingprinciple.html"
+                        "url": "pv-diversion/pll/operatingprinciple"
                     },
-                    "adcinterrupts.html": {
+                    "adcinterrupts": {
                         "nicename": "4. The ADC and interrupts",
-                        "url": "pv-diversion/pll/adcinterrupts.html"
+                        "url": "pv-diversion/pll/adcinterrupts"
                     },
-                    "integermaths.html": {
+                    "integermaths": {
                         "nicename": "5. Integer maths",
-                        "url": "pv-diversion/pll/integermaths.html"
+                        "url": "pv-diversion/pll/integermaths"
                     },
-                    "advantagesoveremonlib.html": {
+                    "advantagesoveremonlib": {
                         "nicename": "6. Advantages over emonLib",
-                        "url": "pv-diversion/pll/advantagesoveremonlib.html"
+                        "url": "pv-diversion/pll/advantagesoveremonlib"
                     },
-                    "implementation.html": {
+                    "implementation": {
                         "nicename": "7. Implementation",
-                        "url": "pv-diversion/pll/implementation.html"
+                        "url": "pv-diversion/pll/implementation"
                     },
-                    "sketchdetail.html": {
+                    "sketchdetail": {
                         "nicename": "8. The sketch explained in detail.",
-                        "url": "pv-diversion/pll/sketchdetail.html"
+                        "url": "pv-diversion/pll/sketchdetail"
                     },
-                    "hardware.html": {
+                    "hardware": {
                         "nicename": "9. Hardware",
-                        "url": "pv-diversion/pll/hardware.html"
+                        "url": "pv-diversion/pll/hardware"
                     },
-                    "derivatives.html": {
+                    "derivatives": {
                         "nicename": "10. Derivatives",
-                        "url": "pv-diversion/pll/derivatives.html"
+                        "url": "pv-diversion/pll/derivatives"
                     },
-                    "references.html": {
+                    "references": {
                         "nicename": "11. References",
-                        "url": "pv-diversion/pll/references.html"
+                        "url": "pv-diversion/pll/references"
                     }
                 }
             }
@@ -343,148 +343,148 @@
             "energy": {
                 "nicename": "Energy",
                 "pages": {
-                    "energy-101.html": {
+                    "energy-101": {
                         "nicename": "1. Energy 101",
-                        "url": "sustainable-energy/energy/energy-101.html"
+                        "url": "sustainable-energy/energy/energy-101"
                     },
-                    "snowdonia-energy-study.md": {
+                    "snowdonia-energy-study": {
                         "nicename": "2. Snowdonia Energy Study",
-                        "url": "sustainable-energy/energy/snowdonia-energy-study.md"
+                        "url": "sustainable-energy/energy/snowdonia-energy-study"
                     },
-                    "snowdonia-energy-study-data.html": {
+                    "snowdonia-energy-study-data": {
                         "nicename": "3. Snowdonia Energy Study: Data",
-                        "url": "sustainable-energy/energy/snowdonia-energy-study-data.html"
+                        "url": "sustainable-energy/energy/snowdonia-energy-study-data"
                     },
-                    "energy-use-in-context.md": {
+                    "energy-use-in-context": {
                         "nicename": "Appendix: Energy use in context",
-                        "url": "sustainable-energy/energy/energy-use-in-context.md"
+                        "url": "sustainable-energy/energy/energy-use-in-context"
                     },
-                    "energy-101-ref.md": {
+                    "energy-101-ref": {
                         "nicename": "Appendix: Energy 101 Reference",
-                        "url": "sustainable-energy/energy/energy-101-ref.md"
+                        "url": "sustainable-energy/energy/energy-101-ref"
                     },
-                    "uk-energy-2015.md": {
+                    "uk-energy-2015": {
                         "nicename": "Appendix: UK Energy 2015",
-                        "url": "sustainable-energy/energy/uk-energy-2015.md"
+                        "url": "sustainable-energy/energy/uk-energy-2015"
                     },
-                    "further-reading.html": {
+                    "further-reading": {
                         "nicename": "Further reading",
-                        "url": "sustainable-energy/energy/further-reading.html"
+                        "url": "sustainable-energy/energy/further-reading"
                     }
                 }
             },
             "zcem": {
                 "nicename": "Zero Carbon Energy Model",
                 "pages": {
-                    "integrated.html#introduction": {
+                    "integrated#introduction": {
                         "nicename": "Introduction",
-                        "url": "sustainable-energy/zcem/integrated.html#introduction"
+                        "url": "sustainable-energy/zcem/integrated#introduction"
                     },
-                    "integrated.html#ukcontext": {
+                    "integrated#ukcontext": {
                         "nicename": "UK Context",
-                        "url": "sustainable-energy/zcem/integrated.html#ukcontext"
+                        "url": "sustainable-energy/zcem/integrated#ukcontext"
                     },
-                    "integrated.html#varsupply": {
+                    "integrated#varsupply": {
                         "nicename": "1. Variable Supply",
-                        "url": "sustainable-energy/zcem/integrated.html#varsupply"
+                        "url": "sustainable-energy/zcem/integrated#varsupply"
                     },
-                    "integrated.html#varsupply_flatdemand": {
+                    "integrated#varsupply_flatdemand": {
                         "nicename": "2. Variable supply and flat demand",
-                        "url": "sustainable-energy/zcem/integrated.html#varsupply_flatdemand"
+                        "url": "sustainable-energy/zcem/integrated#varsupply_flatdemand"
                     },
-                    "integrated.html#varsupply_traddemand": {
+                    "integrated#varsupply_traddemand": {
                         "nicename": "3. Variable supply, traditional electricity demand and oversupply",
-                        "url": "sustainable-energy/zcem/integrated.html#varsupply_traddemand"
+                        "url": "sustainable-energy/zcem/integrated#varsupply_traddemand"
                     },
-                    "integrated.html#windandsun_flatdemand": {
+                    "integrated#windandsun_flatdemand": {
                         "nicename": "4. Mixed supply and flat demand",
-                        "url": "sustainable-energy/zcem/integrated.html#windandsun_flatdemand"
+                        "url": "sustainable-energy/zcem/integrated#windandsun_flatdemand"
                     },
-                    "integrated.html#electricvehicles": {
+                    "integrated#electricvehicles": {
                         "nicename": "6. Electric Vehicles",
-                        "url": "sustainable-energy/zcem/integrated.html#electricvehicles"
+                        "url": "sustainable-energy/zcem/integrated#electricvehicles"
                     },
-                    "integrated.html#all": {
+                    "integrated#all": {
                         "nicename": "7. All",
-                        "url": "sustainable-energy/zcem/integrated.html#all"
+                        "url": "sustainable-energy/zcem/integrated#all"
                     },
-                    "integrated.html#national": {
+                    "integrated#national": {
                         "nicename": "8. National",
-                        "url": "sustainable-energy/zcem/integrated.html#national"
+                        "url": "sustainable-energy/zcem/integrated#national"
                     },
-                    "integrated.html#aggregation": {
+                    "integrated#aggregation": {
                         "nicename": "Aggregation",
-                        "url": "sustainable-energy/zcem/integrated.html#aggregation"
+                        "url": "sustainable-energy/zcem/integrated#aggregation"
                     },
-                    "integrated.html#dataset": {
+                    "integrated#dataset": {
                         "nicename": "ZCB Dataset",
-                        "url": "sustainable-energy/zcem/integrated.html#dataset"
+                        "url": "sustainable-energy/zcem/integrated#dataset"
                     },
-                    "integrated.html#python": {
+                    "integrated#python": {
                         "nicename": "Python models",
-                        "url": "sustainable-energy/zcem/integrated.html#python"
+                        "url": "sustainable-energy/zcem/integrated#python"
                     }
                 }
             },
             "building-energy-model": {
                 "nicename": "Building Energy Modelling",
                 "pages": {
-                    "readme.md": {
+                    "readme": {
                         "nicename": "1. Introduction",
-                        "url": "sustainable-energy/building-energy-model/readme.md"
+                        "url": "sustainable-energy/building-energy-model/readme"
                     },
-                    "fabricheatloss.md": {
+                    "fabricheatloss": {
                         "nicename": "2. Fabric heat loss",
-                        "url": "sustainable-energy/building-energy-model/fabricheatloss.md"
+                        "url": "sustainable-energy/building-energy-model/fabricheatloss"
                     },
-                    "ventilation.md": {
+                    "ventilation": {
                         "nicename": "3. Ventilation heat loss",
-                        "url": "sustainable-energy/building-energy-model/ventilation.md"
+                        "url": "sustainable-energy/building-energy-model/ventilation"
                     },
-                    "SimpleJSModel.md": {
+                    "SimpleJSModel": {
                         "nicename": "4. A simple building energy model",
-                        "url": "sustainable-energy/building-energy-model/SimpleJSModel.md"
+                        "url": "sustainable-energy/building-energy-model/SimpleJSModel"
                     },
-                    "ElementLibrary.md": {
+                    "ElementLibrary": {
                         "nicename": "Fabric Element Library",
-                        "url": "sustainable-energy/building-energy-model/ElementLibrary.md"
+                        "url": "sustainable-energy/building-energy-model/ElementLibrary"
                     },
-                    "radiatormodel.md": {
+                    "radiatormodel": {
                         "nicename": "Basic radiator model",
-                        "url": "sustainable-energy/building-energy-model/radiatormodel.md"
+                        "url": "sustainable-energy/building-energy-model/radiatormodel"
                     },
-                    "heatpumpmodel.md": {
+                    "heatpumpmodel": {
                         "nicename": "Basic heatpump model",
-                        "url": "sustainable-energy/building-energy-model/heatpumpmodel.md"
+                        "url": "sustainable-energy/building-energy-model/heatpumpmodel"
                     },
-                    "dynamicmodel.md": {
+                    "dynamicmodel": {
                         "nicename": "Dynamic building model",
-                        "url": "sustainable-energy/building-energy-model/dynamicmodel.md"
+                        "url": "sustainable-energy/building-energy-model/dynamicmodel"
                     },
-                    "history.md": {
+                    "history": {
                         "nicename": "History",
-                        "url": "sustainable-energy/building-energy-model/history.md"
+                        "url": "sustainable-energy/building-energy-model/history"
                     },
-                    "modelexamples.md": {
+                    "modelexamples": {
                         "nicename": "Model examples",
-                        "url": "sustainable-energy/building-energy-model/modelexamples.md"
+                        "url": "sustainable-energy/building-energy-model/modelexamples"
                     },
-                    "Cylinder-heat-flux.html": {
+                    "Cylinder-heat-flux": {
                         "nicename": "Cylinder heat flux",
-                        "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux.html"
+                        "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux"
                     },
-                    "ESPR.html": {
+                    "ESPR": {
                         "nicename": "ESPR",
-                        "url": "sustainable-energy/building-energy-model/ESPR.html"
+                        "url": "sustainable-energy/building-energy-model/ESPR"
                     }
                 }
             },
             "tools": {
                 "nicename": "Tools",
                 "pages": {
-                    "electricity-audit-and-savings-case-study.html": {
+                    "electricity-audit-and-savings-case-study": {
                         "nicename": "Electricity audit and savings case study",
-                        "url": "sustainable-energy/tools/electricity-audit-and-savings-case-study.html"
+                        "url": "sustainable-energy/tools/electricity-audit-and-savings-case-study"
                     }
                 }
             }
@@ -497,18 +497,18 @@
             "kst": {
                 "nicename": "Kst",
                 "pages": {
-                    "graphing-in-kst.html": {
+                    "graphing-in-kst": {
                         "nicename": "Graphing in kst",
-                        "url": "tools/kst/graphing-in-kst.html"
+                        "url": "tools/kst/graphing-in-kst"
                     }
                 }
             },
             "visampler": {
                 "nicename": "Visampler",
                 "pages": {
-                    "VIsampler-2.0.html": {
+                    "VIsampler-2.0": {
                         "nicename": "VIsampler 2.0",
-                        "url": "tools/visampler/VIsampler-2.0.html"
+                        "url": "tools/visampler/VIsampler-2.0"
                     }
                 }
             }
@@ -520,146 +520,146 @@
             "AndroidApp": {
                 "nicename": "AndroidApp",
                 "pages": {
-                    "AndroidAppPart1.md": {
+                    "AndroidAppPart1": {
                         "nicename": "AndroidAppPart1",
-                        "url": "unsorted/AndroidApp/AndroidAppPart1.md"
+                        "url": "unsorted/AndroidApp/AndroidAppPart1"
                     },
-                    "AndroidAppPart2.md": {
+                    "AndroidAppPart2": {
                         "nicename": "AndroidAppPart2",
-                        "url": "unsorted/AndroidApp/AndroidAppPart2.md"
+                        "url": "unsorted/AndroidApp/AndroidAppPart2"
                     }
                 }
             },
             "Arduino": {
                 "nicename": "Arduino",
                 "pages": {
-                    "Installing-the-Arduino-IDE-Windows-8.1.html": {
+                    "Installing-the-Arduino-IDE-Windows-8.1": {
                         "nicename": "Installing the Arduino IDE Windows 8.1",
-                        "url": "unsorted/Arduino/Installing-the-Arduino-IDE-Windows-8.1.html"
+                        "url": "unsorted/Arduino/Installing-the-Arduino-IDE-Windows-8.1"
                     },
-                    "installing-arduino-libraries.html": {
+                    "installing-arduino-libraries": {
                         "nicename": "Installing arduino libraries",
-                        "url": "unsorted/Arduino/installing-arduino-libraries.html"
+                        "url": "unsorted/Arduino/installing-arduino-libraries"
                     },
-                    "installing-libraries-and-firmware-using-git-on-ubuntu-linux.html": {
+                    "installing-libraries-and-firmware-using-git-on-ubuntu-linux": {
                         "nicename": "Installing libraries and firmware using git on ubuntu linux",
-                        "url": "unsorted/Arduino/installing-libraries-and-firmware-using-git-on-ubuntu-linux.html"
+                        "url": "unsorted/Arduino/installing-libraries-and-firmware-using-git-on-ubuntu-linux"
                     },
-                    "setting-up-the-arduino-environment.html": {
+                    "setting-up-the-arduino-environment": {
                         "nicename": "Setting up the arduino environment",
-                        "url": "unsorted/Arduino/setting-up-the-arduino-environment.html"
+                        "url": "unsorted/Arduino/setting-up-the-arduino-environment"
                     },
-                    "uploading-arduino-firmware.html": {
+                    "uploading-arduino-firmware": {
                         "nicename": "Uploading arduino firmware",
-                        "url": "unsorted/Arduino/uploading-arduino-firmware.html"
+                        "url": "unsorted/Arduino/uploading-arduino-firmware"
                     }
                 }
             },
             "DrawingABarChart": {
                 "nicename": "DrawingABarChart",
                 "pages": {
-                    "DrawingABarChart.md": {
+                    "DrawingABarChart": {
                         "nicename": "DrawingABarChart",
-                        "url": "unsorted/DrawingABarChart/DrawingABarChart.md"
+                        "url": "unsorted/DrawingABarChart/DrawingABarChart"
                     }
                 }
             },
             "Microcontrollers": {
                 "nicename": "Microcontrollers",
                 "pages": {
-                    "attiny.html": {
+                    "attiny": {
                         "nicename": "Attiny",
-                        "url": "unsorted/Microcontrollers/attiny.html"
+                        "url": "unsorted/Microcontrollers/attiny"
                     },
-                    "avrisp.html": {
+                    "avrisp": {
                         "nicename": "Avrisp",
-                        "url": "unsorted/Microcontrollers/avrisp.html"
+                        "url": "unsorted/Microcontrollers/avrisp"
                     }
                 }
             },
             "Unsorted": {
                 "nicename": "Unsorted",
                 "pages": {
-                    "Digital-pin-reference.html": {
+                    "Digital-pin-reference": {
                         "nicename": "Digital pin reference",
-                        "url": "unsorted/Unsorted/Digital-pin-reference.html"
+                        "url": "unsorted/Unsorted/Digital-pin-reference"
                     },
-                    "EmonTx-measurement-and-power.html": {
+                    "EmonTx-measurement-and-power": {
                         "nicename": "EmonTx measurement and power",
-                        "url": "unsorted/Unsorted/EmonTx-measurement-and-power.html"
+                        "url": "unsorted/Unsorted/EmonTx-measurement-and-power"
                     },
-                    "OEM-Measurement-Applications.html": {
+                    "OEM-Measurement-Applications": {
                         "nicename": "OEM Measurement Applications",
-                        "url": "unsorted/Unsorted/OEM-Measurement-Applications.html"
+                        "url": "unsorted/Unsorted/OEM-Measurement-Applications"
                     },
-                    "Pin-reference.html": {
+                    "Pin-reference": {
                         "nicename": "Pin reference",
-                        "url": "unsorted/Unsorted/Pin-reference.html"
+                        "url": "unsorted/Unsorted/Pin-reference"
                     },
-                    "STM32-Nucleo.html": {
+                    "STM32-Nucleo": {
                         "nicename": "STM32 Nucleo",
-                        "url": "unsorted/Unsorted/STM32-Nucleo.html"
+                        "url": "unsorted/Unsorted/STM32-Nucleo"
                     },
-                    "VoltageSynthesis.html": {
+                    "VoltageSynthesis": {
                         "nicename": "VoltageSynthesis",
-                        "url": "unsorted/Unsorted/VoltageSynthesis.html"
+                        "url": "unsorted/Unsorted/VoltageSynthesis"
                     },
-                    "acac-buffered-voltage-bias.html": {
+                    "acac-buffered-voltage-bias": {
                         "nicename": "Acac buffered voltage bias",
-                        "url": "unsorted/Unsorted/acac-buffered-voltage-bias.html"
+                        "url": "unsorted/Unsorted/acac-buffered-voltage-bias"
                     },
-                    "acac-component-tolerances.html": {
+                    "acac-component-tolerances": {
                         "nicename": "Acac component tolerances",
-                        "url": "unsorted/Unsorted/acac-component-tolerances.html"
+                        "url": "unsorted/Unsorted/acac-component-tolerances"
                     },
-                    "alternative-voltage-measurement.html": {
+                    "alternative-voltage-measurement": {
                         "nicename": "Alternative voltage measurement",
-                        "url": "unsorted/Unsorted/alternative-voltage-measurement.html"
+                        "url": "unsorted/Unsorted/alternative-voltage-measurement"
                     },
-                    "appliance-inference.html": {
+                    "appliance-inference": {
                         "nicename": "Appliance inference",
-                        "url": "unsorted/Unsorted/appliance-inference.html"
+                        "url": "unsorted/Unsorted/appliance-inference"
                     },
-                    "application-notes.html": {
+                    "application-notes": {
                         "nicename": "Application notes",
-                        "url": "unsorted/Unsorted/application-notes.html"
+                        "url": "unsorted/Unsorted/application-notes"
                     },
-                    "emontxv3-to-pi-serial.html": {
+                    "emontxv3-to-pi-serial": {
                         "nicename": "Emontxv3 to pi serial",
-                        "url": "unsorted/Unsorted/emontxv3-to-pi-serial.html"
+                        "url": "unsorted/Unsorted/emontxv3-to-pi-serial"
                     },
-                    "faq.html": {
+                    "faq": {
                         "nicename": "Faq",
-                        "url": "unsorted/Unsorted/faq.html"
+                        "url": "unsorted/Unsorted/faq"
                     },
-                    "interfacing-with-sma-sunnyboy-pv-inverters-bluetooth.html": {
+                    "interfacing-with-sma-sunnyboy-pv-inverters-bluetooth": {
                         "nicename": "Interfacing with sma sunnyboy pv inverters bluetooth",
-                        "url": "unsorted/Unsorted/interfacing-with-sma-sunnyboy-pv-inverters-bluetooth.html"
+                        "url": "unsorted/Unsorted/interfacing-with-sma-sunnyboy-pv-inverters-bluetooth"
                     },
-                    "labs.html": {
+                    "labs": {
                         "nicename": "Labs",
-                        "url": "unsorted/Unsorted/labs.html"
+                        "url": "unsorted/Unsorted/labs"
                     }
                 }
             },
             "emoncms": {
                 "nicename": "Emoncms",
                 "pages": {
-                    "Global variables in EmonCMS.md": {
+                    "Global variables in EmonCMS": {
                         "nicename": "Global variables in EmonCMS",
-                        "url": "unsorted/emoncms/Global variables in EmonCMS.md"
+                        "url": "unsorted/emoncms/Global variables in EmonCMS"
                     },
-                    "architecture.md": {
+                    "architecture": {
                         "nicename": "Architecture",
-                        "url": "unsorted/emoncms/architecture.md"
+                        "url": "unsorted/emoncms/architecture"
                     },
-                    "developing_new_module.md": {
+                    "developing_new_module": {
                         "nicename": "Developing_new_module",
-                        "url": "unsorted/emoncms/developing_new_module.md"
+                        "url": "unsorted/emoncms/developing_new_module"
                     },
-                    "developinputproc.md": {
+                    "developinputproc": {
                         "nicename": "Developinputproc",
-                        "url": "unsorted/emoncms/developinputproc.md"
+                        "url": "unsorted/emoncms/developinputproc"
                     }
                 }
             }

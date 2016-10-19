@@ -24,10 +24,17 @@ if (isset($_GET['q'])) $q = $_GET['q'];
 $format = "html";
 $content = "Sorry page not found";
 
-if (file_exists("view/".$q)) {
+$filename_parts = explode(".",$q);
 
-    $filename_parts = explode(".",$q);
+if (count($filename_parts)==2)
     $doc_ext = $filename_parts[count($filename_parts)-1];
+    
+if (count($filename_parts)==1) {
+    if (file_exists("view/$q.html")) { $doc_ext = "html"; $q = "$q.html"; } 
+    if (file_exists("view/$q.md")) { $doc_ext = "md"; $q = "$q.md"; }
+}
+
+if (file_exists("view/".$q)) {
     
     $content = file_get_contents("view/".$q);
     
@@ -42,6 +49,8 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="jpg") $format = "jpg";
     if ($doc_ext=="js") $format = "js";
     if ($doc_ext=="zip") $format = "zip";
+    if ($doc_ext=="svg") $format = "svg";
+    if ($doc_ext=="pdf") $format = "pdf";
 }
 
 switch ($format) 
@@ -78,5 +87,12 @@ switch ($format)
         header('Content-Type: image/jpeg');
         print $content;
         break;
-        
+    case "svg":
+        header('Content-Type: image/svg+xml');
+        print $content;
+        break;
+    case "pdf":
+        header('Content-Type: application/pdf');
+        print $content;
+        break;        
 }

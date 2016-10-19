@@ -14,7 +14,7 @@
 
 <p>Compared to the UK, the North American final distribution transformer tends to be quite small, serving only a few homes. The normal domestic supply is 240&nbsp;V, 60&nbsp;Hz centre-tapped, and the centre tap is the neutral, which is also earthed.</p>
 
-<p><img alt="N.American Electricity Supply - final transformer voltages" height="220" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_1.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_1.svg" width="600" /><br />
+<p><img alt="N.American Electricity Supply - final transformer voltages" height="220" onerror="this.src='files/N_America_Fig_1.png';this.onerror=null;" src="files/N_America_Fig_1.svg" width="600" /><br />
 <span style="font-size: smaller">Figure 1. North American Domestic Electricity Supply - final transformer voltages.</span></p>
 
 <p>The voltage tolerance is &plusmn;5% and the imbalance between the two legs has been reported to be better than 2&nbsp;V, although there is no actual specification regarding voltage imbalance. Load centre (circuit breaker panel) layout enables an electrician to distribute the loads between the two legs when the wiring is installed. Standard practice among US electricians is to connect the circuits to the breakers in numerical sequence, with odd numbered breakers connected to one leg and even numbered breakers connected to the other leg. Thus, half of them will be on one leg, half on the other leg, with the aim being to balance the load evenly.</p>
@@ -25,7 +25,7 @@
 
 <p>Because there are three wires (discounting the protective earth conductor), classical theory dictates that two wattmeters are needed, and for &lsquo;wattmeter&rsquo; read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.</p>
 
-<p><img alt="N.American Electricity Supply - Measuring whole-house power" height="240" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_2.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_2.svg" width="600" /><br />
+<p><img alt="N.American Electricity Supply - Measuring whole-house power" height="240" onerror="this.src='files/N_America_Fig_2.png';this.onerror=null;" src="files/N_America_Fig_2.svg" width="600" /><br />
 <span style="font-size: smaller">Figure 2. North American Domestic Electricity Supply - Measuring whole-house power.</span></p>
 
 <p>In Fig 2, assume for simplicity the loads are all purely resistive. (If they are not, which will almost certainly be the case in practice, the same principle applies but the maths is a little more complicated.)</p>
@@ -42,8 +42,8 @@ Note that CT&nbsp;1 faces to the right and CT&nbsp;2 faces to the left, as indic
 
 <p>Other arrangements are possible. Indeed, if the physical arrangement of the wiring permits, only one current transformer might be necessary:</p>
 
-<p><img alt="N.American Electricity Supply - Measuring whole-house power" height="245" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_3a.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_3a.svg" style="margin-right: 25px" width="254" /> <img alt="N.American Electricity Supply - Measuring whole-house power" height="245" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_3b.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_3b.svg" style="border-right: 25px" width="254" /><br />
-<img alt="N.American Electricity Supply - Measuring whole-house power" height="256" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_3c.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_3c.svg" style="padding-top: 25px" width="404" /><br />
+<p><img alt="N.American Electricity Supply - Measuring whole-house power" height="245" onerror="this.src='files/N_America_Fig_3a.png';this.onerror=null;" src="files/N_America_Fig_3a.svg" style="margin-right: 25px" width="254" /> <img alt="N.American Electricity Supply - Measuring whole-house power" height="245" onerror="this.src='files/N_America_Fig_3b.png';this.onerror=null;" src="files/N_America_Fig_3b.svg" style="border-right: 25px" width="254" /><br />
+<img alt="N.American Electricity Supply - Measuring whole-house power" height="256" onerror="this.src='files/N_America_Fig_3c.png';this.onerror=null;" src="files/N_America_Fig_3c.svg" style="padding-top: 25px" width="404" /><br />
 <span style="font-size: smaller">Figure 3a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</span></p>
 
 <p>Fig 3a: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>3</sub></p>
@@ -66,8 +66,8 @@ Note that CT&nbsp;1 faces to the right and CT&nbsp;2 faces to the left, as indic
 
 <p>Individual circuits may be either 120 V using a connection between one leg and neutral, or they may be 240 V, i.e. connected to both legs.</p>
 
-<p><img alt="N.American Electricity Supply - Measuring individual circuits" height="245" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_4a_0.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_4a_0.svg" style="margin-right: 25px" width="254" /> <img alt="N.American Electricity Supply - Measuring whole-house power" height="245" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_4b_0.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_4b_0.svg" style="border-right: 25px" width="254" /><br />
-<img alt="N.American Electricity Supply - Measuring whole-house power" height="256" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_4c_0.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_4c_0.svg" style="padding-top: 25px" width="404" /><br />
+<p><img alt="N.American Electricity Supply - Measuring individual circuits" height="245" onerror="this.src='files/N_America_Fig_4a_0.png';this.onerror=null;" src="files/N_America_Fig_4a_0.svg" style="margin-right: 25px" width="254" /> <img alt="N.American Electricity Supply - Measuring whole-house power" height="245" onerror="this.src='files/N_America_Fig_4b_0.png';this.onerror=null;" src="files/N_America_Fig_4b_0.svg" style="border-right: 25px" width="254" /><br />
+<img alt="N.American Electricity Supply - Measuring whole-house power" height="256" onerror="this.src='files/N_America_Fig_4c_0.png';this.onerror=null;" src="files/N_America_Fig_4c_0.svg" style="padding-top: 25px" width="404" /><br />
 <span style="font-size: smaller">Figure 4a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring individual circuits.</span></p>
 
 <p>Fig 4a: Power = V &times; I = EnergyMonitor::realPower</p>
@@ -88,8 +88,8 @@ Note that CT&nbsp;1 faces to the right and CT&nbsp;2 faces to the left, as indic
 
 <p>The obvious way to connect the current transformers is to have each connected directly to an input. This arrangement is necessary if, for example, it is desirable or necessary to be able to balance the currents in each leg of the supply. But if only the total power is required, then a single input can be used, releasing the second for another circuit.</p>
 
-<p><img alt="N.American Electricity Supply - Measuring whole-house power, CT arrangement" height="219" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_5a.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_5a.svg" style="margin-right: 25px; padding-top: 25px" width="375" /> <img alt="N.American Electricity Supply - Measuring whole-house power, CT arrangement" height="219" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_5b.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_5b.svg" style="border-right: 25px; padding-top: 25px" width="375" /><br />
-<img alt="N.American Electricity Supply - Measuring whole-house power, CT arrangement" height="219" onerror="this.src='http://lab.megni.co.uk/oemdocs/files/N_America_Fig_5c.png';this.onerror=null;" src="http://lab.megni.co.uk/oemdocs/files/N_America_Fig_5c.svg" style="padding-top: 25px" width="375" /><br />
+<p><img alt="N.American Electricity Supply - Measuring whole-house power, CT arrangement" height="219" onerror="this.src='files/N_America_Fig_5a.png';this.onerror=null;" src="files/N_America_Fig_5a.svg" style="margin-right: 25px; padding-top: 25px" width="375" /> <img alt="N.American Electricity Supply - Measuring whole-house power, CT arrangement" height="219" onerror="this.src='files/N_America_Fig_5b.png';this.onerror=null;" src="files/N_America_Fig_5b.svg" style="border-right: 25px; padding-top: 25px" width="375" /><br />
+<img alt="N.American Electricity Supply - Measuring whole-house power, CT arrangement" height="219" onerror="this.src='files/N_America_Fig_5c.png';this.onerror=null;" src="files/N_America_Fig_5c.svg" style="padding-top: 25px" width="375" /><br />
 <span style="font-size: smaller">Figure 5a-c. North American Domestic Electricity Supply - Connecting the Current Transformers.<br />
 Fig 5a &ndash; One input per CT &ndash; voltage type with internal burden or current type with burden in the emonTx<br />
 Fig 5b &ndash; CTs in parallel with a common burden in the emonTx &ndash; using a single input<br />
