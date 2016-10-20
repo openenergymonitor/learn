@@ -60,7 +60,7 @@
                 "nicename": "Voltage Sensing",
                 "pages": {
                     "measuring-voltage-with-an-acac-power-adapter": {
-                        "nicename": "Measuring voltage with an AC-AC power adapter",
+                        "nicename": "Measuring voltage with an AC-AC<br>power adapter",
                         "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter"
                     },
                     "different-acac-power-adapters": {

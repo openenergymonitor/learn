@@ -1,4 +1,4 @@
-<h3>Measuring AC Voltage with an AC to AC power adapter</h3>
+<h2>Measuring AC Voltage with an AC to AC power adapter</h2>
 
 <p>An AC voltage measurement is needed to calculate real power, apparent power and power factor. This measurement can be made safely (requiring no high voltage work) by using an AC to AC power adaptor. The transformer in the adapter provides isolation from the high voltage mains.&nbsp;</p>
 
@@ -6,7 +6,7 @@
 
 <p>&nbsp;</p>
 
-<p><img alt="An ac-ac adapter" src="http://lab.megni.co.uk/oemdocs/files/acpoweradapter.jpg" /></p>
+<p><img alt="An ac-ac adapter" src="files/acpoweradapter.jpg" /></p>
 
 <p>&nbsp;</p>
 
@@ -29,7 +29,7 @@
 
 <p>Here&#39;s the circuit diagram and the voltage waveforms:</p>
 
-<p>&nbsp;<img alt="Arduino AC voltage input circuit diagram" src="http://lab.megni.co.uk/oemdocs/files/Arduino AC voltage input_1.png" style="width: 650px; height: 459px; " /></p>
+<p>&nbsp;<img alt="Arduino AC voltage input circuit diagram" src="files/Arduino AC voltage input_1.png" style="width: 650px; height: 459px; " /></p>
 
 <p>Resistors&nbsp;<strong>R1</strong> and <strong>R2</strong> form a voltage divider that scales down the power adapter AC voltage. Resistors <strong>R3 </strong>and<strong> R4</strong> provide the voltage bias.&nbsp;Capacitor <strong>C1</strong> provides a low impedance path to ground for the AC signal. The value is not critical, between 1 &mu;F and 10 &mu;F will be satisfactory.</p>
 
@@ -47,23 +47,15 @@ peak_voltage_output = R1 / (R1 + R2) x peak_voltage_input =
 
 <p>If you would like detailed information on how to calculate the optimum values for the components, taking component tolerances into account, see <a href="https://openenergymonitor.org/emon/buildingblocks/acac-component-tolerances">this page</a>.</p>
 
-<p>&nbsp;</p>
-
 <h3><strong>Arduino sketch</strong></h3>
 
 <p>To use the above circuit along with a current measurement to measure real power, apparent power, power factor, Vrms and Irms upload the Arduino sketch detailed here:&nbsp;<a href="https://openenergymonitor.org/emon/buildingblocks/arduino-sketch-voltage-and-current">Arduino sketch - voltage and current</a></p>
-
-<p>&nbsp;</p>
 
 <h3><strong>Improving the quality of the bias source</strong></h3>
 
 <p>This relatively simple voltage bias source does have some limitations. See <a href="https://openenergymonitor.org/emon/buildingblocks/acac-buffered-voltage-bias">Buffered Voltage Bias</a> for a circuit that offers enhanced performance.</p>
 
-<p>&nbsp;</p>
-
 <h2>Notes on Mains Voltage Limits</h2>
-
-<p>&nbsp;</p>
 
 <p>The standard domestic mains supply for Europe is 230&nbsp;V&nbsp;&plusmn;&nbsp;10%, giving a lower limit of 207 V and an upper limit of 253&nbsp;V. It is permissible under BS 7671 to have a voltage drop within the installation of 5%, which would give a lower limit of 195.5&nbsp;V.<br />
 The UK standard prior to harmonization was 240&nbsp;V&nbsp;&plusmn;&nbsp;6%, giving an upper limit of 254.4&nbsp;V.</p>
@@ -72,10 +64,6 @@ The UK standard prior to harmonization was 240&nbsp;V&nbsp;&plusmn;&nbsp;6%, giv
 
 <p>Thanks to Robert Wall for summarizing the rather convoluted standards surrounding UK grid voltages.</p>
 
-<p>&nbsp;</p>
-
 <p>All of Europe, Africa, Asia, Australia, New Zealand and most of South America, use a supply that is within 6% of 230 V</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Mains_electricity_by_country">https://en.wikipedia.org/wiki/Mains_electricity_by_country</a></p>
-
-<p>&nbsp;</p>
