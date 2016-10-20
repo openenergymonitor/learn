@@ -6,11 +6,11 @@
 
 <p>The pulse counting Arduino on the left was tested by sending 12 different pulse rates simultaneously from the pulse generator Arduino on the right:</p>
 
-<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/pulsetest.JPG" /></p>
+<p><img alt="" src="files/pulsetest.jpg" /></p>
 
 <p><strong>Pulse Generation</strong></p>
 
-<p>Using the<a href="http://lab.megni.co.uk/oemdocs/node/97"> pulse generator sketch</a> to generate pulse output rates up to 56kW with a pulse every Wh (1000 pulses per kWh)</p>
+<p>Using the<a href="node/97"> pulse generator sketch</a> to generate pulse output rates up to 56kW with a pulse every Wh (1000 pulses per kWh)</p>
 
 <p>(56kW was identified to be the maximum stable pulse counting rate)</p>
 
@@ -20,20 +20,20 @@
 
 <p>Serial output was read with <strong>ArduinoComm</strong><strong> java program</strong> which converts the pulse time into a power value and logs the power values to a file.</p>
 
-<p>Download the particular version of ArduinoComm used for this test here: <a href="http://lab.megni.co.uk/oemdocs/files/ArduinoCommPower.zip">ArduinoCommPulseOutput.zip</a><br />
-Read about how to run it <a href="http://lab.megni.co.uk/oemdocs/arduinocomm">here</a>.</p>
+<p>Download the particular version of ArduinoComm used for this test here: <a href="files/ArduinoCommPower.zip">ArduinoCommPulseOutput.zip</a><br />
+Read about how to run it <a href="arduinocomm">here</a>.</p>
 
 <p><strong>Graphing and statistic calculation in KST</strong></p>
 
-<p>This file is read in real time by <a href="http://lab.megni.co.uk/oemdocs/node/30">KST</a>. Download kst config file here: <a href="http://lab.megni.co.uk/oemdocs/files/12pulsekst.zip">12pulsekst.zip</a></p>
+<p>This file is read in real time by <a href="node/30">KST</a>. Download kst config file here: <a href="files/12pulsekst.zip">12pulsekst.zip</a></p>
 
 <p>KST was set to take <strong>100 samples</strong> from which it calculated the: <strong>mean, standard deviation, maximum and minimum</strong></p>
 
-<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/kstpulse.png" /></p>
+<p><img alt="" src="files/kstpulse.png" /></p>
 
 <p>These values were then put in a table here:</p>
 
-<p><strong>Download test results</strong> (open office spreadsheet)&nbsp;<a href="http://lab.megni.co.uk/oemdocs/files/PulseOutputPowerTestResults.ods">PulseOutputPowerTestResults.ods</a></p>
+<p><strong>Download test results</strong> (open office spreadsheet)&nbsp;<a href="files/PulseOutputPowerTestResults.ods">PulseOutputPowerTestResults.ods</a></p>
 
 <p><meta http-equiv="content-type" content="text/html; charset=utf-8" /></p>
 

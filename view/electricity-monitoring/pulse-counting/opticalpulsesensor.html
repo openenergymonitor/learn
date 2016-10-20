@@ -4,7 +4,7 @@
 
 <p>Unlike&nbsp;clip-on&nbsp;CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. The pulse counting cannot provide an instantaneous power reading like CT based monitoring can. Where possible, we&nbsp;recommend using pulse counting in conjunction with CT monitoring. The emonPi&nbsp;and emonTx can simultaneously&nbsp;perform pulse counting and CT based monitoring.&nbsp;</p>
 
-<p><img alt="" src="http://lab.megni.co.uk/oemdocs/files/optical_pulse.JPG" style="width: 350px; height: 289px;" />&nbsp; &nbsp; &nbsp;<a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/" style="line-height: 20.7999992370605px;"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Trolley.png" style="width: 64px; height: 64px;" /></a><strong><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Store</a></strong></p>
+<p><img alt="" src="files/optical_pulse.jpg" style="width: 350px; height: 289px;" />&nbsp; &nbsp; &nbsp;<a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/" style="line-height: 20.7999992370605px;"><img alt="" src="files/Trolley.png" style="width: 64px; height: 64px;" /></a><strong><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Store</a></strong></p>
 
 <h2>Specifications:</h2>
 
@@ -70,7 +70,7 @@ then send the command &#39;v&#39; to return the firmware version and RF settings
 
 <h1>Sensor Installation</h1>
 
-<p><a href="Ciseco FAO Matt Lloyd Nottingham CleanTech Center St Peters Street Nottingham  NG7 3EN  UK"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/optical_pulse_emonpi.JPG" style="width: 500px; height: 371px;" /></a></p>
+<p><a href="Ciseco FAO Matt Lloyd Nottingham CleanTech Center St Peters Street Nottingham  NG7 3EN  UK"><img alt="" src="files/optical_pulse_emonpi.jpg" style="width: 500px; height: 371px;" /></a></p>
 
 <p>1. Identify your utility meter&#39;s pulse output, usually a red flashing LED marked&nbsp;&#39;KWh&#39;.&nbsp;Stick the supplied self&nbsp;adhesive&nbsp;base-pad over the LED, carefully&nbsp;aligning the hole in the center of the circle so the flashing LED shines through clearly. Be sure to clean any dust or debris from the meter face before attaching the sensor.&nbsp;</p>
 
@@ -96,19 +96,19 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 <p>After logging into the local Emoncms, the pulse input (Node 5 on emonPi) at the bottom of the list should be a number greater than zero :&nbsp;</p>
 
-<p><a href="Ciseco FAO Matt Lloyd Nottingham CleanTech Center St Peters Street Nottingham  NG7 3EN  UK"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/emonPi_pulse.png" style="width: 600px; height: 525px;" /></a></p>
+<p><a href="Ciseco FAO Matt Lloyd Nottingham CleanTech Center St Peters Street Nottingham  NG7 3EN  UK"><img alt="" src="files/emonPi_pulse.png" style="width: 600px; height: 525px;" /></a></p>
 
 <p>Clicking the spanner icon brings up the feed input processor. It&#39;s a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scalar&nbsp;to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scalar has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won&#39;t return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning&nbsp;to zero.&nbsp;</p>
 
-<p><a href="http://lab.megni.co.uk/oemdocs/files/emonpi_pulse_wh_log.png"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/emonpi_pulse_wh_log.png" style="width: 600px; height: 238px;" /></a></p>
+<p><a href="files/emonpi_pulse_wh_log.png"><img alt="" src="files/emonpi_pulse_wh_log.png" style="width: 600px; height: 238px;" /></a></p>
 
 <p>Viewing the Wh accumulator feed:&nbsp;</p>
 
-<p><a href="http://lab.megni.co.uk/oemdocs/files/emonpi_pulse_wh_log.png"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/wh_feed.png" style="width: 600px; height: 342px;" /></a></p>
+<p><a href="files/emonpi_pulse_wh_log.png"><img alt="" src="files/wh_feed.png" style="width: 600px; height: 342px;" /></a></p>
 
 <p>To convert the wh accumulator feed to daily KWh bargraph&nbsp;use the bargraph&nbsp;visualization&nbsp;with delta = 1 and scale = 0.001</p>
 
-<p><a href="http://lab.megni.co.uk/oemdocs/files/emonpi_pulse_wh_log.png"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/wh_daily_wkhd.png" style="width: 600px; height: 392px;" /></a></p>
+<p><a href="files/emonpi_pulse_wh_log.png"><img alt="" src="files/wh_daily_wkhd.png" style="width: 600px; height: 392px;" /></a></p>
 
 <p>&nbsp;</p>
 
@@ -133,7 +133,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(single phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/a100c.png"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/a100c.png" style="width: 100px; height: 78px;" /></a></td>
+			<td><a href="files/a100c.png"><img alt="" src="files/a100c.png" style="width: 100px; height: 78px;" /></a></td>
 			<td>1000</td>
 			<td>1000 / 1000 = <strong>1</strong></td>
 		</tr>
@@ -143,7 +143,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(single phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/Actaris_ace9000.JPG"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Actaris_ace9000.JPG" style="width: 100px; height: 118px;" /></a></td>
+			<td><a href="files/Actaris_ace9000.jpg"><img alt="" src="files/Actaris_ace9000.jpg" style="width: 100px; height: 118px;" /></a></td>
 			<td>800</td>
 			<td>1000 / 800 = <strong>1.25</strong></td>
 		</tr>
@@ -153,7 +153,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(single phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/Xil_XLA12.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
+			<td><a href="files/Xil_XLA12.jpg"><img alt="" src="files/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
 			<td>800</td>
 			<td>1000 / 800 =&nbsp;<strong>1.25</strong></td>
 		</tr>
@@ -163,7 +163,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(3-phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/ElsterA1100.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/ElsterA1100.jpg" style="width: 100px; height: 69px;" /></a></td>
+			<td><a href="files/ElsterA1100.jpg"><img alt="" src="files/ElsterA1100.jpg" style="width: 100px; height: 69px;" /></a></td>
 			<td>500</td>
 			<td>1000 / 500 = <b>2</b></td>
 		</tr>
@@ -181,7 +181,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(3-phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/Elster_A1140.JPG"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Elster_A1140.JPG" style="width: 100px; height: 75px;" /></a></td>
+			<td><a href="files/Elster_A1140.jpg"><img alt="" src="files/Elster_A1140.jpg" style="width: 100px; height: 75px;" /></a></td>
 			<td>1000</td>
 			<td>1000 / 5000 = <b>1</b></td>
 		</tr>
@@ -191,7 +191,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(single phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/Landis &amp; Gyr 5254E.png"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Landis &amp; Gyr 5254E.png" style="width: 100px; height: 100px;" /></a></td>
+			<td><a href="files/LandisGyr5254E.png"><img alt="" src="files/LandisGyr5254E.png" style="width: 100px; height: 100px;" /></a></td>
 			<td>1000</td>
 			<td>1000 / 1000 = <strong>1</strong></td>
 		</tr>
@@ -199,7 +199,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 			<td>
 			<p>&nbsp;Inepro PRO1D</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/Inepro_PRO1D.JPG"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Inepro_PRO1D.JPG" style="width: 50px; height: 109px;" /></a></td>
+			<td><a href="files/Inepro_PRO1D.jpg"><img alt="" src="files/Inepro_PRO1D.jpg" style="width: 50px; height: 109px;" /></a></td>
 			<td>2000</td>
 			<td>1000/2000 = <strong>0.5</strong></td>
 		</tr>
@@ -209,7 +209,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>AMR Smart Meter</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/edmi_mk7c.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/edmi_mk7c.jpg" style="width: 80px; height: 130px;" /></a></td>
+			<td><a href="files/edmi_mk7c.jpg"><img alt="" src="files/edmi_mk7c.jpg" style="width: 80px; height: 130px;" /></a></td>
 			<td>1000</td>
 			<td>1000 / 1000 =&nbsp;<strong>1</strong></td>
 		</tr>
@@ -219,7 +219,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 			<p>(Single Phase)</p>
 			</td>
-			<td><a href="http://lab.megni.co.uk/oemdocs/files/Original-Landis_E110_1__1.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/Original-Landis_E110_1__1.jpg" style="width: 100px; height: 66px;" /></a></td>
+			<td><a href="files/Original-Landis_E110_1__1.jpg"><img alt="" src="files/Original-Landis_E110_1__1.jpg" style="width: 100px; height: 66px;" /></a></td>
 			<td>1000</td>
 			<td>
 			<p>1000 / 1000 =&nbsp;<strong>1</strong></p>
@@ -228,7 +228,7 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 	</tbody>
 </table>
 
-<p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="mailto:http://lab.megni.co.uk/oemdocs/files/emonpi_pulse_wh_log.png?subject=pulse%20output%20utility%20meter">support@openenergymonitor.zendesk.com</a></p>
+<p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="mailto:files/emonpi_pulse_wh_log.png?subject=pulse%20output%20utility%20meter">support@openenergymonitor.zendesk.com</a></p>
 
 <p>&nbsp;</p>
 
@@ -256,4 +256,4 @@ Power up the emonTX and test as for the emonPi.<span id="cke_bm_73E" style="disp
 
 <p><strong>Teardown:</strong></p>
 
-<p><a href="http://lab.megni.co.uk/oemdocs/files/inside_optical_pulse.jpg"><img alt="" src="http://lab.megni.co.uk/oemdocs/files/inside_optical_pulse.jpg" style="width: 200px; height: 193px;" /></a></p>
+<p><a href="files/inside_optical_pulse.jpg"><img alt="" src="files/inside_optical_pulse.jpg" style="width: 200px; height: 193px;" /></a></p>

@@ -4,55 +4,53 @@
 
 <pre>
 //Number of pulses, used to measure energy.
-long pulseCount = 0;   </pre>
+long pulseCount = 0;
 
-<p>//Used to measure power.<br />
-unsigned long pulseTime,lastTime;</p>
+//Used to measure power.
+unsigned long pulseTime,lastTime;
 
-<p>//power and energy<br />
-double power, elapsedkWh;</p>
+//power and energy
+double power, elapsedkWh;
 
-<p>//Number of pulses per wh - found or set on the meter.<br />
-int ppwh = 1; //1000 pulses/kwh = 1 pulse per wh</p>
+//Number of pulses per wh - found or set on the meter.
+int ppwh = 1; //1000 pulses/kwh = 1 pulse per wh
 
-<p>void setup()<br />
-{<br />
-Serial.begin(115200);</p>
+void setup()
+{
+    Serial.begin(115200);
 
-<p>// KWH interrupt attached to IRQ 1 = pin3<br />
-attachInterrupt(1, onPulse, FALLING);<br />
-}</p>
+    // KWH interrupt attached to IRQ 1 = pin3
+    attachInterrupt(1, onPulse, FALLING);
+}
 
-<p><br />
-void loop()<br />
-{</p>
 
-<p>}</p>
+void loop()
+{
 
-<p>// The interrupt routine<br />
-void onPulse()<br />
-{</p>
+}
 
-<p>//used to measure time between pulses.<br />
-lastTime = pulseTime;<br />
-pulseTime = micros();</p>
+// The interrupt routine
+void onPulse()
+{
+    //used to measure time between pulses.
+    lastTime = pulseTime;
+    pulseTime = micros();
 
-<p>//pulseCounter<br />
-pulseCount++;</p>
+    //pulseCounter
+    pulseCount++;
 
-<p>//Calculate power<br />
-power = (3600000000.0 / (pulseTime - lastTime))/ppwh;<br />
-<br />
-//Find kwh elapsed<br />
-elapsedkWh = (1.0*pulseCount/(ppwh*1000)); //multiply by 1000 to convert pulses per wh to kwh</p>
+    //Calculate power
+    power = (3600000000.0 / (pulseTime - lastTime))/ppwh;
 
-<p>//Print the values.<br />
-Serial.print(power,4);<br />
-Serial.print(&quot; &quot;);<br />
-Serial.println(elapsedkWh,3);<br />
-}</p>
+    //Find kwh elapsed
+    elapsedkWh = (1.0*pulseCount/(ppwh*1000)); //multiply by 1000 to convert pulses per wh to kwh
 
-<p><meta http-equiv="content-type" content="text/html; charset=utf-8" /></p>
+    //Print the values.
+    Serial.print(power,4);
+    Serial.print(" ");
+    Serial.println(elapsedkWh,3);
+}
+</pre>
 
 <h2>Accuracy</h2>
 
