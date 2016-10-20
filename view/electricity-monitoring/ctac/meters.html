@@ -14,11 +14,11 @@
 
 <p>The way that energy packets are allocated and charged is illustrated below. When no energy is being generated and the entire flow of energy through the meter is consumption, a packet is allocated each time the accumulated energy crosses the 3600 J boundary.</p>
 
-<p><img alt="Diagram showing a digital meter charging for consumed energy" height="355" src="/emon/sites/default/files/meterconsuming.png" width="601" /></p>
+<p><img alt="Diagram showing a digital meter charging for consumed energy" height="355" src="files/meterconsuming.png" width="601" /></p>
 
 <p>If generation is taking place, the nett flow of energy is the difference between consumption and generation. As consumption falls and generation takes over, the current packet empties, and when it is empty, further export power that cannot be contained within the current packet is ignored.</p>
 
-<p><img alt="Diagram showing a digital meter charging for nett energy" height="627" src="/emon/sites/default/files/metergenerating.png" width="600" /></p>
+<p><img alt="Diagram showing a digital meter charging for nett energy" height="627" src="files/metergenerating.png" width="600" /></p>
 
 <h2>Exploiting the Meter with a Dump Load Controller</h2>
 
@@ -28,7 +28,7 @@
 
 <p>The operating principle of the controller is to match the operating condition of the meter&rsquo;s energy packet, and to control the immersion heater&mdash;our dump load&mdash;so that as the energy in the packet falls towards the point where the packet will empty and energy will be returned to the supply, we switch on or increase the power to the dump load; and when the energy in the packet rises towards the point where we incur a charge, we switch off or decrease the power to the dump load.</p>
 
-<p><img alt="Diagram showing how to exploit the meter’s characteristics" height="314" src="/emon/sites/default/files/meterexploiting.png" width="570" /></p>
+<p><img alt="Diagram showing how to exploit the meter’s characteristics" height="314" src="files/meterexploiting.png" width="570" /></p>
 
 <p>Switching the dump load at 10% and 90% of the packet capacity.</p>
 
