@@ -141,8 +141,11 @@ class Parsedown
 
                 foreach ($parts as $part)
                 {
-                    $shortage = 4 - mb_strlen($line, 'utf-8') % 4;
-
+                    if (function_exists("mb_strlen")) {
+                        $shortage = 4 - mb_strlen($line, 'utf-8') % 4;
+                    } else { 
+                        $shortage = 4 - strlen($line) % 4;
+                    }
                     $line .= str_repeat(' ', $shortage);
                     $line .= $part;
                 }
@@ -514,6 +517,16 @@ class Parsedown
                     'handler' => 'elements',
                 ),
             );
+
+            if($name === 'ol') 
+            {
+                $listStart = stristr($matches[0], '.', true);
+                
+                if($listStart !== '1')
+                {
+                    $Block['element']['attributes'] = array('start' => $listStart);
+                }
+            }
 
             $Block['li'] = array(
                 'name' => 'li',
@@ -1536,3 +1549,4 @@ class Parsedown
                           'time',
     );
 }
+

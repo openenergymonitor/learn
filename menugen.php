@@ -1,5 +1,5 @@
 <?php
-
+    die;
     $pages = json_decode(file_get_contents("menu.json"));
     if ($pages==null) {
         $pages = new stdClass;

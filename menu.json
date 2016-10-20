@@ -394,9 +394,9 @@
             "visampler": {
                 "nicename": "Visampler",
                 "pages": {
-                    "VIsampler-2.0": {
+                    "visampler2": {
                         "nicename": "VIsampler 2.0",
-                        "url": "tools/visampler/VIsampler-2.0"
+                        "url": "tools/visampler/visampler2"
                     }
                 }
             }

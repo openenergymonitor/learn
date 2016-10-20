@@ -36,14 +36,15 @@ The difference between the MWT and the room temperature (Delta_T) of 20C = 50 Ke
 
 When you reduce the mean water temperature of a radiator its heat output does not reduce linearly. The heat output at a Delta_T of 25K (half the standard test Delta_T of 50K) is less than half of the heat output given at 50K. The heat output given by a radiator at different values of Delta_T is usually determined using a correction factor table:
 
-    Delta_T 	Correction Factor
-    20          0.30
-    25          0.41
-    30 	        0.52
-    35 	        0.63
-    40 	        0.75
-    45 	        0.87
-    50 	        1.00
+| Delta_T | Correction Factor |
+|---------|-------------------|
+| 20      | 0.3               |
+| 25      | 0.41              |
+| 30      | 0.52              |
+| 35      | 0.63              |
+| 40      | 0.75              |
+| 45      | 0.87              |
+| 50      | 1                 |
 
 *Correction factor's from [Heatpumps for the home by John Cantor](http://www.heatpumps.co.uk/HeatPumpBook.htm) taken from manufacturer's data. These figures are also consistent with the Worcester Bosch [radiator-sizing-for-heatpumps.pdf](http://openenergymonitor.org/emon/sites/default/files/radiator-sizing-for-heat-pumps.pdf) guide. Correction factor tables can be found by searching for 'radiator correction factors'*
 

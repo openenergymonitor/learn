@@ -34,15 +34,16 @@ Searching for Android http request it seems the recommended way of making http r
     URL url = new URL("http://www.android.com/");
     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
     try {
-	    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+      InputStream in = new BufferedInputStream(urlConnection.getInputStream());
     } finally {
-	    urlConnection.disconnect();
+      urlConnection.disconnect();
     }
     
-Before we go any further we need to add android.permission.INTERNET to the projects AndroidManifest.XML file to give the app permisions to use the internet. Add the following line to AndroidManifest.XML just before the <application section
+Before we go any further we need to add android.permission.INTERNET to the projects AndroidManifest.XML file to give the app permisions to use the internet. Add the following line to AndroidManifest.XML just before the 
 
+    <application section
     <uses-permission android:name="android.permission.INTERNET"/>
-			
+    
 If you try and run the first HttpURLConnection example in the onCreate method of the android app: The first thing you will notice is that there's a red cross in the left-hand margin and much of the code is underlined in red. Clicking on the red cross gives the option to Import 'URL' choose this, this will automatically add the URL dependency to the project (at the top). Once you've added all the dependencies it will then ask you surround the code in a try/catch: 
 
 	try {
@@ -63,11 +64,11 @@ A basic AsyncTask class defenition looks like this:
 
     class MyAsyncTask extends AsyncTask<String, Void, String>
     {
-	    @Override
-	    protected String doInBackground(String... params) {
-		    // TODO Auto-generated method stub
-		    return null;
-	    }	
+      @Override
+      protected String doInBackground(String... params) {
+        // TODO Auto-generated method stub
+        return null;
+      }	
     }
     
 The AsyncTask can be called with:
@@ -82,60 +83,60 @@ I have combined here the HTTP request code and the AsyncTask class and also adde
 
     class HTTP extends AsyncTask<String, Void, String>
     {
-	    @Override
-	    protected String doInBackground(String... params) {
-		    String result = "";
-		    try {
-			    String urlstring = params[0];
-			    Log.i("EmonLog", "HTTP Connecting: "+urlstring);
-			    URL url = new URL(urlstring);
-			    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-			
-			    try {
-			        InputStream reader = new BufferedInputStream(urlConnection.getInputStream());
-			        
-			        String text = "";
-			        int i = 0;
-			        while((i=reader.read())!=-1)
-			        {
-			            text += (char)i;
-			        }
-			        Log.i("EmonLog", "HTTP Response: "+text);
-			        result = text;
-			        
-			    } catch (Exception e) {
-				    Log.i("EmonLog", "HTTP Exception: "+e);
-			    }
-			    finally {
-				    Log.i("EmonLog", "HTTP Disconnecting");
-		            urlConnection.disconnect();
-			    }
-			
-		    } catch (Exception e) {
-			    e.printStackTrace();
-			    Log.i("EmonLog", "HTTP Exception: "+e);
-		    }
-		
-		    return result;
-	    }
+      @Override
+      protected String doInBackground(String... params) {
+        String result = "";
+        try {
+	        String urlstring = params[0];
+	        Log.i("EmonLog", "HTTP Connecting: "+urlstring);
+	        URL url = new URL(urlstring);
+	        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+	
+	        try {
+	            InputStream reader = new BufferedInputStream(urlConnection.getInputStream());
+	            
+	            String text = "";
+	            int i = 0;
+	            while((i=reader.read())!=-1)
+	            {
+	                text += (char)i;
+	            }
+	            Log.i("EmonLog", "HTTP Response: "+text);
+	            result = text;
+	            
+	        } catch (Exception e) {
+		        Log.i("EmonLog", "HTTP Exception: "+e);
+	        }
+	        finally {
+		        Log.i("EmonLog", "HTTP Disconnecting");
+                urlConnection.disconnect();
+	        }
+	
+        } catch (Exception e) {
+	        e.printStackTrace();
+	        Log.i("EmonLog", "HTTP Exception: "+e);
+        }
+
+        return result;
+      }
     }
 
 Then in the MainActivity class execute the HTTP AsyncTask class like this:
 
     public class MainActivity extends Activity {
 
-	    @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-		    super.onCreate(savedInstanceState);
-		    setContentView(R.layout.activity_main);
-		
-		    try {
-			    String result = new HTTP().execute("http://emoncms.org/feed/value.json?apikey=7f1b46367a013db07d2d65e588d2ad93&id=43348").get();
-			    Log.i("EmonLog", "Result: "+result);
-		    } catch (Exception e) {
-			    Log.i("EmonLog", "Error: "+e);
-		    }
-	    }
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        try {
+	        String result = new HTTP().execute("http://emoncms.org/feed/value.json?apikey=7f1b46367a013db07d2d65e588d2ad93&id=43348").get();
+	        Log.i("EmonLog", "Result: "+result);
+        } catch (Exception e) {
+	        Log.i("EmonLog", "Error: "+e);
+        }
+      }
 	    
 **Run and look at the result of LogCat**
 If you now run this on your virtual android device and look at the result in the eclipse LogCat (below the source code editor) you should see that it makes a successful request to the emoncms.org server and returns a feed value.

@@ -35,10 +35,11 @@ The above graph showing measured internal temperature vs simulated internal temp
 
 The model parameters that best reproduced the internal temperature where:
 
-                Thermal Conductivity (W/K) 	Thermal Capacity (J/K)
-    Segment 1 	100 	                    11000000
-    Segment 2 	500 	                    2500000
-    Segment 3 	800 	                    600000
+|           | Thermal Conductivity (W/K) | Thermal Capacity (J/K) |
+|-----------|----------------------------|------------------------|
+| Segment 1 | 100                        | 11000000               |
+| Segment 2 | 500                        | 2500000                |
+| Segment 3 | 800                        | 600000                 |
 
 These where determined by trial and error and are specific to the building under test. These parameters can be determined by monitoring external and internal room temperatures and electrical power input from a heater and then using the dynamic simulation tool in the openbem emoncms module to find the best fit.
 
