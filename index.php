@@ -17,11 +17,12 @@ ini_set('display_errors', 'on');
 require("core.php");
 $path = get_application_path();
 
-$q = "";
+$q = "home";
 if (isset($_GET['q'])) $q = $_GET['q'];
 //$q = rtrim($q,"/");
 
 $format = "html";
+$doc_ext = "html";
 $content = "Sorry page not found";
 
 $filename_parts = explode(".",$q);
