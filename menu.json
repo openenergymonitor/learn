@@ -1,4 +1,158 @@
 {
+    "sustainable-energy": {
+        "nicename": "Sustainable Energy",
+        "chapters": {
+            "energy": {
+                "nicename": "Energy",
+                "pages": {
+                    "energy-101": {
+                        "nicename": "1. Energy 101",
+                        "url": "sustainable-energy/energy/energy-101"
+                    },
+                    "snowdonia-energy-study": {
+                        "nicename": "2. Snowdonia Energy Study",
+                        "url": "sustainable-energy/energy/snowdonia-energy-study"
+                    },
+                    "snowdonia-energy-study-data": {
+                        "nicename": "3. Snowdonia Energy Study: Data",
+                        "url": "sustainable-energy/energy/snowdonia-energy-study-data"
+                    },
+                    "energy-use-in-context": {
+                        "nicename": "Appendix: Energy use in context",
+                        "url": "sustainable-energy/energy/energy-use-in-context"
+                    },
+                    "energy-101-ref": {
+                        "nicename": "Appendix: Energy 101 Reference",
+                        "url": "sustainable-energy/energy/energy-101-ref"
+                    },
+                    "uk-energy-2015": {
+                        "nicename": "Appendix: UK Energy 2015",
+                        "url": "sustainable-energy/energy/uk-energy-2015"
+                    },
+                    "further-reading": {
+                        "nicename": "Further reading",
+                        "url": "sustainable-energy/energy/further-reading"
+                    }
+                }
+            },
+            "zcem": {
+                "nicename": "Zero Carbon Energy Model",
+                "pages": {
+                    "integrated.html#introduction": {
+                        "nicename": "Introduction",
+                        "url": "sustainable-energy/zcem/integrated.html#introduction"
+                    },
+                    "integrated.html#ukcontext": {
+                        "nicename": "UK Context",
+                        "url": "sustainable-energy/zcem/integrated.html#ukcontext"
+                    },
+                    "integrated.html#varsupply": {
+                        "nicename": "1. Variable Supply",
+                        "url": "sustainable-energy/zcem/integrated.html#varsupply"
+                    },
+                    "integrated.html#varsupply_flatdemand": {
+                        "nicename": "2. Variable supply and flat demand",
+                        "url": "sustainable-energy/zcem/integrated.html#varsupply_flatdemand"
+                    },
+                    "integrated.html#varsupply_traddemand": {
+                        "nicename": "3. Variable supply, traditional electricity demand and oversupply",
+                        "url": "sustainable-energy/zcem/integrated.html#varsupply_traddemand"
+                    },
+                    "integrated.html#windandsun_flatdemand": {
+                        "nicename": "4. Mixed supply and flat demand",
+                        "url": "sustainable-energy/zcem/integrated.html#windandsun_flatdemand"
+                    },
+                    "integrated.html#electricvehicles": {
+                        "nicename": "6. Electric Vehicles",
+                        "url": "sustainable-energy/zcem/integrated.html#electricvehicles"
+                    },
+                    "integrated.html#all": {
+                        "nicename": "7. All",
+                        "url": "sustainable-energy/zcem/integrated.html#all"
+                    },
+                    "integrated.html#national": {
+                        "nicename": "8. National",
+                        "url": "sustainable-energy/zcem/integrated.html#national"
+                    },
+                    "integrated.html#aggregation": {
+                        "nicename": "Aggregation",
+                        "url": "sustainable-energy/zcem/integrated.html#aggregation"
+                    },
+                    "integrated.html#dataset": {
+                        "nicename": "ZCB Dataset",
+                        "url": "sustainable-energy/zcem/integrated.html#dataset"
+                    },
+                    "integrated.html#python": {
+                        "nicename": "Python models",
+                        "url": "sustainable-energy/zcem/integrated.html#python"
+                    }
+                }
+            },
+            "building-energy-model": {
+                "nicename": "Building Energy Modelling",
+                "pages": {
+                    "readme": {
+                        "nicename": "1. Introduction",
+                        "url": "sustainable-energy/building-energy-model/readme"
+                    },
+                    "fabricheatloss": {
+                        "nicename": "2. Fabric heat loss",
+                        "url": "sustainable-energy/building-energy-model/fabricheatloss"
+                    },
+                    "ventilation": {
+                        "nicename": "3. Ventilation heat loss",
+                        "url": "sustainable-energy/building-energy-model/ventilation"
+                    },
+                    "SimpleJSModel": {
+                        "nicename": "4. A simple building energy model",
+                        "url": "sustainable-energy/building-energy-model/SimpleJSModel"
+                    },
+                    "ElementLibrary": {
+                        "nicename": "Fabric Element Library",
+                        "url": "sustainable-energy/building-energy-model/ElementLibrary"
+                    },
+                    "radiatormodel": {
+                        "nicename": "Basic radiator model",
+                        "url": "sustainable-energy/building-energy-model/radiatormodel"
+                    },
+                    "heatpumpmodel": {
+                        "nicename": "Basic heatpump model",
+                        "url": "sustainable-energy/building-energy-model/heatpumpmodel"
+                    },
+                    "dynamicmodel": {
+                        "nicename": "Dynamic building model",
+                        "url": "sustainable-energy/building-energy-model/dynamicmodel"
+                    },
+                    "history": {
+                        "nicename": "History",
+                        "url": "sustainable-energy/building-energy-model/history"
+                    },
+                    "modelexamples": {
+                        "nicename": "Model examples",
+                        "url": "sustainable-energy/building-energy-model/modelexamples"
+                    },
+                    "Cylinder-heat-flux": {
+                        "nicename": "Cylinder heat flux",
+                        "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux"
+                    },
+                    "ESPR": {
+                        "nicename": "ESPR",
+                        "url": "sustainable-energy/building-energy-model/ESPR"
+                    }
+                }
+            },
+            "tools": {
+                "nicename": "Tools",
+                "pages": {
+                    "electricity-audit-and-savings-case-study": {
+                        "nicename": "Electricity audit and savings case study",
+                        "url": "sustainable-energy/tools/electricity-audit-and-savings-case-study"
+                    }
+                }
+            }
+        }
+
+    },
     "electricity-monitoring": {
         "nicename": "Electricity Monitoring",
         "chapters": {
@@ -336,160 +490,6 @@
                 }
             }
         }
-    },
-    "sustainable-energy": {
-        "nicename": "Sustainable Energy",
-        "chapters": {
-            "energy": {
-                "nicename": "Energy",
-                "pages": {
-                    "energy-101": {
-                        "nicename": "1. Energy 101",
-                        "url": "sustainable-energy/energy/energy-101"
-                    },
-                    "snowdonia-energy-study": {
-                        "nicename": "2. Snowdonia Energy Study",
-                        "url": "sustainable-energy/energy/snowdonia-energy-study"
-                    },
-                    "snowdonia-energy-study-data": {
-                        "nicename": "3. Snowdonia Energy Study: Data",
-                        "url": "sustainable-energy/energy/snowdonia-energy-study-data"
-                    },
-                    "energy-use-in-context": {
-                        "nicename": "Appendix: Energy use in context",
-                        "url": "sustainable-energy/energy/energy-use-in-context"
-                    },
-                    "energy-101-ref": {
-                        "nicename": "Appendix: Energy 101 Reference",
-                        "url": "sustainable-energy/energy/energy-101-ref"
-                    },
-                    "uk-energy-2015": {
-                        "nicename": "Appendix: UK Energy 2015",
-                        "url": "sustainable-energy/energy/uk-energy-2015"
-                    },
-                    "further-reading": {
-                        "nicename": "Further reading",
-                        "url": "sustainable-energy/energy/further-reading"
-                    }
-                }
-            },
-            "zcem": {
-                "nicename": "Zero Carbon Energy Model",
-                "pages": {
-                    "integrated#introduction": {
-                        "nicename": "Introduction",
-                        "url": "sustainable-energy/zcem/integrated#introduction"
-                    },
-                    "integrated#ukcontext": {
-                        "nicename": "UK Context",
-                        "url": "sustainable-energy/zcem/integrated#ukcontext"
-                    },
-                    "integrated#varsupply": {
-                        "nicename": "1. Variable Supply",
-                        "url": "sustainable-energy/zcem/integrated#varsupply"
-                    },
-                    "integrated#varsupply_flatdemand": {
-                        "nicename": "2. Variable supply and flat demand",
-                        "url": "sustainable-energy/zcem/integrated#varsupply_flatdemand"
-                    },
-                    "integrated#varsupply_traddemand": {
-                        "nicename": "3. Variable supply, traditional electricity demand and oversupply",
-                        "url": "sustainable-energy/zcem/integrated#varsupply_traddemand"
-                    },
-                    "integrated#windandsun_flatdemand": {
-                        "nicename": "4. Mixed supply and flat demand",
-                        "url": "sustainable-energy/zcem/integrated#windandsun_flatdemand"
-                    },
-                    "integrated#electricvehicles": {
-                        "nicename": "6. Electric Vehicles",
-                        "url": "sustainable-energy/zcem/integrated#electricvehicles"
-                    },
-                    "integrated#all": {
-                        "nicename": "7. All",
-                        "url": "sustainable-energy/zcem/integrated#all"
-                    },
-                    "integrated#national": {
-                        "nicename": "8. National",
-                        "url": "sustainable-energy/zcem/integrated#national"
-                    },
-                    "integrated#aggregation": {
-                        "nicename": "Aggregation",
-                        "url": "sustainable-energy/zcem/integrated#aggregation"
-                    },
-                    "integrated#dataset": {
-                        "nicename": "ZCB Dataset",
-                        "url": "sustainable-energy/zcem/integrated#dataset"
-                    },
-                    "integrated#python": {
-                        "nicename": "Python models",
-                        "url": "sustainable-energy/zcem/integrated#python"
-                    }
-                }
-            },
-            "building-energy-model": {
-                "nicename": "Building Energy Modelling",
-                "pages": {
-                    "readme": {
-                        "nicename": "1. Introduction",
-                        "url": "sustainable-energy/building-energy-model/readme"
-                    },
-                    "fabricheatloss": {
-                        "nicename": "2. Fabric heat loss",
-                        "url": "sustainable-energy/building-energy-model/fabricheatloss"
-                    },
-                    "ventilation": {
-                        "nicename": "3. Ventilation heat loss",
-                        "url": "sustainable-energy/building-energy-model/ventilation"
-                    },
-                    "SimpleJSModel": {
-                        "nicename": "4. A simple building energy model",
-                        "url": "sustainable-energy/building-energy-model/SimpleJSModel"
-                    },
-                    "ElementLibrary": {
-                        "nicename": "Fabric Element Library",
-                        "url": "sustainable-energy/building-energy-model/ElementLibrary"
-                    },
-                    "radiatormodel": {
-                        "nicename": "Basic radiator model",
-                        "url": "sustainable-energy/building-energy-model/radiatormodel"
-                    },
-                    "heatpumpmodel": {
-                        "nicename": "Basic heatpump model",
-                        "url": "sustainable-energy/building-energy-model/heatpumpmodel"
-                    },
-                    "dynamicmodel": {
-                        "nicename": "Dynamic building model",
-                        "url": "sustainable-energy/building-energy-model/dynamicmodel"
-                    },
-                    "history": {
-                        "nicename": "History",
-                        "url": "sustainable-energy/building-energy-model/history"
-                    },
-                    "modelexamples": {
-                        "nicename": "Model examples",
-                        "url": "sustainable-energy/building-energy-model/modelexamples"
-                    },
-                    "Cylinder-heat-flux": {
-                        "nicename": "Cylinder heat flux",
-                        "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux"
-                    },
-                    "ESPR": {
-                        "nicename": "ESPR",
-                        "url": "sustainable-energy/building-energy-model/ESPR"
-                    }
-                }
-            },
-            "tools": {
-                "nicename": "Tools",
-                "pages": {
-                    "electricity-audit-and-savings-case-study": {
-                        "nicename": "Electricity audit and savings case study",
-                        "url": "sustainable-energy/tools/electricity-audit-and-savings-case-study"
-                    }
-                }
-            }
-        }
-
     },
     "tools": {
         "nicename": "Tools",

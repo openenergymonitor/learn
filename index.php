@@ -25,13 +25,12 @@ $format = "html";
 $content = "Sorry page not found";
 
 $filename_parts = explode(".",$q);
-
-if (count($filename_parts)==2)
-    $doc_ext = $filename_parts[count($filename_parts)-1];
-    
+   
 if (count($filename_parts)==1) {
     if (file_exists("view/$q.html")) { $doc_ext = "html"; $q = "$q.html"; } 
     if (file_exists("view/$q.md")) { $doc_ext = "md"; $q = "$q.md"; }
+} else {
+    $doc_ext = $filename_parts[count($filename_parts)-1];
 }
 
 if (file_exists("view/".$q)) {
