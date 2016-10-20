@@ -221,6 +221,52 @@
                         "url": "electricity-monitoring/timeseries/Write-load-investigation"
                     }
                 }
+            },
+            "emoncms-internals": {
+                "nicename": "Emoncms Internals",
+                "pages": {
+                    "architecture": {
+                        "nicename": "Architecture",
+                        "url": "electricity-monitoring/emoncms-internals/architecture"
+                    },
+                    "developing_new_module": {
+                        "nicename": "Developing a new module",
+                        "url": "electricity-monitoring/emoncms-internals/developing-a-new-module"
+                    },
+                    "Global variables in EmonCMS": {
+                        "nicename": "Global variables in Emoncms",
+                        "url": "electricity-monitoring/emoncms-internals/global-variables"
+                    },
+                    "developinputproc": {
+                        "nicename": "Input Processing",
+                        "url": "electricity-monitoring/emoncms-internals/input-processing"
+                    }
+                }
+            },
+            "other-software": {
+                "nicename": "Other Software",
+                "pages": {
+                    "AndroidAppPart1": {
+                        "nicename": "Android App Part 1",
+                        "url": "electricity-monitoring/other-software/AndroidAppPart1"
+                    },
+                    "AndroidAppPart2": {
+                        "nicename": "Android App Part 2",
+                        "url": "electricity-monitoring/other-software/AndroidAppPart2"
+                    },
+                    "DrawingABarChart": {
+                        "nicename": "Drawing A Bar Chart",
+                        "url": "electricity-monitoring/other-software/DrawingABarChart"
+                    },
+                    "graphing-in-kst": {
+                        "nicename": "Graphing in kst",
+                        "url": "electricity-monitoring/other-software/graphing-in-kst"
+                    },
+                    "visampler2": {
+                        "nicename": "VIsampler 2.0",
+                        "url": "electricity-monitoring/other-software/visampler2"
+                    }
+                }
             }
         }
     },
@@ -377,181 +423,6 @@
             }
         }
 
-    },
-
-    "tools": {
-        "nicename": "Tools",
-        "chapters": {
-            "kst": {
-                "nicename": "Kst",
-                "pages": {
-                    "graphing-in-kst": {
-                        "nicename": "Graphing in kst",
-                        "url": "tools/kst/graphing-in-kst"
-                    }
-                }
-            },
-            "visampler": {
-                "nicename": "Visampler",
-                "pages": {
-                    "visampler2": {
-                        "nicename": "VIsampler 2.0",
-                        "url": "tools/visampler/visampler2"
-                    }
-                }
-            }
-        }
-    },
-    "unsorted": {
-        "nicename": "Unsorted",
-        "chapters": {
-            "AndroidApp": {
-                "nicename": "AndroidApp",
-                "pages": {
-                    "AndroidAppPart1": {
-                        "nicename": "AndroidAppPart1",
-                        "url": "unsorted/AndroidApp/AndroidAppPart1"
-                    },
-                    "AndroidAppPart2": {
-                        "nicename": "AndroidAppPart2",
-                        "url": "unsorted/AndroidApp/AndroidAppPart2"
-                    }
-                }
-            },
-            "Arduino": {
-                "nicename": "Arduino",
-                "pages": {
-                    "Installing-the-Arduino-IDE-Windows-8.1": {
-                        "nicename": "Installing the Arduino IDE Windows 8.1",
-                        "url": "unsorted/Arduino/Installing-the-Arduino-IDE-Windows-8.1"
-                    },
-                    "installing-arduino-libraries": {
-                        "nicename": "Installing arduino libraries",
-                        "url": "unsorted/Arduino/installing-arduino-libraries"
-                    },
-                    "installing-libraries-and-firmware-using-git-on-ubuntu-linux": {
-                        "nicename": "Installing libraries and firmware using git on ubuntu linux",
-                        "url": "unsorted/Arduino/installing-libraries-and-firmware-using-git-on-ubuntu-linux"
-                    },
-                    "setting-up-the-arduino-environment": {
-                        "nicename": "Setting up the arduino environment",
-                        "url": "unsorted/Arduino/setting-up-the-arduino-environment"
-                    },
-                    "uploading-arduino-firmware": {
-                        "nicename": "Uploading arduino firmware",
-                        "url": "unsorted/Arduino/uploading-arduino-firmware"
-                    }
-                }
-            },
-            "DrawingABarChart": {
-                "nicename": "DrawingABarChart",
-                "pages": {
-                    "DrawingABarChart": {
-                        "nicename": "DrawingABarChart",
-                        "url": "unsorted/DrawingABarChart/DrawingABarChart"
-                    }
-                }
-            },
-            "Microcontrollers": {
-                "nicename": "Microcontrollers",
-                "pages": {
-                    "attiny": {
-                        "nicename": "Attiny",
-                        "url": "unsorted/Microcontrollers/attiny"
-                    },
-                    "avrisp": {
-                        "nicename": "Avrisp",
-                        "url": "unsorted/Microcontrollers/avrisp"
-                    }
-                }
-            },
-            "Unsorted": {
-                "nicename": "Unsorted",
-                "pages": {
-                    "Digital-pin-reference": {
-                        "nicename": "Digital pin reference",
-                        "url": "unsorted/Unsorted/Digital-pin-reference"
-                    },
-                    "EmonTx-measurement-and-power": {
-                        "nicename": "EmonTx measurement and power",
-                        "url": "unsorted/Unsorted/EmonTx-measurement-and-power"
-                    },
-                    "OEM-Measurement-Applications": {
-                        "nicename": "OEM Measurement Applications",
-                        "url": "unsorted/Unsorted/OEM-Measurement-Applications"
-                    },
-                    "Pin-reference": {
-                        "nicename": "Pin reference",
-                        "url": "unsorted/Unsorted/Pin-reference"
-                    },
-                    "STM32-Nucleo": {
-                        "nicename": "STM32 Nucleo",
-                        "url": "unsorted/Unsorted/STM32-Nucleo"
-                    },
-                    "VoltageSynthesis": {
-                        "nicename": "VoltageSynthesis",
-                        "url": "unsorted/Unsorted/VoltageSynthesis"
-                    },
-                    "acac-buffered-voltage-bias": {
-                        "nicename": "Acac buffered voltage bias",
-                        "url": "unsorted/Unsorted/acac-buffered-voltage-bias"
-                    },
-                    "acac-component-tolerances": {
-                        "nicename": "Acac component tolerances",
-                        "url": "unsorted/Unsorted/acac-component-tolerances"
-                    },
-                    "alternative-voltage-measurement": {
-                        "nicename": "Alternative voltage measurement",
-                        "url": "unsorted/Unsorted/alternative-voltage-measurement"
-                    },
-                    "appliance-inference": {
-                        "nicename": "Appliance inference",
-                        "url": "unsorted/Unsorted/appliance-inference"
-                    },
-                    "application-notes": {
-                        "nicename": "Application notes",
-                        "url": "unsorted/Unsorted/application-notes"
-                    },
-                    "emontxv3-to-pi-serial": {
-                        "nicename": "Emontxv3 to pi serial",
-                        "url": "unsorted/Unsorted/emontxv3-to-pi-serial"
-                    },
-                    "faq": {
-                        "nicename": "Faq",
-                        "url": "unsorted/Unsorted/faq"
-                    },
-                    "interfacing-with-sma-sunnyboy-pv-inverters-bluetooth": {
-                        "nicename": "Interfacing with sma sunnyboy pv inverters bluetooth",
-                        "url": "unsorted/Unsorted/interfacing-with-sma-sunnyboy-pv-inverters-bluetooth"
-                    },
-                    "labs": {
-                        "nicename": "Labs",
-                        "url": "unsorted/Unsorted/labs"
-                    }
-                }
-            },
-            "emoncms": {
-                "nicename": "Emoncms",
-                "pages": {
-                    "Global variables in EmonCMS": {
-                        "nicename": "Global variables in EmonCMS",
-                        "url": "unsorted/emoncms/Global variables in EmonCMS"
-                    },
-                    "architecture": {
-                        "nicename": "Architecture",
-                        "url": "unsorted/emoncms/architecture"
-                    },
-                    "developing_new_module": {
-                        "nicename": "Developing_new_module",
-                        "url": "unsorted/emoncms/developing_new_module"
-                    },
-                    "developinputproc": {
-                        "nicename": "Developinputproc",
-                        "url": "unsorted/emoncms/developinputproc"
-                    }
-                }
-            }
-        }
     },
     "pv-diversion": {
         "nicename": "PV Diversion",

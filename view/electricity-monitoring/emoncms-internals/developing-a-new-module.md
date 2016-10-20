@@ -1,8 +1,6 @@
 #Developing a new module
 There is not a rule about how to make a new module but several things should be taken into account. The aim of this section is to provide information that can guide the process of developing a new module.
 
-This documentation has been written for EmonCMS v8.4.0, for future versions what is said here may be wrong or incomplete
-
 ##Model-View-Controller (MVC) paradigm
 EmonCMS uses the **Model-View-Controller (MVC)** paradigm where the **Controller** deals with the user/node request using the functionality defined in the **Model** (that works as a kind of library). 
 

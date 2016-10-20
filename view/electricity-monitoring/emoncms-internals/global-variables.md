@@ -5,7 +5,6 @@ global $mysqli, $session;
 ```
 There are many globals available, here we describe the more relevant ones.
 
-This documentation has been written for EmonCMS v8.4.0, for future versions what is said here may be wrong or incomplete
 ##$mysqli
 Object that connects to EmonCMS database. It is an instance of the php class mysqli. You can see how to use it the php documentation: [http://php.net/manual/en/class.mysqli.php](http://php.net/manual/en/class.mysqli.php)
 ##$redis

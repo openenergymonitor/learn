@@ -1,8 +1,4 @@
-## Emoncms design
-
-**Note:** This is a rough first draft. There are still quite a few parts that need fuller explanations, especially in the views and theme section.
-
-This guide is both an explanation of the emoncms framework and a step by step guide to building the core emoncms framework from scratch. This is the recommended place to start if you're interested in learning how emoncms works.
+## Architecture
 
 ### Overview
 
@@ -618,35 +614,11 @@ You should now see a simple list as follows, you may need to create some feeds f
 
 ![text](files/tablejs.png)
 
-## Going from here to whats in the emoncms_framework repository 
 
-The above documentation covers building the core parts of the emoncms framework from scratch and starts with an example of creating a feed list. In this next section we will expand on this adding:
-
-- a database table from schema descriptor builder
-- the user module, user sessions and authentication
-- multi-lingual support using gettext
-- top-bar menu's and a fuller theme
-
-And then some smaller finishing touches 
-
-- a seperate settings.php for site specific settings
-- automatic database check
-- route defaults
-
-With all these parts added we end up with whats in the emoncms_framework repository:
-
-[https://github.com/emoncms/emoncms_framework](https://github.com/emoncms/emoncms_framework)
-
-and from there we are ready to drop in all the other emoncms modules as needed.
-
-... add rest of guide in here...
-
-    
 ### Resources
 
 - [Models in MVC](http://blog.astrumfutura.com/2008/12/the-m-in-mvc-why-models-are-misunderstood-and-unappreciated/)
 - [Twitter bootstrap](http://twitter.github.com/bootstrap/)
 - [jQuery](http://jquery.com)
 - [angularjs.org](http://angularjs.org)
-- [http://www.yearofmoo.com/2012/08/use-angularjs-to-power-your-web-application.html](http://www.yearofmoo.com/2012/08/use-angularjs-to-power-your-web-application.html)
 
