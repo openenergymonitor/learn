@@ -30,29 +30,29 @@
             "ct-sensors": {
                 "nicename": "CT Sensors",
                 "pages": {
-                    "Introduction.php": {
-                        "nicename": "Introduction",
-                        "url": "electricity-monitoring/ct-sensors/Introduction.php"
+                    "introduction": {
+                        "nicename": "introduction",
+                        "url": "electricity-monitoring/ct-sensors/introduction"
                     },
-                    "Installation.php": {
+                    "installation": {
                         "nicename": "Installation",
-                        "url": "electricity-monitoring/ct-sensors/Installation.php"
+                        "url": "electricity-monitoring/ct-sensors/installation"
                     },
-                    "Interface-with-arduino.php": {
+                    "interface-with-arduino": {
                         "nicename": "Interface with arduino",
-                        "url": "electricity-monitoring/ct-sensors/Interface-with-arduino.php"
+                        "url": "electricity-monitoring/ct-sensors/interface-with-arduino"
                     },
                     "how-to-build-an-arduino-energy-monitor-measuring-current-only": {
                         "nicename": "How to build an arduino energy monitor measuring current only",
                         "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only"
                     },
-                    "Measurement-implications-of-ADC-resolution-at-low-current-values.php": {
+                    "measurement-implications-of-adc-resolution-at-low-current-values": {
                         "nicename": "Measurement implications of ADC resolution at low current values",
-                        "url": "electricity-monitoring/ct-sensors/Measurement-implications-of-ADC-resolution-at-low-current-values.php"
+                        "url": "electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values"
                     },
-                    "YHDC-CT-Sensor-report.php": {
+                    "yhdc-ct-sensor-report": {
                         "nicename": "YHDC CT Sensor report",
-                        "url": "electricity-monitoring/ct-sensors/YHDC-CT-Sensor-report.php"
+                        "url": "electricity-monitoring/ct-sensors/yhdc-ct-sensor-report"
                     }
                 }
             },
