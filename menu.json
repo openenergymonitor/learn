@@ -1,4 +1,237 @@
 {
+    "electricity-monitoring": {
+        "nicename": "Electricity Monitoring",
+        "chapters": {
+            "ac-power-theory": {
+                "nicename": "AC Power Theory",
+                "pages": {
+                    "introduction": {
+                        "nicename": "Introduction",
+                        "url": "electricity-monitoring/ac-power-theory/introduction"
+                    },
+                    "arduino-maths": {
+                        "nicename": "Arduino maths",
+                        "url": "electricity-monitoring/ac-power-theory/arduino-maths"
+                    },
+                    "advanced-maths": {
+                        "nicename": "Advanced maths",
+                        "url": "electricity-monitoring/ac-power-theory/advanced-maths"
+                    },
+                    "3-phase-power": {
+                        "nicename": "3 phase power",
+                        "url": "electricity-monitoring/ac-power-theory/3-phase-power"
+                    },
+                    "emonTx-in-north-america": {
+                        "nicename": "EmonTx in north america",
+                        "url": "electricity-monitoring/ac-power-theory/emonTx-in-north-america"
+                    }
+                }
+            },
+            "ct-sensors": {
+                "nicename": "CT Sensors",
+                "pages": {
+                    "introduction": {
+                        "nicename": "introduction",
+                        "url": "electricity-monitoring/ct-sensors/introduction"
+                    },
+                    "installation": {
+                        "nicename": "Installation",
+                        "url": "electricity-monitoring/ct-sensors/installation"
+                    },
+                    "interface-with-arduino": {
+                        "nicename": "Interface with arduino",
+                        "url": "electricity-monitoring/ct-sensors/interface-with-arduino"
+                    },
+                    "how-to-build-an-arduino-energy-monitor-measuring-current-only": {
+                        "nicename": "How to build an arduino energy monitor measuring current only",
+                        "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only"
+                    },
+                    "measurement-implications-of-adc-resolution-at-low-current-values": {
+                        "nicename": "Measurement implications of ADC resolution at low current values",
+                        "url": "electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values"
+                    },
+                    "yhdc-ct-sensor-report": {
+                        "nicename": "YHDC CT Sensor report",
+                        "url": "electricity-monitoring/ct-sensors/yhdc-ct-sensor-report"
+                    }
+                }
+            },
+            "voltage-sensing": {
+                "nicename": "Voltage Sensing",
+                "pages": {
+                    "measuring-voltage-with-an-acac-power-adapter": {
+                        "nicename": "Measuring voltage with an AC-AC<br>power adapter",
+                        "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter"
+                    },
+                    "different-acac-power-adapters": {
+                        "nicename": "Different AC-AC power adapters",
+                        "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters"
+                    },
+                    "report-idealpower-9v-acac-adaptor": {
+                        "nicename": "Report IdealPower 9V AC-AC adaptor",
+                        "url": "electricity-monitoring/voltage-sensing/report-idealpower-9v-acac-adaptor"
+                    },
+                    "report-mascot-9v-acac-adaptor": {
+                        "nicename": "Report mascot 9v AC-AC adaptor",
+                        "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor"
+                    }
+                }
+            },
+            "ctac": {
+                "nicename": "Current & Voltage",
+                "pages": {
+                    "calibration": {
+                        "nicename": "Calibration",
+                        "url": "electricity-monitoring/ctac/calibration"
+                    },
+                    "ct-and-ac-power-adaptor-installation-and-calibration-theory": {
+                        "nicename": "Ct and ac power adaptor installation and calibration theory",
+                        "url": "electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory"
+                    },
+                    "digital-filters-for-offset-removal": {
+                        "nicename": "Digital filters for offset removal",
+                        "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal"
+                    },
+                    "emontx-error-sources": {
+                        "nicename": "Emontx error sources",
+                        "url": "electricity-monitoring/ctac/emontx-error-sources"
+                    },
+                    "explanation-of-the-phase-correction-algorithm": {
+                        "nicename": "Explanation of the phase correction algorithm",
+                        "url": "electricity-monitoring/ctac/explanation-of-the-phase-correction-algorithm"
+                    },
+                    "how-good-is-your-multimeter": {
+                        "nicename": "How good is your multimeter",
+                        "url": "electricity-monitoring/ctac/how-good-is-your-multimeter"
+                    },
+                    "how-to-build-an-arduino-energy-monitor": {
+                        "nicename": "How to build an arduino energy monitor",
+                        "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor"
+                    },
+                    "meters": {
+                        "nicename": "Meters",
+                        "url": "electricity-monitoring/ctac/meters"
+                    },
+                    "overload-protection-of-mains-electrical-circuits": {
+                        "nicename": "Overload protection of mains electrical circuits",
+                        "url": "electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits"
+                    },
+                    "sma-webbox-data-extractor": {
+                        "nicename": "SMA webbox data extractor",
+                        "url": "electricity-monitoring/ctac/sma-webbox-data-extractor"
+                    }
+                }
+            },
+            "networking": {
+                "nicename": "Networking",
+                "pages": {
+                    "which-radio-module": {
+                        "nicename": "Which radio module",
+                        "url": "electricity-monitoring/networking/which-radio-module"
+                    },
+                    "rfm12b-wireless": {
+                        "nicename": "Rfm12b wireless",
+                        "url": "electricity-monitoring/networking/rfm12b-wireless"
+                    },
+                    "rfm12b2": {
+                        "nicename": "Rfm12b2",
+                        "url": "electricity-monitoring/networking/rfm12b2"
+                    },
+                    "rfm69cw": {
+                        "nicename": "Rfm69cw",
+                        "url": "electricity-monitoring/networking/rfm69cw"
+                    },
+                    "wifi": {
+                        "nicename": "Wifi",
+                        "url": "electricity-monitoring/networking/wifi"
+                    }
+                }
+            },
+            "pulse-counting": {
+                "nicename": "Pulse Counting",
+                "pages": {
+                    "12-input-pulse-counting": {
+                        "nicename": "12 input pulse counting",
+                        "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting"
+                    },
+                    "accuracy-and-precision": {
+                        "nicename": "Accuracy and precision",
+                        "url": "electricity-monitoring/pulse-counting/accuracy-and-precision"
+                    },
+                    "gas-meter-monitoring": {
+                        "nicename": "Gas meter monitoring",
+                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
+                    },
+                    "interrupt-based-pulse-counter": {
+                        "nicename": "Interrupt based pulse counter",
+                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter"
+                    },
+                    "introduction-to-pulse-counting": {
+                        "nicename": "Introduction to pulse counting",
+                        "url": "electricity-monitoring/pulse-counting/introduction-to-pulse-counting"
+                    },
+                    "opticalpulsesensor": {
+                        "nicename": "Opticalpulsesensor",
+                        "url": "electricity-monitoring/pulse-counting/opticalpulsesensor"
+                    },
+                    "pulse-counting-sleep": {
+                        "nicename": "Pulse counting sleep",
+                        "url": "electricity-monitoring/pulse-counting/pulse-counting-sleep"
+                    },
+                    "testing": {
+                        "nicename": "Testing",
+                        "url": "electricity-monitoring/pulse-counting/testing"
+                    },
+                    "water": {
+                        "nicename": "Water",
+                        "url": "electricity-monitoring/pulse-counting/water"
+                    }
+                }
+            },
+            "temperature": {
+                "nicename": "Temperature",
+                "pages": {
+                    "DS18B20-temperature-sensing-2": {
+                        "nicename": "DS18B20 temperature sensing 2",
+                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2"
+                    },
+                    "DS18B20-temperature-sensing": {
+                        "nicename": "DS18B20 temperature sensing",
+                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing"
+                    },
+                    "rtd-temperature-sensing": {
+                        "nicename": "Rtd temperature sensing",
+                        "url": "electricity-monitoring/temperature/rtd-temperature-sensing"
+                    }
+                }
+            },
+            "timeseries": {
+                "nicename": "Timeseries",
+                "pages": {
+                    "History": {
+                        "nicename": "Timeseries storage history in emoncms",
+                        "url": "electricity-monitoring/timeseries/History"
+                    },
+                    "Fixed-interval": {
+                        "nicename": "Fixed interval timeseries",
+                        "url": "electricity-monitoring/timeseries/Fixed-interval"
+                    },
+                    "Fixed-interval-averaging": {
+                        "nicename": "Fixed interval with averaging",
+                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging"
+                    },
+                    "Variable-interval": {
+                        "nicename": "Variable interval timeseries",
+                        "url": "electricity-monitoring/timeseries/Variable-interval"
+                    },
+                    "Write-load-investigation": {
+                        "nicename": "Write load investigation",
+                        "url": "electricity-monitoring/timeseries/Write-load-investigation"
+                    }
+                }
+            }
+        }
+    },
     "sustainable-energy": {
         "nicename": "Sustainable Energy",
         "chapters": {
@@ -153,344 +386,7 @@
         }
 
     },
-    "electricity-monitoring": {
-        "nicename": "Electricity Monitoring",
-        "chapters": {
-            "ac-power-theory": {
-                "nicename": "AC Power Theory",
-                "pages": {
-                    "introduction": {
-                        "nicename": "Introduction",
-                        "url": "electricity-monitoring/ac-power-theory/introduction"
-                    },
-                    "arduino-maths": {
-                        "nicename": "Arduino maths",
-                        "url": "electricity-monitoring/ac-power-theory/arduino-maths"
-                    },
-                    "advanced-maths": {
-                        "nicename": "Advanced maths",
-                        "url": "electricity-monitoring/ac-power-theory/advanced-maths"
-                    },
-                    "3-phase-power": {
-                        "nicename": "3 phase power",
-                        "url": "electricity-monitoring/ac-power-theory/3-phase-power"
-                    },
-                    "emonTx-in-north-america": {
-                        "nicename": "EmonTx in north america",
-                        "url": "electricity-monitoring/ac-power-theory/emonTx-in-north-america"
-                    }
-                }
-            },
-            "ct-sensors": {
-                "nicename": "CT Sensors",
-                "pages": {
-                    "introduction": {
-                        "nicename": "introduction",
-                        "url": "electricity-monitoring/ct-sensors/introduction"
-                    },
-                    "installation": {
-                        "nicename": "Installation",
-                        "url": "electricity-monitoring/ct-sensors/installation"
-                    },
-                    "interface-with-arduino": {
-                        "nicename": "Interface with arduino",
-                        "url": "electricity-monitoring/ct-sensors/interface-with-arduino"
-                    },
-                    "how-to-build-an-arduino-energy-monitor-measuring-current-only": {
-                        "nicename": "How to build an arduino energy monitor measuring current only",
-                        "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only"
-                    },
-                    "measurement-implications-of-adc-resolution-at-low-current-values": {
-                        "nicename": "Measurement implications of ADC resolution at low current values",
-                        "url": "electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values"
-                    },
-                    "yhdc-ct-sensor-report": {
-                        "nicename": "YHDC CT Sensor report",
-                        "url": "electricity-monitoring/ct-sensors/yhdc-ct-sensor-report"
-                    }
-                }
-            },
-            "voltage-sensing": {
-                "nicename": "Voltage Sensing",
-                "pages": {
-                    "measuring-voltage-with-an-acac-power-adapter": {
-                        "nicename": "Measuring voltage with an AC-AC<br>power adapter",
-                        "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter"
-                    },
-                    "different-acac-power-adapters": {
-                        "nicename": "Different AC-AC power adapters",
-                        "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters"
-                    },
-                    "report-idealpower-9v-acac-adaptor": {
-                        "nicename": "Report IdealPower 9V AC-AC adaptor",
-                        "url": "electricity-monitoring/voltage-sensing/report-idealpower-9v-acac-adaptor"
-                    },
-                    "report-mascot-9v-acac-adaptor": {
-                        "nicename": "Report mascot 9v AC-AC adaptor",
-                        "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor"
-                    }
-                }
-            },
-            "ctac": {
-                "nicename": "Current & Voltage",
-                "pages": {
-                    "calibration": {
-                        "nicename": "Calibration",
-                        "url": "electricity-monitoring/ctac/calibration"
-                    },
-                    "ct-and-ac-power-adaptor-installation-and-calibration-theory": {
-                        "nicename": "Ct and ac power adaptor installation and calibration theory",
-                        "url": "electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory"
-                    },
-                    "digital-filters-for-offset-removal": {
-                        "nicename": "Digital filters for offset removal",
-                        "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal"
-                    },
-                    "emontx-error-sources": {
-                        "nicename": "Emontx error sources",
-                        "url": "electricity-monitoring/ctac/emontx-error-sources"
-                    },
-                    "explanation-of-the-phase-correction-algorithm": {
-                        "nicename": "Explanation of the phase correction algorithm",
-                        "url": "electricity-monitoring/ctac/explanation-of-the-phase-correction-algorithm"
-                    },
-                    "how-good-is-your-multimeter": {
-                        "nicename": "How good is your multimeter",
-                        "url": "electricity-monitoring/ctac/how-good-is-your-multimeter"
-                    },
-                    "how-to-build-an-arduino-energy-monitor": {
-                        "nicename": "How to build an arduino energy monitor",
-                        "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor"
-                    },
-                    "meters": {
-                        "nicename": "Meters",
-                        "url": "electricity-monitoring/ctac/meters"
-                    },
-                    "overload-protection-of-mains-electrical-circuits": {
-                        "nicename": "Overload protection of mains electrical circuits",
-                        "url": "electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits"
-                    },
-                    "sma-webbox-data-extractor": {
-                        "nicename": "SMA webbox data extractor",
-                        "url": "electricity-monitoring/ctac/sma-webbox-data-extractor"
-                    }
-                }
-            },
-            "networking": {
-                "nicename": "Networking",
-                "pages": {
-                    "rfm12b-wireless": {
-                        "nicename": "Rfm12b wireless",
-                        "url": "electricity-monitoring/networking/rfm12b-wireless"
-                    },
-                    "rfm12b2": {
-                        "nicename": "Rfm12b2",
-                        "url": "electricity-monitoring/networking/rfm12b2"
-                    },
-                    "rfm69cw": {
-                        "nicename": "Rfm69cw",
-                        "url": "electricity-monitoring/networking/rfm69cw"
-                    },
-                    "which-radio-module": {
-                        "nicename": "Which radio module",
-                        "url": "electricity-monitoring/networking/which-radio-module"
-                    },
-                    "wifi": {
-                        "nicename": "Wifi",
-                        "url": "electricity-monitoring/networking/wifi"
-                    }
-                }
-            },
-            "pulse-counting": {
-                "nicename": "Pulse Counting",
-                "pages": {
-                    "12-input-pulse-counting": {
-                        "nicename": "12 input pulse counting",
-                        "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting"
-                    },
-                    "accuracy-and-precision": {
-                        "nicename": "Accuracy and precision",
-                        "url": "electricity-monitoring/pulse-counting/accuracy-and-precision"
-                    },
-                    "gas-meter-monitoring": {
-                        "nicename": "Gas meter monitoring",
-                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
-                    },
-                    "interrupt-based-pulse-counter": {
-                        "nicename": "Interrupt based pulse counter",
-                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter"
-                    },
-                    "introduction-to-pulse-counting": {
-                        "nicename": "Introduction to pulse counting",
-                        "url": "electricity-monitoring/pulse-counting/introduction-to-pulse-counting"
-                    },
-                    "opticalpulsesensor": {
-                        "nicename": "Opticalpulsesensor",
-                        "url": "electricity-monitoring/pulse-counting/opticalpulsesensor"
-                    },
-                    "pulse-counting-sleep": {
-                        "nicename": "Pulse counting sleep",
-                        "url": "electricity-monitoring/pulse-counting/pulse-counting-sleep"
-                    },
-                    "testing": {
-                        "nicename": "Testing",
-                        "url": "electricity-monitoring/pulse-counting/testing"
-                    },
-                    "water": {
-                        "nicename": "Water",
-                        "url": "electricity-monitoring/pulse-counting/water"
-                    }
-                }
-            },
-            "temperature": {
-                "nicename": "Temperature",
-                "pages": {
-                    "DS18B20-temperature-sensing-2": {
-                        "nicename": "DS18B20 temperature sensing 2",
-                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2"
-                    },
-                    "DS18B20-temperature-sensing": {
-                        "nicename": "DS18B20 temperature sensing",
-                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing"
-                    },
-                    "rtd-temperature-sensing": {
-                        "nicename": "Rtd temperature sensing",
-                        "url": "electricity-monitoring/temperature/rtd-temperature-sensing"
-                    }
-                }
-            },
-            "timeseries": {
-                "nicename": "Timeseries",
-                "pages": {
-                    "History": {
-                        "nicename": "Timeseries storage history in emoncms",
-                        "url": "electricity-monitoring/timeseries/History"
-                    },
-                    "Fixed-interval": {
-                        "nicename": "Fixed interval timeseries",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval"
-                    },
-                    "Fixed-interval-averaging": {
-                        "nicename": "Fixed interval with averaging",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging"
-                    },
-                    "Variable-interval": {
-                        "nicename": "Variable interval timeseries",
-                        "url": "electricity-monitoring/timeseries/Variable-interval"
-                    },
-                    "Write-load-investigation": {
-                        "nicename": "Write load investigation",
-                        "url": "electricity-monitoring/timeseries/Write-load-investigation"
-                    }
-                }
-            }
-        }
-    },
-    "pv-diversion": {
-        "nicename": "PV Diversion",
-        "chapters": {
-            "Choosing an Energy Diverter": {
-                "nicename": "Choosing An Energy Diverter",
-                "pages": {
 
-                }
-            },
-            "mk2": {
-                "nicename": "MK2 PV Diverter",
-                "pages": {
-                    "intro": {
-                        "nicename": "1. Introduction",
-                        "url": "pv-diversion/mk2/intro"
-                    },
-                    "pvmeasurement": {
-                        "nicename": "2. Measurement of surplus PV",
-                        "url": "pv-diversion/mk2/pvmeasurement"
-                    },
-                    "diversion": {
-                        "nicename": "3. Diversion and Use of surplus PV",
-                        "url": "pv-diversion/mk2/diversion"
-                    },
-                    "switchdev": {
-                        "nicename": "4. Switching High Current Loads (Triac)",
-                        "url": "pv-diversion/mk2/switchdev"
-                    },
-                    "modes": {
-                        "nicename": "5. Mk2 Controller Operating Modes",
-                        "url": "pv-diversion/mk2/modes"
-                    },
-                    "vimeasurement": {
-                        "nicename": "6. Voltage and current measurement",
-                        "url": "pv-diversion/mk2/vimeasurement"
-                    },
-                    "calibration": {
-                        "nicename": "7. Calibration",
-                        "url": "pv-diversion/mk2/calibration"
-                    },
-                    "build": {
-                        "nicename": "8. Building a Mk2 PV Router",
-                        "url": "pv-diversion/mk2/build"
-                    },
-                    "versions": {
-                        "nicename": "9. Software Versions",
-                        "url": "pv-diversion/mk2/versions"
-                    }
-                }
-            },
-            "pll": {
-                "nicename": "PLL Diverter",
-                "pages": {
-                    "pll": {
-                        "nicename": "Contents",
-                        "url": "pv-diversion/pll/pll"
-                    },
-                    "features": {
-                        "nicename": "1. Features",
-                        "url": "pv-diversion/pll/features"
-                    },
-                    "softwaredesign": {
-                        "nicename": "2. Software Design Overview",
-                        "url": "pv-diversion/pll/softwaredesign"
-                    },
-                    "operatingprinciple": {
-                        "nicename": "3. What is a PLL? \u2013 operating principle",
-                        "url": "pv-diversion/pll/operatingprinciple"
-                    },
-                    "adcinterrupts": {
-                        "nicename": "4. The ADC and interrupts",
-                        "url": "pv-diversion/pll/adcinterrupts"
-                    },
-                    "integermaths": {
-                        "nicename": "5. Integer maths",
-                        "url": "pv-diversion/pll/integermaths"
-                    },
-                    "advantagesoveremonlib": {
-                        "nicename": "6. Advantages over emonLib",
-                        "url": "pv-diversion/pll/advantagesoveremonlib"
-                    },
-                    "implementation": {
-                        "nicename": "7. Implementation",
-                        "url": "pv-diversion/pll/implementation"
-                    },
-                    "sketchdetail": {
-                        "nicename": "8. The sketch explained in detail.",
-                        "url": "pv-diversion/pll/sketchdetail"
-                    },
-                    "hardware": {
-                        "nicename": "9. Hardware",
-                        "url": "pv-diversion/pll/hardware"
-                    },
-                    "derivatives": {
-                        "nicename": "10. Derivatives",
-                        "url": "pv-diversion/pll/derivatives"
-                    },
-                    "references": {
-                        "nicename": "11. References",
-                        "url": "pv-diversion/pll/references"
-                    }
-                }
-            }
-        }
-    },
     "tools": {
         "nicename": "Tools",
         "chapters": {
@@ -660,6 +556,111 @@
                     "developinputproc": {
                         "nicename": "Developinputproc",
                         "url": "unsorted/emoncms/developinputproc"
+                    }
+                }
+            }
+        }
+    },
+    "pv-diversion": {
+        "nicename": "PV Diversion",
+        "chapters": {
+            "Choosing an Energy Diverter": {
+                "nicename": "Choosing An Energy Diverter",
+                "pages": {
+
+                }
+            },
+            "mk2": {
+                "nicename": "MK2 PV Diverter",
+                "pages": {
+                    "intro": {
+                        "nicename": "1. Introduction",
+                        "url": "pv-diversion/mk2/intro"
+                    },
+                    "pvmeasurement": {
+                        "nicename": "2. Measurement of surplus PV",
+                        "url": "pv-diversion/mk2/pvmeasurement"
+                    },
+                    "diversion": {
+                        "nicename": "3. Diversion and Use of surplus PV",
+                        "url": "pv-diversion/mk2/diversion"
+                    },
+                    "switchdev": {
+                        "nicename": "4. Switching High Current Loads (Triac)",
+                        "url": "pv-diversion/mk2/switchdev"
+                    },
+                    "modes": {
+                        "nicename": "5. Mk2 Controller Operating Modes",
+                        "url": "pv-diversion/mk2/modes"
+                    },
+                    "vimeasurement": {
+                        "nicename": "6. Voltage and current measurement",
+                        "url": "pv-diversion/mk2/vimeasurement"
+                    },
+                    "calibration": {
+                        "nicename": "7. Calibration",
+                        "url": "pv-diversion/mk2/calibration"
+                    },
+                    "build": {
+                        "nicename": "8. Building a Mk2 PV Router",
+                        "url": "pv-diversion/mk2/build"
+                    },
+                    "versions": {
+                        "nicename": "9. Software Versions",
+                        "url": "pv-diversion/mk2/versions"
+                    }
+                }
+            },
+            "pll": {
+                "nicename": "PLL Diverter",
+                "pages": {
+                    "pll": {
+                        "nicename": "Contents",
+                        "url": "pv-diversion/pll/pll"
+                    },
+                    "features": {
+                        "nicename": "1. Features",
+                        "url": "pv-diversion/pll/features"
+                    },
+                    "softwaredesign": {
+                        "nicename": "2. Software Design Overview",
+                        "url": "pv-diversion/pll/softwaredesign"
+                    },
+                    "operatingprinciple": {
+                        "nicename": "3. What is a PLL? \u2013 operating principle",
+                        "url": "pv-diversion/pll/operatingprinciple"
+                    },
+                    "adcinterrupts": {
+                        "nicename": "4. The ADC and interrupts",
+                        "url": "pv-diversion/pll/adcinterrupts"
+                    },
+                    "integermaths": {
+                        "nicename": "5. Integer maths",
+                        "url": "pv-diversion/pll/integermaths"
+                    },
+                    "advantagesoveremonlib": {
+                        "nicename": "6. Advantages over emonLib",
+                        "url": "pv-diversion/pll/advantagesoveremonlib"
+                    },
+                    "implementation": {
+                        "nicename": "7. Implementation",
+                        "url": "pv-diversion/pll/implementation"
+                    },
+                    "sketchdetail": {
+                        "nicename": "8. The sketch explained in detail.",
+                        "url": "pv-diversion/pll/sketchdetail"
+                    },
+                    "hardware": {
+                        "nicename": "9. Hardware",
+                        "url": "pv-diversion/pll/hardware"
+                    },
+                    "derivatives": {
+                        "nicename": "10. Derivatives",
+                        "url": "pv-diversion/pll/derivatives"
+                    },
+                    "references": {
+                        "nicename": "11. References",
+                        "url": "pv-diversion/pll/references"
                     }
                 }
             }
