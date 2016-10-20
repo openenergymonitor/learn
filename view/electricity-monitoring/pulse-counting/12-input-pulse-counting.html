@@ -1,14 +1,12 @@
 <h2>Build a 12 input pulse counter - multiple input pulse counting</h2>
 
-<p><em>Last Update 3 November&nbsp;</em><em>- by Trystan Lea</em></p>
-
 <p><img alt="" height="328" src="files/pulseimg.jpg" width="350" /></p>
 
 <p><em>Pulse counting shield: includes a dedicated barebones Arduino and pull down resistors (detailed below)</em></p>
 
 <h3>How it works</h3>
 
-<p>We can&#39;t use the interrupt method to measure 12 pulse inputs as there are only 2 interrupts on the Arduino. Instead, we need to sample very fast,ff and as continuously as possible in order to catch every pulse and measure the pulse rate accurately. To get best performance we need to:</p>
+<p>We can&#39;t use the interrupt method to measure 12 pulse inputs as there are only 2 interrupts on the Arduino. Instead, we need to sample very fast and as continuously as possible in order to catch every pulse and measure the pulse rate accurately. To get best performance we need to:</p>
 
 <ol>
 	<li>Read the digital input pins using fast low level digital input register commands</li>
@@ -18,7 +16,7 @@
 
 <p><strong>Low level digital input registers</strong></p>
 
-<p>In version one I used digitalRead to read the state of the digital inputs and I also used the pulse counting Arduino to do other things like sending data via Ethernet. I started to do some accuracy tests, it quickly became apparent the more inputs I read, the worse the accuracy became. The accuracy deteriorated quite rapidly!&nbsp;</p>
+<p>When first prototyping the multiple input pulse counter we used the standard Arduino digitalRead to read the state of the digital inputs and we also used the pulse counting Arduino to do other things like sending data via Ethernet. After doing some accuracy tests it quickly became apparent the more inputs we read, the worse the accuracy became. The accuracy deteriorated quite rapidly.</p>
 
 <p>Luckily, we can read digital Inputs much faster using direct port manipulation. It&#39;s possible to read a register of 8 digital inputs in one command, although it actually drops to 6 inputs per register due to the use of 2 for serial communication ( 0 and 1) and for the clock crystal (14 and 15).</p>
 
@@ -28,11 +26,11 @@
 
 <p><strong>Dedicated Pulse Counting Arduino</strong></p>
 
-<p>The Arduino used for pulse counting needs to be dedicated to the task. As I mentioned above, I used the same arduino for Ethernet data sending to start with. The problem is Ethernet data sending can take from&nbsp;26 to 1700+ ms, and any pulses occurring during this time, are lost. For accurate results, keep the pulse counting Arduino dedicated.</p>
+<p>The Arduino used for pulse counting needs to be dedicated to the task. As mentioned above, the first protoype used the same arduino for Ethernet data. The problem is that Ethernet data sending can take from&nbsp;26 to 1700+ ms, and any pulses occurring during this time, are lost. For accurate results, keep the pulse counting Arduino needs to be dedicated.</p>
 
 <p>This means that a 12 input pulse counting Arduino needs to be seen as an external input module. We need a second Arduino for doing other tasks like Ethernet data sending, etc.</p>
 
-<p>I decided to opt for a configuration where the pulse counting Arduino displays its pulse times in microseconds and pulse counts of all 12 inputs via 115200 bps serial, once per second. This string is sent to, and decoded by, the main Arduino, then sent via Ethernet, to a web-conected energy display:</p>
+<p>We decided to opt for a configuration where the pulse counting Arduino displays its pulse times in microseconds and pulse counts of all 12 inputs via 115200 bps serial, once per second. This string is sent to, and decoded by, the main Arduino, then sent via Ethernet, to a web-conected energy display:</p>
 
 <p><img alt="" height="218" src="files/12pulse.png" width="400" /></p>
 
@@ -72,16 +70,13 @@
 
 <p><strong>Download:</strong> <a href="files/pulseDecoderEthernet.zip">PulseDecoderEthernet.zip</a></p>
 
-<p>To read more about the web side of things, have a look here: <a href="https://openenergymonitor.org/emon/node/88">Energy Monitor + Simple Web Based graphing</a></p>
-
 <p><strong>Bench Testing - Pulse Generator</strong></p>
 
-<p>With the pulse counter build, you may want to test all 12 inputs for proper operation. Glyn Hudson has written documentation and a sketch to do that:&nbsp;<a href="https://openenergymonitor.org/emon/node/97">Bench testing with a 12 output pulse generator</a></p>
+<p>With the pulse counter build, you may want to test all 12 inputs for proper operation. Glyn Hudson has written documentation and a sketch to do that:&nbsp;<a href="12-input-pulse-counting-testing">Bench testing with a 12 output pulse generator</a></p>
 
 <h3>More useful pages:</h3>
 
-<h3><strong><a href="https://openenergymonitor.org/emon/buildingblocks/introduction-to-pulse-counting">Introduction</a></strong></h3>
+<h3><strong><a href="introduction-to-pulse-counting">Introduction</a></strong></h3>
 
-<h3><strong><a href="https://openenergymonitor.org/emon/buildingblocks/12-input-pulse-counting/accuracy-and-precision">Accuracy and Precision</a></strong></h3>
+<h3><strong><a href="accuracy-and-precision">Accuracy and Precision</a></strong></h3>
 
-<h3><strong><a href="https://openenergymonitor.org/emon/buildingblocks/12-input-pulse-counting/revision-log">Revision log and further development questions</a></strong></h3>

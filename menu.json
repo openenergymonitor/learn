@@ -150,40 +150,32 @@
             "pulse-counting": {
                 "nicename": "Pulse Counting",
                 "pages": {
-                    "12-input-pulse-counting": {
-                        "nicename": "12 input pulse counting",
-                        "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting"
-                    },
-                    "accuracy-and-precision": {
-                        "nicename": "Accuracy and precision",
-                        "url": "electricity-monitoring/pulse-counting/accuracy-and-precision"
-                    },
-                    "gas-meter-monitoring": {
-                        "nicename": "Gas meter monitoring",
-                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
-                    },
-                    "interrupt-based-pulse-counter": {
-                        "nicename": "Interrupt based pulse counter",
-                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter"
-                    },
                     "introduction-to-pulse-counting": {
                         "nicename": "Introduction to pulse counting",
                         "url": "electricity-monitoring/pulse-counting/introduction-to-pulse-counting"
                     },
                     "opticalpulsesensor": {
-                        "nicename": "Opticalpulsesensor",
+                        "nicename": "Optical Pulse Sensor",
                         "url": "electricity-monitoring/pulse-counting/opticalpulsesensor"
                     },
-                    "pulse-counting-sleep": {
-                        "nicename": "Pulse counting sleep",
-                        "url": "electricity-monitoring/pulse-counting/pulse-counting-sleep"
+                    "interrupt-based-pulse-counter": {
+                        "nicename": "Interrupt based pulse counter",
+                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter"
                     },
-                    "testing": {
-                        "nicename": "Testing",
-                        "url": "electricity-monitoring/pulse-counting/testing"
+                    "interrupt-based-pulse-counter-sleep": {
+                        "nicename": "Interrupt based pulse counter<br> + with sleep",
+                        "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter-sleep"
+                    },
+                    "12-input-pulse-counting": {
+                        "nicename": "12 input pulse counting",
+                        "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting"
+                    },
+                    "gas-meter-monitoring": {
+                        "nicename": "Gas Metering",
+                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
                     },
                     "water": {
-                        "nicename": "Water",
+                        "nicename": "Water Metering",
                         "url": "electricity-monitoring/pulse-counting/water"
                     }
                 }
@@ -191,13 +183,13 @@
             "temperature": {
                 "nicename": "Temperature",
                 "pages": {
-                    "DS18B20-temperature-sensing-2": {
-                        "nicename": "DS18B20 temperature sensing 2",
-                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2"
-                    },
                     "DS18B20-temperature-sensing": {
                         "nicename": "DS18B20 temperature sensing",
                         "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing"
+                    },
+                    "DS18B20-temperature-sensing-2": {
+                        "nicename": "DS18B20 temperature sensing 2",
+                        "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2"
                     },
                     "rtd-temperature-sensing": {
                         "nicename": "Rtd temperature sensing",

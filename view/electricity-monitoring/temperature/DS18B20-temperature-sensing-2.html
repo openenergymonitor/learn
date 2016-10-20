@@ -8,7 +8,7 @@
 
 <p>The starting point is the 64-Bit Lasered ROM Code, set out in Fig. 6 in the data sheet:</p>
 
-<p><img alt="Figure 6" src="http://lab.megni.co.uk/oemdocs/files/DS18B20_Fig6.png" /></p>
+<p><img alt="Figure 6" src="files/DS18B20_Fig6.png" /></p>
 
 <p>The lasered ROM code, often called the &ldquo;serial number&rdquo;, actually comprises three parts: the CRC, the serial number itself and the family code. The order of these might seem peculiar, with the CRC occupying the 8 most significant bits, but there is a good reason for this, and for that we need to look in detail at the search algorithm in the iButton book. There, it explains that, when searching the devices on the one-wire bus, the data is sent and read with the least significant bit of the least significant byte or character first; in other words, from right to left in the diagram above. So in fact, the family code is the first element to be read. And this makes sense: if it isn&#39;t a device of the correct family, it can be ignored.</p>
 
