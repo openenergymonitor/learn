@@ -1,4 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+    
 <?php
     global $path, $session;
     $apikey = $session['apikey_read'];
