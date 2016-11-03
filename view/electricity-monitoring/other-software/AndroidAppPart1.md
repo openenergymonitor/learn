@@ -1,5 +1,7 @@
 ## How to build an Energy Monitoring Android App
 
+**2016 Update: [Android Developer Studio](https://developer.android.com/studio/index.html) is now recomended over Eclipse**. 
+
 ![AndroidAppPart1](files/OnPhone.jpg)
 
 1) Start by installing Eclipse with Android SDK
