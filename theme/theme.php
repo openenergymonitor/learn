@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
-    
+<head>    
 <?php
     global $path, $session;
     $apikey = $session['apikey_read'];
@@ -16,14 +16,13 @@
     var apikey = "<?php print $apikey; ?>";
 </script>
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/table.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/sidebar.css" />
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
-
+</head>
 
 <body>
 
@@ -81,7 +80,7 @@
   <div id="bodyfade"></div>
 
 </body>
-
+</html>
 
 <script>
     // Enable sidebar, set body background
