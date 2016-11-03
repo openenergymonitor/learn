@@ -2,6 +2,6 @@
 
 https://learn.openenergymonitor.org
 
-**(in development)*
+**(in development)**
 
 *Previously Building Blocks*
