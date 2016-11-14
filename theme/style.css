@@ -188,6 +188,7 @@ ul {
 
 p {color:#333; font-size:14px}
 h2,h3 {color:#333;}
+h4 {padding:2px 0px 2px 5px;font-size:14px;background-color:#333;color:#ffffff;}
 a { text-decoration:none; }
 
 pre {
