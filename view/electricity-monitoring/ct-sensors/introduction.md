@@ -1,27 +1,45 @@
-## CT sensors - An introduction
+## CT sensors - An Introduction
 
-Often referred to as a current clamp, a CT is in fact, <u>_**not**_</u> a clamp.
+***
+
+Often referred to as a current clamp, a CT is in fact, **not** a clamp.
 
 _These_ are Clamps. On the left are two busbar clamps, on the right, a carpenter's G-clamp:
 
-![](files/bbar_clamp.jpg)![](files/g_clamp.jpg)  
-_Note the tensioning screws._
+<figure>
 
-Pictured below, is an example of a Split-Core CT.
+<img src="files/bbar_clamp.jpg" alt="" />
+<img src="files/g_clamp.jpg" alt="" />
+<figcaption><i>Note the tensioning screws</i></figcaption>
 
-<u>_[YHDC Current Transformer SCT-013-000 test report](https://openenergymonitor.org/emon/buildingblocks/report-yhdc-sct-013-000-current-transformer)_</u>
+</figure>
 
-![](files/current100a.jpg)
+<br>
 
-Here's an example of a _Magnelab_ _**split-core**_ CT
+***
+
+Pictured below, is an example of a **split-core** CT:
+
+<figure>
+<img src="files/current100a.jpg" alt="" />
+<figcaption><i>YHDC Current Transformer SCT-013-000 <a href="https://openenergymonitor.org/emon/buildingblocks/report-yhdc-sct-013-000-current-transformer">test report</a></i></figcaption>
+</figure>
+
+<br>
+
+***
+
+Here's an example of a Magnelab **split-core** CT:
 
 ![](files/SCT-1250_CT.jpg)
 
-In addition to the split-core type, solid core, (aka _**ring core**_) CTs are available.  
-Here's an example of a _Magnelab **solid-core**_ CT  
+***
+
+In addition to the split-core type, **solid-core**, (aka **ring-core**) CTs are available.
+Here's an example of a Magnelab **solid-core** CT:
 ![](files/solid_core_ct.jpg)
 
-**Basics**
+#### Basics
 
 Current transformers (CTs) are sensors that measure alternating current. They are particularly useful for measuring whole building electricity consumption (or generation, for that matter).
 
@@ -43,15 +61,15 @@ The number of secondary turns in the CT pictured above, is 2000, so the current 
 
 Normally, this ratio is written in terms of currents in Amps e.g. 100:5 (for a 5A meter, scaled 0 - 100A). The ratio for the CT above would normally be written as 100:0.05.
 
-**Burden resistor**
+#### Burden resistor
 
 A "current output" CT needs to be used with a burden resistor. The burden resistor completes or closes the CT secondary circuit. The burden value is chosen to provide a voltage proportional to the secondary current. The burden value needs to be low enough to prevent CT core saturation.
 
-**Isolation**
+#### Isolation
 
 The secondary circuit is galvanically isolated [2] from the primary circuit. (i.e. it has no metallic contact)
 
-**Safety**
+#### Safety
 
 In general, a CT must **never** be open-circuited once it's attached to a current-carrying conductor.  
 A CT is potentially dangerous if open-circuited.
@@ -60,13 +78,13 @@ If open-circuited with current flowing in the primary, the transformer secondary
 
 Some CT'shave built-in protection. Some have protective Zener diodes as is the case with the SCT-013-000 recommended for use in this project. If the CT is of the 'voltage output' type, it has a built in burden resistor. Thus, it cannot be open-circuited.
 
-**Installing a CT**
+#### Installing a CT
 
 The primary winding of the CT is the wire carrying the current you want to measure. If you clip your CT around a two or three core cable that has wires carrying the same current but in opposite directions, the magnetic fields created by the wires will cancel each other, and your CT will have no output. [3] & [4]
 
 A split-core CT, especially one that has a ferrite core (such as the ones made by YHDC) should _**never**_ be "clamped" to the cable using any sort of packing material, because the brittle nature of the ferrite core means that it might easily be broken, thus destroying the CT. You should only clamp the CT to the cable or busbar if the housing is specifically designed to do so. Similarly, a ring-core CT should **_never_** be forced onto a cable that is too large to pass freely through the centre. The position and orientation of the cable within the CT aperture does **_not_** affect the output.
 
-**References and further reading**
+#### References and further reading
 
 [Test report: Yhdc SCT-013-000 Current Transformer](https://openenergymonitor.org/emon/buildingblocks/report-yhdc-sct-013-000-current-transformer "Report: Yhdc SCT-013-000 Current Transformer")
 

@@ -2,11 +2,11 @@
 
 ***
 
-This page covers the mathematics behind calculating real power, apparent power, power factor, RMS voltage and RMS current from instantaneous Voltage and Current measurements of single phase AC electricity. Discreet time equations are detailed since the calculations are carried out in the Arduino in the digital domain. 
+This page covers the mathematics behind calculating real power, apparent power, power factor, RMS voltage and RMS current from instantaneous Voltage and Current measurements of single phase AC electricity. Discrete time equations are detailed since the calculations are carried out in the Arduino in the digital domain. 
 
-For a much nicer Arduino code snippet version of this page, see: [AC Power theory - Arduino maths](arduino-maths)
+For a much nicer Arduino code snippet version of this page, see: [AC Power theory - Arduino maths](arduino-maths).
 
-### Real power
+#### Real Power
 
 Real power (also known as active power) is defined as the power used by a device to produce useful work.
 
@@ -36,7 +36,7 @@ N - number of samples.
 
 Real power is calculated simply as the average of N voltage-current products. It can be shown that this method is valid for both sinusoidal and distorted waveforms.
 
-### RMS Voltage and Current Measurement
+#### RMS Voltage and Current Measurement
 
 An RMS value is defined as the square root of the mean value of the squares of the instantaneous values of a periodically varying quantity, averaged over one complete cycle. The discrete time equation for calculating voltage RMS is as follows:
 
@@ -46,7 +46,7 @@ An RMS value is defined as the square root of the mean value of the squares of t
 
 RMS current is calculated using the same equation, substituting voltage samples, u(n), for current samples, i(n).
 
-### Apparent Power and Power Factor
+#### Apparent Power and Power Factor
 
 Apparent power is calculated, as follows:
 

@@ -152,6 +152,22 @@ body {
   background-color:#29abe2;
 }
 
+.warning {
+  padding: 10px;
+}
+
+.warning h4 {
+  padding: 10px;
+  background-color: #7c2525;
+}
+
+.warning p {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #b23535;
+  margin-top: -15px;
+}
+
 .topmenu {
   background-color:#29abe2;
 }

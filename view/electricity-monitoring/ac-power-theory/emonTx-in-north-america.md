@@ -1,16 +1,16 @@
 ## EmonTx - Use in North America
 
-### Introduction
+***
 
 The emonTx range was designed in the UK for the UK market. In order to understand how these units can be used in North America, it might be helpful to give a brief outline of the UK power system and the differences from UK practice.
 
-### Supply Characteristics – UK
+#### Supply Characteristics – UK
 
 In the UK, the final distribution transformer tends to be large. In urban areas, it may be around 1 MVA, and may serve a few hundred homes. It will be three-phase with star-connected secondaries. The star point, which is the neutral, will be earthed. The secondary voltage is nominally 240 V line–neutral, giving 415 V between phases. The frequency is 50 Hz ± 1%. Although large commercial and industrial premises will have a 3-phase supply, many small industrial units will have only a single phase. Anything other than a single phase supply is very rare for domestic consumers.
 
 The normal rating of the domestic supply will be 80 or 100 A. The supply authority will provide a fuse, a neutral link and a meter. From that point on, the wiring is the responsibility of the consumer. The cables between the meter and the “consumer unit” are called “meter tails” and will normally be 16 mm<sup>2</sup> or 25 mm<sup>2</sup> copper, with a maximum diameter over the sheath of about 10.5 mm. High current appliances, such as cookers or showers, will normally be fed by a dedicated circuit breaker, but the socket outlets for general use with portable appliances are almost always fed by a [“ring final sub-circuit”](https://en.wikipedia.org/wiki/Ring_circuit) – comprising essentially a loop of cable starting and ending at a 32 A circuit breaker, which feeds an unlimited number of socket outlets, subject to a maximum floor area served of 100 m<sup>2</sup>. Each appliance plug is fitted with a fuse rated at between 1 A & 13 A. Lighting points are normally daisy-chained and supplied by a 6 A circuit breaker.
 
-### Supply Characteristics – North America
+#### Supply Characteristics – North America
 
 Compared to the UK, the North American final distribution transformer tends to be quite small, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre-tapped, and the centre tap is the neutral, which is also earthed.
 
@@ -21,7 +21,7 @@ The voltage tolerance is ±5% and the imbalance between the two legs has been re
 
 The frequency tolerance is ±0.02 Hz. The effect of the higher frequency will, for most purposes, be marginal. Transformers, both current and voltage, will have slightly different losses and phase errors, and the delay between measuring voltage and current will also be different (in terms of angle), all of which will imply slightly different values for phase calibration. Inside the emonTx, capacitors in the ac side will have a lower impedance. On the firmware side, the sketches will sample at the same rate, but there will be fewer samples per cycle. In theory, this will mean the highest harmonic number that can be measured is lower, but in practice, the energy that will be missed will be insignificant. The major exceptions are the monitoring sketches that employ the phase locked loop (PLL) principle. These require adjustment to the timing in order to lock to the higher frequency. (That adjustment might be by changing a value in the sketch, or there might be a separate version for each frequency.)
 
-### Measuring Whole-house Power
+#### Measuring Whole-house Power
 
 Because there are three wires (discounting the protective earth conductor), classical theory dictates that two wattmeters are needed, and for ‘wattmeter’ read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.
 
@@ -62,7 +62,7 @@ Fig 3c: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>2</sub> + 2 × I<sub>3</sub>
 
 Total Power = V × I<sub>CT1</sub>
 
-### Measuring Individual Circuits
+#### Measuring Individual Circuits
 
 Individual circuits may be either 120 V using a connection between one leg and neutral, or they may be 240 V, i.e. connected to both legs.
 
@@ -84,7 +84,7 @@ If the circuit is “mixed” 120 V and 240 V, i.e. the main load is 240 V but t
 
 If the 120 V load cannot be ignored, i.e. the error is unacceptable, the load should be treated as a “whole house” with one of the arrangements of Fig 3 shown in the section above.
 
-### Connecting the Current Transformers
+#### Connecting the Current Transformers
 
 The obvious way to connect the current transformers is to have each connected directly to an input. This arrangement is necessary if, for example, it is desirable or necessary to be able to balance the currents in each leg of the supply. But if only the total power is required, then a single input can be used, releasing the second for another circuit.
 
@@ -117,7 +117,7 @@ current coefficient = (total CT primary currents) / (total burden voltage)
 
 This arrangement is suitable for ‘voltage output’ CTs, but the output voltage at rated current should be approximately 0.55 V (0.75 V for the emonTx Shield).
 
-### Suitable Current Transformers
+#### Suitable Current Transformers
 
 _Note: The manufacturer adjusts the turns ratio to give the correct output current._  
 The burden & calibration coefficient are calculated for Fig 5a arrangement only.
