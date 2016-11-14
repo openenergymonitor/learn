@@ -341,9 +341,13 @@
                         "nicename": "7. All",
                         "url": "sustainable-energy/zcem/integrated.html#all"
                     },
-                    "integrated.html#national": {
-                        "nicename": "8. National",
-                        "url": "sustainable-energy/zcem/integrated.html#national"
+                    "integrated.html#fullhousehold": {
+                        "nicename": "8. Full Household",
+                        "url": "sustainable-energy/zcem/integrated.html#fullhousehold"
+                    },
+                    "integrated.html#industry": {
+                        "nicename": "9. Full Household & Industry",
+                        "url": "sustainable-energy/zcem/integrated.html#industry"
                     },
                     "integrated.html#aggregation": {
                         "nicename": "Aggregation",
