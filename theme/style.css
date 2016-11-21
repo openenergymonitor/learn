@@ -42,15 +42,15 @@ body {
     /*width: 450px;*/
     width: 100%;
   }
-  
+
   #rightpanel { width:100% }
 }
-    
+
 @media (min-width: 450px) and (max-width: 960px) {
   .container {
     width: 100%;
   }
-  
+
   #rightpanel { width:100% }
 }
 
@@ -83,8 +83,8 @@ body {
 
 .login-box {
   text-align:center;
-  background-color:rgba(255,255,255,0.2); 
-  width:300px; 
+  background-color:rgba(255,255,255,0.2);
+  width:300px;
   margin: 0 auto;
   border-radius: 15px;
   padding:10px;
@@ -95,7 +95,7 @@ body {
 }
 
 #register-open:hover {
-  color:rgba(255,255,255,0.8); 
+  color:rgba(255,255,255,0.8);
 }
 
 #register-cancel {
@@ -103,7 +103,7 @@ body {
 }
 
 #register-cancel:hover {
-  color:rgba(255,255,255,0.8); 
+  color:rgba(255,255,255,0.8);
 }
 
 #alert {
@@ -114,19 +114,19 @@ body {
 
 .icon-alert {
   display: inline-block;
-  width:18px; 
+  width:18px;
   height:18px;
   background-size: contain;
   background-repeat: no-repeat;
   margin-bottom:-3px;
   padding-right:5px;
-  
+
   background-image:url('alert-icon.png');
 }
 
 #config-error {
-  display:none; 
-  background-color:rgba(226,50,50,1.0); 
+  display:none;
+  background-color:rgba(226,50,50,1.0);
   padding:10px;
 }
 
@@ -214,7 +214,7 @@ pre {
 }
 
 ol {
-    color:#333; 
+    color:#333;
     font-size:14px;
     padding-bottom:8px;
 }
@@ -265,4 +265,9 @@ hr {
 border: 0; height: 1px; background: #ccc;
 margin:0px;
 padding:0px;
+}
+
+#3PhaseVideo {
+height:560px;
+width:315px;
 }

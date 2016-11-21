@@ -10,20 +10,20 @@
                         "url": "electricity-monitoring/ac-power-theory/introduction"
                     },
                     "arduino-maths": {
-                        "nicename": "Arduino maths",
+                        "nicename": "Arduino Maths",
                         "url": "electricity-monitoring/ac-power-theory/arduino-maths"
                     },
                     "advanced-maths": {
-                        "nicename": "Advanced maths",
+                        "nicename": "Advanced Maths",
                         "url": "electricity-monitoring/ac-power-theory/advanced-maths"
                     },
                     "3-phase-power": {
-                        "nicename": "3 phase power",
+                        "nicename": "3-Phase Power",
                         "url": "electricity-monitoring/ac-power-theory/3-phase-power"
                     },
                     "emonTx-in-north-america": {
-                        "nicename": "EmonTx in north america",
-                        "url": "electricity-monitoring/ac-power-theory/emonTx-in-north-america"
+                        "nicename": "Use in North America",
+                        "url": "electricity-monitoring/ac-power-theory/use-in-north-america"
                     }
                 }
             },
@@ -31,7 +31,7 @@
                 "nicename": "CT Sensors",
                 "pages": {
                     "introduction": {
-                        "nicename": "introduction",
+                        "nicename": "Introduction",
                         "url": "electricity-monitoring/ct-sensors/introduction"
                     },
                     "installation": {
@@ -39,19 +39,19 @@
                         "url": "electricity-monitoring/ct-sensors/installation"
                     },
                     "interface-with-arduino": {
-                        "nicename": "Interface with arduino",
+                        "nicename": "Interfacing with an Arduino",
                         "url": "electricity-monitoring/ct-sensors/interface-with-arduino"
                     },
                     "how-to-build-an-arduino-energy-monitor-measuring-current-only": {
-                        "nicename": "How to build an arduino energy monitor measuring current only",
+                        "nicename": "How to Build an Arduino Energy Monitor Measuring Current Only",
                         "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only"
                     },
                     "measurement-implications-of-adc-resolution-at-low-current-values": {
-                        "nicename": "Measurement implications of ADC resolution at low current values",
+                        "nicename": "Measurement Implications of ADC Resolution at Low Current Values",
                         "url": "electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values"
                     },
                     "yhdc-ct-sensor-report": {
-                        "nicename": "YHDC CT Sensor report",
+                        "nicename": "YHDC CT Sensor Report",
                         "url": "electricity-monitoring/ct-sensors/yhdc-ct-sensor-report"
                     }
                 }
@@ -60,19 +60,19 @@
                 "nicename": "Voltage Sensing",
                 "pages": {
                     "measuring-voltage-with-an-acac-power-adapter": {
-                        "nicename": "Measuring voltage with an AC-AC<br>power adapter",
+                        "nicename": "Measuring Voltage with an AC-AC<br>Power Adapter",
                         "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter"
                     },
                     "different-acac-power-adapters": {
-                        "nicename": "Different AC-AC power adapters",
+                        "nicename": "Different AC-AC Power Adapters",
                         "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters"
                     },
                     "report-idealpower-9v-acac-adaptor": {
-                        "nicename": "Report IdealPower 9V AC-AC adaptor",
+                        "nicename": "Report: <i>IdealPower</i> &nbsp;9V AC-AC Adapter",
                         "url": "electricity-monitoring/voltage-sensing/report-idealpower-9v-acac-adaptor"
                     },
                     "report-mascot-9v-acac-adaptor": {
-                        "nicename": "Report mascot 9v AC-AC adaptor",
+                        "nicename": "Report: <i>Mascot</i> &nbsp;9v AC-AC Adapter",
                         "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor"
                     }
                 }

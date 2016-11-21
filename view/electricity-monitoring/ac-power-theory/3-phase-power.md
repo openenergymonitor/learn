@@ -1,9 +1,15 @@
 ## 3-Phase Power
 
-<iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/MnH_ifcRJq4" width="560"></iframe>
+***
 
-<meta charset="UTF-8">
+<br>
 
+<div id="3PhaseVideo"></div>
+<script>
+$(window).bind("load", function() {
+  $('#3PhaseVideo').prepend('<iframe src="https://www.youtube.com/embed/MnH_ifcRJq4" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+});
+</script>
 #### History
 
 The first electrical systems generated direct current by means of dynamos. It was soon realised that there were serious limits to the area and the number of customers that could be served, and alternating current took over – which as we all know can be transformed from one voltage to another with minimal loss. Very quickly, (in 1885) Italian Galileo Ferraris realised that two windings set at an angle to each other could produce a rotating magnetic field, something of great help when motion is required, and just two years later the 3-phase alternator appeared.
@@ -90,4 +96,3 @@ The power and other measurements on the first phase (the one we measured the vol
 The principal danger of course, is the higher voltage that exists between lines — around 400 V. The probability that an electric shock resulting from accidental contact would be lethal, is that much higher. For this reason, it is not a good idea to have outlets supplied from different phases in the same room.
 
 There is a less obvious danger from the possibility that one phase may become disconnected, then a 3-phase motor would be likely to suffer damage as it would be running on only one phase. A _<u>linked</u>_ 3-pole or 4-pole circuit breaker (breaking also the neutral), is essential for any such load. Fuses are not a good idea. If one fuse 'blows’ the result is single-phasing.
-
