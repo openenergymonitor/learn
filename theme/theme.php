@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
-<head>    
+<head>
 <?php
     global $path, $session;
     $apikey = $session['apikey_read'];
@@ -10,14 +10,14 @@
     if (isset($_GET['q'])) $q = $_GET['q'];
 
 ?>
-<script> 
-    var path = "<?php print $path; ?>"; 
+<script>
+    var path = "<?php print $path; ?>";
     var session = JSON.parse('<?php echo json_encode($session); ?>');
     var apikey = "<?php print $apikey; ?>";
 </script>
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/table.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/sidebar.css" />
@@ -55,9 +55,9 @@
               {
                   echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
               }
-              echo "</div>"; 
+              echo "</div>";
           }
-          echo "</div>"; 
+          echo "</div>";
       }
       
       ?>
