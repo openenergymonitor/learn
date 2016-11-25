@@ -31,16 +31,28 @@
   </div>
   </div>
 
+  <!----------------------------------------------------------------------------------------
+  // Close Sidebar
+  // -------------------------------------------------------------------------------------->
+
+  <div id="sidebar-close-btn" style="cursor:pointer; top:5px; left:280px; position:fixed; width: 42px; height: 42px;
+  z-index:2; display:none; color:#ffffff; background-color:#333; border-radius:50%;
+  line-height:38px; font-size:30px; font-weight:bold; font-family:ubuntu,sans-serif;">x</div>
+
+  <!----------------------------------------------------------------------------------------
+  // Close Sidebar
+  // -------------------------------------------------------------------------------------->
+
   <div id="mySidenav" class="sidenav">
     <div class="sidenav_inner" style="width:300px">
       <img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/>
       <div style="font-weight:bold; font-size:22px">Open Energy<br>Monitor</div>
       <br><br>
-      
+
       <?php
-      
+
       $menu = json_decode(file_get_contents("menu.json"));
-      
+
       foreach ($menu as $mk1=>$mv1)
       {
           echo "<div class='toplevelhead'><img src='".$path."theme/electricity-icon.png' style='width:24px; padding-right:5px; '>".$mv1->nicename."</div>";
@@ -50,7 +62,7 @@
           {
               echo "<div class='sublevelhead'><img src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
               echo "<div class='sublevel' name='$mk2'><ul>";
-              
+
               foreach ($mv2->pages as $mk3=>$mv3)
               {
                   echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
@@ -59,24 +71,24 @@
           }
           echo "</div>";
       }
-      
+
       ?>
 
     </div>
   </div>
 
-  
-  
+
+
   <div class="container">
     <div class="row">
       <?php echo $content; ?>
     </div>
   </div>
-  
+
   <div id="rightpanel">
       <div id="rightpanel-inner"></div>
   </div>
-  
+
   <div id="bodyfade"></div>
 
 </body>
@@ -87,10 +99,10 @@
     // $(".sidenav").show();
     var fixsidebar = false;
     sidebar_resize();
-    
+
     $("body").css('background-color','WhiteSmoke');
     $(".container").css('background-color','#fff');
-    
+
     $(".sublevel").hide();
     $(".toplevel").hide();
 
@@ -113,7 +125,7 @@
         $(".toplevel").hide();
         if (toplevel.is(":visible")) toplevel.hide(); else toplevel.show();
     });
-    
+
 // ----------------------------------------------------------------------------------------
 // Sidebar
 // ----------------------------------------------------------------------------------------
@@ -124,17 +136,34 @@ $("#sidebar-open").click(function(){
   fixsidebar = true;
   // $(".container").css("background-color","rgba(0,0,0,0.4)");
   $("#bodyfade").show();
+  $("#sidebar-close-btn").css("display","inline");
 });
 
 $("#sidebar-close").click(function(){
     $(".sidenav").css("width","0px");
 });
 
+// ----------------------------------------------------------------------------------------
+// Close Sidebar
+// ----------------------------------------------------------------------------------------
+
+$("#sidebar-close-btn").click(function(){
+    $(".sidenav").css("width","0px");
+    $("#topnav").show();
+    $("#sidebar-close-btn").css("display","none");
+    $("#bodyfade").hide();
+    fixsidebar = false;
+});
+
+// ----------------------------------------------------------------------------------------
+// Close Sidebar
+// ----------------------------------------------------------------------------------------
+
 function sidebar_resize() {
     var width = $(window).width();
     var height = $(window).height();
     $("#sidenav").height(height-41);
-    
+
     if (width<1260) {
         if (fixsidebar===false) {
             $(".sidenav").css("width","0px");
@@ -149,7 +178,7 @@ function sidebar_resize() {
         $(".container").css("margin-left","300px");
         $("#bodyfade").hide();
     }
-    
+
     // Responsive right hand panel
     if (width<960) {
         $("#rightpanel").css("margin","0 auto");
