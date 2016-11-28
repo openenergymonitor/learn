@@ -1,5 +1,7 @@
 ## CT sensors - Interfacing with an Arduino
 
+***
+
 ![](files/ctarduino.jpg)
 
 To connect a CT sensor to an Arduino, the output signal from the CT sensor needs to be conditioned so it meets the input requirements of the Arduino analog inputs, i.e. a **positive voltage between 0V and the ADC reference voltage.**
