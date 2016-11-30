@@ -31,17 +31,17 @@
   </div>
   </div>
 
-  <!----------------------------------------------------------------------------------------
+  <!--
   // Close Sidebar
-  // -------------------------------------------------------------------------------------->
+  // -->
 
-  <div id="sidebar-close-btn" style="cursor:pointer; top:5px; left:280px; position:fixed; width: 42px; height: 42px;
+  <div id="sidebar-close-btn" style="cursor:pointer; top:5px; left:300px; position:fixed; width: 42px; height: 42px;
   z-index:2; display:none; color:#ffffff; background-color:#333; border-radius:50%;
   line-height:38px; font-size:30px; font-weight:bold; font-family:ubuntu,sans-serif;">x</div>
 
-  <!----------------------------------------------------------------------------------------
+  <!--
   // Close Sidebar
-  // -------------------------------------------------------------------------------------->
+  // -->
 
   <div id="mySidenav" class="sidenav">
     <div class="sidenav_inner" style="width:300px">
@@ -60,7 +60,7 @@
 
           foreach ($mv1->chapters as $mk2=>$mv2)
           {
-              echo "<div class='sublevelhead'><img src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
+              echo "<div class='sublevelhead'><img id='openclosemenu' src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
               echo "<div class='sublevel' name='$mk2'><ul>";
 
               foreach ($mv2->pages as $mk3=>$mv3)
@@ -76,8 +76,6 @@
 
     </div>
   </div>
-
-
 
   <div class="container">
     <div class="row">
@@ -147,7 +145,7 @@ $("#sidebar-close").click(function(){
 // Close Sidebar
 // ----------------------------------------------------------------------------------------
 
-$("#sidebar-close-btn").click(function(){
+$("#sidebar-close-btn, #bodyfade").click(function(){
     $(".sidenav").css("width","0px");
     $("#topnav").show();
     $("#sidebar-close-btn").css("display","none");

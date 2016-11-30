@@ -12,12 +12,16 @@ One of the most commonly asked questions is “Why does my emonTx [Arduino] not 
 
 If you put it on a twin-core, or any multi-core cable, as in the right-hand picture, then it will measure the sum of the currents in each of the conductors. In the case of a twin-core or twin core & earth cable, the same current will be flowing in opposite directions and the sum will be zero. This is almost certainly not what you want.
 
+<!-----------------------------Warning----------------------------------------->
+
 <div class="warning">
 
 <h4> Please read the whole of this page, and especially the warnings at the end, before touching the mains cables!</h4>
 <p>Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct (metallic) contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off prior to installing your sensors, and proceeding slowly and with care. If you have any doubts, seek professional assistance.</p>
 
 </div>
+
+<!-----------------------------/Warning---------------------------------------->
 
 #### Does the direction the CT is clipped on the wire, matter?
 
@@ -78,4 +82,3 @@ _**If any part of your wiring looks like this:**_
 then you must get professional advice. Even though the meter shown above was (presumably) installed and sealed by the electricity distribution authority, it is dangerous and _illegal_ because a bare conductor is exposed.
 
 (Exposed copper is visible on both the line and neutral conductors. Just because the worst is the neutral conductor is no excuse. If the neutral is damaged and broken anywhere on the supply side of this meter then that neutral will become live at the full mains voltage if anything is switched on downstream.)
-
