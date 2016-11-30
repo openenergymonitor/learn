@@ -288,6 +288,18 @@
                         "nicename": "3. Snowdonia Energy Study: Data",
                         "url": "sustainable-energy/energy/snowdonia-energy-study-data"
                     },
+                    "greentariffs": {
+                        "nicename": "Green Tariffs and GHG Emissions",
+                        "url": "sustainable-energy/energy/greentariffs"
+                    },
+                    "cars": {
+                        "nicename": "Petrol, Diesel and Electric car<br>energy and carbon performance",
+                        "url": "sustainable-energy/energy/cars"
+                    },
+                    "costs": {
+                        "nicename": "Costs",
+                        "url": "sustainable-energy/energy/costs"
+                    },
                     "energy-use-in-context": {
                         "nicename": "Appendix: Energy use in context",
                         "url": "sustainable-energy/energy/energy-use-in-context"
@@ -338,11 +350,11 @@
                         "url": "sustainable-energy/zcem/integrated.html#electricvehicles"
                     },
                     "integrated.html#all": {
-                        "nicename": "7. All",
+                        "nicename": "7. Household electric only model",
                         "url": "sustainable-energy/zcem/integrated.html#all"
                     },
                     "integrated.html#fullhousehold": {
-                        "nicename": "8. Full Household",
+                        "nicename": "8. Household full energy model",
                         "url": "sustainable-energy/zcem/integrated.html#fullhousehold"
                     },
                     "integrated.html#aggregation": {
