@@ -168,6 +168,14 @@ body {
   margin-top: -15px;
 }
 
+blockquote {
+  font-family: serif;
+  text-align: center;
+  font-style: italic;
+  background-color: #ffff99;
+  padding: 20px;
+}
+
 .topmenu {
   background-color:#29abe2;
 }
@@ -265,9 +273,4 @@ hr {
 border: 0; height: 1px; background: #ccc;
 margin:0px;
 padding:0px;
-}
-
-#3PhaseVideo {
-height:560px;
-width:315px;
 }

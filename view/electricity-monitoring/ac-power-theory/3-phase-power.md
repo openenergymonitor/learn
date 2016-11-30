@@ -2,19 +2,27 @@
 
 ***
 
+<!-----------------------------3PhaseTutorialVideo----------------------------->
+
 <br>
 
-<div id="3PhaseVideo"></div>
+<div id="3PhaseVideo" style="width:100%;height:300px;background-color:#000000;">
+  <div class="loader"></div>
+</div>
+
 <script>
 $(window).bind("load", function() {
-  $('#3PhaseVideo').prepend('<iframe src="https://www.youtube.com/embed/MnH_ifcRJq4" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+  $('#3PhaseVideo').prepend('<iframe src="https://www.youtube.com/embed/MnH_ifcRJq4" width="100%" height="300px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 });
 </script>
+
+<!----------------------------/3PhaseTutorialVideo----------------------------->
+
 #### History
 
 The first electrical systems generated direct current by means of dynamos. It was soon realised that there were serious limits to the area and the number of customers that could be served, and alternating current took over – which as we all know can be transformed from one voltage to another with minimal loss. Very quickly, (in 1885) Italian Galileo Ferraris realised that two windings set at an angle to each other could produce a rotating magnetic field, something of great help when motion is required, and just two years later the 3-phase alternator appeared.
 
-#### What is Three Phase Power?
+#### What is 3-Phase Power?
 
 Three phase power is is comprised of 3 related voltage sources supplying the same load. It is a significant improvement over single or two-phase power. The three voltage or current waves follow each other ⅓ cycle apart, and _(ideally)_ if you sum the currents together at any instant, they balance perfectly. For a mechanical analogy, think of a wheel with three elastic bands fixed to the rim 120° apart, all tied together in the centre. The forces there are perfectly balanced, the knot stays at the centre of the wheel. The bands represent the voltages or currents, and it's easy to see that everything balances perfectly.
 

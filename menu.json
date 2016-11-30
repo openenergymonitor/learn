@@ -21,7 +21,7 @@
                         "nicename": "3-Phase Power",
                         "url": "electricity-monitoring/ac-power-theory/3-phase-power"
                     },
-                    "emonTx-in-north-america": {
+                    "use-in-north-america": {
                         "nicename": "Use in North America",
                         "url": "electricity-monitoring/ac-power-theory/use-in-north-america"
                     }
