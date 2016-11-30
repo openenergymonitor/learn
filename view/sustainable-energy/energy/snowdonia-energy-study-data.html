@@ -89,10 +89,12 @@
   <p><b>Total wood pellets demand:</b> <span id="total_wood_pellets"></span>m3/year</p>
   <br><br>
   <h3>Electricity supply settings</h3><hr>
-  <p><input key="electricity-intensity-2010" type="checkbox" autocomplete="off"/> All electricity at 2010 intensity of 444gCO2/kWh</p>
-  <p><input key="electricity-intensity-2015" type="checkbox" autocomplete="off"/> All electricity at 2015 intensity of 367gCO2/kWh</p>
-  <p><input key="electricity-intensity-g1" type="checkbox" autocomplete="off" checked/> Green electricity at 120% renewable oversupply plus backup natural gas for 20% backup requirement 72gCO2/kWh</p>
-  <p><input key="electricity-intensity-g2" type="checkbox" autocomplete="off"/> Green electricity at 120% renewable oversupply plus backup synthetic methane + biomass for 20% backup requirement 0gCO2/kWh</p>
+  <p><input class="tariffselect" key="electricity-intensity-2010" type="checkbox" autocomplete="off"/> All electricity at 2010 intensity of 444gCO2/kWh</p>
+  <p><input class="tariffselect" key="electricity-intensity-2015" type="checkbox" autocomplete="off"/> All electricity at 2015 intensity of 367gCO2/kWh</p>
+  <p><input class="tariffselect" key="electricity-intensity-g1" type="checkbox" autocomplete="off" checked/> Green tariff emission factor based on<br>who pays for the electricity: 218gCO2/kWh</p>
+  <p><input class="tariffselect" key="electricity-intensity-g2" type="checkbox" autocomplete="off"/> Green tariff emission factor based on<br>25% backup requirement: 90gCO2/kWh</p>
+  <p><input class="tariffselect" key="electricity-intensity-g3" type="checkbox" autocomplete="off"/> Green tariff emission factor based on<br>15% backup requirement: 54gCO2/kWh</p>
+  <p><input class="tariffselect" key="electricity-intensity-g4" type="checkbox" autocomplete="off"/> Fully zero carbon electricity supply: 0gCO2/kWh</p>
   </td>
   </tr>
   </table>
@@ -176,31 +178,45 @@ function preprocess()
     grid_electric_co2 = 0.444;  // Average grid intensity 2010
     grid_electric_primary = 2.652;
     
-    green_electric_co2 = 0.072; // 20% gas backup on wind/solar supply
-    green_electric_primary = 1.4;
+    green_electric_primary = 1.2;
+    
+    green_electric_co2 = 0.000;
     
     if (input['electricity-intensity-2010']) {
         grid_electric_co2 = 0.444;
+        green_electric_co2 = 0.444;
     }
     
     if (input['electricity-intensity-2015']) {
         grid_electric_co2 = 0.367;
+        green_electric_co2 = 0.367;
     }
 
     if (input['electricity-intensity-g1']) {
-        green_electric_co2 = 0.072;
+        green_electric_co2 = 0.218;
+    }
+
+    if (input['electricity-intensity-g2']) {
+        green_electric_co2 = 0.090;
     }
     
-    if (input['electricity-intensity-g2']) {
+    if (input['electricity-intensity-g3']) {
+        green_electric_co2 = 0.054;
+    }
+    
+    if (input['electricity-intensity-g4']) {
         green_electric_co2 = 0.000;
     }
+    
+    console.log(green_electric_co2);
+    console.log(grid_electric_co2);
     
     conversions = {
     
         "Electric":                             {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
         "Electric Cooking":                     {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
-        "Storage Heaters":             {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
-        "Heatpump":                    {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+        "Storage Heaters":                      {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
+        "Heatpump":                             {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
         "Electric Car":                         {baseunit: 'kwh', kwh:1, co2: grid_electric_co2, cost: electricity_unit_cost},
 
         "Wood Logs":                            {baseunit: 'm3', kwh:1380, co2: 0.0, cost: 50, color:1},
@@ -427,43 +443,18 @@ function prepare()
 
 $("input[type=checkbox]").click(function(){
     var key = $(this).attr('key');
-    input[key] = $(this)[0].checked;
+    var state = $(this)[0].checked;
     
-    if (key=="electricity-intensity-2010") {
-        input["action_greenelectric"] = false;
-        $("[key=action_greenelectric]")[0].checked = false;
-        
-        input["electricity-intensity-2015"] = false;
-        $("[key=electricity-intensity-2015]")[0].checked = false;
+    if ($(this).attr("class")=="tariffselect") {
+        $(".tariffselect").each(function(){
+            input[$(this).attr('key')] = false;
+            $(this)[0].checked = false;
+        });
+        $("[key="+key+"]")[0].checked = true;
     }
     
-    if (key=="electricity-intensity-2015") {
-        input["action_greenelectric"] = false;
-        $("[key=action_greenelectric]")[0].checked = false;
-        
-        input["electricity-intensity-2010"] = false;
-        $("[key=electricity-intensity-2010]")[0].checked = false;
-    }
+    input[key] = state;
     
-    if (key=="electricity-intensity-g2") {
-        if (input[key]) {
-            input["electricity-intensity-g1"] = false;
-            $("[key=electricity-intensity-g1]")[0].checked = false;
-        } else {
-            input["electricity-intensity-g1"] = true;
-            $("[key=electricity-intensity-g1]")[0].checked = true;
-        }
-    }
-
-    if (key=="electricity-intensity-g1") {
-        if (input[key]) {
-            input["electricity-intensity-g2"] = false;
-            $("[key=electricity-intensity-g2]")[0].checked = false;
-        } else {
-            input["electricity-intensity-g2"] = true;
-            $("[key=electricity-intensity-g2]")[0].checked = true;
-        }
-    }    
 
     preprocess();
     prepare();
