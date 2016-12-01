@@ -85,7 +85,7 @@ The following example hydro costings are for three exemplar community hydro sche
 |-----------------------|---------------|--------------|---------------|
 | Capacity              | 55kW          | 100kW        | 271KW         |
 | Annual generation     | 182 MWh (38%) | 500 MWh      | 957 MWh       |
-| Total Cost            | £246,126      | £476,499     | £1,100,000    |
+| Construction Cost     | £246,126      | £476,499     | £1,100,000    |
 | Operational Cost      | £279/kW/y     | £199/kW/y    | £100/kW/y *   |
 | Lifespan              | 40-100 years  | 40-100 years | 40-100 years  |
 | Cost £/kW             | £4,475        | £4,765       | £4,059        |
@@ -102,6 +102,8 @@ The following example hydro costings are for three exemplar community hydro sche
 | Bank interest         | £0            | £250         | -             |
 | Capital grant         | £0            | £10,000      | -             |
 | Net Profit            | £323,185      | £457,726     | -             |
+
+It is worth noting that the operational cost sets a lower bound on the unit cost over the longer term periods. For 40 years the operational cost of the Ynni Padarn Peris hydro is 2.5x the construction cost, over 100 years the operational cost is 6.2x the construction cost. For Ynni Padarn Peris the operational cost is 1.7x at 40 years and 4.2x at 100 years. We can see that even if the original construction cost is covered with a 0% interest loan the longer term lower bound on the unit price is not affected that much (10.3p/kWh vs 9.6p/kWh, 5.4p/kWh vs 5.0p/kWh).
 
 Sources:
 
