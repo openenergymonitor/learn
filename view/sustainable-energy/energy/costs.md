@@ -76,3 +76,36 @@ Source: [Cornwall Agri-food Council](http://www.farmingfutures.org.uk/sites/defa
 £4000-7000/kW: [renewableenergyonfarms.co.uk AD Fact sheet](http://www.renewableenergyonfarms.co.uk/sites/rdi/files/140224_ad_fact_sheet_and_faqs_v5.pdf)
 
 **Example gas engine** The [GE Jenbacher type 2](https://powergen.gepower.com/products/reciprocating-engines/jenbacher-type-2.html) is one example gas engine used in conjunction with biogas plants. It achieves an electrical efficiency when powered with biogas of 38.70%. The Jenbacher type 2 supports heat recovery for Combined Heat and Power with a thermal efficiency of 48.50%. Bringing the total efficiency to 87.30%. The cost of reciprocating engines are in the order of £400-600/kW [[1]](http://www.mrwmd.org/archives/2007%20Board%20Meeting/December/MRWMDDec07_8_Purchase_Of_Jenbacher_Memo.pdf) [[2]](http://www.districtenergy.org/assets/pdfs/2015-Annual-Boston/Proceedings/Tuesday/3B.1Koenig.pdf)
+
+### Hydro
+
+The following example hydro costings are for three exemplar community hydro schemes in North Wales, each of which included successful community share issues to raise part of the project costs. The examples also provide an insight into loan and share interest payments which increase the project cost to 150% of the project construction cost alone. The operational cost also includes costs such as land lease payments and other administration costs in addition to the strict O&M costs.
+
+|                  |  Ynni Padarn Peris | Ynni Ogwen   | Anafon Hydro  |
+|-----------------------|---------------|--------------|---------------|
+| Capacity              | 55kW          | 100kW        | 271KW         |
+| Annual generation     | 182 MWh (38%) | 500 MWh      | 957 MWh       |
+| Total Cost            | £246,126      | £476,499     | £1,100,000    |
+| Operational Cost      | £279/kW/y     | £199/kW/y    | £100/kW/y *   |
+| Lifespan              | 40-100 years  | 40-100 years | 40-100 years  |
+| Cost £/kW             | £4,475        | £4,765       | £4,059        |
+| Paid unit price       | 27.4 p/kWh    | 13.4 p/kWh   | 20.96 p/kWh * |
+| Cost unit price 40y (@ 0% interest)   | 13.3 (11.6)   | 7.5 (6.4)    |               |
+| Cost unit price 100y (@ 0% interest)  | 10.3 (9.6)    | 5.4 (5.0)    |               |
+|                       |               |              |               |
+| 20 Year Profit & Loss |               |              |               |
+| Gross revenue         | £997,690      | £1,548,130   | £4,011,744 *  |
+| Operational Costs     | £306,945      | £398,785     | £540,000      |
+| Depreciation          | £246,126      | £476,499     | £1,100,000    |
+| Loan interest         | £69,165       | £156,410     | -             |
+| Shareholder interest  | £52,270       | £68,459      | -             |
+| Bank interest         | £0            | £250         | -             |
+| Capital grant         | £0            | £10,000      | -             |
+| Net Profit            | £323,185      | £457,726     | -             |
+
+Sources:
+
+- [Ynni Padarn Peris share offer](http://ynnipadarnperis.org/wp-content/uploads/2016/02/Share-Offer-Saesneg-low-res.pdf)
+- [Ynni Ogwen share offer](http://www.ynniogwen.cymru/wp-content/uploads/2016/01/2016_02_23.Portffolio-saesneg-terfynnol-terfynnol.pdf)
+- [Anafon Hydro](http://anafonhydro.co.uk/)
+
