@@ -79,7 +79,7 @@ Source: [Cornwall Agri-food Council](http://www.farmingfutures.org.uk/sites/defa
 
 ### Hydro
 
-The following example hydro costings are for three exemplar community hydro schemes in North Wales, each of which included successful community share issues to raise part of the project costs. The examples also provide an insight into loan and share interest payments which increase the project cost to 150% of the project construction cost alone. The operational cost also includes costs such as land lease payments and other administration costs in addition to the strict O&M costs.
+The following example hydro costings are for three exemplar community hydro schemes in North Wales, each of which included successful community share issues to raise part of the project costs. The examples also provide an insight into loan and share interest payments which increase the project cost to 150% of the project construction cost alone. The operational cost also include costs such as land lease payments and other administration costs in addition to the strict O&M costs.
 
 |                  |  Ynni Padarn Peris | Ynni Ogwen   | Anafon Hydro  |
 |-----------------------|---------------|--------------|---------------|
@@ -108,4 +108,6 @@ Sources:
 - [Ynni Padarn Peris share offer](http://ynnipadarnperis.org/wp-content/uploads/2016/02/Share-Offer-Saesneg-low-res.pdf)
 - [Ynni Ogwen share offer](http://www.ynniogwen.cymru/wp-content/uploads/2016/01/2016_02_23.Portffolio-saesneg-terfynnol-terfynnol.pdf)
 - [Anafon Hydro](http://anafonhydro.co.uk/)
+- Anafon Hydro unit price, 171.78 MWh is worth £36,000 equivalent to 20.96 p/kWh
+- Anafon Hydro O&M costs based on figures by renewablesfirst.co.uk of £25k/year for 250 kW
 
