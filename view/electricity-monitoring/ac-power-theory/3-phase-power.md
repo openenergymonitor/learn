@@ -53,7 +53,15 @@ The obvious way to tell if you have a 3-phase supply is to locate your meter and
 
 When dealing with a single-phase mains supply and purely resistive (or nearly so) loads, normal maths (V = I.R, P = V² / R, etc) is adequate. When reactive components (inductors, capacitors) are taken into account, we need a graphical representation to help us visualise the relationship between voltage and current in different parts of the circuit. To do that, we employ a device called a ‘phasor’. A phasor is quite simply a line that has a length, a direction, and rotates. The length represents the magnitude of the voltage or current, the angle represents its relationship to some reference (that we can choose to suit our circumstances). We can illustrate the relationship between the three voltages of a 3-phase electrical supply with three phasors 120° apart. If we connected a 3-channel oscilloscope to the supply we might see something like this:
 
+<!----------------------------------------------------------------------------->
+
+<div class="xaxiswrapper">
+
 <embed alt="animated diagram of 3-phase waveforms" height="250" src="files/phasors.svg" type="image/svg+xml" width="500">
+
+</div>
+
+<!------------------------------------------------------------------------------->
 
 The phasors rotate at the supply frequency. The three phasors are 120° apart, and the three voltage waveforms are 120° apart — 1 complete cycle being 360°.
 
@@ -73,7 +81,15 @@ The combination forms a voltage divider, so the voltage received by the first fa
 
 If the loads are unequal, it starts to get complicated so use our phasor diagram. We’ll assume for clarity in the diagram, that the load on Line 3 is very small, but that the other two loads are very large (much larger than would be permitted in the real world). The phasor diagram looks like this:
 
+<!----------------------------------------------------------------------------->
+
+<div class="xaxiswrapper">
+
 <embed alt="animated diagram of unbalanced 3-phase waveforms" height="250" src="files/phasors-unbalanced.svg" type="image/svg+xml" width="500">
+
+</div>
+
+<!----------------------------------------------------------------------------->
 
 In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red) is reduced by the voltage drop in R<sub>line 1</sub>, at the same time the neutral voltage is raised towards line 1 (the short arrows). A similar thing happens to line 2 (yellow). Line 3 (blue) carries a very small current that we ignore, so its voltage remains the same. The result (b) is the neutral point is moved towards the midpoint between lines 1 & 2 (i.e away from line 3), the voltages between Line 1 and neutral, and between Line 2 and neutral, are much reduced while the voltage between Line 3 and neutral is much increased. There is now a voltage on the neutral conductor, in anti-phase with line 3\. The angles between the three voltages are no longer 120°.
 

@@ -242,37 +242,37 @@ pre::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-.tablewrapper {
+.xaxiswrapper {
     overflow-x: auto;
 }
 
-.tablewrapper::-webkit-scrollbar {
+.xaxiswrapper::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.tablewrapper::-webkit-scrollbar:vertical {
+.xaxiswrapper::-webkit-scrollbar:vertical {
     width: 12px;
 }
 
-.tablewrapper::-webkit-scrollbar:horizontal {
+.xaxiswrapper::-webkit-scrollbar:horizontal {
     height: 12px;
 }
 
-.tablewrapper::-webkit-scrollbar-thumb {
+.xaxiswrapper::-webkit-scrollbar-thumb {
     background-color: #333;
     border-radius: 10px;
     border: 10px solid transparent;
 }
 
-.tablewrapper::-webkit-scrollbar-track {
+.xaxiswrapper::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-.tablewrapper {
-    background-color: #eee;
+.xaxiswrapper {
+    background-color: transparent;
 }
 
-.tablewrapper table th {
+.xaxiswrapper table th {
     background-color: #777;
     color: #ffffff;
     font-weight: bold;

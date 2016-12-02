@@ -88,7 +88,7 @@ CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx S
 
 The CT has a stated accuracy of ±3%. The CT burden resistor is a 1% tolerance component, so the total error should be less than 4%. Therefore, the expected range for the CT calibration for the emonTx is 106.66 – 115.54 (58.18 – 63.02 for the emonTx Shield), provided the internal reference has been calibrated accurately. Because the emonTx V3 firmware does not use the internal reference by default, an additional 1% must be added for the voltage regulator tolerance and so the expected range should be 86.35 – 95.45.
 
-<div class="tablewrapper">
+<div class="xaxiswrapper">
 
 <table>
 
@@ -170,7 +170,7 @@ Datasheet: [Ideal Power 77DE-06-09](files/77DE-06-09.pdf) (EURO Plug type)
 
 Datasheet: [Ideal Power 77DA-10-09](http://files.openenergymonitor.org/77DA-10-09.pdf) (US Plug type)
 
-<div class="tablewrapper">
+<div class="xaxiswrapper">
 
 <table>
 
@@ -238,7 +238,7 @@ EmonTx Shield V2.5</th>
 
 ### Other AC-AC Adapters
 
-<div class="tablewrapper">
+<div class="xaxiswrapper">
 
 <table>
 
