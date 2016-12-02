@@ -97,12 +97,12 @@
     if (q[1]!="") $(".sublevel[name="+q[1]+"]").show();
     if (q[2]!="") $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
 
-    $(".sublevelhead").click(function() {
-        var sublevel = $(this).next();
-        // var sublevel = $(".sublevel[name="+name+"]");
-        $(".sublevel").hide();
-        if (sublevel.is(":visible")) sublevel.hide(); else sublevel.show();
-    });
+//    $(".sublevelhead").click(function() {
+//        var sublevel = $(this).next();
+//        // var sublevel = $(".sublevel[name="+name+"]");
+//        $(".sublevel").hide();
+//        if (sublevel.is(":visible")) sublevel.hide(); else sublevel.show();
+//    });
 
     $(".toplevelhead").click(function() {
         var toplevel = $(this).next();
@@ -110,6 +110,25 @@
         $(".toplevel").hide();
         if (toplevel.is(":visible")) toplevel.hide(); else toplevel.show();
     });
+
+
+//------------open and close sub-menu --------------------------------------------------
+
+    $(".sublevelhead").click(function() {
+    var $this = $(this);
+    if ($this.hasClass("clickedOnce")) {
+      var sublevel = $(this).next();
+      sublevel.hide();
+      $this.removeClass("clickedOnce");
+      $("#openclosemenu").attr('src','<?php echo $path; ?>theme/expand.png');
+    }
+    else {
+        $this.addClass("clickedOnce");
+        var sublevel = $(this).next();
+        sublevel.show();
+        $("#openclosemenu").attr('src','<?php echo $path; ?>theme/book.png');
+    }
+});
 
 // ----------------------------------------------------------------------------------------
 // Sidebar
