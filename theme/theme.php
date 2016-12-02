@@ -8,7 +8,6 @@
 
     $q = "";
     if (isset($_GET['q'])) $q = $_GET['q'];
-
 ?>
 <script>
     var path = "<?php print $path; ?>";

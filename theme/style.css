@@ -14,7 +14,6 @@ body {
     text-align:left;
 }
 
-
 #rightpanel {
     width:100%;
     text-align:left;
@@ -328,7 +327,11 @@ img { max-width:100%; }
 }
 
 hr {
-border: 0; height: 1px; background: #ccc;
-margin:0px;
-padding:0px;
+    border: 0; height: 1px; background: #ccc;
+    margin:0px;
+    padding:0px;
+}
+
+p a {
+      word-wrap: break-word;
 }
