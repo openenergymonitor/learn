@@ -31,18 +31,6 @@
   </div>
   </div>
 
-  <!--
-  // Close Sidebar
-  // -->
-
-  <div id="sidebar-close-btn" style="cursor:pointer; top:5px; left:300px; position:fixed; width: 42px; height: 42px;
-  z-index:2; display:none; color:#ffffff; background-color:#333; border-radius:50%;
-  line-height:38px; font-size:30px; font-weight:bold; font-family:ubuntu,sans-serif;">x</div>
-
-  <!--
-  // Close Sidebar
-  // -->
-
   <div id="mySidenav" class="sidenav">
     <div class="sidenav_inner" style="width:300px">
       <img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/>

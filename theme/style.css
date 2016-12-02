@@ -172,7 +172,7 @@ blockquote {
   font-family: serif;
   text-align: center;
   font-style: italic;
-  background-color: #ffff99;
+  background-color: #eee;
   padding: 20px;
 }
 
@@ -214,9 +214,69 @@ h4 {padding:2px 0px 2px 5px;font-size:14px;background-color:#333;color:#ffffff;}
 a { text-decoration:none; }
 
 pre {
-    border: 1px solid #aaa;
+    border: 1px solid #ffffff;
     background-color:#eee;
     padding:20px;
+    overflow-x: auto;
+    text-align: center;
+}
+
+pre::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+pre::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+pre::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    border: 10px solid transparent;
+}
+
+pre::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.tablewrapper {
+    overflow-x: auto;
+}
+
+.tablewrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.tablewrapper::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+.tablewrapper::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+.tablewrapper::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    border: 10px solid transparent;
+}
+
+.tablewrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.tablewrapper {
+    background-color: #eee;
+}
+
+.tablewrapper table th {
+    background-color: #777;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 ol {

@@ -69,6 +69,16 @@ If you were to connect one of the CT wires to ground and measure the voltage of 
 
 Resistors R1 & R2 in the circuit diagram above are a voltage divider that provides the 2.5 V source (1.65 V for the emonTx). Capacitor C1 has a low _reactance_ - a few hundred ohms - and provides a path for the alternating current to bypass the resistor. A value of 10 μF is suitable.
 
+<!-- The ADC isn't simply an ADC, it has a multiplexer in front of it, which switches between the 6 available input pins. The multiplexer samples the voltage and stores it on the sample & hold capacitor, to be converted by the ADC.
+
+In order to charge that S&H capacitor sufficiently quickly to ensure an accurate reading, the Atmel data sheet tells us that the driving impedance needs to be less than 10 kΩ.
+
+The combination of CT and burden resistor easily satisfies that requirement, but when you add in the Thévenin equivalent of the bias resistors (1.35 V with a source impedance of 235 kΩ for the emonTx), that limit is exceeded by a large margin. Adding the bypass capacitor provides a source to supply the charge that the S&H capacitor needs.
+
+In terms of overcurrent protection, there are protection diodes inside the ADC inputs, which are in turn protected by a 1 kΩ series resistor and parallel transient voltage suppressor diodes (in production versions of the emonTx and emonPi) and yes, by the CT itself saturating. The impedance of the bias network also helps to limit the current in the protection diodes.
+(R.Wall)
+-->
+
 **Choosing a suitable value for resistors R1 & R2:**
 
 Higher resistance lowers quiescent energy consumption.
