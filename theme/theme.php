@@ -47,7 +47,7 @@
 
           foreach ($mv1->chapters as $mk2=>$mv2)
           {
-              echo "<div class='sublevelhead'><img id='openclosemenu' src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
+              echo "<div class='sublevelhead'><img class='openclosemenu' src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
               echo "<div class='sublevel' name='$mk2'><ul>";
 
               foreach ($mv2->pages as $mk3=>$mv3)
@@ -123,9 +123,9 @@
       $this.removeClass("topclickedOnce");
     }
     else {
-        $this.addClass("topclickedOnce");
-        var toplevel = $(this).next();
-        toplevel.show();
+      $this.addClass("topclickedOnce");
+      var toplevel = $(this).next();
+      toplevel.show();
     }
 });
 
@@ -135,15 +135,18 @@
 
     $(".sublevelhead").click(function() {
     var $this = $(this);
+    var image = $this.children("img.openclosemenu");
     if ($this.hasClass("clickedOnce")) {
       var sublevel = $(this).next();
       sublevel.hide();
       $this.removeClass("clickedOnce");
+      image.attr('src','<?php echo $path; ?>theme/expand.png');
     }
     else {
-        $this.addClass("clickedOnce");
-        var sublevel = $(this).next();
-        sublevel.show();
+      $this.addClass("clickedOnce");
+      var sublevel = $(this).next();
+      sublevel.show();
+      image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
 
