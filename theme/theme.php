@@ -104,15 +104,34 @@
 //        if (sublevel.is(":visible")) sublevel.hide(); else sublevel.show();
 //    });
 
+//    $(".toplevelhead").click(function() {
+//        var toplevel = $(this).next();
+//        // var sublevel = $(".sublevel[name="+name+"]");
+//        $(".toplevel").hide();
+//        if (toplevel.is(":visible")) toplevel.hide(); else toplevel.show();
+//    });
+
+// ----------------------------------------------------------------------------------------
+// Open and close top-level menu
+// ----------------------------------------------------------------------------------------
+
     $(".toplevelhead").click(function() {
+    var $this = $(this);
+    if ($this.hasClass("topclickedOnce")) {
+      var toplevel = $(this).next();
+      toplevel.hide();
+      $this.removeClass("topclickedOnce");
+    }
+    else {
+        $this.addClass("topclickedOnce");
         var toplevel = $(this).next();
-        // var sublevel = $(".sublevel[name="+name+"]");
-        $(".toplevel").hide();
-        if (toplevel.is(":visible")) toplevel.hide(); else toplevel.show();
-    });
+        toplevel.show();
+    }
+});
 
-
-//------------open and close sub-menu --------------------------------------------------
+// ----------------------------------------------------------------------------------------
+// Open and close sub-level menu
+// ----------------------------------------------------------------------------------------
 
     $(".sublevelhead").click(function() {
     var $this = $(this);
@@ -120,19 +139,18 @@
       var sublevel = $(this).next();
       sublevel.hide();
       $this.removeClass("clickedOnce");
-      $("#openclosemenu").attr('src','<?php echo $path; ?>theme/expand.png');
     }
     else {
         $this.addClass("clickedOnce");
         var sublevel = $(this).next();
         sublevel.show();
-        $("#openclosemenu").attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
 
 // ----------------------------------------------------------------------------------------
 // Sidebar
 // ----------------------------------------------------------------------------------------
+
 $("#sidebar-open").click(function(){
   $("#topnav").hide();
   // $(".sidenav").css("transition","width 2s");
@@ -159,10 +177,6 @@ $("#sidebar-close-btn, #bodyfade").click(function(){
     fixsidebar = false;
 });
 
-// ----------------------------------------------------------------------------------------
-// Close Sidebar
-// ----------------------------------------------------------------------------------------
-
 function sidebar_resize() {
     var width = $(window).width();
     var height = $(window).height();
@@ -184,6 +198,7 @@ function sidebar_resize() {
     }
 
     // Responsive right hand panel
+    
     if (width<960) {
         $("#rightpanel").css("margin","0 auto");
         $("#rightpanel").css("width","100%");
