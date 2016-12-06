@@ -93,9 +93,9 @@
 
     var q = "<?php echo $q; ?>";
     q = q.split("/");
-    if (q[0]!="") $(".toplevel[name="+q[0]+"]").show();
-    if (q[1]!="") $(".sublevel[name="+q[1]+"]").show();
-    if (q[2]!="") $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
+      if (q[0]!="") $(".toplevel[name="+q[0]+"]");
+      if (q[1]!="") $(".sublevel[name="+q[1]+"]");
+      if (q[2]!="") $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
 
 //    $(".sublevelhead").click(function() {
 //        var sublevel = $(this).next();
@@ -117,12 +117,16 @@
 
     $(".toplevelhead").click(function() {
     var $this = $(this);
+    var sibling = $this.siblings(".toplevel");
+    var siblingHead = $this.siblings(".toplevelhead");
     if ($this.hasClass("topclickedOnce")) {
       var toplevel = $(this).next();
       toplevel.hide();
       $this.removeClass("topclickedOnce");
     }
     else {
+      siblingHead.next().hide();
+      siblingHead.removeClass("topclickedOnce");
       $this.addClass("topclickedOnce");
       var toplevel = $(this).next();
       toplevel.show();
@@ -135,6 +139,8 @@
 
     $(".sublevelhead").click(function() {
     var $this = $(this);
+    var sibling = $this.siblings(".sublevel");
+    var siblingHead = $this.siblings(".sublevelhead");
     var image = $this.children("img.openclosemenu");
     if ($this.hasClass("clickedOnce")) {
       var sublevel = $(this).next();
@@ -143,6 +149,9 @@
       image.attr('src','<?php echo $path; ?>theme/expand.png');
     }
     else {
+      sibling.hide();
+      siblingHead.removeClass("clickedOnce");
+      siblingHead.children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/expand.png');
       $this.addClass("clickedOnce");
       var sublevel = $(this).next();
       sublevel.show();
@@ -201,7 +210,7 @@ function sidebar_resize() {
     }
 
     // Responsive right hand panel
-    
+
     if (width<960) {
         $("#rightpanel").css("margin","0 auto");
         $("#rightpanel").css("width","100%");
