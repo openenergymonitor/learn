@@ -31,10 +31,11 @@
   </div>
 
   <div id="mySidenav" class="sidenav">
+    <div class="titleWrapper">
+      <!--<div><img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/></div>-->
+      <div class='oemLearn'>Learn | <span>Open</span>EnergyMonitor</div>
+    </div>
     <div class="sidenav_inner" style="width:300px">
-      <img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/>
-      <div style="font-weight:bold; font-size:22px">Open Energy<br>Monitor</div>
-      <br><br>
 
       <?php
 
@@ -42,7 +43,7 @@
 
       foreach ($menu as $mk1=>$mv1)
       {
-          echo "<div class='toplevelhead'><img src='".$path."theme/electricity-icon.png' style='width:24px; padding-right:5px; '>".$mv1->nicename."</div>";
+          echo "<div class='toplevelhead'><img class='openclosetop' src='".$path."theme/electricity-icon.png' style='width:24px; padding-right:5px; '>".$mv1->nicename."</div>";
           echo "<div class='toplevel' name='$mk1'>";
 
           foreach ($mv1->chapters as $mk2=>$mv2)
@@ -91,25 +92,24 @@
     $(".sublevel").hide();
     $(".toplevel").hide();
 
-    var q = "<?php echo $q; ?>";
-    q = q.split("/");
-      if (q[0]!="") $(".toplevel[name="+q[0]+"]");
-      if (q[1]!="") $(".sublevel[name="+q[1]+"]");
-      if (q[2]!="") $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
+// ----------------------------------------------------------------------------------------
+// Display current page link in menu
+// ----------------------------------------------------------------------------------------
 
-//    $(".sublevelhead").click(function() {
-//        var sublevel = $(this).next();
-//        // var sublevel = $(".sublevel[name="+name+"]");
-//        $(".sublevel").hide();
-//        if (sublevel.is(":visible")) sublevel.hide(); else sublevel.show();
-//    });
+      var q = "<?php echo $q; ?>";
+      q = q.split("/");
+      if (q != "") {
+        sl = $(".sublevel[name="+q[1]+"]");
+        tl = $(".toplevel[name="+q[0]+"]");
+        tl.show(250);
+        tl.prev().addClass("topclickedOnce");
+        tl.prev().children("img.openclosetop").attr('src','<?php echo $path; ?>theme/book.png');
+        sl.show(250);
+        sl.prev().addClass("clickedOnce");
+        sl.prev().children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/book.png');
+        $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
+       }
 
-//    $(".toplevelhead").click(function() {
-//        var toplevel = $(this).next();
-//        // var sublevel = $(".sublevel[name="+name+"]");
-//        $(".toplevel").hide();
-//        if (toplevel.is(":visible")) toplevel.hide(); else toplevel.show();
-//    });
 
 // ----------------------------------------------------------------------------------------
 // Open and close top-level menu
@@ -119,17 +119,21 @@
     var $this = $(this);
     var sibling = $this.siblings(".toplevel");
     var siblingHead = $this.siblings(".toplevelhead");
+    var image = $this.children("img.openclosetop");
     if ($this.hasClass("topclickedOnce")) {
-      var toplevel = $(this).next();
-      toplevel.hide();
+      var topLevel = $(this).next();
+      topLevel.hide(250);
       $this.removeClass("topclickedOnce");
+      image.attr('src','<?php echo $path; ?>theme/electricity-icon.png');
     }
     else {
-      siblingHead.next().hide();
+      siblingHead.next().hide(250);
       siblingHead.removeClass("topclickedOnce");
+      siblingHead.children("img.openclosetop").attr('src','<?php echo $path; ?>theme/electricity-icon.png');
       $this.addClass("topclickedOnce");
-      var toplevel = $(this).next();
-      toplevel.show();
+      var topLevel = $(this).next();
+      topLevel.show(250);
+      image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
 
@@ -144,17 +148,17 @@
     var image = $this.children("img.openclosemenu");
     if ($this.hasClass("clickedOnce")) {
       var sublevel = $(this).next();
-      sublevel.hide();
+      sublevel.hide(250);
       $this.removeClass("clickedOnce");
       image.attr('src','<?php echo $path; ?>theme/expand.png');
     }
     else {
-      sibling.hide();
+      sibling.hide(250);
       siblingHead.removeClass("clickedOnce");
       siblingHead.children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/expand.png');
       $this.addClass("clickedOnce");
       var sublevel = $(this).next();
-      sublevel.show();
+      sublevel.show(250);
       image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });

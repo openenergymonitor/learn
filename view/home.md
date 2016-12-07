@@ -1,1 +1,1 @@
-<h2>OpenEnergyMonitor Learn</h2>
+<h2>Learn</h2>
