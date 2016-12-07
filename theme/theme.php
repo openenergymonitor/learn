@@ -101,10 +101,10 @@
       if (q != "") {
         sl = $(".sublevel[name="+q[1]+"]");
         tl = $(".toplevel[name="+q[0]+"]");
-        tl.show(250);
+        tl.show();
         tl.prev().addClass("topclickedOnce");
         tl.prev().children("img.openclosetop").attr('src','<?php echo $path; ?>theme/book.png');
-        sl.show(250);
+        sl.show();
         sl.prev().addClass("clickedOnce");
         sl.prev().children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/book.png');
         $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');

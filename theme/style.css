@@ -278,8 +278,7 @@ img { max-width:100%; }
 .menu { padding-bottom:0px; }
 
 #topnav {
-  // background-color: #44b3e2;
-  background-color: #0699fa;
+  background-color: #44b3e2;
   height:42px;
   text-align:left;
 }
@@ -366,6 +365,7 @@ p a {
     width: 100%;
     padding: 20px;
     white-space: nowrap;
+    margin-left: 20px;
 }
 
 .oemLearn span {
