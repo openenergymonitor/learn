@@ -167,9 +167,9 @@ The following example is a rough attempt at calculating a cost for zero carbon e
 
 The Enercon E82 is used for the wind cost at £1033/kW and an O&M cost of £33/kW/year. Assuming perhaps generous low interest finance at 2.5% (simple interest) over 20 years. The actual cost is £1313/kW. Multiplied by 1.5 kW per household is £1970.
 
-For Solar a low domestic installation cost of £1625/kW is assumed, again paid for with low interest finance at 2.5% over 20 years. The actual cost is £2066/kW. Multiplied by 1.5 kW per household is £3099. Solar PV is likely to last at least 30 years, a maintanence cost of £20/kW/y is included to cover inverter maintanence. Large scale solar is likely much cheaper than this as recent Contracts For Difference auctions have resulted in MWh prices that are similar to Onshore wind.
+For Solar a low domestic installation cost of £1625/kW is assumed, again paid for with low interest finance at 2.5% over a service lifetime of 30 years. The actual cost is £311/kW. Multiplied by 1.5 kW per household is £3,467. Solar PV is likely to last at least 30 years, a maintanence cost of £20/kW/y is included to cover inverter maintanence. Large scale solar is likely much cheaper than this as recent Contracts For Difference auctions have resulted in MWh prices that are similar to Onshore wind.
 
-The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 20 years. The actual cost is £763/kW. Multiplied by 1.6 kW per household is £1221. Maintance costs are assumed to be £40/kW/year and plant lifetime 35 years.
+The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 35 years. The actual cost is £901/kW. Multiplied by 1.6 kW per household is £1441. Maintance costs are assumed to be £40/kW/year and plant lifetime 35 years.
 
 Bulk refined biomethane costs of £0.03/kWh are assumed - to be refined.
 
