@@ -1,5 +1,6 @@
 body {
     font-family: Ubuntu, Veranda, sans-serif;
+    font-size: 100%;
     margin:0;
     padding:0;
     text-align:center;
@@ -357,17 +358,53 @@ p a {
     width: 100%;
     border-bottom-style: solid;
     height: 60px;
+    cursor: pointer;
+    background-color: F4F4F4;
+    -webkit-transition: border-bottom-style 1.2s ease-in-out;
+    -moz-transition: border-bottom-style 1.2s ease-in-out;
+    -o-transition: border-bottom-style 1.2s ease-in-out;
+    transition: border-bottom-style 1.2s ease-in-out;
 }
 
-.oemLearn {
+span.learnTitle {
+    padding: 20px;
+}
+
+i {
+   font-size: 30px;
+   color: black;
+}
+
+span.oemLearn {
     box-sizing: border-box;
     position: absolute;
     width: 100%;
-    padding: 20px;
     white-space: nowrap;
     margin-left: 20px;
 }
 
-.oemLearn span {
+span.oemLearn span {
     font-weight: bold;
+}
+
+.oemMenu {
+    box-sizing: border-box;
+}
+
+.oemMenu ul {
+    list-style-type: none;
+    dislay: table;
+    padding: 0;
+    margin: 0;
+    border-bottom-style: solid;
+}
+
+.oemMenu ul li {
+    dislay: table-cell;
+    padding: 0;
+}
+
+.oemMenu ul li a {
+    display: block;
+    padding: 20px 0 20px 0;
 }

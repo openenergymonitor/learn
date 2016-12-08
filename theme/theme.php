@@ -26,15 +26,29 @@
 <body>
 
   <div id="topnav" style="display:none">
-  <img id="sidebar-open" style="height:100%; cursor:pointer" src="<?php echo $path; ?>theme/list-menu-icon.png">
-  </div>
+    <img id="sidebar-open" style="height:100%; cursor:pointer" src="<?php echo $path; ?>theme/list-menu-icon.png">
   </div>
 
   <div id="mySidenav" class="sidenav">
     <div class="titleWrapper">
       <!--<div><img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/></div>-->
-      <div class='oemLearn'>Learn | <span>Open</span>EnergyMonitor</div>
+      <span class='oemLearn learnTitle'>Learn | <span>Open</span>EnergyMonitor</span>
     </div>
+    <div class="oemMenu">
+
+      <ul>
+
+       <li><a href="https://community.openenergymonitor.org/">
+           <span class='oemLearn'>Community | <span>Open</span>EnergyMonitor</span></a></li>
+       <li><a href="https://shop.openenergymonitor.com/">
+           <span class='oemLearn'>Shop | <span>Open</span>EnergyMonitor</span></a></li>
+       <li><a href="https://guide.openenergymonitor.org/">
+           <span class='oemLearn'>User Guide | <span>Open</span>EnergyMonitor</span></a></li>
+
+      </ul>
+
+    </div>
+
     <div class="sidenav_inner" style="width:300px">
 
       <?php
@@ -91,6 +105,22 @@
 
     $(".sublevel").hide();
     $(".toplevel").hide();
+    $(".oemMenu").hide();
+
+
+// ----------------------------------------------------------------------------------------
+// Show/hide OpenenergyMonitor site links
+// ----------------------------------------------------------------------------------------
+
+    $(".titleWrapper").click(function() {
+      $(".oemMenu").toggle("fast");
+      if ($(".titleWrapper").css("border-bottom-style") == ("solid")) {
+       $(".titleWrapper").css("border-bottom-style","none");
+      }
+      else {
+        $(".titleWrapper").css("border-bottom-style","solid");
+     }
+      });
 
 // ----------------------------------------------------------------------------------------
 // Display current page link in menu
@@ -122,17 +152,17 @@
     var image = $this.children("img.openclosetop");
     if ($this.hasClass("topclickedOnce")) {
       var topLevel = $(this).next();
-      topLevel.hide(250);
+      topLevel.hide("fast");
       $this.removeClass("topclickedOnce");
       image.attr('src','<?php echo $path; ?>theme/electricity-icon.png');
     }
     else {
-      siblingHead.next().hide(250);
+      siblingHead.next().hide("fast");
       siblingHead.removeClass("topclickedOnce");
       siblingHead.children("img.openclosetop").attr('src','<?php echo $path; ?>theme/electricity-icon.png');
       $this.addClass("topclickedOnce");
       var topLevel = $(this).next();
-      topLevel.show(250);
+      topLevel.show("fast");
       image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
@@ -148,17 +178,17 @@
     var image = $this.children("img.openclosemenu");
     if ($this.hasClass("clickedOnce")) {
       var sublevel = $(this).next();
-      sublevel.hide(250);
+      sublevel.hide("fast");
       $this.removeClass("clickedOnce");
       image.attr('src','<?php echo $path; ?>theme/expand.png');
     }
     else {
-      sibling.hide(250);
+      sibling.hide("fast");
       siblingHead.removeClass("clickedOnce");
       siblingHead.children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/expand.png');
       $this.addClass("clickedOnce");
       var sublevel = $(this).next();
-      sublevel.show(250);
+      sublevel.show("fast");
       image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
