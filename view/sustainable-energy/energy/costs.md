@@ -28,6 +28,12 @@ The cost of wind generated electricity has fallen significantly over the last 40
 <tr><td style="width:50%"><img src="images/doe_wind_cost.jpg" style="width:100%"><br>Source: <a href="http://sites.psu.edu/math033fa15/2015/10/16/assignment-2-wind-turbines-final-paper">http://sites.psu.edu/math033fa15/2015/10/16/assignment-2-wind-turbines-final-paper</a></td><td><img src="images/globalwindcapacity.png" style="width:100%"><br>Source: <a href="https://en.wikipedia.org/wiki/Wind\_power_by_country">https://en.wikipedia.org/wiki/Wind_power_by_country</a></td></tr>
 </table>
 
+**Wind costs Contracts for Difference**
+
+The 2015 Contracts for Difference auction secured onshore wind generation at a cost of between £79.23-£82.50/MWh, and offshore wind at a cost of between £114.39-119.89/MWh. £80/MWh is equivalent to 8 p/kWh which is almost 3 times the cost price indicated for a 3MW Enercon E82 or roughly twice the cost of the 800-900 kW turbine examples. These strike prices are an indication of the current total cost of delivering wind projects in the UK including financing costs and a profit for the generator.
+
+[Contracts for Difference (CFD) Allocation Round One Outcome ](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/407059/Contracts_for_Difference_-_Auction_Results_-_Official_Statistics.pdf)
+
 ### Solar PV
 
 | Capacity | Estimated Cost (£) | Cost £/kW      | £/kW/y  | Unit Cost @10% |
@@ -55,6 +61,10 @@ As in the case of wind, the cost of solar has also fallen significantly over the
 <tr><td style="width:50%"><img src="images/solarcosthistory.png" style="width:100%"><br>Source: <a href="https://commons.wikimedia.org/wiki/File:Price_history_of_silicon_PV_cells_since_1977.svg
 ">Wikimedia Commons</a></td><td><img src="images/globalsolarcapacity.png" style="width:100%"><br>Source: <a href="https://charlieonenergy.wordpress.com/2015/12/07/solar-and-moores-law">https://charlieonenergy.wordpress.com/2015/12/07/solar-and-moores-law</a></td></tr>
 </table>
+
+**Solar costs Contracts for Difference**
+
+The 2015 Contracts for Difference auction secured large scale solar generation at a cost of between £50-£79.23/MWh. There is some discussion as to the viability of the £50/MWh level however it is notable that the strike price of £80/MWh is achieved which suggests that the installation cost for large scale solar in the UK is significantly below those quoted for 3-4kW of domestic solar as this strike price would need to cover at least project financing in addition to the construction cost.
 
 ### Anaerobic Digestion
 
@@ -230,4 +240,4 @@ If the solar price used here was based on what is possible at scale it is likely
 - 4kW of solar + 27.8 kWh/d biomass (24.3% landarea): 21 p/kWh 
 - 0kW of solar + 50.7 kWh/d biomass (50.7% landarea): 19 p/kWh
 
-Souce £/MWh different technologies: [“Cheap and clean” – new BEIS report confirms that renewable energy will be cheaper than fossil fuels](https://www.regensw.co.uk/news/cheap-and-clean-new-beis-report-confirms-that-renewable-energy-will-be-cheaper-than-fossils-fuels-10-november-2016)
+[“Cheap and clean” – new BEIS report confirms that renewable energy will be cheaper than fossil fuels](https://www.regensw.co.uk/news/cheap-and-clean-new-beis-report-confirms-that-renewable-energy-will-be-cheaper-than-fossils-fuels-10-november-2016)
