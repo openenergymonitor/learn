@@ -113,3 +113,121 @@ Sources:
 - Anafon Hydro unit price, 171.78 MWh is worth £36,000 equivalent to 20.96 p/kWh
 - Anafon Hydro O&M costs based on figures by renewablesfirst.co.uk of £25k/year for 250 kW
 
+### Wood pellets
+
+- Wood pellets: 4.5 p/kWh to 5 p/kWh
+- Wood chips: 3.4 to 3.7 p/kWh
+
+Source: [What is the price of biomass fuel such as pellets or wood chip?](http://info.cat.org.uk/questions/biomass/what-price-biomass-fuel-such-pellets-or-wood-chip)
+
+Source: [Forest Fuels](http://www.forestfuels.co.uk/about-wood-fuel/fuel-price-comparisons)
+
+### CCGT cost
+
+The capital cost of CCGT power plants is around £500-700/kW.
+
+[http://www.timera-energy.com/the-uk-ccgt-new-build-challenge/](http://www.timera-energy.com/the-uk-ccgt-new-build-challenge/)
+
+
+### A simple model of the additional costs of grid electricity
+
+The analysis above has so far focused on the cost of generating electricity but the cost of purchasing electricity from the grid via an electricity supplier is higher than this as further costs are incurred. A typical electricity bill breaks down as following:
+
+Typical cost £476 for 3100 kWh [[REF]](uk-energy-2015)
+
+| | % | Cost | Unit Cost |
+| --- | --- | --- | --- |
+| Wholesale cost | 32% | £152 | 4.9 p/kWh |
+| Operational cost | 16% | £76 | 2.5 p/kWh |
+| Environmental and social policy costs | 20% | £95 | 3.1 p/kWh |
+| Network costs | 27% | £129 | 4.1 p/kWh |
+| VAT | 5% | £24 | 0.8 p/kWh |
+| **Total** | | **£476** | **15.4 p/kWh** |
+
+Source: [Energy UK, Energy bill breakdown 2016-2017](http://www.energy-uk.org.uk/customers/about-your-energy-bill/the-breakdown-of-an-energy-bill.html)
+
+We can see that even if the wholesale cost is 4.9 p/kWh, the cost of the electricity to the customer is three times this cost. Some of the Environmental and social policy costs are subsidies for renewable power generation and so we could re-allocate these to the wholesale cost in order to get a more accurate average cost of generation.
+
+Environmental and social policy costs break down roughly as 57% CERT and CESP, 22% ROCs, 3% FIT’s, 10% warm home discount. Although 22% for ROC’s out of £95 = £21 does not add up to the estimate based on current ROC of 0.29 or £41.15. This could reflect recent changes in policy and the increase in renewable obligation year on year.
+
+Assuming that half of the environmental and social policy costs are subsidies for generation and including this in the wholesale cost would increase the wholesale cost to 6.5 p/kWh.
+
+Network cost reflect the cost of operating and maintaining our transmission and distribution networks. These costs cover the costs of the transmission network via the National Grid and the local DNO’s.
+An estimate of the unit cost of the national grid is calculated [here](https://en.wikipedia.org/wiki/National_Grid_(Great_Britain)) as between 0.2-0.71 p/kWh, which suggests that most of the network charge is for the DNO.
+
+The operational cost depends to a degree on the efficiency of the operations of the energy supplier, this operational cost includes the suppliers profit.
+
+The network cost is to a degree going to reflect the requirements on the network if larger network capacities are needed to deal with large renewable energy generation capacities this part of the cost could increase. 
+
+We could make a rough cost model based on 6.5 p/kWh wholesale, 4.1 p/kWh network, 1.6p/kWh efficiency & social obligation, 2.5 p/kWh operational costs and 0.8p/kWh VAT. Here the final cost of electricity will add 9 p/kWh to whatever the wholesale cost of electricity is.
+
+### A worked example calculation of final cost of zero carbon electricity
+
+The following example is a rough attempt at calculating a cost for zero carbon electricity from renewable sources using many of the costs as outlined above.
+
+The Enercon E82 is used for the wind cost at £1033/kW and an O&M cost of £33/kW/year. Assuming perhaps generous low interest finance at 2.5% (simple interest) over 20 years. The actual cost is £1313/kW. Multiplied by 1.5 kW per household is £1970.
+
+For Solar a low domestic installation cost of £1625/kW is assumed, again paid for with low interest finance at 2.5% over 20 years. The actual cost is £2066/kW. Multiplied by 1.5 kW per household is £3099. Solar PV is likely to last at least 30 years, a maintanence cost of £20/kW/y is included to cover inverter maintanence. Large scale solar is likely much cheaper than this as recent Contracts For Difference auctions have resulted in MWh prices that are similar to Onshore wind.
+
+The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 20 years. The actual cost is £763/kW. Multiplied by 1.6 kW per household is £1221. Maintance costs are assumed to be £40/kW/year and plant lifetime 35 years.
+
+Bulk refined biomethane costs of £0.03/kWh are assumed - to be refined.
+
+The onshore wind, solar and CCGT backup capacities used here are based on the results of the 10 year hourly zero carbon energy model providing 100% of demand from the zero carbon energy sources listed.
+
+|                             | Capacity |       | kWh/d | Capital cost | / year | O&M/year |
+|-----------------------------|----------|-------|-------|--------------|--------|----------|
+| Onshore wind                | 1.5      | kW    | 10.9  | £1,970       | £99    | £50      |
+| Solar PV                    | 1.5      | kW    | 3.2   | £3,467       | £116   | £30      |
+| CCGT                        | 1.6      | kW    | 3.1   | £1,441       | £41    | £64      |
+| Biomass                     |          |       | 10.4  |              |        | £114     |
+| Biomass unit cost           | 0.03     | £/kWh |       |              |        |          |
+| Network cost                |          |       |       |              |        | £129     |
+| Supplier operational cost   |          |       |       |              |        | £76      |
+| Efficiency & Social costs   |          |       |       |              |        | £48      |
+|                             |          |       |       |              |        |          |
+| Total annual capital cost   | £255     |       |       |              |        |          |
+| Total annual O&M            | £510     |       |       |              |        |          |
+| Total annual cost ex VAT    | £766     |       |       |              |        |          |
+| Total annual cost inc VAT   | £804     |       |       |              |        |          |
+|                             |          |       |       |              |        |          |
+| Supplied electric           | 14.5     | kWh/d |       |              |        |          |
+| Final unit cost of electric | £0.152   | /kWh  |       |              |        |          |
+
+The resultant unit cost compares very well with current electricity prices. Key to achieving this price is being able to both source low interest long term finance and to run the generating facilities at near cost. This could perhaps be achieved if owenership of the wind and CCGT backup are vertically integrated as part of the energy supplier. The operational cost, maintance, interest payments of the generating facilities are covered and the supplier still makes a profit as part of their operational cost.
+
+The following worked examples show how the final electricity cost changes at different rates of interest and generator profit:
+
+- **0.0% interest:** £0.138 p/kWh.
+- **2.5% interest:** £0.152 p/kWh.
+- **5.0% interest:** £0.168 p/kWh.
+- **8.0% interest:** £0.191 p/kWh.
+
+Including a generator profit:
+
+- **2.5% interest + 10% profit:** £0.160 p/kWh.
+- **5.0% interest + 10% profit:** £0.178 p/kWh.
+- **2.5% interest + 20% profit:** £0.168 p/kWh.
+- **5.0% interest + 20% profit:** £0.187 p/kWh.
+
+We can also put different supply scenarios through the same cost estimator:
+
+**Reference scenario above**
+
+- 1.5kW onshore wind + 1.5kW solar + 10.4 kWh/d biomass: 15.2p/kWh
+
+**Onshore wind + backup biomass**
+
+- 1.5kW onshore wind + 16.6 kWh/d biomass	13.6p/kWh
+- 2.0kW onshore wind + 11.7 kWh/d biomass	13.6p/kWh
+
+**Solar PV only + backup biomass**
+
+If the solar price used here was based on what is possible at scale it is likely that the cost would be lower given that large scale solar and onshore wind can generate energy at a similar cost per MWh
+
+- 7kW of solar + 23.1 kWh/d biomass (20.2% landarea): 26 p/kWh 
+- 4kW of solar + 2kWh lithium ion + 25.9 kWh/d biomass: 23 p/kWh 
+- 4kW of solar + 27.8 kWh/d biomass (24.3% landarea): 21 p/kWh 
+- 0kW of solar + 50.7 kWh/d biomass (50.7% landarea): 19 p/kWh
+
+Souce £/MWh different technologies: [“Cheap and clean” – new BEIS report confirms that renewable energy will be cheaper than fossil fuels](https://www.regensw.co.uk/news/cheap-and-clean-new-beis-report-confirms-that-renewable-energy-will-be-cheaper-than-fossils-fuels-10-november-2016)
