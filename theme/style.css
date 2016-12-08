@@ -33,7 +33,6 @@ body {
 
 .row {
     padding:20px;
-    // background-color: red;
 }
 
 .title {
@@ -141,11 +140,6 @@ body {
   padding: 10px;
 }
 
-.warning h4 {
-  padding: 10px;
-  background-color: #7c2525;
-}
-
 .warning p {
   padding: 10px;
   color: #ffffff;
@@ -171,7 +165,7 @@ a {
 
 p {color:#333; font-size:14px}
 h2,h3 {color:#333;}
-h4 {padding:2px 0px 2px 5px;font-size:14px;background-color:#333;color:#ffffff;}
+h4 {padding:2px 0 2px 5px;font-size:14px;background-color:#333;color:#ffffff;}
 a { text-decoration:none; }
 
 pre {
@@ -179,11 +173,13 @@ pre {
     background-color:#eee;
     padding:20px;
     overflow-x: auto;
-    text-align: center;
+    text-align: left;
 }
 
 pre::-webkit-scrollbar {
     -webkit-appearance: none;
+    -moz-appearance: none;
+
 }
 
 pre::-webkit-scrollbar:vertical {
@@ -210,6 +206,7 @@ pre::-webkit-scrollbar-track {
 
 .xaxiswrapper::-webkit-scrollbar {
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .xaxiswrapper::-webkit-scrollbar:vertical {
@@ -273,11 +270,11 @@ img { max-width:100%; }
 }
 
 .appendix-section {
-    background-color:rgba(68,179,226,0.1);
+    background-color:#44b3e2;
 }
 
 .appendix-section .title {
-    background-color:rgba(68,179,226,1.0);
+    background-color:#86bdf4;
     padding:10px;
     color:#fff;
     font-size:14px
@@ -336,23 +333,17 @@ p a {
     border-bottom-style: solid;
     height: 60px;
     cursor: pointer;
-    background-color: F4F4F4;
     -webkit-transition: border-bottom-style 1.2s ease-in-out;
     -moz-transition: border-bottom-style 1.2s ease-in-out;
     -o-transition: border-bottom-style 1.2s ease-in-out;
     transition: border-bottom-style 1.2s ease-in-out;
 }
 
-span.learnTitle {
+.learnTitle {
     padding: 20px;
 }
 
-i {
-   font-size: 30px;
-   color: black;
-}
-
-span.oemLearn {
+.oemLearn {
     box-sizing: border-box;
     position: absolute;
     width: 100%;
@@ -360,32 +351,30 @@ span.oemLearn {
     margin-left: 20px;
 }
 
-span.oemLearn span {
+.oemLearn span {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
 .oemMenu {
     box-sizing: border-box;
 }
 
 .oemMenu ul {
     list-style-type: none;
-    dislay: table;
     padding: 0;
     margin: 0;
     border-bottom-style: solid;
 }
 
 .oemMenu ul li {
-    dislay: table-cell;
     padding: 0;
 }
 
 .oemMenu ul li a {
     display: block;
     padding: 20px 0 20px 0;
-=======
+}
+
 @media (max-width: 450px) {
   .container {
     /*width: 450px;*/
@@ -419,5 +408,4 @@ span.oemLearn span {
       max-width: 230px;
       margin-right: 30px;
   }
->>>>>>> fb7c1c4e5550a8d037b13d89ccd086d0295ee04d
 }

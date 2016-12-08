@@ -16,8 +16,7 @@ If you put it on a twin-core, or any multi-core cable, as in the right-hand pict
 
 <div class="warning">
 
-<h4> Please read the whole of this page, and especially the warnings at the end, before touching the mains cables!</h4>
-<p>Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct (metallic) contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off prior to installing your sensors, and proceeding slowly and with care. If you have any doubts, seek professional assistance.</p>
+<p><strong>Please read the whole of this page, and especially the warnings at the end, before touching the mains cables!</strong> Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct (metallic) contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off prior to installing your sensors, and proceeding slowly and with care. If you have any doubts, seek professional assistance.</p>
 
 </div>
 
@@ -27,7 +26,7 @@ If you put it on a twin-core, or any multi-core cable, as in the right-hand pict
 
 If you are interested in reading only apparent power, and you don't have an AC-AC adapter, it does not matter. The power reading will always be positive.
 
-If you want to read real power, and you want to know in which direction power is flowing – e.g. when you generate your own electricity, and want to know whether you are importing or exporting – then the C.T. must face the correct direction. Our convention is: imported and generated powers are positive. If the C.T. faces the wrong way, it means that the power you expect to be positive will be shown as negative.  
+If you want to read real power, and you want to know in which direction power is flowing – e.g. when you generate your own electricity, and want to know whether you are importing or exporting – then the C.T. must face the correct direction. Our convention is: imported and generated powers are positive. If the C.T. faces the wrong way, it means that the power you expect to be positive will be shown as negative.
 _[Note: Robin Emley has adopted the opposite convention for his Mk 2 energy diverter – he regards _exported_ power as positive.]_
 
 For the UK ac-ac adapter and the YHDC C.T. purchased from [the shop](https://shop.openenergymonitor.com/components/) and when the C.T. is on the line conductor, the printing on the face of the C.T. should face in the direction of positive power, i.e. in the picture above, positive power flow is from left to right. If the C.T. is on the neutral conductor (this is only valid on a single-phase installation) it should face in the opposite direction. For any other combination of ac-ac adapter and C.T. it is possible, if the phasing of each is known, to determine the correct orientation, but the easiest and quickest method is probably by trial and error. Reversing the C.T. will change the sign of that input. Reversing the ac-ac adapter (where the plug design allows this) will change the sign of <u>all</u> inputs.
@@ -44,7 +43,7 @@ A current transformer is similar to the more common voltage transformer that we 
 
 There are two types, they operate in exactly the same way, the difference is in their construction.
 
-1\. The Ring-core Current Transformer.  
+1\. The Ring-core Current Transformer.
 The core is solid, and the cable you wish to put it on, needs to be disconnected in order to install the CT. Therefore, it's used only where it's practical, safe and legal to disconnect the circuit. Its advantage is higher accuracy.
 
 2\. The Split-core Current Transformer.
@@ -53,7 +52,7 @@ The core is in two parts held together by clips or screws. The two parts are sim
 
 #### How a CT works
 
-A wire carrying an electric current sets up a magnetic field around it. The wire forms the primary winding of the transformer. The iron (or ferrite) transformer core concentrates the field and couples it to the secondary winding. and, provided the magnetic field continually changes, causes a current to flow in that winding too. That current flows in the burden resistor, which generates a voltage the emonTx can use.  
+A wire carrying an electric current sets up a magnetic field around it. The wire forms the primary winding of the transformer. The iron (or ferrite) transformer core concentrates the field and couples it to the secondary winding. and, provided the magnetic field continually changes, causes a current to flow in that winding too. That current flows in the burden resistor, which generates a voltage the emonTx can use.
 A current transformer will **not** measure direct current.
 
 You _can_ pass more than one wire through the opening of a current transformer if you want the sum (more specifically, the **vector sum**) of the currents. There are two common instances where this is useful:
