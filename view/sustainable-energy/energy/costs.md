@@ -4,7 +4,7 @@ Note: When comparing different generating technologies the unit costs below only
 
 ### Wind Power
 
-| Capacity  | Turbine              | Project Cost | Maintanence 20y | Cost £/kW | £/kW/y | Unit Cost @35% |
+| Capacity  | Turbine              | Project Cost | Maintenance 20y | Cost £/kW | £/kW/y | Unit Cost @35% |
 |-----------|----------------------|--------------|-----------------|-----------|--------|----------------|
 | 55 kW     | [Endurance E-3120](http://www.renewablesfirst.co.uk/windpower/windpower-learning-centre/how-much-does-a-wind-turbine-cost-to-operate) | £320k | £72k | 7127 | 356 | £0.116 |
 | 1 kW      | [Hugh Piggot V3](http://v3power.co.uk/wp/wp-content/uploads/2014/11/How-to-get-a-Hugh-Piggott-wind-turbine-by-V3-Power.pdf) | £4,645 | £800 | 5445 | 272 | £0.089 |
@@ -16,7 +16,7 @@ Note: When comparing different generating technologies the unit costs below only
 | 1 kW      | [Hugh Piggot V3 (DIY)](http://v3power.co.uk/wp/wp-content/uploads/2014/11/How-to-get-a-Hugh-Piggott-wind-turbine-by-V3-Power.pdf) | £1,845 | £600 | 2445 | 122 | £0.040 |
 | 2 – 3 MW | [Enercon E82](http://www.renewablesfirst.co.uk/windpower/windpower-learning-centre/how-much-does-a-wind-turbine-cost-to-operate) | £3.1 million | £2.0m | 1700 | 85 | £0.028 |
 
-Maintanence costs are based on annual O&M cost estimates available on renewablesfirst.co.uk, with costs for turbines where this information is not available estimated at £40/kW/year.
+Maintenance costs are based on annual O&M cost estimates available on renewablesfirst.co.uk, with costs for turbines where this information is not available estimated at £40/kW/year.
 
 The costs above do not include business rates, wind turbine insurance, financing or network costs which increase the final cost of the delivered electricity.
 
@@ -64,11 +64,11 @@ As in the case of wind, the cost of solar has also fallen significantly over the
 
 **Solar costs Contracts for Difference**
 
-The 2015 Contracts for Difference auction secured large scale solar generation at a cost of between £50-£79.23/MWh. There is some discussion as to the viability of the £50/MWh level however it is notable that the strike price of £80/MWh is achieved which suggests that the installation cost for large scale solar in the UK is significantly below those quoted for 3-4kW of domestic solar as this strike price would need to cover at least project financing in addition to the construction cost.
+The 2015 Contracts for Difference auction secured large scale solar generation at a cost of £79.23/MWh. It is notable that the strike price achieved suggests that the installation cost for large scale solar in the UK is significantly below those quoted for 3-4kW of domestic solar as this strike price would need to cover at least project financing in addition to the construction cost. Two projects put forward bids at £50/MWh however these have [not gone ahead](http://www.pv-magazine.com/news/details/beitrag/uk--no-cfd-backed-large-scale-solar-for-next-fiscal-year_100018940/#axzz4SGD8fWjJ).
 
 ### Anaerobic Digestion
 
-Anaerobic digestion plants with gas turbine generators with or without heat recovery could potentially be used as a dispatchable backup supply. In ZeroCarbonBritain biogas from AD is combined with hydrogen from electrolysis via the sebatier process in order to produce more methane from a given amount of input biomass. The AD system costs below are for the direct AD plant with power generation.
+Anaerobic digestion plants with gas turbine generators with or without heat recovery could potentially be used as a dis-patchable backup supply. In ZeroCarbonBritain biogas from AD is combined with hydrogen from electrolysis via the sebatier process in order to produce more methane from a given amount of input biomass. The AD system costs below are for the direct AD plant with power generation.
 
 | Capacity | Name         | Total Cost    | £/kW      |
 |----------|--------------|---------------|-----------|
@@ -135,8 +135,9 @@ Source: [Forest Fuels](http://www.forestfuels.co.uk/about-wood-fuel/fuel-price-c
 ### CCGT cost
 
 The capital cost of CCGT power plants is around £500-700/kW.
-
 [http://www.timera-energy.com/the-uk-ccgt-new-build-challenge/](http://www.timera-energy.com/the-uk-ccgt-new-build-challenge/)
+
+
 
 
 ### A simple model of the additional costs of grid electricity
@@ -179,7 +180,7 @@ The Enercon E82 is used for the wind cost at £1033/kW and an O&M cost of £33/k
 
 For Solar a low domestic installation cost of £1625/kW is assumed, again paid for with low interest finance at 2.5% over a service lifetime of 30 years. The actual cost is £311/kW. Multiplied by 1.5 kW per household is £3,467. Solar PV is likely to last at least 30 years, a maintanence cost of £20/kW/y is included to cover inverter maintanence. Large scale solar is likely much cheaper than this as recent Contracts For Difference auctions have resulted in MWh prices that are similar to Onshore wind.
 
-The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 35 years. The actual cost is £901/kW. Multiplied by 1.6 kW per household is £1441. Maintance costs are assumed to be £40/kW/year and plant lifetime 35 years.
+The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 35 years. The actual cost is £901/kW. Multiplied by 1.6 kW per household is £1441. Maintenance costs are assumed to be £40/kW/year and plant lifetime 35 years.
 
 Bulk refined biomethane costs of £0.03/kWh are assumed - to be refined.
 
@@ -204,7 +205,7 @@ The onshore wind, solar and CCGT backup capacities used here are based on the re
 | Supplied electric           | 14.5     | kWh/d |       |              |        |          |
 | Final unit cost of electric | £0.152   | /kWh  |       |              |        |          |
 
-The resultant unit cost compares very well with current electricity prices. Key to achieving this price is being able to both source low interest long term finance and to run the generating facilities at near cost. This could perhaps be achieved if owenership of the wind and CCGT backup are vertically integrated as part of the energy supplier. The operational cost, maintance, interest payments of the generating facilities are covered and the supplier still makes a profit as part of their operational cost.
+The resultant unit cost compares very well with current electricity prices. Key to achieving this price is being able to both source low interest long term finance and to run the generating facilities at near cost. This could perhaps be achieved if ownership of the wind and CCGT backup are vertically integrated as part of the energy supplier. The operational cost, maintenance, interest payments of the generating facilities are covered and the supplier still makes a profit as part of their operational cost.
 
 The following worked examples show how the final electricity cost changes at different rates of interest and generator profit:
 
