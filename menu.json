@@ -288,29 +288,33 @@
                         "nicename": "3. Snowdonia Energy Study: Data",
                         "url": "sustainable-energy/energy/snowdonia-energy-study-data"
                     },
-                    "greentariffs": {
-                        "nicename": "Green Tariffs and GHG Emissions",
-                        "url": "sustainable-energy/energy/greentariffs"
-                    },
-                    "cars": {
-                        "nicename": "Petrol, Diesel and Electric car<br>energy and carbon performance",
-                        "url": "sustainable-energy/energy/cars"
+                    "scenarios": {
+                        "nicename": "4. Developing Zero Carbon Scenarios",
+                        "url": "sustainable-energy/energy/scenarios"
                     },
                     "costs": {
-                        "nicename": "Costs",
+                        "nicename": "5. Looking at Costs",
                         "url": "sustainable-energy/energy/costs"
                     },
+                    "uk-energy-2015": {
+                        "nicename": "Appendix 1: UK Energy 2015",
+                        "url": "sustainable-energy/energy/uk-energy-2015"
+                    },
                     "energy-use-in-context": {
-                        "nicename": "Appendix: Energy use in context",
+                        "nicename": "Appendix 2: Energy use in context",
                         "url": "sustainable-energy/energy/energy-use-in-context"
                     },
                     "energy-101-ref": {
-                        "nicename": "Appendix: Energy 101 Reference",
+                        "nicename": "Appendix 3: Energy 101 Reference",
                         "url": "sustainable-energy/energy/energy-101-ref"
                     },
-                    "uk-energy-2015": {
-                        "nicename": "Appendix: UK Energy 2015",
-                        "url": "sustainable-energy/energy/uk-energy-2015"
+                    "greentariffs": {
+                        "nicename": "Appendix 4: Green Tariffs",
+                        "url": "sustainable-energy/energy/greentariffs"
+                    },
+                    "cars": {
+                        "nicename": "Appendix 5: Petrol, Diesel and Electric car<br>energy and carbon performance",
+                        "url": "sustainable-energy/energy/cars"
                     },
                     "further-reading": {
                         "nicename": "Further reading",

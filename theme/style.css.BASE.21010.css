@@ -1,6 +1,5 @@
 body {
     font-family: Ubuntu, Veranda, sans-serif;
-    font-size: 100%;
     margin:0;
     padding:0;
     text-align:center;
@@ -43,6 +42,29 @@ body {
 
 .description {
     font-size:22px;
+}
+
+@media (max-width: 450px) {
+  .container {
+    /*width: 450px;*/
+    width: 100%;
+  }
+
+  #rightpanel { width:100% }
+}
+
+@media (min-width: 450px) and (max-width: 960px) {
+  .container {
+    width: 100%;
+  }
+
+  #rightpanel { width:100% }
+}
+
+@media (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
 }
 
 .visnavblock {
@@ -335,89 +357,17 @@ p a {
     width: 100%;
     border-bottom-style: solid;
     height: 60px;
-    cursor: pointer;
-    background-color: F4F4F4;
-    -webkit-transition: border-bottom-style 1.2s ease-in-out;
-    -moz-transition: border-bottom-style 1.2s ease-in-out;
-    -o-transition: border-bottom-style 1.2s ease-in-out;
-    transition: border-bottom-style 1.2s ease-in-out;
 }
 
-span.learnTitle {
-    padding: 20px;
-}
-
-i {
-   font-size: 30px;
-   color: black;
-}
-
-span.oemLearn {
+.oemLearn {
     box-sizing: border-box;
     position: absolute;
     width: 100%;
+    padding: 20px;
     white-space: nowrap;
     margin-left: 20px;
 }
 
-span.oemLearn span {
+.oemLearn span {
     font-weight: bold;
-}
-
-<<<<<<< HEAD
-.oemMenu {
-    box-sizing: border-box;
-}
-
-.oemMenu ul {
-    list-style-type: none;
-    dislay: table;
-    padding: 0;
-    margin: 0;
-    border-bottom-style: solid;
-}
-
-.oemMenu ul li {
-    dislay: table-cell;
-    padding: 0;
-}
-
-.oemMenu ul li a {
-    display: block;
-    padding: 20px 0 20px 0;
-=======
-@media (max-width: 450px) {
-  .container {
-    /*width: 450px;*/
-    width: 100%;
-  }
-
-  #rightpanel { width:100% }
-}
-
-@media (min-width: 450px) and (max-width: 960px) {
-  .container {
-    width: 100%;
-  }
-
-  #rightpanel { width:100% }
-  
-  .sublevel ul li {
-      padding: 10px 0 10px 0;
-      max-width: 230px;
-      margin-right: 30px;
-  }
-}
-
-@media (min-width: 960px) {
-  .container {
-    width: 960px;
-  }
-  
-  .sublevel ul li {
-      padding: 5px 0 5px 0;
-      max-width: 230px;
-      margin-right: 30px;
-  }
->>>>>>> fb7c1c4e5550a8d037b13d89ccd086d0295ee04d
 }
