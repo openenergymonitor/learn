@@ -416,3 +416,9 @@ p a {
       margin-right: 30px;
   }
 }
+
+#sidebar-open {
+  margin-left: 0;
+  float:left;
+  height: 100%;
+}

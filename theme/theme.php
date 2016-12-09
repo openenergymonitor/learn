@@ -27,16 +27,16 @@
 <body>
 
   <div id="topnav" style="display:none">
-    <img id="sidebar-open" style="height:100%; cursor:pointer" src="<?php echo $path; ?>theme/list-menu-icon.png">
+    <img id="sidebar-open" src="<?php echo $path; ?>theme/list-menu-icon.png">
+    <div style="margin:0;padding:0;display:inline-block;float:left;line-height:42px">
+      <span style="color:#ffffff">Learn | <span style="font-weight:bold;">Open</span>EnergyMonitor</span></div>
   </div>
 
   <div id="mySidenav" class="sidenav">
     <div class="titleWrapper">
       
       <span class='oemLearn learnTitle'>Learn | <span>Open</span>EnergyMonitor&nbsp;
-      <i class="fa fa-chevron-circle-down fa-lg"></i>
-
-      </span>
+      <i class="fa fa-chevron-circle-down fa-lg"></i></span>
     
     </div>
     <div class="oemMenu">
