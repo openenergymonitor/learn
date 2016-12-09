@@ -130,8 +130,6 @@ body {
     background-color:rgba(255,255,255,0.2);
 }
 
-
-
 body {
   background-color:#29abe2;
 }
@@ -339,8 +337,15 @@ p a {
     transition: border-bottom-style 1.2s ease-in-out;
 }
 
+.noborder {
+    border-bottom-style: none;
+}
+
 .learnTitle {
-    padding: 20px;
+    font-size: 1.2em;
+    height: 63px;
+    line-height: 63px;
+    padding-left: 10px;
 }
 
 .oemLearn {
@@ -348,7 +353,6 @@ p a {
     position: absolute;
     width: 100%;
     white-space: nowrap;
-    margin-left: 20px;
 }
 
 .oemLearn span {
@@ -371,8 +375,11 @@ p a {
 }
 
 .oemMenu ul li a {
+    box-sizing: border-box;
+    font-size: 1em;
     display: block;
-    padding: 20px 0 20px 0;
+    height: 63px;
+    padding: 20px 0 20px 10px;
 }
 
 @media (max-width: 450px) {

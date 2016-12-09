@@ -20,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/table.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/sidebar.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 
@@ -31,19 +32,26 @@
 
   <div id="mySidenav" class="sidenav">
     <div class="titleWrapper">
-      <!--<div><img src="<?php echo $path; ?>theme/book.png" style="width:38px; float:left; padding-right:10px; padding-top:6px"/></div>-->
-      <span class='oemLearn learnTitle'>Learn | <span>Open</span>EnergyMonitor</span>
+      
+      <span class='oemLearn learnTitle'>Learn | <span>Open</span>EnergyMonitor&nbsp;
+      <i class="fa fa-chevron-circle-down fa-lg"></i>
+
+      </span>
+    
     </div>
     <div class="oemMenu">
 
       <ul>
 
        <li><a href="https://community.openenergymonitor.org/">
-           <span class='oemLearn'>Community | <span>Open</span>EnergyMonitor</span></a></li>
+           <span class='oemLearn'>Community | <span>Open</span>EnergyMonitor&nbsp;
+           <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
        <li><a href="https://shop.openenergymonitor.com/">
-           <span class='oemLearn'>Shop | <span>Open</span>EnergyMonitor</span></a></li>
+           <span class='oemLearn'>Shop | <span>Open</span>EnergyMonitor&nbsp;
+           <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
        <li><a href="https://guide.openenergymonitor.org/">
-           <span class='oemLearn'>User Guide | <span>Open</span>EnergyMonitor</span></a></li>
+           <span class='oemLearn'>User Guide | <span>Open</span>EnergyMonitor&nbsp;
+           <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
 
       </ul>
 
@@ -114,13 +122,9 @@
 
     $(".titleWrapper").click(function() {
       $(".oemMenu").toggle("fast");
-      if ($(".titleWrapper").css("border-bottom-style") == ("solid")) {
-       $(".titleWrapper").css("border-bottom-style","none");
-      }
-      else {
-        $(".titleWrapper").css("border-bottom-style","solid");
-     }
-      });
+      $(this).find('i').toggleClass('fa-minus-circle fa-chevron-circle-down')
+      $(this).toggleClass("noborder");
+    });
 
 // ----------------------------------------------------------------------------------------
 // Display current page link in menu
