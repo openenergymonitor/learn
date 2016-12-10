@@ -7,7 +7,6 @@
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    //background-color: #44b3e2; /* Black*/
     background-color:rgba(68,179,226,1.0);
     overflow-x: hidden; /* Disable horizontal scroll */
     color:#fff;

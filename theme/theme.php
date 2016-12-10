@@ -3,18 +3,16 @@
 <meta charset="utf-8">
 <head>
 <?php
-    global $path, $session;
-    $apikey = $session['apikey_read'];
-
-    $q = "";
-    if (isset($_GET['q'])) $q = $_GET['q'];
+  global $path, $session;
+  $apikey = $session['apikey_read'];
+  $q = "";
+  if (isset($_GET['q'])) $q = $_GET['q'];
 ?>
 <script>
-    var path = "<?php print $path; ?>";
-    var session = JSON.parse('<?php echo json_encode($session); ?>');
-    var apikey = "<?php print $apikey; ?>";
+  var path = "<?php print $path; ?>";
+  var session = JSON.parse('<?php echo json_encode($session); ?>');
+  var apikey = "<?php print $apikey; ?>";
 </script>
-
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
@@ -28,15 +26,20 @@
 
   <div id="topnav" style="display:none">
     <img id="sidebar-open" src="<?php echo $path; ?>theme/list-menu-icon.png">
-    <div style="margin:0;padding:0;display:inline-block;float:left;line-height:42px">
-      <span style="color:#ffffff">Learn | <span style="font-weight:bold;">Open</span>EnergyMonitor</span></div>
+    <div class="menuTitle">
+      <span style="color:#ffffff"><span style="font-weight:bold;">
+      &nbsp;Learn</span> | Open<span style="font-weight:bold;">EnergyMonitor</span></span>
+    </div>
+    
   </div>
 
   <div id="mySidenav" class="sidenav">
     <div class="titleWrapper">
       
-      <span class='oemLearn learnTitle'>Learn | <span>Open</span>EnergyMonitor&nbsp;
-      <i class="fa fa-chevron-circle-down fa-lg"></i></span>
+      <span class='learnTitle'>
+        <span>Learn</span> | Open<span>EnergyMonitor</span>
+        <span><i id="menuSelect" class="fa fa-chevron-circle-down"></i></span>
+      </span>
     
     </div>
     <div class="oemMenu">
@@ -44,13 +47,13 @@
       <ul>
 
        <li><a href="https://community.openenergymonitor.org/">
-           <span class='oemLearn'>Community | <span>Open</span>EnergyMonitor&nbsp;
+           <span class='menuLinks'><span>Community</span> | Open<span>EnergyMonitor</span>&nbsp;
            <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
        <li><a href="https://shop.openenergymonitor.com/">
-           <span class='oemLearn'>Shop | <span>Open</span>EnergyMonitor&nbsp;
+           <span class='menuLinks'><span>Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
            <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
        <li><a href="https://guide.openenergymonitor.org/">
-           <span class='oemLearn'>User Guide | <span>Open</span>EnergyMonitor&nbsp;
+           <span class='menuLinks'><span>Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
            <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
 
       </ul>
@@ -65,12 +68,16 @@
 
       foreach ($menu as $mk1=>$mv1)
       {
-          echo "<div class='toplevelhead'><img class='openclosetop' src='".$path."theme/electricity-icon.png' style='width:24px; padding-right:5px; '>".$mv1->nicename."</div>";
+          echo "<div class='toplevelhead'>
+            <span class='topIcons'></span>&nbsp;".$mv1->nicename."</div>";
           echo "<div class='toplevel' name='$mk1'>";
-
+          
           foreach ($mv1->chapters as $mk2=>$mv2)
           {
-              echo "<div class='sublevelhead'><img class='openclosemenu' src='".$path."theme/expand.png' style='width:12px; padding-right:5px'>".$mv2->nicename."</div>";
+              echo "<div class='sublevelhead'>
+                      <span>
+                        <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+                      </span>&nbsp;".$mv2->nicename."</div>";
               echo "<div class='sublevel' name='$mk2'><ul>";
 
               foreach ($mv2->pages as $mk3=>$mv3)
@@ -83,7 +90,6 @@
       }
 
       ?>
-
     </div>
   </div>
 
@@ -103,6 +109,7 @@
 </html>
 
 <script>
+
     // Enable sidebar, set body background
     // $(".sidenav").show();
     var fixsidebar = false;
@@ -115,85 +122,85 @@
     $(".toplevel").hide();
     $(".oemMenu").hide();
 
+// ----------------------------------------------------------------------------------------
+// Append icons to the top level of the side-bar menu
+// ----------------------------------------------------------------------------------------
 
+   $( ".topIcons:eq( 0 )" ).append( "<i class='fa fa-bolt'></i>" );
+   $( ".topIcons:eq( 1 )" ).append( "<i class='fa fa-globe'></i>" );
+   $( ".topIcons:eq( 2 )" ).append( "<i class='fa fa-share-alt'></i>" );
+   
 // ----------------------------------------------------------------------------------------
 // Show/hide OpenenergyMonitor site links
 // ----------------------------------------------------------------------------------------
 
     $(".titleWrapper").click(function() {
       $(".oemMenu").toggle("fast");
-      $(this).find('i').toggleClass('fa-minus-circle fa-chevron-circle-down')
+      $(this).find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle')
       $(this).toggleClass("noborder");
     });
 
 // ----------------------------------------------------------------------------------------
 // Display current page link in menu
 // ----------------------------------------------------------------------------------------
-
       var q = "<?php echo $q; ?>";
       q = q.split("/");
-      if (q != "") {
+      if (q[0] && q[1] != ("")) {
+        console.log(q)
         sl = $(".sublevel[name="+q[1]+"]");
         tl = $(".toplevel[name="+q[0]+"]");
         tl.show();
         tl.prev().addClass("topclickedOnce");
-        tl.prev().children("img.openclosetop").attr('src','<?php echo $path; ?>theme/book.png');
         sl.show();
         sl.prev().addClass("clickedOnce");
-        sl.prev().children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/book.png');
-        $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
-       }
+        sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle')
+        sl.find("li[name='"+q[2]+"']").addClass('active');
+      }
 
 
 // ----------------------------------------------------------------------------------------
-// Open and close top-level menu
+// Open and close top level of menu
 // ----------------------------------------------------------------------------------------
 
     $(".toplevelhead").click(function() {
     var $this = $(this);
     var sibling = $this.siblings(".toplevel");
     var siblingHead = $this.siblings(".toplevelhead");
-    var image = $this.children("img.openclosetop");
     if ($this.hasClass("topclickedOnce")) {
       var topLevel = $(this).next();
       topLevel.hide("fast");
       $this.removeClass("topclickedOnce");
-      image.attr('src','<?php echo $path; ?>theme/electricity-icon.png');
     }
     else {
       siblingHead.next().hide("fast");
       siblingHead.removeClass("topclickedOnce");
-      siblingHead.children("img.openclosetop").attr('src','<?php echo $path; ?>theme/electricity-icon.png');
       $this.addClass("topclickedOnce");
       var topLevel = $(this).next();
       topLevel.show("fast");
-      image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
 
 // ----------------------------------------------------------------------------------------
-// Open and close sub-level menu
+// Open and close sub level of menu
 // ----------------------------------------------------------------------------------------
 
     $(".sublevelhead").click(function() {
-    var $this = $(this);
-    var sibling = $this.siblings(".sublevel");
-    var siblingHead = $this.siblings(".sublevelhead");
-    var image = $this.children("img.openclosemenu");
-    if ($this.hasClass("clickedOnce")) {
+    $(this).find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
+    var sibling = $(this).siblings(".sublevel");
+    var siblingHead = $(this).siblings(".sublevelhead");
+ //   console.log(siblingHead.children("#subIcon.fa-minus-circle"));
+    if ($(this).hasClass("clickedOnce")) {
       var sublevel = $(this).next();
       sublevel.hide("fast");
-      $this.removeClass("clickedOnce");
-      image.attr('src','<?php echo $path; ?>theme/expand.png');
+      $(this).removeClass("clickedOnce");
     }
     else {
       sibling.hide("fast");
       siblingHead.removeClass("clickedOnce");
-      siblingHead.children("img.openclosemenu").attr('src','<?php echo $path; ?>theme/expand.png');
-      $this.addClass("clickedOnce");
+      siblingHead.find("#subIcon.fa-minus-circle").toggleClass('fa-minus-circle fa-plus-circle');
+      $(this).addClass("clickedOnce");
       var sublevel = $(this).next();
       sublevel.show("fast");
-      image.attr('src','<?php echo $path; ?>theme/book.png');
     }
 });
 
