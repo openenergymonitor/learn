@@ -26,7 +26,7 @@
 
   <div id="topnav" style="display:none">
     <img id="sidebar-open" src="<?php echo $path; ?>theme/list-menu-icon.png">
-    <div class="menuTitle">
+    <div class="learnTitle">
       <span style="color:#ffffff"><span style="font-weight:bold;">
       &nbsp;Learn</span> | Open<span style="font-weight:bold;">EnergyMonitor</span></span>
     </div>
@@ -36,9 +36,9 @@
   <div id="mySidenav" class="sidenav">
     <div class="titleWrapper">
       
-      <span class='learnTitle'>
+      <span class='menuTitle'>
         <span>Learn</span> | Open<span>EnergyMonitor</span>
-        <span><i id="menuSelect" class="fa fa-chevron-circle-down"></i></span>
+        <span class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i></span>
       </span>
     
     </div>
@@ -69,7 +69,7 @@
       foreach ($menu as $mk1=>$mv1)
       {
           echo "<div class='toplevelhead'>
-            <span class='topIcons'></span>&nbsp;".$mv1->nicename."</div>";
+            <span class='topIcons'></span>&nbsp;&nbsp;".$mv1->nicename."</div>";
           echo "<div class='toplevel' name='$mk1'>";
           
           foreach ($mv1->chapters as $mk2=>$mv2)
@@ -137,7 +137,6 @@
     $(".titleWrapper").click(function() {
       $(".oemMenu").toggle("fast");
       $(this).find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle')
-      $(this).toggleClass("noborder");
     });
 
 // ----------------------------------------------------------------------------------------
@@ -177,6 +176,7 @@
       $this.addClass("topclickedOnce");
       var topLevel = $(this).next();
       topLevel.show("fast");
+      $(".oemMenu").hide("fast");
     }
 });
 
@@ -201,6 +201,7 @@
       $(this).addClass("clickedOnce");
       var sublevel = $(this).next();
       sublevel.show("fast");
+      $(".oemMenu").hide("fast");
     }
 });
 
