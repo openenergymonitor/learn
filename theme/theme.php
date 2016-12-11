@@ -34,10 +34,15 @@
   </div>
 
   <div id="mySidenav" class="sidenav">
+
+
+    <div class="sidenav_inner" style="width:300px">
+
+
     <div class="titleWrapper">
       
       <span class='menuTitle'>
-        <span>Learn</span> | Open<span>EnergyMonitor</span>
+        <span><i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;Learn</span> | Open<span>EnergyMonitor</span>
         <span class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i></span>
       </span>
     
@@ -47,21 +52,18 @@
       <ul>
 
        <li><a href="https://community.openenergymonitor.org/">
-           <span class='menuLinks'><span>Community</span> | Open<span>EnergyMonitor</span>&nbsp;
+           <span class='menuLinks'><span><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community</span> | Open<span>EnergyMonitor</span>&nbsp;
            <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
        <li><a href="https://shop.openenergymonitor.com/">
-           <span class='menuLinks'><span>Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
+           <span class='menuLinks'><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
            <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
        <li><a href="https://guide.openenergymonitor.org/">
-           <span class='menuLinks'><span>Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
+           <span class='menuLinks'><span><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
            <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
 
       </ul>
 
     </div>
-
-    <div class="sidenav_inner" style="width:300px">
-
       <?php
 
       $menu = json_decode(file_get_contents("menu.json"));
@@ -121,14 +123,21 @@
     $(".sublevel").hide();
     $(".toplevel").hide();
     $(".oemMenu").hide();
+    
+// Border above first top level item in menu...
 
+    $(".toplevelhead:eq( 0 )").css("border-top-style","solid");
+    
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
 // ----------------------------------------------------------------------------------------
 
-   $( ".topIcons:eq( 0 )" ).append( "<i class='fa fa-bolt'></i>" );
-   $( ".topIcons:eq( 1 )" ).append( "<i class='fa fa-globe'></i>" );
-   $( ".topIcons:eq( 2 )" ).append( "<i class='fa fa-share-alt'></i>" );
+   $(".topIcons:eq(0)").append(
+     "<span class='fa-stack fa-lg'><i class='fa fa-circle-thin fa-stack-2x'></i><i class='fa fa-bolt fa-stack-1x'></i></span>");
+   $(".topIcons:eq(1)").append(
+     "<span class='fa-stack fa-lg'><i class='fa fa-circle-thin fa-stack-2x'></i><i class='fa fa-globe fa-stack-1x'></i></span>");
+   $(".topIcons:eq(2)").append(
+     "<span class='fa-stack fa-lg'><i class='fa fa-circle-thin fa-stack-2x'></i><i class='fa fa-share-alt fa-stack-1x'></i></span>");
    
 // ----------------------------------------------------------------------------------------
 // Show/hide OpenenergyMonitor site links
@@ -136,26 +145,25 @@
 
     $(".titleWrapper").click(function() {
       $(".oemMenu").toggle("fast");
-      $(this).find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle')
+      $(this).find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle');
     });
 
 // ----------------------------------------------------------------------------------------
 // Display current page link in menu
 // ----------------------------------------------------------------------------------------
+    
       var q = "<?php echo $q; ?>";
       q = q.split("/");
       if (q[0] && q[1] != ("")) {
-        console.log(q)
         sl = $(".sublevel[name="+q[1]+"]");
         tl = $(".toplevel[name="+q[0]+"]");
         tl.show();
         tl.prev().addClass("topclickedOnce");
         sl.show();
         sl.prev().addClass("clickedOnce");
-        sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle')
+        sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
         sl.find("li[name='"+q[2]+"']").addClass('active');
       }
-
 
 // ----------------------------------------------------------------------------------------
 // Open and close top level of menu
@@ -177,6 +185,7 @@
       var topLevel = $(this).next();
       topLevel.show("fast");
       $(".oemMenu").hide("fast");
+      $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
     }
 });
 
@@ -188,7 +197,6 @@
     $(this).find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
     var sibling = $(this).siblings(".sublevel");
     var siblingHead = $(this).siblings(".sublevelhead");
- //   console.log(siblingHead.children("#subIcon.fa-minus-circle"));
     if ($(this).hasClass("clickedOnce")) {
       var sublevel = $(this).next();
       sublevel.hide("fast");
@@ -202,6 +210,7 @@
       var sublevel = $(this).next();
       sublevel.show("fast");
       $(".oemMenu").hide("fast");
+      $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
     }
 });
 
@@ -229,6 +238,8 @@ $("#sidebar-close").click(function(){
 
 $("#sidebar-close-btn, #bodyfade").click(function(){
     $(".sidenav").css("width","0px");
+    $(".oemMenu").hide();
+    $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
     $("#topnav").show();
     $("#sidebar-close-btn").css("display","none");
     $("#bodyfade").hide();
