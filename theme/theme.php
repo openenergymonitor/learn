@@ -23,89 +23,105 @@
 </head>
 
 <body>
-
   <div id="topnav" style="display:none">
     <img id="sidebar-open" src="<?php echo $path; ?>theme/list-menu-icon.png">
     <div class="learnTitle">
-      <span style="color:#ffffff"><span style="font-weight:bold;">
-      &nbsp;Learn</span> | Open<span style="font-weight:bold;">EnergyMonitor</span></span>
+      <span>
+        <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open
+        <span class="boldText">EnergyMonitor</span>
+      </span>
+      <span class="topLinks">
+        <span class="toplinkBox"><a href="https://community.openenergymonitor.org/">
+          <span class='menuLinks'>
+            <span>
+            <i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community
+            </span></a>
+          </span>
+          <span class="toplinkBox"><a href="https://shop.openenergymonitor.com/">
+            <span class='menuLinks'>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop
+            </span></a>
+          </span>
+          <span class="toplinkBox"><a href="https://guide.openenergymonitor.org/">
+            <span class='menuLinks'>
+              <i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide
+            </span></a>
+          </span>
+      </span>
     </div>
-    
   </div>
 
   <div id="mySidenav" class="sidenav">
-
-
     <div class="sidenav_inner" style="width:300px">
-
-
-    <div class="titleWrapper">
-      
-      <span class='menuTitle'>
-        <span><i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;Learn</span> | Open<span>EnergyMonitor</span>
-        <span class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i></span>
-      </span>
-    
-    </div>
-    <div class="oemMenu">
-
-      <ul>
-
-       <li><a href="https://community.openenergymonitor.org/">
-           <span class='menuLinks'><span><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community</span> | Open<span>EnergyMonitor</span>&nbsp;
-           <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
-       <li><a href="https://shop.openenergymonitor.com/">
-           <span class='menuLinks'><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
-           <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
-       <li><a href="https://guide.openenergymonitor.org/">
-           <span class='menuLinks'><span><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
-           <i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
-
-      </ul>
-
-    </div>
-      <?php
-
-      $menu = json_decode(file_get_contents("menu.json"));
-
-      foreach ($menu as $mk1=>$mv1)
-      {
-          echo "<div class='toplevelhead'>
-            <span class='topIcons'></span>&nbsp;&nbsp;".$mv1->nicename."</div>";
-          echo "<div class='toplevel' name='$mk1'>";
-          
-          foreach ($mv1->chapters as $mk2=>$mv2)
-          {
-              echo "<div class='sublevelhead'>
-                      <span>
-                        <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
-                      </span>&nbsp;".$mv2->nicename."</div>";
-              echo "<div class='sublevel' name='$mk2'><ul>";
-
-              foreach ($mv2->pages as $mk3=>$mv3)
-              {
-                  echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-              }
-              echo "</div>";
-          }
-          echo "</div>";
-      }
-
-      ?>
-    </div>
+      <div class="titleWrapper">
+        <span class='menuTitle'>
+          <span><i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;Learn
+          </span> | Open
+          <span>EnergyMonitor
+          </span>
+          <span class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
+          </span>
+        </span>
   </div>
+  
+<div class="oemMenu">
+<ul>
 
-  <div class="container">
-    <div class="row">
-      <?php echo $content; ?>
-    </div>
-  </div>
+<li><a href="https://community.openenergymonitor.org/">
+<span class='menuLinks'><span><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community</span> | Open<span>EnergyMonitor</span>&nbsp;
+<i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
+<li><a href="https://shop.openenergymonitor.com/">
+<span class='menuLinks'><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
+<i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
+<li><a href="https://guide.openenergymonitor.org/">
+<span class='menuLinks'><span><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
+<i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
 
-  <div id="rightpanel">
-      <div id="rightpanel-inner"></div>
-  </div>
+</ul>
 
-  <div id="bodyfade"></div>
+</div>
+<?php
+
+$menu = json_decode(file_get_contents("menu.json"));
+
+foreach ($menu as $mk1=>$mv1)
+{
+echo "<div class='toplevelhead'>
+<span class='topIcons'></span>&nbsp;&nbsp;".$mv1->nicename."</div>";
+echo "<div class='toplevel' name='$mk1'>";
+
+foreach ($mv1->chapters as $mk2=>$mv2)
+{
+echo "<div class='sublevelhead'>
+<span>
+<i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+</span>&nbsp;".$mv2->nicename."</div>";
+echo "<div class='sublevel' name='$mk2'><ul>";
+
+foreach ($mv2->pages as $mk3=>$mv3)
+{
+echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+}
+echo "</div>";
+}
+echo "</div>";
+}
+
+?>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<?php echo $content; ?>
+</div>
+</div>
+
+<div id="rightpanel">
+<div id="rightpanel-inner"></div>
+</div>
+
+<div id="bodyfade"></div>
 
 </body>
 </html>
@@ -119,13 +135,11 @@
 
     $("body").css('background-color','WhiteSmoke');
     $(".container").css('background-color','#fff');
-
     $(".sublevel").hide();
     $(".toplevel").hide();
     $(".oemMenu").hide();
     
 // Border above first top level item in menu...
-
     $(".toplevelhead:eq( 0 )").css("border-top-style","solid");
     
 // ----------------------------------------------------------------------------------------
