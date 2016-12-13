@@ -27,13 +27,12 @@
     <img id="sidebar-open" src="<?php echo $path; ?>theme/list-menu-icon.png">
     <div class="learnTitle">
       <span>
-        <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open
-        <span class="boldText">EnergyMonitor</span>
+        <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;
+    Open<span class="boldText">EnergyMonitor</span>
       </span>
       <span class="topLinks">
         <span class="toplinkBox"><a href="https://community.openenergymonitor.org/">
           <span class='menuLinks'>
-            <span>
             <i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community
             </span></a>
           </span>
@@ -56,30 +55,46 @@
       <div class="titleWrapper">
         <span class='menuTitle'>
           <span><i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;Learn
-          </span> | Open
-          <span>EnergyMonitor
+          </span> |
+      Open<span>EnergyMonitor
           </span>
           <span class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
           </span>
         </span>
   </div>
   
-<div class="oemMenu">
-<ul>
+  <div class="oemMenu">
+    <ul>
+      <li>
+        <a href="https://community.openenergymonitor.org/">
+          <div class='menuLinks'>
+            <i class="fa fa-comments" aria-hidden="true"></i>&nbsp;
+            <span>Community</span> | Open<span>EnergyMonitor</span>&nbsp;
+            <i class="fa fa-external-link-square" aria-hidden="true"></i></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://shop.openenergymonitor.com/">
+          <div class='menuLinks'>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
+            <span>Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
+            <i class="fa fa-external-link-square" aria-hidden="true"></i>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://guide.openenergymonitor.org/">
+          <div class='menuLinks'>
+            <i class="fa fa-book" aria-hidden="true"></i>&nbsp;
+            <span>Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
+            <i class="fa fa-external-link-square" aria-hidden="true"></i>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-<li><a href="https://community.openenergymonitor.org/">
-<span class='menuLinks'><span><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community</span> | Open<span>EnergyMonitor</span>&nbsp;
-<i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
-<li><a href="https://shop.openenergymonitor.com/">
-<span class='menuLinks'><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop</span> | Open<span>EnergyMonitor</span>&nbsp;
-<i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
-<li><a href="https://guide.openenergymonitor.org/">
-<span class='menuLinks'><span><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide</span> | Open<span>EnergyMonitor</span>&nbsp;
-<i class="fa fa-external-link-square" aria-hidden="true"></i></span></a></li>
-
-</ul>
-
-</div>
 <?php
 
 $menu = json_decode(file_get_contents("menu.json"));
@@ -87,7 +102,7 @@ $menu = json_decode(file_get_contents("menu.json"));
 foreach ($menu as $mk1=>$mv1)
 {
 echo "<div class='toplevelhead'>
-<span class='topIcons'></span>&nbsp;&nbsp;".$mv1->nicename."</div>";
+<div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
 echo "<div class='toplevel' name='$mk1'>";
 
 foreach ($mv1->chapters as $mk2=>$mv2)
@@ -108,20 +123,20 @@ echo "</div>";
 }
 
 ?>
-</div>
-</div>
+    </div>
+  </div>
 
-<div class="container">
-<div class="row">
-<?php echo $content; ?>
-</div>
-</div>
+  <div class="container">
+    <div class="row">
+    <?php echo $content; ?>
+    </div>
+  </div>
 
-<div id="rightpanel">
-<div id="rightpanel-inner"></div>
-</div>
+  <div id="rightpanel">
+    <div id="rightpanel-inner"></div>
+  </div>
 
-<div id="bodyfade"></div>
+  <div id="bodyfade"></div>
 
 </body>
 </html>
@@ -131,7 +146,7 @@ echo "</div>";
     // Enable sidebar, set body background
     // $(".sidenav").show();
     var fixsidebar = false;
-    sidebar_resize();
+    sidebar_resize(); // Set correct size on loading
 
     $("body").css('background-color','WhiteSmoke');
     $(".container").css('background-color','#fff');
@@ -147,18 +162,18 @@ echo "</div>";
 // ----------------------------------------------------------------------------------------
 
    $(".topIcons:eq(0)").append(
-     "<span class='fa-stack fa-lg'><i class='fa fa-circle-thin fa-stack-2x'></i><i class='fa fa-bolt fa-stack-1x'></i></span>");
+     "<i class='fa fa-bolt'></i>");
    $(".topIcons:eq(1)").append(
-     "<span class='fa-stack fa-lg'><i class='fa fa-circle-thin fa-stack-2x'></i><i class='fa fa-globe fa-stack-1x'></i></span>");
+     "<i class='fa fa-globe'>");
    $(".topIcons:eq(2)").append(
-     "<span class='fa-stack fa-lg'><i class='fa fa-circle-thin fa-stack-2x'></i><i class='fa fa-share-alt fa-stack-1x'></i></span>");
+     "<i class='fa fa-share-alt'></i>");
    
 // ----------------------------------------------------------------------------------------
 // Show/hide OpenenergyMonitor site links
 // ----------------------------------------------------------------------------------------
 
     $(".titleWrapper").click(function() {
-      $(".oemMenu").toggle("fast");
+      $(".oemMenu").slideToggle("fast");
       $(this).find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle');
     });
 
@@ -184,21 +199,20 @@ echo "</div>";
 // ----------------------------------------------------------------------------------------
 
     $(".toplevelhead").click(function() {
-    var $this = $(this);
-    var sibling = $this.siblings(".toplevel");
-    var siblingHead = $this.siblings(".toplevelhead");
-    if ($this.hasClass("topclickedOnce")) {
+    var sibling = $(this).siblings(".toplevel");
+    var siblingHead = $(this).siblings(".toplevelhead");
+    if ($(this).hasClass("topclickedOnce")) {
       var topLevel = $(this).next();
-      topLevel.hide("fast");
-      $this.removeClass("topclickedOnce");
+      topLevel.slideUp("fast");
+      $(this).removeClass("topclickedOnce");
     }
     else {
       siblingHead.next().hide("fast");
       siblingHead.removeClass("topclickedOnce");
-      $this.addClass("topclickedOnce");
+      $(this).addClass("topclickedOnce");
       var topLevel = $(this).next();
-      topLevel.show("fast");
-      $(".oemMenu").hide("fast");
+      topLevel.slideDown("fast");
+      $(".oemMenu").slideUp("fast");
       $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
     }
 });
@@ -213,7 +227,7 @@ echo "</div>";
     var siblingHead = $(this).siblings(".sublevelhead");
     if ($(this).hasClass("clickedOnce")) {
       var sublevel = $(this).next();
-      sublevel.hide("fast");
+      sublevel.slideUp("fast");
       $(this).removeClass("clickedOnce");
     }
     else {
@@ -222,8 +236,8 @@ echo "</div>";
       siblingHead.find("#subIcon.fa-minus-circle").toggleClass('fa-minus-circle fa-plus-circle');
       $(this).addClass("clickedOnce");
       var sublevel = $(this).next();
-      sublevel.show("fast");
-      $(".oemMenu").hide("fast");
+      sublevel.slideDown("fast");
+      $(".oemMenu").slideUp("fast");
       $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
     }
 });
@@ -233,7 +247,7 @@ echo "</div>";
 // ----------------------------------------------------------------------------------------
 
 $("#sidebar-open").click(function(){
-  $("#topnav").hide();
+  // $("#topnav").hide();
   // $(".sidenav").css("transition","width 2s");
   $(".sidenav").css("width","300px");
   fixsidebar = true;
