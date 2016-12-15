@@ -66,16 +66,16 @@
 
   <div id="mySidenav" class="sidenav">
     <div class="sidenav_inner">
-      <div class="grayBkd">
+      <div class="darkerBkd">
         <div class="titleWrapper">
-          <span class='menuTitle'>
+          <div class='menuTitle'>
+            <div class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
+            </div>
             <span><i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;Learn
             </span> |
         Open<span>EnergyMonitor
             </span>
-            <span class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
-            </span>
-          </span>
+          </div>
         </div>
     
         <div class="oemMenu">
