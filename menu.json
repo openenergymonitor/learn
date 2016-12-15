@@ -288,12 +288,16 @@
                         "nicename": "3. Snowdonia Energy Study: Data",
                         "url": "sustainable-energy/energy/snowdonia-energy-study-data"
                     },
+                    "renewableheat": {
+                        "nicename": "4. Renewable Heat",
+                        "url": "sustainable-energy/energy/renewableheat"
+                    },
                     "scenarios": {
-                        "nicename": "4. Developing Zero Carbon Scenarios",
+                        "nicename": "5. Developing Zero Carbon Scenarios",
                         "url": "sustainable-energy/energy/scenarios"
                     },
                     "costs": {
-                        "nicename": "5. Looking at Costs",
+                        "nicename": "6. Looking at Costs",
                         "url": "sustainable-energy/energy/costs"
                     },
                     "uk-energy-2015": {
