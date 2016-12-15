@@ -126,25 +126,25 @@
       
       foreach ($menu as $mk1=>$mv1)
       {
-      echo "<div class='toplevelhead'>
-      <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
-      echo "<div class='toplevel' name='$mk1'>";
+        echo "<div class='toplevelhead'>
+        <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
+        echo "<div class='toplevel' name='$mk1'>";
       
-      foreach ($mv1->chapters as $mk2=>$mv2)
-      {
-      echo "<div class='sublevelhead'>
-      <span>
-      <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
-      </span>&nbsp;".$mv2->nicename."</div>";
-      echo "<div class='sublevel' name='$mk2'><ul>";
+        foreach ($mv1->chapters as $mk2=>$mv2)
+        {
+          echo "<div class='sublevelhead'>
+          <span>
+          <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+          </span>&nbsp;".$mv2->nicename."</div>";
+          echo "<div class='sublevel' name='$mk2'><ul>";
       
-      foreach ($mv2->pages as $mk3=>$mv3)
-      {
-      echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-      }
-      echo "</div>";
-      }
-      echo "</div>";
+          foreach ($mv2->pages as $mk3=>$mv3)
+          {
+            echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+          }
+          echo "</div>";
+        }
+        echo "</div>";
       }
       
       ?>
@@ -186,7 +186,7 @@
     $(".toplevel").hide();
     $(".oemMenu").hide();
 // ----------------------------------------------------------------------------------------
-// Show/hide OpenenergyMonitor site links
+// Show/hide OpenEnergyMonitor site links
 // ----------------------------------------------------------------------------------------
     $(".titleWrapper").click(function() {
       $(".oemMenu").slideToggle("fast");
@@ -201,7 +201,7 @@
       sl = $(".sublevel[name="+q[1]+"]");
       tl = $(".toplevel[name="+q[0]+"]");
       tl.show();
-      tl.prev().addClass("topclickedOnce");
+      tl.prev().addClass("clickedOnce");
       sl.show();
       sl.prev().addClass("clickedOnce");
       sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
@@ -216,15 +216,15 @@
     $(".sublevelhead.clickedOnce").removeClass("clickedOnce");
     var sibling = $(this).siblings(".toplevel");
     var siblingHead = $(this).siblings(".toplevelhead");
-    if ($(this).hasClass("topclickedOnce")) {
+    if ($(this).hasClass("clickedOnce")) {
       var topLevel = $(this).next();
       topLevel.slideUp("fast");
-      $(this).removeClass("topclickedOnce");
+      $(this).removeClass("clickedOnce");
     }
     else {
       siblingHead.next().slideUp("fast");
-      siblingHead.removeClass("topclickedOnce");
-      $(this).addClass("topclickedOnce");
+      siblingHead.removeClass("clickedOnce");
+      $(this).addClass("clickedOnce");
       var topLevel = $(this).next();
       topLevel.slideDown("fast");
       $(".oemMenu").slideUp("fast");
@@ -258,46 +258,43 @@
 // ----------------------------------------------------------------------------------------
 // Open sidebar
 // ----------------------------------------------------------------------------------------
-$("#sidebar-open").click(function(){
-  $(".sidenav").css("width","300px");
-  fixsidebar = true;
-  $("#bodyfade").show();
-});
+    $("#sidebar-open").click(function(){
+      $(".sidenav").css("width","300px");
+      fixsidebar = true;
+      $("#bodyfade").show();
+    });
 // ----------------------------------------------------------------------------------------
 // Close sidebar
 // ----------------------------------------------------------------------------------------
-$("#bodyfade").click(function(){
-    $(".sidenav").css("width","0px");
-    $(".oemMenu").slideUp("fast");
-    $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
-    $("#topnav").slideDown("fast");
-    $("#sidebar-close-btn").css("display","none");
-    $("#bodyfade").hide();
-    fixsidebar = false;
-});
+    $("#bodyfade").click(function(){
+        $(".sidenav").css("width","0px");
+        $(".oemMenu").slideUp("fast");
+        $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
+        $("#topnav").slideDown("fast");
+        $("#sidebar-close-btn").css("display","none");
+        $("#bodyfade").hide();
+        fixsidebar = false;
+    });
 // ----------------------------------------------------------------------------------------
 //  Responsive sidebar
 // ----------------------------------------------------------------------------------------
-function sidebar_resize() {
-    var width = $(window).width();
-    var height = $(window).height();
-    $("#sidenav").height(height-41);
-    if (width<1260) {
-        if (fixsidebar===false) {
-            $(".sidenav").css("width","0px");
-            $("#topnav").slideDown("fast");
-        } else {
-            $("#bodyfade").show();
-        }
-        
-        $(".container").css("margin","0 auto");
-    } else {
-        $(".sidenav").css("width","300px");
-        $("#topnav").slideUp("fast");
-        $(".container").css("margin-left","300px");
-        $("#bodyfade").hide();
+    function sidebar_resize() {
+      var width = $(window).width();
+      var height = $(window).height();
+      if (width<1260) {
+          if (fixsidebar===false) {
+              $(".sidenav").css("width","0");
+              $("#topnav").slideDown("fast");
+          } else {
+              $("#bodyfade").show();
+          }
+      $(".container").css("margin","0 auto");
+      } else {
+          $(".sidenav").css("width","300px");
+          $("#topnav").slideUp("fast");
+          $(".container").css("margin-left","300px");
+          $("#bodyfade").hide();
     }
-  
 // ----------------------------------------------------------------------------------------
 //  Responsive right hand panel
 // ----------------------------------------------------------------------------------------

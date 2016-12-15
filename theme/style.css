@@ -156,46 +156,25 @@ pre {
 	overflow-x: auto;
 	text-align: left;
 }
-pre::-webkit-scrollbar {
+.xaxiswrapper, pre::-webkit-scrollbar {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
-pre::-webkit-scrollbar:vertical {
+.xaxiswrapperpre, pre::-webkit-scrollbar:vertical {
 	width: 12px;
 }
-pre::-webkit-scrollbar:horizontal {
+.xaxiswrapperpre, pre::-webkit-scrollbar:horizontal {
 	height: 12px;
 }
-pre::-webkit-scrollbar-thumb {
-	background-color: #333;
+.xaxiswrapperpre, pre::-webkit-scrollbar-thumb {
+	background-color: #44b3e2;
 	border-radius: 10px;
-	border: 10px solid transparent;
 }
-pre::-webkit-scrollbar-track {
+.xaxiswrapperpre, pre::-webkit-scrollbar-track {
 	background-color: transparent;
 }
 .xaxiswrapper {
 	overflow-x: auto;
-}
-.xaxiswrapper::-webkit-scrollbar {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-.xaxiswrapper::-webkit-scrollbar:vertical {
-	width: 12px;
-}
-.xaxiswrapper::-webkit-scrollbar:horizontal {
-	height: 12px;
-}
-.xaxiswrapper::-webkit-scrollbar-thumb {
-	background-color: #333;
-	border-radius: 10px;
-	border: 10px solid transparent;
-}
-.xaxiswrapper::-webkit-scrollbar-track {
-	background-color: transparent;
-}
-.xaxiswrapper {
 	background-color: transparent;
 }
 .xaxiswrapper table th {
@@ -272,9 +251,6 @@ p a {
 	padding: 0 0 0 60px;
 }
 .clickedOnce {
-	font-weight: bold;
-}
-.topclickedOnce {
 	font-weight: bold;
 }
 .sublevel ul {
@@ -361,14 +337,13 @@ p a {
 }
 @media (max-width: 450px) {
 	.container {
-		/*width: 450px;*/
 		width: 100%;
 	}
 	#rightpanel {
 		width: 100%
 	}
 }
-/*
+
 @media (min-width: 450px) and (max-width: 960px) {
 	.container {
 		width: 100%;
@@ -392,7 +367,7 @@ p a {
 		margin-right: 30px;
 	}
 }
-*/
+
 #sidebar-open {
 	margin-left: 0;
 	float: left;
