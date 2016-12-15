@@ -31,36 +31,36 @@
       Open<span class="boldText">EnergyMonitor</span>
         </span>
       </div>
-      <span class="topLinks">
-        <span class="toplinkBox">
+      <div class="learnTitle-topLinks">
+        <div class="learnTitle-topLinks-toplinkBox">
           <a href="https://community.openenergymonitor.org/">
             <span class='menuLinks'>
               <i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community
             </span>
           </a>
-        </span>
-        <span class="toplinkBox">
+        </div>
+        <div class="learnTitle-topLinks-toplinkBox">
           <a href="https://shop.openenergymonitor.com/">
             <span class='menuLinks'>
               <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop
             </span>
           </a>
-        </span>
-        <span class="toplinkBox">
+        </div>
+        <div class="learnTitle-topLinks-toplinkBox">
           <a href="https://guide.openenergymonitor.org/">
             <span class='menuLinks'>
               <i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide
             </span>
           </a>
-        </span>
-        <span class="toplinkBox">
+        </div>
+        <div class="learnTitle-topLinks-toplinkBox">
           <a href="https://openenergymonitor.org/">
             <span class='menuLinks'>
               <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home
             </span>
           </a>
-        </span>
-      </span>
+        </div>
+      </div>
     </div>
   </div>
 

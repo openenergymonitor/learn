@@ -120,88 +120,11 @@ body {
 	background-color: #b23535;
 	margin-top: -15px;
 }
-blockquote {
-	font-family: serif;
-	text-align: center;
-	font-style: italic;
-	background-color: #eee;
-	padding: 20px;
-}
 .topmenu {
 	background-color: #29abe2;
 }
-a {
-	font-size: 14px;
-}
-p {
-	color: #333;
-	font-size: 14px
-}
-h2, h3 {
-  margin: 0;
-	color: #333;
-}
-h4 {
-	padding: 2px 0 2px 5px;
-	font-size: 14px;
-	background-color: #333;
-	color: #ffffff;
-}
-a {
-	text-decoration: none;
-}
-pre {
-	border: 1px solid #ffffff;
-	background-color: #eee;
-	padding: 20px;
-	overflow-x: auto;
-	text-align: left;
-}
-.xaxiswrapper, pre::-webkit-scrollbar {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-.xaxiswrapperpre, pre::-webkit-scrollbar:vertical {
-	width: 12px;
-}
-.xaxiswrapperpre, pre::-webkit-scrollbar:horizontal {
-	height: 12px;
-}
-.xaxiswrapperpre, pre::-webkit-scrollbar-thumb {
-	background-color: #44b3e2;
-	border-radius: 10px;
-}
-.xaxiswrapperpre, pre::-webkit-scrollbar-track {
-	background-color: transparent;
-}
-.xaxiswrapper {
-	overflow-x: auto;
-	background-color: transparent;
-}
-.xaxiswrapper table th {
-	background-color: #777;
-	color: #ffffff;
-	font-weight: bold;
-}
-ol {
-	color: #333;
-	font-size: 14px;
-	padding-bottom: 8px;
-}
-li {
-	font-size: 14px;
-}
-img {
-	max-width: 100%;
-}
 .menu {
 	padding-bottom: 0;
-}
-#topnav {
-	background-color: #44b3e2;
-	height: 42px;
-	text-align: left;
-  display:none;
 }
 #bodyfade {
 	display: none;
@@ -227,16 +150,6 @@ img {
 }
 .appendix-section .content {
 	padding: 0 10px 10px 10px;
-}
-hr {
-	border: 0;
-	height: 1px;
-	background: #ccc;
-	margin: 0;
-	padding: 0;
-}
-p a {
-	word-wrap: break-word;
 }
 .toplevelhead {
 	box-sizing: border-box;
@@ -290,21 +203,6 @@ p a {
 }
 .menuTitle span {
 	font-weight: bold;
-}
-.learnTitle {
-	margin: 0;
-	padding: 0;
-	line-height: 42px;
-  height:42px;
-  padding-left:10px;
-  color: #ffffff;
-}
-.learnTitle-iconWrapper {
-  display:inline;
-}
-.learnTitle-titleWrapper {
-  display: inline;
-  padding-left: 5px;
 }
 .boldText {
   font-weight: bold;
@@ -400,50 +298,105 @@ p a {
 .fa {
 	text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
 }
-.topLinks {
-  float: right;
-  padding-right: 15px;
-}
-@media screen and (max-width: 650px) {
-    .topLinks {
-        display:none;
-    }
-}
-.topLinks a {
-  color: #ffffff;
-}
-.toplinkBox {
-  padding-left:15px;
-}
 .lowermenuWrapper {
   border-top-style: solid;
 }
 .darkerBkd {
   background-color: #22a5dd;
-
-/*----------Table----------*/
-  
 }
+/*---------------------------------------------------------------------/
+// Topnav
+/*--------------------------------------------------------------------*/
+#topnav {
+  	background-color: #44b3e2;
+  	height: 42px;
+  	text-align: left;
+    display:none;
+}
+.learnTitle {
+  	margin: 0;
+  	padding: 0;
+  	line-height: 42px;
+    height:42px;
+    padding-left:10px;
+    color: #ffffff;
+}
+.learnTitle-iconWrapper {
+    display:inline;
+}
+.learnTitle-titleWrapper {
+    display: inline;
+    padding-left: 5px;
+}
+.learnTitle-topLinks {
+    float: right;
+    padding-right: 15px;
+}
+  .learnTitle-topLinks a {
+       color: #ffffff;
+  }
+  @media screen and (max-width: 650px) {
+      .learnTitle-topLinks {
+              display:none;}
+  }
+.learnTitle-topLinks-toplinkBox {
+    padding-left:15px;
+    display: inline-block;
+}
+/*---------------------------------------------------------------------/
+// Table
+/*--------------------------------------------------------------------*/
 table {
     width:100%;
     border-collapse: collapse;
 }
-
-table th {
-    text-align:left;
-    border: 1px solid #ddd;
-    padding:6px 13px;
+  table th {
+      text-align:left;
+      border: 1px solid #ddd;
+      padding:6px 13px;
+  }
+  table td {
+      text-align:left;
+      border: 1px solid #ddd;
+      padding:6px 13px;
+  }
+.xaxiswrapper {
+	overflow-x: auto;
+	background-color: transparent;
 }
-
-table td {
-    text-align:left;
-    border: 1px solid #ddd;
-    padding:6px 13px;
+.xaxiswrapper table th {
+	background-color: #777;
+	color: #ffffff;
+	font-weight: bold;
 }
-
-/*---------Sidebar---------*/
-
- /* The side navigation menu */
+/*---------------------------------------------------------------------/
+//  Webkit scrollbar
+/*---------------------------------------------------------------------*/
+pre::-webkit-scrollbar {
+    width: 12px;
+}
+pre::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #ffffff;
+}
+pre::-webkit-scrollbar-thumb {
+    background: #777777;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.sidenav::-webkit-scrollbar {
+    width: 12px;
+}
+.sidenav::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #4eb7e3;
+}
+.sidenav::-webkit-scrollbar-thumb {
+    background: #1b84b0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+/*---------------------------------------------------------------------/
+//  Sidebar
+/*---------------------------------------------------------------------*/
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 300px; /* 0 width - change this with JavaScript */
@@ -451,35 +404,83 @@ table td {
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color:rgba(68,179,226,1.0);
+	  background-color: #44b3e2;
     overflow-x: hidden; /* Disable horizontal scroll */
     color:#fff;
     text-align:left;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-
+  .sidenav a {
+      padding: 8px 8px 0 0;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+  }
+  .sidenav a:hover, .offcanvas a:focus {
+      color: #f1f1f1;
+  }
+  @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+  }
 .sidenav_inner {
     box-sizing: border-box;
     padding: 0;
     width: 300px;
 }
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 0px 0px;
-    text-decoration: none;
-    color: #fff;
-    display: block;
+/*---------------------------------------------------------------------/
+//  Std tags
+/*---------------------------------------------------------------------*/
+a {
+	font-size: 14px;
+	text-decoration: none;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+blockquote {
+	font-family: serif;
+	text-align: center;
+	font-style: italic;
+	background-color: #eee;
+	padding: 20px;
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+p {
+	color: #333;
+	font-size: 14px
 }
-
+p a {
+	word-wrap: break-word;
+}
+h2, h3 {
+  margin: 0;
+	color: #333;
+}
+h4 {
+	padding: 2px 0 2px 5px;
+	font-size: 14px;
+	background-color: #333;
+	color: #ffffff;
+}
+pre {
+	border: 1px solid #ffffff;
+	background-color: #eee;
+	padding: 20px;
+	overflow-x: auto;
+	text-align: left;
+}
+ol {
+	color: #333;
+	font-size: 14px;
+	padding-bottom: 8px;
+}
+li {
+	font-size: 14px;
+}
+img {
+	max-width: 100%;
+}
+hr {
+	border: 0;
+	height: 1px;
+	background: #ccc;
+	margin: 0;
+	padding: 0;
+}
