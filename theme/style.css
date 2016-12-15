@@ -30,6 +30,7 @@ body {
 }
 .row {
 	padding: 20px;
+	max-width:960px;
 }
 .title {
 	font-size: 42px;
