@@ -137,6 +137,7 @@ p {
 	font-size: 14px
 }
 h2, h3 {
+  margin: 0;
 	color: #333;
 }
 h4 {
@@ -209,7 +210,6 @@ ol {
 }
 li {
 	font-size: 14px;
-	padding-bottom: 8px;
 }
 img {
 	max-width: 100%;
@@ -280,12 +280,18 @@ p a {
 .sublevel ul {
 	list-style-type: circle;
 	margin: 0;
-	padding: 0 0 10px 0;
+	padding: 0;
 }
 .sublevel ul li {
-	padding: 15px 0 15px 0;
+	padding: 0;
 	max-width: 230px;
 	margin-right: 30px;
+}
+.sublevel ul li a{
+	padding: 12px;
+}
+.sublevel ul li a:first-child {
+  padding-top: 5px;
 }
 .active {
 	font-weight: bold;
@@ -361,6 +367,7 @@ p a {
 		width: 100%
 	}
 }
+/*
 @media (min-width: 450px) and (max-width: 960px) {
 	.container {
 		width: 100%;
@@ -369,7 +376,7 @@ p a {
 		width: 100%
 	}
 	.sublevel ul li {
-		padding: 10px 0 10px 0;
+		padding: 0;
 		max-width: 230px;
 		margin-right: 30px;
 	}
@@ -384,6 +391,7 @@ p a {
 		margin-right: 30px;
 	}
 }
+*/
 #sidebar-open {
 	margin-left: 0;
 	float: left;
