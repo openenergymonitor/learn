@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background-color: #ffffff;
+	background-color: #f5f5f5;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -221,6 +221,7 @@ img {
 	background-color: #44b3e2;
 	height: 42px;
 	text-align: left;
+  display:none;
 }
 #bodyfade {
 	display: none;
@@ -310,9 +311,16 @@ p a {
 	margin: 0;
 	padding: 0;
 	line-height: 42px;
-}
-.learnTitle span {
+  height:42px;
+  padding-left:10px;
   color: #ffffff;
+}
+.learnTitle-iconWrapper {
+  display:inline;
+}
+.learnTitle-titleWrapper {
+  display: inline;
+  padding-left: 5px;
 }
 .boldText {
   font-weight: bold;
@@ -411,9 +419,82 @@ p a {
   float: right;
   padding-right: 15px;
 }
+@media screen and (max-width: 650px) {
+    .topLinks {
+        display:none;
+    }
+}
 .topLinks a {
   color: #ffffff;
 }
 .toplinkBox {
   padding-left:15px;
 }
+.lowermenuWrapper {
+  border-top-style: solid;
+}
+.grayBkd {
+  background-color: #777;
+
+/*----------Table----------*/
+  
+}
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+table th {
+    text-align:left;
+    border: 1px solid #ddd;
+    padding:6px 13px;
+}
+
+table td {
+    text-align:left;
+    border: 1px solid #ddd;
+    padding:6px 13px;
+}
+
+/*---------Sidebar---------*/
+
+ /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 300px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color:rgba(68,179,226,1.0);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    color:#fff;
+    text-align:left;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav_inner {
+    box-sizing: border-box;
+    padding: 0;
+    width: 300px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 0px 0px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
