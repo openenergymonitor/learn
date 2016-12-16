@@ -17,8 +17,7 @@ body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	/* Negative indent footer by it's height */
-	margin: 0 auto -40px;
+	margin: 0 auto -40px; /* Negative indent footer by it's height */
 	text-align: left;
 }
 #rightpanel {
@@ -431,7 +430,6 @@ pre::-webkit-scrollbar-thumb {
       color: #f1f1f1;
   }
   @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
   }
 .sidenav_inner {
