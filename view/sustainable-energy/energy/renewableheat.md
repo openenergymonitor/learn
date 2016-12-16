@@ -4,7 +4,7 @@ There are a number of different approaches to providing space and water heating 
 
 The key limitation with biomass heat is of course land use. Land availability for energy is scarce. Growing biomass for energy on a large scale reduces the amount of land available for growing food and in future other demands such as carbon sequestration.
 
-Heat pumps with the bulk of their power from renewable electricity: primarily wind and solar provides the opportunity to reduce the amount of land required for biomass energy significantly, however there is still a need for a backup electricity supply when the wind is not blowing. The hourly energy model suggests that around 75% of a heat pumps electricity demand can be supplied directly from a wind and solar supply mix (at equal capacities of each) with 25% needing to be sourced from a backup supply. This backup requirement stretches several orders of magnitude beyond the capacity of today’s battery technologies and so another solution is required. ZeroCarbonBritain uses biomass and excess hydrogen to generate large quantities of methane gas which can then be burnt in gas turbines to generate the backup electricity required.
+Heat pumps with the bulk of their power from renewable electricity: primarily wind and solar provides the opportunity to reduce the amount of land required for biomass energy significantly, however there is still a need for a backup electricity supply when the wind is not blowing. The hourly energy model suggests that around 75% of a heat pumps electricity demand can be supplied directly from a wind and solar supply mix (at equal capacities of each) with 25% needing to be sourced from a backup supply. This backup requirement stretches several orders of magnitude beyond the capacity of today’s battery technologies and so another solution is required***. ZeroCarbonBritain uses biomass and excess hydrogen to generate large quantities of methane gas which can then be burnt in gas turbines to generate the backup electricity required.
 
 The following section explores 10 different renewable heat approaches from biomass only approaches to combinations of biomass, heat pumps, CHP and finally biomass as a backup for heat pumps running off primarily wind and solar electricity. It explores the land use implications of each approach.
 
@@ -170,4 +170,67 @@ Another way of looking at it could be to assess both methods in comparison with 
 
 **More detailed modelling would be required to assess the impact of low outside temperatures on heat pump COP with an assessment of benefits of reducing heat pump requirements both at times of low wind and solar output and low temperatures.
 
+## Appendix
 
+#### Calculating the backup requirement of heatpump demand
+
+The heatpump backup requirement of 25% was estimated using the ZeroCarbonBritain based 10 year hourly energy model that we have developed here: [8. Full Household Energy Model](../zcem/integrated.html#fullhousehold). To replicate the result follow these steps:
+
+First simplify the default model to remove the direct synthetic liquid and gas production processes, this makes comparison across different scenario's easier.
+
+1. Starting with default model
+2. Under 'Synthetic liquid fuel' and 'Synthetic methane' untick supply unmet demand from less efficient processes.
+3. Increase gas store to 5000 kWh and starting level to 2500 kWh
+4. Increase wind supply to 1.9kW and solar to 1.9kW so that methane gas store ends at a similar level to its starting level. Ending higher than the start means that there is more renewable generation than needed. Ending lower means that there is unsufficient renewable generation which may mean an empty gas store in further years.
+
+Total supply: 26.6 kWh, Total demand: 17.0 kWh, Primary Energy Factor: 1.57, Excess: 0.4 kWh/d, Total CCGT Output: 2.2 kWh/d.
+
+5. Drop heatpump demand by setting heatpump fraction to 0 under the "Heating System" section.
+6. Reduce wind to 1.22 kW and solar to 1.22 Kw, so that methane store start and end is similar.
+7. Change store size to 3000 kWh and start 1500 kW as the larger store is not needed.
+
+Total supply: 17.1 kWh/d, Total demand: 11.4 kWh/d, Primary Energy Factor: 1.50, Excess: 0.0 kWh/d. Total CCGT Output: 0.8 kWh/d
+
+    Total backup associated with heatpump is 2.2 kWh/d – 0.8 kWh/d = 1.4 kWh/d
+    Total backup as proportion of heatpump demand is 1.4 kWh/d / 5.6 kWh/d = 25%
+
+When heatpump demand is considered in isolation of other demands such as lights, applicances and cooking and electric transport demand, the degree of backup increases to around 30%, suggesting that some of the additional supply required for these demands can be used at certain times by the heatpump resulting in a higher degree of matching.
+
+#### Calculating lithium ion battery capacity required to meet heatpump backup requirement
+
+It is possible to use the 10 year hourly energy model to estimate the size of a lithium ion battery required to backup heatpump demand without using biomass at all.
+
+To do this we start by simplifying the model by removing air transport demand and synthetic methane production for backup supply in order to make the model an electric only model. 
+
+The biomass, synthetic methane scenario uses a significant amount of wind and solar over-supply in order to produce hydrogen from exess wind and solar that can then be combined with biogas in order to create a larger quantity of methane gas. In order to provide a fair comparison the same level of over-supply is used in both our hypothetical battery scenario and the methane backup scenario.
+
+Steps to calculate battery backup size:
+
+1. Remove air miles
+2. Remove synthetic liquid production
+3. Adjust wind and solar so that excess generation is near zero
+
+Result: primary energy factor 1.54 (AD + Sebatier process uses 54% of additional wind and solar supply to generate backup for lights, appliances & cooking, electric cars and heatpumps). We use this same over-supply extent for our battery capacity estimate.
+
+4. Remove sabatier process and AD.
+5. Remove backup gas turbines
+6. Increase wind and solar so that primary energy factor is 1.54
+
+Result wind: 2.22, solar: 2.22, matching: 89%
+
+7. Adjust battery so that 100% supply demand matching is required.
+
+Battery capacity to cover all backup demand including heatpumps: 800 kWh
+
+8. Remove heatpumps
+9. Adjust wind and solar production so that primary energy factor is 1.54. Result onshore wind: 1.15 kW and Solar PV 1.15 kW.
+
+10. Adjust battery so that 100% supply demand matching is required.
+
+Battery capacity to cover all backup demand without heatpumps: 110 kWh
+
+**Conclusion: 690 kWh battery required to cover heatpump demand**. 
+
+The amount of battery backup required to cover heatpump demand is between 50 and 100 times the typical capacities of today's domestic battery storage. Suggesting that significantly lower battery costs, embodied energy levels and perhaps higher energy densities would be required to make battery storage a viable option for covering winter backup demand's of heatpumps.
+
+Lithium battery storage is better suited for hourly and daily storage demands and grid stabilisation, small stores are likely to play a very useful role when used with heatpumps by making it possible to move heatpump demand away from times of otherwise peak grid electricity demand, reducing grid and backup gas generation capacity requirements. Our hourly energy model does not yet model this role for battery storage very well and requires further development.
