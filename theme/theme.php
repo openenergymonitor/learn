@@ -15,55 +15,57 @@
 </script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#777" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
  <body>
   <div id="topnav">
-    <div class="learnTitle">
-      <div class="learnTitle-iconWrapper">
-        <i id="sidebar-open" class="fa fa-bars learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
+    <nav>
+      <div class="learnTitle">
+        <div class="learnTitle-iconWrapper">
+          <i id="sidebar-open" class="fa fa-bars learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
+        </div>
+        <div class="learnTitle-titleWrapper">
+          <span>
+            <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;
+        Open<span class="boldText">EnergyMonitor</span>
+          </span>
+        </div>
+        <div class="learnTitle-topLinks">
+          <div class="learnTitle-topLinks-toplinkBox">
+            <a href="https://community.openenergymonitor.org/">
+              <span class='menuLinks'>
+                <i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community
+              </span>
+            </a>
+          </div>
+          <div class="learnTitle-topLinks-toplinkBox">
+            <a href="https://shop.openenergymonitor.com/">
+              <span class='menuLinks'>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop
+              </span>
+            </a>
+          </div>
+          <div class="learnTitle-topLinks-toplinkBox">
+            <a href="https://guide.openenergymonitor.org/">
+              <span class='menuLinks'>
+                <i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide
+              </span>
+            </a>
+          </div>
+          <div class="learnTitle-topLinks-toplinkBox">
+            <a href="https://openenergymonitor.org/">
+              <span class='menuLinks'>
+                <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="learnTitle-titleWrapper">
-        <span>
-          <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;
-      Open<span class="boldText">EnergyMonitor</span>
-        </span>
-      </div>
-      <div class="learnTitle-topLinks">
-        <div class="learnTitle-topLinks-toplinkBox">
-          <a href="https://community.openenergymonitor.org/">
-            <span class='menuLinks'>
-              <i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Community
-            </span>
-          </a>
-        </div>
-        <div class="learnTitle-topLinks-toplinkBox">
-          <a href="https://shop.openenergymonitor.com/">
-            <span class='menuLinks'>
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop
-            </span>
-          </a>
-        </div>
-        <div class="learnTitle-topLinks-toplinkBox">
-          <a href="https://guide.openenergymonitor.org/">
-            <span class='menuLinks'>
-              <i class="fa fa-book" aria-hidden="true"></i>&nbsp;Guide
-            </span>
-          </a>
-        </div>
-        <div class="learnTitle-topLinks-toplinkBox">
-          <a href="https://openenergymonitor.org/">
-            <span class='menuLinks'>
-              <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
+    </nav>
   </div>
-
   <div id="mySidenav" class="sidenav">
     <div class="sidenav_inner">
       <div class="darkerBkd">
@@ -77,7 +79,6 @@
             </span>
           </div>
         </div>
-    
         <div class="oemMenu">
           <ul>
             <li>
@@ -154,18 +155,18 @@
   <div class="container">
     <div class="row">
     <?php echo $content; ?>
+    <hr>
+      <div class="nextPrev">
+    <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+  </div>
     </div>
   </div>
-
   <div id="rightpanel">
     <div id="rightpanel-inner"></div>
   </div>
-
   <div id="bodyfade"></div>
-
 </body>
 </html>
-
 <script>
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
@@ -324,4 +325,13 @@
 $(window).resize(function(){
     sidebar_resize();
 });
+
+var next = $("li.active").next().html();
+var previous = $("li.active").prev().html();
+var prevSection = $("li.active").closest(".sublevel").prevAll().eq(2).text();
+var nextSection = $("li.active").closest(".sublevel").nextAll().eq(0).text();
+if (next != null) { $('.nextPrev > .next').append("Next&nbsp;<i class='fa fa-chevron-right' aria-hidden='true'></i><br>" + next);}
+  else { $('.nextPrev > .next').append("Next Section:<a><br>" + nextSection + "</a>");}
+if (previous != null) { $('.nextPrev > .prev').append("<i class='fa fa-chevron-left' aria-hidden='true'></i>&nbsp;Previous<br>" + previous);}
+  else { $('.nextPrev > .prev').append("Previous Section:<a><br>" + prevSection + "</a>");}
 </script>
