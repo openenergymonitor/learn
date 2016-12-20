@@ -154,11 +154,12 @@
   </div>
   <div class="container">
     <div class="row">
-    <?php echo $content; ?>
-    <hr>
-      <div class="nextPrev">
-    <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
-  </div>
+        <?php echo $content; ?>
+        <hr>
+        <div class="nextPrev">
+            <div class="prev"></div>
+            <div class="next"></div> <!--important! no white-space-->
+        </div>
     </div>
   </div>
   <div id="rightpanel">
@@ -325,9 +326,6 @@
 $(window).resize(function(){
     sidebar_resize();
 });
-<<<<<<< HEAD
-</script>
-=======
 
 var next = $("li.active").next().html();
 var previous = $("li.active").prev().html();
@@ -338,4 +336,3 @@ if (next != null) { $('.nextPrev > .next').append("Next&nbsp;<i class='fa fa-che
 if (previous != null) { $('.nextPrev > .prev').append("<i class='fa fa-chevron-left' aria-hidden='true'></i>&nbsp;Previous<br>" + previous);}
   else { $('.nextPrev > .prev').append("Previous Section:<a><br>" + prevSection + "</a>");}
 </script>
->>>>>>> 3c01448b65bd2389c9d57f59513779cb4a450a89
