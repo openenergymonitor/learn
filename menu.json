@@ -276,28 +276,32 @@
             "energy": {
                 "nicename": "Energy",
                 "pages": {
+                    "introduction": {
+                        "nicename": "1. Introduction",
+                        "url": "sustainable-energy/energy/introduction"
+                    },
                     "energy-101": {
-                        "nicename": "1. Energy 101",
+                        "nicename": "2. Energy 101",
                         "url": "sustainable-energy/energy/energy-101"
                     },
                     "snowdonia-energy-study": {
-                        "nicename": "2. Snowdonia Energy Study",
+                        "nicename": "3. Snowdonia Energy Study",
                         "url": "sustainable-energy/energy/snowdonia-energy-study"
                     },
                     "snowdonia-energy-study-data": {
-                        "nicename": "3. Snowdonia Energy Study: Data",
+                        "nicename": "4. Snowdonia Energy Study: Data",
                         "url": "sustainable-energy/energy/snowdonia-energy-study-data"
-                    },
-                    "renewableheat": {
-                        "nicename": "4. Renewable Heat",
-                        "url": "sustainable-energy/energy/renewableheat"
                     },
                     "scenarios": {
                         "nicename": "5. Developing Zero Carbon Scenarios",
                         "url": "sustainable-energy/energy/scenarios"
                     },
+                    "renewableheat": {
+                        "nicename": "6. Renewable Heat",
+                        "url": "sustainable-energy/energy/renewableheat"
+                    },
                     "costs": {
-                        "nicename": "6. Looking at Costs",
+                        "nicename": "7. Looking at Costs",
                         "url": "sustainable-energy/energy/costs"
                     },
                     "uk-energy-2015": {
@@ -329,14 +333,6 @@
             "zcem": {
                 "nicename": "Zero Carbon Energy Model",
                 "pages": {
-                    "integrated.html#introduction": {
-                        "nicename": "Introduction",
-                        "url": "sustainable-energy/zcem/integrated.html#introduction"
-                    },
-                    "integrated.html#ukcontext": {
-                        "nicename": "UK Context",
-                        "url": "sustainable-energy/zcem/integrated.html#ukcontext"
-                    },
                     "integrated.html#varsupply": {
                         "nicename": "1. Variable Supply",
                         "url": "sustainable-energy/zcem/integrated.html#varsupply"

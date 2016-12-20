@@ -156,7 +156,7 @@
     <?php echo $content; ?>
     </div>
   </div>
-
+  
   <div id="rightpanel">
     <div id="rightpanel-inner"></div>
   </div>

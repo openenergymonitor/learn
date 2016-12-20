@@ -4,7 +4,7 @@ While it is useful to get an understanding of typical average household energy c
 
 The graphic really illustrates how different each household can be with the most energy consuming household using over 8x the energy consumption of the least energy consuming household (189 kWh/d vs 22 kWh/d). The example of the least energy consuming household demonstrates the effectiveness of many of the key solutions outlined in the power down section of ZeroCarbonBritain, in particular: insulation and air-tightness, heatpumps, electric cars and reducing miles driven by car and air-travel.
 
-The 17 households in the study emitted an total of 141 tonnes of CO2 per year. Just over 8 tonnes per household per year for electric, heating and transport. The household emitting the largest amount of CO2 emitted 17.7 tonnes of CO2/year due to a high degree of air travel and oil fired heating. The household with the lowest CO2 output of 1.3 tonnes/year achieved this with a heatpump heated small cottage, an electric car and no flights. The household with the second lowest CO2 output of 1.5 tonnes/year achieved this with a very well insulated house, a heatpump and a very low mileage of 3500 miles/year in a small petrol car. Both households used green electricity suppliers (see appendix below) however even with the grid average co2 intensity for 2010 of 444gCO2/kWh both households still come out as the lowest carbon emitters with about 2.3 tonnes CO2 each.
+The 17 households in the study emitted a total of 141 tonnes of CO2 per year. Just over 8 tonnes per household per year for electric, heating and transport. The household emitting the largest amount of CO2 emitted 17.7 tonnes of CO2/year due to a high degree of air travel and oil fired heating. The household with the lowest CO2 output of 1.3 tonnes/year achieved this with a heatpump heated small cottage, an electric car and no flights. The household with the second lowest CO2 output of 1.5 tonnes/year achieved this with a very well insulated house, a heatpump and a very low mileage of 3500 miles/year in a small petrol car. Both households used green electricity suppliers (see appendix below) however even with the grid average co2 intensity for 2010 of 444gCO2/kWh both households still come out as the lowest carbon emitters with about 2.3 tonnes CO2 each.
 
 ![0present.png](images/0present.png)
 
@@ -14,7 +14,7 @@ The 17 households in the study emitted an total of 141 tonnes of CO2 per year. J
 
 The study showed a large variation in heating demand with the highest heating energy (fuel) household using 36,360 kWh/year (99.6 kWh/d) and the lowest 2205 kWh/year (6.0 kWh/d), a 17x difference. The average heating fuel demand was 17,245 kWh/year (47 kWh/d). The groups average is slightly higher than the UK average of 41 kWh/d.
 
-Taking into account estimated efficiencies of each heating system the delivered heat ranged from 27,980 kWh/year (76.7 kWh/d) to 3444 kWh/year (9.4 kWh/d). An average of 14,164 kWh/year (38.8 kWh/d). The ZeroCarbonBritain target for space and water heating demand is 17.4 kWh/d, delivered from 7.0 kWh/d of electric via heatpumps.
+Taking into account estimated efficiencies of each heating system the delivered heat ranged from 27,980 kWh/year (76.7 kWh/d) to 3444 kWh/year (9.4 kWh/d). An average of 14,164 kWh/year (38.8 kWh/d). The ZeroCarbonBritain target for space and water heating demand is 17.4 kWh/d, with most delivered from 7.0 kWh/d of electric via heatpumps.
 
 There are several factors that contributed to the large variation in heating demand between households seen above.
 
@@ -40,20 +40,24 @@ As part of the study we explored in a basic way the effect of carrying out diffe
 
 - Switching to a 100% green electricity supplier
 - Replacing Oil, Gas, Coal heating with heatpumps
-- Improving insulation and air-tightness to achieve at least kWh/m2/year primary energy requirements
+- Improving insulation and air-tightness to achieve at least *** kWh/m2/year primary energy requirements
 - Replacing gas cooking with electric cooking
 - Replacing petrol and diesel cars and motorbikes with electric vehicles
 - Replacing plane and boat journeys with electric train journeys
 - Full electrification of rail network
 - Electric buses
 
-With these largely 'technology switch' based measures CO2 emissions could theoretically be reduced to zero with fully zero carbon energy supply. Primary energy is reduced by 60% to 38.5 kWh/d per household without any further reduction in miles driven or home comfort. This is still larger than the household average target as suggested by ZeroCarbonBritain of about 24 kWh/d of primary energy per household (20 kWh/d final energy).
+With these largely 'technology switch' based measures CO2 emissions could theoretically be reduced to zero with fully zero carbon energy supply. Primary energy is reduced by 60% to 38.5 kWh/d per household without any further reduction in miles driven or home comfort. This is still larger than the household average target as suggested by ZeroCarbonBritain of about 24 kWh/d of primary energy per household (20 kWh/d final energy), however the results do not yet contain a full assessment of energy savings that might be possible with more efficient appliances and a more comprehensive look at retrofit savings.
 
 Switching from planes to trains is perhaps one of the most speculative measures, if flights where still included and with fuel from fossil sources the resulting co2 emissions would be 27 tonnes/year, which is still an 80% reduction.
 
 If natural gas was used as the backup supply and flights where included the overall reduction in CO2 emissions could be 75% to 35 tonnes/year.
 
 Interestingly even if the electricity supply remained at 2010 carbon intensity levels of 444gCO2/kWh and the households switched to heatpumps and electric vehicles a base carbon saving of 25% would be achieved. This would then extend to a potential carbon saving of up to 77% as the electricity supply is further de-carbonised.
+
+### Developing Zero Carbon Scenarios
+
+Section 4 on developing zero carbon scenarios builds on this basic analysis with a much more detailed approach involving a 10 year hourly zero carbon energy model, taking into account supply/demand matching requirements, the need for backup for times where there is less wind and solar output. 
 
 <div style="clear:both"></div>
 

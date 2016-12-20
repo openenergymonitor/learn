@@ -1,4 +1,4 @@
-# Renewable Heat
+## Renewable Heat
 
 There are a number of different approaches to providing space and water heating with a renewable supply. Perhaps the two most well known renewable heat technologies are heat pumps powered by renewable electricity and biomass heat.
 
@@ -10,7 +10,7 @@ The following section explores 10 different renewable heat approaches from bioma
 
 A household heat demand of 6100 kWh/year for hot water and space heating is used, which is based on a just over 50% saving from better insulation and draft proofing. The land areas discussed below would be slightly more than double if building fabric energy efficiency remained at today’s levels.
 
-## Biomass only
+### Biomass only
 
 #### High efficiency biomass boilers 8-14%
 
@@ -65,7 +65,7 @@ Biogas from Anaerobic Digestion has a relatively high CO2 content** . ZeroCarbon
 
 With sebatier enhanced anaerobic digestion, methane gas could be produced at a power production per unit area of 0.51W/m2 which would reduce the amount of land required to 1482m2 or 16%. Which is not far off our estimate for the land area requirement of short rotation coppice in biomass boilers above.
 
-## Heat pumps & Biomass backup
+### Heat pumps & Biomass backup
 
 The next series of examples explore the addition of heat pumps starting with heat pumps powered solely from electricity generated from biomass and then adding in renewably electricity from wind and solar with biomass electricity used as a backup.
 
@@ -170,7 +170,7 @@ Another way of looking at it could be to assess both methods in comparison with 
 
 **More detailed modelling would be required to assess the impact of low outside temperatures on heat pump COP with an assessment of benefits of reducing heat pump requirements both at times of low wind and solar output and low temperatures.
 
-## Appendix
+### Appendix
 
 #### Calculating the backup requirement of heatpump demand
 
