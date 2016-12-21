@@ -1,4 +1,4 @@
-## Costs
+## Looking at costs
 
 Note: When comparing different generating technologies the unit costs below only show part of the story, for a full comparison, backup, storage, transmission and distribution costs also need to be taken into account.
 

@@ -154,11 +154,12 @@
   </div>
   <div class="container">
     <div class="row">
-    <?php echo $content; ?>
-    <hr>
-      <div class="nextPrev">
-    <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
-  </div>
+        <?php echo $content; ?>
+        <hr>
+        <div class="nextPrev">
+            <div class="prev"></div>
+            <div class="next"></div> <!--important! no white-space-->
+        </div>
     </div>
   </div>
   <div id="rightpanel">
