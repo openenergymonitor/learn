@@ -33,7 +33,9 @@
         </div>
         <div class="learnTitle-titleWrapper">
           <span>
-            <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
+            <a href="/learn" style="all:inherit">
+              <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
+            </a>
           </span>
         </div>
         <div class="learnTitle-topLinks">
@@ -76,10 +78,7 @@
           <div class='menuTitle'>
             <div class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
             </div>
-            <span>Learn
-            </span> |
-        Open<span>EnergyMonitor
-            </span>
+              <span>Learn</span> | Open<span>EnergyMonitor</span>
           </div>
         </div>
         <div class="oemMenu">
@@ -351,13 +350,13 @@ var nsLink = nsLocate.next().find('a:first').attr('href');
 if (next != null) {
   $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
 }
-else {
+else if (nsLink != null) {
   $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
 }
 if (previous != null) {
   $('.nextPrev > .prev').append("Previous:<br>" + previous);
 }
-else {
+else if (psLink != null) {
   $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
 }
 </script>
