@@ -14,13 +14,17 @@
   var apikey = "<?php print $apikey; ?>";
 </script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#777" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
- <body>
+<body>
+  <script>
+    $('body').css("display","none")
+    $('body').fadeIn("fast");
+  </script>
   <div id="topnav">
     <nav>
       <div class="learnTitle">
@@ -29,8 +33,7 @@
         </div>
         <div class="learnTitle-titleWrapper">
           <span>
-            <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;
-        Open<span class="boldText">EnergyMonitor</span>
+            <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
           </span>
         </div>
         <div class="learnTitle-topLinks">
@@ -73,7 +76,7 @@
           <div class='menuTitle'>
             <div class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
             </div>
-            <span><i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;Learn
+            <span>Learn
             </span> |
         Open<span>EnergyMonitor
             </span>
@@ -122,15 +125,15 @@
       </div>
       <div class="lowermenuWrapper">
       <?php
-      
+
       $menu = json_decode(file_get_contents("menu.json"));
-      
+
       foreach ($menu as $mk1=>$mv1)
       {
         echo "<div class='toplevelhead'>
         <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
         echo "<div class='toplevel' name='$mk1'>";
-      
+
         foreach ($mv1->chapters as $mk2=>$mv2)
         {
           echo "<div class='sublevelhead'>
@@ -138,7 +141,7 @@
           <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
           </span>&nbsp;".$mv2->nicename."</div>";
           echo "<div class='sublevel' name='$mk2'><ul>";
-      
+
           foreach ($mv2->pages as $mk3=>$mv3)
           {
             echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
@@ -147,7 +150,7 @@
         }
         echo "</div>";
       }
-      
+
       ?>
       </div>
     </div>
@@ -155,10 +158,8 @@
   <div class="container">
     <div class="row">
         <?php echo $content; ?>
-        <hr>
         <div class="nextPrev">
-            <div class="prev"></div>
-            <div class="next"></div> <!--important! no white-space-->
+            <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
         </div>
     </div>
   </div>
@@ -207,7 +208,15 @@
       sl.show();
       sl.prev().addClass("clickedOnce");
       sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
-      sl.find("li[name='"+q[2]+"']").addClass('active');
+ //     sl.find("li[name='"+q[2]+"']").addClass('active');
+ 
+    $("a[href='" + window.location.href + "']").parent().addClass("active");
+
+    $(window).on('hashchange', function(e){
+      $(".menu a").parent().removeClass("active");
+      $("a[href='" + window.location.href + "']").parent().addClass("active");
+    });
+
     }
 // ----------------------------------------------------------------------------------------
 // Open and close top level of menu
@@ -272,7 +281,7 @@
         $(".sidenav").css("width","0px");
         $(".oemMenu").slideUp("fast");
         $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
-        $("#topnav").slideDown("fast");
+        $("#topnav").show();
         $("#sidebar-close-btn").css("display","none");
         $("#bodyfade").hide();
         fixsidebar = false;
@@ -286,14 +295,14 @@
       if (width<1260) {
           if (fixsidebar===false) {
               $(".sidenav").css("width","0");
-              $("#topnav").slideDown("fast");
+              $("#topnav").show();
           } else {
               $("#bodyfade").show();
           }
       $(".container").css("margin","0 auto");
       } else {
           $(".sidenav").css("width","300px");
-          $("#topnav").slideUp("fast");
+          $("#topnav").hide();
           $(".container").css("margin-left","300px");
           $("#bodyfade").hide();
     }
@@ -327,12 +336,32 @@ $(window).resize(function(){
     sidebar_resize();
 });
 
-var next = $("li.active").next().html();
+// ----------------------------------------------------------------------------------------
+//  Next & previous links on page
+// ----------------------------------------------------------------------------------------
+
 var previous = $("li.active").prev().html();
-var prevSection = $("li.active").closest(".sublevel").prevAll().eq(2).text();
-var nextSection = $("li.active").closest(".sublevel").nextAll().eq(0).text();
-if (next != null) { $('.nextPrev > .next').append("Next&nbsp;<i class='fa fa-chevron-right' aria-hidden='true'></i><br>" + next);}
-  else { $('.nextPrev > .next').append("Next Section:<a><br>" + nextSection + "</a>");}
-if (previous != null) { $('.nextPrev > .prev').append("<i class='fa fa-chevron-left' aria-hidden='true'></i>&nbsp;Previous<br>" + previous);}
-  else { $('.nextPrev > .prev').append("Previous Section:<a><br>" + prevSection + "</a>");}
+var psLocate = $("li.active").closest(".sublevel").prevAll().eq(2);
+var prevSection = psLocate.text();
+var psLink = psLocate.next().find('a:first').attr('href');
+var next = $("li.active").next().html();
+var nsLocate = $("li.active").closest(".sublevel").nextAll().eq(0);
+var nextSection = nsLocate.text();
+var nsLink = nsLocate.next().find('a:first').attr('href');
+var chvrt = "<i class='fa fa-chevron-right' aria-hidden='true'></i>";
+var chvlf = "<i class='fa fa-chevron-left' aria-hidden='true'></i>";
+
+if (next != null) {
+  $('.nextPrev > .next').append("Next:&nbsp;<br>" + next + "&nbsp;>");
+}
+else {
+  $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
+}
+if (previous != null) {
+  $('.nextPrev > .prev').append("< Previous:<br>" + previous);
+}
+else {
+  $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
+}
+
 </script>

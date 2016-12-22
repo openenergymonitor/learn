@@ -1,39 +1,42 @@
 <style>
- .flex-container {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
 }
 
 .flex-item {
-    width: 154px;
-    height: 100%;
-    margin: 10px;
-    text-align: center;
+  width: 154px;
+  height: 100%;
+  margin: 10px;
+  text-align: center;
 }
 .flex-item h2 {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 .learnpageIcons {
-    box-sizing: border-box;
-    width: 100%;
-    height: 150px;
-    border: 4px solid #ffffff;
-    display: table;
-    background-color: #44b3e2;
-    color: #ffffff;
-    box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  border: 4px solid #ffffff;
+  display: table;
+  background-color: #44b3e2;
+  color: #ffffff;
+  box-shadow: none;
 }
 .learnpageIcons i {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    text-shadow: none;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: none;
+}
+.nextPrev {
+  display: none;
 }
 </style>
 

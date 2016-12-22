@@ -11,7 +11,6 @@
   display: inline-block;
   width: 50%;
   vertical-align:top;
-
 }
 .prev {
   display: inline-block;
@@ -26,9 +25,8 @@
 .next a, .prev a {
   font-weight: bold;
   color: #44b3e2;
-  max-width: 50% ;
+  max-width: 100px ;
 }
-
 
 body {
 	font-family: Ubuntu, Veranda, sans-serif;
@@ -37,6 +35,8 @@ body {
 	padding: 0;
 	text-align: center;
 	background-color: #f5f5f5;
+	
+/*
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -44,6 +44,9 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	
+*/
+
 }
 .container {
 	min-height: 100%;
@@ -470,6 +473,7 @@ pre::-webkit-scrollbar-thumb {
 a {
 	font-size: 14px;
 	text-decoration: none;
+	color: #44b3e2;
 }
 blockquote {
 	font-family: serif;
