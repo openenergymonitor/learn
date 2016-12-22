@@ -82,5 +82,3 @@ That's the fundamentals of AC power measurement on the emontx or an Arduino.
 #### EmonLib
 
 We have packaged these calculations into an Arduino library called EmonLib to simplify Arduino energy monitor sketches. The library can be found on github here: [https://github.com/openenergymonitor/EmonLib](https://github.com/openenergymonitor/EmonLib)
-
-**Next: [AC Power Theory - Advanced maths](advanced-maths)** - The code snippets on this page are expressed in strict mathematical terms.

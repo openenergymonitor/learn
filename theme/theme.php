@@ -15,7 +15,7 @@
 </script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#777" />
+<meta name="theme-color" content="#44b3e2" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
@@ -348,20 +348,16 @@ var next = $("li.active").next().html();
 var nsLocate = $("li.active").closest(".sublevel").nextAll().eq(0);
 var nextSection = nsLocate.text();
 var nsLink = nsLocate.next().find('a:first').attr('href');
-var chvrt = "<i class='fa fa-chevron-right' aria-hidden='true'></i>";
-var chvlf = "<i class='fa fa-chevron-left' aria-hidden='true'></i>";
-
 if (next != null) {
-  $('.nextPrev > .next').append("Next:&nbsp;<br>" + next + "&nbsp;>");
+  $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
 }
 else {
   $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
 }
 if (previous != null) {
-  $('.nextPrev > .prev').append("< Previous:<br>" + previous);
+  $('.nextPrev > .prev').append("Previous:<br>" + previous);
 }
 else {
   $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
 }
-
 </script>

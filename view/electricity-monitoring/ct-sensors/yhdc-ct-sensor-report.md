@@ -66,6 +66,8 @@ Some tests that were carried out on the earlier versions have not been repeated.
 
 The ratio was checked from 0.5 A to 250 A with a multimeter on the a.c. mA range as the burden.
 
+<div class="xaxiswrapper">
+
 <table border="0" cellpadding="2" cellspacing="2">
 
 <thead>
@@ -691,6 +693,8 @@ error
 </tbody>
 
 </table>
+
+</div>
 
 The measured ratio is comfortably within the specification ( ± 3% over the range 10 A to 120 A).
 
