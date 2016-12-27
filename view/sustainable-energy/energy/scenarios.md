@@ -41,7 +41,7 @@ For a small town of 1000 households, the model suggests that for all electric, h
 - 1.9 MW of wind might cost in the order of £3.3-4.7 million including operation and maintanence costs or 5-8% of the amount spend anyway over 25 years. 
 - 1.9 MW of solar corresponds to a 1.9 kW system on each roof, typical installation capacities today are anywhere from 1 to 4 kW. If not all rooves where suitable perhaps a mix of a ground mounted array and individual roofs could be used. 1000x 2kW systems would cost around £3.8 million or 6.1% of the 25 year energy cost.
 
-The default model uses sabatier enhanced methane production using exess wind and solar electricity to produce hydrogen which is then combined with biogas from anaerobic digestion in order to produce a larger amount of methane for a given amount of biomass. Using this process 1 MW of electrolysis plant would also be needed and the equipment needed for the sebatier reaction in addition to the anaerobic digestor.
+The default model uses sabatier enhanced methane production using exess wind and solar electricity to produce hydrogen which is then combined with biogas from anaerobic digestion in order to produce a larger amount of methane for a given amount of biomass. Using this process 1 MW of electrolysis plant would also be needed and the equipment needed for the sabatier reaction in addition to the anaerobic digestor.
 
 The resulting land area requirements are: 
 
@@ -50,9 +50,9 @@ The resulting land area requirements are:
 
 If the village or town has an equall share of UK land area, the land area available would be 923 hectares, which would need to cover a variety of different requirements of which biomass energy is only one of them.
 
-#### 2. Without electrolysis and the sebatier process
+#### 2. Without electrolysis and the sabatier process
 
-The sebatier process used in ZeroCarbonBritian is not yet used as part of today's anaerobic digestion plants, what if we used standard AD instead of the 1 MW electrolysis plant and sabatier reactors? Choosing perhaps to retrofit these options on at a later date, as the technology is further advanced?
+The sabatier process used in ZeroCarbonBritian is not yet used as part of today's anaerobic digestion plants, what if we used standard AD instead of the 1 MW electrolysis plant and sabatier reactors? Choosing perhaps to retrofit these options on at a later date, as the technology is further advanced?
 
 We can modify the model to explore the implications of this option by setting the electrolysis capacity to zero and putting a tick in the box for meeting unmet demand for both liquid fuel and gas from less efficient direct biomass methods.
 

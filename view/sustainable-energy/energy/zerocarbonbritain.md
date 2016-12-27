@@ -4,7 +4,7 @@ The ZeroCarbonBritain energy model is a 10-year hourly energy model developed by
 
 The model includes 10 year hourly offshore wind, onshore wind, solar, wave & tidal datasets, these are derived from hourly weather data mapped to relevant offshore and onshore regions. These datasets are normalised and can be multiplied by an installed capacity in order to provide an expected output for a given installed capacity.
 
-On the demand side the model builds up a detailed picture covering everything from lighting, appliances, cooking, water heating, space heating, electric, hydrogen, biofuel vehicles to industrial process demand. A multitude of different short term storage technologies are included from heat and battery stores to pump-storage. Longer term backup is provided with gas turbines run on sebatier enhanced biogas combining hydrogen from excess renewable electricity with biogas to produce larger quantities of methane.
+On the demand side the model builds up a detailed picture covering everything from lighting, appliances, cooking, water heating, space heating, electric, hydrogen, biofuel vehicles to industrial process demand. A multitude of different short term storage technologies are included from heat and battery stores to pump-storage. Longer term backup is provided with gas turbines run on sabatier enhanced biogas combining hydrogen from excess renewable electricity with biogas to produce larger quantities of methane.
 
 Energy is provided in the form of electricity, hydrogen, liquid biofuel and methane gas to meet the variety of demand types.
 
@@ -58,7 +58,7 @@ Having completed an initial port of most of the ZeroCarbonBritain model to these
 
 #### September 2016: Completing the household energy model
 
-The step by step guide developed in 2015 got as far as integrating most of the key electrification technologies but did not get as far as replicating the wider ZeroCarbonBritain model including key parts such as 'power to gas' biogas+sebatier backup, household related aviation demand and options to include a mix of heating system and personal transportation technologies and fuels.
+The step by step guide developed in 2015 got as far as integrating most of the key electrification technologies but did not get as far as replicating the wider ZeroCarbonBritain model including key parts such as 'power to gas' biogas+sabatier backup, household related aviation demand and options to include a mix of heating system and personal transportation technologies and fuels.
 
 The latest version of the zero carbon energy model now integrates these parts and includes finer grained inputs that relate more clearly to sources of household energy demand than the original web models developed in late 2014/early 2015.
 
@@ -120,7 +120,7 @@ At the same time land use requirements do double to 10% with similar feasibility
 
 **Solar PV Max**
 
-Another interesting but perhaps more hypothetical scenario in light of discussion of the dominant potential role of solar in the future energy system is a solar max scenario consisting of only solar pv and biomass. In this scenario excess solar electricity is used to generate hydrogen which is combined with biogas to create larger quantities of methane. Methane is then burnt in gas turbines to provide backup throughout the winter season. It is perhaps notable that a land area as low as 10% is achieved in this scenario given the bulk of backup power required to cover winter months. Co-location of solar and biogas+sebatier plants would likely be needed in this scenario as long distance transport of the solar energy would otherwise need particularly high grid capacities.
+Another interesting but perhaps more hypothetical scenario in light of discussion of the dominant potential role of solar in the future energy system is a solar max scenario consisting of only solar pv and biomass. In this scenario excess solar electricity is used to generate hydrogen which is combined with biogas to create larger quantities of methane. Methane is then burnt in gas turbines to provide backup throughout the winter season. It is perhaps notable that a land area as low as 10% is achieved in this scenario given the bulk of backup power required to cover winter months. Co-location of solar and biogas+sabatier plants would likely be needed in this scenario as long distance transport of the solar energy would otherwise need particularly high grid capacities.
 
 **Biomass only**
 

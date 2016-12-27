@@ -57,13 +57,13 @@ An alternative approach is the production of biogas, injected into the gas grid 
 
 AD requires wet biomass such as rotational grasses. These have an energy content of about 0.51 W/m2. Converted to biogas the energy content is equivalent to 0.31 W/m2. Assuming no losses associated with transportation in the gas network and a gas boiler efficiency of 92% resulting in a gas demand of 18.2 kWh/d or 756W. 2440 m2 of rotational grasses are required, equivalent to 26% of UK land area if scaled up for all households.
 
-#### "Grass for gas" with enhanced sebatier processing (16%)
+#### "Grass for gas" with enhanced sabatier processing (16%)
 
-Biogas from Anaerobic Digestion has a relatively high CO2 content** . ZeroCarbonBritain suggests the addition of sebatier reactors to AD plants that can combine hydrogen generated from excess wind and solar electricity with CO2 from the AD biogas to create a larger quantity of methane.
+Biogas from Anaerobic Digestion has a relatively high CO2 content** . ZeroCarbonBritain suggests the addition of sabatier reactors to AD plants that can combine hydrogen generated from excess wind and solar electricity with CO2 from the AD biogas to create a larger quantity of methane.
 
 2.0 kWh of biomass + 1.0 kWh of hydrogen = 2.0 kWh of synthetic methane
 
-With sebatier enhanced anaerobic digestion, methane gas could be produced at a power production per unit area of 0.51W/m2 which would reduce the amount of land required to 1482m2 or 16%. Which is not far off our estimate for the land area requirement of short rotation coppice in biomass boilers above.
+With sabatier enhanced anaerobic digestion, methane gas could be produced at a power production per unit area of 0.51W/m2 which would reduce the amount of land required to 1482m2 or 16%. Which is not far off our estimate for the land area requirement of short rotation coppice in biomass boilers above.
 
 ### Heat pumps & Biomass backup
 
@@ -90,7 +90,7 @@ This utilises an additional 0.153 W/m2 above 0.3672 W/m2 achieved with power gen
 
 75% wind and solar, 25% biomass backup =  1338m2 x 0.25 = 335 m2 (3.6%)
 
-#### Heat pumps + sebatier enhanced AD (10% biomass only, 2.5% wind & solar backup)
+#### Heat pumps + sabatier enhanced AD (10% biomass only, 2.5% wind & solar backup)
 
 We start here again with rotational grasses at a land efficiency of 0.51W/m2. 0.51W/m2 of higher quality methane is produced. This can then be burnt at up to 60% efficiency in large CCGT gas turbines. Although 50% may be more representative and is the efficiency used in ZeroCarbonBritain. The electricity produced has a land efficiency of 0.255 W/m2
 
@@ -210,7 +210,7 @@ Steps to calculate battery backup size:
 2. Remove synthetic liquid production
 3. Adjust wind and solar so that excess generation is near zero
 
-Result: primary energy factor 1.54 (AD + Sebatier process uses 54% of additional wind and solar supply to generate backup for lights, appliances & cooking, electric cars and heatpumps). We use this same over-supply extent for our battery capacity estimate.
+Result: primary energy factor 1.54 (AD + sabatier process uses 54% of additional wind and solar supply to generate backup for lights, appliances & cooking, electric cars and heatpumps). We use this same over-supply extent for our battery capacity estimate.
 
 4. Remove sabatier process and AD.
 5. Remove backup gas turbines
