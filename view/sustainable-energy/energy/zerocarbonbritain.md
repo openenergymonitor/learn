@@ -46,15 +46,15 @@ In the following weeks I helped Philip convert his java model into a javascript 
 
 Having completed an initial port of most of the ZeroCarbonBritain model to these javascript web models I realised that having put everything together at the same time I had missed some of the understanding of how the constituent parts add up to the bigger picture and so in order to try and get to a better understanding I went about breaking the model down and build it up part, writing up the process as a energy model guide. The result of which where published as a web tool which is now integrated in the zero carbon energy model section of this site and also a series of blogs:
 
-- [1. June 10, 2015: Modelling hourly demand and supply for renewable powered domestic electricity,<br>heating with heatpumps and electric vehicles](http://openenergymonitor.blogspot.co.uk/2015/06/modelling-hourly-demand-and-supply-for.html)
-- [2. June 11, 2015: Variable Supply](http://openenergymonitor.blogspot.co.uk/2015/06/hourly-energy-model-example-1-variable.html)
-- [3. June 12, 2015: Variable supply and flat demand](http://openenergymonitor.blogspot.co.uk/2015/06/hourly-energy-model-example-2-variable.html)
-- [4. June 14, 2015: Variable supply and traditional electricity demand](http://openenergymonitor.blogspot.co.uk/2015/06/hourly-energy-model-example-3-variable.html)
-- [5. June 18, 2015: Complementarity of different renewable generating technologies](http://openenergymonitor.blogspot.com/2015/06/hourly-energy-model-example-4.html)
-- [6. June 22, 2015: Simple space heating model with heatpump's powered by renewable energy](http://openenergymonitor.blogspot.com/2015/06/hourly-energy-model-example-5-simple.html)
-- [7. July 2, 2015: Electric vehicles and a renewable energy supply](http://openenergymonitor.blogspot.com/2015/07/hourly-energy-model-example-5-electric.html)
-- [8. July 4, 2015: Combining traditional electric, heating and electric vehicle demand.](http://openenergymonitor.blogspot.com/2015/07/open-source-hourly-zero-carbon-energy.html)
-- [9. August 2, 2015: Understanding zero carbon energy systems: Energy storage (part 1)](http://openenergymonitor.blogspot.com/2015/08/understanding-zero-carbon-energy.html)
+- [1. June 10, 2015: Modelling hourly demand and supply for renewable powered domestic electricity,<br>heating with heatpumps and electric vehicles](https://blog.openenergymonitor.org/2015/06/modelling-hourly-demand-and-supply-for/)
+- [2. June 11, 2015: Variable Supply](https://blog.openenergymonitor.org/2015/06/hourly-energy-model-example-1-variable/)
+- [3. June 12, 2015: Variable supply and flat demand](https://blog.openenergymonitor.org/2015/06/hourly-energy-model-example-2-variable/)
+- [4. June 14, 2015: Variable supply and traditional electricity demand](https://blog.openenergymonitor.org/2015/06/hourly-energy-model-example-3-variable/)
+- [5. June 18, 2015: Complementarity of different renewable generating technologies](https://blog.openenergymonitor.org/2015/06/hourly-energy-model-example-4/)
+- [6. June 22, 2015: Simple space heating model with heatpump's powered by renewable energy](https://blog.openenergymonitor.org/2015/06/hourly-energy-model-example-5-simple/)
+- [7. July 2, 2015: Electric vehicles and a renewable energy supply](https://blog.openenergymonitor.org/2015/07/hourly-energy-model-example-5-electric/)
+- [8. July 4, 2015: Combining traditional electric, heating and electric vehicle demand.](https://blog.openenergymonitor.org/2015/07/open-source-hourly-zero-carbon-energy/)
+- [9. August 2, 2015: Understanding zero carbon energy systems: Energy storage (part 1)](https://blog.openenergymonitor.org/2015/08/understanding-zero-carbon-energy/)
 
 #### September 2016: Completing the household energy model
 
