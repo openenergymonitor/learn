@@ -40,16 +40,16 @@ As part of the study we explored in a basic way the effect of carrying out diffe
 
 - Switching to a 100% green electricity supplier
 - Replacing Oil, Gas, Coal heating with heatpumps
-- Improving insulation and air-tightness to achieve at least *** kWh/m2/year primary energy requirements
+- Improving insulation and air-tightness to achieve at least 120 kWh/m2/year primary energy requirements
 - Replacing gas cooking with electric cooking
 - Replacing petrol and diesel cars and motorbikes with electric vehicles
 - Replacing plane and boat journeys with electric train journeys
 - Full electrification of rail network
 - Electric buses
 
-With these largely 'technology switch' based measures CO2 emissions could theoretically be reduced to zero with fully zero carbon energy supply. Primary energy is reduced by 60% to 38.5 kWh/d per household without any further reduction in miles driven or home comfort. This is still larger than the household average target as suggested by ZeroCarbonBritain of about 24 kWh/d of primary energy per household (20 kWh/d final energy), however the results do not yet contain a full assessment of energy savings that might be possible with more efficient appliances and a more comprehensive look at retrofit savings.
+With these largely 'technology switch' based measures CO2 emissions could theoretically be reduced to zero with fully zero carbon energy supply. Primary energy is reduced by 60% to 38.5 kWh/d per household without any further reduction in miles driven or home comfort. This is still larger than the household average target as suggested by ZeroCarbonBritain, however the results do not yet contain a full assessment of energy savings that might be possible with more efficient appliances and a more comprehensive look at retrofit savings.
 
-Switching from planes to trains is perhaps one of the most speculative measures, if flights where still included and with fuel from fossil sources the resulting co2 emissions would be 27 tonnes/year, which is still an 80% reduction.
+Switching from planes to trains is perhaps one of the most speculative measures, if flights where still included and with fuel from fossil sources the resulting co2 emissions would be 27 tonnes/year, which is still an 80% reduction. Alternatives could also be explored such as synthetic liquid fuel powered aircraft as used in ZeroCarbonBritain or David MacKay's suggestion of airships in Sustainable Energy without the hot air.
 
 If natural gas was used as the backup supply and flights where included the overall reduction in CO2 emissions could be 75% to 35 tonnes/year.
 
@@ -57,7 +57,7 @@ Interestingly even if the electricity supply remained at 2010 carbon intensity l
 
 ### Developing Zero Carbon Scenarios
 
-Section 4 on developing zero carbon scenarios builds on this basic analysis with a much more detailed approach involving a 10 year hourly zero carbon energy model, taking into account supply/demand matching requirements, the need for backup for times where there is less wind and solar output. 
+Section 5 and 6 on developing zero carbon scenarios builds on this basic analysis with a much more detailed approach involving a 10 year hourly zero carbon energy model, taking into account supply/demand matching requirements, the need for backup for times where there is less wind and solar output. 
 
 <div style="clear:both"></div>
 

@@ -1,6 +1,8 @@
 ## Looking at costs
 
-Note: When comparing different generating technologies the unit costs below only show part of the story, for a full comparison, backup, storage, transmission and distribution costs also need to be taken into account.
+As mentioned in the section on producing a village or small town scale zero carbon energy plan, on the surface it may be too easy to dismiss or feel that the technologies and measures required for a zero carbon energy system are too costly or ambitious, however this would miss the bigger picture of how much we spend on energy anyway, a quick back of the envelope calculation helps to put the costs in some context. Assuming the current average UK household energy expenditure of £2500/year for electricity, gas and petrol/diesel as worked out in [Appendix 1: UK Energy 2015](uk-energy-2015). A small town or village of 1000 households will spend £62.5 million on energy over 25 years even if no changes where made and assuming no rise or fall in energy prices.
+
+This page explores the costs of some of the key zero carbon energy technologies first on their own and then as a supply mix including the cost of providing backup power when the wind and solar output is low attempting to arrive at a rough estimate of what the unit cost of zero carbon electricity could be including network, supplier and policy related costs.
 
 ### Wind Power
 
@@ -18,7 +20,7 @@ Note: When comparing different generating technologies the unit costs below only
 
 Maintenance costs are based on annual O&M cost estimates available on renewablesfirst.co.uk, with costs for turbines where this information is not available estimated at £40/kW/year.
 
-The costs above do not include business rates, wind turbine insurance, financing or network costs which increase the final cost of the delivered electricity.
+The costs above do not include business rates, wind turbine insurance, financing or network costs which increase the final cost of the delivered electricity. Some of these costs are explored in more detail below.
 
 The cost of wind generated electricity has fallen significantly over the last 40 years, the following graphic on the left illustrates the extent of these cost reductions for wind power in the US with a fall of 10x from $0.55/kWh to $0.05/kWh. With these cost reductions installation rates have rocketed with over 63 GW of wind having been installed in the US between 2001 and 2015. Total global wind capacity in 2015 reached 432.4 GW.
 
@@ -64,11 +66,11 @@ As in the case of wind, the cost of solar has also fallen significantly over the
 
 **Solar costs Contracts for Difference**
 
-The 2015 Contracts for Difference auction secured large scale solar generation at a cost of £79.23/MWh. It is notable that the strike price achieved suggests that the installation cost for large scale solar in the UK is significantly below those quoted for 3-4kW of domestic solar as this strike price would need to cover at least project financing in addition to the construction cost. Two projects put forward bids at £50/MWh however these have [not gone ahead](http://www.pv-magazine.com/news/details/beitrag/uk--no-cfd-backed-large-scale-solar-for-next-fiscal-year_100018940/#axzz4SGD8fWjJ).
+The 2015 Contracts for Difference auction secured large scale solar generation at a cost of £79.23/MWh. It is notable that the strike price achieved suggests that the installation cost for large scale solar in the UK is significantly below those quoted for 3-4kW of domestic solar as this strike price would need to cover at least project financing in addition to the construction cost. Two projects put forward bids at £50/MWh however these have [not gone ahead](http://www.pv-magazine.com/news/details/beitrag/uk--no-cfd-backed-large-scale-solar-for-next-fiscal-year_100018940/#axzz4SGD8fWjJ) - while not currently viable at this price these project may well indicate the direction that costs are heading. 
 
 ### Anaerobic Digestion
 
-Anaerobic digestion plants with gas turbine generators with or without heat recovery could potentially be used as a dis-patchable backup supply. In ZeroCarbonBritain biogas from AD is combined with hydrogen from electrolysis via the sebatier process in order to produce more methane from a given amount of input biomass. The AD system costs below are for the direct AD plant with power generation.
+Anaerobic digestion plants with gas turbine generators with or without heat recovery could potentially be used as a dis-patchable backup supply. In ZeroCarbonBritain biogas from AD is combined with hydrogen from electrolysis via the sabatier process in order to produce more methane from a given amount of input biomass. The AD system costs below are for the direct AD plant with power generation.
 
 | Capacity | Name         | Total Cost    | £/kW      |
 |----------|--------------|---------------|-----------|
@@ -85,7 +87,7 @@ Source: [Cornwall Agri-food Council](http://www.farmingfutures.org.uk/sites/defa
 
 £4000-7000/kW: [renewableenergyonfarms.co.uk AD Fact sheet](http://www.renewableenergyonfarms.co.uk/sites/rdi/files/140224_ad_fact_sheet_and_faqs_v5.pdf)
 
-**Example gas engine** The [GE Jenbacher type 2](https://powergen.gepower.com/products/reciprocating-engines/jenbacher-type-2.html) is one example gas engine used in conjunction with biogas plants. It achieves an electrical efficiency when powered with biogas of 38.70%. The Jenbacher type 2 supports heat recovery for Combined Heat and Power with a thermal efficiency of 48.50%. Bringing the total efficiency to 87.30%. The cost of reciprocating engines are in the order of £400-600/kW [[1]](http://www.mrwmd.org/archives/2007%20Board%20Meeting/December/MRWMDDec07_8_Purchase_Of_Jenbacher_Memo.pdf) [[2]](http://www.districtenergy.org/assets/pdfs/2015-Annual-Boston/Proceedings/Tuesday/3B.1Koenig.pdf)
+**Example gas engine** The [GE Jenbacher type 2](https://powergen.gepower.com/products/reciprocating-engines/jenbacher-type-2.html) is a typical gas engine used in AD plants. It achieves an electrical efficiency when powered with biogas of 38.70%. The Jenbacher type 2 supports heat recovery for Combined Heat and Power with a thermal efficiency of 48.50%. Bringing the total efficiency to 87.30%. The cost of reciprocating engines are in the order of £400-600/kW [[1]](http://www.mrwmd.org/archives/2007%20Board%20Meeting/December/MRWMDDec07_8_Purchase_Of_Jenbacher_Memo.pdf) [[2]](http://www.districtenergy.org/assets/pdfs/2015-Annual-Boston/Proceedings/Tuesday/3B.1Koenig.pdf)
 
 ### Hydro
 
@@ -178,13 +180,13 @@ The following example is a rough attempt at calculating a cost for zero carbon e
 
 The Enercon E82 is used for the wind cost at £1033/kW and an O&M cost of £33/kW/year. Assuming perhaps generous low interest finance at 2.5% (simple interest) over 20 years. The actual cost is £1313/kW. Multiplied by 1.5 kW per household is £1970.
 
-For Solar a low domestic installation cost of £1625/kW is assumed, again paid for with low interest finance at 2.5% over a service lifetime of 30 years. The actual cost is £311/kW. Multiplied by 1.5 kW per household is £3,467. Solar PV is likely to last at least 30 years, a maintanence cost of £20/kW/y is included to cover inverter maintanence. Large scale solar is likely much cheaper than this as recent Contracts For Difference auctions have resulted in MWh prices that are similar to Onshore wind.
+For Solar a low domestic installation cost of £1625/kW is assumed, again paid for with low interest finance at 2.5% over a service lifetime of 30 years. The actual cost is £311/kW. Multiplied by 1.5 kW per household is £3,467. Solar PV is likely to last at least 30 years, a maintenance cost of £20/kW/y is included to cover inverter maintenance. Large scale solar is likely much cheaper than this as recent Contracts For Difference auctions have resulted in MWh prices that are similar to Onshore wind.
 
-The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 35 years. The actual cost is £901/kW. Multiplied by 1.6 kW per household is £1441. Maintenance costs are assumed to be £40/kW/year and plant lifetime 35 years.
+The CCGT cost is assumed to be £600/kW, paid for with low interest finance at 2.5% over 35 years. The actual cost is £901/kW. Multiplied by 1.6 kW per household is £1441. Maintenance costs are assumed to be £40/kW/year and plant lifetime 35 years which may be a high estimate.
 
-Bulk refined biomethane costs of £0.03/kWh are assumed - to be refined.
+Bulk refined biomethane costs of £0.03/kWh are assumed.
 
-The onshore wind, solar and CCGT backup capacities used here are based on the results of the 10 year hourly zero carbon energy model providing 100% of demand from the zero carbon energy sources listed.
+The onshore wind, solar and CCGT backup capacities used here are based on the results of the 10 year hourly zero carbon energy model providing 100% of demand from the zero carbon energy sources listed. The additional biomass and renewable electricity required for producing aviation fuel is not included in the capacities below.
 
 |                             | Capacity |       | kWh/d | Capital cost | / year | O&M/year |
 |-----------------------------|----------|-------|-------|--------------|--------|----------|
@@ -207,7 +209,7 @@ The onshore wind, solar and CCGT backup capacities used here are based on the re
 
 The resultant unit cost compares very well with current electricity prices. Key to achieving this price is being able to both source low interest long term finance and to run the generating facilities at near cost. This could perhaps be achieved if ownership of the wind and CCGT backup are vertically integrated as part of the energy supplier. The operational cost, maintenance, interest payments of the generating facilities are covered and the supplier still makes a profit as part of their operational cost.
 
-The following worked examples show how the final electricity cost changes at different rates of interest and generator profit:
+The following worked examples show how the final electricity cost changes at different rates of interest and generator profit, illustrating the importance of striking the right balance between the profits of each stakeholder in the supply chain and the final cost of energy delivered.
 
 - **0.0% interest:** £0.138 p/kWh.
 - **2.5% interest:** £0.152 p/kWh.

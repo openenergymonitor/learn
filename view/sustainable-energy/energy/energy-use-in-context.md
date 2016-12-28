@@ -14,7 +14,7 @@ Using a Pharox LED 40W equivalent 8 Watt bulb<br> [http://www.lampandlight.co.uk
 A BT Home Hub uses 10W while fully on and 7W in power saver.<br>Assuming the average power is 9W.<br>(9W x 24 x 3600) / 3600000 = 0.216 kWh
 
 **22 miles on an electric bike: 0.26 kWh**<br>
-With a generous electric assist level removing most of the work out of climbing hills an electric bike can achieve around 12 Wh/mile (83 miles/kWh). Traveling the average daily household milage of 22 miles on an ebike adds up to 22 x 0.012kWh/mile = 0.26 kWh/d.
+With a generous electric assist level removing most of the work out of climbing hills an electric bike can achieve around 12 Wh/mile (83 miles/kWh). Traveling the average daily household mileage of 22 miles on an ebike adds up to 22 x 0.012kWh/mile = 0.26 kWh/d.
 
 **Laptop: 0.29 kWh**<br>
 A dell XPS battery has a designed capacity of 47.3 Wh.
@@ -57,7 +57,7 @@ In kWh per day: 13615 / 365 = 37.3 kWh/d.<br>
 37.3 kWh/d x 0.933 (conversion factor as above) = 34.8 kWh/d
 
 **22 miles in a 30 MPG (uk average) petrol car: 32 kWh**<br>
-From the Department for Transports National Travel Survey (nts0410): 22 miles is the average distance traveled by car per household per day in the UK. 3268 vehicle miles per person x 2.41 people per household = 7876 miles/year = 22 miles per day.
+From the Department for Transports National Travel Survey (nts0410): 22 miles is the average distance travelled by car per household per day in the UK. 3268 vehicle miles per person x 2.41 people per household = 7876 miles/year = 22 miles per day.
 
 The average petrol car efficiency in the UK is 30 MPG or 0.68 miles/kWh see energy overview calculation.
 <br>22 miles per day therefore uses 22 / 0.68 = 32 kWh.

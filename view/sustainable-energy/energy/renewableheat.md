@@ -2,9 +2,9 @@
 
 There are a number of different approaches to providing space and water heating with a renewable supply. Perhaps the two most well known renewable heat technologies are heat pumps powered by renewable electricity and biomass heat.
 
-The key limitation with biomass heat is of course land use. Land availability for energy is scarce. Growing biomass for energy on a large scale reduces the amount of land available for growing food and in future other demands such as carbon sequestration.
+The key limitation with biomass heat is of course land use. There is a limited amount of land to share between food production, wild spaces, carbon sequestration and biomass energy. Growing biomass for energy on a large scale reduces the amount of land available for these other demands.
 
-Heat pumps with the bulk of their power from renewable electricity: primarily wind and solar provides the opportunity to reduce the amount of land required for biomass energy significantly, however there is still a need for a backup electricity supply when the wind is not blowing. The hourly energy model suggests that around 75% of a heat pumps electricity demand can be supplied directly from a wind and solar supply mix (at equal capacities of each) with 25% needing to be sourced from a backup supply. This backup requirement stretches several orders of magnitude beyond the capacity of today’s battery technologies and so another solution is required***. ZeroCarbonBritain uses biomass and excess hydrogen to generate large quantities of methane gas which can then be burnt in gas turbines to generate the backup electricity required.
+Heat pumps with the bulk of their power from renewable electricity: primarily wind and solar provides the opportunity to reduce the amount of land required for biomass energy significantly, however there is still a need for a backup electricity supply when the wind is not blowing. The hourly energy model suggests that around 75% of a heat pumps electricity demand can be supplied directly from a wind and solar supply mix (at equal capacities of each) with 25% needing to be sourced from a backup supply. As explored in the appendix below, this backup requirement stretches several orders of magnitude beyond the capacity of today’s battery technologies and so another solution is required. ZeroCarbonBritain uses biomass and hydrogen produced from excess wind and solar to generate large quantities of methane gas which can then run gas turbines to generate the backup electricity required.
 
 The following section explores 10 different renewable heat approaches from biomass only approaches to combinations of biomass, heat pumps, CHP and finally biomass as a backup for heat pumps running off primarily wind and solar electricity. It explores the land use implications of each approach.
 
@@ -18,9 +18,9 @@ High efficiency biomass boilers have an efficiency that typically exceeds 90%, s
 
 6100 kWh/year or 16.7 kWh per day of heat demand translates to a dry biomass demand of 16.7 kWh/d / 0.92 = 18.2 kWh/d dry biomass input at 92% efficiency.
 
-A estimated further 10-20% is lost in production**, drying the wood chip or pellet feed stock, chipping & pelletising. If we assume the lower bound of 10% (assuming a high degree of air-drying), 20.2 kWh/d of dry biomass input is required to provide 16.7 kWh/d of heat.
+A estimated further 10-20% is lost in production (appendix 1), drying the wood chip or pellet feed stock, chipping & pelletising. If we assume the lower bound of 10% (assuming a high degree of air-drying), 20.2 kWh/d of dry biomass input is required to provide 16.7 kWh/d of heat.
 
-The following table with yield amounts given in the ZeroCarbonBritain land use methodology** give the power density of different biomass energy sources:
+The following table with yield amounts given in the [ZeroCarbonBritain land use methodology](http://zerocarbonbritain.com/images/pdfs/Land%20Use%20Methodology%2030.6.13.pdf) give the power density of different biomass energy sources:
 
 | | odt/ha/yr | kWh/ha/yr | kWh/m2/yr | W/m2 | TWh/Mha |
 |--------------------------------|-----------|-----------|------|---------|------|
@@ -49,17 +49,17 @@ If short rotation coppice was used instead of miscanthus this would increase to 
 
 If productive coniferous woodland was used we would need 21,050 m2/household or 2.3x the UK land area, increasing to 4.6x UK land area with productive broadleaf woodland. Given that a large degree of biomass heat today is from these slower growing sources it highlights the need to develop the higher yielding crops if we are to achieve a sustainable level of land use at scale.
 
-ZeroCarbonBritain suggests that yields for SRC and miscanthus can be improved by a cautious 50%**. With such an improvement SRC would provide 0.975 W/m2 and Miscanthus: 1.17 W/m2. Resulting in land area use of 9.4% and 7.7% respectively.
+ZeroCarbonBritain suggests that yields for SRC and miscanthus can be improved by 50% (see land-use methodology). With such an improvement SRC would provide 0.975 W/m2 and Miscanthus: 1.17 W/m2. Resulting in land area use of 9.4% and 7.7% respectively.
 
 #### "Grass for gas" standard AD (26%)
 
-An alternative approach is the production of biogas, injected into the gas grid from Anaerobic Digestion plants. Anaerobic digestion converts wet biomass in to biogas at an energy efficiency of 60%***.
+An alternative approach is the production of biogas, injected into the gas grid from Anaerobic Digestion plants. Anaerobic digestion converts wet biomass in to biogas at an energy efficiency of 60%.
 
 AD requires wet biomass such as rotational grasses. These have an energy content of about 0.51 W/m2. Converted to biogas the energy content is equivalent to 0.31 W/m2. Assuming no losses associated with transportation in the gas network and a gas boiler efficiency of 92% resulting in a gas demand of 18.2 kWh/d or 756W. 2440 m2 of rotational grasses are required, equivalent to 26% of UK land area if scaled up for all households.
 
 #### "Grass for gas" with enhanced sabatier processing (16%)
 
-Biogas from Anaerobic Digestion has a relatively high CO2 content** . ZeroCarbonBritain suggests the addition of sabatier reactors to AD plants that can combine hydrogen generated from excess wind and solar electricity with CO2 from the AD biogas to create a larger quantity of methane.
+Biogas from Anaerobic Digestion has a relatively high CO2 content. ZeroCarbonBritain suggests the addition of sabatier reactors to AD plants that can combine hydrogen generated from excess wind and solar electricity with CO2 from the AD biogas to create a larger quantity of methane.
 
 2.0 kWh of biomass + 1.0 kWh of hydrogen = 2.0 kWh of synthetic methane
 
@@ -71,7 +71,7 @@ The next series of examples explore the addition of heat pumps starting with hea
 
 #### Heat pumps + standard AD (21% biomass only, 5.1% wind & solar backup)
 
-We start here again with rotational grasses at a land efficiency of 0.51W/m2. 40% of the energy content is lost in conversion to biogas. Standard high efficiency electricity generating gas engines** in AD plants have efficiencies of the order of 40% resulting in electricity at a land efficiency of 0.1224 W/m2. A heat pump then converts this to a heat efficiency of 0.3672 W/m2. Our heat demand was 16.7 kWh/d or 696 Watts.
+We start here again with rotational grasses at a land efficiency of 0.51W/m2. 40% of the energy content is lost in conversion to biogas. Standard high efficiency electricity generating gas engines in AD plants have efficiencies of the order of 40% resulting in electricity at a land efficiency of 0.1224 W/m2. A heat pump then converts this to a heat efficiency of 0.3672 W/m2. Our heat demand was 16.7 kWh/d or 696 Watts.
 
 0.51 W/m2 x 0.6 x 0.4 x 3.0 =  0.3672 W/m2
 696 Watts /  0.3672 W/m2 = 1895m2, or 21% of UK land area
@@ -106,7 +106,7 @@ An alternative to the use of wet biomass and anaerobic digestion is to use woody
 Typical efficiencies for gasifiers are less than what can be achieved with biogas.
 Electrical efficiencies of 20-30% and Heat efficiencies of 50-60% are possible.
 
-http://shawrenewables.co.uk/froling-chp EL: 28%, HEAT: 56%
+http://shawrenewables.co.uk/froling-chp EL: 28%, HEAT: 56%<br>
 Entrade E3, Electrical efficiency 25%, Thermal efficiency 60%
 
 **Today’s yields**
@@ -168,11 +168,30 @@ These estimates suggest that using direct biomass boilers for backup in this way
 
 Another way of looking at it could be to assess both methods in comparison with a 100% biomass baseline, in this case the bivalent system would reduce land area requirement by 75% and the CHP wood gasifier system by 84% providing an additional 9% saving.
 
-**More detailed modelling would be required to assess the impact of low outside temperatures on heat pump COP with an assessment of benefits of reducing heat pump requirements both at times of low wind and solar output and low temperatures.
+More detailed modelling would be required to assess the impact of low outside temperatures on heat pump COP with an assessment of benefits of reducing heat pump requirements both at times of low wind and solar output and low temperatures.
 
 ### Appendix
 
-#### Calculating the backup requirement of heatpump demand
+#### 1. Production of wood chips and wood pellets
+
+Short rotation coppice yields are currently around 0.65 W/m2 this may increase in future as SRC is breeded for better energy crop performance. ZeroCarbonBritain models a 50% improvement as part of its model, increasing present yields to 0.975 W/m2.
+
+Energy lost in pellet and wood chip production:
+
+- 2% lost in growing/cutting
+- 17% lost in drying + processing into pellets, or 15% if wood chip.
+- 0.5-1% lost in transporting to site
+
+*25 tonnes wet wood chip, dried results in 18.75 tonnes output. 2.25 tonnes ussed for next cycle, producing 16.5 tonnes of dry wood chip. An efficiency of 12%*
+
+*Drying greatly improves final burn efficiency: 35-40%MC (542 kWh/m3), 15-20%MC (833 kWh/m3)
+(borders_woodfuel_drying_presentation.pdf)*
+
+*Drying makes up 70% of process energy (BioRes_05_4_2374_Pirraglia_GS_Techno_Econ_Anal_Wood_Pellets_US_Prodn_1108.pdf)*
+
+Overall energy lost could be as high as 20% prior to use, but could also perhaps be significantly less with higher efficiency drying methods such as air drying and solar heated air drying as discussed here, which could perhaps approach a 10% processing loss: [http://biomassmagazine.com/articles/12181/watching-wood-dry](http://biomassmagazine.com/articles/12181/watching-wood-dry)
+
+#### 2. Calculating the backup requirement of heatpump demand
 
 The heatpump backup requirement of 25% was estimated using the ZeroCarbonBritain based 10 year hourly energy model that we have developed here: [8. Full Household Energy Model](../zcem/integrated.html#fullhousehold). To replicate the result follow these steps:
 
@@ -196,7 +215,7 @@ Total supply: 17.1 kWh/d, Total demand: 11.4 kWh/d, Primary Energy Factor: 1.50,
 
 When heatpump demand is considered in isolation of other demands such as lights, applicances and cooking and electric transport demand, the degree of backup increases to around 30%, suggesting that some of the additional supply required for these demands can be used at certain times by the heatpump resulting in a higher degree of matching.
 
-#### Calculating lithium ion battery capacity required to meet heatpump backup requirement
+#### 3. Calculating lithium ion battery capacity required to meet heatpump backup requirement
 
 It is possible to use the 10 year hourly energy model to estimate the size of a lithium ion battery required to backup heatpump demand without using biomass at all.
 
