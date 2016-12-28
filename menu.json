@@ -414,17 +414,9 @@
                         "nicename": "Dynamic building model",
                         "url": "sustainable-energy/building-energy-model/dynamicmodel"
                     },
-                    "history": {
-                        "nicename": "History",
-                        "url": "sustainable-energy/building-energy-model/history"
-                    },
                     "modelexamples": {
                         "nicename": "Model examples",
                         "url": "sustainable-energy/building-energy-model/modelexamples"
-                    },
-                    "Cylinder-heat-flux": {
-                        "nicename": "Cylinder heat flux",
-                        "url": "sustainable-energy/building-energy-model/Cylinder-heat-flux"
                     },
                     "ESPR": {
                         "nicename": "ESPR",

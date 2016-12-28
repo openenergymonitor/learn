@@ -49,8 +49,4 @@ A very common simple model type, used in SAP and PHPP, more accurate than the an
 As above but on a daily basis
 
 **Dynamic simulations**
-The simple model's use averaged annual, monthly datasets and so give outputs that are averages for a year/month. Dynamic simulations can give far greater detail and can be useful for finding out what happens in extremes of climate: hour-by-hour on a sunny day in June rather than the average for June. 
-
-#### Development context and history
-
-- [Context and history of OpenBEM](history.md)
+The simple model's use averaged annual, monthly datasets and so give outputs that are averages for a year/month. Dynamic simulations can give far greater detail and can be useful for finding out what happens in extremes of climate: hour-by-hour on a sunny day in June rather than the average for June.

@@ -42,7 +42,7 @@ Leaving the immersion heater on all day used 1.6 kWh per day just to maintain cy
 
 **The total saving achieved may therefore be as much as 47%.**
 
-### Can our electricity use be optimized further?
+### Can electricity use be optimized further?
 
 There are still a number of incandescent lights that can be switched to low energy light bulbs, this could reduce lighting use from 832 Wh to 260 Wh, almost a whole 10x reduction on the original lighting consumption, which really goes to show how much better low energy lighting is.
 
@@ -59,8 +59,6 @@ There are still a number of incandescent lights that can be switched to low ener
 - Switch sitting room 2 to a low energy light bulb
 
 These 3 light bulbs should be prioritized as they will have the greatest effect as the other light bulbs are not used for as long.
-
-## Cross checking
 
 ### How typical is the use figure as calculated in the model above?
 
