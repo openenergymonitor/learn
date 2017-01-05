@@ -14,7 +14,7 @@
   var apikey = "<?php print $apikey; ?>";
 </script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
