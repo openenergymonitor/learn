@@ -1,9 +1,5 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-[<< 1: Introduction, and “Power” v. “Energy”](intro)
-
-[3: Diversion and Use of surplus PV >>](diversion)
-
 ### 2: Detection and Measurement of surplus PV
 
 By the use of non-invasive sensors for measuring voltage and current, the rate of energy flow (i.e. Power) is routinely determined in Open Energy Monitor applications. The underlying principles are described in the section “[Different ways of Measuring Voltage and Current](vimeasurement)”.
@@ -23,7 +19,3 @@ With the above type of system, power to the load is diverted on the basis of sur
 For the purpose of detecting surplus energy, the concept of an “energy bucket” has recently found great favour with DIY constructors. This concept is central to all versions of my Mk2 PV Router sketch. When using this system, the energy content of every individual mains cycle is calculated (no gaps!), and a running total of their sum is held in a suitably named variable in the controller's code such as `energyInBucket`. Surplus energy is only diverted when there is sufficient virtual energy in the “energy bucket”.
 
 The “energy bucket” approach is directly analogous to the operation of the utility meter at the grid connection point. The Mk2 PV Router monitors the flow of energy adjacent to the supply meter and adjusts power to the dump load in order to maintain zero net flow.
-
-[<< 1: Introduction, and “Power” v. “Energy”](intro)
-
-[3: Diversion and Use of surplus PV >>](diversion)

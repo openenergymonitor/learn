@@ -1,8 +1,6 @@
-## Diverting surplus PV Power, by Robin Emley <span style="font-weight: normal; font-size: 80%">(updated, to include the emonTx hardware, by Robert Wall)</span>
+## Diverting surplus PV Power, by Robin Emley 
 
-[<< 7: Calibration of power and voltage, plus phase-alignment](calibration)
-
-[9: Different versions of the software sketch >>](versions)
+(updated, to include the emonTx hardware, by Robert Wall)
 
 ### 8: Building a Mk2 PV Router
 
@@ -70,7 +68,7 @@ If it is not convenient to route the power wiring close to the measurement point
 _Output stage circuit diagram for emonTx V2._
 
 ![Output stage circuit diagram - emonTx V3](files/Switch_V3_electrical.png)
-_Output stage circuit diagram for emonTx V3._ The differences between this and the emonTx V2 are explained in the [overview](https://openenergymonitor.org/emon/Choosing%20an%20Energy%20Diverter).
+_Output stage circuit diagram for emonTx V3._ The differences between this and the emonTx V2 are explained in the [overview](../introduction/choosing-an-energy-diverter.md).
 
 The pcb for the output components mentioned above may be used with both the Arduino Uno and emonTx variants, and is available separately. Details can be found at [https://openenergymonitor.org/emon/node/2044](https://openenergymonitor.org/emon/node/2044).
 
@@ -95,7 +93,7 @@ With the measurement side in order, the output stage needs to be tested. Any con
 
 #### A suggested test-rig for the Mk2 PV Router:
 
-![A test rig fr the router](/emon/sites/default/files/mk2testrig.png)
+![A test rig fr the router](files/mk2testrig.png)
 
 The use of “Tallymode” can provide a complete picture of the system in its working state. By this means, a high degree of confidence can be obtained on a test rig before the hardware is moved its final location.
 
@@ -115,12 +113,8 @@ _NOTE: All versions of the Mk2 PV Router require the CT’s direction to be such
 
 #### A typical installation:
 
-![A typical installation](/emon/sites/default/files/mk2typical.png)
+![A typical installation](files/mk2typical.png)
 
 #### How to simulate more current by using multiple turns through the CT:
 
-![Simulating more current through a c.t.](/emon/sites/default/files/mk2ctturns.png)
-
-[<< 7: Calibration of power and voltage, plus phase-alignment](calibration)
-
-[9: Different versions of the software sketch >>](versions)
+![Simulating more current through a c.t.](files/mk2ctturns.png)

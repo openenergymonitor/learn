@@ -1,9 +1,5 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-[<< Index](https://openenergymonitor.org/emon/mk2)
-
-[2: Detection and Measurement of surplus PV >>](pvmeasurement)
-
 ### 1: Introduction, and “Power” v. “Energy”
 
 This describes practice in the UK. Practice in other places may vary.
@@ -42,7 +38,3 @@ In the same way that “Speed is the rate at which Distance is covered”, i.e. 
 **Further reading**
 
 [Wikipedia article - Feed-in tariff](https://en.wikipedia.org/wiki/Feed-in_tariff)
-
-[<< Index](https://openenergymonitor.org/emon/mk2/)
-
-[2: Detection and Measurement of surplus PV >>](pvmeasurement)

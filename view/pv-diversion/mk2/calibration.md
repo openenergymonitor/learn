@@ -1,9 +1,5 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-[<< 6: Different ways of Measuring Voltage and Current](vimeasurement)
-
-[8: Building a Mk2 PV Router >>](build)
-
 ### 7: Calibration of power and voltage, plus phase-alignment
 
 #### Calibration of Power.
@@ -29,7 +25,3 @@ Phasecal is generally applied to the voltage waveform, its purpose being to calc
 For the purpose of diverting surplus power, the value of phasecal has been found to be relatively unimportant. The default value of 1.0 has been generally found to work fine. For alternative types of application, much better alignment may be required between voltage and current.
 
 A sketch, [PhasecalChecker](files/PhasecalChecker.ino_.zip), is available which allows the optimum value of phasecal to be determined for any arrangement of hardware. This is included in the list of associated Mk2 items at [https://openenergymonitor.org/emon/node/1757](https://openenergymonitor.org/emon/node/1757).
-
-[<< 6: Different ways of Measuring Voltage and Current](vimeasurement)
-
-[8: Building a Mk2 PV Router >>](build)

@@ -1,9 +1,5 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-[<< 5: Mk2 Controller Operating Modes](modes)
-
-[7: Calibration of power and voltage, plus phase-alignment >>](calibration)
-
 ### 6: Different ways of Measuring Voltage and Current
 
 The hardware for measuring power using non-intrusive sensors is fully described in the Building Blocks section at [https://openenergymonitor.org/emon/buildingblocks](https://openenergymonitor.org/emon/buildingblocks). Behind the hardware lies some associated software in the OEM’s library files. The standard code for measuring and calculating various parametric values including Power may be found in the `calcVI()`function in the source file `emonLib.cpp`. Instructions for downloading the EmonLib library are given at [Arduino sketch - voltage and current](https://openenergymonitor.org/emon/buildingblocks/arduino-sketch-voltage-and-current).
@@ -31,7 +27,3 @@ A further version (Mk2i) was released after it became apparent that the ADC coul
 The above improvements in speed have also been made possible by the use of integer maths, this being very much faster than the standard floating-point maths which was used in the original OEM code. One consequence of this change is that the energy bucket on later Mk2 builds has had to be re-scaled. Although still corresponding to an energy range of 3600 J (1 Wh), its numerical capacity is instead some large number in excess of a million. When developing software tools, where the ability to understand the code’s operation is of prime importance, the original floating point maths and scaling have been retained. But for sheer performance, integer maths is in a league of its own.
 
 When the full range of parameters are required, such as Power Factor, it is necessary to remove the DC content from both the voltage and current streams before further calculations can proceed. This is how the standard OEM calculations are undertaken. However, when only “real power” is required, it turns out that there is no need to remove the DC from one of these sets of values. This is because the DC content gets cancelled out within the maths. Not removing the DC from the current stream saves on processing time. In practice, to avoid the system becoming over-sensitive to random effects, it is prudent to remove a nominal amount of DC from each raw current sample. The actual value, however, is not important, and this approach has been satisfactorily used in Mk2a_rev3 and all versions of Mk2i.
-
-[<< 5: Mk2 Controller Operating Modes](modes)
-
-[7: Calibration of power and voltage, plus phase-alignment >>](calibration)
