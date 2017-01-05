@@ -1,9 +1,5 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
-[<< 4: The ADC and interrupts](/emon/pvdiversion/pll/adcinterrupts)
-
-[6: Advantages over emonLib >>](/emon/pvdiversion/pll/advantagesoveremonLib)
-
 ### 5: Integer maths
 
 High level languages like C++ make it easy to write programs by offering a wide range of variable types and functions. Unfortunately, that convenience comes at the price of speed and performance. Although modern compilers can usually optimise a program far better than all but the best human programmers, there are limits to what they can do simply because they can never be totally aware of the actual conditions when the program is running. One area where a prior knowledge of what the variables are and what they mean is invaluable is in the mathematical operations.
@@ -13,7 +9,3 @@ Processing decimal numbers – so called “floating point” variables because 
 The essential difference is that rather than letting the computer handle the placing of the decimal point in a generalised way, we the programmers take over that responsibility and do it in a way that is often specific to just that line of code.
 
 Trystan Lea has written more about this, specifically the filter calculations, at [https://openenergymonitor.org/emon/buildingblocks/digital-filters-for-offset-removal](https://openenergymonitor.org/emon/buildingblocks/digital-filters-for-offset-removal).
-
-[<< 4: The ADC and interrupts](/emon/pvdiversion/pll/adcinterrupts)
-
-[6: Advantages over emonLib >>](/emon/pvdiversion/pll/advantagesoveremonLib)

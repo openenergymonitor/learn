@@ -1,9 +1,5 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
-[<< 9: Hardware](https://openenergymonitor.org/emon/pvdiversion/pll/hardware)
-
-[11: References. >>](https://openenergymonitor.org/emon/pvdiversion/pll/references)
-
 ### 10: Derivatives
 
 Two notable derivatives of this design have been published.
@@ -190,7 +186,3 @@ Although the design was originally for the emonTx V2, it can be used with the em
 
     SYNCPIN & SAMPPIN are provided to facilitate testing and checking the timing with an oscilloscope.
     PWRPIN in the emonTx V3 is used to supply power to the temperature sensor. It needs to be set permanently high if temperature measurement is required. (It is so that when battery power is used (not relevant in this application), the temperature sensor can be powered only when it is required to take a reading, thus potentially extending battery life.)
-
-[<< 9: Hardware](https://openenergymonitor.org/emon/pvdiversion/pll/hardware)
-
-[11: References. >>](https://openenergymonitor.org/emon/pvdiversion/pll/references)

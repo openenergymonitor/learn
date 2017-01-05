@@ -1,9 +1,5 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
-[<< 6: Advantages over emonLib](https://openenergymonitor.org/emon/pvdiversion/pll/advantagesoveremonlib)
-
-[8: The sketch explained in detail. >>](https://openenergymonitor.org/emon/pvdiversion/pll/sketchdetail)
-
 ### 7: Implementation
 
 There are several details of the implementation that it is necessary to explain before the sketch is described in detail.
@@ -21,7 +17,3 @@ This routine is really the heart of the sketch. For each set of samples, three m
 ### Libraries
 
 The sketch only uses the One-Wire library for the temperature sensor. All the commands for the ADC and the RFM12B radio module are built into the sketch. EmonLib, JeeLib and the Dallas Temperature Library are not required.
-
-[<< 6: Advantages over emonLib](https://openenergymonitor.org/emon/pvdiversion/pll/advantagesoveremonlib)
-
-[8: The sketch explained in detail. >>](https://openenergymonitor.org/emon/pvdiversion/pll/sketchdetail)

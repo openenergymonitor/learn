@@ -1,9 +1,5 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
-[<< 7: Implementation](https://openenergymonitor.org/emon/pvdiversion/pll/implementation)
-
-[9: Hardware >>](https://openenergymonitor.org/emon/pvdiversion/pll/hardware)
-
 ### 8: The sketch explained in detail.
 
 The version described was published at [https://openenergymonitor.org/emon/node/1535](https://openenergymonitor.org/emon/node/1535) and can be downloaded from [files/emonTx_Solar_Controller_Temperature_PLL_0.zip](files/emonTx_Solar_Controller_Temperature_PLL_0.zip)
@@ -183,7 +179,3 @@ Lines 480 – 497.
 This function reads the temperature from the scratchpad memory in the temperature module and returns the value converted to °C × 100.
 
 The module is set up in lines 488 – 490, the data is read in line 491 and the checksum is computed and compared in line 492\. If good, the temperature is extracted and converted by lines 494 – 496, else an obviously false value of 300 °C is returned to flag the error.
-
-[<< 7: Implementation](https://openenergymonitor.org/emon/pvdiversion/pll/implementation)
-
-[9: Hardware >>](https://openenergymonitor.org/emon/pvdiversion/pll/hardware)
