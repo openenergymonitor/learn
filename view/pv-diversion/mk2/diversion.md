@@ -1,10 +1,6 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-[<< 2: Detection and Measurement of surplus PV](pvmeasurement)
-
-[4: Switching High Current Loads using a Triac >>](switchdev)
-
-### 3: Diversion and Use of surplus PV
+#### 3: Diversion and Use of surplus PV
 
 Various schemes for storing surplus energy are possible, including the charging of batteries. For most users, however, the most practical use for any surplus PV energy is to heat their Domestic Hot Water using an immersion heater. [This arrangement is not directly suitable for households where hot-water is supplied by an instant boiler, such as a “combi”. In such cases, some other means of making effective use of surplus PV energy would need to be devised.]
 
@@ -16,7 +12,7 @@ All supply meters allow a certain range within which energy can flow freely in e
 
 ![Diagram illustrating how energy is diverted](/emon/sites/default/files/energyflow.png)
 
-**Further reading**
+#### Further reading
 
 [Building Blocks - Energy Meters](/emon/buildingblocks/meters)
 

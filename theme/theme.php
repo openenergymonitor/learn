@@ -29,9 +29,7 @@
         </div>
         <div class="learnTitle-titleWrapper">
           <span>
-            <a href="/learn" style="all:inherit">
               <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
-            </a>
           </span>
         </div>
         <div class="learnTitle-topLinks">

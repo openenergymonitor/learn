@@ -1,12 +1,8 @@
 ## 3-Phase Power
 
-***
-
 <!-----------------------------3PhaseTutorialVideo----------------------------->
 
-<br>
-
-<div id="3PhaseVideo" style="width:100%;height:300px;background-color:#000000;">
+<div id="3PhaseVideo" style="width:100%;height:300px;background-color:#000000;margin:10px 0 10px 0;">
   <div class="loader"></div>
 </div>
 
@@ -44,9 +40,9 @@ The obvious way to tell if you have a 3-phase supply is to locate your meter and
 
 ![Single- and 3-phase meters & incomers](files/meters-incomers.png)
 
-(a) Single phase meter (UK)  
-(b) Single phase double pole circuit breaker  
-(c) Terminal block of a 3-phase meter, showing 8 main & 2 auxiliary terminals.  
+(a) Single phase meter (UK)
+(b) Single phase double pole circuit breaker
+(c) Terminal block of a 3-phase meter, showing 8 main & 2 auxiliary terminals.
 (d) 3-pole linked circuit breaker, in a 3-phase installation. (Germany)
 
 #### Mathematics of a 3-Phase Supply

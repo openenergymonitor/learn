@@ -1,10 +1,6 @@
-## Diverting surplus PV Power, by Robin Emley <span style="font-weight: normal; font-size: 80%">(updated, to include the emonTx hardware, by Robert Wall)</span>
+## Diverting surplus PV Power, by Robin Emley (updated, to include the emonTx hardware, by Robert Wall)
 
-[<< 7: Calibration of power and voltage, plus phase-alignment](calibration)
-
-[9: Different versions of the software sketch >>](versions)
-
-### 8: Building a Mk2 PV Router
+#### 8: Building a Mk2 PV Router
 
 As mentioned on the Contents page, two different hardware platforms have been successfully used to support Mk2 PV Routers.
 
@@ -120,7 +116,3 @@ _NOTE: All versions of the Mk2 PV Router require the CT’s direction to be such
 #### How to simulate more current by using multiple turns through the CT:
 
 ![Simulating more current through a c.t.](/emon/sites/default/files/mk2ctturns.png)
-
-[<< 7: Calibration of power and voltage, plus phase-alignment](calibration)
-
-[9: Different versions of the software sketch >>](versions)
