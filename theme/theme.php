@@ -21,10 +21,6 @@
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-  <script>
-    $('body').css("display","none")
-    $('body').fadeIn("fast");
-  </script>
   <div id="topnav">
     <nav>
       <div class="learnTitle">
@@ -204,11 +200,11 @@
       tl = $(".toplevel[name="+q[0]+"]");
       tl.show();
       tl.prev().addClass("clickedOnce");
+      tl.prev().children(".topIcons").addClass("clickedOnce");
       sl.show();
       sl.prev().addClass("clickedOnce");
       sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
- //     sl.find("li[name='"+q[2]+"']").addClass('active');
- 
+
     $("a[href='" + window.location.href + "']").parent().addClass("active");
 
     $(window).on('hashchange', function(e){
@@ -229,11 +225,14 @@
     if ($(this).hasClass("clickedOnce")) {
       var topLevel = $(this).next();
       topLevel.slideUp("fast");
+      $(this).children(".topIcons").removeClass("clickedOnce");
       $(this).removeClass("clickedOnce");
     }
     else {
       siblingHead.next().slideUp("fast");
       siblingHead.removeClass("clickedOnce");
+      siblingHead.children(".topIcons").removeClass("clickedOnce");
+      $(this).children(".topIcons").addClass("clickedOnce");
       $(this).addClass("clickedOnce");
       var topLevel = $(this).next();
       topLevel.slideDown("fast");
@@ -242,7 +241,7 @@
     }
 });
 // ----------------------------------------------------------------------------------------
-// Open and close top and lower levels of sidebar
+// Open and close lower level of sidebar
 // ----------------------------------------------------------------------------------------
 
     $(".sublevelhead").click(function() {
