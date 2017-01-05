@@ -8,15 +8,15 @@ To connect a CT sensor to an Arduino, the output signal from the CT sensor needs
 
 **Note:** This page give the example of an Arduino board working at 5 V and of the EmonTx working at 3.3 V. Make sure you use the right supply voltage and bias voltage in your calculations that correspond to your setup.
 
-This can be achieved with the following circuit which consists of two main parts: 
+This can be achieved with the following circuit which consists of two main parts:
 
 1.  The CT sensor and burden resistor
 
 2.  The biasing voltage divider (_R1 & R2_)
 
-[![](files/Arduino AC current input A.png)](files/Arduino AC current input A.png)
+![](files/Arduino_AC_current_input_A.png)
 
-### **<u>Calculating a suitable burden resistor size</u>**
+#### Calculating a suitable burden resistor size
 
 If the CT sensor is a "current output" type such as the _YHDC SCT-013-000_, the current signal needs to be converted to a voltage signal with a burden resistor. If it is a voltage output CT you can skip this step and leave out the burden resistor, as the burden resistor is built into the CT.
 
