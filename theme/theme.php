@@ -14,17 +14,13 @@
   var apikey = "<?php print $apikey; ?>";
 </script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-  <script>
-    $('body').css("display","none")
-    $('body').fadeIn("fast");
-  </script>
   <div id="topnav">
     <nav>
       <div class="learnTitle">
@@ -33,9 +29,7 @@
         </div>
         <div class="learnTitle-titleWrapper">
           <span>
-            <a href="/learn" style="all:inherit">
               <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
-            </a>
           </span>
         </div>
         <div class="learnTitle-topLinks">
@@ -204,11 +198,11 @@
       tl = $(".toplevel[name="+q[0]+"]");
       tl.show();
       tl.prev().addClass("clickedOnce");
+      tl.prev().children(".topIcons").addClass("clickedOnce");
       sl.show();
       sl.prev().addClass("clickedOnce");
       sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
- //     sl.find("li[name='"+q[2]+"']").addClass('active');
- 
+
     $("a[href='" + window.location.href + "']").parent().addClass("active");
 
     $(window).on('hashchange', function(e){
@@ -229,11 +223,14 @@
     if ($(this).hasClass("clickedOnce")) {
       var topLevel = $(this).next();
       topLevel.slideUp("fast");
+      $(this).children(".topIcons").removeClass("clickedOnce");
       $(this).removeClass("clickedOnce");
     }
     else {
       siblingHead.next().slideUp("fast");
       siblingHead.removeClass("clickedOnce");
+      siblingHead.children(".topIcons").removeClass("clickedOnce");
+      $(this).children(".topIcons").addClass("clickedOnce");
       $(this).addClass("clickedOnce");
       var topLevel = $(this).next();
       topLevel.slideDown("fast");
@@ -242,7 +239,7 @@
     }
 });
 // ----------------------------------------------------------------------------------------
-// Open and close top and lower levels of sidebar
+// Open and close lower level of sidebar
 // ----------------------------------------------------------------------------------------
 
     $(".sublevelhead").click(function() {

@@ -12,6 +12,6 @@ All supply meters allow a certain range within which energy can flow freely in e
 
 ![Diagram illustrating how energy is diverted](files/energyflow.png)
 
-**Further reading**
+#### Further reading
 
 [Building Blocks - Energy Meters](/emon/buildingblocks/meters)

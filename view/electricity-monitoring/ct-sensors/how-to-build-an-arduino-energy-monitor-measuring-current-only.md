@@ -34,7 +34,7 @@ The monitor consists of the current sensor (which produces a signal proportional
 
 For a circuit diagram and detailed discussion of sensors and electronics see:
 
-[CT Senors - Introduction](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-introduction)
+[CT Sensors - Introduction](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-introduction)
 
 [CT Sensors - Interfacing with an Arduino](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface)
 
@@ -50,12 +50,12 @@ Download: [EmonLib](https://github.com/openenergymonitor/EmonLib)
 
 **b) Upload the "current only" example:**
 
-<pre>#include <span style="color:#006699;">"EmonLib.h"</span>                   
+<pre>#include <span style="color:#006699;">"EmonLib.h"</span>
 <span style="color: #7E7E7E;">// Include Emon Library</span>
-EnergyMonitor emon1;                   
+EnergyMonitor emon1;
 <span style="color: #7E7E7E;">// Create an instance</span>
 <span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><strong>setup</strong></span>()
-{  
+{
   <span style="color: #CC6600;"><strong>Serial</strong></span>.<span style="color: #CC6600;">begin</span>(9600);
 
   emon1.current(1, 111.1);             <span style="color: #7E7E7E;">// Current: input pin, calibration.</span>

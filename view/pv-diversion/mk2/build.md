@@ -117,4 +117,8 @@ _NOTE: All versions of the Mk2 PV Router require the CT’s direction to be such
 
 #### How to simulate more current by using multiple turns through the CT:
 
+<<<<<<< HEAD
 ![Simulating more current through a c.t.](files/mk2ctturns.png)
+=======
+![Simulating more current through a c.t.](/emon/sites/default/files/mk2ctturns.png)
+>>>>>>> b6266e3bbeafbc1897a9386e34a781c9ab09691e

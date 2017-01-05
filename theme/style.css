@@ -175,15 +175,25 @@ body {
 	padding: 25px 15px 5px 15px;
 	font-size: 18px;
 }
+.toplevelhead:hover {
+  color: black;
+}
+.toplevelhead:hover > .topIcons {
+  border: 4px solid #000000;
+}
 .sublevelhead {
 	cursor: pointer;
 	padding: 15px 0 15px 34px;
+}
+.sublevelhead:hover {
+  color: black;
 }
 .sublevel {
 	padding: 0 0 0 60px;
 }
 .clickedOnce {
 	font-weight: bold;
+	color: black;
 }
 .sublevel ul {
 	list-style-type: circle;
@@ -195,14 +205,20 @@ body {
 	max-width: 230px;
 	margin-right: 30px;
 }
-.sublevel ul li a{
+.sublevel ul li a {
 	padding: 12px;
+}
+.sublevel ul li:hover, .sublevel ul li a:hover {
+  color: black;
 }
 .sublevel ul li a:first-child {
   padding-top: 5px;
 }
 .active {
 	font-weight: bold;
+}
+li.active a {
+  color: black;
 }
 .titleWrapper {
 	width: 100%;
@@ -251,6 +267,9 @@ body {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+}
+.oemMenu ul li a:hover {
+  color: black;
 }
 @media (max-width: 450px) {
 	.container {
@@ -308,6 +327,9 @@ body {
   border: 4px solid #ffffff;
   box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
   border-radius: 50%;
+}
+.topIcons.clickedOnce {
+  border: 4px solid #000000;
 }
 .toplevelname {
   display: inline-block;

@@ -18,7 +18,15 @@ It has no internal burden resistor, but a transient voltage suppressor limits th
 
 #### Test Rig
 
-![](files/C.T. Test Rig.160705.svg)
+<!----------------------------------------------------------------------------->
+
+<div class="xaxiswrapper">
+
+<embed alt="C.T. Test Rig" height="250" src="files/C.T. Test Rig.160705.svg" type="image/svg+xml" width="500">
+
+</div>
+
+<!------------------------------------------------------------------------------->
 
 For test currents up to 100 A, the CT primary consists of from 1 to 20 turns of insulated 16/0.2mm wire. The majority of tests were made at 5 A – thus the primary current seen by the CT could be adjusted in steps of 5 A by enclosing a variable number of turns inside the core. For saturation tests up to 250 A, the primary consists of 50 passes of enamelled copper wire, the current being adjusted in this case.
 
@@ -68,31 +76,31 @@ The ratio was checked from 0.5 A to 250 A with a multimeter on the a.c. mA range
 
 <div class="xaxiswrapper">
 
-<table border="0" cellpadding="2" cellspacing="2">
+<table>
 
 <thead>
 
 <tr>
 
-<th style="background-color:rgb(153, 153, 153); text-align:center; width:120px">
+<th>
 
 Primary Current
 
 </th>
 
-<th style="background-color:rgb(153, 153, 153); text-align:center; width:120px">
+<th>
 
 Secondary Current
 
 </th>
 
-<th style="background-color:rgb(153, 153, 153); text-align:center; width:120px">
+<th>
 
 Design Secondary Current
 
 </th>
 
-<th style="background-color:rgb(153, 153, 153); text-align:center; width:120px">
+<th>
 
 error
 
@@ -106,25 +114,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.2534
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.25
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.36%
 
@@ -134,25 +142,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.504
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.80%
 
@@ -162,25 +170,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.75
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.75
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.00%
 
@@ -190,25 +198,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 2
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.012
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.20%
 
@@ -218,25 +226,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 2.45
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 2.5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 -2.00%
 
@@ -246,25 +254,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 10
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.00%
 
@@ -274,25 +282,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 20
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 10.07
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 10
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.70%
 
@@ -302,25 +310,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 30
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 15.25
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 15
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.67%
 
@@ -330,25 +338,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 40
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 20.31
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 20
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.55%
 
@@ -358,25 +366,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 50
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 25.35
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 25
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.40%
 
@@ -386,25 +394,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 60
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 30.6
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 30
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 2.00%
 
@@ -414,25 +422,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 70
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 35.56
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 35
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.60%
 
@@ -442,25 +450,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 80
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 40.63
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 40
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.58%
 
@@ -470,25 +478,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 90
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 45.69
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 45
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.53%
 
@@ -498,25 +506,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 100
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 50.72
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 50
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.44%
 
@@ -526,25 +534,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 120
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 60.2
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 60
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 0.33%
 
@@ -554,25 +562,25 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 140
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 68.7
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 70
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 -1.86%
 
@@ -582,19 +590,19 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 160
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 74.5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 80
 
@@ -604,19 +612,19 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 180
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 78.7
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 90
 
@@ -626,19 +634,19 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 200
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 81.9
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 100
 
@@ -648,19 +656,19 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 225
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 84.5
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 112.5
 
@@ -670,19 +678,19 @@ error
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 250
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 87.4
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 125
 
@@ -770,19 +778,19 @@ Burden Voltage (divisions)
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 Peak-peak
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 14.47
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 6.41
 
@@ -792,19 +800,19 @@ Peak-peak
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 Rectified average (measured value)
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 4.62
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.30
 
@@ -814,19 +822,19 @@ Rectified average (measured value)
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 Rectified average x 1.11 (displayed value)
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 5.13
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.45
 
@@ -836,19 +844,19 @@ Rectified average x 1.11 (displayed value)
 
 <tr>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 rms
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 5.16
 
 </td>
 
-<td style="background-color:rgb(204, 204, 204); text-align:center">
+<td>
 
 1.66
 

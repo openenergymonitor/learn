@@ -1,18 +1,20 @@
 ## Architecture
 
-### Overview
+***
 
-As with an increasing number of web applications the basic design of emoncms is that you have client side html, css, javascript code that makes up your user interface and is loaded from the server when a page is initially requested. 
+#### Overview
+
+As with an increasing number of web applications the basic design of emoncms is that you have client side html, css, javascript code that makes up your user interface and is loaded from the server when a page is initially requested.
 
 With the client up and running the client side javascript queries the server API via AJAX requests with data passed back and forth in JSON format. The server API is a HTTP API to internal models which carry out things like data storage, processing and validation.
 
 Energy monitoring equipment directly interface with the server side API.
 
-**Architecture**
+#### Architecture
 
 In brief the emoncms architecture is a combination of a front controller on the server and model-view-controller design pattern and a directory structure that makes adding features in a self contained modular way easy. We will delve into each of these core architectural components in turn below.
 
-**Directory structure**
+**Directory Structure**
 
     / (your Web root)
     .htaccess
@@ -32,7 +34,7 @@ In brief the emoncms architecture is a combination of a front controller on the 
             jquery
             flot
 
-## The front controller: index.php
+**index.php: The Front Controller**
 
 The first key point is that all site traffic is directed through index.php. This is a common design pattern called the front controller which allows us to load components used by the whole application such as user sessions and database connection in one place.
 
@@ -46,7 +48,7 @@ to:
 
 index.php then fetches the property **q** with $_GET['q']. using q as a command to tell the application what to do.
 
-**Build it**
+#### Build it
 
 Start by creating a folder in your LAMP server */var/www* directory lets call it *framework*
 
@@ -89,7 +91,7 @@ Next: navigate to [http://localhost/framework/feed/list.json](http://localhost/f
 
 As you can see the feed/list.json part has been passed to index.php as a string rather than navigating to an actual folder and file location.
 
-### 1) Decoding the route
+#### Decoding the route
 
 Next we want to decode the "feed/list.json" so that we can use it in our application, in this example:
 
@@ -117,7 +119,7 @@ and create a file called route.php with the following:
         public $controller = '';
         public $action = '';
         public $subaction = '';
-        public $format = "html"; 
+        public $format = "html";
 
         public function __construct($q)
         {
@@ -159,7 +161,7 @@ Navigate again to [http://localhost/framework/feed/list.json](http://localhost/f
 
 Now that we have our routing specification we can use the first part of the route: $route->controller to load the controller of the module named by $route->controller. In the case of the /feed/list.json query we want to load the feed module which has a feed_controller.php inside, the next section introduces the concept of the module in full:
 
-## Modules
+#### Modules
 
 An emoncms module is simply a directory with all the files that belong to a certain distinct feature inside. The use of the single module directory was [introduced in October 2012](http://openenergymonitor.blogspot.co.uk/2012/10/emoncms-development-update-modules.html) with the main reason being to make it really easy to add features to emoncms just by dropping a new module in the modules folder. A module can then be developed in its own github repository, making development easier. The core emoncms modules are: user, input, feed, vis and dashboard.
 
@@ -176,7 +178,7 @@ The module controller is the second part of responding to the HTTP request. In t
 
 - Module menu settings
 
-**Build it**
+#### Build it
 
 Lets now extend our index.php to load the requested module controller and create a bare-bones module controller to test it:
 
@@ -203,7 +205,7 @@ Create a file called core.php and add the controller loading function to it:
         if ($controller_name)
         {
             $controller = $controller_name."_controller";
-            $controllerScript = "Modules/".$controller_name."/".$controller.".php";   
+            $controllerScript = "Modules/".$controller_name."/".$controller.".php";
             if (is_file($controllerScript))
             {
                 require $controllerScript;
@@ -245,11 +247,11 @@ Navigate again to [http://localhost/framework/feed/list.json](http://localhost/f
 
 That completes the implementation and use of routing in the emoncms framework. The next sections will detail how to build data models and views to be used by our module.
 
-### The module model:
+#### The Module Model
 
 As of [February 2013](http://openenergymonitor.blogspot.co.uk/2013/02/ideas-for-improving-emoncms-framework.html) the new recommended model construction is a php class that contains the properties and methods that define the functionality of a module rather than straight functions.
 
-Lets create a simple model for our feed module that allows us to create, get a list of and delete feeds. The model below shows a complete example of input sanitation and returned success or error reporting for each method: 
+Lets create a simple model for our feed module that allows us to create, get a list of and delete feeds. The model below shows a complete example of input sanitation and returned success or error reporting for each method:
 
     <?php
 
@@ -307,7 +309,7 @@ Lets create a simple model for our feed module that allows us to create, get a l
         }
     }
 
-We will need a database and feeds table for the above to connect and query, create a table with the following sql: 
+We will need a database and feeds table for the above to connect and query, create a table with the following sql:
 
     CREATE TABLE  `framework`.`feeds` (
     `id` INT NOT NULL AUTO_INCREMENT ,
@@ -316,7 +318,7 @@ We will need a database and feeds table for the above to connect and query, crea
     PRIMARY KEY (  `id` )
     ) ENGINE = MYISAM ;
 
-Next we need to update the feed model controller to route actions to the feed model methods: create, select and delete. We also need to include and initialize the feed model and pass the $mysqli instance through to the feed_model as it is a dependency:  
+Next we need to update the feed model controller to route actions to the feed model methods: create, select and delete. We also need to include and initialize the feed model and pass the $mysqli instance through to the feed_model as it is a dependency:
 
     <?php
 
@@ -371,7 +373,7 @@ We also need to update index.php to include the connection to the database, plac
 
 Thats the JSON API done! next we will build a nice client side user interface using javascript:
 
-### Module Views
+#### Module Views
 
 Views are html, css, javascript application scripts to be loaded from the server to the browser on the client. Once on the client the javascript on the client side will usually continue to request, receive and send data to and from the server JSON API.
 
@@ -422,15 +424,15 @@ Add the view function to core.php:
     function view($filepath, array $args)
     {
       extract($args);
-      ob_start();       
-      include "$filepath";   
+      ob_start();
+      include "$filepath";
       $content = ob_get_clean();
       return $content;
     }
 
 The view above is returned to index.php, at the moment we have an option to print the output if its json format but no option to print the output when in html format, so we will need to add that. But first lets wrap the module view in a common site wide twitter bootstrap based theme:
 
-### Theme
+#### Theme
 
 Create a folder called Theme and create a file called theme.php with the following:
 
@@ -456,7 +458,7 @@ To complete we tell index.php to wrap $output in the theme if the format is html
 
     if ($route->format == 'html') print view("Theme/theme.php", $output);
 
-**Try it out**
+#### Try it out
 
 [http://localhost/framework/feed/](http://localhost/framework/feed/)
 
@@ -472,8 +474,8 @@ Lets now upgrade our table view above to a fully dynamic editable table ui creat
 
 1) Replace the content of feed_view.html with the following:
 
-    <?php 
-      global $path; 
+    <?php
+      global $path;
       $path = "http://localhost/framework/";
     ?>
 
@@ -483,7 +485,7 @@ Lets now upgrade our table view above to a fully dynamic editable table ui creat
     <script type="text/javascript" src="<?php echo $path; ?>Lib/tablejs/custom-table-fields.js"></script>
     <style>
     input[type="text"] {
-         width: 88%; 
+         width: 88%;
     }
     </style>
 
@@ -527,12 +529,12 @@ Lets now upgrade our table view above to a fully dynamic editable table ui creat
       });
 
       $("#table").bind("onSave", function(e,id,fields_to_update){
-        feed.update(id,fields_to_update); 
+        feed.update(id,fields_to_update);
         updater = setInterval(update, 5000);
       });
 
       $("#table").bind("onDelete", function(e,id){
-        feed.delete(id); 
+        feed.delete(id);
       });
 
     </script>
@@ -604,7 +606,7 @@ and in the controller add (in with the other API method calls)
 
     if ($route->action == 'update') $output = $feed->update($userid,get('id'),get('fields'));
 
-**Try it out**
+#### Try It Out
 
 [http://localhost/framework/feed/](http://localhost/framework/feed/)
 
@@ -615,7 +617,7 @@ You should now see a simple list as follows, you may need to create some feeds f
 ![text](files/tablejs.png)
 
 
-### Resources
+#### Resources
 
 - [Models in MVC](http://blog.astrumfutura.com/2008/12/the-m-in-mvc-why-models-are-misunderstood-and-unappreciated/)
 - [Twitter bootstrap](http://twitter.github.com/bootstrap/)
