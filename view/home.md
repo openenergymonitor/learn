@@ -40,9 +40,6 @@
 }
 </style>
 
-**Learn the core concepts of everything from AC theory to sensor circuit design.**
-
-
 <div class="flex-container">
   <div class="flex-item"><div class='learnpageIcons'><div class='iconCircle'></div></div><h2>Electricity Monitoring</h2>
   <p>
@@ -77,18 +74,11 @@
   </p></div>
   <div class="flex-item"><div class='learnpageIcons'><div class='iconCircle'></div></div><h2>PV Diversion<br><br></h2><p>
   
-  
-  
-  xxxx
-xxxxxx
-  xxxxxx
-xxxxxxx xxxxxxxx
-  xxxxxxxx
+xxxxxxxxxxx
+xxxxxxxxxx
+xxxxxxxxx
 xxxxxxxx
-xxxxx
-xxxx
-xxx
-xxx
+
   </p></div>
 </div>
 

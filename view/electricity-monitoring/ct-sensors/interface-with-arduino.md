@@ -1,4 +1,4 @@
-## CT sensors - Interfacing with an Arduino
+## CT Sensors - Interfacing with an Arduino
 
 ***
 

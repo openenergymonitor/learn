@@ -208,6 +208,7 @@
     $(window).on('hashchange', function(e){
       $(".menu a").parent().removeClass("active");
       $("a[href='" + window.location.href + "']").parent().addClass("active");
+      pageLinks();
     });
 
     }
@@ -335,25 +336,27 @@ $(window).resize(function(){
 // ----------------------------------------------------------------------------------------
 //  Next & previous links on page
 // ----------------------------------------------------------------------------------------
-
-var previous = $("li.active").prev().html();
-var psLocate = $("li.active").closest(".sublevel").prevAll().eq(2);
-var prevSection = psLocate.text();
-var psLink = psLocate.next().find('a:first').attr('href');
-var next = $("li.active").next().html();
-var nsLocate = $("li.active").closest(".sublevel").nextAll().eq(0);
-var nextSection = nsLocate.text();
-var nsLink = nsLocate.next().find('a:first').attr('href');
-if (next != null) {
+function pageLinks() {
+  var previous = $("li.active").prev().html();
+  var psLocate = $("li.active").closest(".sublevel").prevAll().eq(2);
+  var prevSection = psLocate.text();
+  var psLink = psLocate.next().find('a:first').attr('href');
+  var next = $("li.active").next().html();
+  var nsLocate = $("li.active").closest(".sublevel").nextAll().eq(0);
+  var nextSection = nsLocate.text();
+  var nsLink = nsLocate.next().find('a:first').attr('href');
+  if (next != null) {
   $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
-}
-else if (nsLink != null) {
+  }
+  else if (nsLink != null) {
   $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
-}
-if (previous != null) {
+  }
+  if (previous != null) {
   $('.nextPrev > .prev').append("Previous:<br>" + previous);
-}
-else if (psLink != null) {
+  }
+  else if (psLink != null) {
   $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
+  }
 }
+pageLinks();
 </script>
