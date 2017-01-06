@@ -28,6 +28,15 @@
  color: #ffffff;
  box-shadow: none;
 }
+.fcontainer {
+ -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+  user-select: none;
+}
 .fcontainer:hover .learnpageIcons {
  background-color: #77c8ea;
 }
