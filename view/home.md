@@ -9,7 +9,6 @@
  height: 100%;
  background-color: #ffffff;
 }
-
 .flex-item {
  width: 154px;
  height: 100%;
@@ -29,6 +28,9 @@
  color: #ffffff;
  box-shadow: none;
 }
+.fcontainer:hover .learnpageIcons {
+ background-color: #77c8ea;
+}
 .learnpageIcons i {
  display: table-cell;
  vertical-align: middle;
@@ -41,33 +43,44 @@
 </style>
 <div class="flex-container">
 	<div class="flex-item">
-		<div class='learnpageIcons'>
-			<div class='iconCircle'></div>
-		</div>
-		<h2>Electricity Monitoring</h2>
-		<p>Learn all about the basics of electricity monitoring, from AC power theory to designing and building your own monitoring system.</p>
+    <div class="fcontainer">
+      <a href="/learn/electricity-monitoring/ac-power-theory/introduction">
+      	<div class='learnpageIcons'>
+      		<div class='iconCircle'></div>
+      	</div>
+      	<h2>Electricity Monitoring</h2>
+      	<p>Learn all about the basics of electricity monitoring, from AC power theory to designing and building your own monitoring system.</p>
+    	</a>
+    </div>
 	</div>
 	<div class="flex-item">
-		<div class='learnpageIcons'>
-			<div class='iconCircle'></div>
+	  <div class="fcontainer">
+	    <a href="/learn/sustainable-energy/energy/introduction">
+		    <div class='learnpageIcons'>
+		    	<div class='iconCircle'></div>
+		    </div>
+		    <h2>Sustainable Energy</h2>
+		    <p>Learn the theory behind the available methods and technologies for achieving a sustainable energy supply.</p>
+		  </a>
 		</div>
-		<h2>Sustainable Energy</h2>
-		<p>Learn the theory behind the available methods and technologies for achieving a sustainable energy supply.</p>
 	</div>
 	<div class="flex-item">
-		<div class='learnpageIcons'>
-			<div class='iconCircle'></div>
-		</div>
-		<h2>PV<br>
-		Diversion</h2>
-		<p>Learn how to build a solar PV diverter to make use of excess energy.</p>
+	  <div class="fcontainer">
+	    <a href="/learn/pv-diversion/introduction/choosing-an-energy-diverter.md">
+		    <div class='learnpageIcons'>
+			    <div class='iconCircle'></div>
+		    </div>
+		    <h2>PV<br>Diversion</h2>
+		    <p>Learn how to build a solar PV diverter to make use of excess energy.</p>
+		  </a>
+	  </div>
 	</div>
 </div>
 <script>
    $(".learnpageIcons:eq(0)").append(
-    "<i class='fa fa-bolt fa-3x'><\/i>");
+    "<i class='fa fa-bolt fa-3x'></i>");
    $(".learnpageIcons:eq(1)").append(
-    "<i class='fa fa-globe fa-3x'>");
+    "<i class='fa fa-globe fa-3x'></i>");
    $(".learnpageIcons:eq(2)").append(
-    "<i class='fa fa-random fa-3x' style='padding:8px 0 0 4px;'><\/i>");
+    "<i class='fa fa-random fa-3x' style='padding:8px 0 0 4px;'></i>");
 </script>

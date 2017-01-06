@@ -180,7 +180,7 @@ body {
 }*/
 .toplevelhead:hover > .topIcons {
   border: 4px solid #ffffff;
-  background-color: rgba(255,255,255, 0.2);
+  background-color: #77c8ea;
 }
 .sublevelhead {
 	cursor: pointer;
@@ -208,7 +208,7 @@ body {
 .sublevel ul li a {
 	padding: 12px;
 }
-.sublevel ul li:hover, .sublevel ul li a:hover {
+.sublevel ul li a:hover {
   font-weight: bold;
 }
 .sublevel ul li a:first-child {
