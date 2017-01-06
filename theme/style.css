@@ -47,7 +47,7 @@ body {
 	text-align: left;
 }
 #rightpanel-inner {
-/*	padding: 20px; */
+	padding: 20px; 
 }
 .row {
 	padding: 15px 20px 20px 20px;
@@ -504,6 +504,7 @@ p a {
 }
 h2, h3 {
   margin: 0;
+  margin-bottom: 10px;
 	color: #333;
 }
 h4 {
