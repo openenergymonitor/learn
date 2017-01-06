@@ -184,10 +184,14 @@
 // ----------------------------------------------------------------------------------------
 // Show/hide OpenEnergyMonitor site links
 // ----------------------------------------------------------------------------------------
-    $(".titleWrapper").click(function() {
-      $(".oemMenu").slideToggle("fast");
-      $(this).find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle');
+    $(".titleWrapper").click(function(){
+          open_topmenu()
     });
+    
+    function open_topmenu(){
+      $(".oemMenu").slideToggle("fast");
+      $(".titleWrapper").find('#menuSelect').toggleClass('fa-chevron-circle-down fa-minus-circle');
+    };
 // ----------------------------------------------------------------------------------------
 // Display current page link in menu
 // ----------------------------------------------------------------------------------------
