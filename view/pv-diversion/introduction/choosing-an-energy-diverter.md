@@ -1,5 +1,3 @@
-For an overview of all solar PV diversion topics see [Resources](https://openenergymonitor.org/emon/buildingblocks) section. 
-
 ## Choosing an energy diverter
 
 ### What does an energy diverter do?
@@ -59,7 +57,7 @@ A slightly different power switch is described by Martin Roberts here: [Divertin
 
 Both of the power switches are suitable for use with an emonTx V2 or Arduino Uno. For the emonTx V3 using the ac adapter as the power supply, the circuit below must be used due to the limited current available from the rectifier circuit (note the use of the more sensitive MOC3043M and the increased value of the series resistor). For this reason, operation of the emonTx V3.4 with the RFM69CW radio module is not guaranteed.
 
-![Power switch for emonTx V3](https://openenergymonitor.org/emon/sites/default/files/Switch_V3_electrical.png)
+![Power switch for emonTx V3](files/Switch_V3_electrical.png)
 
 Care must be taken when choosing a commercial SSR. Apart from the danger of purchasing a sub-standard and potentially dangerous low-cost device from on-line suppliers, care should be taken (especially if you are using an emonTx) to ensure that the SSR can de driven properly by the 3.3 V emonTx output. Problems are less likely if you use an Arduino, as its 5V output will normally drive an SSR without issue.
 
@@ -82,4 +80,5 @@ There are two principal published sources of control software:
 1.  MartinR’s Phase Locked Loop. [[https://openenergymonitor.org/emon/sites/default/files/emonTx_Solar_Controller_Temperature_PLL_0.zip](https://openenergymonitor.org/emon/sites/default/files/emonTx_Solar_Controller_Temperature_PLL_0.zip)]
     This sketch controls a single load. Voltage, current, power and frequency are measured continuously. Written for the emonTx v2, with a number of changes to the pin assignments, it will run on the emonTx v3 - see [Part 10 of Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts](https://openenergymonitor.org/emon/pvdiversion/pll/derivatives). It should also run on Arduino boards, with the pin assignments changed as necessary.
 2.  Robin Emley’s [Mk2 Code variants and associated tools](https://openenergymonitor.org/emon/node/1757). This page lists 20 variants, of which 7 are current. Here is a table that gives a ‘quick reference’ overview.
-    ![Table listing Robin's software](https://openenergymonitor.org/emon/sites/default/files/Robin's Variants.2_0.png)
+
+![Table listing Robin's software](files/robins-variants.png)

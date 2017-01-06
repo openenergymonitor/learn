@@ -439,15 +439,22 @@
     "pv-diversion": {
         "nicename": "PV Diversion",
         "chapters": {
-            "Choosing an Energy Diverter": {
-                "nicename": "Choosing An Energy Diverter",
+            "introduction": {
+                "nicename": "Introduction",
                 "pages": {
-
+                    "intro": {
+                        "nicename": "Choosing An Energy Diverter",
+                        "url": "pv-diversion/introduction/choosing-an-energy-diverter.md"
+                    }
                 }
             },
             "mk2": {
                 "nicename": "MK2 PV Diverter",
                 "pages": {
+                    "index": {
+                        "nicename": "Contents",
+                        "url": "pv-diversion/mk2/index"
+                    },
                     "intro": {
                         "nicename": "1. Introduction",
                         "url": "pv-diversion/mk2/intro"

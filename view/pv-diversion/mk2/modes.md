@@ -1,9 +1,5 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-[<< 4: Switching High Current Loads using a Triac](switchdev)
-
-[6: Different ways of Measuring Voltage and Current >>](vimeasurement)
-
 ### 5: Mk2 Controller Operating Modes
 
 The principle on which the Mk2 controller operates works equally well using either Burst Mode or Phase Angle Control to regulate the dump load.
@@ -17,7 +13,3 @@ An **anti-flicker option** has therefore been included in all recent releases of
 Anti-flicker is a topic of ongoing development, a forum thread may be found at [https://openenergymonitor.org/emon/node/1637](https://openenergymonitor.org/emon/node/1637). There is a video demonstration of the problem and a possible solution [here](http://www.youtube.com/watch?v=U-gW0ccroYc).
 
 The **“phase-angle control”** version works slightly differently. The conduction angle of the triac is made proportional to the amount of energy in the bucket, with a correction built in to compensate for the inherent non-linearity of phase control, so that as the energy in the bucket rises and falls, the firing point steadily advances and retards. The phase-angle variant of my Mk2 PV Router can be seen working in a video [here](https://www.youtube.com/watch?v=p_IoNohZJAY).
-
-[<< 4: Switching High Current Loads using a Triac](switchdev)
-
-[6: Different ways of Measuring Voltage and Current >>](vimeasurement)
