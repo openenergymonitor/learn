@@ -208,6 +208,8 @@
     $(window).on('hashchange', function(e){
       $(".menu a").parent().removeClass("active");
       $("a[href='" + window.location.href + "']").parent().addClass("active");
+      $('.nextPrev > .next').empty();
+      $('.nextPrev > .prev').empty();
       pageLinks();
     });
 
