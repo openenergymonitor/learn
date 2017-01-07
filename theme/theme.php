@@ -364,7 +364,7 @@ function pageLinks() {
   $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
   }
   else if (nsLink != null) {
-  $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
+  $('.nextPrev > .next').append("Next Chapter:<a href=" + nsLink + "><br>" + nextSection + "</a>");
   }
   else if (nsLink == null && next == null) {
   $('.nextPrev > .next').append("Return to:<br><a href='/'>Main Menu</a>");
@@ -373,7 +373,7 @@ function pageLinks() {
   $('.nextPrev > .prev').append("Previous:<br>" + previous);
   }
   else if (psLink != null) {
-  $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
+  $('.nextPrev > .prev').append("Previous Chapter:<a href=" + psLink + "><br>" + prevSection + "</a>");
   }
   else if (psLink == null && previous == null) {
   $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
