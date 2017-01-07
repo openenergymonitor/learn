@@ -24,13 +24,15 @@
   <div id="topnav">
     <nav>
       <div class="learnTitle">
-        <div class="learnTitle-iconWrapper">
-          <i id="sidebar-open" class="fa fa-bars learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
-        </div>
-        <div class="learnTitle-titleWrapper">
-          <span>
-              <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
-          </span>
+        <div id="sidebar-open">
+          <div class="learnTitle-iconWrapper">
+            <i class="fa fa-bars learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
+          </div>
+          <div class="learnTitle-titleWrapper">
+            <span>
+                <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
+            </span>
+          </div>
         </div>
         <div class="learnTitle-topLinks">
           <div class="learnTitle-topLinks-toplinkBox">
