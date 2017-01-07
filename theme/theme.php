@@ -366,11 +366,17 @@ function pageLinks() {
   else if (nsLink != null) {
   $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
   }
+  else if (nsLink == null && next == null) {
+  $('.nextPrev > .next').append("Return to:<br><a href='/'>Main Menu</a>");
+  }
   if (previous != null) {
   $('.nextPrev > .prev').append("Previous:<br>" + previous);
   }
   else if (psLink != null) {
   $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
+  }
+  else if (psLink == null && previous == null) {
+  $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
   }
 }
 pageLinks();
