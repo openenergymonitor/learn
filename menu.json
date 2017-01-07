@@ -154,10 +154,6 @@
                         "nicename": "Introduction to pulse counting",
                         "url": "electricity-monitoring/pulse-counting/introduction-to-pulse-counting"
                     },
-                    "opticalpulsesensor": {
-                        "nicename": "Optical Pulse Sensor",
-                        "url": "electricity-monitoring/pulse-counting/opticalpulsesensor"
-                    },
                     "interrupt-based-pulse-counter": {
                         "nicename": "Interrupt based pulse counter",
                         "url": "electricity-monitoring/pulse-counting/interrupt-based-pulse-counter"
