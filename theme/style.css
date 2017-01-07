@@ -1,3 +1,10 @@
+.searchContainer {
+  box-sizing: border-box;
+  width: 270px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-top: 20px;
+}
 .nextPrev {
   box-sizing: border-box;
   border-top: 2px solid #000000;
@@ -262,7 +269,7 @@ li.active a {
 }
 .oemMenu ul li a {
 	box-sizing: border-box;
-	font-size: 1em;
+	font-size: 0.8em;
 	padding: 0;
 	display: inline-block;
 	width: 100%;
@@ -393,16 +400,16 @@ li.active a {
 /*---------------------------------------------------------------------/
 // Table
 /*--------------------------------------------------------------------*/
-table {
+.container table {
     width:100%;
     border-collapse: collapse;
 }
-  table th {
+  .container table th {
       text-align:left;
       border: 1px solid #ddd;
       padding:6px 13px;
   }
-  table td {
+  .container table td {
       text-align:left;
       border: 1px solid #ddd;
       padding:6px 13px;
@@ -475,13 +482,13 @@ pre::-webkit-scrollbar-thumb {
 	  -ms-user-select: none;
 	   user-select: none;
 }
-  .sidenav a {
-      padding: 8px 8px 0 0;
+  .oemMenu ul li a, .lowermenuWrapper a  {
+      padding: 0;
       text-decoration: none;
       color: #fff;
       display: block;
   }
-  .sidenav a:hover, .offcanvas a:focus {
+  .offcanvas a:focus {
       color: #f1f1f1;
   }
   @media screen and (max-height: 450px) {
@@ -528,20 +535,4 @@ pre {
 ol {
 	color: #333;
 	font-size: 14px;
-	padding-bottom: 8px;
-}
-li {
-	font-size: 14px;
-}
-
-img {
-max-width: 100%;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background: #ccc;
-  margin: 0;
-  padding:0;
-}
+	padding-bottom: 8px

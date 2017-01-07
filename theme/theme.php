@@ -119,6 +119,10 @@
         </div>
       </div>
       <div class="lowermenuWrapper">
+        <div class="searchContainer">
+          <gcse:searchbox></gcse:searchbox>
+          <gcse:searchresults></gcse:searchresults>
+        </div>
       <?php
 
       $menu = json_decode(file_get_contents("menu.json"));
@@ -165,6 +169,23 @@
 </body>
 </html>
 <script>
+// ----------------------------------------------------------------------------------------
+// Google search
+// ----------------------------------------------------------------------------------------
+  (function() {
+    var cx = '006198118389747886812:hsjk7qeuppa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+  
+  $(window).load(function() {
+    $(".gsc-control-cse").css("padding","0");
+        $(".gsc-control-cse").css("border","none");
+    });
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
 // ----------------------------------------------------------------------------------------
