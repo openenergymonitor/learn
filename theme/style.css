@@ -5,6 +5,10 @@
   padding-right: 10px;
   padding-top: 20px;
 }
+.searchResults {
+  position: absolute;
+  max-width: 100%;
+}
 .nextPrev {
   box-sizing: border-box;
   border-top: 2px solid #000000;
@@ -262,7 +266,7 @@ li.active a {
 }
 .oemMenu ul li a {
 	box-sizing: border-box;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	padding: 0;
 	display: inline-block;
 	width: 100%;
@@ -474,8 +478,8 @@ pre::-webkit-scrollbar-thumb {
 	  -ms-user-select: none;
 	   user-select: none;
 }
-  .oemMenu ul li a, .lowermenuWrapper a  {
-      padding: 0;
+  .sidenav a  {
+      padding: 8px 8px 0 0;
       text-decoration: none;
       color: #fff;
       display: block;

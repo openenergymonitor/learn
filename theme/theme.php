@@ -120,8 +120,7 @@
       </div>
       <div class="lowermenuWrapper">
         <div class="searchContainer">
-          <gcse:searchbox></gcse:searchbox>
-          <gcse:searchresults></gcse:searchresults>
+          <gcse:searchbox-only></gcse:searchbox-only>
         </div>
       <?php
 
@@ -158,7 +157,7 @@
     <div class="row">
         <?php echo $content; ?>
         <div class="nextPrev">
-            <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+          <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
         </div>
     </div>
   </div>
@@ -181,10 +180,10 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
-  
+
   $(window).load(function() {
     $(".gsc-control-cse").css("padding","0");
-        $(".gsc-control-cse").css("border","none");
+    $(".gsc-control-cse").css("border","none");
     });
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
@@ -402,3 +401,12 @@ function pageLinks() {
 }
 pageLinks();
 </script>
+<!--
+
+
+
+End
+
+
+
+-->
