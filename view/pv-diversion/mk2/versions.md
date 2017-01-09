@@ -6,7 +6,7 @@ All versions of the Mk2 PV Router sketch (apart from the phase-angle variant) wi
 
 Note that the [phase-angle variant of the Mk2 sketch](files/Mk2_PV_phaseAngle.ino_.zip) requires slightly different hardware. These differences are given in the associated post which accompanies that particular version.
 
-A summary of the operation of the [Mk2_PV_Router_mini.ino](files/Mk2_PV_Router_mini.ino_.zip) version now follows. The line numbers are as shown in the editor that forms part of the Arduino’s IDE. Full guidance for setting up this environment is available at [https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment](https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment).
+A summary of the operation of the [Mk2_PV_Router_mini.ino](files/Mk2_PV_Router_mini.ino_.zip) version now follows. The line numbers are as shown in the editor that forms part of the Arduino’s IDE.
 
 |Line Nos.|Content|
 |---------|-------|

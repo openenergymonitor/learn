@@ -6,6 +6,6 @@ The PLL Power Diversion sketch uses advanced techniques to achieve a performance
 
 The sketch uses a phase locked loop to synchronise to the mains frequency, it uses the much faster integer maths to speed up the calculations, and the ADC runs in the background communicating with the main program via interrupts.
 
-This design builds on top of the excellent work done by Robin Emley ([“Diverting surplus PV Power”](https://openenergymonitor.org/emon/mk2)) and on the emonLib library.
+This design builds on top of the excellent work done by Robin Emley ([“Diverting surplus PV Power”](../mk2/index)) and on the emonLib library.
 
 The basic power diversion algorithm is the same as Robin Emley’s and sections 1 – 6 of “Diverting surplus PV Power” provide a good explanation of the principles and basic operation. If you are not familiar with that, I suggest you read those pages before continuing.
