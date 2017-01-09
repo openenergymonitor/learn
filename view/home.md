@@ -75,7 +75,7 @@
 		    	<div class='iconCircle'></div>
 		    </div>
 		    <h2>Sustainable Energy</h2>
-		    <p>Learn the theory behind the available methods and technologies for achieving a sustainable energy supply.</p>
+		    <p>Exploring the context of energy, renewable supply, energy efficiency and zero carbon energy systems.</p>
 		  </a>
 		</div>
 	</div>
