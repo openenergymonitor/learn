@@ -14,7 +14,7 @@ The emonTx was originally thought by the author to be less suitable for the Rout
 
 All of the author’s software runs equally well on either platform.
 
-All of the necessary information to construct a basic Mk2 router may be found in the initial posting on the OEM forum at [https://openenergymonitor.org/emon/node/841](https://openenergymonitor.org/emon/node/841) and this is essentially the same for whichever version is chosen. This includes a schematic diagram which covers the circuitry for both of the input sensors and the output stage. The sensors for [voltage](https://openenergymonitor.org/emon/buildingblocks/measuring-voltage-with-an-acac-power-adapter) and [current](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface) are entirely standard and are well described in the Building Blocks section. Buffering the 2.5 V reference is not essential. Many constructors have used two independent references, as may be found on the emonTx platform, with no problems.
+All of the necessary information to construct a basic Mk2 router may be found in the initial posting on the OEM forum at [https://openenergymonitor.org/emon/node/841](https://openenergymonitor.org/emon/node/841) and this is essentially the same for whichever version is chosen. This includes a schematic diagram which covers the circuitry for both of the input sensors and the output stage. The sensors for [voltage](../../electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter) and [current](../../electricity-monitoring/ct-sensors/interface-with-arduino) are entirely standard and are well described in the Electricity Monitoring section. Buffering the 2.5 V reference is not essential. Many constructors have used two independent references, as may be found on the emonTx platform, with no problems.
 
 Although the input stage is both low-voltage and non-invasive, the output stage will require some connection to the mains supply. <span style="color: red;">If at all unclear about how this should be done, it would be wise to seek guidance from a qualified electrician</span>.
 
@@ -41,7 +41,7 @@ PCBs are also available in a kit with the input and output components, either fo
 
 *   The PCB option is limited to just one CT. Although this is fine for the router in its basic function, many constructors have found it desirable to measure current in at least one additional location for stats purposes.
 *   Unlike the shop-sourced AC/AC adapter, the pcb-mounted transformer has not been formally tested for suitability in this application.
-*   No RF unit is included, but this could be added by following the guidance at [https://openenergymonitor.org/emon/buildingblocks/rfm12b-wireless](https://openenergymonitor.org/emon/buildingblocks/rfm12b-wireless)
+*   No RF unit is included, but this could be added by following the guidance at [Electricity Monitoring: rfm12b wireless](../../electricity-monitoring/networking/rfm12b-wireless)
 
 #### The emonTx hardware
 
@@ -83,7 +83,7 @@ The recommended triac is an insulated tab device, meaning that it is possible to
 
 Circuit protection.
 
-It is not economic to include a fuse or circuit breaker that will protect the recommended triac in every possible circumstance (even though it is grossly over-rated for the duty) and therefore it should be possible to replace it easily in the event of failure. See [Overload Protection of Mains Electrical Circuits](https://openenergymonitor.org/emon/buildingblocks/overload-protection-of-mains-electrical-circuits) for more information.
+It is not economic to include a fuse or circuit breaker that will protect the recommended triac in every possible circumstance (even though it is grossly over-rated for the duty) and therefore it should be possible to replace it easily in the event of failure. See [Overload Protection of Mains Electrical Circuits](../../electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits) for more information.
 
 #### Testing
 
@@ -117,8 +117,4 @@ _NOTE: All versions of the Mk2 PV Router require the CT’s direction to be such
 
 #### How to simulate more current by using multiple turns through the CT:
 
-<<<<<<< HEAD
 ![Simulating more current through a c.t.](files/mk2ctturns.png)
-=======
-![Simulating more current through a c.t.](/emon/sites/default/files/mk2ctturns.png)
->>>>>>> b6266e3bbeafbc1897a9386e34a781c9ab09691e
