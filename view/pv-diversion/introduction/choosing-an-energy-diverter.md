@@ -34,7 +34,9 @@ Switching takes place many tens of times each mains cycle. Again, the ‘on’ t
 
 A pair of high voltage, high current MOSFET or IGBT transistors are the switching elements. Fine control requires very short 'on' and 'off' times. Filters are required to remove switching transients, but because of the higher frequencies involved, they can be made much smaller than those used with the phase controlled mode. Although there is at least one commercial PWM system on the market, _we_ aren't aware of any constructor built systems.
 
-More on phase control & burst mode: [https://openenergymonitor.org/emon/mk2/switchdev](https://openenergymonitor.org/emon/mk2/switchdev)
+More on phase control & burst mode: 
+
+[MK2: Switching High Current Loads using a Triac](../mk2/switchdev)
 
 ### Should I make or buy my energy diverter?
 
@@ -51,9 +53,9 @@ For the mains section, the choices are:
 1.  a home-built switch principally comprising a trigger IC, triac and heatsink, or
 2.  a commercially produced solid-state relay.
 
-The application of the Arduino Uno and the emonTx V2 and the construction of a home-built switch are described in [Diverting surplus PV Power, by Robin Emley](https://openenergymonitor.org/emon/mk2). Robin is able to supply a range of items, from various special items, to a complete complete kit of parts, or the same design as a finished, tested unit, ready to be installed. [[MK2PVRouter.co.uk](http://MK2PVRouter.co.uk/)]
+The application of the Arduino Uno and the emonTx V2 and the construction of a home-built switch are described in [Diverting surplus PV Power, by Robin Emley](../mk2/index). Robin is able to supply a range of items, from various special items, to a complete complete kit of parts, or the same design as a finished, tested unit, ready to be installed. [[MK2PVRouter.co.uk](http://MK2PVRouter.co.uk/)]
 
-A slightly different power switch is described by Martin Roberts here: [Diverting surplus PV Power: PLL](https://openenergymonitor.org/emon/pvdiversion/pll)
+A slightly different power switch is described by Martin Roberts here: [Diverting surplus PV Power: PLL](../pll/pll)
 
 Both of the power switches are suitable for use with an emonTx V2 or Arduino Uno. For the emonTx V3 using the ac adapter as the power supply, the circuit below must be used due to the limited current available from the rectifier circuit (note the use of the more sensitive MOC3043M and the increased value of the series resistor). For this reason, operation of the emonTx V3.4 with the RFM69CW radio module is not guaranteed.
 
@@ -78,7 +80,7 @@ Sometimes there is a requirement to be able to control more than one load. As al
 There are two principal published sources of control software:
 
 1.  MartinR’s Phase Locked Loop. [[https://openenergymonitor.org/emon/sites/default/files/emonTx_Solar_Controller_Temperature_PLL_0.zip](https://openenergymonitor.org/emon/sites/default/files/emonTx_Solar_Controller_Temperature_PLL_0.zip)]
-    This sketch controls a single load. Voltage, current, power and frequency are measured continuously. Written for the emonTx v2, with a number of changes to the pin assignments, it will run on the emonTx v3 - see [Part 10 of Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts](https://openenergymonitor.org/emon/pvdiversion/pll/derivatives). It should also run on Arduino boards, with the pin assignments changed as necessary.
+    This sketch controls a single load. Voltage, current, power and frequency are measured continuously. Written for the emonTx v2, with a number of changes to the pin assignments, it will run on the emonTx v3 - see [Part 10 of Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts](../pll/derivatives). It should also run on Arduino boards, with the pin assignments changed as necessary.
 2.  Robin Emley’s [Mk2 Code variants and associated tools](https://openenergymonitor.org/emon/node/1757). This page lists 20 variants, of which 7 are current. Here is a table that gives a ‘quick reference’ overview.
 
 ![Table listing Robin's software](files/robins-variants.png)

@@ -2,7 +2,7 @@
 
 ### 6: Different ways of Measuring Voltage and Current
 
-The hardware for measuring power using non-intrusive sensors is fully described in the Building Blocks section at [https://openenergymonitor.org/emon/buildingblocks](https://openenergymonitor.org/emon/buildingblocks). Behind the hardware lies some associated software in the OEM’s library files. The standard code for measuring and calculating various parametric values including Power may be found in the `calcVI()`function in the source file `emonLib.cpp`. Instructions for downloading the EmonLib library are given at [Arduino sketch - voltage and current](https://openenergymonitor.org/emon/buildingblocks/arduino-sketch-voltage-and-current).
+The hardware for measuring power using non-intrusive sensors is fully described in the Electricity Monitoring section. Behind the hardware lies some associated software in the OEM’s library files. The standard code for measuring and calculating various parametric values including Power may be found in the `calcVI()`function in the source file `emonLib.cpp`. Instructions for downloading the EmonLib library are given at [Arduino sketch - voltage and current](https://github.com/openenergymonitor/EmonLib/blob/master/examples/voltage_and_current/voltage_and_current.ino).
 
 Essentially, _pairs of voltage and current measurements are multiplied together and accumulated over a period of time to reveal the average power that is present_.
 
