@@ -372,11 +372,13 @@ li.active a {
     color: #ffffff;
 }
 .learnTitle-iconWrapper {
-    display:inline;
+    display:inline-block;
+    height: 100%;
 }
 .learnTitle-titleWrapper {
-    display: inline;
-    padding-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
 }
 .learnTitle-topLinks {
     float: right;

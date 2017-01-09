@@ -26,7 +26,7 @@
       <div class="learnTitle">
         <div id="sidebar-open">
           <div class="learnTitle-iconWrapper">
-            <i class="fa fa-bars learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
+            <i class="fa fa-bars fa-2x learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
           </div>
           <div class="learnTitle-titleWrapper">
             <span>
