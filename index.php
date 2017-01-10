@@ -16,19 +16,18 @@ ini_set('display_errors', 'on');
         
 require("core.php");
 $path = get_application_path();
-
 $q = "home";
 if (isset($_GET['q'])) $q = $_GET['q'];
 //$q = rtrim($q,"/");
 
 $format = "html";
 $doc_ext = "html";
-$content = "Sorry page not found";
+$content = "Sorry page not found :-(";
 
 $filename_parts = explode(".",$q);
    
 if (count($filename_parts)==1) {
-    if (file_exists("view/$q.html")) { $doc_ext = "html"; $q = "$q.html"; } 
+    if (file_exists("view/$q.html")) { $doc_ext = "html"; $q = "$q.html"; }
     if (file_exists("view/$q.md")) { $doc_ext = "md"; $q = "$q.md"; }
 } else {
     $doc_ext = $filename_parts[count($filename_parts)-1];
@@ -54,7 +53,7 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="py") $format = "py";
 }
 
-switch ($format) 
+switch ($format)
 {
     case "html":
         header('Content-Type: text/html');
@@ -99,5 +98,5 @@ switch ($format)
     case "pdf":
         header('Content-Type: application/pdf');
         print $content;
-        break;        
+        break;
 }

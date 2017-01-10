@@ -2,9 +2,7 @@
 
 ***
 
-One of the most commonly asked questions is “Why does my emonTx [Arduino] not measure anything?” – or a variation of that. Most often, it is because the current transformer has been installed incorrectly.
-
-**THE CURRENT TRANSFORMER MUST BE ON A SINGLE CURRENT-CARRYING WIRE…**
+**THE CURRENT TRANSFORMER MUST BE INSTALLED ON A SINGLE CURRENT-CARRYING WIRE…**
 
 ![CT on cable - right & wrong](files/CT-on-cable.jpg)
 

@@ -1,53 +1,33 @@
 ## CT sensors - An Introduction
 
-***
-
-Often referred to as a current clamp, a CT is in fact, **not** a clamp.
-
-_These_ are Clamps. On the left are two busbar clamps, on the right, a carpenter's G-clamp:
-
-<figure>
-
-<img src="files/bbar_clamp.jpg" alt="" />
-<img src="files/g_clamp.jpg" alt="" />
-<figcaption><i>Note the tensioning screws</i></figcaption>
-
-</figure>
-
-<br>
-
-***
-
-Pictured below, is an example of a **split-core** CT:
+Pictured below, is an example of a **split-core** HYDC CT:
 
 <figure>
 <img src="files/current100a.jpg" alt="" />
-<figcaption><i>YHDC Current Transformer SCT-013-000 <a href="https://openenergymonitor.org/emon/buildingblocks/report-yhdc-sct-013-000-current-transformer">test report</a></i></figcaption>
+<figcaption><i>YHDC Current Transformer SCT-013-000 <a href="yhdc-ct-sensor-report">(See test report)</a></i></figcaption>
 </figure>
-
 <br>
 
-***
 
 Here's an example of a Magnelab **split-core** CT:
 
 ![](files/SCT-1250_CT.jpg)
 
-***
 
 In addition to the split-core type, **solid-core**, (aka **ring-core**) CTs are available.
 Here's an example of a Magnelab **solid-core** CT:
+
 ![](files/solid_core_ct.jpg)
 
 #### Basics
 
 Current transformers (CTs) are sensors that measure alternating current. They are particularly useful for measuring whole building electricity consumption (or generation, for that matter).
 
-The split core type, such as the CT in the picture above, is particularly suitable for DIY use, as it can be clipped onto either the live **_or_** neutral wire coming into the building, without the need to do any high voltage electrical work.
+The split core type, such as the CT in the picture above, is particularly suitable for DIY use, as it can be clipped onto either the live **or** neutral wire coming into the building, without the need to do any high voltage electrical work.
 
 Like any other transformer, a current transformer has a primary winding, a magnetic core, and a secondary winding.
 
-In the case of whole building monitoring, the primary winding is the live _**or**_ neutral wire (not both!) coming into the building, that is passed through the opening in the CT. The secondary winding is made of many turns of fine wire housed within the transformer case.
+In the case of whole building monitoring, the primary winding is the live **or** neutral wire (not both!) coming into the building, that is passed through the opening in the CT. The secondary winding is made of many turns of fine wire housed within the transformer case.
 
 The alternating current flowing in the primary produces a magnetic field in the core, which induces a current in the secondary winding circuit [1].
 
@@ -71,7 +51,7 @@ The secondary circuit is galvanically isolated [2] from the primary circuit. (i.
 
 #### Safety
 
-In general, a CT must **never** be open-circuited once it's attached to a current-carrying conductor.  
+In general, a CT must **never** be open-circuited once it's attached to a current-carrying conductor.
 A CT is potentially dangerous if open-circuited.
 
 If open-circuited with current flowing in the primary, the transformer secondary will attempt to continue driving current into what is effectively an infinite impedance. This will produce a high and potentially dangerous voltage across the secondary [1]
@@ -82,11 +62,11 @@ Some CT'shave built-in protection. Some have protective Zener diodes as is the 
 
 The primary winding of the CT is the wire carrying the current you want to measure. If you clip your CT around a two or three core cable that has wires carrying the same current but in opposite directions, the magnetic fields created by the wires will cancel each other, and your CT will have no output. [3] & [4]
 
-A split-core CT, especially one that has a ferrite core (such as the ones made by YHDC) should _**never**_ be "clamped" to the cable using any sort of packing material, because the brittle nature of the ferrite core means that it might easily be broken, thus destroying the CT. You should only clamp the CT to the cable or busbar if the housing is specifically designed to do so. Similarly, a ring-core CT should **_never_** be forced onto a cable that is too large to pass freely through the centre. The position and orientation of the cable within the CT aperture does **_not_** affect the output.
+A split-core CT, especially one that has a ferrite core (such as the ones made by YHDC) should _**never**_ be "clamped" to the cable using any sort of packing material, because the brittle nature of the ferrite core means that it might easily be broken, thus destroying the CT. You should only clamp the CT to the cable or busbar if the housing is specifically designed to do so. Similarly, a ring-core CT should **never** be forced onto a cable that is too large to pass freely through the centre. The position and orientation of the cable within the CT aperture does **not** affect the output.
 
 #### References and further reading
 
-[Test report: Yhdc SCT-013-000 Current Transformer](https://openenergymonitor.org/emon/buildingblocks/report-yhdc-sct-013-000-current-transformer "Report: Yhdc SCT-013-000 Current Transformer")
+[Test report: Yhdc SCT-013-000 Current Transformer](yhdc-ct-sensor-report)
 
 [Elkor Technologies Inc - Introduction to current transformers](https://www.elkor.net/pdfs/AN0305-Current_Transformers.pdf)
 
@@ -94,6 +74,6 @@ A split-core CT, especially one that has a ferrite core (such as the ones made b
 
 [2] [Wikipedia article on Galvanic isolation](https://en.wikipedia.org/wiki/Galvanic_isolation)
 
-[3] [CT and AC power adaptor installation and calibration theory](https://openenergymonitor.org/emon/buildingblocks/ct-and-ac-power-adaptor-installation-and-calibration-theory "CT and AC power adaptor installation and calibration theory")
+[3] [CT and AC power adaptor installation and calibration theory](/learn/electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory)
 
-[4] [Current Transformer Installation](https://openenergymonitor.org/emon/Current_Transformer_Installation "Current Transformer Installation")
+[4] [Current Transformer Installation](installation)
