@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <head>
 <?php
-  global $path, $session;
+  global $path, $session, $github_url;
   $apikey = $session['apikey_read'];
   $q = "";
   if (isset($_GET['q'])) $q = $_GET['q'];
@@ -129,6 +129,8 @@
 
       $menu = json_decode(file_get_contents("menu.json"));
 
+      echo "<div><a href=".$github_url.">Edit on GitHub</a></div>";
+      
       foreach ($menu as $mk1=>$mv1)
       {
         echo "<div class='toplevelhead'>

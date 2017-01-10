@@ -36,7 +36,7 @@ if (count($filename_parts)==1) {
 if (file_exists("view/".$q)) {
     
     $content = file_get_contents("view/".$q);
-    
+    $github_url="https://github.com/openenergymonitor/learn/blob/master/view/".$q;
     // Parse markdown if page is markdown
     if ($doc_ext=="md") {
         include "lib/Parsedown.php";
