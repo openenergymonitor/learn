@@ -190,7 +190,9 @@
   $(window).load(function() {
     $(".gsc-control-cse").css("padding","0");
     $(".gsc-control-cse").css("border","none");
-    });
+    $(".gsc-clear-button").css("display","none");
+    $(".gsc-search-button").css("fontFamily","ubuntu");
+  });
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
 // ----------------------------------------------------------------------------------------
