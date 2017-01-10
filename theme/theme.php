@@ -24,13 +24,15 @@
   <div id="topnav">
     <nav>
       <div class="learnTitle">
-        <div class="learnTitle-iconWrapper">
-          <i id="sidebar-open" class="fa fa-bars learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
-        </div>
-        <div class="learnTitle-titleWrapper">
-          <span>
-              <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
-          </span>
+        <div id="sidebar-open">
+          <div class="learnTitle-iconWrapper">
+            <i class="fa fa-bars fa-2x learnTitle-iconWrapper-icon" style="line-height:42px;"></i>
+          </div>
+          <div class="learnTitle-titleWrapper">
+            <span>
+                <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
+            </span>
+          </div>
         </div>
         <div class="learnTitle-topLinks">
           <div class="learnTitle-topLinks-toplinkBox">
@@ -117,6 +119,9 @@
         </div>
       </div>
       <div class="lowermenuWrapper">
+        <div class="searchContainer">
+          <gcse:searchbox-only></gcse:searchbox-only>
+        </div>
       <?php
 
       $menu = json_decode(file_get_contents("menu.json"));
@@ -152,7 +157,7 @@
     <div class="row">
         <?php echo $content; ?>
         <div class="nextPrev">
-            <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+          <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
         </div>
     </div>
   </div>
@@ -163,6 +168,23 @@
 </body>
 </html>
 <script>
+// ----------------------------------------------------------------------------------------
+// Google search
+// ----------------------------------------------------------------------------------------
+  (function() {
+    var cx = '006198118389747886812:hsjk7qeuppa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  $(window).load(function() {
+    $(".gsc-control-cse").css("padding","0");
+    $(".gsc-control-cse").css("border","none");
+    });
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
 // ----------------------------------------------------------------------------------------
@@ -362,14 +384,29 @@ function pageLinks() {
   $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
   }
   else if (nsLink != null) {
-  $('.nextPrev > .next').append("Next Section:<a href=" + nsLink + "><br>" + nextSection + "</a>");
+  $('.nextPrev > .next').append("Next Chapter:<a href=" + nsLink + "><br>" + nextSection + "</a>");
+  }
+  else if (nsLink == null && next == null) {
+  $('.nextPrev > .next').append("Return to:<br><a href='/'>Main Menu</a>");
   }
   if (previous != null) {
   $('.nextPrev > .prev').append("Previous:<br>" + previous);
   }
   else if (psLink != null) {
-  $('.nextPrev > .prev').append("Previous Section:<a href=" + psLink + "><br>" + prevSection + "</a>");
+  $('.nextPrev > .prev').append("Previous Chapter:<a href=" + psLink + "><br>" + prevSection + "</a>");
+  }
+  else if (psLink == null && previous == null) {
+  $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
   }
 }
 pageLinks();
 </script>
+<!--
+
+
+
+End
+
+
+
+-->

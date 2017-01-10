@@ -8,4 +8,4 @@ Processing decimal numbers – so called “floating point” variables because 
 
 The essential difference is that rather than letting the computer handle the placing of the decimal point in a generalised way, we the programmers take over that responsibility and do it in a way that is often specific to just that line of code.
 
-Trystan Lea has written more about this, specifically the filter calculations, at [https://openenergymonitor.org/emon/buildingblocks/digital-filters-for-offset-removal](https://openenergymonitor.org/emon/buildingblocks/digital-filters-for-offset-removal).
+There is more about this, specifically the filter calculations, at [Electricity Monitoring: Digital filters for offset removal](../../electricity-monitoring/ctac/digital-filters-for-offset-removal).

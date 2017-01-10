@@ -2,7 +2,7 @@
 
 ### 8: The sketch explained in detail.
 
-The version described was published at [https://openenergymonitor.org/emon/node/1535](https://openenergymonitor.org/emon/node/1535) and can be downloaded from [files/emonTx_Solar_Controller_Temperature_PLL_0.zip](files/emonTx_Solar_Controller_Temperature_PLL_0.zip)
+The version described was published at [https://openenergymonitor.org/emon/node/1535](https://openenergymonitor.org/emon/node/1535) and can be downloaded from [emonTx_Solar_Controller_Temperature_PLL_0.zip](files/emonTx_Solar_Controller_Temperature_PLL_0.zip)
 
 ### Calibration & Hardware set-up
 
@@ -22,7 +22,7 @@ Line 27
 Normally, the on-board LED indicates a value transmitted. It may be configured here to indicate that the PLL is locked to mains.
 
 Line 35
-3600 J is a common value. The size of the energy buffer may need to be changed according to the size of the meter's energy packet. See [Energy meters](https://openenergymonitor.org/emon/buildingblocks/meters). If this is changed, the thresholds in lines 36 & 37 may need to be changed accordingly.
+3600 J is a common value. The size of the energy buffer may need to be changed according to the size of the meter's energy packet. See [Energy Monitoring: Meters](../../electricity-monitoring/ctac/meters). If this is changed, the thresholds in lines 36 & 37 may need to be changed accordingly.
 
 Line 43
 The time between radio transmissions.

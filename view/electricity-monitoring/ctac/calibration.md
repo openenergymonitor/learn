@@ -44,35 +44,51 @@ If you do not have a multimeter, or you are not confident that you can measure y
 
 Take great care when working with mains voltages. If you are using batteries to power your emonTx, you should calibrate the internal reference first.
 
-1.  Load one of the demonstration sketches from [emonTxFirmware](https://github.com/openenergymonitor/emonTxFirmware). You will need to choose the one appropriate to your version of the emonTx. If you have the emonTx V3, use the default sketch (check the Wiki to see which that is), but you will need to add some print statements in order to read separately the values for current and power factor. Note, however, that some special-purpose sketches have their own particular calibration procedure. Where this is the case, it will be described in a comment in the sketch.
-2.  Measure the mains voltage and adjust either the voltage constant 240.0 (emonTx_CT123) in lines like this
-      <span style="font-family: monospace; font-size: 10pt">emontx.power1 = ct1.calcIrms(1480) * 240.0; (emonTx V2)</span>
-    _or_
-      <span style="font-family: monospace; font-size: 10pt">const byte Vrms=                  230;      (emonTx V3)</span>
+1) Load one of the demonstration sketches from [emonTxFirmware](https://github.com/openenergymonitor/emonTxFirmware). You will need to choose the one appropriate to your version of the emonTx. If you have the emonTx V3, use the default sketch (check the Wiki to see which that is), but you will need to add some print statements in order to read separately the values for current and power factor. Note, however, that some special-purpose sketches have their own particular calibration procedure. Where this is the case, it will be described in a comment in the sketch.
 
-    to the average value that you read
-    _or_
-    adjust the voltage calibration constant 236.39 (emonTx_CT123_Voltage) in lines like this
-      <span style="font-family: monospace; font-size: 10pt">ct1.voltageTX(236.39, 1.7);                  (emonTx V2)</span>
-    _or_
-      <span style="font-family: monospace; font-size: 10pt">const float Vcal=                  284.9667; (emonTx V3)</span>
-    so that the voltage reported by the emonTx is the same as the voltage you measure with your meter.
-    The new calibration coefficient can be calculated by:
+2) Measure the mains voltage and adjust either the voltage constant 240.0 (emonTx_CT123) in lines like this
 
-    <pre>New calibration = existing calibration × (correct reading ÷ emonTx reading)</pre>
+    emontx.power1 = ct1.calcIrms(1480) * 240.0; (emonTx V2)
 
-3.  Insert your meter in series with the load and clip the current transformer over one of the leads. Connect to the mains supply, measure the current and adjust the current calibration constant 111.1 (or 90.9 or 60.6)  in lines like this
-      <span style="font-family: monospace; font-size: 10pt">ct1.currentTX(1, 111.1);                 (emonTx V2)</span>
-    _or_
-      <span style="font-family: monospace; font-size: 10pt">const float Ical=                  90.9; (emonTx V3)</span>
-    so that the current reported is the same as the current you measure. Check the instructions for your meter in case there is a time limit for making the measurement. If there is, you must make the measurement quickly and allow sufficient time for the meter to cool before repeating.
-4.  If you are using the voltage input, with the load connected adjust the phase angle calibration 1.7 in lines like this
-      <span style="font-family: monospace; font-size: 10pt">ct1.voltageTX(236.39, 1.7);                    (emonTx V2)</span>
-    _or_
-      <span style="font-family: monospace; font-size: 10pt">const float phase_shift=                  1.7; (emonTx V3)</span>
-    so that real power and apparent power read the same value (and power factor is as close to 1.00 as possible). Your meter is not needed for this.
-    The phase calibration coefficient should not normally go outside the range 0.0 – 2.0
-5.  Check the voltage calibration again. It might need a slight adjustment if the phase angle calibration was altered significantly. Recheck the phase angle calibration.
+_or_
+
+    const byte Vrms = 230; (emonTx V3)
+
+to the average value that you read _or_ adjust the voltage calibration constant 236.39 (emonTx_CT123_Voltage) in lines like this
+
+    ct1.voltageTX(236.39, 1.7); (emonTx V2)
+
+_or_
+
+    const float Vcal = 284.9667; (emonTx V3)
+    
+so that the voltage reported by the emonTx is the same as the voltage you measure with your meter. The new calibration coefficient can be calculated by:
+
+    New calibration = existing calibration × (correct reading ÷ emonTx reading)
+
+3) Insert your meter in series with the load and clip the current transformer over one of the leads. Connect to the mains supply, measure the current and adjust the current calibration constant 111.1 (or 90.9 or 60.6)  in lines like this
+
+    ct1.currentTX(1, 111.1);(emonTx V2)
+
+_or_
+
+    const float Ical = 90.9; (emonTx V3)
+    
+so that the current reported is the same as the current you measure. Check the instructions for your meter in case there is a time limit for making the measurement. If there is, you must make the measurement quickly and allow sufficient time for the meter to cool before repeating.
+
+4) If you are using the voltage input, with the load connected adjust the phase angle calibration 1.7 in lines like this
+
+    ct1.voltageTX(236.39, 1.7); (emonTx V2)
+
+_or_
+
+    const float phase_shift = 1.7; (emonTx V3)
+    
+so that real power and apparent power read the same value (and power factor is as close to 1.00 as possible). Your meter is not needed for this.
+
+The phase calibration coefficient should not normally go outside the range 0.0 – 2.0
+
+5) Check the voltage calibration again. It might need a slight adjustment if the phase angle calibration was altered significantly. Recheck the phase angle calibration.
 
 #### Theoretical CT Sensor Calibration
 
@@ -170,184 +186,27 @@ Datasheet: [Ideal Power 77DE-06-09](files/77DE-06-09.pdf) (EURO Plug type)
 
 Datasheet: [Ideal Power 77DA-10-09](http://files.openenergymonitor.org/77DA-10-09.pdf) (US Plug type)
 
-<div class="xaxiswrapper">
-
-<table>
-
-<tbody>
-
-<tr>
-
-<th>Adapter Type</th>
-
-<th>Voltage calibration coefficient
-EmonTx V2</th>
-
-<th>Voltage calibration coefficient
-EmonTx V3</th>
-
-<th>Voltage calibration coefficient
-EmonTx Shield V2.5</th>
-
-</tr>
-
-<tr>
-
-<td>Ideal Power 77DB-06-09 (UK Plug type)</td>
-
-<td>227.59</td>
-
-<td>268.97</td>
-
-<td>268.97</td>
-
-</tr>
-
-<tr>
-
-<td>Ideal Power 77DE-06-09 (EURO Plug type)</td>
-
-<td>220.0</td>
-
-<td>260.0</td>
-
-<td>260.0</td>
-
-</tr>
-
-<tr>
-
-<td>Ideal Power 77DA-10-09 (US Plug type)</td>
-
-<td>110.0</td>
-
-<td>130.0</td>
-
-<td>130.0</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
+| Adapter Type | Voltage calibration coefficient EmonTx V2 | Voltage calibration coefficient EmonTx V3 | Voltage calibration coefficient EmonTx Shield V2.5 | 
+| ---- | ---- | ---- | ---- |
+| Ideal Power 77DB-06-09 (UK Plug type) | 227.59 | 268.97 | 268.97 |
+| Ideal Power 77DE-06-09 (EURO Plug type) | 220.0 | 260.0 | 260.0 |
+| Ideal Power 77DA-10-09 (US Plug type) | 110.0 | 130.0 | 130.0 |
 
 
-[Note: The values are derived from manufacturer's data and are subject to normal manufacturing tolerances. The coefficient might be in error by up to ±6% (77DA-10-09 & 77DE-06-09) or ±4% (77DB-06-09) when resistor tolerances are added.]
+**Note:** The values are derived from manufacturer's data and are subject to normal manufacturing tolerances. The coefficient might be in error by up to ±6% (77DA-10-09 & 77DE-06-09) or ±4% (77DB-06-09) when resistor tolerances are added.
 
 ### Other AC-AC Adapters
 
-<div class="xaxiswrapper">
+| Ac-AC Adapter | Plug | Voltage Calibration Coefficient |
+| ---- | ---- | ---- |
+| MW<br>[![](files/MW1.jpg)](files/MW1.jpg) | UK | 233.67 |
+| Strontronics<br>[![](files/Stontronics1.jpg)](files/Stontronics1.jpg) | UK | 238.56 |
+| Mascot 9580<br>[![](files/mascot1.jpg)](files/mascot1.jpg) | UK | 234.26 |
+| FP AD 3515<br>[![](files/FP1.jpg)](files/FP1.jpg) | Euro | 212.658 |
+| Ideal Power / TDC<br>![](files/TDC-DB-06-09_small.jpg)<br>[Currently adapter sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/components/) | UK/Euro/US | see above |
 
-<table>
+See [EmonTx errors](../../electricity-monitoring/ctac/emontx-error-sources) for a full analysis of the sources of error in the emonTx.
 
-<tbody>
+See [Different AC-AC Power Adapters](../../electricity-monitoring/voltage-sensing/different-acac-power-adapters) for more detailed information on the different AC-AC adapters.
 
-<tr>
-
-<th>Ac-AC Adapter</th>
-
-<th>Plug</th>
-
-<th>Voltage Calibration Coefficient</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-MW
-
-[![](files/MW1.jpg)](files/MW1.jpg)
-
-</td>
-
-<td>UK</td>
-
-<td>
-
-233.67</span>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Strontronics
-
-[![](files/Stontronics1.jpg)](files/Stontronics1.jpg)
-
-</td>
-
-<td>UK</td>
-
-<td>238.56</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Mascot 9580
-
-[![](files/mascot1.jpg)](files/mascot1.jpg)
-
-</td>
-
-<td>UK</td>
-
-<td>234.26</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-FP AD 3515
-
-[![](files/FP1.jpg)](files/FP1.jpg)
-
-</td>
-
-<td>Euro</td>
-
-<td>212.658</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Ideal Power / TDC
-
-![](files/TDC DB-06-09_small.jpg)
-
-[Currently adapter sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/components/)
-
-</td>
-
-<td>UK/Euro/US</td>
-
-<td>see above</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-See [EmonTx errors](buildingblocks/emontx-error-sources) for a full analysis of the sources of error in the emonTx.
-
-See [buildingblocks/different-acac-power-adapters](buildingblocks/different-acac-power-adapters) for more detailed information on the different AC-AC adapters.
-
-See [CT and AC power adaptor installation and calibration theory](buildingblocks/ct-and-ac-power-adaptor-installation-and-calibration-theory) for detailed information on the theoretical basis for the calculation of the calibration coefficients.
+See [CT and AC power adaptor installation and calibration theory](../../electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory) for detailed information on the theoretical basis for the calculation of the calibration coefficients.

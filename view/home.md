@@ -17,6 +17,7 @@
 }
 .flex-item h2 {
  padding-top: 5px;
+ transition: 0.3s;
 }
 .learnpageIcons {
  box-sizing: border-box;
@@ -27,6 +28,7 @@
  background-color: #44b3e2;
  color: #ffffff;
  box-shadow: none;
+ transition: 0.3s ease-in-out;
 }
 .fcontainer {
  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -39,6 +41,10 @@
 }
 .fcontainer:hover .learnpageIcons {
  background-color: #77c8ea;
+ border: 8px solid #ffffff;
+}
+.fcontainer:hover h2 {
+ color: #44b3e2;
 }
 .learnpageIcons i {
  display: table-cell;
@@ -53,7 +59,7 @@
 <div class="flex-container">
 	<div class="flex-item">
     <div class="fcontainer">
-      <a href="/learn/electricity-monitoring/ac-power-theory/introduction">
+      <a href="/electricity-monitoring/ac-power-theory/introduction">
       	<div class='learnpageIcons'>
       		<div class='iconCircle'></div>
       	</div>
@@ -64,18 +70,18 @@
 	</div>
 	<div class="flex-item">
 	  <div class="fcontainer">
-	    <a href="/learn/sustainable-energy/energy/introduction">
+	    <a href="/sustainable-energy/energy/introduction">
 		    <div class='learnpageIcons'>
 		    	<div class='iconCircle'></div>
 		    </div>
 		    <h2>Sustainable Energy</h2>
-		    <p>Learn the theory behind the available methods and technologies for achieving a sustainable energy supply.</p>
+		    <p>Exploring the context of energy, renewable supply, energy efficiency and zero carbon energy systems.</p>
 		  </a>
 		</div>
 	</div>
 	<div class="flex-item">
 	  <div class="fcontainer">
-	    <a href="/learn/pv-diversion/introduction/choosing-an-energy-diverter.md">
+	    <a href="/pv-diversion/introduction/choosing-an-energy-diverter.md">
 		    <div class='learnpageIcons'>
 			    <div class='iconCircle'></div>
 		    </div>

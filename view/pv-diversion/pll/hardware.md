@@ -10,7 +10,7 @@ The original sketch uses the pulse jack socket on the emonTx V2 as the output to
 
 ![Martin's Output Stage Circuit Diagram](files/Switchelectrical.png)
 
-For the emonTx V3 using the ac adapter as the power supply, the circuit in [Choosing an energy diverter](https://openenergymonitor.org/emon/Choosing%20an%20Energy%20Diverter) must be used on account of the limited current available from the rectifier circuit (note the use of the more sensitive MOC3043M and the increased value of the series resistor).
+For the emonTx V3 using the ac adapter as the power supply, the circuit in [Choosing an energy diverter](../introduction/choosing-an-energy-diverter.md) must be used on account of the limited current available from the rectifier circuit (note the use of the more sensitive MOC3043M and the increased value of the series resistor).
 
 ### Alternative triac switch output stage
 
@@ -32,4 +32,4 @@ The recommended triac is an insulated tab device, meaning that it is possible to
 
 **Circuit protection.**
 
-It is not economic to include a fuse or circuit breaker that will protect the recommended triac in every possible circumstance (even though it is grossly over-rated for the duty) and therefore it should be possible to replace it easily in the event of failure. See [Overload Protection of Mains Electrical Circuits](https://openenergymonitor.org/emon/buildingblocks/overload-protection-of-mains-electrical-circuits) for more information.
+It is not economic to include a fuse or circuit breaker that will protect the recommended triac in every possible circumstance (even though it is grossly over-rated for the duty) and therefore it should be possible to replace it easily in the event of failure. See [Overload Protection of Mains Electrical Circuits](../../electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits) for more information.

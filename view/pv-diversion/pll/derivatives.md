@@ -13,7 +13,7 @@ Two notable derivatives of this design have been published.
 
 Although the design was originally for the emonTx V2, it can be used with the emonTx V3\. The points to note are:
 
-1.  If the emonTx V3 is to be powered only by the ac-ac adapter, a 'high-sensitivity' opto-trigger must be used. See [Choosing an Energy Diverter](https://openenergymonitor.org/emon/Choosing%20an%20Energy%20Diverter) for further details and a circuit diagram.
+1.  If the emonTx V3 is to be powered only by the ac-ac adapter, a 'high-sensitivity' opto-trigger must be used. See [Choosing an Energy Diverter](../introduction/choosing-an-energy-diverter) for further details and a circuit diagram.
 2.  Changes must be made to the IO pin assignments in MartinR's original sketch:
 
     <table border="1" cellpadding="1" cellspacing="1" style="width: 400px;">

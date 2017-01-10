@@ -51,6 +51,7 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="svg") $format = "svg";
     if ($doc_ext=="pdf") $format = "pdf";
     if ($doc_ext=="py") $format = "py";
+    if ($doc_ext=="ino") $format = "ino";
 }
 
 switch ($format)
@@ -64,6 +65,10 @@ switch ($format)
         }
         break;
     case "py":
+        header('Content-Type: text/plain');
+        print $content;
+        break;
+    case "ino":
         header('Content-Type: text/plain');
         print $content;
         break;
