@@ -129,8 +129,6 @@
 
       $menu = json_decode(file_get_contents("menu.json"));
 
-      echo "<div><a href=".$github_url.">Edit on GitHub</a></div>";
-      
       foreach ($menu as $mk1=>$mv1)
       {
         echo "<div class='toplevelhead'>
@@ -160,10 +158,13 @@
   </div>
   <div class="container">
     <div class="row">
-        <?php echo $content; ?>
-        <div class="nextPrev">
-          <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
-        </div>
+      <?php
+      echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
+      echo $content;
+      ?>
+      <div class="nextPrev">
+        <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+      </div>
     </div>
   </div>
   <div id="rightpanel">

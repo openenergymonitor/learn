@@ -1,3 +1,23 @@
+.editGit {
+  margin-top: -12px;
+  margin-right: -15px;
+  float: right;
+}
+.editGit a {
+  background-color: #c4c4c4;
+  padding: 5px 10px 5px 10px;
+  color: #ffffff;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: 0.3s;
+}
+.editGit a:hover {
+  background-color: #dcdcdc;
+}
+@media screen and (max-width: 650px) {
+  .editGit {
+    display:none;}
+}
 .searchContainer {
   box-sizing: border-box;
   width: 270px;
@@ -384,9 +404,9 @@ li.active a {
     float: right;
     padding-right: 15px;
 }
-  .learnTitle-topLinks a {
-       color: #ffffff;
-  }
+.learnTitle-topLinks a {
+    color: #ffffff;
+}
   @media screen and (max-width: 650px) {
       .learnTitle-topLinks {
               display:none;}

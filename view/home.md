@@ -92,10 +92,11 @@
 	</div>
 </div>
 <script>
-   $(".learnpageIcons:eq(0)").append(
-    "<i class='fa fa-bolt fa-3x'></i>");
-   $(".learnpageIcons:eq(1)").append(
-    "<i class='fa fa-globe fa-3x'></i>");
-   $(".learnpageIcons:eq(2)").append(
-    "<i class='fa fa-random fa-3x' style='padding:8px 0 0 4px;'></i>");
+  $(".learnpageIcons:eq(0)").append(
+  "<i class='fa fa-bolt fa-3x'></i>");
+  $(".learnpageIcons:eq(1)").append(
+  "<i class='fa fa-globe fa-3x'></i>");
+  $(".learnpageIcons:eq(2)").append(
+  "<i class='fa fa-random fa-3x' style='padding:8px 0 0 4px;'></i>");
+  $(".editGit").css("display","none");
 </script>
