@@ -15,6 +15,8 @@
 </script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <title>Learn | OpenEnergyMonitor</title>
+<link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
+
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
