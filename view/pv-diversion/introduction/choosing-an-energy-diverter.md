@@ -1,10 +1,12 @@
 ## Choosing an energy diverter
 
-### What does an energy diverter do?
+***
+
+#### What Does an Energy Diverter Do?
 
 At its simplest, an energy diverter captures excess energy from your private generation system, whether it is photovoltaic, wind or hydro, and uses it locally instead of allowing it to be exported to the grid. The most popular use is for water heating, though there are also examples of use for space heating and battery charging.
 
-### Why have an energy diverter?
+#### Why Have an Energy Diverter?
 
 Whether you will benefit from a diverter depends wholly on the local rules that apply, and on the difference between the price that you pay for imported energy and the payments you receive for exported energy.
 
@@ -14,7 +16,7 @@ There is no consistent world-wide policy. In some places, it has been reported t
 
 More on FIT: [https://en.wikipedia.org/wiki/Feed-in_tariff](https://en.wikipedia.org/wiki/Feed-in_tariff)
 
-### How does an energy diverter work?
+#### How Does an Energy Diverter Work?
 
 An energy diverter works by measuring the nett energy flow at the grid connection point, and controlling a load – usually a water heater – such that energy is neither imported nor exported. The method of control can be burst mode, phase control or pulse width modulation. These work by switching the power to the load on and off. The difference is the rate at which switching takes place.
 
@@ -34,11 +36,11 @@ Switching takes place many tens of times each mains cycle. Again, the ‘on’ t
 
 A pair of high voltage, high current MOSFET or IGBT transistors are the switching elements. Fine control requires very short 'on' and 'off' times. Filters are required to remove switching transients, but because of the higher frequencies involved, they can be made much smaller than those used with the phase controlled mode. Although there is at least one commercial PWM system on the market, _we_ aren't aware of any constructor built systems.
 
-More on phase control & burst mode: 
+More on phase control & burst mode:
 
 [MK2: Switching High Current Loads using a Triac](../mk2/switchdev)
 
-### Should I make or buy my energy diverter?
+#### Should I Make or Buy My Energy Diverter?
 
 The energy diverter can be divided into two sections, the input and the control logic that runs at low voltage, and the power switch that handles the load switching, which runs at mains voltage.
 
@@ -63,19 +65,19 @@ Both of the power switches are suitable for use with an emonTx V2 or Arduino Uno
 
 Care must be taken when choosing a commercial SSR. Apart from the danger of purchasing a sub-standard and potentially dangerous low-cost device from on-line suppliers, care should be taken (especially if you are using an emonTx) to ensure that the SSR can de driven properly by the 3.3 V emonTx output. Problems are less likely if you use an Arduino, as its 5V output will normally drive an SSR without issue.
 
-### Separating the power switch from the control logic.
+#### Separating the power switch from the control logic.
 
 It will often be necessary, or desirable, to locate the power switch close to the load whilst the control logic is located close to the infeed. A very easy way to do this is to run a twisted pair (e.g. ‘telephone’ or CAT5 cable) between the two locations. A cable run of a few tens of metres should not be a problem.
 
 Alternatively, a remote load can be controlled via radio – already available in the emonTX.
 
-### Multiple Loads.
+#### Multiple Loads.
 
 Sometimes there is a requirement to be able to control more than one load. As alluded to above, the emonTx V3 will not be suitable to drive a hard-wired second load if powered by the ac adapter. An external 5 V supply must be provided if more than one power switch is to be driven at the same time. The emonTx V2 and Arduino Uno do not suffer from this restriction. Both emonTx v2 and v3 can use their on-board RFM12B radio to control one or possibly more remote loads.
 
-### Choice of software
+#### Choice of Software
 
-#### Control Software
+**Control Software**
 
 There are two principal published sources of control software:
 

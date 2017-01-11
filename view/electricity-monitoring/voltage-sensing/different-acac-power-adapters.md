@@ -1,7 +1,5 @@
 ## Different AC-AC Power Adapters
 
-See [emonTx calibration page]("https://openenergymonitor.org/emon/modules/emontx/firmware/calibration") emonTx calibration page for a summary of calibration coefficients.
-
 ***
 
 #### AC to AC Power Adapters
@@ -56,7 +54,7 @@ Quiescent power consumption: 1.4W
 
 Supplier: RS[ http://uk.rs-online.com/web/p/products/400-6484/](http://uk.rs-online.com/web/p/products/400-6484/)
 
-![](files/Mascot 9580.jpg)
+![](files/Mascot_9580.jpg)
 
 ## FP AD 3515 (euro plug)
 
@@ -72,7 +70,7 @@ Quiescent power consumption: 1.5W
 
 Supplier: RS [http://uk.rs-online.com/web/p/products/459-853/](http://uk.rs-online.com/web/p/products/459-853/)
 
-![](files/FP 528.jpg)
+![](files/FP_528.jpg)
 
 ## TDC
 
