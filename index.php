@@ -37,6 +37,7 @@ if (file_exists("view/".$q)) {
     
     $content = file_get_contents("view/".$q);
     $github_url="https://github.com/openenergymonitor/learn/blob/master/view/".$q;
+    if ($q=="sustainable-energy/zcem/integrated.html") $github_url = "https://github.com/trystanlea/zcem";
     // Parse markdown if page is markdown
     if ($doc_ext=="md") {
         include "lib/Parsedown.php";
