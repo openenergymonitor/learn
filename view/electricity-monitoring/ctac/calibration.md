@@ -6,9 +6,9 @@
 
 It is impossible to manufacture anything with absolute precision. In general terms, the more precisely something is manufactured, the more expensive it is. Consider the emonTx current input as a relatively simple example. If we assume for now that we don't have any errors in the sketch, we have 3 physical factors that will each contribute to the uncertainty in the value that we read for the current. These are:
 
-1.  The transfer ratio of the current transformer.
-2.  The value of the burden resistor.
-3.  The accuracy with which the burden voltage is measured.
+*   The transfer ratio of the current transformer.
+*   The value of the burden resistor.
+*   The accuracy with which the burden voltage is measured.
 
 Item 3 has two components – ADC non-linearity and reference uncertainty. Normally, both of these have three components that contribute to the possible error to a greater or lesser extent:
 
@@ -61,7 +61,7 @@ to the average value that you read _or_ adjust the voltage calibration constant 
 _or_
 
     const float Vcal = 284.9667; (emonTx V3)
-    
+
 so that the voltage reported by the emonTx is the same as the voltage you measure with your meter. The new calibration coefficient can be calculated by:
 
     New calibration = existing calibration × (correct reading ÷ emonTx reading)
@@ -73,7 +73,7 @@ so that the voltage reported by the emonTx is the same as the voltage you measur
 _or_
 
     const float Ical = 90.9; (emonTx V3)
-    
+
 so that the current reported is the same as the current you measure. Check the instructions for your meter in case there is a time limit for making the measurement. If there is, you must make the measurement quickly and allow sufficient time for the meter to cool before repeating.
 
 4) If you are using the voltage input, with the load connected adjust the phase angle calibration 1.7 in lines like this
@@ -83,7 +83,7 @@ so that the current reported is the same as the current you measure. Check the i
 _or_
 
     const float phase_shift = 1.7; (emonTx V3)
-    
+
 so that real power and apparent power read the same value (and power factor is as close to 1.00 as possible). Your meter is not needed for this.
 
 The phase calibration coefficient should not normally go outside the range 0.0 – 2.0
@@ -186,7 +186,7 @@ Datasheet: [Ideal Power 77DE-06-09](files/77DE-06-09.pdf) (EURO Plug type)
 
 Datasheet: [Ideal Power 77DA-10-09](http://files.openenergymonitor.org/77DA-10-09.pdf) (US Plug type)
 
-| Adapter Type | Voltage calibration coefficient EmonTx V2 | Voltage calibration coefficient EmonTx V3 | Voltage calibration coefficient EmonTx Shield V2.5 | 
+| Adapter Type | Voltage calibration coefficient EmonTx V2 | Voltage calibration coefficient EmonTx V3 | Voltage calibration coefficient EmonTx Shield V2.5 |
 | ---- | ---- | ---- | ---- |
 | Ideal Power 77DB-06-09 (UK Plug type) | 227.59 | 268.97 | 268.97 |
 | Ideal Power 77DE-06-09 (EURO Plug type) | 220.0 | 260.0 | 260.0 |

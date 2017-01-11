@@ -1,5 +1,7 @@
 ## Measuring AC Voltage with an AC to AC power adapter
 
+***
+
 An AC voltage measurement is needed to calculate real power, apparent power and power factor. This measurement can be made safely (requiring no high voltage work) by using an AC to AC power adaptor. The transformer in the adapter provides isolation from the high voltage mains. 
 
 This page briefly covers the electronics required to interface an AC to AC power adapter with an Arduino.
