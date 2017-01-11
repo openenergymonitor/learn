@@ -13,16 +13,14 @@
   var session = JSON.parse('<?php echo json_encode($session); ?>');
   var apikey = "<?php print $apikey; ?>";
 </script>
-<!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">-->
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>fonts/ubuntu.css?family=Ubuntu:light,bold&subset=Latin">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 <title>Learn | OpenEnergyMonitor</title>
 <link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
 
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-<link rel="stylesheet" href="<?php echo $path; ?>theme/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
