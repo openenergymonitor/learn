@@ -59,7 +59,7 @@
 <div class="flex-container">
 	<div class="flex-item">
     <div class="fcontainer">
-      <a href="/electricity-monitoring/ac-power-theory/introduction">
+      <a href="electricity-monitoring/ac-power-theory/introduction">
       	<div class='learnpageIcons'>
       		<div class='iconCircle'></div>
       	</div>
@@ -70,7 +70,7 @@
 	</div>
 	<div class="flex-item">
 	  <div class="fcontainer">
-	    <a href="/sustainable-energy/energy/introduction">
+	    <a href="sustainable-energy/energy/introduction">
 		    <div class='learnpageIcons'>
 		    	<div class='iconCircle'></div>
 		    </div>
@@ -81,7 +81,7 @@
 	</div>
 	<div class="flex-item">
 	  <div class="fcontainer">
-	    <a href="/pv-diversion/introduction/choosing-an-energy-diverter.md">
+	    <a href="pv-diversion/introduction/choosing-an-energy-diverter.md">
 		    <div class='learnpageIcons'>
 			    <div class='iconCircle'></div>
 		    </div>

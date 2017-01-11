@@ -74,7 +74,7 @@ body {
 	text-align: left;
 }
 #rightpanel-inner {
-	padding: 20px;
+	/*padding: 20px;*/
 }
 .row {
 	padding: 15px 20px 20px 20px;
@@ -208,7 +208,7 @@ body {
 }
 .sublevelhead {
 	cursor: pointer;
-	padding: 15px 0 15px 34px;
+	padding: 15px 0 15px 35px;
 }
 .sublevelhead:hover {
   font-weight: bold;
@@ -422,24 +422,22 @@ li.active a {
     width:100%;
     border-collapse: collapse;
 }
-  .container table th {
-      text-align:left;
-      border: 1px solid #ddd;
-      padding:6px 13px;
-  }
-  .container table td {
-      text-align:left;
-      border: 1px solid #ddd;
-      padding:6px 13px;
-  }
+.container table th {
+    text-align:left;
+    border: 1px solid #ddd;
+    padding:6px 13px;
+    background-color: #777;
+    color: #ffffff;
+    font-weight: bold;
+}
+.container table td {
+    text-align:left;
+    border: 1px solid #ddd;
+    padding:6px 13px;
+}
 .xaxiswrapper {
 	overflow-x: auto;
 	background-color: transparent;
-}
-.xaxiswrapper table th {
-	background-color: #777;
-	color: #ffffff;
-	font-weight: bold;
 }
 /*---------------------------------------------------------------------/
 //  Webkit scrollbar

@@ -1,5 +1,7 @@
 ## CT sensors - An Introduction
 
+***
+
 Pictured below, is an example of a **split-core** HYDC CT:
 
 <figure>
