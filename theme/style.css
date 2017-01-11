@@ -422,24 +422,22 @@ li.active a {
     width:100%;
     border-collapse: collapse;
 }
-  .container table th {
-      text-align:left;
-      border: 1px solid #ddd;
-      padding:6px 13px;
-  }
-  .container table td {
-      text-align:left;
-      border: 1px solid #ddd;
-      padding:6px 13px;
-  }
+.container table th {
+    text-align:left;
+    border: 1px solid #ddd;
+    padding:6px 13px;
+    background-color: #777;
+    color: #ffffff;
+    font-weight: bold;
+}
+.container table td {
+    text-align:left;
+    border: 1px solid #ddd;
+    padding:6px 13px;
+}
 .xaxiswrapper {
 	overflow-x: auto;
 	background-color: transparent;
-}
-.xaxiswrapper table th {
-	background-color: #777;
-	color: #ffffff;
-	font-weight: bold;
 }
 /*---------------------------------------------------------------------/
 //  Webkit scrollbar
