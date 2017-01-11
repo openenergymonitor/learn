@@ -79,7 +79,7 @@ Sometimes there is a requirement to be able to control more than one load. As al
 
 There are two principal published sources of control software:
 
-1.  MartinR’s Phase Locked Loop. [[https://openenergymonitor.org/emon/sites/default/files/emonTx_Solar_Controller_Temperature_PLL_0.zip](https://openenergymonitor.org/emon/sites/default/files/emonTx_Solar_Controller_Temperature_PLL_0.zip)]
+1.  MartinR’s Phase Locked Loop. [emonTxSolarControllerTemperaturePLL.zip](files/emonTxSolarControllerTemperaturePLL.zip)]
     This sketch controls a single load. Voltage, current, power and frequency are measured continuously. Written for the emonTx v2, with a number of changes to the pin assignments, it will run on the emonTx v3 - see [Part 10 of Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts](../pll/derivatives). It should also run on Arduino boards, with the pin assignments changed as necessary.
 2.  Robin Emley’s [Mk2 Code variants and associated tools](https://openenergymonitor.org/emon/node/1757). This page lists 20 variants, of which 7 are current. Here is a table that gives a ‘quick reference’ overview.
 
