@@ -1,16 +1,19 @@
-#Developing a new module
+## Developing a new module
 There is not a rule about how to make a new module but several things should be taken into account. The aim of this section is to provide information that can guide the process of developing a new module.
 
-##Model-View-Controller (MVC) paradigm
-EmonCMS uses the **Model-View-Controller (MVC)** paradigm where the **Controller** deals with the user/node request using the functionality defined in the **Model** (that works as a kind of library). 
+***
+
+#### Model-View-Controller (MVC) paradigm
+EmonCMS uses the **Model-View-Controller (MVC)** paradigm where the **Controller** deals with the user/node request using the functionality defined in the **Model** (that works as a kind of library).
 
 When the format specified in the request is *json*, the raw output of the **Controller** is sent back to the client (normally a node).
 
 When the format specified in the request is *html*, the **Controller** normally passes the output to the **View** to be rendered before returning it. EmonCMS (index.php) also wraps what the **Controller** returned into a **Theme**. The **Theme** adds the menus but also is responsible for the look and feel of the page.
-When developing a new module for EmonCMS the only file that is required is the **Controller**. 
+When developing a new module for EmonCMS the only file that is required is the **Controller**.
 
 If you think that any of the functionality of your new module can be reused by other modules it makes sense to put this functionality in the **Model**. All **Models** in EmonCMS are classes with properties and methods.
-##URL syntaxis
+
+#### URL syntaxis
 The syntaxis is:
 ```
 http://server/controller/action.subaction.format?attribute=blabla`
@@ -32,14 +35,15 @@ Like in:
 
 This is telling EmonCMS to load the *input* module which will run the code for the action *post*. EmonCMS will send back a json string.
 
-##The Modules directory and naming conventions
-EmonCMS is modular and there is a strong emphasis in making it easy to add new modules. You only need to paste a directory with your files in the *Modules* directory. It is simple but very basic rules need to be followed. A request like: 
+#### The Modules directory and naming conventions
+EmonCMS is modular and there is a strong emphasis in making it easy to add new modules. You only need to paste a directory with your files in the *Modules* directory. It is simple but very basic rules need to be followed. A request like:
 
 `http://server/mymodule/action.subaction.format?attribute=blabla`
 
 will trigger *mymodule*. To do this EmonCMS will include a file called `mymodule_controller.php` which is in the directory `Modules/mymodule`, captions are important. Apart of this you can organize your files however you want.
-##How to avoid direct access
-The execution of our module doesn't happen straight away. Everything starts with a call to *index.php* which after a while calls our module. 
+
+#### How to avoid direct access
+The execution of our module doesn't happen straight away. Everything starts with a call to *index.php* which after a while calls our module.
 
 For example a typical request is:
 
@@ -56,7 +60,8 @@ The result of this is unpredictable and can give the client info about the syste
 defined('EMONCMS_EXEC') or die('Restricted access');
 ```
 This line of code will kill the process if the constant  **EMONCMS_EXEC** is not found. This constant is defined in *index.php*, therefore when trying direct access the constant will not be found and the code will not be executed.
-##Sanitation
+
+#### Sanitation
 A request to EmonCMS defines the controller to use, the action and format but also in many cases has some data to be used by our module. In the example below:
 
 `http://emoncms.org/input/post.json?json={power:200}&node=5`
@@ -67,13 +72,13 @@ A simple way of sanitazing the node in the example above would be:
 ```
 $nodeid = preg_replace('/[^\w\s-.]/','',get('node'));
 ```
-##Using the database.
+#### Using the database.
 EmonCMS works with two databases:
 
 - **MySQL**: used to store persistent data, which means *data we want to keep in case we switch off the server.*
 - **REDIS**: it is an in memory database.  It is very fast to access and can improve performance: reading/writing to disk (what we do when using the MySQL database) takes longer that doing it to memory (REDIS). Also it can increase the life span of the SD card in the RaspberryPi (limited number of writes). When the server switches off the data in REDIS will be lost unless it has been dumped into disk.
 
-Using one or the other database depends on what is the aim of the data to store. As said before if we want to keep the data, it should go to the MySQL. But if what we want is to cache some data to use it later, REDIS is the one to use. It can also be the case that we store the data in both databases: in the MySQL to ensure the data is kept in cas of the server being switched off but in REDIS to speed up the process. 
+Using one or the other database depends on what is the aim of the data to store. As said before if we want to keep the data, it should go to the MySQL. But if what we want is to cache some data to use it later, REDIS is the one to use. It can also be the case that we store the data in both databases: in the MySQL to ensure the data is kept in cas of the server being switched off but in REDIS to speed up the process.
 
 A good example can be found in `Modules/feed/feed_model`:
 ```
@@ -109,25 +114,25 @@ In the next example, we see that when fetching feeds we first try to get them fr
     public function get_user_feeds($userid)
     {
         $userid = (int) $userid;
-        
+
         if ($this->redis) {
             $feeds = $this->redis_get_user_feeds($userid);
         } else {
             $feeds = $this->mysql_get_user_feeds($userid);
         }    
-        
+
         return $feeds;
     }
 ```
 
-###Working with the MySQL database
+#### Working with the MySQL database
 
 The **MySQL** database can be accessed with the global variable `$mysqli`. It is an instance of the **php class mysqli**. You can see how to use it in the php documentation: http://php.net/manual/en/class.mysqli.php
 
-###Working with the REDIS database
+### Working with the REDIS database
 In order to use this database, REDIS must be installed inn the server. For Linux users go to your terminal:
 ```
-sudo apt-get install redis-server 
+sudo apt-get install redis-server
 sudo pecl install channel://pecl.php.net/dio-0.0.6 redis swift/swift
 sudo sh -c 'echo "extension=redis.so" > /etc/php5/apache2/conf.d/20-redis.ini'
 sudo sh -c 'echo "extension=redis.so" > /etc/php5/cli/conf.d/20-redis.ini'
@@ -135,7 +140,8 @@ sudo sh -c 'echo "extension=redis.so" > /etc/php5/cli/conf.d/20-redis.ini'
 EmonCMS will connect to the REDIS database if it is running. You can have access to it with the global variable `$redis` which will be `false` if the EmonCMS couldn't connect to REDIS.
 
 Add list of typical methods we use with $redis
-##The output of your module
+
+#### The output of your module
 When **index.php** calls the controller, **it expects an associative array (with one element that has 'content' as key) to be returned**.
 
 Normally if the format in the request  is *html*, then *'content'* will be the result of calling a **View**
@@ -154,7 +160,8 @@ if ($route->format == 'json'){
 return array('content'=>$result);
 ```
 where `$input->add_process()`  returns: `array('success'=>true, 'message'=>'Process added');`
-##Making a View
+
+#### Making a View
 A **View** is a php file that makes a web page. Therefore in a **View** we normally find *php, html* and *javascript.*
 
 A **View** is called in the **Controller** as follows:
@@ -164,7 +171,8 @@ $result = view("Modules/mymodule/Views/myview_view.php", ['variable_1' => $varia
 where the elements in `array()` can be accesed in the **View** with $args: `$args['variable_1]` and `$args['variable_2']`.
 
 For generating a webpage with language support have a look at the *Locale (translations)* section.
-##Logging information
+
+#### Logging information
 EmonCMS comes with a logger. In order to use the logger just make an object from the class **EmonLogger**:
 ```
 $this->log = new EmonLogger(__FILE__);  // if you declare it in the constructor of a class
@@ -179,7 +187,7 @@ $this->log->info("PHPTimestore:post id=$feedid timestamp=$timestamp value=$value
 ```
 By default the log file is stored in `/var/log/emoncms.log`.
 
-##Database autosetup
+#### Database autosetup
 Probably your new module will need to use one table or more from the database. Normally when developing you will create the table manually but for production you want it to be created automatically. **A schema for the table must be defined.**
 
 A good example of how to define the schema in a *php* file that EmonCMS can use to create the table/s in the database is `Modules/user/user_schema.php`:
@@ -207,15 +215,17 @@ $schema['rememberme'] = array(
 If you know some SQL the code above doesn't need any explanation to understand how the schema is defined. **Just notice that there isn't any `?>` clause to close the php script.**
 
 When installing EmonCMS (with your module) from scratch your table/s will be created the first time that EmonCMS is run. But if you want to add a new module to an existing EmonCMS installation you can just paste it in the Modules directory and in order to create the table/s you need update the database. Logged in as *Administrator* click on *Admin* on the menu and find the button to update the database.
-##Adding a module to the menu
+
+#### Adding a module to the menu
 EmonCMS has its own way of building up menus. The menu is loaded in *index.php* and rendered in the page by the Theme. The menu items are fetched from the modules directories.
 
 In order to add a new module to the menu, a file called `mymodule_menu.php` must be added to your module's directory.
 
-The best way to understand how this file should look like is to check out the following menu file 
+The best way to understand how this file should look like is to check out the following menu file
 
 `/Modules/user/user_menu.php`
-##Locale (translations)
+
+#### Locale (translations)
 EmonCMS comes with language support. Translations files are located in a directory called `locale` in a module's directory. In a translation file two strings are defined:
 ```
 msgid "Input API Help"
@@ -229,11 +239,11 @@ which will become:
 ```
 <div id="apihelphead"><div style="float:right;"><a href="api">Ver ayuda para el uso de la API</a></div></div>
 ```
-##Files that every EmonCMS developer should have a look at
-Obviously one of the best ways to learn how to make a module is having a look at other modules files but that is not enough. 
+#### Files that every EmonCMS developer should have a look at
+Obviously one of the best ways to learn how to make a module is having a look at other modules files but that is not enough.
 
-Deep understanding on how EmonCMS works starts looking at 
-- **index.php**: this is the front controller and is the one who makes everything happen and in a specific order: it loads the settings and core scripts, connects to the database, checks authentication, sets the languaje, loads the controller specified in the request and finally prints the output.
+Deep understanding on how EmonCMS works starts looking at
+- **index.php**: this is the front controller and is the one who makes everything happen and in a specific order: it loads the settings and core scripts, connects to the database, checks authentication, sets the language, loads the controller specified in the request and finally prints the output.
 - **settings.php**: nothing to say, just have a look ;-)
 
 There are other files that are worth to look at but you can live without them:
