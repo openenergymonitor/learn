@@ -122,7 +122,7 @@
         </div>
       </div>
       <div class="lowermenuWrapper">
-        <div class="searchContainer">
+        <div class="searchContainer" style="height:59px">
           <gcse:searchbox-only></gcse:searchbox-only>
         </div>
       <?php
