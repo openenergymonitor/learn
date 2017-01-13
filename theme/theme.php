@@ -322,26 +322,26 @@
 // ----------------------------------------------------------------------------------------
 //  Responsive sidebar
 // ----------------------------------------------------------------------------------------
-    function sidebar_resize() {
-      var width = $(window).width();
-      var height = $(window).height();
-      if (width<1260) {
-          if (fixsidebar===false) {
-              $(".sidenav").css("width","0");
-              $("#topnav").show();
-          } else {
-              $("#bodyfade").show();
-          }
-      $(".container").css("margin","0 auto");
-      } else {
-          $(".sidenav").css("width","300px");
-          $("#topnav").hide();
-          $(".container").css("margin-left","300px");
-          $("#bodyfade").hide();
+function sidebar_resize() {
+    var width = $(window).width();
+    var height = $(window).height();
+    if (width<1260) {
+        if (fixsidebar===false) {
+            $(".sidenav").css("width","0");
+            $("#topnav").show();
+        } else {
+            $("#bodyfade").show();
+        }
+        $(".container").css("margin","0 auto");
+    } else {
+        $(".sidenav").css("width","300px");
+        $("#topnav").hide();
+        $(".container").css("margin-left","300px");
+        $("#bodyfade").hide();
     }
-// ----------------------------------------------------------------------------------------
-//  Responsive right hand panel
-// ----------------------------------------------------------------------------------------
+    // --------------------------------------------
+    //  Responsive right hand panel
+    // --------------------------------------------
     if (width<960) {
         $("#rightpanel").css("margin","0 auto");
         $("#rightpanel").css("width","100%");
