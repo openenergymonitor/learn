@@ -80,7 +80,7 @@
               <span>Learn</span> | Open<span>EnergyMonitor</span>
           </div>
         </div>
-        <div class="oemMenu">
+        <div class="oemMenu" style="display:none">
           <ul>
             <li>
               <a href="https://community.openenergymonitor.org/">
