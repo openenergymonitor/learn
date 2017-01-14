@@ -382,7 +382,6 @@ li.active a {
   	background-color: #44b3e2;
   	height: 42px;
   	text-align: left;
-    display:none;
 }
 .learnTitle {
   	margin: 0;
@@ -481,7 +480,7 @@ pre::-webkit-scrollbar-thumb {
 /*---------------------------------------------------------------------*/
 .sidenav {
     height: 100vh; /* 100% Full-height */
-    width: 300px; /* 0 width - change this with JavaScript */
+    width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
