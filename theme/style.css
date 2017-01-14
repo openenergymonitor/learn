@@ -379,9 +379,14 @@ li.active a {
 // Topnav
 /*--------------------------------------------------------------------*/
 #topnav {
-  	background-color: #44b3e2;
-  	height: 42px;
-  	text-align: left;
+	background-color: #44b3e2;
+	height: 42px;
+	text-align: left;
+	display: block;
+}
+@media screen and (min-width: 1260px) {
+  #topnav {
+    display:none;}
 }
 .learnTitle {
   	margin: 0;
