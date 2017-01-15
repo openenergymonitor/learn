@@ -25,7 +25,7 @@ The waveform can be scaled down using a voltage divider connected across the ada
 
 Here's the circuit diagram and the voltage waveforms:
 
- ![Arduino AC voltage input circuit diagram](files/Arduino AC voltage input_1.png)
+![Arduino AC voltage input circuit diagram]('files/Arduino AC voltage input_1.png')
 
 Resistors **R1** and **R2** form a voltage divider that scales down the power adapter AC voltage. Resistors **R3** and **R4** provide the voltage bias. Capacitor **C1** provides a low impedance path to ground for the AC signal. The value is not critical, between 1 μF and 10 μF will be satisfactory.
 
