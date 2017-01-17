@@ -55,6 +55,9 @@
 .nextPrev {
  display: none;
 }
+.editGit {
+ display: none;
+}
 </style>
 <div class="flex-container">
 	<div class="flex-item">
@@ -98,5 +101,4 @@
   "<i class='fa fa-globe fa-3x'></i>");
   $(".learnpageIcons:eq(2)").append(
   "<i class='fa fa-random fa-3x' style='padding:8px 0 0 4px;'></i>");
-  $(".editGit").css("display","none");
 </script>

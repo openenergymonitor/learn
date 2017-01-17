@@ -32,7 +32,7 @@
           </div>
           <div class="learnTitle-titleWrapper">
             <span>
-                <span class="boldText">&nbsp;Learn</span>&nbsp;|&nbsp;Open<span class="boldText">EnergyMonitor</span>
+                <strong>&nbsp;Learn</strong>&nbsp;|&nbsp;Open<strong>EnergyMonitor</strong>
             </span>
           </div>
         </div>
@@ -76,10 +76,10 @@
           <div class='menuTitle'>
             <div class="menuSelect"><i id="menuSelect" class="fa fa-chevron-circle-down"></i>
             </div>
-              <span>Learn</span> | Open<span>EnergyMonitor</span>
+              <strong>Learn</strong> | Open<strong>EnergyMonitor</strong>
           </div>
         </div>
-        <div class="oemMenu" style="display:none">
+        <div class="oemMenu">
           <ul>
             <li>
               <a href="https://community.openenergymonitor.org/">
@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="lowermenuWrapper">
-        <div class="searchContainer" style="height:59px">
+        <div class="searchContainer">
           <gcse:searchbox-only></gcse:searchbox-only>
         </div>
       <?php
@@ -185,13 +185,6 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
-
-  $(window).load(function() {
-    $(".gsc-control-cse").css("padding","0");
-    $(".gsc-control-cse").css("border","none");
-    $(".gsc-clear-button").css("display","none");
-    $(".gsc-search-button").css("fontFamily","ubuntu");
-  });
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu
 // ----------------------------------------------------------------------------------------
@@ -213,7 +206,7 @@
 // Show/hide OpenEnergyMonitor site links
 // ----------------------------------------------------------------------------------------
     $(".titleWrapper").click(function(){
-          open_topmenu()
+      open_topmenu()
     });
 
     function open_topmenu(){
@@ -243,8 +236,7 @@
       $('.nextPrev > .next').empty();
       $('.nextPrev > .prev').empty();
       pageLinks();
-    });
-
+      });
     }
 // ----------------------------------------------------------------------------------------
 // Open and close top level of menu
@@ -326,14 +318,14 @@ function sidebar_resize() {
     if (width<1260) {
         if (fixsidebar===false) {
             $(".sidenav").css("width","0");
-            $("#topnav").show();
+            $("#topnav").slideDown("fast");
         } else {
             $("#bodyfade").show();
         }
         $(".container").css("margin","0 auto");
     } else {
         $(".sidenav").css("width","300px");
-        $("#topnav").hide();
+        $("#topnav").slideUp("fast");
         $(".container").css("margin-left","300px");
         $("#bodyfade").hide();
     }
@@ -380,22 +372,22 @@ function pageLinks() {
   var nextSection = nsLocate.text();
   var nsLink = nsLocate.next().find('a:first').attr('href');
   if (next != null) {
-  $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
+    $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
   }
   else if (nsLink != null) {
-  $('.nextPrev > .next').append("Next Chapter:<a href=" + nsLink + "><br>" + nextSection + "</a>");
+    $('.nextPrev > .next').append("Next Chapter:<a href=" + nsLink + "><br>" + nextSection + "</a>");
   }
   else if (nsLink == null && next == null) {
-  $('.nextPrev > .next').append("Return to:<br><a href='/'>Main Menu</a>");
+    $('.nextPrev > .next').append("Return to:<br><a href='/'>Main Menu</a>");
   }
   if (previous != null) {
-  $('.nextPrev > .prev').append("Previous:<br>" + previous);
+    $('.nextPrev > .prev').append("Previous:<br>" + previous);
   }
   else if (psLink != null) {
-  $('.nextPrev > .prev').append("Previous Chapter:<a href=" + psLink + "><br>" + prevSection + "</a>");
+    $('.nextPrev > .prev').append("Previous Chapter:<a href=" + psLink + "><br>" + prevSection + "</a>");
   }
   else if (psLink == null && previous == null) {
-  $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
+    $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
   }
 }
 pageLinks();
