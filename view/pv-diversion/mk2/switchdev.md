@@ -1,5 +1,7 @@
 ## Diverting surplus PV Power, by Robin Emley
 
+***
+
 ### 4: Switching High Current Loads using a Triac
 
 #### The Triac
@@ -11,29 +13,29 @@ A triac is a controlled bi-directional semiconductor switch. It is a 3-terminal 
 But the triac, like its uni-directional cousin the thyristor, cannot be turned off using the gate. Once turned on, the triac will conduct forever. The only way to turn it off is to remove the current by some other means. Fortunately, in an alternating current circuit, the current passes through zero every half-cycle, so a triac will always turn off at the end of a half-cycle.
 _In order to simplify that description, there are many half-truths above. Triac operation is exhaustively described in [this Wikipedia article](https://en.wikipedia.org/wiki/TRIAC)._
 
-#### Using a triac
+#### Using a Triac
 
 A triac can be turned on at any time, and turns off at the end of each half-cycle. Clearly this enables us to control the current, and hence, the power in the circuit. If the triac is turned on at the beginning of each half-cycle, then current flows all of the time, and maximum power is delivered to the load. If we turn the triac on later in the half-cycle, or if we turn it on only sometimes, then less power is delivered. Depending on when and how often we turn on the triac, gives us two modes of operation. If we turn the triac on at the same relative point in each half-cycle, this is called **phase control**. If we turn the triac on for a cycle or two and then leave it off, it is called **burst fire** or sometimes whole cycle control.
 
 <embed alt="animated diagram of triac phase control waveforms" height="220" src="files/triac_phase.svg" type="image/svg+xml" width="600">
 
-*Phase Control<br>
+**Phase Control:**
 Maximum power is delivered to the load when the triac conducts for all of each half-cycle. The power ramps down continuously (but not linearly) to zero when the triac does not conduct at all.*
 
 <embed alt="animated diagram of triac burst fire control waveforms" height="250" src="files/triac_burst.svg" type="image/svg+xml" width="600">
 
-*Burst Fire<br>
+**Burst Fire:**
 Maximum power is delivered to the load when the triac conducts for every cycle. As fewer cycles conduct, the average power falls in steps (of 20% in this case).*
 
-### Firing (triggering) the triac
+#### Firing (Triggering) the Triac
 
 For this task, there are a number of ICs that not only generate the appropriate signal but also provide isolation between the mains and the control electronics. Two examples are the MOC3021 for phase control and MOC3041 for burst fire, both from Fairchild and others.
 
-**The MOC3021 Random Phase Driver I.C.**
+#### The MOC3021 Random Phase Driver I.C.
 
 As always, the data sheet gives full details, an application circuit diagram and it is advisable to follow this exactly. As far as the Arduino processor is concerned, the driver looks very much like an ordinary LED. It needs a series resistor to limit the current and the value for this can be calculated in the normal way knowing the drive capability of the Arduino digital output pin and the voltage dropped by the LED, and the current it requires. The software sketch must provide a sufficiently long pulse at the correct instant in each half-cycle so the triac is turned on at the correct time.
 
-**The MOC3041 Zero-Cross Optoisolator Driver I.C.**
+#### The MOC3041 Zero-Cross Optoisolator Driver I.C.
 
 Again, the data sheet gives full details, an application circuit diagram and it is advisable to follow this exactly. Again, the Arduino sees the device as an LED and the series resistor is calculated in the same way. However, it differs from the MOC3021 in that it contains a zero crossing detector circuit. In operation, the trigger is ‘primed’ by sending it a ‘turn-on’ signal during the preceding half-cycle, specifically after the voltage has risen above 20 V (the ‘Inhibit Voltage’ on the data sheet). The software now needs to look ahead and prime the zero-crossing trigger a little while after the previous half-cycle has started. So that rectification does not occur, the ‘turn-on’ signal is left on until the corresponding point one whole cycle later, at which point it is either turned off or left on as necessary.
 
@@ -53,7 +55,7 @@ Again, because of the finite impedance of the mains supply, a load that draws ha
 
 Harmonics are a major problem for phase-angle controllers, and for burst-fire controllers if switching point moves significantly away from the zero-crossing.
 
-#### References & Data sheets
+#### References & Data Sheets
 
 [MOC3021 Driver http://www.fairchildsemi.com/an/AN/AN-3003.pdf](http://www.fairchildsemi.com/an/AN/AN-3003.pdf)
 

@@ -1,5 +1,7 @@
 ## Diverting surplus PV Power, by Robin Emley
 
+***
+
 ### 2: Detection and Measurement of surplus PV
 
 By the use of non-invasive sensors for measuring voltage and current, the rate of energy flow (i.e. Power) is routinely determined in Open Energy Monitor applications. The underlying principles are described in the section “[Different ways of Measuring Voltage and Current](vimeasurement)”.
@@ -12,7 +14,7 @@ _(If the output from the PV were to exactly match the load, then there would be 
 
 To detect whether energy is being imported or exported at any given moment, it is only necessary to ascertain whether the instantaneous value of Power at the grid connection point (i.e. Voltage × Current) is positive or negative. There is a full explanation of how the direction of energy flow may be detected here [Electricity Monitoring: An Introduction to AC Power](../../electricity-monitoring/ac-power-theory/introduction). However, it is also necessary to determine _how much_ surplus power is available so that the right amount of power can be diverted for an alternative purpose.
 
-The [standard OEM sketch for V & I](https://github.com/openenergymonitor/EmonLib/blob/master/examples/voltage_and_current/voltage_and_current.ino) runs for a short period of time (around a second or two) and then indicates the average power which has been flowing during that period. By repeated use of this routine, a “dump load” can be made to switch on and off as necessary in order to consume any surplus power. This type of system can work very effectively, and many tankfuls of hot water have been provided by this means. The development of several such systems is described at [https://openenergymonitor.org/emon/node/176](https://openenergymonitor.org/emon/node/176). My own first system, which was of this type, can be seen working [here](http://www.youtube.com/watch?v=-lk6Me3cwuw), and the sketch is [here](files/Mk1_in_Garage_2.ino_.zip).
+The [standard OpenEnergyMonitor sketch for V & I](https://github.com/openenergymonitor/EmonLib/blob/master/examples/voltage_and_current/voltage_and_current.ino) runs for a short period of time (around a second or two) and then indicates the average power which has been flowing during that period. By repeated use of this routine, a “dump load” can be made to switch on and off as necessary in order to consume any surplus power. This type of system can work very effectively, and many tankfuls of hot water have been provided by this means. The development of several such systems is described at [https://openenergymonitor.org/emon/node/176](https://openenergymonitor.org/emon/node/176). My own first system, which was of this type, can be seen working [here](http://www.youtube.com/watch?v=-lk6Me3cwuw), and the sketch is [here](files/Mk1_in_Garage_2.ino_.zip).
 
 With the above type of system, power to the load is diverted on the basis of surplus power that is _predicted_ to be available over the next period. If conditions change, then too much or too little power could be diverted. The response time is also rather slow, and measurements are not continuous.
 

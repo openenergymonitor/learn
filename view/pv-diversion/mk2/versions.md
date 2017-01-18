@@ -1,6 +1,8 @@
 ## Diverting surplus PV Power, by Robin Emley
 
-### 9: Different versions of the software sketch
+***
+
+### 9: Different Versions of the Software Sketch
 
 All versions of the Mk2 PV Router sketch (apart from the phase-angle variant) will work with the original hardware. The difference between them is simply their efficiency. Mk2i offers substantially better performance than the original Mk2\. It may therefore be a better choice for an application where additional workload is to be placed on the processor. Having said which, all versions can be relied on to heat up a tankful of water in similar times. Every version that has been posted to date is included in the list at [https://openenergymonitor.org/emon/node/1757](https://openenergymonitor.org/emon/node/1757)
 
@@ -45,4 +47,4 @@ A summary of the operation of the [Mk2_PV_Router_mini.ino](files/Mk2_PV_Router_m
 
 #### Help and Assistance
 
-When building a Mk2 PV Router for the first time, the OEM forum at [https://community.openenergymonitor.org/](https://community.openenergymonitor.org/) is a valuable resource. The Open Energy Monitor is an open-source project, and most constructors are only too happy to provide assistance to anyone whose project has yet to get off the ground.
+When building a Mk2 PV Router for the first time, the [OpenEnergyMonitor community forum](https://community.openenergymonitor.org/) is a valuable resource. The OpenEnergyMonitor is an open-source project and most constructors are only too happy to provide assistance to anyone whose project has yet to get off the ground.

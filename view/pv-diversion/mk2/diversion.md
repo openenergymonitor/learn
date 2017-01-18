@@ -1,5 +1,7 @@
 ## Diverting surplus PV Power, by Robin Emley
 
+***
+
 ### 3: Diversion and Use of surplus PV
 
 Various schemes for storing surplus energy are possible, including the charging of batteries. For most users, however, the most practical use for any surplus PV energy is to heat their Domestic Hot Water using an immersion heater. [This arrangement is not directly suitable for households where hot-water is supplied by an instant boiler, such as a “combi”. In such cases, some other means of making effective use of surplus PV energy would need to be devised.]

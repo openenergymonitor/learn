@@ -1,5 +1,7 @@
 ## Diverting surplus PV Power, by Robin Emley
 
+***
+
 ### 6: Different ways of Measuring Voltage and Current
 
 The hardware for measuring power using non-intrusive sensors is fully described in the Electricity Monitoring section. Behind the hardware lies some associated software in the OEM’s library files. The standard code for measuring and calculating various parametric values including Power may be found in the `calcVI()`function in the source file `emonLib.cpp`. Instructions for downloading the EmonLib library are given at [Arduino sketch - voltage and current](https://github.com/openenergymonitor/EmonLib/blob/master/examples/voltage_and_current/voltage_and_current.ino).

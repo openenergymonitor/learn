@@ -1,5 +1,7 @@
 ## Diverting surplus PV Power, by Robin Emley
 
+***
+
 ### 1: Introduction, and “Power” v. “Energy”
 
 This describes practice in the UK. Practice in other places may vary.
@@ -20,7 +22,7 @@ Having explained the nature of “surplus PV”, and why it makes sense for this
 
 One approach for detecting and diverting single-phase surplus power is my Mk2 PV Router. This project has been released in various forms, along with associated tools and supporting information including video footage. A summary of all my Mk2 PV Router material is available at [https://openenergymonitor.org/emon/node/1757](https://openenergymonitor.org/emon/node/1757). Various items on that list have been used to illustrate this document.
 
-### Power and Energy
+#### Power and Energy
 
 The terms “power” and “energy” are often inter-changed in everyday speech but their meanings are very different. Before going any further, I think it is important to point out the difference.
 
@@ -35,6 +37,6 @@ If a 2 kW heater (its power rating) were to be switched on for a period of 1 Ho
 
 In the same way that “Speed is the rate at which Distance is covered”, i.e. miles per hour, so “Power is the rate at which Energy is consumed or generated” i.e. kWh per hour, or just kW. In the material which follows about the measurement of mains electricity, it is often helpful to think of power as the rate at which energy flows.
 
-**Further reading**
+#### Further Reading
 
 [Wikipedia article - Feed-in tariff](https://en.wikipedia.org/wiki/Feed-in_tariff)

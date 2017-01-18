@@ -1,18 +1,20 @@
 ## Diverting surplus PV Power, by Robin Emley
 
+***
+
 ### 7: Calibration of power and voltage, plus phase-alignment
 
-#### Calibration of Power.
+#### Calibration of Power
 
 Unless operating in anti-flicker mode, calibration of any Mk2 system with regards to power is generally not required, the measurement system just needs to be linear.
 
 When operating in anti-flicker mode (or with phase-angle control), accurate calibration with regards to power is essential. Later Mk2 builds include ‘tallymode’ which allows accurate calibration of power to be easily achieved. Full guidance about this mode may be found in the code and supporting posts on the OEM forum.
 
-#### Calibration of Voltage.
+#### Calibration of Voltage
 
 Calibration of the voltage sensor may be required for correct operation of the power diversion system which uses a triac. Full guidance about this may be found in any of the Mk2 sketches, and tools are available to assist with this process. Providing that the voltage sensor is constructed in the standard way, the default values are likely to work fine without any need for adjustment.
 
-#### Phase-alignment.
+#### Phase-Alignment
 
 When an AC voltage source is applied to a resistive load, the resulting AC current is perfectly aligned with the voltage. With a resistive load, the Power Factor is one (or unity), and “apparent power” and “real power” are both the same. With other types of load, the current can be advanced or retarded with respect to the voltage. In either case, the Power Factor is then less than one.
 
