@@ -1,10 +1,12 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
+***
+
 ### 9: Hardware
 
 ![Power Diverter General Arrangement Drawing](files/powerDiverterGA.png)
 
-### Original triac switch output stage
+#### Original triac switch output stage
 
 The original sketch uses the pulse jack socket on the emonTx V2 as the output to the triac driver. For the test setup Martin used a 68 Ω resistor in series with a normal LED and the MOC3063 triac driver. The MOC3063 is a low current device.
 

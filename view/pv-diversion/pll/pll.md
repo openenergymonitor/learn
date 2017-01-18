@@ -1,17 +1,19 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
-### A design for a controller to route surplus P.V. energy into the domestic hot water supply, and to provide energy monitoring.
+<small>Documentation by Robert Wall</small>
 
-### Documentation by Robert Wall
+***
 
-1.  [Features](features)
-2.  [Software Design Overview](softwaredesign)
-3.  [What is a PLL? – operating principle](operatingprinciple)
-4.  [The ADC and interrupts](adcinterrupts)
-5.  [Integer maths](integermaths)
-6.  [Advantages over emonLib](advantagesoveremonlib)
-7.  [Implementation](implementation)
-8.  [The sketch explained in detail.](sketchdetail)
-9.  [Hardware](hardware)
-10.  [Derivatives](derivatives)
-11.  [References](references)
+### A Design for a Controller to Route Surplus P.V. Energy into the Domestic Hot Water Supply and to Provide Energy Monitoring
+
+1.  **[Features](features)**<br/>
+2.  **[Software Design Overview](softwaredesign)**<br/>
+3.  **[What is a PLL? – operating principle](operatingprinciple)**<br/>
+4.  **[The ADC and interrupts](adcinterrupts)**<br/>
+5.  **[Integer maths](integermaths)**<br/>
+6.  **[Advantages over emonLib](advantagesoveremonlib)**<br/>
+7.  **[Implementation](implementation)**<br/>
+8.  **[The sketch explained in detail.](sketchdetail)**<br/>
+9.  **[Hardware](hardware)**<br/>
+10.  **[Derivatives](derivatives)**<br/>
+11.  **[References](references)**<br/>

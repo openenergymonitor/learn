@@ -1,5 +1,7 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
+***
+
 ### 1: Features
 
 - Continuous monitoring, every mains cycle is sampled exactly 50 times.

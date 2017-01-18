@@ -1,10 +1,12 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
+***
+
 ### 8: The sketch explained in detail.
 
 The version described was published at [https://openenergymonitor.org/emon/node/1535](https://openenergymonitor.org/emon/node/1535) and can be downloaded from [emonTx_Solar_Controller_Temperature_PLL_0.zip](files/emonTx_Solar_Controller_Temperature_PLL_0.zip)
 
-### Calibration & Hardware set-up
+#### Calibration & Hardware Set-Up
 
 Lines 19 – 21
 The voltage and current calibration constants for the three inputs. These must be set according to your hardware by comparing with known good values.

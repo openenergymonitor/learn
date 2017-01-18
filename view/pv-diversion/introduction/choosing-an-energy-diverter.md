@@ -1,4 +1,4 @@
-## Choosing an energy diverter
+## Choosing an Energy Diverter
 
 ***
 
@@ -26,7 +26,7 @@ The power is switched on and off relatively frequently, the minimum ‘on’ or 
 
 This is the mode generally preferred by amateur constructors. The switching device is an inexpensive triac that requires only a small heat sink. A low-powered microcontroller is capable of performing the necessary calculations and generating a control signal. The load is switched at the instant the mains voltage passes through zero, so little or no interference is generated. However, the varying load on the supply may cause the supply voltage to rise and fall in time with the load switching, giving rise to flicker. This can be disturbing and must be minimised. Flicker is worst with a weak supply and a large load.
 
-#### Phase control
+#### Phase Control
 
 Switching takes place at mains frequency, the ‘on’ time can vary from zero to the whole mains cycle. The switching device is again, an inexpensive triac. The load always switches off at the point where the mains voltage passes through zero. But the load can be switched **_on_** at any point in the cycle, and the resulting voltage transient can generate harmonics that can cause undesirable heating in motors and generally interfere with a wide range of equipment. Heavy and expensive filters are required to keep the harmonics within acceptable limits, making this approach less popular than the others.
 
@@ -65,13 +65,13 @@ Both of the power switches are suitable for use with an emonTx V2 or Arduino Uno
 
 Care must be taken when choosing a commercial SSR. Apart from the danger of purchasing a sub-standard and potentially dangerous low-cost device from on-line suppliers, care should be taken (especially if you are using an emonTx) to ensure that the SSR can de driven properly by the 3.3 V emonTx output. Problems are less likely if you use an Arduino, as its 5V output will normally drive an SSR without issue.
 
-#### Separating the power switch from the control logic.
+#### Separating the Power Switch from the Control Logic
 
 It will often be necessary, or desirable, to locate the power switch close to the load whilst the control logic is located close to the infeed. A very easy way to do this is to run a twisted pair (e.g. ‘telephone’ or CAT5 cable) between the two locations. A cable run of a few tens of metres should not be a problem.
 
 Alternatively, a remote load can be controlled via radio – already available in the emonTX.
 
-#### Multiple Loads.
+#### Multiple Loads
 
 Sometimes there is a requirement to be able to control more than one load. As alluded to above, the emonTx V3 will not be suitable to drive a hard-wired second load if powered by the ac adapter. An external 5 V supply must be provided if more than one power switch is to be driven at the same time. The emonTx V2 and Arduino Uno do not suffer from this restriction. Both emonTx v2 and v3 can use their on-board RFM12B radio to control one or possibly more remote loads.
 

@@ -1,5 +1,7 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
+***
+
 ### 11: References
 
 Atmel data sheet ATmega48PA/88PA/168PA/328P

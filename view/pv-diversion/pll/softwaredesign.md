@@ -1,5 +1,7 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
+***
+
 ### 2: Software Design Overview
 
 The PLL Power Diversion sketch uses advanced techniques to achieve a performance that is in several respects superior to that which is achievable with the standard demonstration sketches and emonLib. This is not to denigrate emonLib nor the other libraries that the demonstration sketches employ, those are designed for general use and as such need to cover all eventualities. In a closely controlled application, it is possible to bypass these general purpose functions and, at the expense of more advanced programming, control both the processor itself and the external devices – radio and temperature sensor – at much lower level to achieve an enhanced performance.

@@ -1,6 +1,8 @@
 ## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
 
-### 5: Integer maths
+***
+
+### 5: Integer Maths
 
 High level languages like C++ make it easy to write programs by offering a wide range of variable types and functions. Unfortunately, that convenience comes at the price of speed and performance. Although modern compilers can usually optimise a program far better than all but the best human programmers, there are limits to what they can do simply because they can never be totally aware of the actual conditions when the program is running. One area where a prior knowledge of what the variables are and what they mean is invaluable is in the mathematical operations.
 
