@@ -298,7 +298,7 @@ un-comment above to load resources remotely-->
 // Open sidebar
 // ----------------------------------------------------------------------------------------
     $("#sidebar-open").click(function(){
-      $(".sidenav").css("width","300px");
+      $(".sidenav").animate({ width:'300px' },"0.5s");
       fixsidebar = true;
       $("#bodyfade").show();
     });
@@ -306,7 +306,7 @@ un-comment above to load resources remotely-->
 // Close sidebar
 // ----------------------------------------------------------------------------------------
     $("#bodyfade").click(function(){
-        $(".sidenav").css("width","0px");
+        $(".sidenav").animate({ width:'0' },"0.5s");
         $(".oemMenu").slideUp("fast");
         $("#menuSelect.fa-minus-circle").toggleClass('fa-chevron-circle-down fa-minus-circle');
         $("#topnav").show();
@@ -330,7 +330,9 @@ function sidebar_resize() {
         $(".container").css("margin","0 auto");
     } else {
         $(".sidenav").css("width","300px");
-        $("#topnav").slideUp("fast");
+        if( $("#topnav").css('display') == 'block') {
+          $("#topnav").slideUp("fast");
+        }
         $(".container").css("margin-left","300px");
         $("#bodyfade").hide();
     }

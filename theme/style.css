@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
   padding-right: 10px;
   padding-top: 20px;
+	height: 50px
 }
 /*-----github edit link -----*/
 .editGit {
@@ -197,6 +198,7 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 0;
+	cursor: pointer;
 }
 .appendix-section {
 	background-color: #ecf5ff;
@@ -394,7 +396,7 @@ li.active a {
 	background-color: #44b3e2;
 	height: 42px;
 	text-align: left;
-	display: block;
+	display: none;
 }
 .learnTitle {
   	margin: 0;
@@ -502,7 +504,7 @@ pre::-webkit-scrollbar-thumb {
     overflow-x: hidden; /* Disable horizontal scroll */
     color:#fff;
     text-align:left;
-    transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+/*    transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 	  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	  -webkit-touch-callout: none;
   	-webkit-user-select: none;
@@ -586,4 +588,3 @@ hr {
 small a {
   font-size: 12px;
 }
-
