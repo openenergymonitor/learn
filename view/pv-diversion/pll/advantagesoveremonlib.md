@@ -1,10 +1,10 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
 ***
 
-### 6: Advantages over emonLib
+### 6: Advantages Over emonLib
 
-The energy monitor library (“emonLib”) designed for use with the emonTx was conceived with operation from either batteries or a 5 V mains adapter being possible. To achieve a reasonable battery life, it adopts the strategy of measuring power for a short time, then (in the standard demonstration sketches) sleeping for a long time. These times are approx. 200 mS and 5 s. This means that the power recorded is a sample and the underlying assumption is that this is representative of the power each side of this sample. Over a long period of time and with steady loads that are only occasionally switched on or off, this is quite reasonable and after careful calibration, agreement with the “official” meter to better than 1% has been reported.
+The energy monitor library (“emonLib”) designed for use with the emonTx was conceived with operation from either batteries or a 5 V mains adapter being possible. To achieve a reasonable battery life, it adopts the strategy of measuring power for a short time, then (in the standard demonstration sketches) sleeping for a long time. These times are approx. 200 mS and 5 s. This means that the power recorded is a sample and the underlying assumption is that this is representative of the power each side of this sample. Over a long period of time and with steady loads that are only occasionally switched on or off, this is quite reasonable and after careful calibration, agreement with the “official” meter to better than 1 % has been reported.
 
 However, this approach is liable to increasing errors if a rapidly switched load, like the burst-mode controller, is present, and the switching times are comparable with the sampling period. The interrupt-driven approach means that measurement is continuous and the average power over the reporting period is accurately measured. Because the reading cycle is locked to the mains frequency, it is also possible to obtain a display of frequency.
 

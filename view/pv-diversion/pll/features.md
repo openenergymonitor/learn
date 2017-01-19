@@ -1,11 +1,11 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
 ***
 
 ### 1: Features
 
 - Continuous monitoring, every mains cycle is sampled exactly 50 times.
-- Uses 2 current transformers – suitable for a “Type 2” installation.
+- Uses 2 current transformers – suitable for a [“Type 2”](http://guide.openenergymonitor.org/applications/solar-pv/#required-hardware) installation.
 - Normal transmission to emonGLCD via the RFM12 every few seconds, this also takes account of every mains cycle so you won’t miss short peaks.
 - Support for a single DS18B20 temperature sensor.
 - Standard, unmodified emonTx hardware, the triac trigger is driven from the pulse detector jack via a suitable resistor.

@@ -1,6 +1,8 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
-### 4: The ADC and interrupts
+***
+
+### 4: The ADC and Interrupts
 
 The analogue to digital converter (ADC) in the Atmel processor can run in one of two modes. The data sheet lists features that are key to how we use the ADC:
 

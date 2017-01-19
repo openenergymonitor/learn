@@ -1,4 +1,4 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
 ***
 

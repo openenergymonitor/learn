@@ -1,6 +1,8 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
-### 3: What is a PLL? – operating principle.
+***
+
+### 3: What is a PLL? – Operating Principle.
 
 A Phase Locked Loop (PLL) is a particular form of a closed loop control system. It is often used, as here, to follow the changes in frequency of some incoming signal. In our case, that is the mains electricity supply.
 

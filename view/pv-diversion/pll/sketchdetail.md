@@ -1,8 +1,8 @@
-## Solar PV power diversion with emonTx using a PLL, emonGLCD and temperature measurement, by Martin Roberts
+## Solar PV Power Diversion with emonTx Using a PLL, emonGLCD and Temperature Measurement, by Martin Roberts
 
 ***
 
-### 8: The sketch explained in detail.
+### 8: The Sketch Explained in Detail.
 
 The version described was published at [https://openenergymonitor.org/emon/node/1535](https://openenergymonitor.org/emon/node/1535) and can be downloaded from [emonTx_Solar_Controller_Temperature_PLL_0.zip](files/emonTx_Solar_Controller_Temperature_PLL_0.zip)
 
@@ -37,15 +37,15 @@ None of the other preprocessor directives should need to be changed.
 Lines 86 – 89
 These set up the One-wire library for temperature measurement and the SPI library for the serial connection to the RFM12B radio module.
 
-### RF Data to GLCD, emonBase & emonCMS
+#### RF Data to GLCD, emonBase & emonCMS
 
 Lines 91 & 92 set up the familiar data structure for passing data via the radio module.
 
-### Static variables
+#### Static Variables
 
 Lines 94 – 112 declare the static variables used in the sketch.
 
-### Setup( )
+#### Setup( )
 
 Lines 118 – 127 set the I/O pins as required.
 
@@ -61,7 +61,7 @@ Lines 159 & 160 'unset' default settings for the ADC made by the Arduino library
 
 Lines 163 – 172\. These set up Timer1, the 2500 Hz ‘tick’ to allow the PLL to control it and for it to generate the interrupt necessary to start the ADC.
 
-### Loop( )
+#### Loop( )
 
 The main loop comprises just a few lines, lines 176 – 201, because the main body of work is done in the interrupt handlers and in supporting functions.
 
@@ -73,13 +73,13 @@ Every 5 s, at nextTransmitTime, the rms values of voltage and current, the avera
 If the on-board LED is not being used to indicate that the loop is locked, then it is flashed while this is happening to indicate that data is being sent.
 Finally, it’s possible to manually trigger the dump load ‘on’ for a specified number of cycles (1 – 255) by typing a number at the serial console, e.g. enter 2 to pulse every second mains cycle.
 
-### The Timer1 interrupt handler ISR(TIMER1_COMPA_vect)
+#### The Timer1 Interrupt Handler ISR(TIMER1_COMPA_vect)
 
 Lines 204 – 210.
 This function is invoked when the interrupt is triggered as the 16-bit timer-counter Timer1 reaches its pre-set limit, thereby generating our 2500 Hz clock ‘tick’.
 The two digitalWrite statements put a pulse on SAMPPIN to indicate the start of conversion. The ADC multiplexer is set to the voltage input, and the ADC conversion is started.
 
-### The ADC interrupt handler ISR(ADC_vect)
+#### The ADC Interrupt Handler ISR(ADC_vect)
 
 Lines 213 – 263
 This function is invoked when the interrupt is triggered after the ADC completes its conversion.
@@ -110,7 +110,7 @@ Lines 253 – 260 Current input 2.
 
 This is much the same as the first current input. There is no need to pre-set the voltage input for the multiplexer – this is done separately by the Timer1 ISR, but at the end of this when the 3 inputs have been read, the function to update the PLL is called (line 259).
 
-### Update the PLL
+#### Update the PLL
 
 Lines 265 - 339
 
@@ -125,14 +125,14 @@ The function is split into 3 main sections:
 2.  The negative-going zero crossing (at NUMSAMPLES/2) is when SYNCPIN is set low. It was set high at the positive-going crossing so this pin carries a square wave synchronised to mains frequency – it is useful for debugging but is not necessary for operation.
 3.  Four samples before the negative-going zero crossing (line 325) is where we determine whether to arm the triac. “availableEnergy” is one of the global static variables that will be updated by the main loop, and is analogous to the “Energy Bucket” of Robin Emley’s article. If the level is above the upper threshold, the triac is turned on (lines 327 & 331 – 335) and it remains on until the level has fallen below the lower threshold (lines 328 & 336) when it is turned off.
 
-### AddCycle
+#### AddCycle
 
 Lines 342 – 356.
 This function is called at the start of the main loop when the end of a mains cycle has been detected (newCycle is set by the ADC interrupt handler).
 The running totals for the cycle are added to the totals for the 5 s period and the flag is cleared.
 DivertedCycleCount is a measure of the energy available for diversion.
 
-### CalculateVIPF
+#### CalculateVIPF
 
 Lines 359 – 393.
 This is called to perform the calculations for the average values every 5 s prior to transmitting the results.
@@ -149,17 +149,17 @@ Lines 379 – 382 transfer the required values to the emontx structure ready for
 
 Lines 384 – 392 finally reset the accumulators.
 
-### SendResults
+#### SendResults
 
 Lines 395 – 420.
 The data already prepared for the radio module is sent (line 397) and the remainder of this function prints values to the serial monitor. The “Offset” values are useful for checking that the hardware bias of the input circuit and the filter is working correctly.
 
-### Rfm_write
+#### Rfm_write
 
 Lines 423 – 431.
 Sends a word to the radio module via the SPI interface.
 
-### Rfm_send
+#### Rfm_send
 
 Lines 434 – 471.
 Sends the complete message.
@@ -168,14 +168,14 @@ First, the radio module is powered and the transmitter switched on (lines 439 & 
 
 In the ‘while’ loop (lines 445 – 463), the message header is constructed first in lines 450 – 456, then the message itself (line 457) followed by the checksum. Line 465 actually transfers the byte to the radio module via the SPI bus. Finally, the transmitter is shut down and the module put into sleep mode.
 
-### ConvertTemperature
+#### ConvertTemperature
 
 Lines 473 – 478.
 Starts the temperature conversion process.
 Note that if a 2-wire parasitic connection to the temperature sensor is used and problems are experienced, line 477 should be changed to:
     oneWire.write(CONVERT_TEMPERATURE,1);
 
-### ReadTemperature
+#### ReadTemperature
 
 Lines 480 – 497.
 This function reads the temperature from the scratchpad memory in the temperature module and returns the value converted to °C × 100.
