@@ -34,6 +34,7 @@ electricity-supply-initiative-launched),[[2]](http://www.edie.net/news/6/UK-s-fi
 - **Double counting:** If renewable energy is included in the grid average emission factor then claiming zero or low carbon emission factors from a green tariff will result in
 double counting of emission reductions.
 - **Energy efficiency:** Zero emission green tariffs may make it too easy for customers to reduce their carbon emissions and that this may disincentivise energy efficiency measures.
+
 - Zero or low carbon emission factors would ultimately contribute demand-side funding for renewable electricity.
 - Some suggest state funding or requirements shouldn’t bear on the situation at all and that emission factors should simply be attributed to identified generation sources.
 - Risk companies will abandon green tariffs without benefits
@@ -70,7 +71,7 @@ A heat pump consuming electricity at 218 gCO2/kWh and running at a COP of 3 woul
 
 #### 2: An emission factor taking into account a backup requirement for when supply does not meet demand
 
-At present, green tariffs make use of the wider grid in order to match their customers demand with renewable supply, buying more renewable electricity as a proportion of the available pool when renewable supply is low and less as a proportion when renewable supply is plentiful (known as buying long in the energy supply industry?). It could be argued that as demand is met with renewable supply the resultant CO2 emission rate is 0gCO2/kWh however you could say this is a bit convenient as its using the wider grid to take the slack.
+At present, green tariffs make use of the wider grid in order to match their customers demand with renewable supply, buying more renewable electricity as a proportion of the available pool when renewable supply is low and less as a proportion when renewable supply is plentiful. It could be argued that as demand is met with renewable supply the resultant CO2 emission rate is 0gCO2/kWh however you could say this is a bit convenient as its using the wider grid to take the slack.
 
 Using the ZeroCarbonBritain dataset and electricity supply model available here [7. Household electric only model](../zcem/integrated.html#all) with the full electrification demand model, with an equal amount of wind and solar supply matching demand over the 10 year model basis including grid losses (offshore wind: 0.64kW, onshore wind: 0.64kW, solar: 1.28kW), the matching between supply and demand reaches 85%. If the demand does not include demand shifting such as the smart charging of electric cars and heatstores the matching level drops to 73%.
 
