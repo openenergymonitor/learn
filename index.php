@@ -49,6 +49,7 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="jpg") $format = "jpg";
     if ($doc_ext=="js") $format = "js";
     if ($doc_ext=="zip") $format = "zip";
+    if ($doc_ext=="gz") $format = "zip";
     if ($doc_ext=="svg") $format = "svg";
     if ($doc_ext=="pdf") $format = "pdf";
     if ($doc_ext=="py") $format = "py";

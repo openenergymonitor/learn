@@ -180,7 +180,7 @@
                         "url": "electricity-monitoring/temperature/DS18B20-temperature-sensing-2"
                     },
                     "rtd-temperature-sensing": {
-                        "nicename": "Rtd temperature sensing",
+                        "nicename": "RTD temperature sensing",
                         "url": "electricity-monitoring/temperature/rtd-temperature-sensing"
                     }
                 }
