@@ -130,16 +130,16 @@
                         "url": "electricity-monitoring/networking/which-radio-module"
                     },
                     "rfm12b-wireless": {
-                        "nicename": "Rfm12b wireless",
+                        "nicename": "Rfm12b",
                         "url": "electricity-monitoring/networking/rfm12b-wireless"
-                    },
-                    "rfm12b2": {
-                        "nicename": "Rfm12b2",
-                        "url": "electricity-monitoring/networking/rfm12b2"
                     },
                     "rfm69cw": {
                         "nicename": "Rfm69cw",
                         "url": "electricity-monitoring/networking/rfm69cw"
+                    },
+                    "sending-data-between-nodes-rfm": {
+                        "nicename": "Sending data between nodes",
+                        "url": "electricity-monitoring/networking/sending-data-between-nodes-rfm"
                     },
                     "wifi": {
                         "nicename": "Wifi",
