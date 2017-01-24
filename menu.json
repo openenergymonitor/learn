@@ -80,45 +80,33 @@
             "ctac": {
                 "nicename": "Current & Voltage",
                 "pages": {
-                    "calibration": {
-                        "nicename": "Calibration",
-                        "url": "electricity-monitoring/ctac/calibration"
-                    },
-                    "ct-and-ac-power-adaptor-installation-and-calibration-theory": {
-                        "nicename": "Ct and ac power adaptor installation and calibration theory",
-                        "url": "electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory"
-                    },
-                    "digital-filters-for-offset-removal": {
-                        "nicename": "Digital filters for offset removal",
-                        "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal"
-                    },
-                    "emontx-error-sources": {
-                        "nicename": "Emontx error sources",
-                        "url": "electricity-monitoring/ctac/emontx-error-sources"
-                    },
-                    "explanation-of-the-phase-correction-algorithm": {
-                        "nicename": "Explanation of the phase correction algorithm",
-                        "url": "electricity-monitoring/ctac/explanation-of-the-phase-correction-algorithm"
-                    },
-                    "how-good-is-your-multimeter": {
-                        "nicename": "How good is your multimeter",
-                        "url": "electricity-monitoring/ctac/how-good-is-your-multimeter"
-                    },
                     "how-to-build-an-arduino-energy-monitor": {
-                        "nicename": "How to build an arduino energy monitor",
+                        "nicename": "Basic: How to build an arduino energy monitor",
                         "url": "electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor"
                     },
-                    "meters": {
-                        "nicename": "Meters",
-                        "url": "electricity-monitoring/ctac/meters"
+                    "calibration": {
+                        "nicename": "1. Calibration Procedure",
+                        "url": "electricity-monitoring/ctac/calibration"
                     },
-                    "overload-protection-of-mains-electrical-circuits": {
-                        "nicename": "Overload protection of mains electrical circuits",
-                        "url": "electricity-monitoring/ctac/overload-protection-of-mains-electrical-circuits"
+                    "emontx-error-sources": {
+                        "nicename": "2. Emontx error sources",
+                        "url": "electricity-monitoring/ctac/emontx-error-sources"
                     },
-                    "sma-webbox-data-extractor": {
-                        "nicename": "SMA webbox data extractor",
-                        "url": "electricity-monitoring/ctac/sma-webbox-data-extractor"
+                    "ct-and-ac-power-adaptor-installation-and-calibration-theory": {
+                        "nicename": "3. CT and AC power adaptor installation and calibration theory",
+                        "url": "electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory"
+                    },
+                    "how-good-is-your-multimeter": {
+                        "nicename": "4. How good is your multimeter",
+                        "url": "electricity-monitoring/ctac/how-good-is-your-multimeter"
+                    },
+                    "digital-filters-for-offset-removal": {
+                        "nicename": "Advanced: Digital filters for offset removal",
+                        "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal"
+                    },
+                    "explanation-of-the-phase-correction-algorithm": {
+                        "nicename": "Advanced: Explanation of the phase correction algorithm",
+                        "url": "electricity-monitoring/ctac/explanation-of-the-phase-correction-algorithm"
                     }
                 }
             },
@@ -253,6 +241,10 @@
                     "visampler2": {
                         "nicename": "VIsampler 2.0",
                         "url": "electricity-monitoring/other-software/visampler2"
+                    },
+                    "sma-webbox-data-extractor": {
+                        "nicename": "SMA webbox data extractor",
+                        "url": "electricity-monitoring/other-software/sma-webbox-data-extractor"
                     }
                 }
             }
@@ -436,6 +428,19 @@
                     }
                 }
             },
+            "background": {
+                "nicename": "Background",
+                "pages": {
+                    "meters": {
+                        "nicename": "Meters",
+                        "url": "pv-diversion/background/meters"
+                    },
+                    "overload-protection-of-mains-electrical-circuits": {
+                        "nicename": "Overload protection of mains electrical circuits",
+                        "url": "pv-diversion/background/overload-protection-of-mains-electrical-circuits"
+                    }
+                }
+            },            
             "mk2": {
                 "nicename": "MK2 PV Diverter",
                 "pages": {
