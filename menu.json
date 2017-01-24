@@ -149,10 +149,6 @@
                     "gas-meter-monitoring": {
                         "nicename": "Gas Metering",
                         "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
-                    },
-                    "water": {
-                        "nicename": "Water Metering",
-                        "url": "electricity-monitoring/pulse-counting/water"
                     }
                 }
             },
