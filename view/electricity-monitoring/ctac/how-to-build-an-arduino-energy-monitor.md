@@ -18,31 +18,22 @@ The energy monitor can calculate real power, apparent power, power factor, rms v
 
 **Voltage sensing electronics:**
 
-1x 9V AC-AC Power Adapter
-
-1x 100kOhm resistor for step down voltage divider.
-
-1x 10kOhm resistor for step down voltage divider.
-
-2x 470kOhm (for voltage divider, any matching value resistor pair down to 10K)
-
+1x 9V AC-AC Power Adapter<br>
+1x 100kOhm resistor for step down voltage divider<br>
+1x 10kOhm resistor for step down voltage divider<br>
+2x 470kOhm (for voltage divider, any matching value resistor pair down to 10K)<br>
 1x 10uF capacitor
 
 **Current sensing electronics**
 
-1x CT sensor SCT-013-000
-
-1x Burden resistor 18 Ohms if supply voltage is 3.3V or 33 Ohms if supply voltage is 5V.
-
-2x 470kOhm (for voltage divider, any matching value resistor pair down to 10K)
-
+1x CT sensor SCT-013-000<br>
+1x Burden resistor 18 Ohms if supply voltage is 3.3V or 33 Ohms if supply voltage is 5V<br>
+2x 470kOhm (for voltage divider, any matching value resistor pair down to 10K)<br>
 1x 10uF capacitor
 
 **Other**
 
 1x A breadboard and some single core wire.
-
-Oomlout do a good arduino + breadboard bundle [here £29](https://www.oomlout.co.uk/arduino-prototyping-bundle-br-ardp-p-186.html?zenid=1f2d8abc7fe1ce7953446890ca648cbd)
 
 ### Step Two – Assemble the electronics
 
@@ -50,11 +41,9 @@ The electronics consist of the sensors (which produce signals proportional to th
 
 For a circuit diagram and detailed discussion of sensors and electronics see:
 
-[CT Senors - Introduction](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-introduction)
-
-[CT Sensors - Interfacing with an Arduino](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface)
-
-[Measuring AC Voltage with an AC to AC power adapter](https://openenergymonitor.org/emon/buildingblocks/measuring-voltage-with-an-acac-power-adapter)
+- [CT Senors - Introduction](../ct-sensors/introduction)
+- [CT Sensors - Interfacing with an Arduino](../ct-sensors/interface-with-arduino)
+- [Measuring AC Voltage with an AC to AC power adapter](../voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
 
 **Assemble the components as in the diagram above.**
 
