@@ -620,7 +620,7 @@ For consistency with the standard YHDC CT supplied by the shop, connect the whit
 
 #### Sentran - MODEL 4LSF (Small Group) Split-Core Current Transformers
 
-![Sentran CT dimensions](http://openenergymonitor.org/emon/sites/default/files/N_America_Sentran_dims.png)
+![Sentran CT dimensions](files/N_America_Sentran_dims.png)
 
 <div class="xaxiswrapper">
 
@@ -801,7 +801,7 @@ However, net metering is employed by most, if not all, US energy providers. Ther
 
 _(Bill Thomson writes: That was the scenario I encountered when I contacted my energy provider, the town public works department, to connect my PV system to the grid. They kept telling me “We don’t know anything about solar panels.” It took about 9 months, but I eventually did get a net meter installed. In the meantime, one of Robin’s Mk2 diverters served nicely to keep me from paying for the excess energy I was producing.)_
 
-The OpenEnergyMonitor guide [Choosing an energy diverter](https://openenergymonitor.org/emon/Choosing%20an%20Energy%20Diverter) might provide some further useful information.
+The OpenEnergyMonitor guide [Choosing an energy diverter](../../pv-diversion/introduction/choosing-an-energy-diverter.md) might provide some further useful information.
 
 ### Changes for MartinR’s PLL Energy Diverter
 
@@ -828,7 +828,7 @@ Spare digital outputs for SYNCPIN & SAMPPIN are not available. DIO7 is available
 
 ### Changes for Robin Emley’s Energy Diverter
 
-(See [Diverting surplus PV Power, by Robin Emley](https://openenergymonitor.org/emon/mk2))
+(See [Diverting surplus PV Power, by Robin Emley](../../pv-diversion/mk2))
 The only change necessary is to alter CYCLES_PER_SECOND to 60.
 
 ### Glossary / Translation
