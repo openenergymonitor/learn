@@ -828,7 +828,7 @@ Spare digital outputs for SYNCPIN & SAMPPIN are not available. DIO7 is available
 
 ### Changes for Robin Emley’s Energy Diverter
 
-(See [Diverting surplus PV Power, by Robin Emley](../../pv-diversion/mk2))
+(See [Diverting surplus PV Power, by Robin Emley](../../pv-diversion/mk2/index))
 The only change necessary is to alter CYCLES_PER_SECOND to 60.
 
 ### Glossary / Translation
@@ -840,6 +840,8 @@ The only change necessary is to alter CYCLES_PER_SECOND to 60.
 <tbody>
 
 <tr>
+
+<th></th>
 
 <th>UK</th>
 
