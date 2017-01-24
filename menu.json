@@ -60,11 +60,11 @@
                 "nicename": "Voltage Sensing",
                 "pages": {
                     "measuring-voltage-with-an-acac-power-adapter": {
-                        "nicename": "Measuring Voltage with an AC-AC<br>Power Adapter",
+                        "nicename": "1. Measuring Voltage with an AC-AC<br>Power Adapter",
                         "url": "electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter"
                     },
                     "different-acac-power-adapters": {
-                        "nicename": "Different AC-AC Power Adapters",
+                        "nicename": "2. Different AC-AC Power Adapters",
                         "url": "electricity-monitoring/voltage-sensing/different-acac-power-adapters"
                     },
                     "report-idealpower-9v-acac-adaptor": {
