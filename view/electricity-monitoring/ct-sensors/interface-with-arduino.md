@@ -66,7 +66,7 @@ The emonTx V3 uses a 3.3V regulator, so it's V<sub>CC</sub> and therefore AREF,
 
 [Tool for calculating burden resistor size, CT turns and max Irms](https://tyler.anairo.com/?id=5.3.0) (thanks to Tyler Adkisson for building and sharing this).
 
-(**Note**: this tool does not take into account maximum CT power output. Saturation and distortion will occur if the maximum output is exceeded. Nor does it take into account component tolerances, so the burden resistor value should be decreased by a few (~5) percent allow some "headroom." There is more info about component tolerances at: [ACAC Component tolerances.](https://openenergymonitor.org/emon/buildingblocks/acac-component-tolerances "ACAC Component tolerances"))
+(**Note**: this tool does not take into account maximum CT power output. Saturation and distortion will occur if the maximum output is exceeded. Nor does it take into account component tolerances, so the burden resistor value should be decreased by a few (~5) percent allow some "headroom." There is more info about component tolerances at: [ACAC Component tolerances.](../voltage-sensing/acac-component-tolerances "ACAC Component tolerances"))
 
 #### Adding a DC Bias
 
@@ -90,8 +90,8 @@ In terms of overcurrent protection, there are protection diodes inside the ADC i
 
 Higher resistance lowers quiescent energy consumption.
 
-We use 10 kΩ resistors for mains powered monitors. The [emonTx](https://openenergymonitor.org/emon/emontx) uses 470 kΩ resistors to keep the power consumption to a minimum, as it is intended to run on batteries for several months.
+We use 10 kΩ resistors for mains powered monitors. The emonTx uses 470 kΩ resistors to keep the power consumption to a minimum, as it is intended to run on batteries for several months.
 
 #### Arduino Sketch
 
-To use the above circuit to measure RMS current, with an assumed fixed RMS voltage (e.g. 240V) to indicate approximate apparent power, use this Arduino sketch: [Arduino sketch - current only](https://openenergymonitor.org/emon/buildingblocks/arduino-sketch-current-only)
+To use the above circuit to measure RMS current, with an assumed fixed RMS voltage (e.g. 240V) to indicate approximate apparent power, use this Arduino sketch: [Arduino sketch - current only](https://github.com/openenergymonitor/EmonLib/blob/master/examples/current_only/current_only.ino)

@@ -107,7 +107,7 @@ The principle is to sample the voltage of the first phase at intervals (as per t
 
 The power and other measurements on the first phase (the one we measured the voltage of) will be accurate (to within the normal limits). The accuracy of the measurements for the other two phases will be degraded because primarily, as has already been mentioned, the voltages of the three phases will not track each other exactly. There is also an inherent assumption that the phase relationships of the voltages remain constant, which will not necessarily be true, and finally a phase error will be introduced in the two unmonitored phases when the mains frequency changes.
 
-[See emonTx V3.4 approximate three-phase firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage)
+[See emonTx V3.4 approximate three-phase firmware](https://github.com/openenergymonitor/emontx-3phase)
 
 ['Full Fat' three-phase monitor using 3 x emonTx units](https://openenergymonitor.org/emon/node/1170)
 

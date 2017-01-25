@@ -16,13 +16,10 @@ Here's how to build it:
 
 **Current sensing electronics**
 
-1 x CT sensor YHDC SCT-013-000
-
-1 x Burden resistor 18 Ohms if supply voltage is 3.3V, or 33 Ohms if supply voltage is 5V.
-
-2 x 10k Ohm resistors (or any equal value resistor pair up to 470k Ohm)
-
-1 x 10uF capacitor
+1 x CT sensor YHDC SCT-013-000<br>
+1 x Burden resistor 18 Ohms if supply voltage is 3.3V, or 33 Ohms if supply voltage is 5V<br>
+2 x 10k Ohm resistors (or any equal value resistor pair up to 470k Ohm)<br>
+1 x 10uF capacitor<br>
 
 **Other**
 
@@ -34,9 +31,8 @@ The monitor consists of the current sensor (which produces a signal proportional
 
 For a circuit diagram and detailed discussion of sensors and electronics see:
 
-[CT Sensors - Introduction](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-introduction)
-
-[CT Sensors - Interfacing with an Arduino](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface)
+- [CT Sensors - Introduction](introduction)
+- [CT Sensors - Interfacing with an Arduino](interface-with-arduino)
 
 **Assemble the components per the diagram above.**
 

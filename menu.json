@@ -31,23 +31,23 @@
                 "nicename": "CT Sensors",
                 "pages": {
                     "introduction": {
-                        "nicename": "Introduction",
+                        "nicename": "1. Introduction",
                         "url": "electricity-monitoring/ct-sensors/introduction"
                     },
                     "installation": {
-                        "nicename": "Installation",
+                        "nicename": "2. Installation",
                         "url": "electricity-monitoring/ct-sensors/installation"
                     },
                     "interface-with-arduino": {
-                        "nicename": "Interfacing with an Arduino",
+                        "nicename": "3. Interfacing with an Arduino",
                         "url": "electricity-monitoring/ct-sensors/interface-with-arduino"
                     },
                     "how-to-build-an-arduino-energy-monitor-measuring-current-only": {
-                        "nicename": "How to Build an Arduino Energy Monitor Measuring Current Only",
+                        "nicename": "4. How to Build an Arduino Energy Monitor Measuring Current Only",
                         "url": "electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only"
                     },
                     "measurement-implications-of-adc-resolution-at-low-current-values": {
-                        "nicename": "Measurement Implications of ADC Resolution at Low Current Values",
+                        "nicename": "Advanced: Measurement Implications of ADC Resolution at Low Current Values",
                         "url": "electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values"
                     },
                     "yhdc-ct-sensor-report": {
