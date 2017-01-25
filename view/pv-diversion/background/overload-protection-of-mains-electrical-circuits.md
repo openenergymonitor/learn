@@ -7,7 +7,7 @@
 <br>
 <div class="warning">
 
-<p>This page covers only the very basic principles of circuit protection and the choice of fuse or circuit breaker in the context of a mains sub-circuit.<strong>If you are thinking of modifying or extending an installation, then unless you are qualified, you should seek advice from a competent person</strong>. You may need official approval for any work carried out on a fixed installation.</p>
+<p>This page covers only the very basic principles of circuit protection and the choice of fuse or circuit breaker in the context of a mains sub-circuit.<br><strong>If you are thinking of modifying or extending an installation, then unless you are qualified, you should seek advice from a competent person</strong>. You may need official approval for any work carried out on a fixed installation.</p>
 
 </div>
 

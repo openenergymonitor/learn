@@ -108,4 +108,4 @@ Generic example code:
 
 ### Android java canvas
 
-[Tutorial 2: Drawing an Energy Monitoring display with java 2d canvas](../AndroidApp/AndroidAppPart2.md)
+[Tutorial 2: Drawing an Energy Monitoring display with java 2d canvas](../other-software/AndroidAppPart2.md)
