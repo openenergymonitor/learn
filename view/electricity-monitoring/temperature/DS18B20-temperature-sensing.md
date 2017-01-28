@@ -1,10 +1,8 @@
 ## Temperature Sensing using DS18B20 Digital Sensors
 
-**Note:** When referring to Arduino below, this works in the same way on the emonTx which is arduino-based.
-
 The [DS18B20](http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf) is a small temperature sensor with a built in 12bit ADC. It can be easily connected to an Arduino digital input. The sensor communicates over a one-wire bus and requires little in the way of additional components.
 
-The sensors have a quoted accuracy of +/-0.5 deg C in the range -10 deg C to +85 deg C. 
+The sensors have a quoted accuracy of +/-0.5 deg C in the range -10 deg C to +85 deg C.
 
 #### Hardware
 
@@ -18,7 +16,7 @@ The sensor can operate in normal or parasite mode. In normal mode, a 3-wire conn
 
 In normal mode, each sensor is connected between a power line (V<sub>dd</sub> pin 3) and ground (GND pin 1), and the data output (DQ pin 2) connects to a third, data, line. The data output is a 3-state or open-drain port (DQ pin 2) and requires a 4k7 pull-up resistor. The data line is connected to an available Arduino digital input or Arduino digital pin 4 in the case of the emonTx.
 
-Normal mode is recommended when many devices and/or long distances are involved.
+Normal mode is recommended when many devices and/or long cable runs are involved.
 
 #### Parasite Mode
 
@@ -64,11 +62,11 @@ The emonTx supports direct connection of DS18B20 temperature sensors, however, t
 
 #### The emonTx V2
 
-The PCB includes the option to solder a DS18B20 sensor directly onto the PCB for monitoring the temperature where the emonTx is located. A more useful option is to connect DS18B20 temperature sensors to the 3.5mm temperature jack port for monitoring remote temperatures e.g. outside temperature, living room temperature and boiler temperature. 
+The PCB includes the option to solder a DS18B20 sensor directly onto the PCB for monitoring the temperature where the emonTx is located. A more useful option is to connect DS18B20 temperature sensors to the 3.5mm temperature jack port for monitoring remote temperatures e.g. outside temperature, living room temperature and boiler temperature.
 
 The sensors can be connected either in normal or parasite power mode. We recommend normal power mode for increased reliability. 3-core 22AWG wire is perfect for wiring up sensors. Encapsulated sensors can be purchased. and connected. The 4k7 pull-up resistor is provided on the pcb.
 
-Wire up the sensor(s) to a male 3.5mm jack as follows: 
+Wire up the sensor(s) to a male 3.5mm jack as follows:
 
 ![](files/Temperature-3-wire-jack.png)
 
@@ -128,21 +126,9 @@ Wire up the sensor(s) to a male 3.5mm jack as follows:
 
 </table>
 
-(Voltages are for V2.2 boards powered at 5 V)
 
-**Note:** If you purchased the [Waterproof DS18B20 temperature sensing kit](https://shop.openenergymonitor.com/waterproof-ds18b20-temperature-sensing-kit/) from the shop, it is pre-wired:
-
-**Data:** White wire  
-**V<sub>cc</sub>:** Red wire  
-**GND:** Black wire
-
-The one-wire temperature data line is hardwired to Arduino Dig I/O 4 on the emonTx PCB. See the emonTx [reference page](https://openenergymonitor.org/emon/emontx/reference%20) for schematic and PCB layout. 
-
-The emonTx runs internally at 3.3V. On emonTx PCB version 2.0 and 2.1 the DS18B20 also runs at 3.3V.
-
-On emonTx V2.2 the temperature sensors are connected to the PWR rail which is 5V when the emonTx is powered via the 5V mini-USB connector. Note: ignore the solder jumper. If you look carefully, it is already connected to PWR. Running the sensors at 5V gives increased reliability and enables for more sensors and longer cable runs to be used.
-
-[GitHub emonTx temperature example ](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/emonTx_temperature_examples) also includes a sketch to extract the serial number from the DS18B20\. (N.B. You must change "#define ONE_WIRE_BUS 4" to "#define ONE_WIRE_BUS 5" for the emonTx V3.4)
+[GitHub emonTx V2 temperature example ](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/emonTx_temperature_examples)
+(also includes a sketch to extract the serial number from the DS18B20\. (N.B. You must change '#define ONE_WIRE_BUS 4' to '#define ONE_WIRE_BUS 5' for the emonTx V3.4)
 
 #### Software
 
@@ -164,7 +150,7 @@ See [Part 2](DS18B20-temperature-sensing-2) for a description of how the order i
 
 **Error values.**
 
-The sensor works by reading and converting the temperature and storing this value in scratchpad memory. The scratchpad memory is then read via the One-wire bus by the Dallas library. 
+The sensor works by reading and converting the temperature and storing this value in scratchpad memory. The scratchpad memory is then read via the One-wire bus by the Dallas library.
 
 The power-on value in the scratchpad memory is 85 °C. If the scratchpad memory is read before the temperature conversion has completed, then the erroneous temperature value of 85 °C might be returned. Depending on your application, it might not be possible to distinguish this from a genuine reading. This error value might be caused by an intermittent or absent connection of either the power wire (normal mode) or the GND wire.
 
@@ -172,9 +158,11 @@ If the data being read from the scratchpad memory is corrupted in transit, then 
 
 #### The emonTx V3
 
-The emonTx V3 has a connection for the temperature sensors on a screw terminal block. Full details can be found on the [Wiki page](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3). The pre-loaded sketch will sense a single temperature sensor at start-up and requires no further configuration. Note: The examples for the emonTx V2 and the temperature search sketch will not work without modification. You will need to edit the sketch due to changed I/O usage in the emonTx V3: You must change "#define ONE_WIRE_BUS 4" to "#define ONE_WIRE_BUS 5". 
+If running the standard emonTx V3 firmware see [Temperature tab of Setup Guide](https://guide.openenergymonitor.org/setup/)
 
-#### Notes and further reading 
+The emonTx V3 has a connection for the temperature sensors on a screw terminal block. Full details can be found on the [Wiki page](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3). The pre-loaded sketch will sense a single temperature sensor at start-up and requires no further configuration. Note: The examples for the emonTx V2 and the temperature search sketch will not work without modification. You will need to edit the sketch due to changed I/O usage in the emonTx V3: You must change "#define ONE_WIRE_BUS 4" to "#define ONE_WIRE_BUS 5".
+
+#### Notes and further reading
 
 For large numbers of sensors and longer cable runs, use the [DS2480B](http://www.maxim-ic.com/datasheet/index.mvp/id/2923) 1-wire driver chip. [N.B. Some very helpful information from [ Chris Shucksmith](http://twitter.com/#!/shuckc) appears to have been removed.]
 

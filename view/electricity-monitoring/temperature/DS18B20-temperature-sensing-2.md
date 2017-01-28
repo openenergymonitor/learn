@@ -1,6 +1,6 @@
-## DS18B20 - Serial Number and Search Algorithm.
+## DS18B20 - Serial Number and Search Algorithm
 
-Some users of the DS18B20 sensor have thought that that the functions that detect the sensors do so in random order. In fact, this is not the case and the Search ROM function is deterministic and always returns the devices found in the same order. The algorithm is explained in the Maxim iButton® Book of Standards at [www.maxim-ic.com/ibuttonbook](http://www.maxim-ic.com/ibuttonbook). The DallasTemperature Library claims to use the same algorithm, and this indeed appears to be the case. The reason people think the order is random is because the serial numbers are sorted in an order that is not obvious to us. The order is revealed only after we manipulate the numbers.
+Some users of the DS18B20 sensor have thought that that the functions that detect the sensors do so in random order. In fact, this is not the case and the Search ROM function is deterministic and always returns the devices found in the same order. The algorithm is explained in the [Maxim iButton® Book of Standards](http://www.maxim-ic.com/ibuttonbook). The DallasTemperature Library claims to use the same algorithm, and this indeed appears to be the case. The reason people think the order is random is because the serial numbers are sorted in an order that is not obvious to us. The order is revealed only after we manipulate the numbers.
 
 #### Cracking the code.
 
@@ -22,12 +22,12 @@ Using three particular sensors as an example, their addresses as reported by the
 
 The first byte of the “address” is always 0x28, the family code, so it’s not helpful. Let’s examine the second byte.
 
-The algorithm is this:  
+The algorithm is this:
 Reverse the bit order of the second byte of each address, and then read it conventionally with the left-most bit being the most significant:
 
-    0x81 = 10000001, reversed is 10000001, or 129 decimal  
-    0xC9 = 11001001, reversed is 10010011, or 147 decimal  
-    0x8D = 10001101, reversed is 10110001, or 177 decimal  
+    0x81 = 10000001, reversed is 10000001, or 129 decimal
+    0xC9 = 11001001, reversed is 10010011, or 147 decimal
+    0x8D = 10001101, reversed is 10110001, or 177 decimal
     
-At this point we have uniquely determined (or more accurately verified) the sort order: the smallest number came first. Had two or more addresses been equal here, we would have continued with the next and subsequent bytes, treating them in exactly the same way, until the order was resolved.  
+At this point we have uniquely determined (or more accurately verified) the sort order: the smallest number came first. Had two or more addresses been equal here, we would have continued with the next and subsequent bytes, treating them in exactly the same way, until the order was resolved.
 The final piece of data to be received is the checksum.

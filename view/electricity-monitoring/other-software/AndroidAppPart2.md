@@ -1,3 +1,12 @@
+<div class="warning">
+
+<p><b>Note:</b> This guide is old and was written when Android Developer Studio was less established and Eclipse with Android SDK was recommended. Since then <a href="https://developer.android.com/studio/index.html">Android Developer Studio</a> has become more developed and is now the recommended IDE.</p>
+
+
+</div>
+Update: [**Offical open-source Emoncms Android app (GitHub)**](https://github.com/emoncms/AndroidApp)
+
+***
 ## Android App Part 2 - Drawing an Energy Monitoring display with java 2d canvas
 
 ![Complete display](files/app2fulldisplay.png)
@@ -120,7 +129,7 @@ Complete code example, MainActivity.java:
             
             // Power value text
             paint.setColor(Color.parseColor("#0699fa"));
-            paint.setTextSize(160*scale);        
+            paint.setTextSize(160*scale);
             canvas.drawText(String.format("%.0f", power)+"W", 30*scale, 260*scale, paint);
 
             // kwh text
@@ -168,7 +177,7 @@ Complete code example, MainActivity.java:
                 if (value>ymax) ymax = value;
                 if (value<ymin) ymin = value;
                 if (time>xmax) xmax = time;
-                if (time<xmin) xmin = time;               
+                if (time<xmin) xmin = time;
             }
             
             float r = (ymax - ymin);

@@ -1,12 +1,17 @@
-## How to build an Energy Monitoring Android App
 
 ***
 
 <div class="warning">
 
-<p><b>Note:</b> This guide was written when Android Developer Studio was less established and Eclipse with Android SDK was recommended. Since then <a href="https://developer.android.com/studio/index.html">Android Developer Studio</a> has become more established and is now the recommended IDE.</p>
+<p><b>Note:</b> This guide is old and was written when Android Developer Studio was less established and Eclipse with Android SDK was recommended. Since then <a href="https://developer.android.com/studio/index.html">Android Developer Studio</a> has become more developed and is now the recommended IDE.</p>
+
 
 </div>
+Update: [**Offical open-source Emoncms Android app (GitHub)**](https://github.com/emoncms/AndroidApp)
+
+***
+
+## How to build an Energy Monitoring Android App
 
 ![AndroidAppPart1](files/OnPhone.jpg)
 
@@ -30,7 +35,7 @@
 
 1. Turn on developer mode: Click on Settings > About Phone, click 7 times on build number at the bottom to unlock developer mode.
 2. Enable USB Debugging in your phone's developer mode settings
-3. Connect your phone to your computer with a USB cable 
+3. Connect your phone to your computer with a USB cable
 4. The phone should now appear in the targets list when you click on run in eclipse.
 
 ### 1) Fetching a feed value
@@ -47,12 +52,12 @@ Searching for Android http request it seems the recommended way of making http r
       urlConnection.disconnect();
     }
     
-Before we go any further we need to add android.permission.INTERNET to the projects AndroidManifest.XML file to give the app permisions to use the internet. Add the following line to AndroidManifest.XML just before the 
+Before we go any further we need to add android.permission.INTERNET to the projects AndroidManifest.XML file to give the app permisions to use the internet. Add the following line to AndroidManifest.XML just before the
 
     <application section
     <uses-permission android:name="android.permission.INTERNET"/>
     
-If you try and run the first HttpURLConnection example in the onCreate method of the android app: The first thing you will notice is that there's a red cross in the left-hand margin and much of the code is underlined in red. Clicking on the red cross gives the option to Import 'URL' choose this, this will automatically add the URL dependency to the project (at the top). Once you've added all the dependencies it will then ask you surround the code in a try/catch: 
+If you try and run the first HttpURLConnection example in the onCreate method of the android app: The first thing you will notice is that there's a red cross in the left-hand margin and much of the code is underlined in red. Clicking on the red cross gives the option to Import 'URL' choose this, this will automatically add the URL dependency to the project (at the top). Once you've added all the dependencies it will then ask you surround the code in a try/catch:
 
 	try {
 		URL url = new URL("http://www.android.com/");
@@ -76,7 +81,7 @@ A basic AsyncTask class defenition looks like this:
       protected String doInBackground(String... params) {
         // TODO Auto-generated method stub
         return null;
-      }	
+      }
     }
     
 The AsyncTask can be called with:
@@ -223,7 +228,7 @@ Searching for android periodic task I came across this example that uses Handler
     }
 
     Runnable mStatusChecker = new Runnable() {
-        @Override 
+        @Override
         public void run() {
             // Do something here
             mHandler.postDelayed(mStatusChecker, mInterval);
@@ -231,7 +236,7 @@ Searching for android periodic task I came across this example that uses Handler
     };
 
     void startRepeatingTask() {
-        mStatusChecker.run(); 
+        mStatusChecker.run();
     }
 
     void stopRepeatingTask() {
@@ -273,7 +278,7 @@ Merging this with the MainActivity class and moving the HTTP request to within t
 	
 	    Runnable mStatusChecker = new Runnable() {
 
-		    @Override 
+		    @Override
 	        public void run() {
 	          Log.i("EmonLog", "Periodic");
 	        
@@ -298,7 +303,7 @@ Merging this with the MainActivity class and moving the HTTP request to within t
 	    };
 	
         void startRepeatingTask() {
-            mStatusChecker.run(); 
+            mStatusChecker.run();
         }
 
         void stopRepeatingTask() {
@@ -344,7 +349,7 @@ Delete startRepeatingTask(); from onCreate.
 
 ### 5) Larger text and a smaller label
 
-To change and add to the app layout you can either use the built in eclipse android layout editor or change the underlying xml directly. 
+To change and add to the app layout you can either use the built in eclipse android layout editor or change the underlying xml directly.
 
 ![LayoutView.png](files/LayoutView.png)
 
