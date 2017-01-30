@@ -164,6 +164,11 @@ un-comment above to load resources remotely-->
     <div class="row">
       <?php
       echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
+      
+      global $redirected,$redirecterror;
+      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from the old building blocks to Learn, the new location of building blocks documentation.</p></div>";
+      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> There was an error redirecting the old building blocks page you requested</p></div>";
+      
       echo $content;
       ?>
       <div class="nextPrev">

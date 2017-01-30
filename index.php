@@ -15,6 +15,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
         
 require("core.php");
+require("redirect_map.php");
 $path = get_application_path();
 $q = "home";
 if (isset($_GET['q'])) $q = $_GET['q'];
@@ -23,6 +24,22 @@ if (isset($_GET['q'])) $q = $_GET['q'];
 $format = "html";
 $doc_ext = "html";
 $content = "Sorry page not found :-(";
+$redirected = false;
+$redirecterror = false;
+
+if (isset($_GET["redirect"])) {
+    $redirecturl = $_GET["redirect"];
+    if (isset($redirect_map[$redirecturl])) {
+        header("Location: ".$redirect_map[$redirecturl]."?redirected=true");
+    } else {
+        $redirecterror = true;
+        $fh = fopen("/var/log/missing-learn-redirects.log","a");
+        fwrite($fh,$redirecturl."\n");
+        fclose($fh);
+    }
+}
+
+if (isset($_GET["redirected"])) $redirected = true;
 
 $filename_parts = explode(".",$q);
    

@@ -402,6 +402,8 @@ Change strings.xml to:
 
 [https://github.com/emoncms/AndroidAppDev/tree/master/HelloWorld](https://github.com/emoncms/AndroidAppDev/tree/master/HelloWorld)
 
+[Forum post: How to build an Energy Monitoring Android App p1](https://openenergymonitor.org/emon/node/5250)
+
 ### Further development
 
 - Replicate MyElectric emoncms module interface

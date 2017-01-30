@@ -171,6 +171,16 @@ body {
 	color: #ffffff;
 	background-color: #b23535;
 }
+
+.notice {
+	padding: 0;
+}
+.notice p {
+	padding: 15px;
+	color: #000;
+	background-color: #f9ff9f;
+}
+
 .note {
 	padding: 0 10px 0 10px;
 }
