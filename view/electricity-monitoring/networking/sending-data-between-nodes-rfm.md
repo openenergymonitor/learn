@@ -87,6 +87,7 @@ When the members of the data packet structure have had values assigned to them, 
 
 Receiving the data is somewhat more complicated. Here is the part of the standard emonGLCD code where the data is actually received:
 
+```
   if (rf12_recvDone())
 	{
 	  if (rf12_crc == 0 && (rf12_hdr & RF12_HDR_CTL) == 0)
@@ -106,6 +107,7 @@ Receiving the data is somewhat more complicated. Here is the part of the standar
 	    } 
 	  }
 	}
+```
 
 
 Let us work through the code line by line:
