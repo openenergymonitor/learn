@@ -8,6 +8,7 @@ There are three main sources of error when using the emonTx as a measuring instr
 
 1.  Current transformer.  
     The current transformer operates on the magnetic field that surrounds a current-carrying conductor. There are two main parts: a ferromagnetic core that concentrates the flux, and a secondary winding that picks up the changing magnetic flux and generates an electric current. Being a ferro-magnetic material, the flux in the core is only linearly related to the magnetising force of the current at relatively low values, at high values the flux reaches a limit known as 'saturation'. The designer will normally ensure the transformer is linear within acceptable limits over its normal operating range. The standard SCT-013-000 CT is linear to within 3% over its rated current range. The data sheet gives no value for the accuracy of the turns ratio — as it is a matter of counting, we can only assume it is accurate to a very high degree, probably a few turns, or a small fraction of 1%. However, it is normal practice to adjust the turns ratio to account for the energy required to magnetise the core, so it is reasonable to assume that the overall accuracy will still be within 3%. Measurements indicate the maximum error occurs around 70% of maximum current; over a limited current range below this you can expect the linearity to be significantly better, although there will be a ratio error that can be compensated for by calibration. Mention was made of the magnetic flux and the core material: because the core is split, there might be some contamination of the faces of the core that introduces an air gap. This can lead to large and unpredictable errors, but is easily dealt with once it has been detected.
+    
 2.  Voltage transformer.  
     The voltage transformer recommended for use in the UK and Europe has its no-load output voltage of 11.6 V specified to an accuracy of ±3%, not to be confused with the difference from the nominal output of 9 V which is specified at full load (both with 240 V input).
 
@@ -17,6 +18,7 @@ There are two main parts to the input circuitry — the scaling components and t
 
 1.  Current inputs.  
     The burden resistor, required to convert the current output of the CT to a voltage, is the sole scaling component. It is a standard item, with a manufacturing tolerance of 1%. Unless maltreated, it will most likely stay at its manufactured value, for life. However, its value is  temperature dependent. For example, a metal film resistor will have a temperature coefficient of ±100 ppm/°C, meaning that the resistance may change by up to 0.25% for a 25 °C change in ambient temperature.
+
 2.  Voltage input.  
     The input voltage is applied to a potential divider comprising two resistors, each having a 1% tolerance,. The worst case gives an error in the division ratio of 1.83% (assuming both change in the same proportion due to temperature variations and so their ratio does not change due to temperature).
 
