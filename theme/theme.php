@@ -166,8 +166,8 @@ un-comment above to load resources remotely-->
       echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
       
       global $redirected,$redirecterror;
-      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from the Building Block Resources to our new site 'Learn'.</p></div>";
-      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from the Building Blocks Resources to our new site 'Learn'. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
+      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site 'Learn'.</p></div>";
+      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site 'Learn'. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
       
       echo $content;
       ?>
