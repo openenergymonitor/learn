@@ -2,7 +2,7 @@
 
 Building fabric heat loss is heat loss through building elements such as:
 
-- Wall's
+- Walls
 - Floor
 - Loft/roof
 - Doors and windows
