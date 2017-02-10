@@ -1,20 +1,22 @@
 ## Sending data between nodes with the RFM12/69
 
-The data is sent by radio between the sensor nodes (i.e emonTX, emonTH), the base station (including the RFM12Pi) and a display (emonGLCD). This page describes the way the data is assembled and addressed in order to pass values between units. The same approach could be used when integrating other units with the OpenEnergyMonitor system.
+The data is sent by radio between the sensor nodes (e.g emonTX, emonTH), the base station (emonPi / emonBase - RFM69Pi). This page describes the way the data is assembled and addressed in order to pass values between units. The same approach could be used when integrating other units with the OpenEnergyMonitor system.
 
-The Arduino & RFM12/69 based OpenEnergyMonitor modules are programmed with application sketches that make use of the JeeLib library to handle transmission and reception of the data, using the function calls provided by the library. Appendix 1 contains instructions for configuring the RFM12Pi Raspberry Pi module.
+The Arduino & RFM12/69 based OpenEnergyMonitor modules are programmed with application sketches that make use of the [JeeLib library](https://github.com/jcw/jeelib) to handle transmission and reception of the data, using the function calls provided by the library. Appendix 1 contains instructions for configuring the RFM69Pi / RFM12Pi Raspberry Pi module.
+
+RF data is trasmitted using the [JeeLib RF Packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/).
 
 #### Configuring & Addressing
 
-All the devices that communicate with each other must use the same frequency. For the Arduino-based devices, this is specified in the software and must be one of the pre-defined constants. It must match the frequency of the hardware. (You should check which frequencies are permitted in your locality. It is possible to operate at the wrong frequency, e.g. 868 MHz hardware at 433 MHz, but the range will be very small, maybe less than 1 m).
+All the devices that communicate with each other must use the same frequency. For the Arduino-based devices, this is specified in the software and must be one of the pre-defined constants. It must match the frequency of the hardware. (You should check which frequencies are permitted in your locality. It is possible to operate at the wrong frequency, e.g. 868 MHz hardware at 433 MHz, but the range will be very reduced).
 
-The addressing scheme has two parts, the “Network Group” and “Node ID”. The RFM12B module supports 250 network groups. The RFM12 module can have only one network group, 212. Only devices that belong to the same group can talk and listen to each other. Think of a network group as being like a room with people in it. Everyone in the room can talk to anyone else in the room, but can neither talk to, nor hear, anyone in a different room.
+The addressing scheme has two parts, the `Network Group` and `Node ID`. The JeeLib library supports 250 network groups. Only devices that belong to the same group can talk and listen to each other. 
 
-Within the network group, there can be 31 Node IDs. Nodes 0 and 31 are reserved. Node 0 is used for On-Off Keying (OOK) and node 31 for broadcast messages. The way we use it, each device must have a unique ID. Think of the ID as the name of a person in the room example above. Appendix 2 lists our standardised Node IDs.
+Within each network group, there can be up to 31 Node IDs. Nodes 0 and 31 are reserved. Node 0 is used for On-Off Keying (OOK) and node 31 for broadcast messages. Each device must have a unique ID. Appendix 2 lists our standardised Node IDs.
 
-There is another limitation: As all the devices in all the network groups all use the same frequency, only one transmitter may be active at any time, otherwise, data loss is likely to occur.
+There is another limitation: As all the devices in all the network groups all use the same frequency, only one transmitter may be active at any time, otherwise, data loss is likely to occur. Data packet transmissions are small, collisions are unlikely to occur. 
 
-#### Setting up the r.f. link
+#### Setting up the RF link
 
 To set up the link, we use the function
 
@@ -148,13 +150,13 @@ These sketches listen for all Node_IDs, assume the data is always a sequence of 
 
 For a simple example of Arduino > Arduino (or emonTx to emonBase) RFM12B transmission sketch see: [https://github.com/openenergymonitor/RFM12B_Simple](https://github.com/openenergymonitor/RFM12B_Simple)
 
-##### Appendix 1 - The RFMPi Adapter board
+##### Appendix 1 - The RFMPi / RFM69Pi Adapter board
 
-RFMPi board adds wireless (433 or 868MHz) RF transceiver capability to the Raspberry Pi. The RFMPi has an on-board ATMega328 microcontroller pre-loaded with firmware to receive and pass the radio payload of the RFM packets from JeeNode and OpenEnergyMonitor modules onto Raspberry Pi’s internal serial UART port. The correct frequency board needs to be purchased to match the rest of your system.
+RFMPi / RFM69Pi board adds wireless (433 or 868MHz) RF transceiver capability to the Raspberry Pi. The RFMPi has an on-board ATMega328 microcontroller pre-loaded with firmware to receive and pass the radio payload of the RFM packets from JeeNode and OpenEnergyMonitor modules onto Raspberry Pi’s internal serial UART port. The correct frequency board needs to be purchased to match the rest of your system.
 
 EmonHub then reads the byte data string generated by the RFMPi adapter board from the serial port and decodes it using the decoder specification set in emonhub.conf.
 
-The main documentation page for the Raspberry Pi is [https://wiki.openenergymonitor.org/index.php?title=Raspberry_Pi](https://wiki.openenergymonitor.org/index.php?title=Raspberry_Pi)
+See technical Wiki documentation page for the RFM12Pi / RFM69Pi [https://wiki.openenergymonitor.org](https://wiki.openenergymonitor.org)
 
 ##### Appendix 2 - Standard Node IDs
 
