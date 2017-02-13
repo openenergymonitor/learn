@@ -403,6 +403,10 @@
             "tools": {
                 "nicename": "Tools",
                 "pages": {
+                    "MyHomeEnergyPlanner": {
+                        "nicename": "MyHomeEnergyPlanner: Getting Started",
+                        "url": "sustainable-energy/building-energy-model/MyHomeEnergyPlanner"
+                    },
                     "electricity-audit-and-savings-case-study": {
                         "nicename": "Electricity audit and savings case study",
                         "url": "sustainable-energy/tools/electricity-audit-and-savings-case-study"

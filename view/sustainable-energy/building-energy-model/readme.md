@@ -4,6 +4,15 @@ The following diagram illustrates the most common factors taken into account in 
 
 ![diagram.png](files/diagram.png)
 
+<div style="background-color:#eee; padding:20px;">
+<img src="files/floorplan.png" style="width:300px; float:right; padding-left:20px;">
+<h3>MyHomeEnergyPlanner</h3>
+<p>Try out MyHomeEnergyPlanner, a comprehensive, detailed monthly household energy assessment tool developed as a collaboration between OpenEnergyMonitor and CarbonCoop.</p>
+<p>Carry out your own household energy assessment in order to explore potential energy savings from insulation, air-tight design, better windows and heating systems.</p>
+<h3><a href="MyHomeEnergyPlanner">MyHomeEnergyPlanner: Getting Started</a></h3>
+<div style="clear:both"></div>
+</div>
+
 ### Part 1: Heat losses
 
 - [Conduction through building fabric](fabricheatloss.md): walls, windows, loft, floor, thermal bridges. Calculated via material U-values or thermal conductivity.
