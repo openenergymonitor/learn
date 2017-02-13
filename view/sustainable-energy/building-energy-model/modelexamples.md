@@ -29,7 +29,6 @@ no examples yet
 - [ESP-r (open source)](http://www.esru.strath.ac.uk/Programs/ESP-r.htm)
 - [Energy Plus](http://apps1.eere.energy.gov/buildings/energyplus/) + [OpenStudio (open source)](https://openstudio.nrel.gov/) + sketchup plugin
 - DesignBuilder (An Energy Plus front end)
-- Ecotect (Again Energy Plus based, sketchup plugin, owned by Autodesk)
 - IES (BREEAM, SBEM modules), uses ApacheSim heat modelling. [Apache Sim Calculation Methods](http://www.iesve.com/downloads/help/Thermal/Reference/ApacheSimCalculationMethods.pdf)
 
 
