@@ -22,7 +22,8 @@ Existing examples of the common model types are:
 - [RET Screen (energy systems)](http://www.retscreen.net/)
 
 ### Simple daily, hourly
-no examples yet
+
+- [VirVil SketchUp Extension](http://u001.arch.cf.ac.uk/plugin/): Developed by Cardiff University "The VirVil SketchUp extension is an early stage energy simulation tool that is usable, simple, accessible, and flexible. It is a Trimble SketchUp extension that links the 3D design tool to a Dynamic simulation model HTB2.". An introduction to the extention can be found here: [http://u001.arch.cf.ac.uk/plugin/Introduction_to_the_extension_2016.pdf](http://u001.arch.cf.ac.uk/plugin/Introduction_to_the_extension_2016.pdf)
 
 ### Dynamic simulations
 
