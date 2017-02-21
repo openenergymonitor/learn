@@ -1,62 +1,65 @@
 <style>
+body {
+   background-color: #ffffff;
+}
 .flex-container {
- display: -webkit-flex;
- display: flex;
- justify-content: space-around;
- align-items: flex-start;
- flex-wrap: wrap;
- width: 100%;
- height: 100%;
- background-color: #ffffff;
+   display: -webkit-flex;
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   width: 100%;
+   height: 100%;
+   background-color: #ffffff;
 }
 .flex-item {
- width: 154px;
- height: 100%;
- margin: 10px;
- text-align: center;
+   width: 154px;
+   height: 100%;
+   margin: 10px;
+   text-align: center;
 }
 .flex-item h2 {
- padding-top: 5px;
- transition: 0.3s;
+   padding-top: 5px;
+   transition: 0.3s;
 }
 .learnpageIcons {
- box-sizing: border-box;
- width: 100%;
- height: 150px;
- border: 4px solid #ffffff;
- display: table;
- background-color: #44b3e2;
- color: #ffffff;
- box-shadow: none;
- transition: 0.3s ease-in-out;
+   box-sizing: border-box;
+   width: 100%;
+   height: 150px;
+   border: 4px solid #ffffff;
+   display: table;
+   background-color: #44b3e2;
+   color: #ffffff;
+   box-shadow: none;
+   transition: 0.3s ease-in-out;
 }
 .fcontainer {
- -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
- -webkit-touch-callout: none;
- -webkit-user-select: none;
- -khtml-user-select: none;
- -moz-user-select: none;
- -ms-user-select: none;
-  user-select: none;
+   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
 }
 .fcontainer:hover .learnpageIcons {
- background-color: #77c8ea;
- border: 8px solid #ffffff;
+   background-color: #77c8ea;
+   border: 8px solid #ffffff;
 }
 .fcontainer:hover h2 {
- color: #44b3e2;
+   color: #44b3e2;
 }
 .learnpageIcons i {
- display: table-cell;
- vertical-align: middle;
- text-align: center;
- text-shadow: none;
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   text-shadow: none;
 }
 .nextPrev {
- display: none;
+   display: none;
 }
 .editGit {
- display: none;
+   display: none;
 }
 </style>
 <div class="flex-container">
