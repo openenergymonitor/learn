@@ -203,7 +203,7 @@ Datasheet: [Ideal Power 77DA-10-09](http://files.openenergymonitor.org/77DA-10-
 | Strontronics<br>[![](files/Stontronics1.jpg)](files/Stontronics1.jpg) | UK | 238.56 |
 | Mascot 9580<br>[![](files/mascot1.jpg)](files/mascot1.jpg) | UK | 234.26 |
 | FP AD 3515<br>[![](files/FP1.jpg)](files/FP1.jpg) | Euro | 212.658 |
-| Ideal Power / TDC<br>![](files/TDC-DB-06-09_small.jpg)<br>[Currently adapter sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/components/) | UK/Euro/US | see above |
+| Ideal Power / TDC<br>![](files/TDC-DB-06-09_small.jpg)<br>[This is the adapter currently sold in the OEM shop](http://shop.openenergymonitor.com/components/) | UK/Euro/US | see above |
 
 See [EmonTx errors](../../electricity-monitoring/ctac/emontx-error-sources) for a full analysis of the sources of error in the emonTx.
 
