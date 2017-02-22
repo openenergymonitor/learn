@@ -763,8 +763,8 @@ Other output currents and voltage output versions & “Revenue Grade” versions
 
 #### YHDC 100A/200A/400A Split core current transformer SCT023R
 
-![yhdc_sct023r.png](yhdc_sct023r.png)
-![yhdc_sct023r_drawing.png](yhdc_sct023r_drawing.png)
+![yhdc_sct023r.png](files/yhdc_sct023r.png)
+![yhdc_sct023r_drawing.png](files/yhdc_sct023r_drawing.png)
 
 | Rated Current (IPN) | Maximum Input (IPM) | Rated Output | Maximum Burden |
 | ------------------- | ------------------- | ------------ | -------------- |
