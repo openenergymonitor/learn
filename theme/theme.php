@@ -27,194 +27,6 @@ un-comment above to load resources remotely-->
 <link rel="stylesheet" href="<?php echo $path; ?>theme/font-awesome.min.css" />
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
-<style>
-
-.communityWrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
-  height: 42px;
-}
-
-@media (min-width: 1080px) {
-  .communityWrapper {
-    width: 1080px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .oemWrap {
-    display: none;
-  }
-}
-
-.fa-navicon {
-  display: none;
-  cursor: pointer;
-  font-size: 30px;
-  line-height: 42px;
-  position: absolute;
-  left: 0;
-  color: #ffffff;
-  padding-left: 12px;
-  z-index: 9997;
-}
-
-@media screen and (max-width: 1079px) {
-  .fa-navicon {
-    display: inline-block;
-  }
-}
-
-.titleHolder {
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: 42px;
-  background-color: #44b3e2;
-  overflow: hidden;
-  z-index: 999999;
-}
-
-.thisTitle {
-  position: relative;
-  display: inline-block;
-  color: #ffffff;
-  left: 0;
-  line-height: 42px;
-  padding-right: 12px;
-  padding-left: 0;
-  font-size: 20px;
-  text-align: right;
-  float: left;
-}
-
-.thisTitle a {
-  color: #ffffff;
-  font-size: 16px !important;
-}
-@media screen and (min-width: 1080px) {
-  .thisTitle {
-  font-size: 16px;
-  text-align: left;
-  padding-right: 0;
-  padding-left: 7px;
-  }
-}
-@media screen and (max-width: 1079px) {
-    .thisTitle {
-    width: 100%;
-  }
-.thisTitle a {
-  padding-right: 12px;
-  font-size: 20px !important;
-  }
-}
-.navigation {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  right: 0;
-  margin-right: 6px;
-  height: 42px;
-  min-width: 700px;
-  overflow: visible;
-  padding-right: 7px;
-  z-index: 20;
-  box-sizing: content-box;
-}
-@media screen and (min-width: 1080px) {
-  .navigation {
-  position: relative;
-  float: right;
-  display: inline-block;
-  margin: 0;
-  }
-}
-.navigation ul {
-  list-style-type: none;
-  float: right;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: block;
-}
-.navigation ul li {
-  float: left;
-  background-color: #44b3e2;
-}
-.navigation ul li a {
-  display: block;
-  line-height: 42px;
-  font-family:"ubuntu";
-  font-size: 16px;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #ffffff;
-}
-.menuFreeze {
-  height: 100%;
-  overflow: hidden;
-}
-@media screen and (max-width: 1079px) {
-.navigation {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  margin: 0;
-  width: 0;
-  font-size: 20px;
-  background-color: #44b3e2;
-  color: #ffffff;
-  box-sizing: border-box;
-  overflow: auto;
-  min-width: 0;
-  padding-right: 0;
-  z-index:9999;
-}
-.navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding-top: 0;
-  display: block;
-}
-.navigation ul li a {
-  box-sizing: border-box;
-  font-family: "ubuntu";
-  font-size: 20px;
-  display: block;
-  color: #ffffff;
-  padding: 20px 20px 20px 40px;
-  min-width: 220px;
-  text-align: left;
-}
-.navigation ul li .fa {
-  min-width: 25px;
-  }
-}
-.blackOut {
-  position: fixed;
-  display: none;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  overflow: hidden;
-  cursor: pointer;
-  z-index:9998;
-}
-.actoemLink {
-  background-color: #368fb4 !important;
-}
-.actoemLink a {
-  color: #ffffff !important;
-}
-</style>
 <body>
   <div class="titleHolder">
     <div class="communityWrapper">
@@ -362,11 +174,6 @@ un-comment above to load resources remotely-->
         </div>
       </div>
     </div>
-
-
-
-
-
     <div class="row">
       <?php
       echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
@@ -389,211 +196,245 @@ un-comment above to load resources remotely-->
   <div class="blackOut"></div>
 </body>
 </html>
+
 <script>
-// ----------------------------------------------------------------------------------------
-// Google search
-// ----------------------------------------------------------------------------------------
-  (function() {
-    var cx = '006198118389747886812:hsjk7qeuppa';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-// ----------------------------------------------------------------------------------------
-// Append icons to the top level of the side-bar menu
-// ----------------------------------------------------------------------------------------
-    $(".topIcons:eq(0)").append(
-     "<i class='fa fa-bolt'></i>");
-    $(".topIcons:eq(1)").append(
-     "<i class='fa fa-globe'></i>");
-    $(".topIcons:eq(2)").append(
-     "<i class='fa fa-random' style='padding:10px 0 0 2px;'></i>");
-// ----------------------------------------------------------------------------------------
-// Enable sidebar
-// ----------------------------------------------------------------------------------------
-    var fixsidebar = false;
-    sidebar_resize(); // Set correct size on loading
-    $(".container").css('background-color','#fff');
-    $(".sublevel").hide();
-    $(".toplevel").hide();
-// ----------------------------------------------------------------------------------------
-// Show/hide OpenEnergyMonitor site links
-// ----------------------------------------------------------------------------------------
-    $(".titleWrapper").click(function(){
-      open_topmenu()
-    });
 
-    function open_topmenu(){
-      $(".oemMenu").slideToggle("fast");
-      $(".titleWrapper").find('#menuSelect').toggleClass('fa-plus-circle fa-minus-circle');
-    };
 // ----------------------------------------------------------------------------------------
-// Display current page link in menu
+// No padding if no content in right panel...
 // ----------------------------------------------------------------------------------------
-    var q = "<?php echo $q; ?>";
-    q = q.split("/");
-    if (q[0] && q[1] != ("")) {
-      sl = $(".sublevel[name="+q[1]+"]");
-      tl = $(".toplevel[name="+q[0]+"]");
-      tl.show();
-      tl.prev().addClass("clickedOnce");
-      tl.prev().children(".topIcons").addClass("clickedOnce");
-      sl.show();
-      sl.prev().addClass("clickedOnce");
-      sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
 
-    $("a[href='" + window.location.href + "']").parent().addClass("active");
-
-    $(window).on('hashchange', function(e){
-      $(".menu a").parent().removeClass("active");
-      $(".menu a[href='" + window.location.href + "']").parent().addClass("active");
-      $('.nextPrev > .next').empty();
-      $('.nextPrev > .prev').empty();
-      pageLinks();
-      });
-    }
-// ----------------------------------------------------------------------------------------
-// Open and close top level of menu
-// ----------------------------------------------------------------------------------------
-    $(".toplevelhead").click(function() {
-    $("#subIcon.fa-minus-circle").toggleClass('fa-minus-circle fa-plus-circle');
-    $(".sublevel").slideUp("fast");
-    $(".sublevelhead.clickedOnce").removeClass("clickedOnce");
-    var sibling = $(this).siblings(".toplevel");
-    var siblingHead = $(this).siblings(".toplevelhead");
-    if ($(this).hasClass("clickedOnce")) {
-      var topLevel = $(this).next();
-      topLevel.slideUp("fast");
-      $(this).children(".topIcons").removeClass("clickedOnce");
-      $(this).removeClass("clickedOnce");
-    }
-    else {
-      siblingHead.next().slideUp("fast");
-      siblingHead.removeClass("clickedOnce");
-      siblingHead.children(".topIcons").removeClass("clickedOnce");
-      $(this).children(".topIcons").addClass("clickedOnce");
-      $(this).addClass("clickedOnce");
-      var topLevel = $(this).next();
-      topLevel.slideDown("fast");
-      $(".oemMenu").slideUp("fast");
-      $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
-    }
+$(window).load(function(){
+  if ($("#rightpanel-inner").html().length === 0){
+    $("#rightpanel-inner").css("padding","0")
+  }
 });
+
 // ----------------------------------------------------------------------------------------
-// Open and close lower level of sidebar
+// Google search...
 // ----------------------------------------------------------------------------------------
 
-    $(".sublevelhead").click(function() {
-    $(this).find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
-    var sibling = $(this).siblings(".sublevel");
-    var siblingHead = $(this).siblings(".sublevelhead");
-    if ($(this).hasClass("clickedOnce")) {
-      var sublevel = $(this).next();
-      sublevel.slideUp("fast");
-      $(this).removeClass("clickedOnce");
-    }
-    else {
-      sibling.slideUp("fast");
-      siblingHead.removeClass("clickedOnce");
-      siblingHead.find("#subIcon.fa-minus-circle").toggleClass('fa-minus-circle fa-plus-circle');
-      $(this).addClass("clickedOnce");
-      var sublevel = $(this).next();
-      sublevel.slideDown("fast");
-      $(".oemMenu").slideUp("fast");
-      $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
-    }
+(function() {
+  var cx = '006198118389747886812:hsjk7qeuppa';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+
+// ----------------------------------------------------------------------------------------
+// Append icons to the top level of the side-bar menu...
+// ----------------------------------------------------------------------------------------
+
+$(".topIcons:eq(0)").append(
+ "<i class='fa fa-bolt'></i>");
+$(".topIcons:eq(1)").append(
+ "<i class='fa fa-globe'></i>");
+$(".topIcons:eq(2)").append(
+ "<i class='fa fa-random' style='padding:10px 0 0 2px;'></i>");
+
+// ----------------------------------------------------------------------------------------
+// Enable sidebar...
+// ----------------------------------------------------------------------------------------
+
+var fixsidebar = false;
+sidebar_resize(); // Set correct size on loading
+$(".container").css('background-color','#fff');
+$(".sublevel").hide();
+$(".toplevel").hide();
+
+// ----------------------------------------------------------------------------------------
+// Show/hide OpenEnergyMonitor site links...
+// ----------------------------------------------------------------------------------------
+
+$(".titleWrapper").click(function(){
+  open_topmenu()
 });
-// ----------------------------------------------------------------------------------------
-// Open sidebar
-// ----------------------------------------------------------------------------------------
-    $(".fa-navicon").click(function(){
-      fixsidebar = true;
-      $(".blackOut").show();
-      $(".sidenav").show();
-      $(".sidenav").animate({ width:'300' },"0.5s");
-      $(".darkerBkd").show();
-    });
-// ----------------------------------------------------------------------------------------
-// Close sidebar
-// ----------------------------------------------------------------------------------------
-    $(".blackOut").click(function(){
-      closeNav();
-    });
 
-      function closeNav() {
-        if (fixsidebar === true) {
-        $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
-        $(".blackOut").hide();
-        fixsidebar = false;
-        $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
-        $(".sidenav").css("width","300px");
-        $(".darkerBkd").hide();
-        $(".oemMenu").slideUp("fast");
-      }
-    };
+function open_topmenu(){
+  $(".oemMenu").slideToggle("fast");
+  $(".titleWrapper").find('#menuSelect').toggleClass('fa-plus-circle fa-minus-circle');
+};
+
 // ----------------------------------------------------------------------------------------
-//  Responsive sidebar
+// Display current page link in menu...
 // ----------------------------------------------------------------------------------------
-function sidebar_resize() {
-    var width = $(window).width();
-    var height = $(window).height();
-    if (width<1080) {
-        if (fixsidebar===false) {
-        } else {
-            $(".blackOut").show();
-        }
-        $(".container").css("margin","0 auto");
-    } else {
-        $(".sidenav").css("width","300px");
-        $(".container").css("margin-left","300px");
-        $(".blackOut").hide();
-    }
-    // --------------------------------------------
-    //  Responsive right hand panel
-    // --------------------------------------------
-    if (width<1080) {
-        $("#rightpanel").css("margin","0 auto");
-        $("#rightpanel").css("width","100%");
-        $(".container").css("float","none");
-        $("#rightpanel").css("float","none");
-        $(".sidenav").hide();
 
-    } else if (width<1260) {
-        $("#rightpanel").css("margin","0 auto");
-        $("#rightpanel").css("width","960px");
-        $(".container").css("float","none");
-        $("#rightpanel").css("float","none");
-        $(".sidenav").show();
+var q = "<?php echo $q; ?>";
+q = q.split("/");
+if (q[0] && q[1] != ("")) {
+  sl = $(".sublevel[name="+q[1]+"]");
+  tl = $(".toplevel[name="+q[0]+"]");
+  tl.show();
+  tl.prev().addClass("clickedOnce");
+  tl.prev().children(".topIcons").addClass("clickedOnce");
+  sl.show();
+  sl.prev().addClass("clickedOnce");
+  sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
 
-    } else if (width<(1260+400)) {
-        $("#rightpanel").css("margin-left","300px");
-        $("#rightpanel").css("width","960px");
-        $(".container").css("float","none");
-        $("#rightpanel").css("float","none");
-        $(".sidenav").show();
+$("a[href='" + window.location.href + "']").parent().addClass("active");
 
-
-    } else {
-        var rightwidth = width - 300 - 960 - 20;
-        $("#rightpanel").css("margin-left","0px");
-        $("#rightpanel").css("width",rightwidth+"px");
-        $(".container").css("float","left");
-        $("#rightpanel").css("float","left");
-        $(".sidenav").show();
-
-    }
+$(window).on('hashchange', function(e){
+  $(".menu a").parent().removeClass("active");
+  $(".menu a[href='" + window.location.href + "']").parent().addClass("active");
+  $('.nextPrev > .next').empty();
+  $('.nextPrev > .prev').empty();
+  pageLinks();
+  });
 }
+
+// ----------------------------------------------------------------------------------------
+// Open and close top level of menu...
+// ----------------------------------------------------------------------------------------
+
+$(".toplevelhead").click(function() {
+  $("#subIcon.fa-minus-circle").toggleClass('fa-minus-circle fa-plus-circle');
+  $(".sublevel").slideUp("fast");
+  $(".sublevelhead.clickedOnce").removeClass("clickedOnce");
+  var sibling = $(this).siblings(".toplevel");
+  var siblingHead = $(this).siblings(".toplevelhead");
+  if ($(this).hasClass("clickedOnce")) {
+    var topLevel = $(this).next();
+    topLevel.slideUp("fast");
+    $(this).children(".topIcons").removeClass("clickedOnce");
+    $(this).removeClass("clickedOnce");
+  }
+  else {
+    siblingHead.next().slideUp("fast");
+    siblingHead.removeClass("clickedOnce");
+    siblingHead.children(".topIcons").removeClass("clickedOnce");
+    $(this).children(".topIcons").addClass("clickedOnce");
+    $(this).addClass("clickedOnce");
+    var topLevel = $(this).next();
+    topLevel.slideDown("fast");
+    $(".oemMenu").slideUp("fast");
+    $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
+  }
+});
+
+// ----------------------------------------------------------------------------------------
+// Open and close lower level of sidebar...
+// ----------------------------------------------------------------------------------------
+
+$(".sublevelhead").click(function() {
+  $(this).find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
+  var sibling = $(this).siblings(".sublevel");
+  var siblingHead = $(this).siblings(".sublevelhead");
+  if ($(this).hasClass("clickedOnce")) {
+    var sublevel = $(this).next();
+    sublevel.slideUp("fast");
+    $(this).removeClass("clickedOnce");
+  }
+  else {
+    sibling.slideUp("fast");
+    siblingHead.removeClass("clickedOnce");
+    siblingHead.find("#subIcon.fa-minus-circle").toggleClass('fa-minus-circle fa-plus-circle');
+    $(this).addClass("clickedOnce");
+    var sublevel = $(this).next();
+    sublevel.slideDown("fast");
+    $(".oemMenu").slideUp("fast");
+    $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
+  }
+});
+
+// ----------------------------------------------------------------------------------------
+// Open sidebar...
+// ----------------------------------------------------------------------------------------
+
+$(".fa-navicon").click(function(){
+  fixsidebar = true;
+  $(".blackOut").show();
+  $(".sidenav").css("width","0");
+  $(".sidenav").show();
+  $(".sidenav").animate({ width:'300' },"0.5s");
+  $(".darkerBkd").show();
+  $("html, body").addClass("menuFreeze");
+});
+
+// ----------------------------------------------------------------------------------------
+// Close sidebar...
+// ----------------------------------------------------------------------------------------
+
+$(".blackOut").click(function(){
+  closeNav();
+});
+
+function closeNav() {
+  if (fixsidebar === true) {
+  $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
+  $(".blackOut").hide();
+  fixsidebar = false;
+  $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
+  $(".sidenav").css("width","300px");
+  $(".darkerBkd").hide();
+  $(".oemMenu").slideUp("fast");
+  $("html, body").removeClass("menuFreeze");
+  }
+};
+
+// ----------------------------------------------------------------------------------------
+//  Responsive sidebar...
+// ----------------------------------------------------------------------------------------
+
+function sidebar_resize() {
+  var width = $(window).width();
+  var height = $(window).height();
+  if (width<1080) {
+    if (fixsidebar===false) {
+    }
+    else {
+      $(".blackOut").show();
+    }
+    $(".container").css("margin","42px auto 0");
+    }
+  else {
+    $(".sidenav").css("width","300px");
+    $(".container").css("margin-left","300px");
+    $(".blackOut").hide();
+    }
+  if (width<1080) {     //  Responsive right hand panel
+    $("#rightpanel").css("margin","0 auto");
+    $("#rightpanel").css("width","100%");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").hide();
+  }
+  else if (width<1260) {
+    $("#rightpanel").css("margin-left","300px");
+    $("#rightpanel").css("width","100%");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").show();
+  }
+  else if (width<(1260+400)) {
+    $("#rightpanel").css("margin-left","300px");
+    $("#rightpanel").css("margin-top","42px");
+    $("#rightpanel").css("width","960px");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").show();
+  }
+  else {
+    var rightwidth = width - 300 - 960 - 20;
+    $("#rightpanel").css("margin-left","0px");
+    $("#rightpanel").css("margin-top","42px");
+    $("#rightpanel").css("width",rightwidth+"px");
+    $(".container").css("float","left");
+    $("#rightpanel").css("float","left");
+    $(".sidenav").show();
+  }
+}
+
 $(window).resize(function(){
   closeNav();
-  sidebar_resize();
+  setTimeout(function(){ sidebar_resize(); }, 500);
 });
 
 // ----------------------------------------------------------------------------------------
-//  Next & previous links on page
+//  Next & previous links on page...
 // ----------------------------------------------------------------------------------------
+
 function pageLinks() {
   var previous = $("li.active").prev().html();
   var psLocate = $("li.active").closest(".sublevel").prevAll().eq(2);
@@ -622,14 +463,7 @@ function pageLinks() {
     $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
   }
 }
+
 pageLinks();
+
 </script>
-<!--
-
-
-
-End
-
-
-
--->
