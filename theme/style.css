@@ -398,6 +398,7 @@ form.gsc-search-box {
 		  float: left;
 		  background-color: #44b3e2;
 		}
+/*
 		.navigation ul li:nth-child(1) {
 		    width: 81.47px;
 		}
@@ -429,7 +430,7 @@ form.gsc-search-box {
 			  padding-right: 10px;
 			  color: #ffffff;
 			}
-
+*/
 @media screen and (min-width: 1080px) {
   .navigation {
 	  position: relative;
