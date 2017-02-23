@@ -761,6 +761,33 @@ The accuracy is better than ±1%.
 For consistency with the standard YHDC CT supplied by the shop, connect the white wire to the plug tip and the black wire to the sleeve. There should be no connection to the ring.
 Other output currents and voltage output versions & “Revenue Grade” versions (having better accuracy) are also available, see the [manufacturer's website](http://www.sentrancorp.com/product-category/small-group-current-transformer/small-split-current-transformers-model-4lsf/) for details.
 
+#### YHDC 100A/200A/400A Split core current transformer SCT023R
+
+![yhdc_sct023r.png](files/yhdc_sct023r.png)
+![yhdc_sct023r_drawing.png](files/yhdc_sct023r_drawing.png)
+
+| Rated Current (IPN) | Maximum Input (IPM) | Rated Output | Maximum Burden |
+| ------------------- | ------------------- | ------------ | -------------- |
+| 100 A | 150 A | 50 mA | 100 Ω |
+| 200 A | 300 A | 50 mA | 80 Ω |
+| 400 A | 480 A | 50 mA | 50 Ω |
+
+For all variants:
+
+    Accuracy: ± 0.5%
+    Linearity:  ± 0.5%
+    Phase shift:  ≤ 30‘
+    
+The rated output current of 50 mA means that no change is necessary when used with the emonTx, the emonTx Shield or the emonPi.
+
+If it is desired to increase the sensitivity, then the burden resistor may be changed to a higher value, up to the maximum given in the table above. Alternatively, the burden resistor may be reduced in value to decrease the sensitivity, whilst remaining below the maximum input current.
+
+A 3.5 mm ‘stereo’ jack plug is required. For consistency with the standard YHDC CT supplied by the shop, connect the white wire to the plug tip and the black wire to the sleeve. There should be no connection to the ring.
+
+Note that the mounting screws must not be allowed to damage the insulation of the cable on which the transformer is mounted. 
+
+See the [manufacturer’s website](http://www.yhdc.com/en/product/900) for further details.
+
 If you use an alternate CT, i.e **_not_** the YHDC CT sold in the OEM shop and the emonTX's on-board SMT burden resistor is the wrong value or is not required, then you must remove it and, if (and only if) that CT is unburdened, add a wire-ended resistor in its place using the holes provided.
 
 This list is not exclusive, other suitable current transformers are available.
