@@ -420,6 +420,7 @@ form.gsc-search-box {
 		.navigation ul li:nth-child(7) {
 		    width: 74.53px;
 		}
+		*/
 			.navigation ul li a {
 			  display: block;
 			  line-height: 42px;
@@ -430,7 +431,7 @@ form.gsc-search-box {
 			  padding-right: 10px;
 			  color: #ffffff;
 			}
-*/
+
 @media screen and (min-width: 1080px) {
   .navigation {
 	  position: relative;
