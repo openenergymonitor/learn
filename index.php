@@ -17,6 +17,10 @@ ini_set('display_errors', 'on');
 require("core.php");
 require("redirect_map.php");
 $path = get_application_path();
+
+$redis = new Redis();
+$connected = $redis->connect("localhost");
+
 $q = "home";
 if (isset($_GET['q'])) $q = $_GET['q'];
 //$q = rtrim($q,"/");
@@ -72,6 +76,8 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="py") $format = "py";
     if ($doc_ext=="ino") $format = "ino";
 }
+
+if ($doc_ext=="html" || $doc_ext=="md") $redis->incr("learn/$q");
 
 switch ($format)
 {
