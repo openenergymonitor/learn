@@ -31,16 +31,16 @@ In our view ZeroCarbonBritain is a particularly good scenario, perhaps one of th
 
 #### November 2014: OpenEnergyMonitor and ZeroCarbonBritain Collaboration
 
-*Trystan Lea:* In late 2014 a meeting with Philip James a researcher on the ZeroCarbonBritain project about household retrofit modelling software got on to the subject of wanting from our part to better understand how zero carbon energy systems can work including how demand can be met from a variable renewable supply, the role of storage and demand response among other elements of the system. Carbon Coop who we where working with on the MyHomeEnergyPlanner open source retrofit software project where planning a smart grid project exploring these themes and we where using the monitoring ourselves to try and shift consumption to times of high solar output. 
+*Trystan Lea:* In late 2014 a meeting with Philip James a researcher on the ZeroCarbonBritain project about household retrofit modelling software got on to the subject of wanting from our part to better understand how zero carbon energy systems can work including how demand can be met from a variable renewable supply, the role of storage and demand response among other elements of the system. Carbon Coop who we where working with on the MyHomeEnergyPlanner open source retrofit software project where planning a smart grid project exploring these themes and we where using the monitoring ourselves to try and shift consumption to times of high solar output.
 
 Philip mentioned that he had recently been converting the ZeroCarbonBritain spreadsheet into a java model and gave a demo of it in action with beautiful graphs showing energy balances over the 10 year model period. He was happy to share the model and made it open source on github here:
 
 - [https://github.com/philJam/energymodel](https://github.com/philJam/energymodel)
 
-In the following weeks I helped convert the java model into a javascript web model while trying my best to get to grips with how the model worked. We worked back and forth for a while developing three variants - covering most of the full ZeroCarbonBritain model. These initial attempts are still available to explore here: 
+In the following weeks I helped convert the java model into a javascript web model while trying my best to get to grips with how the model worked. We worked back and forth for a while developing three variants - covering most of the full ZeroCarbonBritain model. These initial attempts are still available to explore here:
 
 - [http://zerocarbonbritain.org/energy_model/other](http://zerocarbonbritain.org/energy_model/other)
-- [CAT Blog: Zero Carbon Britain and OpenEnergyMonitor collaborate on open source energy model](http://blog.cat.org.uk/2015/02/17/zero-carbon-britain-and-openenergymonitor-collaborate-on-open-source-energy-model/) 
+- [CAT Blog: Zero Carbon Britain and OpenEnergyMonitor collaborate on open source energy model](http://blog.cat.org.uk/2015/02/17/zero-carbon-britain-and-openenergymonitor-collaborate-on-open-source-energy-model/)
 
 #### June 2015: Building up the model in steps
 
@@ -89,15 +89,15 @@ Ordered by biomass land area requirement:
 | Biomass Boilers | 1.22 | 1.22 | 2.44 | 35.0 | 250 | 1500 | 1018 | 10.90% | 1.18 |
 
 
-**Hydrogen cars** 
+**Hydrogen cars**
 
-The hydrogen car scenario starts with the default energy model that is most similar to ZeroCarbonBritain and then switches the EV's for hydrogen cars with the performance of a Toyota Mirrai. The wind and solar capacity is 65% higher than the EV only scenario due to the lower efficiencies of hydrogen production, The benefit of a 2.4% reduction in land use required is perhaps a small benefit compared with the additional renewable capacity. The reduction in land use is dependent on being able to store hydrogen produced at times of excess renewable supply for later use at times of demand, whereas EV's require backup CCGT fueled by biomethane. In total 500 kWh of hydrogen storage are required per household or 13 TWh when scaled up by 26 million households. 
+The hydrogen car scenario starts with the default energy model that is most similar to ZeroCarbonBritain and then switches the EV's for hydrogen cars with the performance of a Toyota Mirrai. The wind and solar capacity is 65% higher than the EV only scenario due to the lower efficiencies of hydrogen production, The benefit of a 2.4% reduction in land use required is perhaps a small benefit compared with the additional renewable capacity. The reduction in land use is dependent on being able to store hydrogen produced at times of excess renewable supply for later use at times of demand, whereas EV's require backup CCGT fueled by biomethane. In total 500 kWh of hydrogen storage are required per household or 13 TWh when scaled up by 26 million households.
 
 A useful angle on the EV vs Hydrogen discussion worth a more in depth look is this article by riversimple who point out that efficiency is partly dependent on vehicle weight and the duty-cycle (amount of acceleration/de-acceleration in a journey) for any particular application [riversimple: Batteries or Hydrogen, the wrong question](http://www.riversimple.com/batteries-hydrogen-wrong-question)
 
 The riversimple hydrogen car achieves a much higher energy performance than the toyota mirrai and boosts an impressive range, it is however a much smaller and lighter car.
 
-Another possibility is that larger hydrogen stores and fuel cells could be used as part of the backup supply for BEV charging, the model suggests that land use could be reduced by a similar amount with this combination without the need for such a large increase in wind and solar capacity. 
+Another possibility is that larger hydrogen stores and fuel cells could be used as part of the backup supply for BEV charging, the model suggests that land use could be reduced by a similar amount with this combination without the need for such a large increase in wind and solar capacity.
 
 **Default scenario, Wind, Solar, EV's & Heatpumps (Similar to ZeroCarbonBritain)**
 
@@ -112,7 +112,7 @@ If liquid fuel was produced without hydrogen from excess renewable energy land u
 
 **Biomass boilers instead of Heatpump's**
 
-This is perhaps an interesting scenario as there is a significant 36% reduction in wind and solar capacity, combined with significant reductions in store sizes and a reduction in backup CCGT gas turbine capacity of 72% from 1.419 kW per household to 0.391 kW per household. 
+This is perhaps an interesting scenario as there is a significant 36% reduction in wind and solar capacity, combined with significant reductions in store sizes and a reduction in backup CCGT gas turbine capacity of 72% from 1.419 kW per household to 0.391 kW per household.
 
 This highlights a point explored further in the renewable heat section that a large part of backup capacity and methane storage requirements in the default model is due to winter heat demand requirements of heatpumps.
 
@@ -135,8 +135,12 @@ UK Land area is about 24 Mha. The graphic below from the ZeroCarbonBritain repor
     Energy          17%
     Food            34%
     Carbon capture  33%
-    Conserved       10% 
+    Conserved       10%
     Urban           6%
     
 “4.1 Mha of land (most of which was previously used for the intensive grazing of livestock) is used to produce energy by growing various grasses, short rotation forestry and coppice.” - 4.1 Mha is equivalent to about 17% of UK land area.
 
+
+<script>
+  $("table").wrap("<div style='overflow-x:scroll;'></div>");
+</script>
