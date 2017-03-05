@@ -60,21 +60,22 @@ Download: [EmonLib](https://github.com/openenergymonitor/EmonLib)
 <pre>#include <span style="color: #006699;">"EmonLib.h"</span>             <span style="color: #7E7E7E;">// Include Emon Library</span>
 EnergyMonitor emon1;             <span style="color: #7E7E7E;">// Create an instance</span>
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">setup</span>()
 {  
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">begin</span>(9600);
 
   emon1.voltage(2, 234.26, 1.7);  <span style="color: #7E7E7E;">// Voltage: input pin, calibration, phase_shift</span>
   emon1.current(1, 111.1);       <span style="color: #7E7E7E;">// Current: input pin, calibration.</span>
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">loop</span>()
 {
   emon1.calcVI(20,2000);         <span style="color: #7E7E7E;">// Calculate all. No.of wavelengths, time-out</span>
   emon1.serialprint();           <span style="color: #7E7E7E;">// Print out all variables</span>
 }
 </pre>
 
-**c) Open the arduino serial window**
+
+c) Open the arduino serial window**
 
 You should now see a stream of values. These are from left to right: real power, apparent power, rms voltage, rms current and power factor.
