@@ -20,7 +20,7 @@
 <link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css?v=2" />
+<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css?v=3" />
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 <!-- Load font awesome resources locally to avoid chrome cross-origin script blocking and enable full offline use.
 un-comment above to load resources remotely-->
@@ -137,10 +137,9 @@ un-comment above to load resources remotely-->
 
           <div class="searchContainer">
             
-            <form action="https://cse.google.com/" id="cse-search-box">
+            <form method="get" action="https://www.google.com/search">
               <div>
-                <input type="hidden" name="cx" value="006198118389747886812:hsjk7qeuppa" />
-                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
                 <input type="text" name="q" size="15" />
                 <input type="submit" name="sa" value="&#xf002;" />
               </div>
@@ -214,20 +213,6 @@ $(window).load(function(){
     $("#rightpanel-inner").css("padding","0")
   }
 });
-
-// ----------------------------------------------------------------------------------------
-// Google search...
-// ----------------------------------------------------------------------------------------
-
-(function() {
-  var cx = '006198118389747886812:hsjk7qeuppa';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
 
 // ----------------------------------------------------------------------------------------
 // Append icons to the top level of the side-bar menu...

@@ -413,29 +413,34 @@ body {
 		  float: left;
 		  background-color: #44b3e2;
 		}
-/*
-		.navigation ul li:nth-child(1) {
-		    width: 81.47px;
-		}
-		.navigation ul li:nth-child(2) {
-		    width: 80.03px;
-		}
-		.navigation ul li:nth-child(3) {
-		    width: 84.27px;
-		}
-		.navigation ul li:nth-child(4) {
-		    width: 112.53px;
-		}
-		.navigation ul li:nth-child(5) {
-		    width: 122.11px;
-		}
-		.navigation ul li:nth-child(6) {
-		    width: 72.3px;
-		}
-		.navigation ul li:nth-child(7) {
-		    width: 74.53px;
-		}
-		*/
+      /*--------------------------------------------
+          length of Oem site links...
+      --------------------------------------------*/
+      
+      @media screen and (min-width: 1080px) {
+          .navigation ul li:nth-child(1) {
+              width: 82px;
+          }
+          .navigation ul li:nth-child(2) {
+              width: 81px;
+          }
+          .navigation ul li:nth-child(3) {
+              width: 85px;
+          }
+          .navigation ul li:nth-child(4) {
+              width: 113px;
+          }
+          .navigation ul li:nth-child(5) {
+              width: 123px;
+          }
+          .navigation ul li:nth-child(6) {
+              width: 73px;
+          }
+          .navigation ul li:nth-child(7) {
+              width: 75px;
+          }
+      }
+
 			.navigation ul li a {
 			  display: block;
 			  line-height: 42px;
