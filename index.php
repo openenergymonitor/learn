@@ -18,8 +18,13 @@ require("core.php");
 require("redirect_map.php");
 $path = get_application_path();
 
-$redis = new Redis();
-$connected = $redis->connect("localhost");
+if (class_exists('Redis')) {
+  $redis = new Redis();
+  $connected = $redis->connect("localhost");
+} else {
+  $redis = false;
+}
+
 
 $q = "home";
 if (isset($_GET['q'])) $q = $_GET['q'];
@@ -77,7 +82,9 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="ino") $format = "ino";
 }
 
-if ($doc_ext=="html" || $doc_ext=="md") $redis->incr("learn/$q");
+if ($redis) {
+  if ($doc_ext=="html" || $doc_ext=="md") $redis->incr("learn/$q");
+}
 
 switch ($format)
 {

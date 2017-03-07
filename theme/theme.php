@@ -20,7 +20,7 @@
 <link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css?v=2" />
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 <!-- Load font awesome resources locally to avoid chrome cross-origin script blocking and enable full offline use.
 un-comment above to load resources remotely-->
@@ -133,13 +133,19 @@ un-comment above to load resources remotely-->
           </div>
         </div>
 
-
-
         <div class="lowermenuWrapper">
 
-
           <div class="searchContainer">
-            <gcse:searchbox-only></gcse:searchbox-only>
+            
+            <form action="https://cse.google.com/" id="cse-search-box">
+              <div>
+                <input type="hidden" name="cx" value="006198118389747886812:hsjk7qeuppa" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="text" name="q" size="15" />
+                <input type="submit" name="sa" value="&#xf002;" />
+              </div>
+            </form>
+            
           </div>
           <div class="mainmenuColor">
         <?php
