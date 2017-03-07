@@ -353,14 +353,14 @@ $(".blackOut").click(function(){
 
 function closeNav() {
   if (fixsidebar === true) {
-  $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
-  $(".blackOut").hide();
-  fixsidebar = false;
-  $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
-  $(".sidenav").css("width","300px");
-  $(".darkerBkd").hide();
-  $(".oemMenu").slideUp("fast");
-  $("html, body").removeClass("menuFreeze");
+    $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
+    $(".blackOut").hide();
+    fixsidebar = false;
+    $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
+    $(".sidenav").css("width","300px");
+    $(".darkerBkd").hide();
+    $(".oemMenu").slideUp("fast");
+    $("html, body").removeClass("menuFreeze");
   }
 };
 
