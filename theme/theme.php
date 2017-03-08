@@ -87,9 +87,11 @@ un-comment above to load resources remotely-->
       <div class="sidenav_inner">
         <div class="darkerBkd">
           <div class="titleWrapper">
-            <div class='menuTitle' style="font-size:20px;">Site Links
-              <div class="menuSelect"><i id="menuSelect" class="fa fa-plus-circle"></i>
+            <div class='menuTitle' style="font-size:20px;">
+              <div class="menuSelect">
+                <i id="menuSelect" class="fa fa-plus-circle"></i>
               </div>
+              Site Links
             </div>
           </div>
           <div class="oemMenu">
@@ -417,9 +419,24 @@ function sidebar_resize() {
   }
 }
 
-$(window).resize(function(){
-  closeNav();
-  setTimeout(function(){ sidebar_resize(); }, 500);
+var inputFocus = false; // fix resize bug on input
+
+$(window).resize(function() {
+    if ((inputFocus === true) && ($(window).width() < 1079)) {
+      console.log("twotwo");
+    }
+    else {
+      closeNav();
+      setTimeout(function(){ sidebar_resize(); }, 500);
+    }
+});
+
+$(".searchContainer :input").focus(function(){
+  inputFocus = true;
+});
+
+$(".searchContainer :input").blur(function(){
+  inputFocus = false;
 });
 
 // ----------------------------------------------------------------------------------------
