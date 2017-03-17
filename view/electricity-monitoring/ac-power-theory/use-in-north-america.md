@@ -878,6 +878,17 @@ The only change necessary is to alter CYCLES_PER_SECOND to 60.
 
 <tr>
 
+<td>Wires supplying electrical energy
+to the premises
+
+<td>Incomers
+
+<td>Feeders
+
+</tr>
+
+<tr>
+
 <td>A supply conductor at elevated voltage</td>
 
 <td>Line
