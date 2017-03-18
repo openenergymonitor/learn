@@ -79,3 +79,9 @@ EnergyMonitor emon1;             <span style="color: #7E7E7E;">// 
 c) Open the arduino serial window**
 
 You should now see a stream of values. These are from left to right: real power, apparent power, rms voltage, rms current and power factor.
+
+
+**See also:**
+
+- [How to build an Arduino energy monitor - current only](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only)
+- [EmonTx Arduino Shield](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield): Our open-hardware energy monitoring Arduino compatible shield featuring the above circuit.
