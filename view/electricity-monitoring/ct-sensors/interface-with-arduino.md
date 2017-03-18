@@ -47,8 +47,6 @@ Here are the same calculations as above in a more compact form:
 
 <pre>Burden Resistor (ohms) = (AREF * CT TURNS) / (2√2 * max primary current)</pre>
 
-#### OpenEnergyMonitor Hardware
-
 Burden resistor sizing for [OpenEnergyMonitor energy monitoring hardware](https://guide.openenergymonitor.org/setup).
 
 **emonTx V3** ([see guide](https://guide.openenergymonitor.org/setup))
@@ -57,6 +55,10 @@ The emonTx V3 uses a 3.3V regulator, so it's V<sub>CC</sub> and therefore AREF,
 [https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations).
 
 ***
+
+**emonPi** ([see guide](https://guide.openenergymonitor.org/setup))
+
+The EmonPi has two CT channels both with 22Ω burden resistors.
 
 **emonTx V2**
 
