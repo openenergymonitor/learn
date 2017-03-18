@@ -70,3 +70,8 @@ EnergyMonitor emon1;
 **c) Open the Arduino serial window**
 
 You should now see two columns of values. Apparent power on the left, RMS current on the right.
+
+**See also:**
+
+- [How to build an Arduino energy monitor - measuring mains voltage and current](https://learn.openenergymonitor.org/electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor)
+- [EmonTx Arduino Shield](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield): Our open-hardware energy monitoring Arduino compatible shield featuring the above circuit alongside voltage measurement for real power calculation.
