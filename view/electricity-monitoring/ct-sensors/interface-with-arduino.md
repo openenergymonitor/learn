@@ -47,6 +47,15 @@ Here are the same calculations as above in a more compact form:
 
 <pre>Burden Resistor (ohms) = (AREF * CT TURNS) / (2√2 * max primary current)</pre>
 
+#### OpenEnergyMonitor Hardware
+
+Burden resistor sizing for [OpenEnergyMonitor energy monitoring hardware](https://guide.openenergymonitor.org/setup).
+
+**emonTx V3**
+
+The emonTx V3 uses a 3.3V regulator, so it's V<sub>CC</sub> and therefore AREF, will always be 3.3V regardless of battery voltage. The standard emonTx V3 uses 22Ω burden resistors for CT 1, 2 and 3, and a 120Ω resistor for CT4, the high sensitivity channel. See the emonTx V3 technical wiki at:
+[https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations).
+
 ***
 
 **emonTx V2**
@@ -58,11 +67,6 @@ If you're using a battery powered emonTx V2, AREF will start at 3.3 V and slowl
 19 Ω is not a common value. We have a choice of 18 or 22 Ω. We recommend using an 18 Ω ±1% burden.
 
 ***
-
-**emonTx V3**
-
-The emonTx V3 uses a 3.3V regulator, so it's V<sub>CC</sub> and therefore AREF, will always be 3.3V regardless of battery voltage. The standard emonTx V3 uses 22Ω burden resistors for CT 1, 2 and 3, and a 120Ω resistor for CT4, the high sensitivity channel. See the emonTx V3 technical wiki at:
-[https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations).
 
 [Tool for calculating burden resistor size, CT turns and max Irms](https://tyler.anairo.com/?id=5.3.0) (thanks to Tyler Adkisson for building and sharing this).
 
