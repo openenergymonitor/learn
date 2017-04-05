@@ -52,7 +52,7 @@
                     },
                     "extending-ct-cable": {
                         "nicename": "Extending CT Sensor Cable",
-                        "url": "extending-ct-cable"
+                        "url": "electricity-monitoring/ct-sensors/extending-ct-cable"
                     },
                     "yhdc-ct-sensor-report": {
                         "nicename": "YHDC CT Sensor Report",
