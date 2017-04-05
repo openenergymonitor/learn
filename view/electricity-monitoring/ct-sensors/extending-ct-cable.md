@@ -44,11 +44,15 @@ At the emonTx/emonPi end, connect the two cores of the extension cable to the pl
 ### Can I use a ready-made headphone extension lead?
 
 This is not ideal. If it is unscreened, then maybe. But it will be liable to pick up interference from adjacent wiring etc. If it is screened, then it is definitely not a good idea. The screen will be connected to the plug sleeve, which is in fact the input connection. So far from screening the wanted signal, the screen can easily make things worse.
-Can I use network cable?
+
+### Can I use network cable?
 
 If you have a screened cable (FTP/STP or S/UTP, CAT5 or CAT6), then this should be OK, and can be an attractive solution if you have several c.t’s at the same location. An unscreened cable is not ideal, and will be more liable to pick up unwanted interference from adjacent wiring etc.
 Bear in mind that the cores of the network cable might not be stranded, which would make them liable to break more easily than a stranded conductor.
-I have several c.t’s in one place. Can I use a multi-core cable?
+I have several c.t’s in one place.
+
+### Can I use a multi-core cable?
+
 Yes, but ideally you want a telephony-type cable where pairs of wires are twisted together. Use one pair for each c.t.
 
 ![5-pair.png](files/5-pair.png)
