@@ -50,6 +50,10 @@
                         "nicename": "Advanced: Measurement Implications of ADC Resolution at Low Current Values",
                         "url": "electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values"
                     },
+                    "extending-ct-cable": {
+                        "nicename": "Extending CT Sensor Cable",
+                        "url": "extending-ct-cable"
+                    },
                     "yhdc-ct-sensor-report": {
                         "nicename": "YHDC CT Sensor Report",
                         "url": "electricity-monitoring/ct-sensors/yhdc-ct-sensor-report"
@@ -440,7 +444,7 @@
                         "url": "pv-diversion/background/overload-protection-of-mains-electrical-circuits"
                     }
                 }
-            },            
+            },
             "mk2": {
                 "nicename": "MK2 PV Diverter",
                 "pages": {
