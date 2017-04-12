@@ -48,7 +48,7 @@ This page includes a series of tables designed to help compare the energy and ca
 
 ### Electric vehicles
 
-Electric cars are often quoted at a performance of 4 miles/kWh which can be achieved with 100 mile electric cars such as the Nissan Leaf and Renault Zoe. This performance is dependent of course on the degree of acceleration, de-acceleration, speed and how hilly it is in much the same way as the performance of internal combustion cars.
+Electric cars are often quoted at a performance of 4 miles/kWh which can easily be achieved with electric cars such as the Nissan Leaf and Renault Zoe. This performance is dependent on acceleration, de-acceleration, speed and terrain in the same way as internal combustion cars.
 
 Grid electric @ 500 gCO2/kWh
 
