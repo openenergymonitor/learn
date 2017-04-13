@@ -140,7 +140,7 @@ Figures for the embodied energy and carbon emissions of manufacturing often have
 
 One of the more recent papers available that provides a guide to the embodied energy of lithium ion batteries among other technologies is a paper published in 2015 in the royal society of chemistry on [Hydrogen or batteries for grid storage? A net energy analysis](http://pubs.rsc.org/en/content/articlehtml/2015/ee/c4ee04041d). The figure quoted suggests that each kWh of lithium ion battery requires 136 kWh of energy to manufacture. An earlier paper published by members of the same team suggested an embodied energy of 454 kWh per kWh ([figure 1](https://www.researchgate.net/figure/255770835_fig1_Fig-1-Energy-storage-technologies-require-varying-amounts-of-energy-for-manufacturing)).
 
-Using 136 kWh per kWh of battery and a battery capacity of 24 kWh for the Nissan Leaf requiring a total of 3264 kWh to manufacture and assuming 120,000 miles over the lifetime of the car (Several early Nissan Leafs have [passed 1,700 miles with only a small reduction in capacity](https://twitter.com/candctaxis/status/821651868862545921).
+Using 136 kWh per kWh of battery and a battery capacity of 24 kWh for the Nissan Leaf requiring a total of 3264 kWh to manufacture and assuming 120,000 miles over the lifetime of the car (Several early Nissan Leafs have [passed 170,000 miles with only a small reduction in capacity](https://twitter.com/candctaxis/status/821651868862545921).
 
     120,000 miles @ 4.0 miles/kWh: 30,000 kWh
     Adding the manufacturing energy of 3264 kWh
