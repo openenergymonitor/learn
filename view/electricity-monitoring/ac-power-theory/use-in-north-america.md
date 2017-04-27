@@ -40,11 +40,10 @@ V × I<sub>CT1</sub> + V × I<sub>CT2</sub>
 
 which is correct.
 
-Other arrangements are possible. Indeed, if the physical arrangement of the wiring permits, only one current transformer might be necessary:
+Other arrangements are possible:
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3a.svg) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3b.svg)
-![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3c.svg)
-<span style="font-size: smaller">Figure 3a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</span>
+<span style="font-size: smaller">Figure 3a-b. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</span>
 
 Fig 3a: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>3</sub>
 
@@ -57,10 +56,6 @@ Fig 3b: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>3</sub>
 I<sub>CT2</sub> = I<sub>2</sub> - I<sub>1</sub>
 
 Total Power = 2 × V × I<sub>CT1</sub> + V × I<sub>CT2</sub>
-
-Fig 3c: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>2</sub> + 2 × I<sub>3</sub>
-
-Total Power = V × I<sub>CT1</sub>
 
 #### Measuring Individual Circuits
 
