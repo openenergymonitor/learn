@@ -43,7 +43,7 @@ which is correct.
 Other arrangements are possible:
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3a.svg) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3b.svg)
-<span style="font-size: smaller">Figure 3a-b. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</span>
+<p style="font-size: smaller">Figure 3a-b. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</p>
 
 Fig 3a: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>3</sub>
 
