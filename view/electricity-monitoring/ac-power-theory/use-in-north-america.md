@@ -63,7 +63,7 @@ Individual circuits may be either 120 V using a connection between one leg and n
 
 ![N.American Electricity Supply - Measuring individual circuits](files/N_America_Fig_4a_0.svg) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_4b_0.svg)
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_4c_0.svg)
-<span style="font-size: smaller">Figure 4a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring individual circuits.</span>
+<p style="font-size: smaller">Figure 4a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring individual circuits.</p>
 
 Fig 4a: Power = V × I = EnergyMonitor::realPower
 
@@ -85,10 +85,10 @@ The obvious way to connect the current transformers is to have each connected di
 
 ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5a.svg) ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5b.svg)
 ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5c.svg)
-<span style="font-size: smaller">Figure 5a-c. North American Domestic Electricity Supply - Connecting the Current Transformers.
+<p style="font-size: smaller">Figure 5a-c. North American Domestic Electricity Supply - Connecting the Current Transformers.
 Fig 5a – One input per CT – voltage type with internal burden or current type with burden in the emonTx
 Fig 5b – CTs in parallel with a common burden in the emonTx – using a single input
-Fig 5c – ‘Voltage output’ CTs or CTs with individual burdens – using a single input</span>
+Fig 5c – ‘Voltage output’ CTs or CTs with individual burdens – using a single input</p>
 
 In Fig 5a, the burden and calibration coefficient are calculated in the standard way. The burden value is calculated to give approx 1.1 V rms for the emonTx, or 1.6 V for the emonTx Shield, at maximum measured current. The calibration coefficient is then calculated:
 
