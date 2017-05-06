@@ -52,7 +52,7 @@ Electric cars (EV's) are often quoted at a performance of 4 miles/kWh which can 
 
 The carbon emissions of EV's vary with the carbon intensity of electricity production (gCO2/kWh). EV's have the potential to have very low carbon emissions per mile of the electricity is generated via renewable sources.
 
-UK grid carbon constantly intensity varies, here is an average carbon intensity of the UK grid for 2009 - 2017. Source: [Grid Carbon](http://t.co/PZhouQhTKV).
+UK grid carbon constantly intensity varies, here is an average carbon intensity of the UK grid for 2009 - 2017. Source: [Grid Carbon](http://www.gridcarbon.uk).
 
 *Note: since EV's are mainly charged overnight when grid carbon intensity is often at it's lowest the actual figure will be lower than the annual average.*
 
