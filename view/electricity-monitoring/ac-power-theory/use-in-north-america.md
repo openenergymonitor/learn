@@ -761,11 +761,38 @@ Other output currents and voltage output versions & “Revenue Grade” versions
 ![yhdc_sct023r.png](files/yhdc_sct023r.png)
 ![yhdc_sct023r_drawing.png](files/yhdc_sct023r_drawing.png)
 
-| Rated Current (IPN) | Maximum Input (IPM) | Rated Output | Maximum Burden |
-| ------------------- | ------------------- | ------------ | -------------- |
-| 100 A | 150 A | 50 mA | 100 Ω |
-| 200 A | 300 A | 50 mA | 80 Ω |
-| 400 A | 480 A | 50 mA | 50 Ω |
+<div class="xaxiswrapper">
+<table>
+<thead>
+<tr>
+<th>Rated Current (IPN)</th>
+<th>Maximum Input (IPM)</th>
+<th>Rated Output</th>
+<th>Maximum Burden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100 A</td>
+<td>150 A</td>
+<td>50 mA</td>
+<td>100 Ω</td>
+</tr>
+<tr>
+<td>200 A</td>
+<td>300 A</td>
+<td>50 mA</td>
+<td>80 Ω</td>
+</tr>
+<tr>
+<td>400 A</td>
+<td>480 A</td>
+<td>50 mA</td>
+<td>50 Ω</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 For all variants:
 
