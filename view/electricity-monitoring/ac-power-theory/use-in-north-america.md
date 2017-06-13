@@ -975,6 +975,18 @@ Multiphase: Phase A, Phase B, Phase C</td>
 
 <tr>
 
+<td>Customer premises switch that disconnects equipment from the Mains</td>
+
+<td>Isolator</td>
+
+<td>Disconnect</td>
+
+</tr>
+
+<tr>
+
+<tr>
+
 <td>Distribution panel incorporating a main switch and MCBs or fuses</td>
 
 <td>Consumer Unit</td>
