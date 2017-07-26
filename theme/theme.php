@@ -85,13 +85,8 @@ un-comment above to load resources remotely-->
       </div>
     </div>
   </div>
-
-  <div class="container">
-
-    <div id="mySidenav" class="sidenav">
-      <div class="sidenav_inner">
-        <div class="darkerBkd">
-          <div class="oemMenu">
+        <div class="darkerBkd" id="oemMenu">
+          <div class="oemMenu" id="oemMenu">
             <ul>
               <li title="the homepage of OpenEnergyMonitor">
                 <a href="https://openenergymonitor.org">
@@ -136,6 +131,11 @@ un-comment above to load resources remotely-->
             </ul>
           </div>
         </div>
+  <div class="container">
+
+    <div id="mySidenav" class="sidenav">
+      <div class="sidenav_inner">
+
 
         <div class="lowermenuWrapper">
 
@@ -366,12 +366,20 @@ $(".sublevelhead").click(function() {
 
 $(".fa-navicon").click(function(){
   fixsidebar = true;
+    $("#oemMenu").css("width","0");
+  $("#oemMenu").show();
+  $("#oemMenu").animate({ width:'100' },"0.5s");
   $(".blackOut").show();
   $(".sidenav").css("width","0");
-  $(".sidenav").show();
-  $(".sidenav").animate({ width:'300' },"0.5s");
-  $(".darkerBkd").show();
-  $(".oemMenu").show();
+   $(".sidenav").show();
+ 
+
+  
+  
+    $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
+
+  
+  
   $("html, body").addClass("menuFreeze");
   $(".navname").hide();
   $(".searchContainer").hide();
@@ -382,6 +390,9 @@ $(".fa-navicon").click(function(){
   $(".sublevel").css("padding-left","10px");
   $(".sublevel ul").css("list-style-type","none");
 });
+
+
+
 
 // ----------------------------------------------------------------------------------------
 // Close sidebar...
@@ -396,21 +407,27 @@ function closeNav() {
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
     $(".blackOut").hide();
     fixsidebar = false;
-    $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
+    $(".sidenav").animate({ width:'0' },"0.5s",onmenuClose());
     $(".sidenav").css("width","300px");
-    $(".darkerBkd").hide();
-    $(".oemMenu").hide();
+    $("#oemMenu").hide();
     $("html, body").removeClass("menuFreeze");
+  }
+};
+
+function onmenuClose() {
+    $(".sidenav").hide();
     $(".navname").show();
-    $(".searchContainer").show();
     $(".lowermenuWrapper").css("margin-left","0");
     $(".topIcons").css({"display":"inline-block","margin":"0"});
     $(".toplevelname").css({"width":"auto","font-size":"18px"});
     $(".sublevelhead").css("padding-left","35px");
     $(".sublevel").css("padding-left","60px");
     $(".sublevel ul").css("list-style-type","circle");
-  }
+    $(".searchContainer").show();
+
 };
+
+
 
 // ----------------------------------------------------------------------------------------
 //  Responsive sidebar...
