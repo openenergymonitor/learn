@@ -76,6 +76,11 @@ un-comment above to load resources remotely-->
               <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
             </a>
           </li>
+          <li title="search for something on OpenEnergyMonitor">
+    				<a class="searchIcon">
+    					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
+    				</a>
+    			</li>
         </ul>
       </div>
     </div>
@@ -86,14 +91,6 @@ un-comment above to load resources remotely-->
     <div id="mySidenav" class="sidenav">
       <div class="sidenav_inner">
         <div class="darkerBkd">
-          <div class="titleWrapper">
-            <div class='menuTitle' style="font-size:20px;">
-              <div class="menuSelect">
-                <i id="menuSelect" class="fa fa-plus-circle"></i>
-              </div>
-              Site Links
-            </div>
-          </div>
           <div class="oemMenu">
             <ul>
               <li title="the homepage of OpenEnergyMonitor">
@@ -131,6 +128,11 @@ un-comment above to load resources remotely-->
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
                 </a>
               </li>
+              <li title="search for something on OpenEnergyMonitor">
+        				<a class="searchIcon">
+        					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
+        				</a>
+        			</li>
             </ul>
           </div>
         </div>
@@ -200,11 +202,40 @@ un-comment above to load resources remotely-->
   <div id="rightpanel">
     <div id="rightpanel-inner"></div>
   </div>
+  <div class="searchBox">
+  <form target="_blank" id="searchform" action="https://www.google.com/cse">
+    <div>
+      <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
+      <input type="hidden" name="ie" value="UTF-8" />
+      <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
+      <input type="submit" id="searchsubmit" name="sa" value="Search" />
+    </div>
+  </form>
+</div>
   <div class="blackOut"></div>
 </body>
 </html>
 
 <script>
+
+
+$(".searchIcon").click(function() {
+   $(".searchBox").css("display","flex");
+   $(".searchText").animate({width: "200px"});
+   $(".searchText").focus();
+   $("html, body").addClass("menuFreeze");
+});
+
+$(".searchBox").click(function() {
+   $(".searchBox").hide();
+  $(".searchText").css("width","0");
+  closeNav()
+});
+
+$(".searchBox form").click( function(event) {
+   event.stopPropagation();
+});
+
 
 // ----------------------------------------------------------------------------------------
 // No padding if no content in right panel...
@@ -301,7 +332,6 @@ $(".toplevelhead").click(function() {
     $(this).addClass("clickedOnce");
     var topLevel = $(this).next();
     topLevel.slideDown("fast");
-    $(".oemMenu").slideUp("fast");
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
   }
 });
@@ -326,7 +356,6 @@ $(".sublevelhead").click(function() {
     $(this).addClass("clickedOnce");
     var sublevel = $(this).next();
     sublevel.slideDown("fast");
-    $(".oemMenu").slideUp("fast");
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
   }
 });
@@ -342,7 +371,16 @@ $(".fa-navicon").click(function(){
   $(".sidenav").show();
   $(".sidenav").animate({ width:'300' },"0.5s");
   $(".darkerBkd").show();
+  $(".oemMenu").show();
   $("html, body").addClass("menuFreeze");
+  $(".navname").hide();
+  $(".searchContainer").hide();
+  $(".lowermenuWrapper").css("margin-left","100px");
+  $(".topIcons").css({"display":"block","margin":"0 auto"});
+  $(".toplevelname").css({"width":"100%","font-size":"14px"});
+  $(".sublevelhead").css("padding-left","10px");
+  $(".sublevel").css("padding-left","10px");
+  $(".sublevel ul").css("list-style-type","none");
 });
 
 // ----------------------------------------------------------------------------------------
@@ -361,8 +399,16 @@ function closeNav() {
     $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
     $(".sidenav").css("width","300px");
     $(".darkerBkd").hide();
-    $(".oemMenu").slideUp("fast");
+    $(".oemMenu").hide();
     $("html, body").removeClass("menuFreeze");
+    $(".navname").show();
+    $(".searchContainer").show();
+    $(".lowermenuWrapper").css("margin-left","0");
+    $(".topIcons").css({"display":"inline-block","margin":"0"});
+    $(".toplevelname").css({"width":"auto","font-size":"18px"});
+    $(".sublevelhead").css("padding-left","35px");
+    $(".sublevel").css("padding-left","60px");
+    $(".sublevel ul").css("list-style-type","circle");
   }
 };
 
