@@ -48,7 +48,17 @@ This page includes a series of tables designed to help compare the energy and ca
 
 ### Electric vehicles
 
-Electric cars are often quoted at a performance of 4 miles/kWh which can easily be achieved with electric cars such as the Nissan Leaf and Renault Zoe. This performance is dependent on acceleration, de-acceleration, speed and terrain in the same way as internal combustion cars.
+Electric cars (EV's) are often quoted at a performance of 4 miles/kWh which can easily be achieved with electric cars such as the Nissan Leaf and Renault Zoe. This performance is dependent on acceleration, de-acceleration, speed and terrain in the same way as internal combustion cars.
+
+The carbon emissions of EV's vary with the carbon intensity of electricity production (gCO2/kWh). EV's have the potential to have very low carbon emissions per mile of the electricity is generated via renewable sources.
+
+UK grid carbon constantly intensity varies, here is an average carbon intensity of the UK grid for 2009 - 2017. Source: [Grid Carbon](http://www.gridcarbon.uk).
+
+*Note: since EV's are mainly charged overnight when grid carbon intensity is often at it's lowest the actual figure will be lower than the annual average.*
+
+![uk-grid-carbon-years.png](images/uk-grid-carbon-years.png)
+
+
 
 Grid electric @ 500 gCO2/kWh
 
@@ -136,7 +146,7 @@ Grid electric @ 0 gCO2/kWh
 
 ### Taking into account lithium ion battery embodied energy
 
-Figures for the embodied energy and carbon emissions of manufacturing often have fairly large error margins due to differences in manufacturing techniques and factors such as the fuel mix of the electricity used by a factory. 
+Figures for the embodied energy and carbon emissions of manufacturing often have fairly large error margins due to differences in manufacturing techniques and factors such as the fuel mix of the electricity used by a factory.
 
 One of the more recent papers available that provides a guide to the embodied energy of lithium ion batteries among other technologies is a paper published in 2015 in the royal society of chemistry on [Hydrogen or batteries for grid storage? A net energy analysis](http://pubs.rsc.org/en/content/articlehtml/2015/ee/c4ee04041d). The figure quoted suggests that each kWh of lithium ion battery requires 136 kWh of energy to manufacture. An earlier paper published by members of the same team suggested an embodied energy of 454 kWh per kWh ([figure 1](https://www.researchgate.net/figure/255770835_fig1_Fig-1-Energy-storage-technologies-require-varying-amounts-of-energy-for-manufacturing)).
 
@@ -147,7 +157,7 @@ Using 136 kWh per kWh of battery and a battery capacity of 24 kWh for the Nissan
     Total energy demand: 33,264 kWh
     Total performance: 3.61 miles/kWh
 
-A Nissan leaf driven normally in a relatively hilly rural area (Snowdonia North Wales) with a fair amount of acceleration & de-acceleration in our own testing achieves about 3.8 miles/kWh (over 4 miles/Kwh is easily achievable on flat roads at moderate speed). Including the embodied energy of the battery would drop this to 3.44 miles/kWh. At the UK average grid intensity of [367gCO2/kWh](http://www.earth.org.uk/note-on-UK-grid-CO2-intensity-variations.html#fullyear2015) in 2015, this would equate to 107gCO2/mile or 67gCO2/km. Which would provide a carbon savings of 28% compared to a 70 MPG petrol car, 39% compared to 60 MPG and 48% compared to 50 MPG. 
+A Nissan leaf driven normally in a relatively hilly rural area (Snowdonia North Wales) with a fair amount of acceleration & de-acceleration in our own testing achieves about 3.8 miles/kWh (over 4 miles/Kwh is easily achievable on flat roads at moderate speed). Including the embodied energy of the battery would drop this to 3.44 miles/kWh. At the UK average grid intensity of [367gCO2/kWh](http://www.earth.org.uk/note-on-UK-grid-CO2-intensity-variations.html#fullyear2015) in 2015, this would equate to 107gCO2/mile or 67gCO2/km. Which would provide a carbon savings of 28% compared to a 70 MPG petrol car, 39% compared to 60 MPG and 48% compared to 50 MPG.
 
 If the embodied energy of the battery is not included as the carbon impact of battery manufacturing is more complicated and depends on many other factors the savings would be 36%, 45% and 54% respectively. It's also worth noting that lithium batteries can at the end of they useful life in a car be put to good use as grid storage then eventually recycled.
 

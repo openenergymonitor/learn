@@ -1,4 +1,4 @@
-## Developing community scale zero carbon energy scenario’s
+## Developing community scale zero carbon energy scenarios
 
 Scenario’s such as ZeroCarbonBritain and the analysis in Sustainable Energy without the hot air are often national scale energy scenarios, for the UK this provides the advantage of being able to consider powering a large bulk of UK electricity demand from offshore wind turbines, where wind speeds are generally higher and more consistent, or perhaps focusing particular energy crops in regions most suited to their growing.
 

@@ -15,7 +15,7 @@ The normal rating of the domestic supply will be 80 or 100 A. The supply author
 Compared to the UK, the North American final distribution transformer tends to be quite small, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre-tapped, and the centre tap is the neutral, which is also earthed.
 
 ![N.American Electricity Supply - final transformer voltages](files/N_America_Fig_1.svg)
-<span style="font-size: smaller">Figure 1\. North American Domestic Electricity Supply - final transformer voltages.</span>
+<p style="font-size: smaller">Figure 1\. North American Domestic Electricity Supply - final transformer voltages.</p>
 
 The voltage tolerance is ±5% and the imbalance between the two legs has been reported to be better than 2 V, although there is no actual specification regarding voltage imbalance. Load centre (circuit breaker panel) layout enables an electrician to distribute the loads between the two legs when the wiring is installed. Standard practice among US electricians is to connect the circuits to the breakers in numerical sequence, with odd numbered breakers connected to one leg and even numbered breakers connected to the other leg. Thus, half of them will be on one leg, half on the other leg, with the aim being to balance the load evenly.
 
@@ -26,7 +26,7 @@ The frequency tolerance is ±0.02 Hz. The effect of the higher frequency will, f
 Because there are three wires (discounting the protective earth conductor), classical theory dictates that two wattmeters are needed, and for ‘wattmeter’ read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_2.svg)
-<span style="font-size: smaller">Figure 2\. North American Domestic Electricity Supply - Measuring whole-house power.</span>
+<p style="font-size: smaller">Figure 2\. North American Domestic Electricity Supply - Measuring whole-house power.</p>
 
 In Fig 2, assume for simplicity the loads are all purely resistive. (If they are not, which will almost certainly be the case in practice, the same principle applies but the maths is a little more complicated.)
 
@@ -40,11 +40,10 @@ V × I<sub>CT1</sub> + V × I<sub>CT2</sub>
 
 which is correct.
 
-Other arrangements are possible. Indeed, if the physical arrangement of the wiring permits, only one current transformer might be necessary:
+Other arrangements are possible:
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3a.svg) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3b.svg)
-![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3c.svg)
-<span style="font-size: smaller">Figure 3a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</span>
+<p style="font-size: smaller">Figure 3a-b. North American Domestic Electricity Supply - Alternative arrangements for measuring whole-house power.</p>
 
 Fig 3a: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>3</sub>
 
@@ -58,17 +57,13 @@ I<sub>CT2</sub> = I<sub>2</sub> - I<sub>1</sub>
 
 Total Power = 2 × V × I<sub>CT1</sub> + V × I<sub>CT2</sub>
 
-Fig 3c: I<sub>CT1</sub> = I<sub>1</sub> + I<sub>2</sub> + 2 × I<sub>3</sub>
-
-Total Power = V × I<sub>CT1</sub>
-
 #### Measuring Individual Circuits
 
 Individual circuits may be either 120 V using a connection between one leg and neutral, or they may be 240 V, i.e. connected to both legs.
 
 ![N.American Electricity Supply - Measuring individual circuits](files/N_America_Fig_4a_0.svg) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_4b_0.svg)
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_4c_0.svg)
-<span style="font-size: smaller">Figure 4a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring individual circuits.</span>
+<p style="font-size: smaller">Figure 4a-c. North American Domestic Electricity Supply - Alternative arrangements for measuring individual circuits.</p>
 
 Fig 4a: Power = V × I = EnergyMonitor::realPower
 
@@ -90,10 +85,10 @@ The obvious way to connect the current transformers is to have each connected di
 
 ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5a.svg) ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5b.svg)
 ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5c.svg)
-<span style="font-size: smaller">Figure 5a-c. North American Domestic Electricity Supply - Connecting the Current Transformers.
+<p style="font-size: smaller">Figure 5a-c. North American Domestic Electricity Supply - Connecting the Current Transformers.
 Fig 5a – One input per CT – voltage type with internal burden or current type with burden in the emonTx
 Fig 5b – CTs in parallel with a common burden in the emonTx – using a single input
-Fig 5c – ‘Voltage output’ CTs or CTs with individual burdens – using a single input</span>
+Fig 5c – ‘Voltage output’ CTs or CTs with individual burdens – using a single input</p>
 
 In Fig 5a, the burden and calibration coefficient are calculated in the standard way. The burden value is calculated to give approx 1.1 V rms for the emonTx, or 1.6 V for the emonTx Shield, at maximum measured current. The calibration coefficient is then calculated:
 
@@ -766,11 +761,38 @@ Other output currents and voltage output versions & “Revenue Grade” versions
 ![yhdc_sct023r.png](files/yhdc_sct023r.png)
 ![yhdc_sct023r_drawing.png](files/yhdc_sct023r_drawing.png)
 
-| Rated Current (IPN) | Maximum Input (IPM) | Rated Output | Maximum Burden |
-| ------------------- | ------------------- | ------------ | -------------- |
-| 100 A | 150 A | 50 mA | 100 Ω |
-| 200 A | 300 A | 50 mA | 80 Ω |
-| 400 A | 480 A | 50 mA | 50 Ω |
+<div class="xaxiswrapper">
+<table>
+<thead>
+<tr>
+<th>Rated Current (IPN)</th>
+<th>Maximum Input (IPM)</th>
+<th>Rated Output</th>
+<th>Maximum Burden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100 A</td>
+<td>150 A</td>
+<td>50 mA</td>
+<td>100 Ω</td>
+</tr>
+<tr>
+<td>200 A</td>
+<td>300 A</td>
+<td>50 mA</td>
+<td>80 Ω</td>
+</tr>
+<tr>
+<td>400 A</td>
+<td>480 A</td>
+<td>50 mA</td>
+<td>50 Ω</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 For all variants:
 
@@ -883,7 +905,7 @@ to the premises
 
 <td>Incomers
 
-<td>Feeders
+<td>Service Entrance Wires
 
 </tr>
 
@@ -950,6 +972,18 @@ Multiphase: Phase A, Phase B, Phase C</td>
 (both Line and Neutral are considered ‘Live’ when energised)</td>
 
 </tr>
+
+<tr>
+
+<td>Customer premises switch that disconnects equipment from the Mains</td>
+
+<td>Isolator</td>
+
+<td>Disconnect</td>
+
+</tr>
+
+<tr>
 
 <tr>
 

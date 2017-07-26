@@ -36,7 +36,7 @@ Switching the dump load at 10% and 90% of the packet capacity.
 
 This is the principle used in the [Mk2 Router](/pv-diversion/mk2/index), a fully engineered system that will route surplus energy to an immersion heater operating as a dump load.
 
-Since writing the above, it has been noted that the Itron/Landis & Gyr/Actaris ACE1000 meter uses a ‘packet’ of 1250 J, and the Ampy 5193A has a 'packet' of 3000 J. The Landis & Gyr E110, when exporting, flashes its LED but does not increment the register.  The three-phase Elster 1700, when exporting, also flashes its LED but does not increment the register.
+Since writing the above, it has been noted that the Itron/Landis & Gyr/Actaris ACE1000 meter uses a ‘packet’ of 1250 J, and the Ampy 5193A has a 'packet' of 3000 J. The Landis & Gyr E110, when exporting, will flash 'rEd' on the display and turn the LED on when a programmable level of export has been reached (see user manual). In this state it does not increment the register.  The three-phase Elster 1700, when exporting, flashes its LED but does not increment the register.
 
 The French Landis & Gyr L16C6 is thought to have a very small energy packet size, such that the burst mode energy diverter is reported to NOT work at any energy-packet-size setting, though it does behave as expected when phase control is used.
 
