@@ -43,11 +43,11 @@ body {
     user-select: none;
 }
 .fcontainer:hover .learnpageIcons {
-   background-color: #77c8ea;
-   border: 8px solid #ffffff;
+   background-color: #777777;
+   /*border: 8px solid #ffffff;*/
 }
 .fcontainer:hover h2 {
-   color: #44b3e2;
+   color: #777777;
 }
 .learnpageIcons i {
    display: table-cell;

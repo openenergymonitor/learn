@@ -227,7 +227,16 @@ body {
 //  Google search...
 /*---------------------------------------------------------------------*/
 
-.mainmenuColor {background-color: #44b3e2;}
+.mainmenuColor {background-color: #ffffff;
+  color: #44b3e2;
+}
+
+	@media screen and (min-width: 1080px) {
+	  .mainmenuColor {
+			  color: #ffffff;
+			  background-color: #44b3e2;
+	  }
+  }
 
 .searchContainer {
 	box-sizing: border-box;
@@ -258,8 +267,8 @@ body {
   height: 30px;
   width: 30px;
   border: none;
-  background-color: #777;
   color: #fff;
+  background-color: #777777;
 }
 
 /*---------------------------------------------------------------------/
@@ -530,42 +539,8 @@ body {
 
 @media screen and (max-width: 1079px) {
 .navigation {
-  position: fixed;
   display: none;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  height: 100vh;
-  margin: 0;
-  width: 0;
-  font-size: 20px;
-  background-color: #44b3e2;
-  color: #ffffff;
-  box-sizing: border-box;
-  overflow: auto;
-  min-width: 0;
-  padding-right: 0;
-  z-index:9999;
 }
-.navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding-top: 0;
-  display: block;
-}
-.navigation ul li a {
-  box-sizing: border-box;
-  font-family: "ubuntu";
-  font-size: 20px;
-  display: block;
-  color: #ffffff;
-  padding: 20px 20px 20px 40px;
-  min-width: 220px;
-  text-align: left;
-}
-.navigation ul li .fa {
-  min-width: 25px;
-  }
 }
 
 .navname {
@@ -676,7 +651,7 @@ pre::-webkit-scrollbar-thumb {
     color:#ffffff;
 		float: left;
     text-align:left;
-		background-color: #44b3e2;
+		background-color: #ffffff;
 	  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	  -webkit-touch-callout: none;
   	-webkit-user-select: none;
@@ -685,12 +660,22 @@ pre::-webkit-scrollbar-thumb {
 	  -ms-user-select: none;
 	   user-select: none;
 }
+	@media screen and (min-width: 1080px) {
+	  .sidenav {
+			  background-color: #44b3e2;
+	  }
+  }
 	.sidenav a  {
 			padding: 8px 8px 0 0;
 			text-decoration: none;
-			color: #fff;
+			color: #44b3e2;
 			display: block;
 	}
+	@media screen and (min-width: 1080px) {
+	  .sidenav a  {
+			  color: #ffffff;
+	  }
+  }
 	.sidenav table td {
 		  border: none;
 	}
@@ -703,17 +688,6 @@ pre::-webkit-scrollbar-thumb {
     box-sizing: border-box;
     padding: 0;
     width: 300px;
-}
-
-.darkerBkd {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: #22a5dd;
-	display: none;
-	width: 100px;
-	height: 100vh;
-	z-index: 999999999999999;
 }
 
 .titleWrapper {
@@ -741,34 +715,47 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .oemMenu {
-	box-sizing: border-box;
-	display: block;
-	height: 100vh;
-	
-/*----------------------------*/
-/*----------------------------*/
-	
+	display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 0;
+  margin: 0;
+  font-size: 20px;
+  background-color: #44b3e2;
+  color: #ffffff;
+  box-sizing: border-box;
+  overflow: auto;
+  min-width: 0;
+  padding-right: 0;
+	z-index: 999999999999999;
 }
-	.oemMenu ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-	}
-		.oemMenu ul li {
-			padding: 0;
-			line-height: 42px;
-			text-align: left;
-		}
-			.oemMenu ul li a {
-				box-sizing: border-box;
-				font-size: 20px;
-				padding: 0 20px 0 40px;
-				display: block;
-				width: 100%;
-				height: 12.5vh;
-					line-height: 12.5vh;
-        color: #ffffff;
-			}
+
+  .oemMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+      
+  .oemMenu ul li a {
+    box-sizing: border-box;
+    font-family: "ubuntu";
+    font-size: 20px;
+    display: block;
+    color: #ffffff;
+    padding: 0 20px 0 40px;
+    height: 12.5vh;
+    line-height: 12.5vh;
+    min-width: 100px;
+    text-align: left;
+  }
+      
+  .oemMenu ul li .fa {
+    min-width: 25px;
+  }
+
 
 .lowermenuWrapper {
 	  padding-top: 42px;
@@ -794,7 +781,8 @@ pre::-webkit-scrollbar-thumb {
 }
 	.toplevelhead:hover > .topIcons {
 	  border: 4px solid #ffffff;
-	  background-color: #77c8ea;
+	  background-color: #777777;
+	  color: #ffffff;
 	}
 
 .sublevelhead {
@@ -872,15 +860,22 @@ pre::-webkit-scrollbar-thumb {
 		font-size: 30px;
 		text-align: center;
 		line-height: 48px;
-	  border: 4px solid #ffffff;
+	  border: 4px solid #44b3e2;
 	  box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
 	  border-radius: 50%;
 	  transition: background-color 0.3s;
 	}
+			@media (min-width: 1080px) {
+				.topIcons, .learnpageIcons {
+	  border: 4px solid #ffffff;
+
+				}
+			}
 
 	.topIcons.clickedOnce {
 	  border: 4px solid #ffffff;
-	  background-color: rgba(255,255,255, 0.2);
+	  background-color: #777777;
+	  color: #ffffff;
 	}
 
 	.toplevelname {

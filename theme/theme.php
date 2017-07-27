@@ -85,8 +85,7 @@ un-comment above to load resources remotely-->
       </div>
     </div>
   </div>
-        <div class="darkerBkd" id="oemMenu">
-          <div class="oemMenu" id="oemMenu">
+          <div class="oemMenu">
             <ul>
               <li title="the homepage of OpenEnergyMonitor">
                 <a href="https://openenergymonitor.org">
@@ -129,7 +128,6 @@ un-comment above to load resources remotely-->
         				</a>
         			</li>
             </ul>
-          </div>
         </div>
   <div class="container">
 
@@ -366,20 +364,13 @@ $(".sublevelhead").click(function() {
 
 $(".fa-navicon").click(function(){
   fixsidebar = true;
-    $("#oemMenu").css("width","0");
-  $("#oemMenu").show();
-  $("#oemMenu").animate({ width:'100' },"0.5s");
-  $(".blackOut").show();
   $(".sidenav").css("width","0");
-   $(".sidenav").show();
- 
-
-  
-  
-    $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
-
-  
-  
+  $(".sidenav").show();
+  $(".oemMenu").css("width","0");
+  $(".oemMenu").show();
+  $(".oemMenu").animate({ width:'100' },"0.5s");
+  $(".blackOut").show();
+  $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
   $("html, body").addClass("menuFreeze");
   $(".navname").hide();
   $(".searchContainer").hide();
@@ -409,7 +400,7 @@ function closeNav() {
     fixsidebar = false;
     $(".sidenav").animate({ width:'0' },"0.5s",onmenuClose());
     $(".sidenav").css("width","300px");
-    $("#oemMenu").hide();
+    $(".oemMenu").hide();
     $("html, body").removeClass("menuFreeze");
   }
 };
