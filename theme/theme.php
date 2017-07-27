@@ -28,40 +28,33 @@ un-comment above to load resources remotely-->
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-
   <div class="container">
-
-    
     <div class="row">
-      <?php
-      echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
-
-      global $redirected,$redirecterror;
-      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site Learn.</p></div>";
-      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site Learn. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
-
-      echo $content;
-      ?>
+        <?php
+        echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
+        global $redirected,$redirecterror;
+        if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site Learn.</p></div>";
+        if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site Learn. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
+        echo $content;
+        ?>
       <div class="nextPrev">
         <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
       </div>
     </div>
-
   </div>
   <div id="rightpanel">
     <div id="rightpanel-inner"></div>
   </div>
   <div class="searchBox">
-  <form target="_blank" id="searchform" action="https://www.google.com/cse">
-    <div>
-      <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
-      <input type="hidden" name="ie" value="UTF-8" />
-      <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
-      <input type="submit" id="searchsubmit" name="sa" value="Search" />
-    </div>
-  </form>
-</div>
-
+    <form target="_blank" id="searchform" action="https://www.google.com/cse">
+      <div>
+        <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
+        <input type="submit" id="searchsubmit" name="sa" value="Search" />
+      </div>
+    </form>
+  </div>
   <div class="titleHolder">
     <div class="communityWrapper">
       <i class="fa fa-navicon"></i>
@@ -73,57 +66,47 @@ un-comment above to load resources remotely-->
           </span>
         </a>
       </div>
-          <div class="blackOut"></div>
-       <div id="mySidenav" class="sidenav">
-      <div class="sidenav_inner">
-
-
-        <div class="lowermenuWrapper">
-
-          <div class="searchContainer">
-            
-            <form method="get" action="https://www.google.com/search">
-              <div>
-                <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
-                <input type="text" name="q" size="15" />
-                <input type="submit" name="sa" value="&#xf002;" />
+        <div class="blackOut"></div>
+        <div id="mySidenav" class="sidenav">
+          <div class="sidenav_inner">
+            <div class="lowermenuWrapper">
+              <div class="searchContainer">
+                <form method="get" action="https://www.google.com/search">
+                  <div>
+                    <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
+                    <input type="text" name="q" size="15" />
+                    <input type="submit" name="sa" value="&#xf002;" />
+                  </div>
+                </form>
               </div>
-            </form>
-            
+            <div class="mainmenuColor">
+              <?php
+              $menu = json_decode(file_get_contents("menu.json"));
+              foreach ($menu as $mk1=>$mv1)
+              {
+                echo "<div class='toplevelhead'>
+                <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
+                echo "<div class='toplevel' name='$mk1'>";
+                foreach ($mv1->chapters as $mk2=>$mv2)
+                {
+                  echo "<div class='sublevelhead'>
+                  <span>
+                  <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+                  </span>&nbsp;".$mv2->nicename."</div>";
+                  echo "<div class='sublevel' name='$mk2'><ul>";
+                  foreach ($mv2->pages as $mk3=>$mv3)
+                  {
+                    echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+                  }
+                  echo "</div>";
+                }
+                echo "</div>";
+              }
+              ?>
+            </div>
           </div>
-          <div class="mainmenuColor">
-        <?php
-
-        $menu = json_decode(file_get_contents("menu.json"));
-
-        foreach ($menu as $mk1=>$mv1)
-        {
-          echo "<div class='toplevelhead'>
-          <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
-          echo "<div class='toplevel' name='$mk1'>";
-
-          foreach ($mv1->chapters as $mk2=>$mv2)
-          {
-            echo "<div class='sublevelhead'>
-            <span>
-            <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
-            </span>&nbsp;".$mv2->nicename."</div>";
-            echo "<div class='sublevel' name='$mk2'><ul>";
-
-            foreach ($mv2->pages as $mk3=>$mv3)
-            {
-              echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-            }
-            echo "</div>";
-          }
-          echo "</div>";
-        }
-
-        ?>
-      </div>
         </div>
       </div>
-    </div>
       <div id="siteLinks" class="navigation">
         <ul>
           <li title="the homepage of OpenEnergyMonitor">
@@ -343,30 +326,22 @@ $(".fa-navicon").click(function(){
   $(".sublevel ul").css("list-style-type","none");
 });
 
-
-
-
 // ----------------------------------------------------------------------------------------
 // Close sidebar...
 // ----------------------------------------------------------------------------------------
 
-$(".blackOut").click(function(){
+$(".blackOut").click(function() {
   closeNav();
 });
 
 function closeNav() {
-  if (fixsidebar === true) {
+  if ( fixsidebar === true ) {
     fixsidebar = false;
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
     $(".blackOut").hide();
-    $(".sidenav").animate({ width:'0' },"0.5s",onmenuClose());
     $(".sidenav").css("width","300px");
     $(".navigation").css("width","0");
     $("html, body").removeClass("menuFreeze");
-}
-};
-
-function onmenuClose() {
     $(".sidenav").hide();
     $(".lowermenuWrapper").css("margin-left","0");
     $(".topIcons").css({"display":"inline-block","margin":"0"});
@@ -375,10 +350,8 @@ function onmenuClose() {
     $(".sublevel").css("padding-left","60px");
     $(".sublevel ul").css("list-style-type","circle");
     $(".searchContainer").show();
-
+  }
 };
-
-
 
 // ----------------------------------------------------------------------------------------
 //  Responsive sidebar...
@@ -436,17 +409,35 @@ function sidebar_resize() {
 }
 
 var inputFocus = false; // fix resize bug on input
+var xsize = 0;
 
+$(window).on('load', function(){
+  xsize = $( window ).width();
+});
+
+var rtime;
+var timeout = false;
+var delta = 200;
 $(window).resize(function() {
-    if ((inputFocus === true) && ($(window).width() < 1079)) {
-      return;
-    }
-    else {
-    $(".sidenav").hide();
-      closeNav();
-      setTimeout(function(){ sidebar_resize(); }, 500);
+    rtime = new Date();
+    if (timeout === false) {
+        timeout = true;
+        setTimeout(resizeend, delta);
     }
 });
+
+function resizeend() {
+    if (new Date() - rtime < delta) {
+        setTimeout(resizeend, delta);
+    } else {
+         if (xsize != $(window).width()) {
+        timeout = false;
+        closeNav();
+        sidebar_resize();
+         }
+}
+xsize = $(window).width();
+}
 
 $(".searchContainer :input").focus(function(){
   inputFocus = true;
@@ -455,7 +446,20 @@ $(".searchContainer :input").focus(function(){
 $(".searchContainer :input").blur(function(){
   inputFocus = false;
 });
-
+/*
+$(window).resize(function() {
+  if ((inputFocus === true) && ($(window).width() < 1079) ) {
+      setTimeout(function(){ sidebar_resize(); }, 500);
+  }
+  else {
+    if (xsize != $( window ).width()) { //stop resize event on height change
+      $(".sidenav").hide();
+      closeNav();
+      setTimeout(function(){ sidebar_resize(); }, 500);
+    }
+  }
+});
+*/
 // ----------------------------------------------------------------------------------------
 //  Next & previous links on page...
 // ----------------------------------------------------------------------------------------
