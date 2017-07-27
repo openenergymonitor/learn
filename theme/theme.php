@@ -28,6 +28,40 @@ un-comment above to load resources remotely-->
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
+
+  <div class="container">
+
+    
+    <div class="row">
+      <?php
+      echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
+
+      global $redirected,$redirecterror;
+      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site Learn.</p></div>";
+      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site Learn. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
+
+      echo $content;
+      ?>
+      <div class="nextPrev">
+        <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+      </div>
+    </div>
+
+  </div>
+  <div id="rightpanel">
+    <div id="rightpanel-inner"></div>
+  </div>
+  <div class="searchBox">
+  <form target="_blank" id="searchform" action="https://www.google.com/cse">
+    <div>
+      <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
+      <input type="hidden" name="ie" value="UTF-8" />
+      <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
+      <input type="submit" id="searchsubmit" name="sa" value="Search" />
+    </div>
+  </form>
+</div>
+
   <div class="titleHolder">
     <div class="communityWrapper">
       <i class="fa fa-navicon"></i>
@@ -39,55 +73,8 @@ un-comment above to load resources remotely-->
           </span>
         </a>
       </div>
-      <div id="siteLinks" class="navigation">
-        <ul>
-          <li title="the homepage of OpenEnergyMonitor">
-            <a href="https://openenergymonitor.org">
-              <i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span>
-            </a>
-          </li>
-          <li title="a user guide for the OpenEnergyMonitor system">
-            <a href="https://guide.openenergymonitor.org">
-              <i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span>
-            </a>
-          </li>
-          <li title="you are here: general information about energy monitoring, diversion and sustainability" class="actoemLink">
-            <a href="https://learn.openenergymonitor.org">
-              <i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span>
-            </a>
-          </li>
-          <li title="a definitive list of resources for OpenEnergyMonitor hardware">
-            <a href="https://guide.openenergymonitor.org/technical/resources/">
-              <i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span>
-            </a>
-          </li>
-          <li title="the openenergymonitor forum">
-            <a href="https://community.openenergymonitor.org">
-              <i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span>
-            </a>
-          </li>
-          <li title="keep up with new developments at OpenEnergyMonitor">
-            <a href="https://blog.openenergymonitor.org">
-              <i class="fa fa-bullhorn" aria-hidden="true"></i><span class="navname">&nbsp;Blog</span>
-            </a>
-          </li>
-          <li title="the official OpenEnergyMonitor online store">
-            <a href="https://shop.openenergymonitor.com">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
-            </a>
-          </li>
-          <li title="search for something on OpenEnergyMonitor">
-    				<a class="searchIcon">
-    					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
-    				</a>
-    			</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-
-    <div id="mySidenav" class="sidenav">
+          <div class="blackOut"></div>
+       <div id="mySidenav" class="sidenav">
       <div class="sidenav_inner">
 
 
@@ -137,41 +124,60 @@ un-comment above to load resources remotely-->
         </div>
       </div>
     </div>
-    <div class="row">
-      <?php
-      echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
-
-      global $redirected,$redirecterror;
-      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site Learn.</p></div>";
-      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site Learn. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
-
-      echo $content;
-      ?>
-      <div class="nextPrev">
-        <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+      <div id="siteLinks" class="navigation">
+        <ul>
+          <li title="the homepage of OpenEnergyMonitor">
+            <a href="https://openenergymonitor.org">
+              <i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span>
+            </a>
+          </li>
+          <li title="a user guide for the OpenEnergyMonitor system">
+            <a href="https://guide.openenergymonitor.org">
+              <i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span>
+            </a>
+          </li>
+          <li title="you are here: general information about energy monitoring, diversion and sustainability" class="actoemLink">
+            <a href="https://learn.openenergymonitor.org">
+              <i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span>
+            </a>
+          </li>
+          <li title="a definitive list of resources for OpenEnergyMonitor hardware">
+            <a href="https://guide.openenergymonitor.org/technical/resources/">
+              <i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span>
+            </a>
+          </li>
+          <li title="the openenergymonitor forum">
+            <a href="https://community.openenergymonitor.org">
+              <i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span>
+            </a>
+          </li>
+          <li title="keep up with new developments at OpenEnergyMonitor">
+            <a href="https://blog.openenergymonitor.org">
+              <i class="fa fa-bullhorn" aria-hidden="true"></i><span class="navname">&nbsp;Blog</span>
+            </a>
+          </li>
+          <li title="the official OpenEnergyMonitor online store">
+            <a href="https://shop.openenergymonitor.com">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
+            </a>
+          </li>
+          <li title="search for something on OpenEnergyMonitor">
+    				<a class="searchIcon">
+    					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
+    				</a>
+    			</li>
+        </ul>
       </div>
     </div>
-
   </div>
-  <div id="rightpanel">
-    <div id="rightpanel-inner"></div>
-  </div>
-  <div class="searchBox">
-  <form target="_blank" id="searchform" action="https://www.google.com/cse">
-    <div>
-      <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
-      <input type="hidden" name="ie" value="UTF-8" />
-      <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
-      <input type="submit" id="searchsubmit" name="sa" value="Search" />
-    </div>
-  </form>
-</div>
-  <div class="blackOut"></div>
 </body>
 </html>
 
 <script>
 
+// ----------------------------------------------------------------------------------------
+// OEM common bar search...
+// ----------------------------------------------------------------------------------------
 
 $(".searchIcon").click(function() {
    $(".searchBox").css("display","flex");
@@ -189,7 +195,6 @@ $(".searchBox").click(function() {
 $(".searchBox form").click( function(event) {
    event.stopPropagation();
 });
-
 
 // ----------------------------------------------------------------------------------------
 // No padding if no content in right panel...
@@ -328,7 +333,6 @@ $(".fa-navicon").click(function(){
   $(".blackOut").show();
   $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
   $("html, body").addClass("menuFreeze");
-  $(".navname").hide();
   $(".searchContainer").hide();
   $(".lowermenuWrapper").css("margin-left","100px");
   $(".topIcons").css({"display":"block","margin":"0 auto"});
@@ -351,18 +355,14 @@ $(".blackOut").click(function(){
 
 function closeNav() {
   if (fixsidebar === true) {
+    fixsidebar = false;
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
     $(".blackOut").hide();
-    fixsidebar = false;
     $(".sidenav").animate({ width:'0' },"0.5s",onmenuClose());
     $(".sidenav").css("width","300px");
-    $(".navigation").hide();
+    $(".navigation").css("width","0");
     $("html, body").removeClass("menuFreeze");
-  }
-  else {
-        $(".navigation").hide();
-
-  }
+}
 };
 
 function onmenuClose() {
@@ -388,8 +388,7 @@ function sidebar_resize() {
   var height = $(window).height();
   if (width<1080) {
     if (fixsidebar===false) {
-          $(".navigation").hide();
-
+      $(".navigation").css("width","0");
     }
     else {
       $(".blackOut").show();
@@ -401,7 +400,6 @@ function sidebar_resize() {
     $(".container").css("margin-left","300px");
     $(".blackOut").hide();
     $(".navigation").show();
-    $(".navname").show();
     }
   if (width<1080) {     //  Responsive right hand panel
     $("#rightpanel").css("margin","0 auto");
@@ -443,6 +441,7 @@ $(window).resize(function() {
       return;
     }
     else {
+    $(".sidenav").hide();
       closeNav();
       setTimeout(function(){ sidebar_resize(); }, 500);
     }

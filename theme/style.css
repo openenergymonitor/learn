@@ -399,7 +399,7 @@ body {
   left: 0;
   color: #ffffff;
   padding-left: 12px;
-  z-index: 9997;
+  z-index: 999;
 }
 
 @media screen and (max-width: 1079px) {
@@ -415,7 +415,6 @@ body {
   height: 42px;
   background-color: #44b3e2;
   overflow: hidden;
-  z-index: 999;
   box-shadow: 0 -2px 4px 2px #000;
 }
 
@@ -465,7 +464,6 @@ body {
 	min-width: 750px;
 	overflow: visible;
 	padding-right: 7px;
-	z-index: 20;
 	box-sizing: content-box;
 }
 	.navigation ul {
@@ -554,7 +552,7 @@ body {
   overflow: auto;
   min-width: 0;
   padding-right: 0;
-	z-index: 999999999999999;
+  z-index: 9999;
 }
 
   .navigation ul {
@@ -581,10 +579,16 @@ body {
   }
 
 }
-}
+
 
 .navname {
 	line-height: 42px;
+}
+
+@media screen and (max-width: 1079px) {
+.navname {
+display:none;}
+  
 }
 
 .actoemLink {
@@ -604,7 +608,6 @@ body {
   background-color: rgba(0,0,0,0.5);
   overflow: hidden;
   cursor: pointer;
-  z-index:9998;
 }
 
 /*---------------------------------------------------------------------/
@@ -680,6 +683,8 @@ pre::-webkit-scrollbar-thumb {
 
 .sidenav {
     width: 300px;
+    		margin-top: 42px;
+
 		max-height: 100vh;
 		min-height: 100vh;
 		overflow-x: hidden;
@@ -755,15 +760,14 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .lowermenuWrapper {
-	  padding-top: 42px;
 		background-color: #368fb4;
 }
 
 @media screen and (max-width: 1079px) {
 	.sidenav {
 		display: none;
-		z-index: 999999;
 		width: 0;
+		margin-top: 0;
 	}
 	.lowermenuWrapper {
 		  padding-top: 0;
