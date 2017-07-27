@@ -189,6 +189,7 @@ $(".searchIcon").click(function() {
 $(".searchBox").click(function() {
    $(".searchBox").hide();
   $(".searchText").css("width","0");
+  $("html, body").removeClass("menuFreeze");
   closeNav()
 });
 
