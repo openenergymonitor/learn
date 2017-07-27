@@ -85,50 +85,6 @@ un-comment above to load resources remotely-->
       </div>
     </div>
   </div>
-          <div class="oemMenu">
-            <ul>
-              <li title="the homepage of OpenEnergyMonitor">
-                <a href="https://openenergymonitor.org">
-                  <i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span>
-                </a>
-              </li>
-              <li title="a user guide for the OpenEnergyMonitor system">
-                <a href="https://guide.openenergymonitor.org">
-                  <i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span>
-                </a>
-              </li>
-              <li title="you are here: general information about energy monitoring, diversion and sustainability" class="actoemLink">
-                <a href="https://learn.openenergymonitor.org">
-                  <i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span>
-                </a>
-              </li>
-              <li title="a definitive list of resources for OpenEnergyMonitor hardware">
-                <a href="https://guide.openenergymonitor.org/technical/resources/">
-                  <i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span>
-                </a>
-              </li>
-              <li title="the openenergymonitor forum">
-                <a href="https://community.openenergymonitor.org">
-                  <i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span>
-                </a>
-              </li>
-              <li title="keep up with new developments at OpenEnergyMonitor">
-                <a href="https://blog.openenergymonitor.org">
-                  <i class="fa fa-bullhorn" aria-hidden="true"></i><span class="navname">&nbsp;Blog</span>
-                </a>
-              </li>
-              <li title="the official OpenEnergyMonitor online store">
-                <a href="https://shop.openenergymonitor.com">
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
-                </a>
-              </li>
-              <li title="search for something on OpenEnergyMonitor">
-        				<a class="searchIcon">
-        					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
-        				</a>
-        			</li>
-            </ul>
-        </div>
   <div class="container">
 
     <div id="mySidenav" class="sidenav">
@@ -275,7 +231,7 @@ $(".titleWrapper").click(function(){
 });
 
 function open_topmenu(){
-  $(".oemMenu").slideToggle("fast");
+  $(".navigation").slideToggle("fast");
   $(".titleWrapper").find('#menuSelect').toggleClass('fa-plus-circle fa-minus-circle');
 };
 
@@ -366,9 +322,9 @@ $(".fa-navicon").click(function(){
   fixsidebar = true;
   $(".sidenav").css("width","0");
   $(".sidenav").show();
-  $(".oemMenu").css("width","0");
-  $(".oemMenu").show();
-  $(".oemMenu").animate({ width:'100' },"0.5s");
+  $(".navigation").css("width","0");
+  $(".navigation").show();
+  $(".navigation").animate({ width:'100' },"0.5s");
   $(".blackOut").show();
   $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
   $("html, body").addClass("menuFreeze");
@@ -400,14 +356,17 @@ function closeNav() {
     fixsidebar = false;
     $(".sidenav").animate({ width:'0' },"0.5s",onmenuClose());
     $(".sidenav").css("width","300px");
-    $(".oemMenu").hide();
+    $(".navigation").hide();
     $("html, body").removeClass("menuFreeze");
+  }
+  else {
+        $(".navigation").hide();
+
   }
 };
 
 function onmenuClose() {
     $(".sidenav").hide();
-    $(".navname").show();
     $(".lowermenuWrapper").css("margin-left","0");
     $(".topIcons").css({"display":"inline-block","margin":"0"});
     $(".toplevelname").css({"width":"auto","font-size":"18px"});
@@ -429,6 +388,8 @@ function sidebar_resize() {
   var height = $(window).height();
   if (width<1080) {
     if (fixsidebar===false) {
+          $(".navigation").hide();
+
     }
     else {
       $(".blackOut").show();
@@ -439,6 +400,8 @@ function sidebar_resize() {
     $(".sidenav").css("width","300px");
     $(".container").css("margin-left","300px");
     $(".blackOut").hide();
+    $(".navigation").show();
+    $(".navname").show();
     }
   if (width<1080) {     //  Responsive right hand panel
     $("#rightpanel").css("margin","0 auto");
@@ -477,7 +440,7 @@ var inputFocus = false; // fix resize bug on input
 
 $(window).resize(function() {
     if ((inputFocus === true) && ($(window).width() < 1079)) {
-      console.log("twotwo");
+      return;
     }
     else {
       closeNav();
