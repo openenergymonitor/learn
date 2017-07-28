@@ -28,6 +28,33 @@ un-comment above to load resources remotely-->
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+        <?php
+        echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
+        global $redirected,$redirecterror;
+        if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site Learn.</p></div>";
+        if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site Learn. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
+        echo $content;
+        ?>
+      <div class="nextPrev">
+        <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
+      </div>
+    </div>
+  </div>
+  <div id="rightpanel">
+    <div id="rightpanel-inner"></div>
+  </div>
+  <div class="searchBox">
+    <form target="_blank" id="searchform" action="https://www.google.com/cse">
+      <div>
+        <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
+        <input type="submit" id="searchsubmit" name="sa" value="Search" />
+      </div>
+    </form>
+  </div>
   <div class="titleHolder">
     <div class="communityWrapper">
       <i class="fa fa-navicon"></i>
@@ -38,6 +65,47 @@ un-comment above to load resources remotely-->
           | Open<strong>EnergyMonitor</strong>
           </span>
         </a>
+      </div>
+        <div class="blackOut"></div>
+        <div id="mySidenav" class="sidenav">
+          <div class="sidenav_inner">
+            <div class="lowermenuWrapper">
+              <div class="searchContainer">
+                <form method="get" action="https://www.google.com/search">
+                  <div>
+                    <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
+                    <input type="text" name="q" size="15" />
+                    <input type="submit" name="sa" value="&#xf002;" />
+                  </div>
+                </form>
+              </div>
+            <div class="mainmenuColor">
+              <?php
+              $menu = json_decode(file_get_contents("menu.json"));
+              foreach ($menu as $mk1=>$mv1)
+              {
+                echo "<div class='toplevelhead'>
+                <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
+                echo "<div class='toplevel' name='$mk1'>";
+                foreach ($mv1->chapters as $mk2=>$mv2)
+                {
+                  echo "<div class='sublevelhead'>
+                  <span>
+                  <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+                  </span>&nbsp;".$mv2->nicename."</div>";
+                  echo "<div class='sublevel' name='$mk2'><ul>";
+                  foreach ($mv2->pages as $mk3=>$mv3)
+                  {
+                    echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+                  }
+                  echo "</div>";
+                }
+                echo "</div>";
+              }
+              ?>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="siteLinks" class="navigation">
         <ul>
@@ -76,135 +144,41 @@ un-comment above to load resources remotely-->
               <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
             </a>
           </li>
+          <li title="search for something on OpenEnergyMonitor">
+    				<a class="searchIcon">
+    					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
+    				</a>
+    			</li>
         </ul>
       </div>
     </div>
   </div>
-
-  <div class="container">
-
-    <div id="mySidenav" class="sidenav">
-      <div class="sidenav_inner">
-        <div class="darkerBkd">
-          <div class="titleWrapper">
-            <div class='menuTitle' style="font-size:20px;">
-              <div class="menuSelect">
-                <i id="menuSelect" class="fa fa-plus-circle"></i>
-              </div>
-              Site Links
-            </div>
-          </div>
-          <div class="oemMenu">
-            <ul>
-              <li title="the homepage of OpenEnergyMonitor">
-                <a href="https://openenergymonitor.org">
-                  <i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span>
-                </a>
-              </li>
-              <li title="a user guide for the OpenEnergyMonitor system">
-                <a href="https://guide.openenergymonitor.org">
-                  <i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span>
-                </a>
-              </li>
-              <li title="you are here: general information about energy monitoring, diversion and sustainability" class="actoemLink">
-                <a href="https://learn.openenergymonitor.org">
-                  <i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span>
-                </a>
-              </li>
-              <li title="a definitive list of resources for OpenEnergyMonitor hardware">
-                <a href="https://guide.openenergymonitor.org/technical/resources/">
-                  <i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span>
-                </a>
-              </li>
-              <li title="the openenergymonitor forum">
-                <a href="https://community.openenergymonitor.org">
-                  <i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span>
-                </a>
-              </li>
-              <li title="keep up with new developments at OpenEnergyMonitor">
-                <a href="https://blog.openenergymonitor.org">
-                  <i class="fa fa-bullhorn" aria-hidden="true"></i><span class="navname">&nbsp;Blog</span>
-                </a>
-              </li>
-              <li title="the official OpenEnergyMonitor online store">
-                <a href="https://shop.openenergymonitor.com">
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="lowermenuWrapper">
-
-          <div class="searchContainer">
-            
-            <form method="get" action="https://www.google.com/search">
-              <div>
-                <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
-                <input type="text" name="q" size="15" />
-                <input type="submit" name="sa" value="&#xf002;" />
-              </div>
-            </form>
-            
-          </div>
-          <div class="mainmenuColor">
-        <?php
-
-        $menu = json_decode(file_get_contents("menu.json"));
-
-        foreach ($menu as $mk1=>$mv1)
-        {
-          echo "<div class='toplevelhead'>
-          <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
-          echo "<div class='toplevel' name='$mk1'>";
-
-          foreach ($mv1->chapters as $mk2=>$mv2)
-          {
-            echo "<div class='sublevelhead'>
-            <span>
-            <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
-            </span>&nbsp;".$mv2->nicename."</div>";
-            echo "<div class='sublevel' name='$mk2'><ul>";
-
-            foreach ($mv2->pages as $mk3=>$mv3)
-            {
-              echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-            }
-            echo "</div>";
-          }
-          echo "</div>";
-        }
-
-        ?>
-      </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <?php
-      echo "<div class='editGit'><a href=".$github_url.">Edit&nbsp;<i class='fa fa-github' aria-hidden='true'></i></a></div>";
-
-      global $redirected,$redirecterror;
-      if ($redirected) echo "<div class='notice'><p><b>Redirect:</b> You have been redirected from Building Block Resources to our new documentation site Learn.</p></div>";
-      if ($redirecterror) echo "<div class='warning'><p><b>Redirect error:</b> You have been redirected from Building Blocks Resources to our new documentation site Learn. Sorry we cannot find the page you requested please email support@openenergymonitor.zendesk.com</p></div>";
-
-      echo $content;
-      ?>
-      <div class="nextPrev">
-        <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
-      </div>
-    </div>
-
-  </div>
-  <div id="rightpanel">
-    <div id="rightpanel-inner"></div>
-  </div>
-  <div class="blackOut"></div>
 </body>
 </html>
 
 <script>
+
+// ----------------------------------------------------------------------------------------
+// OEM common bar search...
+// ----------------------------------------------------------------------------------------
+
+$(".searchIcon").click(function() {
+   $(".searchBox").css("display","flex");
+   $(".searchText").animate({width: "200px"});
+   $(".searchText").focus();
+   $("html, body").addClass("menuFreeze");
+});
+
+$(".searchBox").click(function() {
+   $(".searchBox").hide();
+  $(".searchText").css("width","0");
+  $("html, body").removeClass("menuFreeze");
+  closeNav()
+});
+
+$(".searchBox form").click( function(event) {
+   event.stopPropagation();
+});
 
 // ----------------------------------------------------------------------------------------
 // No padding if no content in right panel...
@@ -246,7 +220,7 @@ $(".titleWrapper").click(function(){
 });
 
 function open_topmenu(){
-  $(".oemMenu").slideToggle("fast");
+  $(".navigation").slideToggle("fast");
   $(".titleWrapper").find('#menuSelect').toggleClass('fa-plus-circle fa-minus-circle');
 };
 
@@ -301,7 +275,6 @@ $(".toplevelhead").click(function() {
     $(this).addClass("clickedOnce");
     var topLevel = $(this).next();
     topLevel.slideDown("fast");
-    $(".oemMenu").slideUp("fast");
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
   }
 });
@@ -326,7 +299,6 @@ $(".sublevelhead").click(function() {
     $(this).addClass("clickedOnce");
     var sublevel = $(this).next();
     sublevel.slideDown("fast");
-    $(".oemMenu").slideUp("fast");
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
   }
 });
@@ -337,107 +309,47 @@ $(".sublevelhead").click(function() {
 
 $(".fa-navicon").click(function(){
   fixsidebar = true;
-  $(".blackOut").show();
   $(".sidenav").css("width","0");
   $(".sidenav").show();
-  $(".sidenav").animate({ width:'300' },"0.5s");
-  $(".darkerBkd").show();
+  $(".navigation").css("width","0");
+  $(".navigation").show();
+  $(".navigation").animate({ width:'100' },"0.5s");
+  $(".blackOut").show();
+  $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
   $("html, body").addClass("menuFreeze");
+  $(".lowermenuWrapper").css("margin-left","100px");
+  $(".topIcons").css({"display":"block","margin":"0 auto"});
+  $(".toplevelname").css({"width":"100%","font-size":"14px"});
+  $(".sublevelhead").css("padding-left","10px");
+  $(".sublevel").css("padding-left","10px");
+  $(".sublevel ul").css("list-style-type","none");
 });
 
 // ----------------------------------------------------------------------------------------
 // Close sidebar...
 // ----------------------------------------------------------------------------------------
 
-$(".blackOut").click(function(){
+$(".blackOut").click(function() {
   closeNav();
 });
 
 function closeNav() {
-  if (fixsidebar === true) {
+  if ( fixsidebar === true ) {
+    fixsidebar = false;
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
     $(".blackOut").hide();
-    fixsidebar = false;
-    $(".sidenav").animate({ width:'0' },"0.5s",function(){$(".sidenav").hide()});
+    $(".sidenav").hide();
     $(".sidenav").css("width","300px");
-    $(".darkerBkd").hide();
-    $(".oemMenu").slideUp("fast");
+    $(".navigation").css("width","0");
     $("html, body").removeClass("menuFreeze");
+    $(".lowermenuWrapper").css("margin-left","0");
+    $(".topIcons").css({"display":"inline-block","margin":"0"});
+    $(".toplevelname").css({"width":"auto","font-size":"18px"});
+    $(".sublevelhead").css("padding-left","35px");
+    $(".sublevel").css("padding-left","60px");
+    $(".sublevel ul").css("list-style-type","circle");
   }
 };
-
-// ----------------------------------------------------------------------------------------
-//  Responsive sidebar...
-// ----------------------------------------------------------------------------------------
-
-function sidebar_resize() {
-  var width = $(window).width();
-  var height = $(window).height();
-  if (width<1080) {
-    if (fixsidebar===false) {
-    }
-    else {
-      $(".blackOut").show();
-    }
-    $(".container").css("margin","42px auto 0");
-    }
-  else {
-    $(".sidenav").css("width","300px");
-    $(".container").css("margin-left","300px");
-    $(".blackOut").hide();
-    }
-  if (width<1080) {     //  Responsive right hand panel
-    $("#rightpanel").css("margin","0 auto");
-    $("#rightpanel").css("width","100%");
-    $(".container").css("float","none");
-    $("#rightpanel").css("float","none");
-    $(".sidenav").hide();
-  }
-  else if (width<1260) {
-    $("#rightpanel").css("margin-left","300px");
-    $("#rightpanel").css("width","100%");
-    $(".container").css("float","none");
-    $("#rightpanel").css("float","none");
-    $(".sidenav").show();
-  }
-  else if (width<(1260+400)) {
-    $("#rightpanel").css("margin-left","300px");
-    $("#rightpanel").css("margin-top","42px");
-    $("#rightpanel").css("width","960px");
-    $(".container").css("float","none");
-    $("#rightpanel").css("float","none");
-    $(".sidenav").show();
-  }
-  else {
-    var rightwidth = width - 300 - 960 - 20;
-    $("#rightpanel").css("margin-left","0px");
-    $("#rightpanel").css("margin-top","42px");
-    $("#rightpanel").css("width",rightwidth+"px");
-    $(".container").css("float","left");
-    $("#rightpanel").css("float","left");
-    $(".sidenav").show();
-  }
-}
-
-var inputFocus = false; // fix resize bug on input
-
-$(window).resize(function() {
-    if ((inputFocus === true) && ($(window).width() < 1079)) {
-      console.log("twotwo");
-    }
-    else {
-      closeNav();
-      setTimeout(function(){ sidebar_resize(); }, 500);
-    }
-});
-
-$(".searchContainer :input").focus(function(){
-  inputFocus = true;
-});
-
-$(".searchContainer :input").blur(function(){
-  inputFocus = false;
-});
 
 // ----------------------------------------------------------------------------------------
 //  Next & previous links on page...
@@ -473,5 +385,86 @@ function pageLinks() {
 }
 
 pageLinks();
+
+// ----------------------------------------------------------------------------------------
+//  Responsive sidebar...
+// ----------------------------------------------------------------------------------------
+
+function sidebar_resize() {
+  var width = $(window).width();
+  var height = $(window).height();
+  if (width<1080) {
+    if (fixsidebar===false) {
+      $(".navigation").css("width","0");
+    }
+    else {
+      $(".blackOut").show();
+    }
+    $(".container").css("margin","42px auto 0");
+    }
+  else {
+    $(".sidenav").css("width","300px");
+    $(".container").css("margin-left","300px");
+    $(".blackOut").hide();
+    $(".navigation").show();
+    }
+  if (width<1080) { //  Responsive right hand panel
+    $("#rightpanel").css("margin","0 auto");
+    $("#rightpanel").css("width","100%");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").hide();
+  }
+  else if (width<1260) {
+    $("#rightpanel").css("margin-left","300px");
+    $("#rightpanel").css("width","100%");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").show();
+  }
+  else if (width<(1260+400)) {
+    $("#rightpanel").css("margin-left","300px");
+    $("#rightpanel").css("margin-top","42px");
+    $("#rightpanel").css("width","960px");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").show();
+  }
+  else {
+    var rightwidth = width - 300 - 960 - 20;
+    $("#rightpanel").css("margin-left","0px");
+    $("#rightpanel").css("margin-top","42px");
+    $("#rightpanel").css("width",rightwidth+"px");
+    $(".container").css("float","left");
+    $("#rightpanel").css("float","left");
+    $(".sidenav").show();
+  }
+}
+
+var inputFocus = false; // fix resize bug on input
+
+$(".searchContainer :input").focus(function(){
+  inputFocus = true;
+});
+
+$(".searchContainer :input").blur(function(){
+  inputFocus = false;
+});
+
+var xsize = 0;
+
+$(window).on('load', function(){
+  xsize = $( window ).width();
+});
+
+$(window).resize(function() {
+  setTimeout(function() {
+    if (xsize != $( window ).width()) {
+      closeNav();
+      sidebar_resize();
+      xsize = $( window ).width();
+    }
+  }, 500);
+});
 
 </script>
