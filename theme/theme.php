@@ -317,7 +317,6 @@ $(".fa-navicon").click(function(){
   $(".blackOut").show();
   $(".sidenav").delay("slow").show().animate({ width:'300' },"0.5s");
   $("html, body").addClass("menuFreeze");
-  $(".searchContainer").hide();
   $(".lowermenuWrapper").css("margin-left","100px");
   $(".topIcons").css({"display":"block","margin":"0 auto"});
   $(".toplevelname").css({"width":"100%","font-size":"14px"});
@@ -339,124 +338,19 @@ function closeNav() {
     fixsidebar = false;
     $("#menuSelect.fa-minus-circle").toggleClass('fa-plus-circle fa-minus-circle');
     $(".blackOut").hide();
+    $(".sidenav").hide();
     $(".sidenav").css("width","300px");
     $(".navigation").css("width","0");
     $("html, body").removeClass("menuFreeze");
-    $(".sidenav").hide();
     $(".lowermenuWrapper").css("margin-left","0");
     $(".topIcons").css({"display":"inline-block","margin":"0"});
     $(".toplevelname").css({"width":"auto","font-size":"18px"});
     $(".sublevelhead").css("padding-left","35px");
     $(".sublevel").css("padding-left","60px");
     $(".sublevel ul").css("list-style-type","circle");
-    $(".searchContainer").show();
   }
 };
 
-// ----------------------------------------------------------------------------------------
-//  Responsive sidebar...
-// ----------------------------------------------------------------------------------------
-
-function sidebar_resize() {
-  var width = $(window).width();
-  var height = $(window).height();
-  if (width<1080) {
-    if (fixsidebar===false) {
-      $(".navigation").css("width","0");
-    }
-    else {
-      $(".blackOut").show();
-    }
-    $(".container").css("margin","42px auto 0");
-    }
-  else {
-    $(".sidenav").css("width","300px");
-    $(".container").css("margin-left","300px");
-    $(".blackOut").hide();
-    $(".navigation").show();
-    }
-  if (width<1080) {     //  Responsive right hand panel
-    $("#rightpanel").css("margin","0 auto");
-    $("#rightpanel").css("width","100%");
-    $(".container").css("float","none");
-    $("#rightpanel").css("float","none");
-    $(".sidenav").hide();
-  }
-  else if (width<1260) {
-    $("#rightpanel").css("margin-left","300px");
-    $("#rightpanel").css("width","100%");
-    $(".container").css("float","none");
-    $("#rightpanel").css("float","none");
-    $(".sidenav").show();
-  }
-  else if (width<(1260+400)) {
-    $("#rightpanel").css("margin-left","300px");
-    $("#rightpanel").css("margin-top","42px");
-    $("#rightpanel").css("width","960px");
-    $(".container").css("float","none");
-    $("#rightpanel").css("float","none");
-    $(".sidenav").show();
-  }
-  else {
-    var rightwidth = width - 300 - 960 - 20;
-    $("#rightpanel").css("margin-left","0px");
-    $("#rightpanel").css("margin-top","42px");
-    $("#rightpanel").css("width",rightwidth+"px");
-    $(".container").css("float","left");
-    $("#rightpanel").css("float","left");
-    $(".sidenav").show();
-  }
-}
-
-var inputFocus = false; // fix resize bug on input
-var xsize = 0;
-
-$(window).on('load', function(){
-  xsize = $( window ).width();
-});
-
-var rtime;
-var timeout = false;
-var delta = 200;
-$(window).resize(function() {
-    rtime = new Date();
-    if (timeout === false) {
-        timeout = true;
-        setTimeout(resizeend, delta);
-    }
-});
-
-function resizeend() {
-    if (new Date() - rtime < delta) {
-        setTimeout(resizeend, delta);
-    } else {
-        timeout = false;
-        closeNav();
-        sidebar_resize();
-}
-}
-
-$(".searchContainer :input").focus(function(){
-  inputFocus = true;
-});
-
-$(".searchContainer :input").blur(function(){
-  inputFocus = false;
-});
-/*
-$(window).resize(function() {
-  if ((inputFocus === true) && ($(window).width() < 1079) ) {
-      setTimeout(function(){ sidebar_resize(); }, 500);
-  }
-  else {
-    if (xsize != $( window ).width()) { //stop resize event on height change
-      $(".sidenav").hide();
-      closeNav();
-      setTimeout(function(){ sidebar_resize(); }, 500);
-    }
-  }
-});
-*/
 // ----------------------------------------------------------------------------------------
 //  Next & previous links on page...
 // ----------------------------------------------------------------------------------------
@@ -491,5 +385,86 @@ function pageLinks() {
 }
 
 pageLinks();
+
+// ----------------------------------------------------------------------------------------
+//  Responsive sidebar...
+// ----------------------------------------------------------------------------------------
+
+function sidebar_resize() {
+  var width = $(window).width();
+  var height = $(window).height();
+  if (width<1080) {
+    if (fixsidebar===false) {
+      $(".navigation").css("width","0");
+    }
+    else {
+      $(".blackOut").show();
+    }
+    $(".container").css("margin","42px auto 0");
+    }
+  else {
+    $(".sidenav").css("width","300px");
+    $(".container").css("margin-left","300px");
+    $(".blackOut").hide();
+    $(".navigation").show();
+    }
+  if (width<1080) { //  Responsive right hand panel
+    $("#rightpanel").css("margin","0 auto");
+    $("#rightpanel").css("width","100%");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").hide();
+  }
+  else if (width<1260) {
+    $("#rightpanel").css("margin-left","300px");
+    $("#rightpanel").css("width","100%");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").show();
+  }
+  else if (width<(1260+400)) {
+    $("#rightpanel").css("margin-left","300px");
+    $("#rightpanel").css("margin-top","42px");
+    $("#rightpanel").css("width","960px");
+    $(".container").css("float","none");
+    $("#rightpanel").css("float","none");
+    $(".sidenav").show();
+  }
+  else {
+    var rightwidth = width - 300 - 960 - 20;
+    $("#rightpanel").css("margin-left","0px");
+    $("#rightpanel").css("margin-top","42px");
+    $("#rightpanel").css("width",rightwidth+"px");
+    $(".container").css("float","left");
+    $("#rightpanel").css("float","left");
+    $(".sidenav").show();
+  }
+}
+
+var inputFocus = false; // fix resize bug on input
+
+$(".searchContainer :input").focus(function(){
+  inputFocus = true;
+});
+
+$(".searchContainer :input").blur(function(){
+  inputFocus = false;
+});
+
+var xsize = 0;
+
+$(window).on('load', function(){
+  xsize = $( window ).width();
+});
+
+$(window).resize(function() {
+  setTimeout(function() {
+    if (xsize != $( window ).width()) {
+      closeNav();
+      sidebar_resize();
+      xsize = $( window ).width();
+    }
+  }, 500);
+});
 
 </script>
