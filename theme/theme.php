@@ -430,13 +430,10 @@ function resizeend() {
     if (new Date() - rtime < delta) {
         setTimeout(resizeend, delta);
     } else {
-         if (xsize != $(window).width()) {
         timeout = false;
         closeNav();
         sidebar_resize();
-         }
 }
-xsize = $(window).width();
 }
 
 $(".searchContainer :input").focus(function(){
