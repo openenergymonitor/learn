@@ -66,47 +66,55 @@ un-comment above to load resources remotely-->
           </span>
         </a>
       </div>
-        <div class="blackOut"></div>
-        <div id="mySidenav" class="sidenav">
-          <div class="sidenav_inner">
-            <div class="lowermenuWrapper">
-              <div class="searchContainer">
-                <form method="get" action="https://www.google.com/search">
-                  <div>
-                    <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
-                    <input type="text" name="q" size="15" />
-                    <input type="submit" name="sa" value="&#xf002;" />
-                  </div>
-                </form>
-              </div>
-            <div class="mainmenuColor">
-              <?php
-              $menu = json_decode(file_get_contents("menu.json"));
-              foreach ($menu as $mk1=>$mv1)
-              {
-                echo "<div class='toplevelhead'>
-                <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
-                echo "<div class='toplevel' name='$mk1'>";
-                foreach ($mv1->chapters as $mk2=>$mv2)
-                {
-                  echo "<div class='sublevelhead'>
-                  <span>
-                  <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
-                  </span>&nbsp;".$mv2->nicename."</div>";
-                  echo "<div class='sublevel' name='$mk2'><ul>";
-                  foreach ($mv2->pages as $mk3=>$mv3)
-                  {
-                    echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-                  }
-                  echo "</div>";
-                }
-                echo "</div>";
-              }
-              ?>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+      <div class="blackOut"></div>
+
+  <div id="mySidenav" class="sidenav">
+    <div class="sidenav_inner">
+      <div class="lowermenuWrapper">
+        <div class="searchContainer">
+          <form method="get" action="https://www.google.com/search">
+            <div>
+              <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
+              <input type="text" name="q" size="15" />
+              <input type="submit" name="sa" value="&#xf002;" />
             </div>
-          </div>
+          </form>
+        </div>
+        <div class="mainmenuColor">
+          <?php
+          $menu = json_decode(file_get_contents("menu.json"));
+          foreach ($menu as $mk1=>$mv1)
+          {
+            echo "<div class='toplevelhead'>
+            <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
+            echo "<div class='toplevel' name='$mk1'>";
+            foreach ($mv1->chapters as $mk2=>$mv2)
+            {
+              echo "<div class='sublevelhead'>
+              <span>
+              <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+              </span>&nbsp;".$mv2->nicename."</div>";
+              echo "<div class='sublevel' name='$mk2'><ul>";
+              foreach ($mv2->pages as $mk3=>$mv3)
+              {
+                echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+              }
+              echo "</div>";
+            }
+            echo "</div>";
+          }
+          ?>
         </div>
       </div>
+    </div>
+  </div>
       <div id="siteLinks" class="navigation">
         <ul>
           <li title="the homepage of OpenEnergyMonitor">
@@ -151,8 +159,9 @@ un-comment above to load resources remotely-->
     			</li>
         </ul>
       </div>
-    </div>
-  </div>
+  
+  
+  
 </body>
 </html>
 

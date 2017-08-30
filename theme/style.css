@@ -49,6 +49,7 @@ background-color: #f5f5f5;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
+  -webkit-appearance: none;
 }
 
 .searchBox input[type=submit]:hover {
@@ -550,8 +551,6 @@ length of Oem site links...
 
 @media screen and (min-width: 1080px) {
   .navigation {
-    position: relative;
-    float: right;
     display: inline-block;
     margin: 0;
   }
