@@ -551,8 +551,7 @@ length of Oem site links...
 
 @media screen and (min-width: 1080px) {
   .navigation {
-    display: inline-block;
-    margin: 0;
+    display: none !important;
   }
 }
 
