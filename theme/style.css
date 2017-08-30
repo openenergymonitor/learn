@@ -18,6 +18,138 @@ text-align: center;
 background-color: #f5f5f5;
 }
 
+/*--------------------------------------------
+Navigation...
+--------------------------------------------*/
+
+.navigationBig {
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: 0;
+  right: 0;
+  margin: 0;
+  height: 42px;
+  min-width: 750px;
+  overflow: visible;
+  padding-right: 7px;
+  box-sizing: content-box;
+}
+
+.navigationBig ul {
+  list-style-type: none;
+  float: right;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: block;
+}
+
+.navigationBig ul li {
+  float: left;
+  background-color: #44b3e2;
+}
+
+.navigationBig ul li a {
+  display: block;
+  line-height: 42px;
+  font-family:"ubuntu";
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1079px) {
+  .navigationBig {
+    display: none;
+  }
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 0;
+  margin: 0;
+  font-size: 20px;
+  background-color: #44b3e2;
+  color: #ffffff;
+  box-sizing: border-box;
+  overflow: auto;
+  min-width: 0;
+  padding-right: 0;
+  z-index: 9999;
+}
+  
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+  
+.navigation ul li a {
+  box-sizing: border-box;
+  font-family: "ubuntu";
+  font-size: 20px;
+  display: block;
+  color: #ffffff;
+  padding: 0 20px 0 40px;
+  height: 12.5vh;
+  line-height: 12.5vh;
+  min-width: 100px;
+  text-align: left;
+}
+  
+.navigation ul li .fa {
+  min-width: 25px;
+}
+
+@media screen and (min-width: 1080px) {
+  .navigation {
+    display: none;
+  }
+}
+
+.menuFreeze {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*--------------------------------------------
+length of Oem site links...
+--------------------------------------------*/
+
+.navigationBig ul li:nth-child(1) {
+  width: 82px;
+}
+.navigationBig ul li:nth-child(2) {
+  width: 81px;
+}
+.navigationBig ul li:nth-child(3) {
+  width: 85px;
+}
+.navigationBig ul li:nth-child(4) {
+  width: 113px;
+}
+.navigationBig ul li:nth-child(5) {
+  width: 123px;
+}
+.navigationBig ul li:nth-child(6) {
+  width: 73px;
+}
+.navigationBig ul li:nth-child(7) {
+  width: 75px;
+}
+.navigationBig ul li:nth-child(8) {
+  width: 87px;
+}
+
 /*---------------------------------------------------------------------/
 //  OEM common bar search...
 /*---------------------------------------------------------------------*/
@@ -476,131 +608,6 @@ font-weight: bold;
   .thisTitle a {
     padding-right: 12px;
     font-size: 20px !important;
-  }
-}
-
-.navigation {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  right: 0;
-  margin-right: 6px;
-  height: 42px;
-  min-width: 750px;
-  overflow: visible;
-  padding-right: 7px;
-  box-sizing: content-box;
-}
-
-.navigation ul {
-  list-style-type: none;
-  float: right;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: block;
-}
-
-.navigation ul li {
-  float: left;
-  background-color: #44b3e2;
-}
-
-/*--------------------------------------------
-length of Oem site links...
---------------------------------------------*/
-
-@media screen and (min-width: 1080px) {
-  .navigation ul li:nth-child(1) {
-    width: 82px;
-  }
-  .navigation ul li:nth-child(2) {
-    width: 81px;
-  }
-  .navigation ul li:nth-child(3) {
-    width: 85px;
-  }
-  .navigation ul li:nth-child(4) {
-    width: 113px;
-  }
-  .navigation ul li:nth-child(5) {
-    width: 123px;
-  }
-  .navigation ul li:nth-child(6) {
-    width: 73px;
-  }
-  .navigation ul li:nth-child(7) {
-    width: 75px;
-  }
-  .navigation ul li:nth-child(8) {
-    width: 87px;
-  }
-}
-
-.navigation ul li a {
-  display: block;
-  line-height: 42px;
-  font-family:"ubuntu";
-  font-size: 16px;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #ffffff;
-}
-
-@media screen and (min-width: 1080px) {
-  .navigation {
-    display: none !important;
-  }
-}
-
-.menuFreeze {
-  height: 100%;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 1079px) {
-  .navigation {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    max-height: 100vh;
-    width: 0;
-    margin: 0;
-    font-size: 20px;
-    background-color: #44b3e2;
-    color: #ffffff;
-    box-sizing: border-box;
-    overflow: auto;
-    min-width: 0;
-    padding-right: 0;
-    z-index: 9999;
-  }
-  
-  .navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navigation ul li a {
-    box-sizing: border-box;
-    font-family: "ubuntu";
-    font-size: 20px;
-    display: block;
-    color: #ffffff;
-    padding: 0 20px 0 40px;
-    height: 12.5vh;
-    line-height: 12.5vh;
-    min-width: 100px;
-    text-align: left;
-  }
-  
-  .navigation ul li .fa {
-    min-width: 25px;
   }
 }
 

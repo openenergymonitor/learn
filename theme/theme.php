@@ -66,56 +66,7 @@ un-comment above to load resources remotely-->
           </span>
         </a>
       </div>
-        
-      </div>
-    </div>
-  </div>
-  
-  
-  
-      <div class="blackOut"></div>
-
-  <div id="mySidenav" class="sidenav">
-    <div class="sidenav_inner">
-      <div class="lowermenuWrapper">
-        <div class="searchContainer">
-          <form method="get" action="https://www.google.com/search">
-            <div>
-              <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
-              <input type="text" name="q" size="15" />
-              <input type="submit" name="sa" value="&#xf002;" />
-            </div>
-          </form>
-        </div>
-        <div class="mainmenuColor">
-          <?php
-          $menu = json_decode(file_get_contents("menu.json"));
-          foreach ($menu as $mk1=>$mv1)
-          {
-            echo "<div class='toplevelhead'>
-            <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
-            echo "<div class='toplevel' name='$mk1'>";
-            foreach ($mv1->chapters as $mk2=>$mv2)
-            {
-              echo "<div class='sublevelhead'>
-              <span>
-              <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
-              </span>&nbsp;".$mv2->nicename."</div>";
-              echo "<div class='sublevel' name='$mk2'><ul>";
-              foreach ($mv2->pages as $mk3=>$mv3)
-              {
-                echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
-              }
-              echo "</div>";
-            }
-            echo "</div>";
-          }
-          ?>
-        </div>
-      </div>
-    </div>
-  </div>
-      <div id="siteLinks" class="navigation">
+      <div class="navigationBig">
         <ul>
           <li title="the homepage of OpenEnergyMonitor">
             <a href="https://openenergymonitor.org">
@@ -159,12 +110,95 @@ un-comment above to load resources remotely-->
     			</li>
         </ul>
       </div>
-  
-  
-  
+    </div>
+  </div>
+  <div class="blackOut"></div>
+  <div id="mySidenav" class="sidenav">
+    <div class="sidenav_inner">
+      <div class="lowermenuWrapper">
+        <div class="searchContainer">
+          <form method="get" action="https://www.google.com/search">
+            <div>
+              <input type="hidden" name="sitesearch" value="https://learn.openenergymonitor.org" />
+              <input type="text" name="q" size="15" />
+              <input type="submit" name="sa" value="&#xf002;" />
+            </div>
+          </form>
+        </div>
+        <div class="mainmenuColor">
+          <?php
+          $menu = json_decode(file_get_contents("menu.json"));
+          foreach ($menu as $mk1=>$mv1)
+          {
+            echo "<div class='toplevelhead'>
+            <div class='topIcons'><div class='iconCircle'></div></div><div class='toplevelname'>&nbsp;&nbsp;".$mv1->nicename."</div></div>";
+            echo "<div class='toplevel' name='$mk1'>";
+            foreach ($mv1->chapters as $mk2=>$mv2)
+            {
+              echo "<div class='sublevelhead'>
+              <span>
+              <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
+              </span>&nbsp;".$mv2->nicename."</div>";
+              echo "<div class='sublevel' name='$mk2'><ul>";
+              foreach ($mv2->pages as $mk3=>$mv3)
+              {
+                echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
+              }
+              echo "</div>";
+            }
+            echo "</div>";
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="siteLinks" class="navigation">
+    <ul>
+      <li title="the homepage of OpenEnergyMonitor">
+        <a href="https://openenergymonitor.org">
+          <i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span>
+        </a>
+      </li>
+      <li title="a user guide for the OpenEnergyMonitor system">
+        <a href="https://guide.openenergymonitor.org">
+          <i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span>
+        </a>
+      </li>
+      <li title="you are here: general information about energy monitoring, diversion and sustainability" class="actoemLink">
+        <a href="https://learn.openenergymonitor.org">
+          <i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span>
+        </a>
+      </li>
+      <li title="a definitive list of resources for OpenEnergyMonitor hardware">
+        <a href="https://guide.openenergymonitor.org/technical/resources/">
+          <i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span>
+        </a>
+      </li>
+      <li title="the openenergymonitor forum">
+        <a href="https://community.openenergymonitor.org">
+          <i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span>
+        </a>
+      </li>
+      <li title="keep up with new developments at OpenEnergyMonitor">
+        <a href="https://blog.openenergymonitor.org">
+          <i class="fa fa-bullhorn" aria-hidden="true"></i><span class="navname">&nbsp;Blog</span>
+        </a>
+      </li>
+      <li title="the official OpenEnergyMonitor online store">
+        <a href="https://shop.openenergymonitor.com">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span>
+        </a>
+      </li>
+      <li title="search for something on OpenEnergyMonitor">
+				<a class="searchIcon">
+					<i aria-hidden="true" class="fa fa-search"></i><span class="navname">&nbsp;Search</span>
+				</a>
+			</li>
+    </ul>
+  </div>
 </body>
 </html>
-
 <script>
 
 // ----------------------------------------------------------------------------------------
