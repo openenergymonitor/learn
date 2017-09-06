@@ -15,7 +15,7 @@ The normal rating of the domestic supply will be 80 or 100 A. The supply author
 Compared to the UK, the North American final distribution transformer tends to be quite small, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre-tapped, and the centre tap is the neutral, which is also earthed.
 
 ![N.American Electricity Supply - final transformer voltages](files/N_America_Fig_1.svg)
-<p style="font-size: smaller">Figure 1\. North American Domestic Electricity Supply - final transformer voltages.</p>
+<p style="font-size: smaller">Figure 1. North American Domestic Electricity Supply - final transformer voltages.</p>
 
 The voltage tolerance is ±5% and the imbalance between the two legs has been reported to be better than 2 V, although there is no actual specification regarding voltage imbalance. Load centre (circuit breaker panel) layout enables an electrician to distribute the loads between the two legs when the wiring is installed. Standard practice among US electricians is to connect the circuits to the breakers in numerical sequence, with odd numbered breakers connected to one leg and even numbered breakers connected to the other leg. Thus, half of them will be on one leg, half on the other leg, with the aim being to balance the load evenly.
 
@@ -26,7 +26,7 @@ The frequency tolerance is ±0.02 Hz. The effect of the higher frequency will, f
 Because there are three wires (discounting the protective earth conductor), classical theory dictates that two wattmeters are needed, and for ‘wattmeter’ read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_2.svg)
-<p style="font-size: smaller">Figure 2\. North American Domestic Electricity Supply - Measuring whole-house power.</p>
+<p style="font-size: smaller">Figure 2. North American Domestic Electricity Supply - Measuring whole-house power.</p>
 
 In Fig 2, assume for simplicity the loads are all purely resistive. (If they are not, which will almost certainly be the case in practice, the same principle applies but the maths is a little more complicated.)
 
