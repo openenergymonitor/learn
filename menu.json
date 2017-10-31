@@ -219,6 +219,31 @@
                     }
                 }
             },
+            "Installing the Arduino IDE": {
+                "nicename": "Installing the Arduino IDE",
+                "pages": {
+                    "Windows 10 OS: Installing the Arduino IDE": {
+                        "nicename": "Windows 10 OS: Installing the Arduino IDE",
+                        "url": "electricity-monitoring/arduinoide/"
+                    },
+                    "Windows 10 OS: Installing the Arduino Libraries": {
+                        "nicename": "Windows 10 OS: Installing the Arduino Libraries",
+                        "url": "electricity-monitoring/arduinoide/"
+                    },
+                    "Ubuntu (Linux) OS: Installing the Arduino IDE": {
+                        "nicename": "Ubuntu (Linux) OS: Installing the Arduino IDE",
+                        "url": "electricity-monitoring/arduinoide/"
+                    },
+                    "Ubuntu (Linux) OS: Installing the Arduino Libraries": {
+                        "nicename": "Ubuntu (Linux) OS: Installing the Arduino Libraries",
+                        "url": "electricity-monitoring/arduinoide/"
+                    },
+                    "macOS: Installing the Arduino Libraries": {
+                        "nicename": "macOS: Installing the Arduino Libraries",
+                        "url": "electricity-monitoring/arduinoide/"
+                    }
+                }
+            },
             "other-software": {
                 "nicename": "Other Software",
                 "pages": {
