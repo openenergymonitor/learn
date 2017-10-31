@@ -1,5 +1,7 @@
-Installing the Arduino Libraries – macOS
-Jon (Jon Murphy) 2017-06-17 19:24:22 UTC #1
+## Installing the Arduino Libraries – macOS
+<small>by Jon Murphy</small>
+***
+
 Before you install the libraries, it would be a good idea to think about how you will organise your Emon data. When
 you installed the Arduino IDE, it created a folder “Arduino” and beneath it a folder “libraries” in your “Home”
 directory. If you’re happy with that, then you should install the libraries in there.

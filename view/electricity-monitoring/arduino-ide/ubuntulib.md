@@ -1,4 +1,7 @@
-Installing the Arduino Libraries – Ubuntu Linux
+## Installing the Arduino Libraries – Ubuntu Linux
+<small>by Robert Wall</small>
+***
+
 Before you install the libraries, it would be a good idea to think about how you will organise your
 Emon data. When you installed the Arduino IDE, it created a folder “Arduino” and beneath it a
 folder “libraries” in your “Home” directory. If you’re happy with that, then you should install the

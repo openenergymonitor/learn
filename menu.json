@@ -219,8 +219,8 @@
                     }
                 }
             },
-            "installing-the-arduino-ide": {
-                "nicename": "Installing the Arduino IDE",
+            "arduino-ide": {
+                "nicename": "Using the Arduino IDE",
                 "pages": {
                     "windows-10-installing-the-arduino-ide": {
                         "nicename": "Windows 10 OS: Installing the Arduino IDE",
