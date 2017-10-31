@@ -219,28 +219,28 @@
                     }
                 }
             },
-            "Installing the Arduino IDE": {
+            "installing-the-arduino-ide": {
                 "nicename": "Installing the Arduino IDE",
                 "pages": {
-                    "Windows 10 OS: Installing the Arduino IDE": {
+                    "windows-10-installing-the-arduino-ide": {
                         "nicename": "Windows 10 OS: Installing the Arduino IDE",
-                        "url": "electricity-monitoring/arduinoide/"
+                        "url": "electricity-monitoring/arduino-ide/windows10ide"
                     },
-                    "Windows 10 OS: Installing the Arduino Libraries": {
+                    "windows-10-installing-the-arduino-libraries": {
                         "nicename": "Windows 10 OS: Installing the Arduino Libraries",
-                        "url": "electricity-monitoring/arduinoide/"
+                        "url": "electricity-monitoring/arduino-ide/windows10lib"
                     },
-                    "Ubuntu (Linux) OS: Installing the Arduino IDE": {
+                    "ubuntu-installing-the-arduino-ide": {
                         "nicename": "Ubuntu (Linux) OS: Installing the Arduino IDE",
-                        "url": "electricity-monitoring/arduinoide/"
+                        "url": "electricity-monitoring/arduino-ide/ubuntuide"
                     },
-                    "Ubuntu (Linux) OS: Installing the Arduino Libraries": {
+                    "ubuntu-installing-the-arduino-libraries": {
                         "nicename": "Ubuntu (Linux) OS: Installing the Arduino Libraries",
-                        "url": "electricity-monitoring/arduinoide/"
+                        "url": "electricity-monitoring/arduino-ide/ubuntulib"
                     },
-                    "macOS: Installing the Arduino Libraries": {
+                    "macos-installing-the-arduino-libraries": {
                         "nicename": "macOS: Installing the Arduino Libraries",
-                        "url": "electricity-monitoring/arduinoide/"
+                        "url": "electricity-monitoring/arduino-ide/macoslib"
                     }
                 }
             },
