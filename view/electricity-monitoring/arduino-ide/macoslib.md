@@ -12,13 +12,21 @@ called `OEM` is at the top level in my personal area, i.e. `Home/OEM`. Beneath t
 that will eventually contain more sub-folders for sketches for the various modules, and a `libraries` folder for
 the Arduino Libraries. This is the structure:
 
-* Bullet 1
-* Bullet 2
-  * Bullet 2a
-  * Bullet 2b
-    * Bullet 2a
-    * Bullet 2b
-* Bullet 3
+```
+ Home
+  │
+  └── OEM
+       │
+       └─── Drawings
+       └─── Manuals
+       └─── Software
+               │
+               └─── emonPi
+               └─── emonTH
+               └─── emonTx
+               └─── libraries
+          
+```
 
 It is most important that the `libraries` folder is at the same level in the hierarchy as the folders, or some ancestor of
 the folders, that will eventually contain the sketches. The parent of `libraries`, in this example called `Software` is
@@ -58,7 +66,7 @@ Many libraries are required, this is the full list:
   <br>**Note**: Only required for NanodeRF
 
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub the button is on
-the right-hand side. Click *Clone* or *Download* followed by *Download ZIP*:
+the right-hand side. Click `Clone or Download` followed by `Download ZIP`:
 
 ![macos-1](files/macos1.png)
 
