@@ -51,7 +51,7 @@ Many libraries are required, this is the full list:
 | Library            | Link                                                               | Notes |
 |--------------------|--------------------------------------------------------------------|-------|
 | JeeLib             | https://github.com/jcw/jeelib                                      |       |
-| RFu_JeeLib         | https://github.com/openenergymonitor/RFu_jeelib                    |   RFu JeeLib is only required for emonTx V3.2 and emonTH V1.4 using the RFu328 module.    |
+| RFu_JeeLib         | https://github.com/openenergymonitor/RFu_jeelib                    | Only required for emonTx V3.2 and emonTH V1.4 using the RFu328 module.    |
 | EmonLib            | https://github.com/openenergymonitor/EmonLib                       |       |
 | OneWire            | https://github.com/PaulStoffregen/OneWire                          |       |
 | DallasTemperature  | https://github.com/milesburton/Arduino-Temperature-Control-Library |       |
@@ -63,6 +63,8 @@ Many libraries are required, this is the full list:
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub
 the button is on the right-hand side. Click `Clone or download` followed by `Download ZIP`:
 
+![windows-lib-2](files/windowslib2.png)
+
 #### Installing the Libraries
 
 When you have downloaded all the files, go to your download location and from there you need to
@@ -73,12 +75,22 @@ showing the contents. Extract that folder into the `libraries` folder.
 
 The Arduino IDE does not allow hyphens '-' in the library folder names. Therefore you must rename
 the folders to the names below. You should end up with this:
+
+![ubuntu-lib-1](files/ubuntulib1.png)
+
 [If you wish, you can now delete the zip files that you downloaded.]
-Check the Libraries
+
+#### Check the Libraries
+
 If your Arduino IDE is running, close all open windows and shut it down completely. Start (or
-restart) the IDE. First you must tell the IDE where your 'Sketchbook' is located. Click on File >
-Preferences and at the top for “Sketchbook location” browse to and select your “Software” folder,
-then dismiss the Preferences window with OK. Click on Sketch > Include Library and you should
-see the list of libraries. The ones you just installed should be listed under “Contributed libraries”.
-[Note: The IDE only checks the libraries at start-up. Each time you change or add a library, you
-must completely shut down and restart the IDE.]
+restart) the IDE. First you must tell the IDE where your 'Sketchbook' is located. Click on `File > Preferences`
+and at the top for `Sketchbook location` browse to and select your `Software` folder,
+then dismiss the `Preferences` window with OK. Click on `Sketch > Include Library` and you should
+see the list of libraries. The ones you just installed should be listed under `Contributed libraries`.
+
+<div class="note">
+
+<p>Note: The IDE only checks the libraries at start-up. Each time you change or add a library, you
+must completely shut down and restart the IDE.</p>
+
+</div>

@@ -36,11 +36,11 @@ There is no need for specific board drivers for the Emon devices when used with 
 programmer.
 
 If you have a favourite text editor, you can use it instead of the built-in editor. `Select File >
-Preferences` and tick the box “Use external editor”. When you use an external editor, your workflow
+Preferences` and tick the box `Use external editor`. When you use an external editor, your workflow
 is slightly different. You must still open the sketch in the IDE, but the IDE does not open your editor -
 you must yourself open the sketch file in your external editor, and save the file when editing is
-done. Then you switch to the IDE where you can click “Verify” or “Upload” and the IDE will read
+done. Then you switch to the IDE where you can click `Verify` or `Upload` and the IDE will read
 the file again and then proceed to compile it (“Verify”) or compile and upload it (“Upload”).
 
-Read the section on [Installing the Libraries](/ubuntulib.md) before you set your `Sketchbook` location (under
-Preferences).
+Read the section on [Installing the Libraries](ubuntulib) before you set your Sketchbook location (under
+`Preferences`).

@@ -68,7 +68,7 @@ Many libraries are required, this is the full list:
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub the button is on
 the right-hand side. Click `Clone or Download` followed by `Download ZIP`:
 
-![macos-1](files/macos1.png)
+![windows-lib-2](files/windowslib2.png)
 
 #### Installing the Libraries
 
@@ -79,6 +79,9 @@ folder into the `libraries` folder.
 #### Renaming the Libraries
 
 The Arduino IDE does not allow hyphens '-' in the library folder names.
+
+![macos-2](files/macos2.png)
+
 Therefore you must rename the folders to the names below. You should end up with this:
 
 ![macos-3](files/macos3.png)
