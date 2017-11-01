@@ -6,12 +6,14 @@ Before you install the libraries, it would be a good idea to think about how you
 Emon data. When you installed the Arduino IDE, it created a folder “Arduino” and beneath it a
 folder “libraries” in your “Home” directory. If you’re happy with that, then you should install the
 libraries in there.
+
 However, I prefer to have a folder that contains everything related to OpenEnergyMonitor. That
 folder, which I've called 'OEM' is at the top level in my personal area, i.e. Home/OEM. Beneath
 that I have folders for Drawings, Manuals & Leaflets, and importantly that which concerns us here,
 Software. The Software folder contains sub-folders that will eventually contain more sub-folders for
 sketches for the various modules, and a 'libraries' folder for the Arduino Libraries. This is the
 structure:
+
 Home
 └─ OEM
 ├─ Drawings
@@ -21,36 +23,44 @@ Home
 ├─ emonTH
 ├─ emonTx
 └─ libraries
+
 It is most important that the “libraries” folder is at the same level in the hierarchy as the folders, or
 some ancestor of the folders, that will eventually contain the sketches. The parent of 'libraries', in
 this example called “Software” is what the Arduino documentation and the IDE refers to as the
 “Sketchbook”. You can choose whatever name you want for this folder.
+
 [Important Note: This is NOT the same 'libraries' folder that is part of the Arduino IDE. If you put
 the OEM libraries in there, they will work but when you update the Arduino IDE, by default it
 installs in a completely new folder and you will have to move or copy these libraries. For that
 reason it is not recommended.]
-Downloading the Libraries
+
+#### Downloading the Libraries
+
 Many libraries are required, this is the full list:
-JeeLib
-RFu_JeeLib
-https://github.com/jcw/jeelib
-https://github.com/openenergymonitor/RFu_jeelib
-RFu JeeLib is only required for emonTx V3.2 and emonTH V1.4
-using the RFu328 module.
-EmonLib https://github.com/openenergymonitor/EmonLib
-OneWire https://github.com/PaulStoffregen/OneWire
-DallasTemperature https://github.com/milesburton/Arduino-Temperature-Control-
- Library
-RTClib https://github.com/jcw/rtclib Only required for EmonGLCD
-GLCD_ST7565 https://github.com/jcw/glcdlib Only required for EmonGLCD
-EtherCard https://github.com/jcw/ethercard/ Only required for NanodeRF
+
+| Library            | Link                                                               | Notes |
+|--------------------|--------------------------------------------------------------------|-------|
+| JeeLib             | https://github.com/jcw/jeelib                                      |       |
+| RFu_JeeLib         | https://github.com/openenergymonitor/RFu_jeelib                    |   RFu JeeLib is only required for emonTx V3.2 and emonTH V1.4 using the RFu328 module.    |
+| EmonLib            | https://github.com/openenergymonitor/EmonLib                       |       |
+| OneWire            | https://github.com/PaulStoffregen/OneWire                          |       |
+| DallasTemperature  | https://github.com/milesburton/Arduino-Temperature-Control-Library |       |
+| RTClib             | https://github.com/jcw/rtclib                                      | Only required for EmonGLCD   |
+| GLCD_ST7565        | https://github.com/jcw/glcdlib                                     | Only required for EmonGLCD   |
+| EtherCard          | https://github.com/jcw/ethercard/                                  | Only required for NanodeRF   |
+
+
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub
 the button is on the right-hand side. Click “Clone or download” followed by “Download ZIP”:
-Installing the Libraries
+
+#### Installing the Libraries
+
 When you have downloaded all the files, go to your download location and from there you need to
 extract the contents of each Zip file in turn: Double-click on the zip file, a window will open
 showing the contents. Extract that folder into the “libraries” folder.
-Renaming the Libraries
+
+#### Renaming the Libraries
+
 The Arduino IDE does not allow hyphens '-' in the library folder names. Therefore you must rename
 the folders to the names below. You should end up with this:
 [If you wish, you can now delete the zip files that you downloaded.]

@@ -13,6 +13,8 @@ importantly that which concerns us here, Software. The Software folder contains 
 will eventually contain more sub-folders for sketches for the various modules, and a 'libraries' folder
 for the Arduino Libraries. This is the structure:
 
+![windows-lib-1](files/windowslib1.png)
+
 It is most important that the “libraries” folder is at the same level in the hierarchy as the folders, or
 some ancestor of the folders, that will eventually contain the sketches. The parent of 'libraries', in
 this example called “Software” is what the Arduino documentation and the IDE refers to as the
@@ -46,6 +48,8 @@ EtherCard https://github.com/jcw/ethercard/ Only required for NanodeRF
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub
 the button is on the right-hand side. Click “Clone or download” followed by “Download ZIP”:
 
+![windows-lib-2](files/windowslib2.png)
+
 #### 2) Installing the Libraries
 
 When you have downloaded all the files, go to your download location and from there you need to
@@ -56,6 +60,9 @@ showing the contents. Drag that folder into the “libraries” folder.
 
 The Arduino IDE does not allow hyphens '-' in the library folder names. Therefore you must rename
 the folders to the names below. You should end up with this:
+
+![windows-lib-3](files/windowslib3.png)
+
 [If you wish, you can now delete the zip files that you downloaded.]
 
 #### 4) Check the Libraries

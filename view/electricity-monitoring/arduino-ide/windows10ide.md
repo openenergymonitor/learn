@@ -13,11 +13,15 @@ through this before continuing.</p>
 Download the latest Arduino IDE (use your favourite search engine on “Arduino IDE”) and click on
 “Windows Installer”.
 
+![windows-ide-1](files/windowside1.png)
+
 This will download a file with a name like “arduino-1.8.3-windows.exe” (the name will change
 depending on the version) to your usual location. Double-click on that file and allow it to install in
 the normal way. Part way through the installation, it will ask for the components to install. For our
 purposes, you do not need to install the USB driver, you will later need to install the Silicon Labs
 drivers.
+
+![windows-ide-2](files/windowside2.png)
 
 When the installation finishes, the progress bar will show “Completed”.
 
@@ -26,6 +30,8 @@ Download and install the SiLabs FTDI Drivers
 If you are using the cable sold through the OpenEnergyMonitor shop, do not follow the instructions
 for installing the drivers on the Arduino website, instead download the drivers from
 https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx.
+
+![windows-ide-3](files/windowside3.png)
 
 Click on “Download VCP ...”
 
