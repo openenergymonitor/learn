@@ -311,6 +311,18 @@
                     "further-reading": {
                         "nicename": "Further reading",
                         "url": "sustainable-energy/energy/further-reading"
+                    },
+                    "sabatier-process": {
+                        "nicename": "Industry: Sabatier process",
+                        "url": "sustainable-energy/energy/sabatier-process"
+                    },
+                    "industry-steel": {
+                        "nicename": "Industry: Steel production",
+                        "url": "sustainable-energy/energy/industry-steel"
+                    },
+                    "industry-plastic": {
+                        "nicename": "Industry: Plastic production",
+                        "url": "sustainable-energy/energy/industry-plastic"
                     }
                 }
             },
