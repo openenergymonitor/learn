@@ -225,6 +225,7 @@ length of Oem site links...
   padding: 15px 20px 20px 20px;
   max-width:960px;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 @media (max-width: 450px) {
