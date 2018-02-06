@@ -2,30 +2,24 @@
 <html lang="en">
 <meta charset="utf-8">
 <head>
-<?php
-  global $path, $session, $github_url;
-  $apikey = $session['apikey_read'];
-  $q = "";
-  if (isset($_GET['q'])) $q = $_GET['q'];
-?>
+  <?php
+    global $path, $session, $github_url;
+    $apikey = $session['apikey_read'];
+    $q = "";
+    if (isset($_GET['q'])) $q = $_GET['q'];
+  ?>
 <script>
   var path = "<?php print $path; ?>";
   var session = JSON.parse('<?php echo json_encode($session); ?>');
   var apikey = "<?php print $apikey; ?>";
 </script>
-<!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">-->
-<!-- Load font locally to enable full offline use, un comment above to load font remotely-->
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>fonts/ubuntu.css?family=Ubuntu:light,bold&subset=Latin">
 <title>Learn | OpenEnergyMonitor</title>
 <link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta name="theme-color" content="#44b3e2" />
-<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.css?v=3" />
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-<!-- Load font awesome resources locally to avoid chrome cross-origin script blocking and enable full offline use.
-un-comment above to load resources remotely-->
+<link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.php?v=3.1.1" />
 <link rel="stylesheet" href="<?php echo $path; ?>theme/font-awesome.min.css" />
-<script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $path; ?>lib/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -58,13 +52,18 @@ un-comment above to load resources remotely-->
   <div class="titleHolder">
     <div class="communityWrapper">
       <i class="fa fa-navicon"></i>
-      <div class="thisTitle">
-        <a href="/">
-          <strong>Learn</strong>
-          <span class="oemWrap">
-          | Open<strong>EnergyMonitor</strong>
-          </span>
-        </a>
+				<a href="/">
+        	<div class="titleIcon">
+						<i aria-hidden="true" class="fa fa-mortar-board"></i>
+					</div>
+					<div class="thisTitle">
+						<div class="thisTitle-top">
+          		<b>Learn</b>
+						</div>
+						<div class="thisTitle-bottom">
+          		Open<b>EnergyMonitor</b>
+						</div>
+				</a>
       </div>
       <div class="navigationBig">
         <ul>
@@ -227,7 +226,7 @@ $(".searchBox form").click( function(event) {
 // No padding if no content in right panel...
 // ----------------------------------------------------------------------------------------
 
-$(window).load(function(){
+$(window).ready(function(){
   if ($("#rightpanel-inner").html().length === 0){
     $("#rightpanel-inner").css("padding","0")
   }

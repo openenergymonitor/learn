@@ -29,9 +29,11 @@ _[Note: Robin Emley has adopted the opposite convention for his Mk 2 energy dive
 
 For the UK ac-ac adapter and the YHDC C.T. purchased from [the shop](https://shop.openenergymonitor.com/components/) and when the C.T. is on the line conductor, the printing on the face of the C.T. should face in the direction of positive power, i.e. in the picture above, positive power flow is from left to right. If the C.T. is on the neutral conductor (this is only valid on a single-phase installation) it should face in the opposite direction. For any other combination of ac-ac adapter and C.T. it is possible, if the phasing of each is known, to determine the correct orientation, but the easiest and quickest method is probably by trial and error. Reversing the C.T. will change the sign of that input. Reversing the ac-ac adapter (where the plug design allows this) will change the sign of <u>all</u> inputs.
 
-***
 
+<br>
 ## The Details
+
+***
 
 #### What is a Current Transformer?
 
