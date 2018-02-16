@@ -48,7 +48,7 @@ To use the above circuit along with a current measurement to measure real power,
 
 ### **Improving the quality of the bias source**
 
-This relatively simple voltage bias source does have some limitations. See [Buffered Voltage Bias](acac-buffered-voltage-bias) for a circuit that offers enhanced performance.
+This relatively simple voltage bias source does have some limitations. See [Buffered Voltage Bias](../ctac/acac-buffered-voltage-bias) for a circuit that offers enhanced performance.
 
 ### Notes on Mains Voltage Limits
 

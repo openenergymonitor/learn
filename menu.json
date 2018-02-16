@@ -104,6 +104,10 @@
                         "nicename": "4. How good is your multimeter",
                         "url": "electricity-monitoring/ctac/how-good-is-your-multimeter"
                     },
+                   "buffered-voltage-bias": {
+                        "nicename": "5. Buffered Voltage Bias",
+                        "url": "electricity-monitoring/ctac/acac-buffered-voltage-bias"
+                    },
                     "digital-filters-for-offset-removal": {
                         "nicename": "Advanced: Digital filters for offset removal",
                         "url": "electricity-monitoring/ctac/digital-filters-for-offset-removal"
