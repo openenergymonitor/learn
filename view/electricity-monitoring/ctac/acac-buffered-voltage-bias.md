@@ -2,7 +2,7 @@
 
 ### Improving the quality of the bias source
 
-The relatively simple voltage bias source illustrated in "Measuring AC Voltage with an AC to AC power adapter" does have some limitations if high accuracy is required. It can be improved by adding an operational amplifier. The op.amp isolates the mid-point voltage at the junction of R3 & R4 from the AC-AC adapter and voltage divider. This significantly reduces the impedance of the voltage source, resulting in enhanced performance. Only one op.amp is needed, the current sensors can share the bias supply and connect to amplifier output (“mid-point”) with little fear of interaction between the inputs (which can be troublesome in some circumstances).
+The relatively simple voltage bias source illustrated in [Measuring AC Voltage with an AC to AC power adapter](../voltage-sensing/measuring-voltage-with-an-acac-power-adapter) does have some limitations if high accuracy is required. It can be improved by adding an operational amplifier. The op.amp isolates the mid-point voltage at the junction of R3 & R4 from the AC-AC adapter and voltage divider. This significantly reduces the impedance of the voltage source, resulting in enhanced performance. Only one op.amp is needed, the current sensors can share the bias supply and connect to amplifier output (“mid-point”) with little fear of interaction between the inputs (which can be troublesome in some circumstances).
 
 ![Improved voltage bias circuit diagram](files/buffered_bias.png)
 
