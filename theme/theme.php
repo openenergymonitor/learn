@@ -52,19 +52,19 @@
   <div class="titleHolder">
     <div class="communityWrapper">
       <i class="fa fa-navicon"></i>
-				<a href="/">
-        	<div class="titleIcon">
-						<i aria-hidden="true" class="fa fa-mortar-board"></i>
+			<a href="/">
+      	<div class="titleIcon">
+					<i aria-hidden="true" class="fa fa-mortar-board"></i>
+				</div>
+				<div class="thisTitle">
+					<div class="thisTitle-top">
+        		<b>Learn</b>
 					</div>
-					<div class="thisTitle">
-						<div class="thisTitle-top">
-          		<b>Learn</b>
-						</div>
-						<div class="thisTitle-bottom">
-          		Open<b>EnergyMonitor</b>
-						</div>
-				</a>
-      </div>
+					<div class="thisTitle-bottom">
+        		Open<b>EnergyMonitor</b>
+					</div>
+				</div>
+			</a>
       <div class="navigationBig">
         <ul>
           <li title="the homepage of OpenEnergyMonitor">

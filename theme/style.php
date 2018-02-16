@@ -20,24 +20,9 @@
   src: url(<?php echo $path; ?>../fonts/Ubuntu-OEM-Light.ttf)
 }
 
-@font-face {
-  font-family: <?php echo $oemFont; ?>;
-  src: url(<?php echo $path; ?>../fonts/Ubuntu-OEM-Bold.ttf)
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: <?php echo $oemFont; ?>;
-  src: url(<?php echo $path; ?>../fonts/Ubuntu-OEM-LightItalic.ttf)
-  font-style: italic;
-}
-
-@font-face {
-  font-family: <?php echo $oemFont; ?>;
-  src: url(<?php echo $path; ?>../fonts/Ubuntu-OEM-BoldItalic.ttf)
-  font-weight: bold;
-  font-style: italic;
-}
+/*--------------------------------------------
+HTML,Body...
+--------------------------------------------*/
 
 html, body {
   font-family: <?php echo $oemFont; ?>, sans-serif;
@@ -48,7 +33,6 @@ html, body {
 html {
   min-height: 100vh;
 }
-
 
 body {
   font-family: <?php echo $oemFont; ?>, sans-serif;
