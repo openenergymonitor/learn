@@ -21,7 +21,7 @@ An interesting and perhaps useful approach is to take an energy model such as Ze
 
 The following example builds a zero carbon energy scenario for a small town or large village of about 1000 households and a population of roughly 2400 people (2.4 people per household).
 
-On the surface it may be too easy to dismiss or feel that the following scenarios as too costly or ambitious for such small areas, however that would miss the bigger picture of how much we spend on energy anyway, a quick back of the envelope calculation helps to put the cost of the measures below in some context. Assuming the current average UK household energy expenditure of £2500/year for electricity, gas and petrol/diesel as calculated in Appendix 1: UK Energy 2015. A small town or village of 1000 households will spend £62.5 million on energy over 25 years even if no changes where made and assuming no rise or fall in energy prices.
+On the surface it may be too easy to dismiss or feel that the following scenarios as too costly or ambitious for such small areas, however that would miss the bigger picture of how much we spend on energy anyway, a quick back of the envelope calculation helps to put the cost of the measures below in some context. Assuming the current average UK household energy expenditure of £2500/year for electricity, gas and petrol/diesel as calculated in Appendix 1: UK Energy 2015. A small town or village of 1000 households will spend £62.5 million on energy over 25 years even if no changes were made and assuming no rise or fall in energy prices.
 
 #### 1. Using the default energy model
 
@@ -39,7 +39,7 @@ To start our example we will use the default settings in the ['full household en
 For a small town of 1000 households, the model suggests that for all electric, heating and transport demand: 1.9 MW of wind, 1.9 MW of solar pv and 1.6 MW of backup gas turbines would be required.
 
 - 1.9 MW of wind might cost in the order of £3.3-4.7 million including operation and maintenance costs or 5-8% of the amount spend anyway over 25 years. 
-- 1.9 MW of solar corresponds to a 1.9 kW system on each roof, typical installation capacities today are anywhere from 1 to 4 kW. If not all roves where suitable perhaps a mix of a ground mounted array and individual roofs could be used. 1000x 2kW systems would cost around £3.8 million or 6.1% of the 25 year energy cost.
+- 1.9 MW of solar corresponds to a 1.9 kW system on each roof, typical installation capacities today are anywhere from 1 to 4 kW. If not all roves were suitable perhaps a mix of a ground mounted array and individual roofs could be used. 1000x 2kW systems would cost around £3.8 million or 6.1% of the 25 year energy cost.
 
 The default model uses sabatier enhanced methane production using excess wind and solar electricity to produce hydrogen which is then combined with biogas from anaerobic digestion in order to produce a larger amount of methane for a given amount of biomass. Using this process 1 MW of electrolysis plant would also be needed and the equipment needed for the sabatier reaction in addition to the anaerobic digester.
 

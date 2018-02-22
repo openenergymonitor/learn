@@ -28,7 +28,7 @@ There are several factors that contributed to the large variation in heating dem
 
 The study also showed a large variation in transport demand with the least energy consuming household using 9 kWh/d for transport while the highest energy consuming household used 100 kWh/d. The group average is 43.6 kWh/d which is very close to the national average.
 
-All households in the study had cars, 3 households had two cars and 2 households had 3 cars. A combined total of 205,600 miles where driven by car and motorbike an average of 12,094 miles per household.
+All households in the study had cars, 3 households had two cars and 2 households had 3 cars. A combined total of 205,600 miles were driven by car and motorbike an average of 12,094 miles per household.
 
 The highest performing lowest energy households achieved their results through a combination of significantly lower annual mileage, little or no flying and in one case an electric car, demonstrating both the effectiveness of what are often called behavioural change measures i.e reducing miles driven, flying less and technology switch measures such as electric cars.
 
@@ -49,9 +49,9 @@ As part of the study we explored in a basic way the effect of carrying out diffe
 
 With these largely 'technology switch' based measures CO2 emissions could theoretically be reduced to zero with fully zero carbon energy supply. Primary energy is reduced by 60% to 38.5 kWh/d per household without any further reduction in miles driven or home comfort. This is still larger than the household average target as suggested by ZeroCarbonBritain, however the results do not yet contain a full assessment of energy savings that might be possible with more efficient appliances and a more comprehensive look at retrofit savings.
 
-Switching from planes to trains is perhaps one of the most speculative measures, if flights where still included and with fuel from fossil sources the resulting co2 emissions would be 27 tonnes/year, which is still an 80% reduction. Alternatives could also be explored such as synthetic liquid fuel powered aircraft as used in ZeroCarbonBritain or David MacKay's suggestion of airships in Sustainable Energy without the hot air.
+Switching from planes to trains is perhaps one of the most speculative measures, if flights were still included and with fuel from fossil sources the resulting co2 emissions would be 27 tonnes/year, which is still an 80% reduction. Alternatives could also be explored such as synthetic liquid fuel powered aircraft as used in ZeroCarbonBritain or David MacKay's suggestion of airships in Sustainable Energy without the hot air.
 
-If natural gas was used as the backup supply and flights where included the overall reduction in CO2 emissions could be 75% to 35 tonnes/year.
+If natural gas was used as the backup supply and flights were included the overall reduction in CO2 emissions could be 75% to 35 tonnes/year.
 
 Interestingly even if the electricity supply remained at 2010 carbon intensity levels of 444gCO2/kWh and the households switched to heatpumps and electric vehicles a base carbon saving of 25% would be achieved. This would then extend to a potential carbon saving of up to 77% as the electricity supply is further de-carbonised.
 

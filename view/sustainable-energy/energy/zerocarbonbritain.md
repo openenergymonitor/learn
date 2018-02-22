@@ -17,7 +17,7 @@ The report is available for free download and underlying hourly energy model is 
 
 **ZeroCarbonBritain Methodology**
 
-Useful technical background covering many different aspects of the ZeroCarbonBritain scenario can be found in the methodology papers, including assumptions around space heating demand reduction, changes in travel distances and how the renewable supply datasets where constructed for offshore & onshore wind, solar and other sources.
+Useful technical background covering many different aspects of the ZeroCarbonBritain scenario can be found in the methodology papers, including assumptions around space heating demand reduction, changes in travel distances and how the renewable supply datasets were constructed for offshore & onshore wind, solar and other sources.
 
 - [Power Down](http://zerocarbonbritain.com/images/pdfs/Power%20Down%20Methodology%202%207%2013.pdf)
 - [Renewable Supply](http://zerocarbonbritain.com/images/pdfs/Renewable%20Energy%20Supply%20Methodology.pdf)
@@ -31,7 +31,7 @@ In our view ZeroCarbonBritain is a particularly good scenario, perhaps one of th
 
 #### November 2014: OpenEnergyMonitor and ZeroCarbonBritain Collaboration
 
-*Trystan Lea:* In late 2014 a meeting with Philip James a researcher on the ZeroCarbonBritain project about household retrofit modelling software got on to the subject of wanting from our part to better understand how zero carbon energy systems can work including how demand can be met from a variable renewable supply, the role of storage and demand response among other elements of the system. Carbon Coop who we where working with on the MyHomeEnergyPlanner open source retrofit software project where planning a smart grid project exploring these themes and we where using the monitoring ourselves to try and shift consumption to times of high solar output.
+In late 2014 we held a meeting to discuss household retrofit modelling software with Philip James, a researcher on the ZeroCarbonBritain project. We wanted to understand in more detail how zero carbon energy systems can work; how demand can be met from a variable renewable supply, and the role of storage and demand response. We were also working with the Carbon Coop on the MyHomeEnergyPlanner open source retrofit software project and they were planning a smart grid project exploring these themes. We were also using the monitoring ourselves to try and shift consumption to times of high solar output.
 
 Philip mentioned that he had recently been converting the ZeroCarbonBritain spreadsheet into a java model and gave a demo of it in action with beautiful graphs showing energy balances over the 10 year model period. He was happy to share the model and made it open source on github here:
 
@@ -44,7 +44,7 @@ In the following weeks I helped convert the java model into a javascript web mod
 
 #### June 2015: Building up the model in steps
 
-Having completed an initial port of most of the ZeroCarbonBritain model I realised that having put everything together at the same time I had missed some of the understanding of how the constituent parts add up to the bigger picture and so in order to try and get to a better understanding I went about breaking the model down and then building it up part by part, writing up the process as a energy model guide. The result of which where published as a web tool which is now integrated in the zero carbon energy model section of this site and also a series of blogs:
+Having completed an initial port of most of the ZeroCarbonBritain model I realised that having put everything together at the same time I had missed some of the understanding of how the constituent parts add up to the bigger picture and so in order to try and get to a better understanding I went about breaking the model down and then building it up part by part, writing up the process as a energy model guide. The result of which were published as a web tool which is now integrated in the zero carbon energy model section of this site and also a series of blogs:
 
 - [1. June 10, 2015: Modelling hourly demand and supply for renewable powered domestic electricity,<br>heating with heatpumps and electric vehicles](https://blog.openenergymonitor.org/2015/06/modelling-hourly-demand-and-supply-for/)
 - [2. June 11, 2015: Variable Supply](https://blog.openenergymonitor.org/2015/06/hourly-energy-model-example-1-variable/)
