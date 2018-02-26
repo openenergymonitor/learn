@@ -42,7 +42,8 @@ A floor plan could be drawn on paper, a graphics program, open office draw or a 
 
 ### Create a MyHomeEnergyPlanner assessment
 
-- Login or create an account in emoncms: [http://myhome.emoncms.org](http://myhome.emoncms.org)
+- Login or create an account on emoncms.org: [http://emoncms.org](http://emoncms.org)
+- Navigate to Extras > MyHomeEnergyPlanner
 - Create and then open a new assessment, you can give the assessment a name and a description.
 
 ### 1. Context: 
