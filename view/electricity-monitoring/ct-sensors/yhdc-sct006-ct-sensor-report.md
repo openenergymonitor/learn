@@ -4,12 +4,14 @@
 
 A Report on the properties of the *YHDC SCT006* current transformer and its suitability for use with the OpenEnergyMonitor system.
 
+<span style="border: 1px solid #c4c4c4;padding: 2px;">Issue 1 - 23rd February, 2018</span>
+
 _by Robert Wall B.Sc., C.Eng., MIEE._
 
 ![](files/006image.png)
 
-Original report: [download PDF](files/YhdcSCT006CTReport.pdf) <br/>
-YHDC SCT006 datasheet: [download PDF](files/SCT006.pdf)
+* [Download report (issue 1) as PDF](files/YhdcSCT006CTReport_issue1.pdf) <br/>
+* [Download YHDC SCT006 datasheet](files/SCT006.pdf)
 
 #### Synopsis
 
