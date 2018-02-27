@@ -43,6 +43,13 @@ body {
   background-color: #f5f5f5;
 }
 
+:target:before { /* anchor link repositioning fix for fixed top bar */
+  content: "";
+  display: block;
+  height: 50px; /* fixed header height*/
+  margin: -50px 0 0; /* negative fixed header height */
+}
+
 /*--------------------------------------------
 Navigation...
 --------------------------------------------*/

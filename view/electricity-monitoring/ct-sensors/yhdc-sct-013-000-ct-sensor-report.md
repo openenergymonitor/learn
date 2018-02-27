@@ -68,7 +68,7 @@ The following tests were conducted:
 
 *   Establish the maximum output when saturated
 
-Some tests that were carried out on the earlier versions have not been repeated. Details of the results of those tests can be found in the earlier issue of this report, which is available for download as a PDF file [here](files/Yhdc CT Report (Iss 6).pdf).
+Some tests that were carried out on the earlier versions have not been repeated. Details of the results of those tests can be found in the earlier issue of this report, which is available for download as a PDF file [here](files/YhdcCTReportIss6.pdf).
 
 #### **1\. Ratio & Saturation.**
 
@@ -743,8 +743,6 @@ These results also show that increasing the burden resistor value in order to in
 #### Conclusions
 
 The Yhdc current transformer is suitable for use with the OpenEnergy emonTx and emonPi. It can develop sufficient voltage to fully utilise the resolution of the Arduino's analogue input, and waveform distortion due to saturation at this secondary voltage is negligible for normal purposes. The maximum phase error of a little over 4° with the 22 Ω burden is insignificant (representing a power factor error of less than 0.0029 at unity power factor), but the error of nearly 8° with a 120 Ω burden could be troublesome with low current loads having a poor power factor where this input is most likely to be used.
-
-The earlier report is available for download as a PDF file <a href="files/Yhdc_CT_Report_(Iss_6).pdf">here</a>.
 
 #### Appendix
 
