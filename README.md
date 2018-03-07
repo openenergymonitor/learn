@@ -2,4 +2,4 @@
 
 https://learn.openenergymonitor.org
 
-*Previously Building Blocks*
+*Previously Building Blocks*.
