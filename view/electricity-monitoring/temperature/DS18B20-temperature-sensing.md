@@ -156,6 +156,18 @@ The power-on value in the scratchpad memory is 85 °C. If the scratchpad memory 
 
 If the data being read from the scratchpad memory is corrupted in transit, then the checksum will fail and the Dallas library will return a value of -127 °C. This is outside the operating temperature range of the sensor, so can easily be detected in software. This error value might be caused by an intermittent or absent connection of either the data wire (normal mode) or the GND wire, or indeed an absent sensor.
 
+The following error codes have been defined for use with firmware running on OpenEnergyMonitor hardware. [See forum discussion.](https://community.openenergymonitor.org/t/emonpi-temperature-measurement/6792/15)
+
+```
+#define UNUSED_TEMPERATURE 300
+// this value (300C) is sent if no sensor has ever been detected
+#define OUTOFRANGE_TEMPERATURE 302
+// this value (302C) is sent if the sensor reports < -55C or > +125C
+#define BAD_TEMPERATURE 304
+// this value (304C) is sent if no sensor is present or the checksum is bad (corrupted data)
+// NOTE: The sensor might report 85C if the temperature is retrieved but the sensor has not been commanded
+```
+
 #### The emonTx V3
 
 If running the standard emonTx V3 firmware see [Temperature tab of Setup Guide](https://guide.openenergymonitor.org/setup/)
