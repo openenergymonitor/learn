@@ -127,7 +127,7 @@ Wire up the sensor(s) to a male 3.5mm jack as follows:
 </table>
 
 
-[GitHub emonTx V2 temperature example ](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/emonTx_temperature_examples)
+[GitHub emonTx V2 temperature example ](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples)
 (also includes a sketch to extract the serial number from the DS18B20\. (N.B. You must change '#define ONE_WIRE_BUS 4' to '#define ONE_WIRE_BUS 5' for the emonTx V3.4)
 
 #### Software
@@ -144,7 +144,7 @@ Once the libraries have been extracted to the Arduino libraries folder, and the 
 
 **Addressing the sensors.**
 
-Each sensor has a unique serial number assigned by the manufacturer, and your sketch (unless it is the "low-power" sketch that expects a single sensor) must be programmed with these serial numbers so it can identify and interrogate each sensor. Download the examples from [GitHub emonTx V2 temperature example](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/emonTx_temperature_examples). There you will find the [temperature search test sketch](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV2/emonTx_temperature_examples/temperature_search). You need run the sketch only once to extract and list the serial number from each DS18B20\. Then you manually copy the serial numbers into your monitoring sketch.
+Each sensor has a unique serial number assigned by the manufacturer, and your sketch (unless it is the "low-power" sketch that expects a single sensor) must be programmed with these serial numbers so it can identify and interrogate each sensor. Download the examples from [GitHub emonTx V2 temperature example](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples). There you will find the [temperature search test sketch](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples/temperature_search). You need run the sketch only once to extract and list the serial number from each DS18B20\. Then you manually copy the serial numbers into your monitoring sketch.
 
 See [Part 2](DS18B20-temperature-sensing-2) for a description of how the order in which the sensors are discovered is decided.
 
