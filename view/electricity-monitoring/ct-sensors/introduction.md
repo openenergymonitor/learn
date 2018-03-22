@@ -23,13 +23,13 @@ Here's an example of a Magnelab **solid-core** CT:
 
 #### Basics
 
-Current transformers (CTs) are sensors that measure alternating current. They are particularly useful for measuring whole building electricity consumption (or generation, for that matter).
+Current transformers (CTs) are sensors that measure alternating current (AC). They are particularly useful for measuring whole building electricity consumption or generation.
 
-The split core type, such as the CT in the picture above, is particularly suitable for DIY use, as it can be clipped onto either the live **or** neutral wire coming into the building, without the need to do any high voltage electrical work.
+The split core type, such as the CT in the picture above can be clipped onto either the live **or** neutral wire coming into the building, without the need to do any high voltage electrical work.
 
 Like any other transformer, a current transformer has a primary winding, a magnetic core, and a secondary winding.
 
-In the case of whole building monitoring, the primary winding is the live **or** neutral wire (not both!) coming into the building, that is passed through the opening in the CT. The secondary winding is made of many turns of fine wire housed within the transformer case.
+In the case of whole building monitoring, the primary winding is the live **or** neutral wire (NOT both!) coming into the building, that is passed through the opening in the CT. The secondary winding is made of many turns of fine wire housed within the transformer case.
 
 The alternating current flowing in the primary produces a magnetic field in the core, which induces a current in the secondary winding circuit [1].
 
