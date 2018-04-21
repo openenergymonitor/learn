@@ -36,7 +36,9 @@ You will need:
 
 *   A multimeter or voltmeter to measure your mains voltage.
 *   The same multimeter or an ammeter to measure current.
-*   A resistive load or loads (e.g. a kettle, electric heater, etc) that draw a current close to but less than the maximum that your meter can measure.
+*   A resistive load. e.g. a kettle, electric heater, etc.
+*   The load should draw a current close to, but less than, the maximum your meter can measure.
+*   NOTE: Using a 40, 60 or 100 Watt light bulb as a test load will NOT produce correct results.
 
 If you do not have a multimeter, or you are not confident that you can measure your mains safely, you can use a plug-in energy meter. In that case in the procedure that follows, you use the energy meter's readings for voltage and current instead of the multimeter's. If you don't have any form of meter, then see below for common calibration coefficients. You might then, over time, be able to make small adjustments so that the total energy recorded agrees with your energy supplier's meter.
 
