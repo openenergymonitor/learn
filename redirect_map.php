@@ -13,6 +13,7 @@ $redirect_map = array(
 "ct-sensors-introduction"=>"electricity-monitoring/ct-sensors/introduction",
 "ct-sensors-interface"=>"electricity-monitoring/ct-sensors/interface-with-arduino",
 "report-yhdc-sct-013-000-current-transformer"=>"electricity-monitoring/ct-sensors/yhdc-ct-sensor-report",
+"electricity-monitoring/ct-sensors/yhdc-ct-sensor-report"=>"electricity-monitoring/ct-sensors/yhdc-sct-013-000-ct-sensor-report"
 "measurement-implications-of-adc-resolution-at-low-current-values"=>"electricity-monitoring/ct-sensors/measurement-implications-of-adc-resolution-at-low-current-values",
 
 // Voltage sensing
