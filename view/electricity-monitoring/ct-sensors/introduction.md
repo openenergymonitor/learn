@@ -6,7 +6,7 @@ Pictured below, is an example of a **split-core** HYDC CT:
 
 <figure>
 <img src="files/current100a.jpg" alt="" />
-<figcaption><i>YHDC Current Transformer SCT-013-000 <a href="yhdc-ct-sensor-report">(See test report)</a></i></figcaption>
+<figcaption><i>YHDC Current Transformer SCT-013-000 <a href="yhdc-sct-013-000-ct-sensor-report">(See test report)</a></i></figcaption>
 </figure>
 <br>
 
@@ -68,7 +68,7 @@ A split-core CT, especially one that has a ferrite core (such as the ones made b
 
 #### References and further reading
 
-[Test report: Yhdc SCT-013-000 Current Transformer](yhdc-ct-sensor-report)
+[Test report: Yhdc SCT-013-000 Current Transformer](yhdc-sct-013-000-ct-sensor-report)
 
 [Elkor Technologies Inc - Introduction to current transformers](https://www.elkor.net/pdfs/AN0305-Current_Transformers.pdf)
 
