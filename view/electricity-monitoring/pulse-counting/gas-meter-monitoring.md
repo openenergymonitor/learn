@@ -45,8 +45,8 @@ observe the I.S. rules, you can be certain that every precaution has been taken 
 minimise any danger.
 
 References:
-https://en.wikipedia.org/wiki/Hydrogen
-https://iaeimagazine.org/magazine/2002/11/16/intrinsic-safety/
+* https://en.wikipedia.org/wiki/Hydrogen
+* https://iaeimagazine.org/magazine/2002/11/16/intrinsic-safety/
 
 #### Rotating Ring Counting
 
