@@ -28,6 +28,8 @@ html, body {
   font-family: <?php echo $oemFont; ?>, sans-serif;
   margin: 0;
   height: 100vh;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 html {
