@@ -805,6 +805,8 @@ pre::-webkit-scrollbar-thumb {
 @media screen and (min-width: 1080px) {
   .sidenav {
     background-color: #44b3e2;
+    max-height: calc(100vh - 42px);
+    min-height: calc(100vh - 42px);
   }
 }
 
