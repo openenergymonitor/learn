@@ -65,7 +65,7 @@ The diagram illustrates one of the fundamental properties of a 3-phase supply. I
 
 As it stands, that diagram illustrates the relationship between the 3 voltages. It need not be restricted to voltage, we can use it for current too. Its real value comes when we show both together.
 
-#### Effect of Unbalanced Loads.
+#### Effect of Unbalanced Loads
 
 Suppose a small factory is supplied by an electricity sub-station. In the sub-station, the neutral point of the transformer secondary windings is earthed. Cables feed two factories, the first of which has loads connected between each of the phases and neutral. The question is, what effect does this have on the voltage the second factory receives?
 
@@ -91,7 +91,7 @@ In (a) the long arrows represent the no-load voltages of the transformer. The vo
 
 In the real world, while the cables are to a first approximation purely resistive, the same cannot be said of the transformer impedance and the load, both of which are likely to be inductive to varying degrees. That would mean the voltage drop phasors are no longer parallel to the line voltages, and further phase shifts are introduced. However, the principle remains the same.
 
-#### Measuring 3-Phase Power.
+#### Measuring 3-Phase Power
 
 To measure 3-phase power you need 3 wattmeters or — in OpenEnergyMonitor terms — 3 emonTxs <sub>(See note)</sub>. You simply measure the three phases in the same way as you would measure three single-phase installations. You need a current transformer and a voltage monitor on each phase, and the total power is the sum of the 3 powers.
 
