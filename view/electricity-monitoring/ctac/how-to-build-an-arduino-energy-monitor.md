@@ -10,7 +10,7 @@ This guide details how to build a simple electricity energy monitor on that can 
 
 The energy monitor can calculate real power, apparent power, power factor, rms voltage, rms current. All the calculations are done in the digital domain on an Arduino.
 
-### Step One – Gather Components
+#### Step One – Gather Components
 
 **You will need:**
 
@@ -35,7 +35,7 @@ The energy monitor can calculate real power, apparent power, power factor, rms v
 
 1x A breadboard and some single core wire.
 
-### Step Two – Assemble the electronics
+#### Step Two – Assemble the Electronics
 
 The electronics consist of the sensors (which produce signals proportional to the mains voltage and current) and the sensor electronics that convert these signals into a form the Arduino is happy with.
 
@@ -47,7 +47,7 @@ For a circuit diagram and detailed discussion of sensors and electronics see:
 
 **Assemble the components as in the diagram above.**
 
-### Step Three – Upload the Arduino Sketch
+#### Step Three – Upload the Arduino Sketch
 
 The Arduino sketch is the piece of software that runs on the Arduino. The Arduino converts the raw data from its analog input into a nice useful values and then outputs them to serial.
 
@@ -61,7 +61,7 @@ Download: [EmonLib](https://github.com/openenergymonitor/EmonLib)
 EnergyMonitor emon1;             <span style="color: #7E7E7E;">// Create an instance</span>
 
 <span style="color: #CC6600;">void</span> <span style="color: #CC6600;">setup</span>()
-{  
+{
   <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">begin</span>(9600);
 
   emon1.voltage(2, 234.26, 1.7);  <span style="color: #7E7E7E;">// Voltage: input pin, calibration, phase_shift</span>

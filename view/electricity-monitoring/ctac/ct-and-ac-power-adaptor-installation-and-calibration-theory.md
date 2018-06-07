@@ -8,9 +8,9 @@ This section discusses the voltage sensor (alternatively called Potential Transf
 
 For installations with more than one feed e.g. a 3-phase installation or a photo-voltaic installation, a current sensor is required for each (i.e. a total of 3 for a 3-phase supply without PV, or two for a domestic single phase supply and PV installation).
 
-#### 1\. Voltage sensor.
+#### 1\. Voltage Sensor
 
-**(a)** Single phase supply with or without PV:  
+**(a)** Single phase supply with or without PV:
 Using the Mascot AC Adaptor: A BS.1363 (13 A) socket outlet is required within approximately 1 m of the electricity supply meter or distribution board / consumer unit. Assemble the DC Power Plug so the inner connector goes to the side of the reversible 2-pin plug marked “-”.
 
 [Since the above was written, I have checked two more samples of the adapter. One was phased as described but the other was opposite. Therefore, the advice is: if your power direction is wrong, reverse the DC Power plug, or turn your CT around to face the opposite direction.]
@@ -19,7 +19,7 @@ Using the Ideal AC Adaptor: A BS.1363 (13 A) socket outlet is required within ap
 
 **(b)** Three phase supply: The recommended method is to monitor one phase as above, then add software in the sketch to derive an approximation for the voltages of the other two phases. Provided the supply is reasonably solid – it has a high fault level and a low impedance - is balanced and the loads are reasonably balanced, this should be adequate for monitoring purposes (but clearly, it will not be accurate enough for billing).
 
-#### 2\. Non-invasive current sensor.
+#### 2\. Non-Invasive Current Sensor
 
 Using the YHDC SCT-013-000 split core clip-on current transformer:
 
@@ -37,11 +37,15 @@ For example, introducing a thin piece of paper (0.004” - 0.1 mm thick) into on
 
 The core of the YHDC CT is ferrite, a brittle material, so care should also be taken not to chip or break the core.
 
-## Calibration theory
+<br>
+
+## Calibration Theory
+
+***
 
 (These notes were written with the emonTx V2 in mind. If you have an emonTx V3, the theory remains applicable but changed component values mean the actual numbers may be different.)
 
-#### Voltage sensor – calibration theory
+#### Voltage Sensor – Calibration Theory
 
 We are measuring the mains voltage. In order to do that, it is first transformed down to a safe voltage, then divided further before being applied to one of the analog inputs of the microcontroller.
 
@@ -83,17 +87,17 @@ voltage constant = alternating mains voltage ÷ alternating voltage at ADC input
 
 The calibration constant is passed into the calculation as the second parameter to the method EnergyMonitor::voltage( ) in the file EmonLib.cpp. It is hard-coded as a constant in the call in the sketch.
 
-#### Voltage sensor – practice
+#### Voltage Sensor – Practice
 
 In practice, the constant we calculated can be adjusted to take account of manufacturing tolerances in the components – the transformer and the resistors.
 
 The manufacturer of the transformer does not state the ratio, only the voltage at full load, therefore it must be measured. One sample measured 11.2 V with 240 V input, but this was subject to a possible measurement error of 3.3%.
 
-The resistors supplied in the kit have a tolerance of 5%, therefore these might contribute 10% to the possible error. However, the internal 1.1 V reference can also be in error by up to 9%, so the total error might be 19.5%. 
+The resistors supplied in the kit have a tolerance of 5%, therefore these might contribute 10% to the possible error. However, the internal 1.1 V reference can also be in error by up to 9%, so the total error might be 19.5%.
 
 Therefore, the expected range for the voltage constant is 182 – 287.6
 
-#### Current sensor – calibration theory
+#### Current Sensor – Calibration Theory
 
 The supplied current is measured using a current transformer, and the resulting (small) current converted into a voltage by the burden resistor. This voltage is measured by the analog input of the microcontroller.
 
@@ -150,13 +154,13 @@ current constant = (100 ÷ 0.050) ÷ 18 = 111.11</pre>
 
 Or to put it in words, the current constant is the value of current you want to read when 1 V is produced at the analogue input.
 
-#### Current sensor – practice
+#### Current Sensor – Practice
 
 The CT output is accurate to 1%. The CT burden resistor is a 1% tolerance component. However, the internal 1.1 V reference can be in error by up to 9%, so the total error should less than 11%.  (This is not as bad as it might appear, the reference is very stable even though the actual value is imprecise, so once calibrated the error due to temperature variation and other factors should be less than 2%.)
 
 Therefore, the expected range for the current constant is 98.77 – 123.32
 
-#### Phase angle (power factor) constant
+#### Phase Angle (Power Factor) Constant
 
 Checks of the phase response of the current and voltage sensors reveal that both have a phase error that varies in magnitude. In the case of the voltage sensor, it increases approximately linearly with increasing voltage; in the case of the current sensor, it falls rapidly at first with increasing current, then reaches a minimum before rising again as saturation sets in.
 

@@ -1,4 +1,4 @@
-## Gas monitoring
+## Gas Monitoring
 
 ***
 
@@ -113,14 +113,23 @@ The sensor interface is a modified version of a design published on Github:
 https://github.com/Bra1nK/HomeMonitor/tree/master/Gas%20Meter%20Pulse%20Creator.
 
 As it stands, this design is not intrinsically safe, but it could be modified quite easily to
-make it so. It has been changed to operate on a 5 V supply, but with a 3 V pulse output.
-The author’s original monitoring system uses a PIC processor operating at 3.3 V, but there
-should be no problem interfacing this with any 3.3 V system (emonTx or emonPi), though
-the power required means that an emonTx must be supplied from a 5 V d.c supply and not
-the a.c. adapter. It is unlikely that battery power would be a realistic means of powering
-this as the I.R. emitter in the sensor is continuously on.
+make it so. Two versions are offered, both have been changed to operate on a lower
+voltage supply, either 5 V or 3.3 V, both giving a 3 V pulse output. The author’s original
+monitoring system uses a PIC processor operating at 3.3 V, but there should be no problem
+interfacing this with any 3.3 V system (emonTx or emonPi), though the power required
+means that an emonTx must be supplied from a 5 V d.c supply and not the a.c. adapter.
+
+The 5 V version, powered directly from the 5 V d.c. supply, is preferred when using this
+circuit with an emonTx, emonTH or emonPi. It is unlikely that battery power would be a
+realistic means of powering this as the I.R. emitter in the sensor is continuously on.
+
+**5 V Version:**
 
 [![](files/sensor_diagram.png)](files/sensor_diagram.png)
+
+**3.3 V Version:**
+
+[![](files/sensor_3V.png)](files/sensor_3V.png)
 
 ##### Adjustment
 
