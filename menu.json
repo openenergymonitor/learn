@@ -589,5 +589,19 @@
                 }
             }
         }
+    },
+    "other-utilities": {
+        "nicename": "Other Utilities",
+        "chapters": {
+            "Water & Gas": {
+                "nicename": "Water & Gas",
+                "pages": {
+                    "introduction": {
+                        "nicename": "Introduction",
+                        "url": "other-utilities/water-and-gas/introduction"
+                    }
+                }
+            }
+        }
     }
 }
