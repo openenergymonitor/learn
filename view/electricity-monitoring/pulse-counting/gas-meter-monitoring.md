@@ -125,11 +125,11 @@ realistic means of powering this as the I.R. emitter in the sensor is continuous
 
 **5 V Version:**
 
-[![](files/sensor_diagram.png)](files/sensor_diagram.png)
+[![](files/5V_gas_monitor_circuit_diagram.svg)](files/5V_gas_monitor_circuit_diagram.svg)
 
 **3.3 V Version:**
 
-[![](files/sensor_3V.png)](files/sensor_3V.png)
+[![](files/3V_gas_monitor_circuit_diagram.svg)](files/3V_gas_monitor_circuit_diagram.svg)
 
 ##### Adjustment
 
