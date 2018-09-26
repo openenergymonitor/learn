@@ -105,7 +105,10 @@ You can adjust most of the calibration by editing the file "emonhub.conf" in you
 
 This opens an editor where you can edit the file. Scroll down a little way until you see something like this:
 
-<pre><code>
+<pre>
+
+<code>
+
 #######################################################################
 #######################          Nodes          #######################
 #######################################################################
