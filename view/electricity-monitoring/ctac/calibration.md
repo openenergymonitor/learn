@@ -136,7 +136,7 @@ refers to the emonPi. Further down the page are similar blocks for emonTx's (var
 <p>
 Two lines here are of interest. The line beginning "names =" lists the names of the data items being received by emonHub, and the line beginning "scales =" lists scaling factors for the corresponding numbers. The original purpose of "scales =" was to be able to restore the original value when, for example, the voltage was multiplied at source by 100 to send the value as an integer whilst retaining a resolution of 0.01 V. In the example above, "power1", "power2" and "power1pluspower2" are multiplied by 1 (the values are in watts, so no pre-scaling has been applied), but "vrms" is multiplied by 0.01 </p>
 <p>However, whilst “scales =” can be used to adjust the amplitude calibration, you cannot adjust any of the values in emonHub to correct the phase error.</p>
-<p>Therefore, if for example you determine that the voltage is reading 1% low and power1 is reading 1.2% low, you change the 1st and 4th values in the line "scales =" so that it reads:</p>
+<p>Therefore, if for example you determine that power1 is reading 1% low and the voltage is reading 1.2% low, you change the 1st and 4th values in the line "scales =" so that it reads:</p>
 <pre><code>
         scales = 1.01,1,1,0.01012,0.1,0.1,0.1,0.1,0.1,0.1,1
 </code></pre>
