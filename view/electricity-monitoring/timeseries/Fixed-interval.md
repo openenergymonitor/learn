@@ -4,7 +4,7 @@ PHPFina source code can be found here: [PHPFina.php](https://github.com/emoncms/
 
 In many if not most applications time series data is recorded at a fixed interval. A temperature or power measurement is made every 10 seconds, minute or hour. Given this highly regular nature of the time series data we can do away with the need to record every datapoint's timestamp and instead just record the start time of the time series and the time series interval in a meta file and then only record the datapoint values in the datafile. The timestamp for any given datapoint can easily be worked out by the start time, interval and the position of the data point in the file.
 
-There are two main advantage of this approach versus the variable interval approach. 
+There are two main advantage of this approach versus the variable interval approach.
 
 1. The first advantage is that if we want to read a datapoint at a given time we don’t need to search for the datapoint as we can calculate its position in the file directly. This reduces  the amount of reads required to fetch a datapoint from up to 30 reads down to 1 giving a significant performance improvement.
 
@@ -31,9 +31,9 @@ The current implementation of PHPFiwa in emoncms uses two meta files, one for st
 
 Its an open question whether its actually useful to record npoints, it may be sufficient to use the filesystem recorded filesize / 4 bytes to obtain the npoint count. Doing so would reduce the disk write load by another file update.
 
-If PHPFiwa where being rewritten it might be good to drop the recording of the feed id in the meta file as this data is stored in the metafile name.
+One simplification would be to drop the recording of the feed id in the meta file as this data is stored in the metafile name.
 
-**Datafile:**
+**PHPFINA:**
 
 ![Fixed Interval data file structure](files/fixedinterval.png)
 
@@ -74,20 +74,20 @@ The get data query parameters are the start time, end time and the data interval
     {
         // $position steps forward by skipsize every loop
         $pos = ($startpos + ($i * $skipsize));
-        
+
         // Exit the loop if the position is beyond the end of the file
         if ($pos > $meta->npoints-1) break;
-        
+
         // read from the file
         fseek($fh,$pos*4);
         $val = unpack("f",fread($fh,4));
-        
+
         // calculate the datapoint time
         $time = $meta->start_time + $pos * $meta->interval;
 
         // add to the data array if its not a nan value
         if (!is_nan($val[1])) $data[] = array($time*1000,$val[1]);
-        
+
         $i++;
      }
 
