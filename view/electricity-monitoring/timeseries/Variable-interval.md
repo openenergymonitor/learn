@@ -7,7 +7,7 @@ Each data point is stored as a fixed length binary. In PHPTimeSeries each datapo
 
 **Note:** The 9 byte datapoint structure used in PHPTimeSeries is the same as the structure used by MYSQLTimeSeries engine, PHPTimeSeries was designed to be able to read the mysql time series data files directly. PHPTimeSeries does not yet implement the use of the deleted datapoint flag byte. If I where writing a new variable interval feed engine I would be tempted to drop the use of the deleted datapoint flag, An erronous datapoint could be corrected rather than deleted.
 
-**PHPTimeSeries Datafile:**
+**PHPTimeSeries:**
 
 ![Variable Interval data file structure](files/variableinterval.png)
 
@@ -23,7 +23,7 @@ This however does not enforce timestamp ordering or ensure that if the datafile 
 
     $fh = fopen("feed.1.dat","c+");
     $npoints = floor(filesize("feed.1.dat") / 9.0);
-    $last_datapoint_position = ($npoints – 1) * 9.0; 
+    $last_datapoint_position = ($npoints – 1) * 9.0;
     fseek($fh,$last_datapoint_position);
 
 Note: Due to the way filesystems work writing 9  bytes at a time to each data file in this way is not particularly write efficient. File systems usually have a minimum IO size that is much larger than 9 bytes, we can improve the engine write implementation by buffering and writing in large blocks that are closer to this minimum IO size. This is the current area of research in emoncms feed engines.
