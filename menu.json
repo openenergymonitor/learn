@@ -157,6 +157,10 @@
                     "12-input-pulse-counting": {
                         "nicename": "12 input pulse counting",
                         "url": "electricity-monitoring/pulse-counting/12-input-pulse-counting"
+                    },
+                    "gas-meter-monitoring": {
+                        "nicename": "Gas Metering",
+                        "url": "electricity-monitoring/pulse-counting/gas-meter-monitoring"
                     }
                 }
             },
