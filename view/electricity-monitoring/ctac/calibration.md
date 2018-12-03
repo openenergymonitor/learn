@@ -30,7 +30,7 @@ When we do this, we dramatically improve the accuracy within which the value of 
 
 #### Recommended Calibration Method
 
-(This applies equally to the emonTx, the emonTx shield and an Arduino board, or a custom or prototype version)
+(This applies equally to the emonPi, the emonTx, the emonTx Shield and an Arduino board, or a custom or prototype version)
 
 You will need:
 
@@ -46,6 +46,8 @@ Points to be aware of:
 If you do not have a multimeter, or you are not confident that you can measure your mains safely, you can use a plug-in energy meter. In that case in the procedure that follows, you use the energy meter's readings for voltage and current instead of the multimeter's. If you don't have any form of meter, then see below for common calibration coefficients. You might then, over time, be able to make small adjustments so that the total energy recorded agrees with your energy supplier's meter.
 
 #### Procedure:
+
+If you do not have a programmer and can only edit emonhub.conf in your emonPi, skip to "Calibrating in emonhub.conf". If you wish to fully calibrate your emonTx, emonTx Shield, Arduino or something else, or you are sending data to emonCMS.org without using the emonPi, continue here.
 
 Take great care when working with mains voltages. If you are using batteries to power your emonTx, you should calibrate the internal reference first.
 
@@ -94,6 +96,53 @@ so that real power and apparent power read the same value (and power factor is a
 The phase calibration coefficient should not normally go outside the range 0.0 – 2.0
 
 5) Check the voltage calibration again. It might need a slight adjustment if the phase angle calibration was altered significantly. Recheck the phase angle calibration.
+
+#### Calibrating in emonhub.conf
+
+You will first need to determine the error in your present measurements. If you have the appropriate measuring instruments, you will be able to measure voltage and power to establish the correct values. If you do not have these, then you might be able to estimate the error by comparing against your energy supplier's meter readings, for example.
+
+You can adjust most of the calibration by editing the file "emonhub.conf" in your emonPi. You can do this using emonCMS and a web browser. In your local emoncms, go to Setup &rarr; EmonHub &rarr; Edit Config
+
+This opens an editor where you can edit the file. Scroll down a little way until you see something like this:
+
+<pre>
+
+<code>
+
+#######################################################################
+#######################          Nodes          #######################
+#######################################################################
+
+[nodes]
+
+## See config user guide: http://github.com/openenergymonitor/emonhub/blob/master/configuration.md
+
+[[5]]
+    nodename = emonpi
+    [[[rx]]]
+        names = power1,power2,power1pluspower2,vrms,t1,t2,t3,t4,t5,t6,pulsecount
+        datacodes = h, h, h, h, h, h, h, h, h, h, L
+        scales = 1,1,1,0.01,0.1,0.1,0.1,0.1,0.1,0.1,1
+        units = W,W,W,V,C,C,C,C,C,C,p
+</code></pre>
+<p>
+The block beginning </p>
+<pre><code>
+[[5]]
+    nodename = emonpi
+</code></pre>
+<p>
+refers to the emonPi. Further down the page are similar blocks for emonTx's (various sketches), emonTH etc.</p>
+<p>
+Two lines here are of interest. The line beginning "names =" lists the names of the data items being received by emonHub, and the line beginning "scales =" lists scaling factors for the corresponding numbers. The original purpose of "scales =" was to be able to restore the original value when, for example, the voltage was multiplied at source by 100 to send the value as an integer whilst retaining a resolution of 0.01 V. In the example above, "power1", "power2" and "power1pluspower2" are multiplied by 1 (the values are in watts, so no pre-scaling has been applied), but "vrms" is multiplied by 0.01 </p>
+<p>However, whilst “scales =” can be used to adjust the amplitude calibration, you cannot adjust any of the values in emonHub to correct the phase error.</p>
+<p>Therefore, if for example you determine that power1 is reading 1% low and the voltage is reading 1.2% low, you change the 1st and 4th values in the line "scales =" so that it reads:</p>
+<pre><code>
+        scales = 1.01,1,1,0.01012,0.1,0.1,0.1,0.1,0.1,0.1,1
+</code></pre>
+<p>
+Important note: The voltage and the three power values are calculated before being sent to emonHub, therefore <em>there is no interaction between any of the scale factors</em>. This is also true for the emonTx.</p>
+
 
 #### Theoretical CT Sensor Calibration
 
