@@ -242,6 +242,8 @@ $(".topIcons:eq(1)").append(
  "<i class='fa fa-globe'></i>");
 $(".topIcons:eq(2)").append(
  "<i class='fa fa-random' style='padding:10px 0 0 2px;'></i>");
+$(".topIcons:eq(3)").append(
+ "<i class='fa fa-bath' style='padding:10px 0 0 2px;'></i>");
 
 // ----------------------------------------------------------------------------------------
 // Enable sidebar...

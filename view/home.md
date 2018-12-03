@@ -92,10 +92,22 @@ body {
 			    <div class='iconCircle'></div>
 		    </div>
 		    <h2>PV<br>Diversion</h2>
-		    <p>Learn how to build a solar PV diverter to make use of excess energy.</p>
+		    <p>Discover how to build a solar PV diverter.</p>
 		  </a>
 	  </div>
 	</div>
+  <div class="flex-item">
+	  <div class="fcontainer">
+	    <a href="other-utilities/water-and-gas/introduction">
+		    <div class='learnpageIcons'>
+			    <div class='iconCircle'></div>
+		    </div>
+		    <h2>Other<br>Utilities</h2>
+		    <p>Studies on other applications, such as gas and water monitoring.</p>
+		  </a>
+	  </div>
+	</div>
+	
 </div>
 <script>
   $(".learnpageIcons:eq(0)").append(
@@ -104,4 +116,6 @@ body {
   "<i class='fa fa-globe fa-3x'></i>");
   $(".learnpageIcons:eq(2)").append(
   "<i class='fa fa-random fa-3x' style='padding:8px 0 0 4px;'></i>");
+  $(".learnpageIcons:eq(3)").append(
+  "<i class='fa fa-bath fa-3x'></i>");
 </script>
