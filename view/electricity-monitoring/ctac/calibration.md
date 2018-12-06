@@ -18,7 +18,7 @@ Item 3 has two components – ADC non-linearity and reference uncertainty. Norma
 
 Calibration is a means of correcting the first of these, and if performed regularly, it will also correct for the second. Unless you are able to remove or shield your device from external influences, there is generally very little you can do to counter their effects.
 
-A full appraisal of the sources of error in the emonTx measurement is [here](emontx-error-sources). In the worst case, the measurement of real or apparent power could be in error by nearly 40% without calibration. With calibration against a reasonably-priced multimeter, the accuracy should be around 6%.
+A full appraisal of the sources of error in the emonTx measurement is [here](emontx-error-sources). In the worst case, the measurement of real or apparent power could be in error by nearly 11.25% without calibration (emonTx V3.4.4). With calibration against a reasonably-priced multimeter, the accuracy should be around 6%.
 
 #### Calibrating the Internal Reference Voltage
 
