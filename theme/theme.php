@@ -196,6 +196,8 @@
 			</li>
     </ul>
   </div>
+  <input id="holdLink" value="hello!">
+  </input>
 </body>
 </html>
 <script>
@@ -509,6 +511,82 @@ $(window).resize(function() {
       xsize = $( window ).width();
     }
   }, 500);
+});
+
+// ----------------------------------------------------------------------------------------
+//  Attach links after headers...
+// ----------------------------------------------------------------------------------------
+
+</script>
+
+
+<style>
+
+#holdLink {
+  position: absolute;
+  left: -9999px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
+
+h1:hover .copyLink {
+  display: inline;
+}
+
+h2:hover .copyLink {
+  display: inline;
+}
+
+h3:hover .copyLink {
+  display: inline;
+}
+
+h4:hover .copyLink {
+  display: inline;
+}
+
+h5:hover .copyLink {
+  display: inline;
+}
+
+h6:hover .copyLink {
+  display: inline;
+}
+
+.copyLink {
+  display: none;
+  cursor:pointer;
+  color:#44b3e2;
+  text-shadow:none;
+}
+
+</style>
+
+<script>
+
+$("h1, h2, h3, h4, h5, h6").each(function() {
+    var hyphenated = $(this).text().replace(/ /g, '-');
+    var hyphenated = hyphenated.toLowerCase();
+    $(this).attr('id',hyphenated);
+  }
+);
+
+$("h1, h2, h3, h4, h5, h6").append("&nbsp;&nbsp;<i class='copyLink fa fa-link' aria-hidden='true' title='Copy link to clipboard'></i>");
+
+$(document).ready(function() {
+  $(".copyLink").click(function() {
+    $("#holdLink").empty();
+    var url       = window.location.href; // need to remove any extra #!!!!!!!!
+    var parent_id = $(this).parent().attr('id');
+    var this_link = url + "#" + parent_id;
+    var holdLink = document.getElementById("holdLink");
+    holdLink.value = this_link;
+    holdLink.select();
+    document.execCommand("copy");
+    alert("Link copied to clip-board: \n" + holdLink.value);
+  });
 });
 
 </script>

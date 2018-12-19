@@ -910,37 +910,24 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .sublevel ul li {
-  padding: 0;
   max-width: 230px;
   margin-right: 30px;
 }
 
 .sublevel ul li a {
-  padding: 12px;
+  padding: 16px;
 }
 
-.sublevel ul li a:hover {
+.sublevel ul li:hover a {
   font-weight: bold;
+}
+
+.sublevel ul li:hover {
+  list-style-type: disc;
 }
 
 .sublevel ul li a:first-child {
   padding-top: 5px;
-}
-
-@media (min-width: 450px) and (max-width: 960px) {
-  .sublevel ul li {
-    padding: 0;
-    max-width: 230px;
-    margin-right: 30px;
-  }
-}
-
-@media (min-width: 1080px) {
-  .sublevel ul li {
-    padding: 5px 0 5px 0;
-    max-width: 230px;
-    margin-right: 30px;
-  }
 }
 
 .clickedOnce {
@@ -949,6 +936,7 @@ pre::-webkit-scrollbar-thumb {
 
 .active {
   font-weight: bold;
+  list-style-type: disc;
 }
 
 li.active a {
