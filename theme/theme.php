@@ -556,10 +556,25 @@ h6:hover .copyLink {
 }
 
 .copyLink {
+  box-sizing: border-box;
   display: none;
   cursor:pointer;
-  color:#44b3e2;
-  text-shadow:none;
+  color: #44b3e2;
+  text-shadow: none;
+  padding: 1px 2px 1px 2px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 3px;
+}
+
+.copyLink:hover {
+  background-color: #44b3e2;
+  color: #fff;
+}
+
+.anchorLink {
+  position: absolute;
+  margin-top: -60px;
 }
 
 </style>
@@ -569,23 +584,41 @@ h6:hover .copyLink {
 $("h1, h2, h3, h4, h5, h6").each(function() {
     var hyphenated = $(this).text().replace(/ /g, '-');
     var hyphenated = hyphenated.toLowerCase();
-    $(this).attr('id',hyphenated);
+    var anchorDiv='<a class="anchorLink" name="' + hyphenated + '"></a>';
+    $(this).append(anchorDiv);
   }
 );
 
-$("h1, h2, h3, h4, h5, h6").append("&nbsp;&nbsp;<i class='copyLink fa fa-link' aria-hidden='true' title='Copy link to clipboard'></i>");
+$("h1, h2, h3, h4, h5, h6").append(
+  "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'><i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
+  "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy hyperlink to clipboard'><i class='fa fa-clone' aria-hidden='true'></i> hyperlink</p>"
+);
 
 $(document).ready(function() {
   $(".copyLink").click(function() {
-    $("#holdLink").empty();
-    var url       = window.location.href; // need to remove any extra #!!!!!!!!
-    var parent_id = $(this).parent().attr('id');
-    var this_link = url + "#" + parent_id;
-    var holdLink = document.getElementById("holdLink");
-    holdLink.value = this_link;
-    holdLink.select();
-    document.execCommand("copy");
-    alert("Link copied to clip-board: \n" + holdLink.value);
+    if ($(this).hasClass("copy_url")) {
+      var holdLink  = document.getElementById("holdLink");
+      var url       = window.location.href.replace(location.hash,"");
+      var parent_id = $(this).prev('a[name]').attr('name');
+      var this_link = url + "#" + parent_id;
+      holdLink.value = this_link;
+      holdLink.select();
+      document.execCommand("copy");
+      alert("Link copied to clipboard: \n" + holdLink.value);
+    }
+    else if ($(this).hasClass("copy_hyperlink")) {
+      var holdLink  = document.getElementById("holdLink");
+      var url       = window.location.href.replace(location.hash,"");
+      var parent_id = $(this).prev().prev('a[name]').attr('name');
+      var this_link = url + "#" + parent_id;
+      var link_descriptor = window.location.pathname;
+      var link_descriptor = link_descriptor.replace(/\//g, "&rarr;");
+      var link_descriptor = link_descriptor.substr(6);
+      var link_descriptor = link_descriptor + "&rarr;" + parent_id;
+      holdLink.value = "<a href=" + "'" + this_link + "'" + ">" + link_descriptor + "</a>";
+      holdLink.select();
+      document.execCommand("copy");
+      alert("Hyperlink copied to clipboard: \n" + holdLink.value);    }
   });
 });
 
