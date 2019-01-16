@@ -985,6 +985,50 @@ li.active a {
 }
 
 /*---------------------------------------------------------------------/
+//  'Copy to Clipboard' Header Links...
+/*---------------------------------------------------------------------*/
+
+#holdLink {
+  position: absolute;
+  left: -9999px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
+
+.row h1:hover .copyLink,
+.row h2:hover .copyLink,
+.row h3:hover .copyLink,
+.row h4:hover .copyLink,
+.row h5:hover .copyLink,
+.row h6:hover .copyLink {
+  display: inline;
+}
+
+.copyLink {
+  box-sizing: border-box;
+  display: none;
+  cursor:pointer;
+  color: <?php echo $oemBlue; ?>;
+  text-shadow: none;
+  padding: 2px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 3px;
+}
+
+.copyLink:hover {
+  background-color: <?php echo $oemBlue; ?>;
+  color: <?php echo $oemWhite; ?>;
+}
+
+.anchorLink {
+  position: absolute;
+  margin-top: -60px;
+}
+
+/*---------------------------------------------------------------------/
 //  General...
 /*---------------------------------------------------------------------*/
 

@@ -286,7 +286,7 @@ if (q[0] && q[1] != ("")) {
   sl.prev().addClass("clickedOnce");
   sl.prev().children().find('#subIcon').toggleClass('fa-plus-circle fa-minus-circle');
 
-$("a[href='" + window.location.href + "']").parent().addClass("active");
+$("a[href='" + window.location.href.replace(location.hash,"") + "']").parent().addClass("active");
 
 $(window).on('hashchange', function(e){
   $(".menu a").parent().removeClass("active");
@@ -514,72 +514,8 @@ $(window).resize(function() {
 });
 
 // ----------------------------------------------------------------------------------------
-//  Attach links after headers...
+//  'Copy to Clipboard' Header Links...
 // ----------------------------------------------------------------------------------------
-
-</script>
-
-
-<style>
-
-#holdLink {
-  position: absolute;
-  left: -9999px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  cursor: default;
-}
-
-h1:hover .copyLink {
-  display: inline;
-}
-
-h2:hover .copyLink {
-  display: inline;
-}
-
-h3:hover .copyLink {
-  display: inline;
-}
-
-h4:hover .copyLink {
-  display: inline;
-}
-
-h5:hover .copyLink {
-  display: inline;
-}
-
-h6:hover .copyLink {
-  display: inline;
-}
-
-.copyLink {
-  box-sizing: border-box;
-  display: none;
-  cursor:pointer;
-  color: #44b3e2;
-  text-shadow: none;
-  padding: 1px 2px 1px 2px;
-  font-size: 14px;
-  line-height: 16px;
-  border-radius: 3px;
-}
-
-.copyLink:hover {
-  background-color: #44b3e2;
-  color: #fff;
-}
-
-.anchorLink {
-  position: absolute;
-  margin-top: -60px;
-}
-
-</style>
-
-<script>
 
 $("h1, h2, h3, h4, h5, h6").each(function() {
     var hyphenated = $(this).text().replace(/ /g, '-');
@@ -589,10 +525,14 @@ $("h1, h2, h3, h4, h5, h6").each(function() {
   }
 );
 
-$("h1, h2, h3, h4, h5, h6").append(
-  "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'><i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
-  "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy hyperlink to clipboard'><i class='fa fa-clone' aria-hidden='true'></i> hyperlink</p>"
-);
+if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) { // this class removes copy to clipboard links from certain headers
+  $("h1, h2, h3, h4, h5, h6").append(
+    "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'>" +
+    "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
+    "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy hyperlink to clipboard'>" +
+    "<i class='fa fa-clone' aria-hidden='true'></i> hyperlink</p>"
+  );
+}
 
 $(document).ready(function() {
   $(".copyLink").click(function() {
@@ -618,7 +558,8 @@ $(document).ready(function() {
       holdLink.value = "<a href=" + "'" + this_link + "'" + ">" + link_descriptor + "</a>";
       holdLink.select();
       document.execCommand("copy");
-      alert("Hyperlink copied to clipboard: \n" + holdLink.value);    }
+      alert("Hyperlink copied to clipboard.");
+    }
   });
 });
 
