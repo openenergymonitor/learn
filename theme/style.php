@@ -910,37 +910,24 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .sublevel ul li {
-  padding: 0;
   max-width: 230px;
   margin-right: 30px;
 }
 
 .sublevel ul li a {
-  padding: 12px;
+  padding: 16px;
 }
 
-.sublevel ul li a:hover {
+.sublevel ul li:hover a {
   font-weight: bold;
+}
+
+.sublevel ul li:hover {
+  list-style-type: disc;
 }
 
 .sublevel ul li a:first-child {
   padding-top: 5px;
-}
-
-@media (min-width: 450px) and (max-width: 960px) {
-  .sublevel ul li {
-    padding: 0;
-    max-width: 230px;
-    margin-right: 30px;
-  }
-}
-
-@media (min-width: 1080px) {
-  .sublevel ul li {
-    padding: 5px 0 5px 0;
-    max-width: 230px;
-    margin-right: 30px;
-  }
 }
 
 .clickedOnce {
@@ -949,6 +936,7 @@ pre::-webkit-scrollbar-thumb {
 
 .active {
   font-weight: bold;
+  list-style-type: disc;
 }
 
 li.active a {
@@ -994,6 +982,50 @@ li.active a {
   display: inline-block;
   line-height: 56px;
   text-align: center;
+}
+
+/*---------------------------------------------------------------------/
+//  'Copy to Clipboard' Header Links...
+/*---------------------------------------------------------------------*/
+
+#holdLink {
+  position: absolute;
+  left: -9999px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
+
+.row h1:hover .copyLink,
+.row h2:hover .copyLink,
+.row h3:hover .copyLink,
+.row h4:hover .copyLink,
+.row h5:hover .copyLink,
+.row h6:hover .copyLink {
+  display: inline;
+}
+
+.copyLink {
+  box-sizing: border-box;
+  display: none;
+  cursor:pointer;
+  color: <?php echo $oemBlue; ?>;
+  text-shadow: none;
+  padding: 2px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 3px;
+}
+
+.copyLink:hover {
+  background-color: <?php echo $oemBlue; ?>;
+  color: <?php echo $oemWhite; ?>;
+}
+
+.anchorLink {
+  position: absolute;
+  margin-top: -60px;
 }
 
 /*---------------------------------------------------------------------/
