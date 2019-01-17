@@ -198,6 +198,41 @@
   </div>
   <input id="holdLink" value="hello!">
   </input>
+  
+<!---------------------------------------
+--------------------------------------------->
+  
+<style>
+
+#slideNotification {
+  box-sizing: border-box;
+  position: fixed;
+  width: 180px;
+  bottom: 0;
+  right: -180px;
+  background-color: black;
+  padding: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.slideNotification-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+</style>
+
+
+
+<div id="slideNotification">
+  <span class="slideNotification-text">Copied to Clipboard</span>
+</div>
+  
+<!---------------------------------------
+--------------------------------------------->
+  
 </body>
 </html>
 <script>
@@ -529,8 +564,8 @@ if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) { // this class remov
   $("h1, h2, h3, h4, h5, h6").append(
     "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'>" +
     "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
-    "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy hyperlink to clipboard'>" +
-    "<i class='fa fa-clone' aria-hidden='true'></i> hyperlink</p>"
+    "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy embedded link to clipboard'>" +
+    "<i class='fa fa-clone' aria-hidden='true'></i> Embed</p>"
   );
 }
 
@@ -544,7 +579,12 @@ $(document).ready(function() {
       holdLink.value = this_link;
       holdLink.select();
       document.execCommand("copy");
-      alert("Link copied to clipboard: \n" + holdLink.value);
+      $("#slideNotification").css("right","0");
+      setTimeout(function(){
+        $("#slideNotification").css("right","-180px");
+      }, 1800);
+      
+      //alert("Link copied to clipboard: \n" + holdLink.value);
     }
     else if ($(this).hasClass("copy_hyperlink")) {
       var holdLink  = document.getElementById("holdLink");
@@ -558,7 +598,10 @@ $(document).ready(function() {
       holdLink.value = "<a href=" + "'" + this_link + "'" + ">" + link_descriptor + "</a>";
       holdLink.select();
       document.execCommand("copy");
-      alert("Hyperlink copied to clipboard.");
+      $("#slideNotification").css("right","0");
+      setTimeout(function(){
+        $("#slideNotification").css("right","-180px");
+      }, 1800);
     }
   });
 });

@@ -1004,24 +1004,28 @@ h1, h2, h3, h4, h5, h6 {
 .row h4:hover .copyLink,
 .row h5:hover .copyLink,
 .row h6:hover .copyLink {
-  display: inline;
+  display: inline-block;
 }
 
 .copyLink {
-  box-sizing: border-box;
   display: none;
   cursor:pointer;
   color: <?php echo $oemBlue; ?>;
   text-shadow: none;
-  padding: 2px;
+  padding: 0 2px 0 2px;
   font-size: 14px;
-  line-height: 16px;
-  border-radius: 3px;
+  border-radius: 2px;
+  font-weight: normal;
+  margin: 0;
 }
 
 .copyLink:hover {
   background-color: <?php echo $oemBlue; ?>;
   color: <?php echo $oemWhite; ?>;
+}
+
+.copyLink .fa-clone {
+  text-shadow: none;
 }
 
 .anchorLink {
