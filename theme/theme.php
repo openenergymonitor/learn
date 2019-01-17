@@ -556,13 +556,13 @@
       else if ($(this).hasClass("copy_hyperlink")) {
         var holdLink  = document.getElementById("holdLink");
         var url       = window.location.href.replace(location.hash,"");
-        var parent_id = $(this).prev().prev('a[name]').attr('name');
+        var parent_id = $(this).parent().clone().children().remove().end().text().trim();
         var this_link = url + "#" + parent_id;
-        var link_descriptor = window.location.pathname;
-        var link_descriptor = link_descriptor.replace(/\//g, "&rarr;");
-        var link_descriptor = link_descriptor.substr(6);
-        var link_descriptor = link_descriptor + "&rarr;" + parent_id;
-        holdLink.value = "<a href=" + "'" + this_link + "'" + ">" + link_descriptor + "</a>";
+        var top_menu_link = $(".sublevelhead.clickedOnce").text().trim();
+        var sub_menu_link = $(".menu.active").text().trim();
+        holdLink.value = "<a href=" + "'" + this_link + "'" + ">" +
+                         "Learn&rarr;" + top_menu_link +  "&rarr;" +
+                         sub_menu_link + "&rarr;" + parent_id + "</a>";
         holdLink.select();
         document.execCommand("copy");
         $("#slideNotification").css("right","0");
