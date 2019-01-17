@@ -1034,6 +1034,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*---------------------------------------------------------------------/
+//  Slide in Notification...
+/*---------------------------------------------------------------------*/
+
+#slideNotification {
+  box-sizing: border-box;
+  position: fixed;
+  width: 180px;
+  bottom: 0;
+  right: -180px;
+  background-color: black;
+  padding: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.slideNotification-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*---------------------------------------------------------------------/
 //  General...
 /*---------------------------------------------------------------------*/
 
