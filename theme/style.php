@@ -4,13 +4,13 @@
 
   header("Content-type: text/css; charset: UTF-8");
 
-  $oemBlue = "#44b3e2";
-  $oemDarkBlue = "#368fb4";
-  $oemGray = "#e3e3e3";
-  $oemDarkGray = "#333333";
-  $oemWhite = "#ffffff";
-  $oemBlack = "#000000";
-  $oemFont = "Ubuntu-OEM";
+  $oemBlue       = "#44b3e2";
+  $oemDarkBlue   = "#368fb4";
+  $oemGray       = "#e3e3e3";
+  $oemDarkGray   = "#333333";
+  $oemWhite      = "#ffffff";
+  $oemBlack      = "#000000";
+  $oemFont       = "Ubuntu-OEM";
   $oemTileShadow = "0 0 5px 2px rgba(0,0,0,.35);";
 
 ?>
@@ -30,6 +30,7 @@ html, body {
   height: 100vh;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  scroll-behavior: smooth;
 }
 
 html {
