@@ -558,11 +558,15 @@
         var url       = window.location.href.replace(location.hash,"");
         var parent_id = $(this).parent().clone().children().remove().end().text().trim();
         var this_link = url + "#" + parent_id;
-        var top_menu_link = $(".sublevelhead.clickedOnce").text().trim();
+        var top_menu_link = $(".toplevelhead.clickedOnce").text().trim();
+        var mid_menu_link = $(".sublevelhead.clickedOnce").text().trim();
         var sub_menu_link = $(".menu.active").text().trim();
         holdLink.value = "<a href=" + "'" + this_link + "'" + ">" +
-                         "Learn&rarr;" + top_menu_link +  "&rarr;" +
-                         sub_menu_link + "&rarr;" + parent_id + "</a>";
+                         "Learn&rarr;" +
+                         top_menu_link + "&rarr;" +
+                         mid_menu_link + "&rarr;" +
+                         sub_menu_link + "&rarr;" +
+                         parent_id + "</a>";
         holdLink.select();
         document.execCommand("copy");
         $("#slideNotification").css("right","0");
