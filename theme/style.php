@@ -16,25 +16,25 @@
 ?>
 
 @font-face {
-  font-family: <?php echo $oemFont; ?>;
-  src: url(<?php echo $path; ?>../fonts/Ubuntu-OEM-Light.ttf)
+  font-family : <?php echo $oemFont; ?>;
+  src         : url(<?php echo $path; ?>../fonts/Ubuntu-OEM-Light.ttf)
 }
 
 /*--------------------------------------------
-HTML,Body...
+  HTML,Body...
 --------------------------------------------*/
 
 html, body {
-  font-family: <?php echo $oemFont; ?>, sans-serif;
-  margin: 0;
-  height: 100vh;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  scroll-behavior: smooth;
+  font-family     : <?php echo $oemFont; ?>, sans-serif;
+  margin          : 0;
+  height          : 100vh;
+  overflow-wrap   : break-word;
+  word-wrap       : break-word;
+  scroll-behavior : smooth;
 }
 
 html {
-  min-height: 100vh;
+  min-height : 100vh;
 }
 
 body {
@@ -54,7 +54,7 @@ body {
 }
 
 /*--------------------------------------------
-Navigation...
+  Navigation...
 --------------------------------------------*/
 
 .navigationBig {
@@ -157,7 +157,7 @@ Navigation...
 }
 
 /*--------------------------------------------
-length of Oem site links...
+ Length of Oem site links...
 --------------------------------------------*/
 
 .navigationBig ul li:nth-child(1) {
@@ -402,17 +402,6 @@ length of Oem site links...
 /*---------------------------------------------------------------------/
 //  Google search...
 /*---------------------------------------------------------------------*/
-
-.mainmenuColor {background-color: #ffffff;
-  color: #44b3e2;
-}
-
-@media screen and (min-width: 1080px) {
-  .mainmenuColor {
-    color: #ffffff;
-    background-color: #44b3e2;
-  }
-}
 
 .searchContainer {
   box-sizing: border-box;
@@ -779,6 +768,18 @@ pre::-webkit-scrollbar-thumb {
 //  Sidenav
 /*---------------------------------------------------------------------*/
 
+.mainmenuColor {
+  background-color: <?php echo $oemDarkBlue; ?>;
+  color: #fff;
+}
+
+@media screen and (min-width: 1080px) {
+  .mainmenuColor {
+    color: #ffffff;
+    background-color: #44b3e2;
+  }
+}
+
 .sidenav {
   width: 300px;
   margin-top: 42px;
@@ -814,7 +815,7 @@ pre::-webkit-scrollbar-thumb {
 .sidenav a  {
   padding: 8px 8px 0 0;
   text-decoration: none;
-  color: #44b3e2;
+  color: #fff;
   display: block;
 }
 
@@ -872,6 +873,7 @@ pre::-webkit-scrollbar-thumb {
     display: none;
     width: 0;
     margin-top: 0;
+    background-color: <?php echo $oemDarkBlue; ?>;
   }
   .lowermenuWrapper {
     padding-top: 0;
@@ -927,6 +929,12 @@ pre::-webkit-scrollbar-thumb {
   list-style-type: disc;
 }
 
+@media screen and (max-width: 1079px) {
+  .sublevel ul li:hover {
+    list-style-type: none;
+  }
+}
+
 .sublevel ul li a:first-child {
   padding-top: 5px;
 }
@@ -936,8 +944,13 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .active {
-  font-weight: bold;
   list-style-type: disc;
+}
+  
+@media screen and (max-width: 1079px) {
+  .active {
+    list-style-type: none;
+  }
 }
 
 li.active a {
@@ -961,7 +974,7 @@ li.active a {
   font-size: 30px;
   text-align: center;
   line-height: 48px;
-  border: 4px solid #44b3e2;
+  border: 4px solid #fff;
   box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
   border-radius: 50%;
   transition: background-color 0.3s;
@@ -983,6 +996,40 @@ li.active a {
   display: inline-block;
   line-height: 56px;
   text-align: center;
+}
+
+.sublevelhead {
+  background-color: <?php echo $oemDarkBlue; ?>;
+}
+
+.sublevelhead:nth-child(1) {
+   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7);
+}
+
+.sublevelhead:nth-last-child(2) {
+   -moz-box-shadow:    inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+}
+
+.sublevelhead:nth-last-child(2):nth-child(1) {
+   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+}
+
+
+.sublevel {
+  background-color: #2a708d;
+}
+
+.sublevel {
+   padding-top: 10px;
+   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
 }
 
 /*---------------------------------------------------------------------/
@@ -1019,7 +1066,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.copyLink:hover {
+.copyLink_hover:hover {
   background-color: <?php echo $oemBlue; ?>;
   color: <?php echo $oemWhite; ?>;
 }
@@ -1128,4 +1175,40 @@ hr {
 
 small a {
   font-size: 12px;
+}
+
+/*---------------------------------------------------------------------/
+//  Chapter Index Page...
+/*---------------------------------------------------------------------*/
+
+.chapterPage {
+  display: none;
+}
+
+.chapterContent ul {
+  list-style-type: circle;
+  padding: 0 0 0 12px;
+}
+
+.chapterContent ul li {
+  margin: 20px 0 20px 0;
+}
+
+.chapterContent ul li:hover {
+  font-weight: bold;
+  list-style-type: disc;
+}
+
+.chapterCopy {
+  display: block !important;
+  padding: 10px 0 10px 16px !important;
+  color: #fff !important;
+}
+
+.chapterCopy:hover {
+  font-weight: bold;
+}
+
+.chapterContent ul li a {
+  display: block;
 }
