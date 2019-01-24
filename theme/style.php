@@ -21,7 +21,7 @@
 }
 
 /*--------------------------------------------
-HTML,Body...
+  HTML,Body...
 --------------------------------------------*/
 
 html, body {
@@ -54,7 +54,7 @@ body {
 }
 
 /*--------------------------------------------
-Navigation...
+  Navigation...
 --------------------------------------------*/
 
 .navigationBig {
@@ -157,7 +157,7 @@ Navigation...
 }
 
 /*--------------------------------------------
-length of Oem site links...
+ Length of Oem site links...
 --------------------------------------------*/
 
 .navigationBig ul li:nth-child(1) {
@@ -402,17 +402,6 @@ length of Oem site links...
 /*---------------------------------------------------------------------/
 //  Google search...
 /*---------------------------------------------------------------------*/
-
-.mainmenuColor {background-color: #ffffff;
-  color: #44b3e2;
-}
-
-@media screen and (min-width: 1080px) {
-  .mainmenuColor {
-    color: #ffffff;
-    background-color: #44b3e2;
-  }
-}
 
 .searchContainer {
   box-sizing: border-box;
@@ -779,6 +768,18 @@ pre::-webkit-scrollbar-thumb {
 //  Sidenav
 /*---------------------------------------------------------------------*/
 
+.mainmenuColor {
+  background-color: <?php echo $oemDarkBlue; ?>;
+  color: #fff;
+}
+
+@media screen and (min-width: 1080px) {
+  .mainmenuColor {
+    color: #ffffff;
+    background-color: #44b3e2;
+  }
+}
+
 .sidenav {
   width: 300px;
   margin-top: 42px;
@@ -814,7 +815,7 @@ pre::-webkit-scrollbar-thumb {
 .sidenav a  {
   padding: 8px 8px 0 0;
   text-decoration: none;
-  color: #44b3e2;
+  color: #fff;
   display: block;
 }
 
@@ -872,6 +873,7 @@ pre::-webkit-scrollbar-thumb {
     display: none;
     width: 0;
     margin-top: 0;
+    background-color: <?php echo $oemDarkBlue; ?>;
   }
   .lowermenuWrapper {
     padding-top: 0;
@@ -927,6 +929,12 @@ pre::-webkit-scrollbar-thumb {
   list-style-type: disc;
 }
 
+@media screen and (max-width: 1079px) {
+  .sublevel ul li:hover {
+    list-style-type: none;
+  }
+}
+
 .sublevel ul li a:first-child {
   padding-top: 5px;
 }
@@ -936,8 +944,13 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .active {
-  font-weight: bold;
   list-style-type: disc;
+}
+  
+@media screen and (max-width: 1079px) {
+  .active {
+    list-style-type: none;
+  }
 }
 
 li.active a {
@@ -961,7 +974,7 @@ li.active a {
   font-size: 30px;
   text-align: center;
   line-height: 48px;
-  border: 4px solid #44b3e2;
+  border: 4px solid #fff;
   box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
   border-radius: 50%;
   transition: background-color 0.3s;
