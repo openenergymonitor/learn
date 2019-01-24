@@ -1053,7 +1053,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.copyLink:hover {
+.copyLink_hover:hover {
   background-color: <?php echo $oemBlue; ?>;
   color: <?php echo $oemWhite; ?>;
 }
@@ -1188,6 +1188,12 @@ small a {
 
 .chapterCopy {
   display: block !important;
+  padding: 10px 0 10px 16px !important;
+  color: #fff !important;
+}
+
+.chapterCopy:hover {
+  font-weight: bold;
 }
 
 .chapterContent ul li a {

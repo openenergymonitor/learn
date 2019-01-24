@@ -35,7 +35,7 @@
           <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
         </div>
         <div class = "chapterPage">
-          <h2 class="chapterHeading"></h2>
+          <h2 class="chapterHeading headerIgnore"></h2>
           <hr>
           <p>In this Chapter:</p>
           <div class="chapterContent">
@@ -214,7 +214,7 @@
   			</li>
       </ul>
     </div>
-    <input id="holdLink" value="blank" />
+    <input id="holdLink" value="error" />
     <div id="slideNotification">
       <span class="slideNotification-text">Copied to Clipboard</span>
     </div>
@@ -559,9 +559,9 @@
     
     if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) { // remove from specified headers
       $("h1, h2, h3, h4, h5, h6").append(
-        "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'>" +
+        "&nbsp;&nbsp;<p class='copyLink copy_url copyLink_hover' title='Copy link to clipboard'>" +
         "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
-        "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy embedded link to clipboard'>" +
+        "&nbsp;&nbsp;<p class='copyLink copy_hyperlink copyLink_hover' title='Copy embedded link to clipboard'>" +
         "<i class='fa fa-clone' aria-hidden='true'></i> Embed</p>"
       );
     }
@@ -587,7 +587,6 @@
           this_link      = url + "#" + parent_id;
         }
         holdLink.val(this_link);
-        console.log(holdLink.value);
         holdLink.select();
         document.execCommand("copy");
         $("#slideNotification").css("right","0");
@@ -597,19 +596,32 @@
       }
       else if ($(this).hasClass("copy_hyperlink")) {
         var holdLink       = $("#holdLink");
-        var url            = window.location.href.replace(location.hash,"");
-        var parent_id      = $(this).prev().prev('a[name]').attr('name');
-        var parent_id_name = $(this).parent().clone().children().remove().end().text().trim();
-        var this_link      = url + "#" + parent_id;
-        var top_menu_link  = $(".toplevelhead.activeLink_clickedOnce").text().trim();
-        var mid_menu_link  = $(".sublevelhead.activeLink_clickedOnce").text().trim();
-        var sub_menu_link  = $(".menu.active").text().trim();
-        holdLink.value = "<a href=" + "'" + this_link + "'" + ">" +
-                         "Learn&rarr;"  +
-                         top_menu_link  + "&rarr;" +
-                         mid_menu_link  + "&rarr;" +
-                         sub_menu_link  + "&rarr;" +
-                         parent_id_name + "</a>";
+        var holdLink_inp   =  "";
+        if ($(this).hasClass("chapterCopy")) {
+          var chapter_embedlink = $(this).attr('name');
+          var top_menu_link  = $(".toplevelhead.activeLink_clickedOnce").text().trim();
+          var mid_menu_link  = $(".sublevelhead.activeLink_clickedOnce").text().trim();
+          holdLink_inp       =  "<a href=" + "'" + chapter_embedlink + "'" + ">" +
+                                "Learn&rarr;"  +
+                                top_menu_link  + "&rarr;" +
+                                mid_menu_link + "</a>";
+        }
+        else {
+          var url            = window.location.href.replace(location.hash,"");
+          var parent_id      = $(this).prev().prev('a[name]').attr('name');
+          var parent_id_name = $(this).parent().clone().children().remove().end().text().trim();
+          var this_link      = url + "#" + parent_id;
+          var top_menu_link  = $(".toplevelhead.activeLink_clickedOnce").text().trim();
+          var mid_menu_link  = $(".sublevelhead.activeLink_clickedOnce").text().trim();
+          var sub_menu_link  = $(".menu.active").text().trim();
+          holdLink_inp       =  "<a href=" + "'" + this_link + "'" + ">" +
+                                "Learn&rarr;"  +
+                                top_menu_link  + "&rarr;" +
+                                mid_menu_link  + "&rarr;" +
+                                sub_menu_link  + "&rarr;" +
+                                parent_id_name + "</a>";
+        }
+        holdLink.val(holdLink_inp);
         holdLink.select();
         document.execCommand("copy");
         $("#slideNotification").css("right","0");
@@ -624,7 +636,7 @@
 //  Chapter Index Page...
 // ----------------------------------------------------------------------------------------
 
-  if (!$(".menu").hasClass("active")) {
+  if ((!$(".menu").hasClass("active")) && ($(".sublevelhead").hasClass("activeLink_clickedOnce"))) {
     $(".chapterPage").css("display","block");
     var activeSublevelhead = $(".sublevelhead.activeLink_clickedOnce");
     var activeSublevel = activeSublevelhead.next();
