@@ -426,11 +426,11 @@
 // ----------------------------------------------------------------------------------------
 
   function pageLinks() {
-    var previous = $("li.active").prev().html();
+    var previous = $("li.active").prev('li').html();
     var psLocate = $("li.active").closest(".sublevel").prevAll().eq(2);
     var prevSection = psLocate.text();
     var psLink = psLocate.next().find('a:first').attr('href');
-    var next = $("li.active").next().html();
+    var next = $("li.active").next('li').html();
     var nsLocate = $("li.active").closest(".sublevel").nextAll().eq(0);
     var nextSection = nsLocate.text();
     var nsLink = nsLocate.next().find('a:first').attr('href');
