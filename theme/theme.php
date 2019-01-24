@@ -557,14 +557,16 @@
       }
     );
     
-    if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) {
-      $("h1, h2, h3, h4, h5, h6").append(
-        "&nbsp;&nbsp;<p class='copyLink copy_url copyLink_hover' title='Copy link to clipboard'>" +
-        "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
-        "&nbsp;&nbsp;<p class='copyLink copy_hyperlink copyLink_hover' title='Copy embedded link to clipboard'>" +
-        "<i class='fa fa-clone' aria-hidden='true'></i> Embed</p>"
-      );
-    }
+    $("h1, h2, h3, h4, h5, h6").each(function(){
+      if (!$(this).hasClass("headerIgnore")) {
+        $(this).append(
+          "&nbsp;&nbsp;<p class='copyLink copy_url copyLink_hover' title='Copy link to clipboard'>" +
+          "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
+          "&nbsp;&nbsp;<p class='copyLink copy_hyperlink copyLink_hover' title='Copy embedded link to clipboard'>" +
+          "<i class='fa fa-clone' aria-hidden='true'></i> Embed</p>"
+        );
+      }
+    });
   }
   
   anchorAttach();
