@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="theme-color" content="#44b3e2" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.php?v=3.1.1" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.php?v=3.2.0" />
     <link rel="stylesheet" href="<?php echo $path; ?>theme/font-awesome.min.css" />
     <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-3.3.1.min.js"></script>
   </head>
