@@ -16,8 +16,8 @@
 ?>
 
 @font-face {
-  font-family: <?php echo $oemFont; ?>;
-  src: url(<?php echo $path; ?>../fonts/Ubuntu-OEM-Light.ttf)
+  font-family : <?php echo $oemFont; ?>;
+  src         : url(<?php echo $path; ?>../fonts/Ubuntu-OEM-Light.ttf)
 }
 
 /*--------------------------------------------
@@ -25,16 +25,16 @@ HTML,Body...
 --------------------------------------------*/
 
 html, body {
-  font-family: <?php echo $oemFont; ?>, sans-serif;
-  margin: 0;
-  height: 100vh;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  scroll-behavior: smooth;
+  font-family     : <?php echo $oemFont; ?>, sans-serif;
+  margin          : 0;
+  height          : 100vh;
+  overflow-wrap   : break-word;
+  word-wrap       : break-word;
+  scroll-behavior : smooth;
 }
 
 html {
-  min-height: 100vh;
+  min-height : 100vh;
 }
 
 body {
@@ -985,6 +985,40 @@ li.active a {
   text-align: center;
 }
 
+.sublevelhead {
+  background-color: <?php echo $oemDarkBlue; ?>;
+}
+
+.sublevelhead:nth-child(1) {
+   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7);
+}
+
+.sublevelhead:nth-last-child(2) {
+   -moz-box-shadow:    inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+}
+
+.sublevelhead:nth-last-child(2):nth-child(1) {
+   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+}
+
+
+.sublevel {
+  background-color: #2a708d;
+}
+
+.sublevel {
+   padding-top: 10px;
+   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+}
+
 /*---------------------------------------------------------------------/
 //  'Copy to Clipboard' Header Links...
 /*---------------------------------------------------------------------*/
@@ -1128,4 +1162,34 @@ hr {
 
 small a {
   font-size: 12px;
+}
+
+/*---------------------------------------------------------------------/
+//  Chapter Index Page...
+/*---------------------------------------------------------------------*/
+
+.chapterPage {
+  display: none;
+}
+
+.chapterContent ul {
+  list-style-type: circle;
+  padding: 0 0 0 12px;
+}
+
+.chapterContent ul li {
+  margin: 20px 0 20px 0;
+}
+
+.chapterContent ul li:hover {
+  font-weight: bold;
+  list-style-type: disc;
+}
+
+.chapterCopy {
+  display: block !important;
+}
+
+.chapterContent ul li a {
+  display: block;
 }

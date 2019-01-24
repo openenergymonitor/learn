@@ -34,6 +34,13 @@
         <div class="nextPrev">
           <div class="prev"></div><div class="next"></div> <!--important! no white-space-->
         </div>
+        <div class = "chapterPage">
+          <h2 class="chapterHeading"></h2>
+          <hr>
+          <p>In this Chapter:</p>
+          <div class="chapterContent">
+          </div>
+        </div>
       </div>
     </div>
     <div id="rightpanel">
@@ -138,11 +145,22 @@
                 <span>
                 <i id='subIcon' class='fa fa-plus-circle' aria-hidden='true'></i>
                 </span>&nbsp;".$mv2->nicename."</div>";
+                
                 echo "<div class='sublevel' name='$mk2'><ul>";
                 foreach ($mv2->pages as $mk3=>$mv3)
                 {
                   echo "<li class='menu' name='$mk3'><a href='".$path.$mv3->url."'>".$mv3->nicename."</a></li>";
                 }
+                
+                $chapter_url = explode('/', $path.$mv3->url);
+                array_pop($chapter_url);
+                $chapter_url = implode('/', $chapter_url);
+
+                echo  "<p class='copyLink copy_url chapterCopy' name='$chapter_url' title='Copy link to clipboard'>
+                      <i class='fa fa-clone' aria-hidden='true'></i> URL</p>
+                      <p class='copyLink copy_hyperlink chapterCopy'  name='$chapter_url' title='Copy embedded link to clipboard'>
+                      <i class='fa fa-clone' aria-hidden='true'></i> Embed</p>";
+                
                 echo "</div>";
               }
               echo "</div>";
@@ -196,8 +214,7 @@
   			</li>
       </ul>
     </div>
-    <input id="holdLink" value="hello!">
-    </input>
+    <input id="holdLink" value="blank" />
     <div id="slideNotification">
       <span class="slideNotification-text">Copied to Clipboard</span>
     </div>
@@ -286,6 +303,7 @@
     tl.show();
     tl.prev().addClass("toplevelhead");
     tl.prev().addClass("activeLink_clickedOnce");
+    tl.prev().addClass("clickedOnce");
     tl.prev().children(".topIcons").addClass("clickedOnce");
     sl.show();
     sl.prev().addClass("clickedOnce");
@@ -416,6 +434,8 @@
     var nsLocate = $("li.active").closest(".sublevel").nextAll().eq(0);
     var nextSection = nsLocate.text();
     var nsLink = nsLocate.next().find('a:first').attr('href');
+    var nextCheck = 0;
+    var prevCheck = 0;
     if (next != null) {
       $('.nextPrev > .next').append("Next:&nbsp;<br>" + next);
     }
@@ -424,6 +444,7 @@
     }
     else if (nsLink == null && next == null) {
       $('.nextPrev > .next').append("Return to:<br><a href='/'>Main Menu</a>");
+      nextCheck = 1;
     }
     if (previous != null) {
       $('.nextPrev > .prev').append("Previous:<br>" + previous);
@@ -433,6 +454,10 @@
     }
     else if (psLink == null && previous == null) {
       $('.nextPrev > .prev').append("Return to:<br><a href='/'>Main Menu</a>");
+      prevCheck = 1;
+    }
+    if ((prevCheck == 1) && (nextCheck == 1)) {
+      $('.nextPrev').css("display","none");
     }
   }
   
@@ -523,31 +548,46 @@
 //  'Copy to Clipboard' Header Links...
 // ----------------------------------------------------------------------------------------
 
-  $("h1, h2, h3, h4, h5, h6").each(function() {
-      var hyphenated = $(this).text().replace(/ /g, '-');
-      var hyphenated = hyphenated.toLowerCase();
-      var anchorDiv='<a class="anchorLink" name="' + hyphenated + '"></a>';
-      $(this).append(anchorDiv);
-    }
-  );
-  
-  if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) { // this class removes copy to clipboard links from certain headers
-    $("h1, h2, h3, h4, h5, h6").append(
-      "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'>" +
-      "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
-      "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy embedded link to clipboard'>" +
-      "<i class='fa fa-clone' aria-hidden='true'></i> Embed</p>"
+  function anchorAttach() {
+    $("h1, h2, h3, h4, h5, h6").each(function() {
+        var hyphenated = $(this).text().replace(/ /g, '-');
+        var hyphenated = hyphenated.toLowerCase();
+        var anchorDiv='<a class="anchorLink" name="' + hyphenated + '"></a>';
+        $(this).append(anchorDiv);
+      }
     );
+    
+    if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) { // remove from specified headers
+      $("h1, h2, h3, h4, h5, h6").append(
+        "&nbsp;&nbsp;<p class='copyLink copy_url' title='Copy link to clipboard'>" +
+        "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
+        "&nbsp;&nbsp;<p class='copyLink copy_hyperlink' title='Copy embedded link to clipboard'>" +
+        "<i class='fa fa-clone' aria-hidden='true'></i> Embed</p>"
+      );
+    }
   }
+  
+  anchorAttach();
+  
+// ----------------------------------------------------------------------------------------
   
   $(document).ready(function() {
     $(".copyLink").click(function() {
       if ($(this).hasClass("copy_url")) {
-        var holdLink   = document.getElementById("holdLink");
-        var url        = window.location.href.replace(location.hash,"");
-        var parent_id  = $(this).prev('a[name]').attr('name');
-        var this_link  = url + "#" + parent_id;
-        holdLink.value = this_link;
+        var holdLink  = $("#holdLink");
+        var this_link = "";
+        var url       = "";
+        if ($(this).hasClass("chapterCopy")) {
+          url       =  $(this).attr('name');
+          this_link = url;
+        }
+        else {
+          url            = window.location.href.replace(location.hash,"");
+          var parent_id  = $(this).prev('a[name]').attr('name');
+          this_link      = url + "#" + parent_id;
+        }
+        holdLink.val(this_link);
+        console.log(holdLink.value);
         holdLink.select();
         document.execCommand("copy");
         $("#slideNotification").css("right","0");
@@ -556,7 +596,7 @@
         }, 1800);
       }
       else if ($(this).hasClass("copy_hyperlink")) {
-        var holdLink       = document.getElementById("holdLink");
+        var holdLink       = $("#holdLink");
         var url            = window.location.href.replace(location.hash,"");
         var parent_id      = $(this).prev().prev('a[name]').attr('name');
         var parent_id_name = $(this).parent().clone().children().remove().end().text().trim();
@@ -580,4 +620,24 @@
     });
   });
 
+// ----------------------------------------------------------------------------------------
+//  Chapter Index Page...
+// ----------------------------------------------------------------------------------------
+
+  if (!$(".menu").hasClass("active")) {
+    $(".chapterPage").css("display","block");
+    var activeSublevelhead = $(".sublevelhead.activeLink_clickedOnce");
+    var activeSublevel = activeSublevelhead.next();
+    var chapterContent = $(".chapterContent");
+    var replicateSublevelhead = activeSublevelhead.text().trim();
+    var replicateactiveSublevel = activeSublevel.clone();
+    var replicateactiveSublevel = replicateactiveSublevel.removeClass().addClass("chapterlistStyle");
+    var chapterHeading = $(".chapterHeading");
+    chapterHeading.text(replicateSublevelhead);
+    replicateactiveSublevel.find('li').removeClass().addClass("chaptermenuStyle");
+    chapterContent.html(replicateactiveSublevel);
+    
+    anchorAttach();
+  }
+  
 </script>
