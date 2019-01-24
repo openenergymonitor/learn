@@ -557,7 +557,7 @@
       }
     );
     
-    if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) { // remove from specified headers
+    if (!$("h1, h2, h3, h4, h5, h6").hasClass("headerIgnore")) {
       $("h1, h2, h3, h4, h5, h6").append(
         "&nbsp;&nbsp;<p class='copyLink copy_url copyLink_hover' title='Copy link to clipboard'>" +
         "<i class='fa fa-clone' aria-hidden='true'></i> URL</p>" +
