@@ -246,6 +246,10 @@
                         "nicename": "Ubuntu (Linux) OS: Installing the Arduino Libraries",
                         "url": "electricity-monitoring/arduino-ide/ubuntulib"
                     },
+                    "macos-installing-the-arduino-ide": {
+                        "nicename": "macOS: Installing the Arduino IDE",
+                        "url": "electricity-monitoring/arduino-ide/macoside"
+                    },
                     "macos-installing-the-arduino-libraries": {
                         "nicename": "macOS: Installing the Arduino Libraries",
                         "url": "electricity-monitoring/arduino-ide/macoslib"
