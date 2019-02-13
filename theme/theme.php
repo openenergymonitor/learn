@@ -665,8 +665,7 @@
   
   var notify = $(".sublevelhead.activeLink_clickedOnce").offset();
   var notify = notify.top - 42;
-  console.log(notify);
-  
+
   $(".sidenav").animate({scrollTop:notify},600);
 
 
