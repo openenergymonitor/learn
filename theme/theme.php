@@ -659,4 +659,15 @@
     anchorAttach();
   }
   
+// ----------------------------------------------------------------------------------------
+//  Scroll Down to Active Link in the Menu...
+// ----------------------------------------------------------------------------------------
+  
+  var notify = $(".sublevelhead.activeLink_clickedOnce").offset();
+  var notify = notify.top - 42;
+  console.log(notify);
+  
+  $(".sidenav").animate({scrollTop:notify},600);
+
+
 </script>

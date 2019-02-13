@@ -7,8 +7,8 @@
     if (isset($_GET['q'])) $q = $_GET['q'];
 
 ?>
-<script> 
-    var path = "<?php print $path; ?>"; 
+<script>
+    var path = "<?php print $path; ?>";
     var session = JSON.parse('<?php echo json_encode($session); ?>');
     var apikey = "<?php print $apikey; ?>";
 </script>
@@ -23,7 +23,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/sidebar.css" />
 <script type="text/javascript" src="<?php echo $path; ?>lib/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="<?php echo $path; ?>lib/feed.js"></script>
-
 
 <body>
 
@@ -61,8 +60,8 @@
                           $dir3 = $l3[$i3];
                           $name_parts = explode(".",$l3[$i3]);
 
-                          if (count($name_parts)==2) $name = $name_parts[0];                        
-                          if (count($name_parts)==3) $name = $name_parts[1]; 
+                          if (count($name_parts)==2) $name = $name_parts[0];
+                          if (count($name_parts)==3) $name = $name_parts[1];
                           $nicename = str_replace("-"," ",$name);
                           $link = strtolower($path."$dir/$dir2/$name");
                           echo "<li name='$dir3'><a href='$link'>$nicename</a></li>";
@@ -112,7 +111,7 @@
     if (q[2]!="") $(".sublevel[name="+q[1]+"]").find("li[name='"+q[2]+"']").addClass('active');
 
     $(".logout").click(function() {
-        $.ajax({                   
+        $.ajax({
             url: path+"/logout",
             dataType: 'text',
             success: function(result) {
