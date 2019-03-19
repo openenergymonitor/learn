@@ -22,12 +22,12 @@ Code example:
 
 <span style="color: #CC6600;">double</span> filtered_value = 0;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">setup</span>()
 {
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">begin</span>(9600);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">loop</span>()
 {
   <span style="color: #7E7E7E;">// Generate a test signal</span>
   last_sample = sample;
@@ -36,9 +36,9 @@ Code example:
   <span style="color: #7E7E7E;">// Floating maths implementation of high pass filter takes 36-40 microseconds</span>
   filtered_value = 0.996 * (filtered_value + sample - last_sample);    
 
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(sample);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">println</span>(filtered_value);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">print</span>(sample);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">println</span>(filtered_value);
   <span style="color: #CC6600;">delay</span>(50);
 }
 
@@ -74,12 +74,12 @@ Code example:
 
 <span style="color: #CC6600;">long</span> filtered_value = 0;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">setup</span>()
 {
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">begin</span>(9600);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">loop</span>()
 {
   <span style="color: #7E7E7E;">// Generate a test signal</span>
   last_sample = sample;
@@ -88,9 +88,9 @@ Code example:
   <span style="color: #CC6600;">long</span> n = filtered_value + sample - last_sample;
   filtered_value = ((n<<8)-n)>>8;
 
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(sample);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">println</span>(filtered_value);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">print</span>(sample);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
+  <span style="color: #CC6600;">Serial</span>.<span style="color: #CC6600;">println</span>(filtered_value);
   <span style="color: #CC6600;">delay</span>(50);
 }
 
