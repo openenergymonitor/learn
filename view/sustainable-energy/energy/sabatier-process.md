@@ -27,6 +27,8 @@ Hydrogen has an energy density of 33.3 kWh/kg (LHV) and Methane an energy densit
     8.064g H2 x 33.3 Wh/g (LHV) = 269 Wh
     16.043g CH4 x 13.9 Wh/g (LHV) = 223 Wh
     LHV Efficiency = 223 Wh / 269 Wh = 83%
+    
+*Heat of combustion, Lower Heating Value (LHV) [https://en.wikipedia.org/wiki/Heat_of_combustion#Lower_heating_value](https://en.wikipedia.org/wiki/Heat_of_combustion#Lower_heating_value)*
 
 *Biological conversion of CO2 to CH4 can also be achieved with hydrogenotrophic methanogens.* [2]
 
