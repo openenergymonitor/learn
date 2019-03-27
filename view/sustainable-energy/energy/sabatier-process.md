@@ -20,12 +20,13 @@ Diving a little deeper, we can work out the relative mass of each component of t
 
     44.009g CO2 + 8.064g 4H2 → 16.043g CH4 + 36.03g  2H2O
 
-Hydrogen has an energy density of 33.3 kWh/kg and Methane an energy density of 15.4 kWh/kg and so we can work out the input and output energy of the component masses above:
+*Molar mass calculator: [https://www.webqc.org/mmcalc.php](https://www.webqc.org/mmcalc.php)*
 
-    8.064g H2 x 33.3 kWh/kg = 0.269 kWh
-    16.043g CH4 x 15.4 kWh/kg = 0.247 kWh
+Hydrogen has an energy density of 33.3 kWh/kg (LHV) and Methane an energy density of 13.9 kWh/kg (LHV) and so we can work out the input and output energy of the component masses above:
 
-Which suggests an efficiency of 92%. HHV LVH?? 83% actual conversion efficiency... if LVH methane energy density is used 14 kWh/kg, conversion loss is close to delta H -165 kj/mol above.
+    8.064g H2 x 33.3 Wh/g (LHV) = 269 Wh
+    16.043g CH4 x 13.9 Wh/g (LHV) = 223 Wh
+    LHV Efficiency = 223 Wh / 269 Wh = 83%
 
 *Biological conversion of CO2 to CH4 can also be achieved with hydrogenotrophic methanogens.* [2]
 
