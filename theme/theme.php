@@ -297,6 +297,7 @@
 
   var q = "<?php echo $q; ?>";
   q = q.split("/");
+  
   if (q[0] && q[1] != ("")) {
     sl = $(".sublevel[name="+q[1]+"]");
     tl = $(".toplevel[name="+q[0]+"]");
@@ -601,8 +602,8 @@
         var holdLink_inp   =  "";
         if ($(this).hasClass("chapterCopy")) {
           var chapter_embedlink = $(this).attr('name');
-          var top_menu_link  = $(".toplevelhead.activeLink_clickedOnce").text().trim();
-          var mid_menu_link  = $(".sublevelhead.activeLink_clickedOnce").text().trim();
+          var top_menu_link  = $(".toplevelhead.clickedOnce").text().trim();
+          var mid_menu_link  = $(".sublevelhead.clickedOnce").text().trim();
           holdLink_inp       =  "<a href=" + "'" + chapter_embedlink + "'" + ">" +
                                 "Learn&rarr;"  +
                                 top_menu_link  + "&rarr;" +
@@ -663,8 +664,10 @@
 //  Scroll Down to Active Link in the Menu...
 // ----------------------------------------------------------------------------------------
   
-  var notify = $(".sublevelhead.activeLink_clickedOnce").offset();
-  var notify = notify.top - 42;
+  if ($(".sublevelhead.activeLink_clickedOnce")) {
+    var notify = $(".sublevelhead.activeLink_clickedOnce").offset();
+    var notify = notify.top - 42;
+  }
 
   $(".sidenav").animate({scrollTop:notify},600);
 
