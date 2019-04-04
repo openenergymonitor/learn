@@ -4,7 +4,7 @@
 
 The sabatier process will likely be a key process in the zero carbon energy system allowing for the production of methane from carbon dioxide and hydrogen, where hydrogen is produced from zero carbon energy, e.g at times where wind and solar exceed demand.
 
-The ZeroCarbonBritain scenario uses the sabatier process to increase the methane content of biogas created using anaerobic digestion from around 65% to near 100%. Using the 35% carbon dioxide content of biogas and utilising excess wind and solar energy to generate hydrogen.
+The ZeroCarbonBritain scenario uses the sabatier process to increase the methane content of biogas created using anaerobic digestion from around 60% to near 100%. Using the 40% carbon dioxide content of biogas and utilising excess wind and solar energy to generate hydrogen.
 
 Methane is easier to store in large quantities than hydrogen and can be stored at a scale sufficient to cover inter-seasonal differences in supply and demand. The ZeroCarbonBritain scenario uses methane produced via sabatier enhanced anaerobic digestion to fuel high efficiency gas turbines to cover electricity demand where wind and solar are not sufficient.
 
