@@ -261,6 +261,37 @@ Source: <a href="https://storeandgo.info/fileadmin/downloads/publications/2018-1
 </td>
 </tr></table>
 
+### Helmeth: Integrated High-Temperature Electrolysis and Methanation
+
+<table><tr>
+<td style="width:65%">
+
+<p>The Helmeth project developed a proof of concept integrated high-temperature electrolysis and methanation plant using SOEC technology. Achieving a real-world electricity to methane efficiency of 76%.</p>
+
+<p>The project expects that efficiencies higher than 80% should be achievable on an industrial scale, out of a theoretical potential efficiency of 86%.</p> 
+
+<p><a href="https://www.sciencedirect.com/science/article/pii/S037838201831155X">Power-to-Gas through thermal integration of high-temperature steam electrolysis and carbon dioxide methanation - Experimental results</a></p>
+
+<p><a href="http://www.helmeth.eu/images/joomlaplates/documents/06a.pdf">Presentation: Power-to-Gas concept and overview of HELMETH project</a></p>
+
+<p>There is also potential use for the SOC cell in reverse as a fuel cell to generate electricity @ 60% efficiency, see: <a href="http://www.helmeth.eu/images/joomlaplates/documents/06b.pdf">Presentation: Introduction/main features of high temperature electrolysis with SOEC</a>. Which could in theory make more use of the capital asset and reduce the need for a seperate gas turbine generation when used for renewable backup.</p>
+
+
+</td>
+<td>
+<p>Helmeth project:</p>
+
+<a href="images/helmeth.png"><img src="images/helmeth.png"></a>
+
+<p>Efficiency comparison:</p>
+
+<a href="images/helmeth_efficiency.png"><img src="images/helmeth_efficiency.png"></a>
+
+<p>Source: <a href="http://www.helmeth.eu/images/joomlaplates/documents/06a.pdf">Presentation: Power-to-Gas concept and overview of HELMETH project</a></p>
+
+</td>
+</tr></table>
+
 
 ### References
 
