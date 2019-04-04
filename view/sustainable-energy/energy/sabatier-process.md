@@ -193,6 +193,75 @@ Electric to methane efficiency: 5.6 kWh / 9.5 kWh = 59%
 At 50% gas turbine efficiency result is 2.8 kWh of electric an overall 30% efficiency.<br>
 At 60% gas turbine efficiency result is 3.4 kWh of electric an overall 35% efficiency.
 
+### Electrochaea Power-to-Gas technology
+
+<table><tr>
+<td style="width:65%">
+
+<p>The Electrochaea Power-to-Gas technology uses a biocatalyst to convert CO2 and H2 to biomethane, with recoverable heat.</p>
+
+<a href="http://www.electrochaea.com/wp-content/uploads/2018/03/201803_Data-Sheet_BioCat-Plant.pdf">http://www.electrochaea.com/wp-content/uploads/2018/03/201803_Data-Sheet_BioCat-Plant.pdf</a>
+
+<p>BioCat 10 has a nominal hydrogen input of 2000 Nm3/h (7088 kW) producing 500 Nm3/h of methane.</p>
+
+<pre>
+1 Nm3 of CH4 is 44.618 mol x 16.0425 g-mol-1 = 715.78g
+
+Hydrogen higher heating value 889 kj/mol (55.4 MJ/kg)
+converted to kWh = 15.4 kWh/kg HHV
+
+1 Nm3 of CH4 has therefore an energy content of 11.0 kWh/Nm3
+
+11.0 kWh/Nm3 x 500 Nm3/h = 5500 kW
+
+Efficiency = 5500 kW / 7088 kW = 78%
+</pre>
+
+<p>The energy conversion efficiency in their brochure states >74%</p>
+
+<p>The reactor temperature is relatively low at 63C, which suggests that waste heat temperature will be too low for applications such as the Climeworks CO2 direct air capture technology, but potentially sufficient for space & water heating.</p>
+
+<p></p>
+
+</td>
+<td>
+<img src="images/electrochaea.png">
+</td>
+</tr></table>
+
+### STORE&GO: Power to LNG with DAC
+
+<table><tr>
+<td style="width:65%">
+
+<p>The Italian demonstration site, part of the STORE&GO power-to-gas project, is exploring the integration of direct air capture of CO2 with electrolysis & methanation. Using the Climeworks DAC technology discussed above.
+
+<p><a href="https://storeandgo.info/demonstration-sites/italy">https://storeandgo.info/demonstration-sites/italy</a> 
+
+<p>Their paper: <a href="https://storeandgo.info/fileadmin/downloads/publications/2018-11-06_Process_Modeling_of_an_Innovative_Power_to_LNG_Demonstration_Plant_Bensaid.pdf">Process Modeling of an Innovative Power to LNG Demonstration Plant</a> discusses the proposed demonstration plant process in detail. The paper includes a number of particularly useful energy and mass balance sankey diagrams that detailed steps not covered above e.g compression and drying.</p>
+
+<p>The first diagram shows the intended design for the pilot project which should have an electricity to LNG total system efficiency of 46.3% - or 52% without the LNG compression stage.</p>
+
+<p>The second diagram shows a similar design but with waste heat recovery from the electrolysis unit which should increase the electricity to LNG total system efficiency of 52.6% - or 59% without the LNG compression stage.</p>
+
+<p>The CO2 Capture unit in this paper uses less energy than the original figures I found for the Climeworks unit discussed earlier, at 200-300 kWh/tonCO2 (0.25 kWh/kg) and 1500-2000 kWhth/tonCO2 @ 100C (1.75 kWh/kg). There are then additional requirements for electricity that balance out the overall efficiency to be the same.</p>
+
+</td>
+<td>
+<p>Energy and mass balance Sankey diagram</p>
+
+<a href="images/storego.png"><img src="images/storego.png"></a>
+
+<p>Improved concept:</p>
+
+<a href="images/storego_improved.png"><img src="images/storego_improved.png"></a>
+
+Source: <a href="https://storeandgo.info/fileadmin/downloads/publications/2018-11-06_Process_Modeling_of_an_Innovative_Power_to_LNG_Demonstration_Plant_Bensaid.pdf">Process Modeling of an Innovative Power to LNG Demonstration Plant</a>
+
+</td>
+</tr></table>
+
+
 ### References
 
 [1] https://en.wikipedia.org/wiki/Sabatier_reaction
