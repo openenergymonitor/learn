@@ -319,6 +319,7 @@
     $('.nextPrev > .next').empty();
     $('.nextPrev > .prev').empty();
     pageLinks();
+    $(".chapterPage").css("display","none");
     });
   }
 
@@ -652,11 +653,6 @@
     replicateactiveSublevel.find('li').removeClass().addClass("chaptermenuStyle");
     chapterContent.html(replicateactiveSublevel);
 
-/*
-    $.get( "ac-power-theory.md", function( response ) {
-    console.log( response ); // server response
-    });
-*/
     anchorAttach();
   }
   
