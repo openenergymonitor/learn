@@ -4,7 +4,7 @@
 
 The sabatier process will likely be a key process in the zero carbon energy system allowing for the production of methane from carbon dioxide and hydrogen, where hydrogen is produced from zero carbon energy, e.g at times where wind and solar exceed demand.
 
-The ZeroCarbonBritain scenario uses the sabatier process to increase the methane content of biogas created using anaerobic digestion from around 65% to near 100%. Using the 35% carbon dioxide content of biogas and utilising excess wind and solar energy to generate hydrogen.
+The ZeroCarbonBritain scenario uses the sabatier process to increase the methane content of biogas created using anaerobic digestion from around 60% to near 100%. Using the 40% carbon dioxide content of biogas and utilising excess wind and solar energy to generate hydrogen.
 
 Methane is easier to store in large quantities than hydrogen and can be stored at a scale sufficient to cover inter-seasonal differences in supply and demand. The ZeroCarbonBritain scenario uses methane produced via sabatier enhanced anaerobic digestion to fuel high efficiency gas turbines to cover electricity demand where wind and solar are not sufficient.
 
@@ -16,19 +16,16 @@ The reaction is described by the following exothermic reaction:
     
 (some initial energy/heat is required to start the reaction)
 
-Diving a little deeper, we can work out the relative mass of each component of the reaction by assigning molecular masses:
+Applying higher heating values we can work out the process energy efficiency:
 
-    44.009g CO2 + 8.064g 4H2 → 16.043g CH4 + 36.03g  2H2O
-
-*Molar mass calculator: [https://www.webqc.org/mmcalc.php](https://www.webqc.org/mmcalc.php)*
-
-Hydrogen has an energy density of 33.3 kWh/kg (LHV) and Methane an energy density of 13.9 kWh/kg (LHV) and so we can work out the input and output energy of the component masses above:
-
-    8.064g H2 x 33.3 Wh/g (LHV) = 269 Wh
-    16.043g CH4 x 13.9 Wh/g (LHV) = 223 Wh
-    LHV Efficiency = 223 Wh / 269 Wh = 83%
+    Methane HHV: 889 kj/mol
+    Hydrogen HHV: 286 kj/mol
     
-*Heat of combustion, Lower Heating Value (LHV) [https://en.wikipedia.org/wiki/Heat_of_combustion#Lower_heating_value](https://en.wikipedia.org/wiki/Heat_of_combustion#Lower_heating_value)*
+*Heat of combustion, Higher Heating Value (HHV) [https://en.wikipedia.org/wiki/Heat_of_combustion](https://en.wikipedia.org/wiki/Heat_of_combustion)*    
+
+    4H2 = 4x 286 kj/mol = 1144 kj/mol
+    CH4 = 889 kj/mol
+    HHV Efficiency = 889 kj/mol / 1144 kj/mol = 78%
 
 *Biological conversion of CO2 to CH4 can also be achieved with hydrogenotrophic methanogens.* [2]
 
@@ -38,103 +35,263 @@ Anaerobic digestion is currently used to produce biogas from a mixture of differ
 
 **Example calculation**
 
-The density of methane at 20C and 1 atm (NTP) is 0.668 kg/m3 [4] and so the weight of the methane content in 1m3 of biogas at 65% methane content is 0.65 x  0.668 = 0.4342 kg. The energy content is therefore  0.4342 kg x 15.4 kWh/kg = 6.7 kWh.
+Assuming a biogas content of 60% CH4 and 40% CO2 by molecule.
 
-The density of carbon dioxide at 20C and 1 atm (NTP) is 1.842 kg/m3 [4] and so the weight of the carbon dioxide content in 1m3 of biogas at 35% content is 0.35 x  1.842 = 0.645 kg.
+Sabatier equation:
 
-Going back to the sabatier reaction equation above we can work out the amount of hydrogen required for combination with the available CO2 in our m3 of biogas and the resulting methane quantity produced.
+    CO2 + 4H2 → CH4 + 2H2O
+    
+Combining our 60/40 biogas with the sabatier process yields:
 
-The ratio between 44.009g CO2 from our reaction equation and 0.645 kg is 14.6, we therefore need 8.064g x 14.6 = 118g of hydrogen to react with the available CO2 in a m3 of biogas. We can also calculate the methane produced as 16.043g x 14.6 = 235g.
+    3CH4 + 2CO2 + 8H2 → 5CH4 + 4H2O
+    
+Applying higher heating values:
 
-Adding the methane produced via the sabatier reaction to the existing methane present in the biogas we get 0.669 kg which is what we would expect from 1m3 of pure methane. The total energy is now 0.669 kg x 15.4 kWh/kg = 10.3 kWh.
+    Methane HHV: 889 kj/mol
+    Hydrogen HHV: 286 kj/mol
 
-118g of hydrogen has an energy content of 33.3 kWh/kg x 0.118 kg = 3.9 kWh. Using a high efficiency electrolyzer 3.9 kWh of hydrogen would require 3.9 kWh / 84% = 4.6 kWh of input electricity. We can therefore upgrade our 6.7 kWh/m3 of biogas to 10.3 kWh/m3 of methane if we have 4.6 kWh of surplus renewable electricity.
+    3(889) + 8(286) → 5(889) + Heat
+    2667kj CH4 + 2288kj H2 → 4445kj CH4 + 510kj Heat
+    
+Including energy loss in biomass conversion to biogas (assuming 60% efficiency):
 
-The conversion of biomass to biogas is about 60% efficient and so our 6.7 kWh of biogas required 11.2 kWh worth of input wet biomass to create.
+    2667kj CH4 / 0.6 = 4445kj biomass
+    4445kj biomass + 2288kj H2 → 4445kj CH4
+    
+or normalised to be more readable:
+    
+    1.0 kj biomass + 0.5kj hydrogen → 1.0 kj methane
+    
+we could also write this in any other unit of energy e.g:
 
-The full biomass + hydrogen to methane energy equation therefore works out to being:
+    1.0 kWh biomass + 0.5 kWh hydrogen →  1.0 kWh methane
 
-    11.2 kWh of biomass + 3.9 kWh of hydrogen = 10.3 kWh of methane
+At an electrolysis efficiency of 80% we would need 0.625 kWh of electricity to upgrade this quantity of biogas to methane.
 
-Which is near enough to the energy conversion equation used in the ZeroCarbonBritain model:
-
-    2.0 kWh rotational grasses + 1.0 kWh of hydrogen  = 2.0 kWh of methane
-
-Equivalent via calculation above:
-
-    2.0 kWh rotational grasses + 0.7 kWh of hydrogen  = 1.8 kWh of methane
+*Nel Hydrogen state an equivalent electrolysis efficiency range of 80.5% to 93.3% for their A-series electrolysers [https://nelhydrogen.com/product/atmospheric-alkaline-electrolyser-a-series](https://nelhydrogen.com/product/atmospheric-alkaline-electrolyser-a-series)*
 
 ### Case study: Lemvig Biogas MeGa-stoRE
 
 The Lemvig Biogas MeGa-stoRE project is technical proof of concept of adding sabatier based biogas upgrading to an existing biogas plant in Denmark [5]. The Lemvig Biogas plant is the largest in Denmark. Slurry from about 75 farms and other waste and residual products from industrial production are used to generate heat and power [6].
 
-The following diagram from the MeGa-stoRE project report provides an overview of the material and energy flows in the pilot plant, showing the sabatier methanisation reactor and hydrogen production from renewable electricity:
+The following diagram from a MeGa-stoRE project presentation provides an overview of the material and energy flows in the pilot plant, showing the sabatier methanisation reactor and hydrogen production from renewable electricity:
 
 ![sabatierAD.png](files/sabatierAD.png)
 
+Source: [https://brintbranchen.dk/wp-content/uploads/2017/10/6.-Lars-Yde-MeGa-StoRE.pdf](https://brintbranchen.dk/wp-content/uploads/2017/10/6.-Lars-Yde-MeGa-StoRE.pdf)
+
 We can read from this diagram that ‘for every hour’ 1713 m3 of biogas is produced with an energy content of 12.3 MWh. The energy content reflects the methane content which is 1114 m3. 
 
-*Cross check: Using our value for the density of methane above 0.668 kg/m3 and energy density 15.4 kWh/kg suggests 11.5 MWh which suggests a difference in methane pressure and temperature.*
+---
 
-The diagram shows 600 m3 of CO2 being combined with 2400 m3 of hydrogen to produce 600m3 of methane via the sabatier process and in energy terms 8.4 MWh of hydrogen producing 6.6 MWh of methane.
+The presentation states that the volume units are Nm3 (Normal cubic meter [https://www.engineeringtoolbox.com/stp-standard-ntp-normal-air-d_772.html](https://www.engineeringtoolbox.com/stp-standard-ntp-normal-air-d_772.html)), this means a temperature of 273.15K and pressure of 1 atm (101,325 Pa).
 
-*Cross check: Hydrogen at NTP (20C, 1atm) has a density of 0.0838 kg/m3 [7] and so 2400 m3 of hydrogen corresponds to 201 kg. The energy density of hydrogen is 33.3 kWh/kg, multiplied by 201 kg = 6.7 MWh which is a fair bit lower than the 8.4 MWh above?*
+Calculation of the mass of 1 Nm3 of methane and hydrogen:
 
-Methane as NTP has a density of 0.668 kg/m3 and so 600m3 corresponds to 401 kg, at an energy density 15.4 kWh/kg suggests 6.2 MWh, slightly lower than the 6.6 MWh above.
+    Ideal gas law: PV = nRT
 
+    P: Pressure
+    V: Volume
+    n: number of moles
+    R: product of Boltzmann constant and Avogadro constant (8.314)
+    T: Temperature
+    
+    n = PV / RT
+    n = (101325×1)÷(8.314×273.15)
+    n = 44.62 mol/m3
+ 
+    Molar mass of methane: 16.0425 g/mol*
+    Density of methane = 16.0425 × 44.62 = 715.8 g/m3
+
+    Molar mass of hydrogen: 2.01588 g/mol*
+    Density of hydrogen = 2.01588 × 44.62 = 89.95 g/m3
+
+[* https://www.webqc.org/mmcalc.php](https://www.webqc.org/mmcalc.php)
+
+Calculation of methane and hydrogen energy density in kWh/kg:
+
+    Molar mass of methane: 16.0425 g/mol
+    Methane HHV: 889 kj/mol*
+    889 kj/mol / 16.0425 g/mol = 55.4 kj/g
+    55.4 MJ/kg / 3.6 MJ/kWh = 15.4 kWh/kg
+    
+    Molar mass of hydrogen: 2.01588 g/mol
+    Hydrogen HHV: 286 kj/mol*
+    286 kj/mol / 2.01588 g/mol = 141.9 kj/g
+    141.9 MJ/kg / 3.6 MJ/kWh = 39.4 kWh/kg
+
+[* https://en.wikipedia.org/wiki/Heat_of_combustion](https://en.wikipedia.org/wiki/Heat_of_combustion)
+
+---
+
+Sanity checking the MeGa-stoRE calculation:
+
+Biogas input:
+
+    1114 Nm3/h of methane × 0.7158 kg/m3 = 797.4 kg/h
+    797.4 kg/h × 15.4 kWh/kg (HHV) = 12.3 MW
+
+Hydrogen input:
+
+    2400 Nm3/h of hydrogen × 0.08995 kg/m3 = 215.9 kg/h
+    215.9 kg/h × 39.4 kWh/kg (HHV) = 8.5 MW
+
+Sabatier methane:
+
+    600 Nm3/h of methane × 0.7158 kg/m3 = 429.5 kg/h
+    429.5 kg/h × 15.4 kWh/kg (HHV) = 6.6 MW
+    
 Assuming a 60% biomass to biogas conversion efficiency and using the figures from the diagram above.
 
-20.5 MWh biomass should produce 12.3 MWh of biogas. This is then combined with 8.4 MWh of hydrogen to produce a total of 18.9 MWh of methane. Scaling these figures for easier comparison with the figures in ZeroCarbonBritain we can see that the result is in close agreement:
+20.5 MWh biomass should produce 12.3 MWh of biogas. This is then combined with 8.4 MWh of hydrogen to produce a total of 18.9 MWh of methane. Normalising these figures we get:
 
-    2.0 kWh biomass + 0.82 kWh of hydrogen = 1.84 kWh of methane.
-
-Using the figures from our cross checks. 11.5 MWh of biogas corresponding to 19.2 MWh of biomass, is combined with 6.7 MWh of hydrogen to produce 17.7 MWh of methane. Scaling these figures again for easier comparison with the figures in ZeroCarbonBritain:
-
-    2.0 kWh biomass + 0.70 kWh of hydrogen = 1.84 kWh of methane.
-
-Cross check 2: Using figures from table on page 27
-
-    Volume:	0.65 CH4 + 0.35 CO2 + 1.4 H2	= 0.65 CH4 + 0.35 CH4
-    Energy:	7.15 kWh + 0.00 kWh + 5.9 kWh	= 7.15 kWh + 3.85 kWh
-    11.9 kWh of biomass + 5.9 kWh of hydrogen = 11 kWh of methane
-
-scaled:
-
-    2.0 kWh of biomass + 1.0 kWh of hydrogen = 1.85 kWh of methane
-
-Difference between HHV and LHV?
-
-- HHV: water vapour is condensed = more heat is recovered
-- LHV: water vapour remains as vapour – less heat is recovered
-
-Methane:
-
-- HHV: 55.5 MJ/kg
-- LHV: 50.0 MJ/kg
+    1.0 kWh biomass + 0.41 kWh of hydrogen = 0.92 kWh of methane
+    
+The CO2 to Methane proportions in the biogas are lower in the MeGa-stoRE project at 35% CO2 and 65% Methane, which should account for the slightly lower hydrogen and output methane figures.
 
 ### Direct air capture
 
-An alternative to the use of carbon dioxide present in biogas could be to couple  a sabatier reactor to a carbon dioxide direct air capture plant, pulling carbon dioxide from the air for combination with hydrogen produced from excess renewable energy. A key advantage to this approach could be the potential to avoid the land area requirements of growing crops such as rotational grasses for biogas production, however direct-air-capture has an energy cost associated with it, where every kg of carbon dioxide captured requires 2.5 kWh of 100C heat and 0.5 kWh of electricity:
+An alternative to the use of carbon dioxide present in biogas could be to couple a sabatier reactor to a carbon dioxide direct air capture plant, pulling carbon dioxide from the air for combination with hydrogen produced from excess renewable energy. A key advantage to this approach could be the potential to avoid the land area requirements of growing crops such as rotational grasses for biogas production, however direct-air-capture has an energy cost associated with it, where every kg of carbon dioxide captured requires 2.5 kWh of 100C heat and 0.5 kWh of electricity:
 
 *Driving the Climeworks process uses 2.5 megawatt hours (MWh) of heat, at around 100C, for each tonne of CO2, along with 0.5MWh of power. This energy requirement is roughly equivalent to the 12GJ/tCO2 estimates set out above, though the firm hopes to shave 40% off this figure, bringing it down to around 7GJ/tCO2. Gebald says an increase in energy resources – he points to wind and solar – would be needed to scale up direct capture.* - https://www.carbonbrief.org/swiss-company-hoping-capture-1-global-co2-emissions-2025
 
-    44.009 g CO2 + 8.064 g H2 → 16.043 g CH4 + 36.03 g  2H2O
+Calculating hydrogen requirement for every kg of CO2 captured using DAC:
 
-H2: 183g (6.1 kWh, 7.3 kWh el)
-CH4: 365g (5.6 kWh)
+    Sabatier process
+    CO2 + 4H2 → CH4 + 2H2O
+    
+    Applying molar mass:
+    44.009 g/mol CO2 + 4x2.016 g/mol H2 → 16.043 g/mol CH4 + 2x15.015 g/mol 2H2O
+    
+    Scaling on a per kg CO2 basis:
+    1kg CO2 + 0.183 kg H2 = 0.364 kg CH4
+    
+    In energy terms:
+    1kg CO2 + 7.2 kWh H2 = 5.6 kWh CH4
+    
+    Including electrolysis at 80% efficiency:
+    1kg CO2 + 9.0 kWh el = 5.6 kWh CH4
 
 Methane production from direct air capture:
 
     DAC: 2.5 kWh of 100C heat
     DAC: 0.5 kWh of electric
-    7.3 kWh for hydrogen production
+    9.0 kWh electric for hydrogen production
     Output: 5.6 kWh of methane.
-    Electric input = 7.8 kWh
+    Total electric input = 9.5 kWh
 
-Recovered heat from sabatier reaction max = 1.2 + 0.5 kWh = 1.7 kWh.
-Lets say 1.2 kWh practical meaning a further 1.3 kWh electrical heat required.
-Electric input 1.3+7.8 = 9.1 kWh produces 5.6 kWh of methane.
-At 50% gas turbine efficiency result is 2.8 kWh of electric an overall 30% efficiency.
+Heat recovery:
+
+    Heat from sabatier reaction: 7.2 - 5.6 = 1.6 kWh
+    Heat from electrolysis = 1.98 kWh
+    Total heat = 3.58 kWh
+    If we can recover 70% of the heat is would cover DAC heat requirement.
+    Likely required high temp electrolysis to do this.
+
+Electric to methane efficiency: 5.6 kWh / 9.5 kWh = 59%
+
+At 50% gas turbine efficiency result is 2.8 kWh of electric an overall 30% efficiency.<br>
+At 60% gas turbine efficiency result is 3.4 kWh of electric an overall 35% efficiency.
+
+### Electrochaea Power-to-Gas technology
+
+<table><tr>
+<td style="width:65%">
+
+<p>The Electrochaea Power-to-Gas technology uses a biocatalyst to convert CO2 and H2 to biomethane, with recoverable heat.</p>
+
+<a href="http://www.electrochaea.com/wp-content/uploads/2018/03/201803_Data-Sheet_BioCat-Plant.pdf">http://www.electrochaea.com/wp-content/uploads/2018/03/201803_Data-Sheet_BioCat-Plant.pdf</a>
+
+<p>BioCat 10 has a nominal hydrogen input of 2000 Nm3/h (7088 kW) producing 500 Nm3/h of methane.</p>
+
+<pre>
+1 Nm3 of CH4 is 44.618 mol x 16.0425 g-mol-1 = 715.78g
+
+Hydrogen higher heating value 889 kj/mol (55.4 MJ/kg)
+converted to kWh = 15.4 kWh/kg HHV
+
+1 Nm3 of CH4 has therefore an energy content of 11.0 kWh/Nm3
+
+11.0 kWh/Nm3 x 500 Nm3/h = 5500 kW
+
+Efficiency = 5500 kW / 7088 kW = 78%
+</pre>
+
+<p>The energy conversion efficiency in their brochure states >74%</p>
+
+<p>The reactor temperature is relatively low at 63C, which suggests that waste heat temperature will be too low for applications such as the Climeworks CO2 direct air capture technology, but potentially sufficient for space & water heating.</p>
+
+<p></p>
+
+</td>
+<td>
+<img src="images/electrochaea.png">
+</td>
+</tr></table>
+
+### STORE&GO: Power to LNG with DAC
+
+<table><tr>
+<td style="width:65%">
+
+<p>The Italian demonstration site, part of the STORE&GO power-to-gas project, is exploring the integration of direct air capture of CO2 with electrolysis & methanation. Using the Climeworks DAC technology discussed above.
+
+<p><a href="https://storeandgo.info/demonstration-sites/italy">https://storeandgo.info/demonstration-sites/italy</a> 
+
+<p>Their paper: <a href="https://storeandgo.info/fileadmin/downloads/publications/2018-11-06_Process_Modeling_of_an_Innovative_Power_to_LNG_Demonstration_Plant_Bensaid.pdf">Process Modeling of an Innovative Power to LNG Demonstration Plant</a> discusses the proposed demonstration plant process in detail. The paper includes a number of particularly useful energy and mass balance sankey diagrams that detailed steps not covered above e.g compression and drying.</p>
+
+<p>The first diagram shows the intended design for the pilot project which should have an electricity to LNG total system efficiency of 46.3% - or 52% without the LNG compression stage.</p>
+
+<p>The second diagram shows a similar design but with waste heat recovery from the electrolysis unit which should increase the electricity to LNG total system efficiency of 52.6% - or 59% without the LNG compression stage.</p>
+
+<p>The CO2 Capture unit in this paper uses less energy than the original figures I found for the Climeworks unit discussed earlier, at 200-300 kWh/tonCO2 (0.25 kWh/kg) and 1500-2000 kWhth/tonCO2 @ 100C (1.75 kWh/kg). There are then additional requirements for electricity that balance out the overall efficiency to be the same.</p>
+
+</td>
+<td>
+<p>Energy and mass balance Sankey diagram</p>
+
+<a href="images/storego.png"><img src="images/storego.png"></a>
+
+<p>Improved concept:</p>
+
+<a href="images/storego_improved.png"><img src="images/storego_improved.png"></a>
+
+Source: <a href="https://storeandgo.info/fileadmin/downloads/publications/2018-11-06_Process_Modeling_of_an_Innovative_Power_to_LNG_Demonstration_Plant_Bensaid.pdf">Process Modeling of an Innovative Power to LNG Demonstration Plant</a>
+
+</td>
+</tr></table>
+
+### Helmeth: Integrated High-Temperature Electrolysis and Methanation
+
+<table><tr>
+<td style="width:65%">
+
+<p>The Helmeth project developed a proof of concept integrated high-temperature electrolysis and methanation plant using SOEC technology. Achieving a real-world electricity to methane efficiency of 76%.</p>
+
+<p>The project expects that efficiencies higher than 80% should be achievable on an industrial scale, out of a theoretical potential efficiency of 86%.</p> 
+
+<p><a href="https://www.sciencedirect.com/science/article/pii/S037838201831155X">Power-to-Gas through thermal integration of high-temperature steam electrolysis and carbon dioxide methanation - Experimental results</a></p>
+
+<p><a href="http://www.helmeth.eu/images/joomlaplates/documents/06a.pdf">Presentation: Power-to-Gas concept and overview of HELMETH project</a></p>
+
+<p>There is also potential use for the SOC cell in reverse as a fuel cell to generate electricity @ 60% efficiency, see: <a href="http://www.helmeth.eu/images/joomlaplates/documents/06b.pdf">Presentation: Introduction/main features of high temperature electrolysis with SOEC</a>. Which could in theory make more use of the capital asset and reduce the need for a seperate gas turbine generation when used for renewable backup.</p>
+
+
+</td>
+<td>
+<p>Helmeth project:</p>
+
+<a href="images/helmeth.png"><img src="images/helmeth.png"></a>
+
+<p>Efficiency comparison:</p>
+
+<a href="images/helmeth_efficiency.png"><img src="images/helmeth_efficiency.png"></a>
+
+<p>Source: <a href="http://www.helmeth.eu/images/joomlaplates/documents/06a.pdf">Presentation: Power-to-Gas concept and overview of HELMETH project</a></p>
+
+</td>
+</tr></table>
+
 
 ### References
 
@@ -151,5 +308,3 @@ At 50% gas turbine efficiency result is 2.8 kWh of electric an overall 30% effic
 [6] http://www.lemvigbiogas.com/GB.htm
 
 [7] https://h2tools.org/tools
-
-
