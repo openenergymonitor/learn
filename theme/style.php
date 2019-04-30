@@ -1003,21 +1003,21 @@ li.active a {
 }
 
 .sublevelhead:nth-child(1) {
-   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7);
-   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7);
-   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7);
+   -moz-box-shadow:    inset 0 7px 18px -16px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -16px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -16px rgba(0,0,0,0.7);
 }
 
 .sublevelhead:nth-last-child(2) {
-   -moz-box-shadow:    inset 0 -7px 18px -7px rgba(0,0,0,0.7);
-   -webkit-box-shadow: inset 0 -7px 18px -7px rgba(0,0,0,0.7);
-   box-shadow:         inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -moz-box-shadow:    inset 0 -7px 18px -16px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 -7px 18px -16px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 -7px 18px -16px rgba(0,0,0,0.7);
 }
 
 .sublevelhead:nth-last-child(2):nth-child(1) {
-   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
-   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
-   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7), inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -moz-box-shadow:    inset 0 7px 18px -16px rgba(0,0,0,0.7), inset 0 -7px 18px -16px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -16px rgba(0,0,0,0.7), inset 0 -7px 18px -16px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -16px rgba(0,0,0,0.7), inset 0 -7px 18px -16px rgba(0,0,0,0.7);
 }
 
 
@@ -1027,9 +1027,9 @@ li.active a {
 
 .sublevel {
    padding-top: 10px;
-   -moz-box-shadow:    inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
-   -webkit-box-shadow: inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
-   box-shadow:         inset 0 7px 18px -7px rgba(0,0,0,0.7),  inset 0 -7px 18px -7px rgba(0,0,0,0.7);
+   -moz-box-shadow:    inset 0 7px 18px -16px rgba(0,0,0,0.7),  inset 0 -7px 18px -16px rgba(0,0,0,0.7);
+   -webkit-box-shadow: inset 0 7px 18px -16px rgba(0,0,0,0.7),  inset 0 -7px 18px -16px rgba(0,0,0,0.7);
+   box-shadow:         inset 0 7px 18px -16px rgba(0,0,0,0.7),  inset 0 -7px 18px -16px rgba(0,0,0,0.7);
 }
 
 /*---------------------------------------------------------------------/
