@@ -8,7 +8,7 @@ Unfortunately a power value can't be calculated as the timers do not run in slee
 
 Kudos to Donal Morrissey for his clear tutorial on Arduino sleep mode: [Sleeping Arduino](http://donalmorrissey.blogspot.com/2010/04/putting-arduino-diecimila-to-sleep-part.html)
 
-<pre>#include <avr/sleep.h>
+<pre>#include &#60;avr/sleep.h&#62;
 
 #ifndef cbi
 #define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
