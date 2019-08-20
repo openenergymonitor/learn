@@ -48,7 +48,7 @@ This page includes a series of tables designed to help compare the energy and ca
 
 ### Electric vehicles
 
-Electric cars (EV's) are often quoted at a performance of 4 miles/kWh which can easily be achieved with electric cars such as the Nissan Leaf and Renault Zoe. This performance is dependent on acceleration, de-acceleration, speed and terrain in the same way as internal combustion cars.
+Electric cars (EV's) are often quoted at a performance of 4 miles/kWh which can easily be achieved with electric cars such as the Nissan Leaf / Renault Zoe / Tesla Model 3. This performance is dependent on acceleration, de-acceleration, speed and terrain in the same way as internal combustion cars.
 
 The carbon emissions of EV's vary with the carbon intensity of electricity production (gCO2/kWh). EV's have the potential to have very low carbon emissions per mile of the electricity is generated via renewable sources.
 
@@ -56,45 +56,9 @@ UK grid carbon constantly intensity varies, here is an average carbon intensity 
 
 *Note: since EV's are mainly charged overnight when grid carbon intensity is often at it's lowest the actual figure will be lower than the annual average.*
 
-![uk-grid-carbon-years.png](images/uk-grid-carbon-years.png)
+<div class="infogram-embed" data-id="7d75e58b-7c97-4fa3-a887-d5d64fe0b487" data-type="interactive" data-title="British electricity since 2012"></div><script>!function(e,t,s,i){var n="InfogramEmbeds",o=e.getElementsByTagName("script")[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(i)&&(i=d+i),window[n]&&window[n].initialized)window[n].process&&window[n].process();else if(!e.getElementById(s)){var r=e.createElement("script");r.async=1,r.id=s,r.src=i,o.parentNode.insertBefore(r,o)}}(document,0,"infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/7d75e58b-7c97-4fa3-a887-d5d64fe0b487" style="color:#989898!important;text-decoration:none!important;" target="_blank">British electricity since 2012</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
 
 
-
-Grid electric @ 500 gCO2/kWh
-
-| miles/kWh | gCO2/mile | gCO2/km |
-|-----------|-----------|---------|
-| 4.4       | 114       | 71      |
-| 4.2       | 119       | 74      |
-| 4         | 125       | 78      |
-| 3.8       | 132       | 82      |
-| 3.6       | 139       | 86      |
-| 3.4       | 147       | 91      |
-| 3.2       | 156       | 97      |
-
-Grid electric @ 400 gCO2/kWh
-
-| miles/kWh | gCO2/mile | gCO2/km |
-|-----------|-----------|---------|
-| 4.4       | 91        | 56      |
-| 4.2       | 95        | 59      |
-| 4         | 100       | 62      |
-| 3.8       | 105       | 65      |
-| 3.6       | 111       | 69      |
-| 3.4       | 118       | 73      |
-| 3.2       | 125       | 78      |
-
-Grid electric @ 367 gCO2/kWh (UK 2015 grid average intensity ~ Gas CCGT intensity)
-
-| miles/kWh | gCO2/mile | gCO2/km |
-|-----------|-----------|---------|
-| 4.4       | 83        | 52      |
-| 4.2       | 87        | 54      |
-| 4         | 92        | 57      |
-| 3.8       | 97        | 60      |
-| 3.6       | 102       | 63      |
-| 3.4       | 108       | 67      |
-| 3.2       | 115       | 71      |
 
 Grid electric @ 300 gCO2/kWh
 
