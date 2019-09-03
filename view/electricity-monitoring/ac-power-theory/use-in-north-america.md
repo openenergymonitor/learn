@@ -769,6 +769,7 @@ Other output currents and voltage output versions & “Revenue Grade” versions
 <th>Maximum Input (IPM)</th>
 <th>Rated Output</th>
 <th>Maximum Burden</th>
+<th>Calibration Coefficient¹</th>    
 </tr>
 </thead>
 <tbody>
@@ -777,22 +778,27 @@ Other output currents and voltage output versions & “Revenue Grade” versions
 <td>150 A</td>
 <td>50 mA</td>
 <td>100 Ω</td>
+<td>90.91</td>    
 </tr>
 <tr>
 <td>200 A</td>
 <td>300 A</td>
 <td>50 mA</td>
 <td>80 Ω</td>
+<td>181.82</td>    
 </tr>
 <tr>
 <td>400 A</td>
 <td>480 A</td>
 <td>50 mA</td>
 <td>50 Ω</td>
+<td>363.64</td>    
 </tr>
 </tbody>
 </table>
 </div>
+
+¹ Using a 22 Ω burden
 
 For all variants:
 
