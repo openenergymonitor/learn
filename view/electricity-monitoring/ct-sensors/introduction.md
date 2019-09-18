@@ -2,7 +2,7 @@
 
 ***
 
-Pictured below, is an example of a **split-core** HYDC CT:
+Pictured below, is an example of a **split-core** YHDC CT:
 
 <figure>
 <img src="files/current100a.jpg" alt="" />
