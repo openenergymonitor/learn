@@ -82,6 +82,10 @@
                     "report-mascot-9v-acac-adaptor": {
                         "nicename": "Report: <i>Mascot</i> &nbsp;9v AC-AC Adapter",
                         "url": "electricity-monitoring/voltage-sensing/report-mascot-9v-acac-adaptor"
+                    },
+                    "why-cant-i-use-a-single-transformer": {
+                        "nicename": "Why Can't I Use a Single Transformer?",
+                        "url": "electricity-monitoring/voltage-sensing/why-cant-i-use-a-single-transformer"
                     }
                 }
             },
