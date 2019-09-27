@@ -32,7 +32,7 @@ In addition to being far outside the allowable ADC input range, the sample wavef
 
 However, it is possible to use a single transformer, but not in the way that most constructors are familiar with.
 
-(Note: In the suggestions that follow, the diagrams are illustrative only – they should not be used for construction. Some component values might not be optimal. In particular, all (with the possible exception of the third) will, due to loading on the transformer, show a distorted voltage wave. The degree of distortion will be heavily dependent on the current drawn and the transformer regulation.)
+*(Note: In the suggestions that follow, the diagrams are illustrative only – they should not be used for construction. Some component values might not be optimal. In particular, all (with the possible exception of the third) will, due to loading on the transformer, show a distorted voltage wave. The degree of distortion will be heavily dependent on the current drawn and the transformer regulation.)*
 
 First, one way that works is the circuit that is used in the emonTx V3. That uses a half-wave rectifier, and it works because there is one common ground connection that is shared between the transformer (or a.c. adapter), the regulator that provides the smooth operating voltage and the ADC that measures the mains voltage sample.
 
