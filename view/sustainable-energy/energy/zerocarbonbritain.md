@@ -8,24 +8,13 @@ On the demand side the model builds up a detailed picture covering everything fr
 
 Energy is provided in the form of electricity, hydrogen, liquid biofuel and methane gas to meet the variety of demand types.
 
-The report is available for free download and underlying hourly energy model is open source, including the datasets used:
-
-**Downloads**
-
-- [**ZeroCarbonBritain: Rethinking the Future** Full Report](http://zerocarbonbritain.com/images/pdfs/ZCBrtflo-res.pdf)
-- [Full ZeroCarbonBritain Spreadsheet Model](https://dl.dropboxusercontent.com/u/79311585/ZCB_TYHME_v2.xlsx)
+The report is available for free download and underlying hourly energy model is open source: **[ZeroCarbonBritain Reports](https://www.cat.org.uk/info-resources/zero-carbon-britain/)**
 
 **ZeroCarbonBritain Methodology**
 
 Useful technical background covering many different aspects of the ZeroCarbonBritain scenario can be found in the methodology papers, including assumptions around space heating demand reduction, changes in travel distances and how the renewable supply datasets were constructed for offshore & onshore wind, solar and other sources.
 
-- [Power Down](http://zerocarbonbritain.com/images/pdfs/Power%20Down%20Methodology%202%207%2013.pdf)
-- [Renewable Supply](http://zerocarbonbritain.com/images/pdfs/Renewable%20Energy%20Supply%20Methodology.pdf)
-- [Hourly Energy Model](http://zerocarbonbritain.com/images/pdfs/Hourly%20Energy%20Model%20Methodology.pdf)
-- [Land use](http://zerocarbonbritain.com/images/pdfs/Land%20Use%20Methodology%2030.6.13.pdf)
-- [Carbon Model](http://zerocarbonbritain.com/images/pdfs/Carbon%20model%20methodology.pdf)
-- [Food and Diets](http://zerocarbonbritain.com/images/pdfs/Food%20and%20diets%20methodology.pdf)
-- [CAT Blog: Energy Modelling](http://blog.cat.org.uk/2012/12/03/zcblog-energy-modelling/)
+[ZeroCarbonBritain Methodology document 2019](https://www.cat.org.uk/download/35608/)
 
 In our view ZeroCarbonBritain is a particularly good scenario, perhaps one of the most thoroughly worked out for the UK, looking right across the system from electricity supply to land use, with the assumptions and workings transparent and open for scrutiny. We would recommend however to first read Sustainable Energy without the hot air by David MacKay which provides a good framework for understanding energy scenarios, in particular how to do the maths in order to ensure scenarios add up.
 
@@ -64,9 +53,23 @@ The latest version of the zero carbon energy model now integrates these parts an
 
 It also brings with it the ability to scale the output by a given number of households to produce energy scenarios at different scales. Rather than only being able to see outputs in TWh and GWh at a fixed national scale its possible to see the output at different scales from a single households share of a large wind turbine to the size of and number of wind turbines or solar farm/s required by a village, town or city.
 
-The latest model can be explored in full here:
+The model can be explored in full here:
 
 - [**8. Household full energy model**](../zcem/integrated.html#fullhousehold)
+
+#### November 2019: Full ZeroCarbonBritain model published
+
+Full ZeroCarbonBritain hourly energy modelling tool (Includes industry and services):<br>
+**https://openenergymonitor.org/zcem/#fullzcb3**
+
+Community scenario guide:<br>
+**https://openenergymonitor.org/zcem/#community_scenario**
+
+Examples of different scenario variations:<br>
+**https://openenergymonitor.org/zcem/#scenario_variations**
+
+Open source repository for hourly model:<br>
+**https://github.com/zerocarbonbritain/hourlymodel**
 
 #### Using the energy model to explore different scenarios
 
