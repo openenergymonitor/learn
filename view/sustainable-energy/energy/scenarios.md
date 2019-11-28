@@ -1,5 +1,29 @@
 ## Developing community scale zero carbon energy scenarios
 
+---
+
+<br>
+
+### November 2019: For the latest version of this work please see the community scenario guide in the full ZeroCarbonBritain hourly energy modelling tool available here:
+
+Community scenario guide:<br>
+**https://openenergymonitor.org/zcem/#community_scenario**
+
+Full ZeroCarbonBritain hourly energy modelling tool:<br>
+**https://openenergymonitor.org/zcem/#fullzcb3**
+
+Examples of different scenario variations:<br>
+**https://openenergymonitor.org/zcem/#scenario_variations**
+
+Open source repository for hourly model:<br>
+**https://github.com/zerocarbonbritain/hourlymodel**
+
+<br><br>
+
+---
+
+**Note: The following was written based on results from an earlier household only energy model. For a more complete picture see the full ZeroCarbonBritain hourly energy model linked above and the associated scenario variations and community scenario guide.** 
+
 Scenario’s such as ZeroCarbonBritain and the analysis in Sustainable Energy without the hot air are often national scale energy scenarios, for the UK this provides the advantage of being able to consider powering a large bulk of UK electricity demand from offshore wind turbines, where wind speeds are generally higher and more consistent, or perhaps focusing particular energy crops in regions most suited to their growing.
 
 Others suggest increasing the scale further to include Europe and North-Africa wide high voltage DC electricity grids to make it possible to harness North African desert solar power, Northern European wind and Norwegian hydro storage. Going even larger there are a number of scenarios that explore global super grids could be used to shift solar power around the world. 
