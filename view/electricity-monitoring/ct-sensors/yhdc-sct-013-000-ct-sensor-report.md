@@ -22,7 +22,7 @@ It has no internal burden resistor, but a transient voltage suppressor limits th
 
 <div class="xaxiswrapper">
 
-<embed alt="C.T. Test Rig" height="250" src="files/C.T. Test Rig.160705.svg" type="image/svg+xml" width="500">
+<embed alt="C.T. Test Rig" height="250" src="files/C.T. Test Rig.160705.svg" type="image/svg+xml" width="600">
 
 </div>
 
