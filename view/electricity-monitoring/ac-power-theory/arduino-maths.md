@@ -6,7 +6,7 @@
 
 As the name suggests, AC Voltage and current continually alternate. If we draw a picture of the voltage and current waveform over time, it will look something like the image below. Depending on the type of load consuming power, the current waveform - blue in the diagram below - is what you get if you look at a typical laptop computer power supply. (There's an incandescent light bulb present, as well).
 
-The image was made by sampling the mains voltage and current at high frequency, which is exactly what we do on the emontx or Arduino. We make between 50 and 100 measurements every 20 milliseconds. 100 if sampling only current. 50, if sampling voltage _and_ current. We're limited by the Arduino analog read command and calculation speed.
+The image was made by sampling the mains voltage and current at high frequency, rather faster than we can do in the emontx or Arduino. Using emonLib, we can make approximately 100 measurements every 20 milliseconds if sampling only current, or approximately 50 if sampling both voltage and current. We're limited by the Arduino analog read command and calculation speed.
 
 **Each individual sample is an instantaneous voltage or current reading.**
 
