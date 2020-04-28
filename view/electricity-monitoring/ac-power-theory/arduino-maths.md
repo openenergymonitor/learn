@@ -31,7 +31,7 @@ real_power = sum_inst_power / number_of_samples;
 
 </pre>
 
-#### Root-Mean-Square (RMS) Voltage
+#### Root-Mean-Square (RMS) -- Voltage
 
 The root-mean-square is calculated in the way the name suggests. First we square the quantity, then we calculate the mean and finally, the square-root of the mean of the squares, this is how its done:
 
@@ -48,7 +48,7 @@ mean_square_voltage = sum_squared_voltage / number_of_samples;
 root_mean_square_voltage = <span style="color: #CC6600;">sqrt</span>(mean_square_voltage);
  </pre>
 
-#### Root-Mean-Square (RMS) Current
+#### Root-Mean-Square (RMS) -- Current
 
 Same as the RMS voltage calculation:
 
