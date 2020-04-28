@@ -18,7 +18,7 @@ Real power is the average of instantaneous power. The calculation is relatively 
 
 First we calculate the instantaneous power by multiplying the instantaneous voltage measurement by the instantaneous current measurement. We sum the instantaneous power measurement over a given number of samples and divide by that number of samples:
 
-<pre><span style="color: #CC6600;">for</span> (n=0; n<number_of_samples; n++)
+<pre><span style="color: #CC6600;">for</span> (n=0; n&lt;number_of_samples; n++)
 {
   <span style="color: #7E7E7E;">// inst_voltage and inst_current calculation from raw ADC input goes here</span>
 
@@ -35,7 +35,7 @@ real_power = sum_inst_power / number_of_samples;
 
 The root-mean-square is calculated in the way the name suggests. First we square the quantity, then we calculate the mean and finally, the square-root of the mean of the squares, this is how its done:
 
-<pre><span style="color: #CC6600;">for</span> (n=0; n<number_of_samples; n++)
+<pre><span style="color: #CC6600;">for</span> (n=0; n&lt;number_of_samples; n++)
 {
   <span style="color: #7E7E7E;">// inst_voltage calculation from raw ADC input goes here.</span>
 
@@ -52,7 +52,7 @@ root_mean_square_voltage = <span style="color: #CC6600;">sqrt</span>(mean_squa
 
 Same as the RMS voltage calculation:
 
-<pre><span style="color: #CC6600;">for</span> (n=0; n<number_of_samples; n++)
+<pre><span style="color: #CC6600;">for</span> (n=0; n&lt;number_of_samples; n++)
 {
   <span style="color: #7E7E7E;">// inst_current calculation from raw ADC input goes here.</span>
 
