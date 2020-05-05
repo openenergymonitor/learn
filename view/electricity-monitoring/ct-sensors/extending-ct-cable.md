@@ -59,6 +59,12 @@ Yes, but ideally you want a telephony-type cable where pairs of wires are twiste
 If you must use a multicore cable that does not have twisted pairs, try to pick the pairs of wires at random, so that all the ‘signal’ wires and all the ‘earthy’ wires are not bunched together.
 You should try not to use one common connection for one side of all the c.t’s. If it is impossible to avoid a common connection, you must connect the common connection to the ‘earthy’ side of the jack plug at the emonTx or emonPi, which is the plug tip, not the sleeve as you would expect. (Check the circuit diagram for any other device.)
 
+### What if I see a significant power when there should be none?
+
+You probably have noise (interference) picked up because the extension is acting as an aerial. Take a careful look at the cable route. Does it run close to another mains cable? If it is, is it possible to route it some distance away? The further you can, the better. 
+If that doesn’t help, then if possible try earthing the other end instead. 
+Also, try earthing the case of the emonTx or emonPi. Check first, the metal case is normally isolated, with no connection to either the d.c. power input or the a.c. voltage sampling input. If there is a connection between the case and any part of the circuity inside (and the easy way to check is to test for continuity between one of the screw heads and the antenna socket body) then there is a possible risk of damage and you should not earth the case. Earthing the case has in one installation significantly reduced the falsely indicated power.
+
 ### Theory
 
 There are two routes by which interference can get into the cable, and so be measured along with the wanted signal – as a magnetic field or as an electric field.
