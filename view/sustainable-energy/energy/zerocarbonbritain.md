@@ -1,4 +1,6 @@
-## Building on the ZeroCarbonBritain Energy Model
+## Learning from the ZeroCarbonBritain Energy Model
+
+By: Trystan Lea
 
 The ZeroCarbonBritain energy model is a 10-year hourly energy model developed by the ZeroCarbonBritain team at the Centre for Alternative Technology. The model underpins their wider zero carbon scenario showing how demand for transport, heat and traditional electricity can be met from a variable renewable supply and biomass based backup system.
 
@@ -16,11 +18,11 @@ Useful technical background covering many different aspects of the ZeroCarbonBri
 
 [ZeroCarbonBritain Methodology document 2019](https://www.cat.org.uk/download/35608/)
 
-In our view ZeroCarbonBritain is a particularly good scenario, perhaps one of the most thoroughly worked out for the UK, looking right across the system from electricity supply to land use, with the assumptions and workings transparent and open for scrutiny. We would recommend however to first read Sustainable Energy without the hot air by David MacKay which provides a good framework for understanding energy scenarios, in particular how to do the maths in order to ensure scenarios add up.
+ZeroCarbonBritain is perhaps one of the most thoroughly worked out scenarios for the UK, looking right across the system from electricity supply to land use, with the assumptions and workings transparent and open for scrutiny. I would recommend however to first read Sustainable Energy without the hot air by David MacKay which provides a good framework for understanding energy scenarios, in particular how to do the maths in order to ensure scenarios add up.
 
 #### November 2014: OpenEnergyMonitor and ZeroCarbonBritain Collaboration
 
-In late 2014 we held a meeting to discuss household retrofit modelling software with Philip James, a researcher on the ZeroCarbonBritain project. We wanted to understand in more detail how zero carbon energy systems can work; how demand can be met from a variable renewable supply, and the role of storage and demand response. We were also working with the Carbon Coop on the MyHomeEnergyPlanner open source retrofit software project and they were planning a smart grid project exploring these themes. We were also using the monitoring ourselves to try and shift consumption to times of high solar output.
+In late 2014 I had a meeting to discuss household retrofit modelling software with Philip James, a researcher on the ZeroCarbonBritain project. I wanted to understand in more detail how zero carbon energy systems can work; how demand can be met from a variable renewable supply, and the role of storage and demand response. We were also working with the Carbon Coop on the MyHomeEnergyPlanner open source retrofit software project and they were planning a smart grid project exploring these themes. We were also using the monitoring ourselves to try and shift consumption to times of high solar output.
 
 Philip mentioned that he had recently been converting the ZeroCarbonBritain spreadsheet into a java model and gave a demo of it in action with beautiful graphs showing energy balances over the 10 year model period. He was happy to share the model and made it open source on github here:
 
@@ -59,14 +61,10 @@ The model can be explored in full here:
 
 #### November 2019: Full ZeroCarbonBritain model published
 
+During 2018 and 2019 I worked with the ZeroCarbonBritain team to update the numbers in their most recent report and as part of this completed the conversion of their full hourly energy model into an online tool:
+
 Full ZeroCarbonBritain hourly energy modelling tool (Includes industry and services):<br>
 **https://openenergymonitor.org/zcem/#fullzcb3**
-
-Community scenario guide:<br>
-**https://openenergymonitor.org/zcem/#community_scenario**
-
-Examples of different scenario variations:<br>
-**https://openenergymonitor.org/zcem/#scenario_variations**
 
 Open source repository for hourly model:<br>
 **https://github.com/zerocarbonbritain/hourlymodel**
@@ -77,71 +75,11 @@ ZeroCarbonBritain is only one of several possible zero carbon scenarios. It is l
 
 There are of course a lot of different views on what mix of technologies should be used with divergent views on heatpumps, hydrogen vs EV's, nuclear, biomass, wind, solar, degree of building fabric improvement possible and on and on. Perhaps the final results will be a mix of all of these to different degrees.
 
-The following example energy scenarios show the results of choosing different supply and demand technologies on overall renewable capacity required, energy store sizes and land areas used, providing an interesting and rough insight into different scenarios.
+Examples of different scenario variations:<br>
+**https://openenergymonitor.org/zcem/#scenario_variations**
 
-Ordered by biomass land area requirement:
-
-**Note:** The land area figures calculated in the following scenario examples are for domestic household demand for electricity, heating and transport only and don’t include service and industrial sector demands. Which require roughly another 12% above the 5% calculated in the ZCB scenario example.
-
-| | Onshore Wind (kW) | SolarPV (kW) | Capacity (kW) | Supply (kWh/d) | Liquid Store (kWh) | Gas store (kWh) | Biomass (m2) | Prc | Primary Energy |
-|--------------------|-------------------|--------------|---------------|----------------|--------------------|-----------------|--------------|------|----------------|------|
-| Hydrogen Cars | 3.2 | 3.2 | 6.4 | 36.8 | 1000 | 2500 | 247 | 2.60% | 1.57 |
-| ZCB: EV's | 1.92 | 1.92 | 3.84 | 26.7 | 300 | 5000 | 467 | 5.00% | 1.57 |
-| Biofuel Cars | 2.6 | 2.6 | 5.2 | 46.7 | 1600 | 4000 | 862 | 9.20% | 1.85 |
-| Solar PV Max | 0 | 9.8 | 9.8 | 35.4 | 350 | 5000 | 937 | 10.0% | 2.09 |
-| Biomass Boilers | 1.22 | 1.22 | 2.44 | 35.0 | 250 | 1500 | 1018 | 10.90% | 1.18 |
-
-
-**Hydrogen cars**
-
-The hydrogen car scenario starts with the default energy model that is most similar to ZeroCarbonBritain and then switches the EV's for hydrogen cars with the performance of a Toyota Mirrai. The wind and solar capacity is 65% higher than the EV only scenario due to the lower efficiencies of hydrogen production, The benefit of a 2.4% reduction in land use required is perhaps a small benefit compared with the additional renewable capacity. The reduction in land use is dependent on being able to store hydrogen produced at times of excess renewable supply for later use at times of demand, whereas EV's require backup CCGT fueled by biomethane. In total 500 kWh of hydrogen storage are required per household or 13 TWh when scaled up by 26 million households.
-
-A useful angle on the EV vs Hydrogen discussion worth a more in depth look is this article by riversimple who point out that efficiency is partly dependent on vehicle weight and the duty-cycle (amount of acceleration/de-acceleration in a journey) for any particular application [riversimple: Batteries or Hydrogen, the wrong question](http://www.riversimple.com/batteries-hydrogen-wrong-question)
-
-The riversimple hydrogen car achieves a much higher energy performance than the toyota mirrai and boosts an impressive range, it is however a much smaller and lighter car.
-
-Another possibility is that larger hydrogen stores and fuel cells could be used as part of the backup supply for BEV charging, the model suggests that land use could be reduced by a similar amount with this combination without the need for such a large increase in wind and solar capacity.
-
-**Default scenario, Wind, Solar, EV's & Heatpumps (Similar to ZeroCarbonBritain)**
-
-The second scenario describes a scenario most similar to ZeroCarbonBritain with heatpumps used for heat demand and electric vehicles predominantly used for transport. This scenario results in the 2nd lowest wind and solar capacity requirement and one of the lowest land area requirements.
-The size of the backup methane gas stores required are very large but similar to existing gas stores in the UK today.
-
-**Biofuel cars**
-
-In this scenario we start again with the default energy model and switch out the EV's for high efficiency internal combustion cars achieving an average performance of 60 MPG across the entire UK fleet. This scenario uses synthetic liquid fuel produced using the Fischer tropp process that makes use of hydrogen produced from excess wind and solar electricity - reducing the amount of biomass and hence land area required. To produce enough hydrogen however the wind and solar capacities have to be increased significantly resulting in a scenario that both requires more land for biofuels and more wind and solar capacity than the ZeroCarbonBritain EV scenario making this an unlikely scenario.
-
-If liquid fuel was produced without hydrogen from excess renewable energy land use would increase to about 16.4% of UK land area and wind and solar capacities could be reduced by about 38% compared to the default scenario. This would however likely result in too high a pressure on land use once industrial and service demands are also included. See brief note on UK land use below.
-
-**Biomass boilers instead of Heatpump's**
-
-This is perhaps an interesting scenario as there is a significant 36% reduction in wind and solar capacity, combined with significant reductions in store sizes and a reduction in backup CCGT gas turbine capacity of 72% from 1.419 kW per household to 0.391 kW per household.
-
-This highlights a point explored further in the renewable heat section that a large part of backup capacity and methane storage requirements in the default model is due to winter heat demand requirements of heatpumps.
-
-At the same time land use requirements do double to 10% with similar feasibility questions raised in the last scenario example. The renewable heat section explores a number of alternative options including the use of bivalent heatpump + biomass boiler systems which would provide many of the backup reduction benefits without such a large land use increase. However a more detailed cost analysis may result in the larger store plus backup gas turbine option being cheaper overall.
-
-**Solar PV Max**
-
-Another interesting but perhaps more hypothetical scenario in light of discussion of the dominant potential role of solar in the future energy system is a solar max scenario consisting of only solar pv and biomass. In this scenario excess solar electricity is used to generate hydrogen which is combined with biogas to create larger quantities of methane. Methane is then burnt in gas turbines to provide backup throughout the winter season. It is perhaps notable that a land area as low as 10% is achieved in this scenario given the bulk of backup power required to cover winter months. Co-location of solar and biogas+sabatier plants would likely be needed in this scenario as long distance transport of the solar energy would otherwise need particularly high grid capacities.
-
-**Biomass only**
-
-As a reference case if biomass energy was the sole energy supply for all domestic demand with high yielding miscanthus and short rotation coppice being used for solid heating and liquid fuel production, and then rotational grasses used for anaerobic digestion to produce electricity to cover traditional electricity demand, the total land area required for domestic household demand would reach 34.6% which is perhaps surprisingly low although unlikely a sustainable level due to all other demands on land use. We can see then that the solar max scenario reduced land use compared to this biomass only scenario by 71%.
-
-#### Land use in ZeroCarbonBritain
-
-UK Land area is about 24 Mha. The graphic below from the ZeroCarbonBritain report shows land area allocation both in their scenario and today for comparison.
-
-![zcbland.png](images/zcbland.png)
-
-    Energy          17%
-    Food            34%
-    Carbon capture  33%
-    Conserved       10%
-    Urban           6%
-    
-“4.1 Mha of land (most of which was previously used for the intensive grazing of livestock) is used to produce energy by growing various grasses, short rotation forestry and coppice.” - 4.1 Mha is equivalent to about 17% of UK land area.
+Community scenario guide:<br>
+**https://openenergymonitor.org/zcem/#community_scenario**
 
 
 <script>
