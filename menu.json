@@ -314,19 +314,15 @@
                         "url": "sustainable-energy/energy/snowdonia-energy-study-data"
                     },
                     "zerocarbonbritain": {
-                        "nicename": "5. Building on the ZeroCarbonBritain energy model",
+                        "nicename": "5. The ZeroCarbonBritain Energy Model",
                         "url": "sustainable-energy/energy/zerocarbonbritain"
                     },
-                    "scenarios": {
-                        "nicename": "6. Community scale scenarios",
-                        "url": "sustainable-energy/energy/scenarios"
-                    },
                     "renewableheat": {
-                        "nicename": "7. Renewable Heat",
+                        "nicename": "6. Renewable Heat",
                         "url": "sustainable-energy/energy/renewableheat"
                     },
                     "costs": {
-                        "nicename": "8. Looking at Costs",
+                        "nicename": "7. Looking at Costs",
                         "url": "sustainable-energy/energy/costs"
                     },
                     "uk-energy-2015": {
