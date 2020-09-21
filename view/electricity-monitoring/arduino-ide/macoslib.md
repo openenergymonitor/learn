@@ -56,13 +56,13 @@ Many libraries are required, this is the full list:
 
 * DallasTemperature - https://github.com/milesburton/Arduino-Temperature-Control-Library
 
-* RTClib - https://github.com/jcw/rtclib
+* RTClib - https://github.com/adafruit/RTClib
   <br>**Note**: Only required for EmonGLCD
 
-* GLCD_ST7565 - https://github.com/jcw/glcdlib
+* GLCD_ST7565 - https://github.com/openenergymonitor/EmonGLCDlib
   <br>**Note**: Only required for EmonGLCD
 
-* EtherCard - https://github.com/jcw/ethercard
+* EtherCard - https://github.com/openenergymonitor/EtherCardOct2012
   <br>**Note**: Only required for NanodeRF
 
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub the button is on
