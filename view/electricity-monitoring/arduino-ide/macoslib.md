@@ -64,6 +64,8 @@ Many libraries are required, this is the full list:
 
 * EtherCard - https://github.com/openenergymonitor/EtherCardOct2012
   <br>**Note**: Only required for NanodeRF
+  
+* emonLibCM - https://github.com/openenergymonitor/EmonLibCM  
 
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub the button is on
 the right-hand side. Click `Clone or Download` followed by `Download ZIP`:
