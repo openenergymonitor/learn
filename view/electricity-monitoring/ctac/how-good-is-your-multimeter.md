@@ -14,4 +14,10 @@ Here is a table of a selection of multimeters. The meters were chosen because th
 
 A multimeter costing less than £70 (if chosen carefully) should calibrate your emonTx or emonPi reading power (W) or apparent power (VA) to within 3%. You would need to spend around ten times that to get to within about 1%.
 
+___
+
+#### Safety Rating
+
+All the meters mentioned below, except for the Mestek DM100C, have a safety rating of at least Cat III at 600 V, meaning that they can be used on the mains electricity supply at the consumer unit or fuseboard/distribution board and below.
+
 ![](files/meters.png)
