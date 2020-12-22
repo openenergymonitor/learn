@@ -58,7 +58,7 @@ A CT is potentially dangerous if open-circuited.
 
 If open-circuited with current flowing in the primary, the transformer secondary will attempt to continue driving current into what is effectively an infinite impedance. This will produce a high and potentially dangerous voltage across the secondary [1]
 
-Some CT'shave built-in protection. Some have protective Zener diodes as is the case with the SCT-013-000 recommended for use in this project. If the CT is of the 'voltage output' type, it has a built in burden resistor. Thus, it cannot be open-circuited.
+Some CT's have built-in protection. Some have protective Zener diodes as is the case with the SCT-013-000 recommended for use in this project. If the CT is of the 'voltage output' type, it has a built in burden resistor. Thus, it cannot be open-circuited.
 
 #### Installing a CT
 
