@@ -59,6 +59,6 @@ Although the UK nominal standard is now 230 V, the supply system has not genera
 
 Thanks to Robert Wall for summarizing the rather convoluted standards surrounding UK grid voltages.
 
-All of Europe, Africa, Asia, Australia, New Zealand and most of South America, use a supply that is within 6% of 230 V
+All of Europe, Africa, Asia, Australia, New Zealand and most of South America, use a supply that is within 6% of 230 V. For the United States supply requirements are within 5% of 240V (this is at the utility meter -- the NEC allows a further 5% drop to the receptacles per 210.19(A) and 215.2(A)(1)).
 
 [https://en.wikipedia.org/wiki/Mains_electricity_by_country](https://en.wikipedia.org/wiki/Mains_electricity_by_country)
