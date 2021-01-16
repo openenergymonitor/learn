@@ -48,9 +48,9 @@ Drivers” to arrive at the page in the link above.
 
 Scroll down a little way to this table:
 
-![silicon_labs.png][silicon_labs]
+![FTDI_drivers.jpg][ftdi_drivers]
 
-[silicon_labs]: files/silicon_labs.png "Silicon Labs"
+[ftdi_drivers]: files/FTDI_drivers.jpg "FTDI Drivers"
 
 #### Windows 10
 
