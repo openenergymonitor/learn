@@ -288,6 +288,15 @@
                         "url": "electricity-monitoring/other-software/sma-webbox-data-extractor"
                     }
                 }
+            },
+            "ftdi-programmer": {
+                "nicename": "The FTDI Programmer",
+                "pages": {
+                    "the-ftdi-programmer": {
+                        "nicename": "The FTDI Programmer",
+                        "url": "electricity-monitoring/ftdi-programmer/the-ftdi-programmer"
+                    }
+                }
             }
         }
     },
