@@ -93,7 +93,7 @@ On the UART connector, the GND pin is labelled on the underside.
 
 #### EmonTx
 
-Plug the programmer into the emonTx with the c component side of the board facing up and the GND
+Plug the programmer into the emonTx with the component side of the board facing up and the GND
 connection aligned with the engraving on the panel; that is, nearest to the aerial socket on the emonTx.
 
 ![How_to_connect_the_ftdi_programmer_to_an_emonTx.jpg][programmer_emontx]
