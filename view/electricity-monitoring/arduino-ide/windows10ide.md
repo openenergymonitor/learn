@@ -18,8 +18,7 @@ Download the latest Arduino IDE (use your favourite search engine on “Arduino 
 This will download a file with a name like “arduino-1.8.3-windows.exe” (the name will change
 depending on the version) to your usual location. Double-click on that file and allow it to install in
 the normal way. Part way through the installation, it will ask for the components to install. For our
-purposes, you do not need to install the USB driver, you will later need to install the Silicon Labs
-drivers.
+purposes, you do not need to install the USB driver, you will later need to install the Future Technology Devices International or the Silicon Labs drivers.
 
 ![windows-ide-2](files/windowside2.png)
 
@@ -27,18 +26,11 @@ When the installation finishes, the progress bar will show “Completed”.
 
 #### Download and Install the SiLabs FTDI Drivers
 
-If you are using the cable sold through the OpenEnergyMonitor shop, do not follow the instructions
+If you are using the [OpenEnergyMonitor USB to serial UART Programmer](https://shop.openenergymonitor.com/programmer-usb-to-serial-uart/), do not follow the instructions
 for installing the drivers on the Arduino website, instead download the drivers from
-https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx.
+https://learn.openenergymonitor.org/electricity-monitoring/ftdi-programmer/the-ftdi-programmer.
 
-![windows-ide-3](files/windowside3.png)
-
-Click on `Download VCP ...`
-
-This will download a zip file `CP210x_Windows_Drivers.zip` to your usual location. Extract the
-contents to a convenient place and you will find two installers, one for 32-bit computers
-(`CP210xVCPInstaller_x86.exe`) and one for 64-bit (`CP210xVCPInstaller_x64.exe`). Double-click
-on the correct one for your machine and allow it to install the drivers in the normal way.
+If you are using the OpenEnergyMonitor USB to serial UART Programmer sold before January, 2021, follow these instructions: https://learn.openenergymonitor.org/electricity-monitoring/ftdi-programmer/wicked-device to install the drivers.
 
 Make sure you restart the Arduino IDE after installing the drivers. Before you connect the
 programmer, check `Tools > Port` [or `Serial Port`]. If `Port` is greyed out, that's OK, if not and any

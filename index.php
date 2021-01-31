@@ -80,6 +80,7 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="pdf") $format = "pdf";
     if ($doc_ext=="py") $format = "py";
     if ($doc_ext=="ino") $format = "ino";
+    if ($doc_ext=="webp") $format = "webp";
 }
 
 if ($redis) {
@@ -134,6 +135,10 @@ switch ($format)
         break;
     case "pdf":
         header('Content-Type: application/pdf');
+        print $content;
+        break;
+    case "webp":
+        header('Content-Type: image/webp');
         print $content;
         break;
 }
