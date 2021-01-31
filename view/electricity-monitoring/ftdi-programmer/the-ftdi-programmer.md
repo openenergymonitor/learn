@@ -103,7 +103,7 @@ connection aligned with the engraving on the panel; that is, nearest to the aeri
 #### EmonTx Shield
 
 Set the jumper to the 5 V position. Plug the programmer into the emonTx Shield with the component
-side of the board facing outwards and the GND connection fathest from the jack sockets.
+side of the board facing outwards and the GND connection farthest from the jack sockets.
 
 ![How_to_connect_the_ftdi_programmer_to_an_emonTx_Shield.jpg][programmer_emontx_shield]
 
@@ -192,7 +192,7 @@ If the Emon device is not connected, or the connection is wrong, the green LED f
 a short pause, the green LED flashes once and the familiar message “avrdude: stk500_recv():
 programmer is not responding…” is printed to the monitor. The pattern of one flash, and the message,
 is repeated 8 more times, then the final message and it aborts.
-If the Emon device is connected, then as communication is established there is green followed by a red
+If the Emon device is connected, then as communication is established there is a green followed by a red
 flash, then while the sketch is being loaded, both red and green LEDs appear to be lit continuously.
 
 #### Monitoring
