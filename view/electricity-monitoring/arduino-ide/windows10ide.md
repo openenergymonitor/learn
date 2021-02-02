@@ -24,7 +24,7 @@ purposes, you do not need to install the USB driver, you will later need to inst
 
 When the installation finishes, the progress bar will show “Completed”.
 
-#### Download and Install the SiLabs FTDI Drivers
+#### Download and Install the Drivers
 
 If you are using the [OpenEnergyMonitor USB to serial UART Programmer](https://shop.openenergymonitor.com/programmer-usb-to-serial-uart/), do not follow the instructions
 for installing the drivers on the Arduino website, instead download the drivers from
