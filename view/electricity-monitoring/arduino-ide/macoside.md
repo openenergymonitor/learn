@@ -12,7 +12,7 @@ This will download the Arduino app to the Download folder.  After completion mov
 
 **Note**: If the file is downloaded as a ZIP file then double-click to uncompress.  And then move the file to the Applications folder.
 
-#### Download and Install the SiLabs FTDI Drivers
+#### Download and Install the Drivers
 
 If you are using the [OpenEnergyMonitor USB to serial UART Programmer](https://shop.openenergymonitor.com/programmer-usb-to-serial-uart/), do not follow the instructions
 for installing the drivers on the Arduino website, instead download the drivers from
