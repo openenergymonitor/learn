@@ -289,16 +289,16 @@
                     }
                 }
             },
-            "ftdi-programmer": {
+            "programmers": {
                 "nicename": "Programmers",
                 "pages": {
                     "the-ftdi-programmer": {
                         "nicename": "FTDI Programmer",
-                        "url": "electricity-monitoring/ftdi-programmer/the-ftdi-programmer"
+                        "url": "electricity-monitoring/programmers/the-ftdi-programmer"
                     },
                     "wicked-device": {
                         "nicename": "Wicked Device / OpenEnergyMonitor Programmer",
-                        "url": "electricity-monitoring/ftdi-programmer/wicked-device"
+                        "url": "electricity-monitoring/programmers/wicked-device"
                     }
                 }
             }
