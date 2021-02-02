@@ -294,11 +294,11 @@
                 "pages": {
                     "the-ftdi-programmer": {
                         "nicename": "FTDI Programmer",
-                        "url": "electricity-monitoring/programmers/the-ftdi-programmer"
+                        "url": "electricity-monitoring/ftdi-programmer/the-ftdi-programmer"
                     },
                     "wicked-device": {
                         "nicename": "Wicked Device / OpenEnergyMonitor Programmer",
-                        "url": "electricity-monitoring/programmers/wicked-device"
+                        "url": "electricity-monitoring/ftdi-programmer/wicked-device"
                     }
                 }
             }
