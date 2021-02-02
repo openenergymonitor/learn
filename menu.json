@@ -289,7 +289,7 @@
                     }
                 }
             },
-            "programmers": {
+            "ftdi-programmer": {
                 "nicename": "Programmers",
                 "pages": {
                     "the-ftdi-programmer": {
