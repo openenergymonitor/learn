@@ -16,9 +16,9 @@ This will download the Arduino app to the Download folder.  After completion mov
 
 If you are using the [OpenEnergyMonitor USB to serial UART Programmer](https://shop.openenergymonitor.com/programmer-usb-to-serial-uart/), do not follow the instructions
 for installing the drivers on the Arduino website, instead download the drivers from
-https://learn.openenergymonitor.org/electricity-monitoring/ftdi-programmer/the-ftdi-programmer.
+https://learn.openenergymonitor.org/electricity-monitoring/programmers/ftdi-programmer.
 
-If you are using the OpenEnergyMonitor USB to serial UART Programmer sold before January, 2021, follow these instructions: https://learn.openenergymonitor.org/electricity-monitoring/ftdi-programmer/wicked-device to install the drivers.
+If you are using the OpenEnergyMonitor USB to serial UART Programmer sold before January, 2021, follow these instructions: https://learn.openenergymonitor.org/electricity-monitoring/programmers/wicked-device to install the drivers.
 
 Make sure you restart the Arduino IDE after installing the drivers. Before connecting the programmer, check `Tools > Port` and make note of the available ports. Now connect the programmer and your module (emonTx, emonTH, etc). Go back to the main menu and select `Tools > Port` again. `Port` should be available and showing a new port. Select the port `/dev/cu.SLAB_USBtoUART`. And under `Tools > Board` ensure `Arduino/Genuino Uno` is selected.
 

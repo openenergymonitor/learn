@@ -11,17 +11,38 @@ to transfer serial data in each direction between the two, for calibration or mo
 OpenEnergyMonitor Shop prior to January 2021 uses the Silicon Labs chipset, which requires a driver downloaded from the SI
 Labs website.
 
-![Wicked_Device.webp][Wicked_Device]
+<!-- side-by-side images --->
 
-[Wicked_Device]: files/Wicked_Device.webp "Wicked Device Nanode"
+<style>
 
-![OEM.webp][OEM]
+.image-outer-box {
+  display: flex;
+}
 
-[OEM]: files/OEM.webp "OpenEnergyMonitor programmer"
+.image-inner-box {
+  flex: 50%;
+  padding: 5px;
+}
 
-<small>A "Wicked Device Nanode" and an OpenEnergyMonitor programmer.
-The only practical difference is the USB connector – a USB-A on the Nanode programmer and a USB-Mini connector on the
-OpenEnergyMonitor programmer.</small>
+
+</style>
+
+<div class="image-outer-box">
+  <div class="image-inner-box">
+    <img src="files/Wicked_Device.webp" alt="Wicked Device Nanode" style="width:100%">
+  </div>
+  <div class="image-inner-box">
+    <img src="files/OEM.webp" alt="OpenEnergyMonitor programmer" style="width:100%">
+  </div>
+</div>
+
+<!-- /side-by-side images -->
+
+<small>
+  A "Wicked Device Nanode" and an OpenEnergyMonitor programmer.
+  The only practical difference is the USB connector – a USB-A on the Nanode programmer and a USB-Mini connector on the
+  OpenEnergyMonitor programmer.
+</small>
 
 #### Install the Drivers
 

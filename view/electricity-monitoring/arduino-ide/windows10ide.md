@@ -28,9 +28,9 @@ When the installation finishes, the progress bar will show “Completed”.
 
 If you are using the [OpenEnergyMonitor USB to serial UART Programmer](https://shop.openenergymonitor.com/programmer-usb-to-serial-uart/), do not follow the instructions
 for installing the drivers on the Arduino website, instead download the drivers from
-https://learn.openenergymonitor.org/electricity-monitoring/ftdi-programmer/the-ftdi-programmer.
+https://learn.openenergymonitor.org/electricity-monitoring/programmers/ftdi-programmer.
 
-If you are using the OpenEnergyMonitor USB to serial UART Programmer sold before January, 2021, follow these instructions: https://learn.openenergymonitor.org/electricity-monitoring/ftdi-programmer/wicked-device to install the drivers.
+If you are using the OpenEnergyMonitor USB to serial UART Programmer sold before January, 2021, follow these instructions: https://learn.openenergymonitor.org/electricity-monitoring/programmers/wicked-device to install the drivers.
 
 Make sure you restart the Arduino IDE after installing the drivers. Before you connect the
 programmer, check `Tools > Port` [or `Serial Port`]. If `Port` is greyed out, that's OK, if not and any
