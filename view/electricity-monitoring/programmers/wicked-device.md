@@ -150,6 +150,14 @@ Shield to work in the absence of a Raspberry Pi.
 
 [emonpishield]: files/emonPiShield.webp "emonPi Shield"
 
+#### MBus Reader
+
+Plug the programmer onto the header pins with the component side and the LEDs facing upwards and away from MBus reader board.
+
+![WD_MBus.webp][wd_mbus]
+
+[wd_mbus]: files/WD_MBus.webp "Using the OEM Programmer with the MBus Reader"
+
 #### Powering the Emon Device
 
 While loading and testing a sketch, the programmer can provide power to the emonTx and emonTH, using the
