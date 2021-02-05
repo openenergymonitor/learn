@@ -128,6 +128,13 @@ Shield and for the Shield to work.
 
 [programmer_emonpi_shield]: files/How_to_connect_the_ftdi_programmer_to_an_emonPi_Shield.jpg "LEDs on the FTDI Programmer"
 
+#### MBus Reader
+Plug the programmer onto the header pins with the component side and the LEDs facing the MBus reader board.
+
+![FTDI_MBus.webp][ftdi_mbus]
+
+[ftdi_mbus]: files/FTDI_MBus.webp "Using the FTDI Programmer with the MBus Reader"
+
 #### Powering the Emon Device
 
 While loading and testing a sketch, the programmer can provide power to the emonTx and emonTH,
