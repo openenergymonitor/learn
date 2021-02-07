@@ -150,13 +150,13 @@ Shield to work in the absence of a Raspberry Pi.
 
 [emonpishield]: files/emonPiShield.webp "emonPi Shield"
 
-#### MBus Reader
+#### M-Bus to UART Converter
 
-Plug the programmer onto the header pins with the component side and the LEDs facing upwards and away from MBus reader board.
+Plug the programmer onto the header pins with the component side and the LEDs facing upwards and away from M-Bus to UART converter board.
 
 ![WD_MBus.webp][wd_mbus]
 
-[wd_mbus]: files/WD_MBus.webp "Using the OEM Programmer with the MBus Reader"
+[wd_mbus]: files/WD_MBus.webp "Using the 'OEM' programmer with the M-Bus to UART converter"
 
 #### Powering the Emon Device
 

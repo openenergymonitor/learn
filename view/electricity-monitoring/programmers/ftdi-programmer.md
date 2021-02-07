@@ -128,12 +128,12 @@ Shield and for the Shield to work.
 
 [programmer_emonpi_shield]: files/How_to_connect_the_ftdi_programmer_to_an_emonPi_Shield.jpg "LEDs on the FTDI Programmer"
 
-#### MBus Reader
-Plug the programmer onto the header pins with the component side and the LEDs facing the MBus reader board.
+#### M-Bus to UART Converter
+Plug the programmer onto the header pins with the component side and the LEDs facing the M-Bus to UART converter board.
 
 ![FTDI_MBus.webp][ftdi_mbus]
 
-[ftdi_mbus]: files/FTDI_MBus.webp "Using the FTDI Programmer with the MBus Reader"
+[ftdi_mbus]: files/FTDI_MBus.webp "Using the FTDI programmer with the M-Bus to UART converter"
 
 #### Powering the Emon Device
 
