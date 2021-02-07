@@ -1125,24 +1125,6 @@ p a {
   word-wrap: break-word;
 }
 
-h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-h3 {
-  padding: 2px 0 2px 0;
-  margin: 10px 0 10px 0;
-}
-
-h4 {
-  padding: 2px 0 2px 5px;
-  font-size: 14px;
-  background-color: #333;
-  color: #ffffff;
-}
-
 pre {
   border: 1px solid #ffffff;
   background-color: #eee;
