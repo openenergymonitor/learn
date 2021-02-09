@@ -1,4 +1,4 @@
-## The FTDI Programmer
+## FTDI Programmer
 
 ---
 

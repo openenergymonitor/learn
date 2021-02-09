@@ -1,4 +1,4 @@
-## AC Power Theory - Advanced maths
+## AC Power Theory - Advanced Maths
 
 ***
 
@@ -52,8 +52,50 @@ Apparent power is calculated, as follows:
 
 _Apparent power = RMS Voltage x RMS current_
 
-and the power factor:
+and the power factor is calculated from the definition:
 
 _Power Factor = Real Power / Apparent Power_
 
-This page is based on pages 12-15 of Atmel's application note for the 'AVR465: Single-Phase Power/Energy Meter with Tamper Detection': http://ww1.microchip.com/downloads/en/Appnotes/Atmel-2566-Single-Phase-Power-Energy-Meter-with-Tamper-Detection_Ap-Notes_AVR465.pdf.
+#### Harmonics, Non-Linear Loads and Power Factor
+
+A non-linear load, such as a fluorescent light, a computer power supply or a variable speed drive in a washing machine, will distort the mains current wave and generate harmonics of the fundamental mains frequency, and a side effect is the voltage wave will also be distorted. This leads to power existing not only at the mains frequency, but at harmonics of that frequency too. This has implications for the accuracy of power measurements. References where this is covered are given below.
+
+#### Adding RMS Values
+
+The combined r.m.s. value of a signal with harmonic components is the square root of the sum of the squares of each component:
+
+![am_equation_1.webp][am_equation_1]
+
+[am_equation_1]: files/am_equation_1.webp "RMSTotal=RMS12+RMS22+...."
+
+The d.c. bias voltage added to the input to the analogue to digital converter can be removed if we recognise that the d.c. value can be represented by RMS<sub>1</sub>, the wanted input less the bias offset by RMS<sub>2</sub>, and the value we have from the ADC is RMS<sub>Total</sub>. Or:
+
+![am_equation_2.webp][am_equation_2]
+
+[am_equation_2]: files/am_equation_2.webp "rmsofsignal+offset=signal2+offset2"
+
+That is the method used in emonLibCM in the rearranged form:
+
+![am_equation_3.webp][am_equation_3]
+
+[am_equation_3]: files/am_equation_3.webp "Vrms=rmsofsignal+offset2−offset2"
+
+This method is much faster than applying a digital filter to each individual sample, and it is valid because it is reasonable to assume that the offset – the average value of all the samples – will remain sensibly constant for the duration of the sampling period.
+
+***
+
+#### References
+
+Pages 12-15 of Atmel's application note for the 'AVR465: Single-Phase Power/Energy Meter with Tamper Detection':
+
+http://ww1.microchip.com/downloads/en/Appnotes/Atmel-2566-Single-Phase-Power-Energy-Meter-with-Tamper-Detection_Ap-Notes_AVR465.pdf
+
+'How Harmonics Have Contributed to Many Power Factor Misconceptions', Anthony (Tony) Hoevenaars, P. Eng, Mirus International Inc.:
+  
+https://www.mirusinternational.com/downloads/MIRUS-TP003-A-How%20Harmonics%20have%20Contributed%20to%20Many%20Power%20Factor%20Misconceptions.pdf
+
+<a href="files/How_Harmonics_Have_Contributed_to_Many_Power_Factor_Misconceptions.pdf">How Harmonics Have Contributed to Many Power Factor Misconceptions (PDF)</a>
+
+A Wikipedia page:
+
+https://en.wikipedia.org/wiki/Power_factor
