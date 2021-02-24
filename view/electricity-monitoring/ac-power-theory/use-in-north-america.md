@@ -6,24 +6,24 @@ In order to understand how these units can be used in North America, it might be
 
 #### Supply Characteristics – UK
 
-In the UK, the final distribution transformer tends to be large. In urban areas, it may be around 1 MVA, and may serve a few hundred homes. It will be three-phase with star-connected secondaries. The star point, which is the neutral, will be earthed. The secondary voltage is nominally 240 V line–neutral, giving 415 V between phases. The frequency is 50 Hz ± 1%. Although large commercial and industrial premises will have a 3-phase supply, many small industrial units will have only a single phase. Anything other than a single phase supply is very rare for domestic consumers.
+In the UK, the final distribution transformer tends to be large. In urban areas, it may be around 1 MVA, and may serve a few hundred homes. It will be three-phase with star-connected secondaries. The star point, which is the neutral, will be earthed (grounded). The secondary voltage is nominally 240 V line–neutral, giving 415 V between phases. The frequency is 50 Hz ± 1%. Although large commercial and industrial premises will have a 3-phase supply, many small industrial units will have only a single phase. Anything other than a single phase supply is very rare for domestic consumers.
 
 The normal rating of the domestic supply will be 80 or 100 A. The supply authority will provide a fuse, a neutral link and a meter. From that point on, the wiring is the responsibility of the consumer. The cables between the meter and the “consumer unit” are called “meter tails” and will normally be 16 mm<sup>2</sup> or 25 mm<sup>2</sup> copper, with a maximum diameter over the sheath of about 10.5 mm. High current appliances, such as cookers or showers, will normally be fed by a dedicated circuit breaker, but the socket outlets for general use with portable appliances are almost always fed by a [“ring final sub-circuit”](https://en.wikipedia.org/wiki/Ring_circuit) – comprising essentially a loop of cable starting and ending at a 32 A circuit breaker, which feeds an unlimited number of socket outlets, subject to a maximum floor area served of 100 m<sup>2</sup>. Each appliance plug is fitted with a fuse rated at between 1 A & 13 A. Lighting points are normally daisy-chained and supplied by a 6 A circuit breaker.
 
 #### Supply Characteristics – North America
 
-Compared to the UK, the North American final distribution transformer tends to be quite small, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre-tapped, and the centre tap is the neutral, which is also earthed.
+Compared to the UK, the North American final distribution transformer tends to be quite small, typically 25 kVA, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre-tapped, and the centre tap is the neutral, which is also grounded.
 
 ![N.American Electricity Supply - final transformer voltages](files/N_America_Fig_1.svg)
 <p style="font-size: smaller">Figure 1. North American Domestic Electricity Supply - final transformer voltages.</p>
 
 The voltage tolerance is ±5% and the imbalance between the two legs has been reported to be better than 2 V, although there is no actual specification regarding voltage imbalance. Load centre (circuit breaker panel) layout enables an electrician to distribute the loads between the two legs when the wiring is installed. Standard practice among US electricians is to connect the circuits to the breakers in numerical sequence, with odd numbered breakers connected to one leg and even numbered breakers connected to the other leg. Thus, half of them will be on one leg, half on the other leg, with the aim being to balance the load evenly.
 
-The frequency tolerance is ±0.02 Hz. The effect of the higher frequency will, for most purposes, be marginal. Transformers, both current and voltage, will have slightly different losses and phase errors, and the delay between measuring voltage and current will also be different (in terms of angle), all of which will imply slightly different values for phase calibration. Inside the emonTx, capacitors in the ac side will have a lower impedance. On the firmware side, the sketches will sample at the same rate, but there will be fewer samples per cycle. In theory, this will mean the highest harmonic number that can be measured is lower, but in practice, the energy that will be missed will be insignificant. The major exceptions are the monitoring sketches that employ the phase locked loop (PLL) principle. These require adjustment to the timing in order to lock to the higher frequency. (That adjustment might be by changing a value in the sketch, or there might be a separate version for each frequency.)
+The frequency tolerance is ±0.02 Hz. The effect of the higher frequency will, for most purposes, be marginal. Transformers, both current and voltage, will have slightly different losses and phase errors, and the delay between measuring voltage and current will also be different (in terms of angle), all of which will imply slightly different values for phase calibration. Inside the emonTx, capacitors on the a.c. side will have a lower impedance. On the firmware side, the sketches will sample at the same rate, but there will be fewer samples per cycle. In theory, this will mean the highest harmonic number that can be measured is lower, but in practice, the energy that will be missed will be insignificant. The major exceptions are the monitoring sketches that employ the phase locked loop (PLL) principle. These require adjustment to the timing in order to lock to the higher frequency. (That adjustment might be by changing a value in the sketch, or there might be a separate version for each frequency.)
 
 #### Measuring Whole-house Power
 
-Because there are three wires (discounting the protective earth conductor), classical theory dictates that two wattmeters are needed, and for ‘wattmeter’ read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.
+Because there are three wires (discounting the protective ground conductor), classical theory dictates that two wattmeters are needed, and for ‘wattmeter’ read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_2.svg)
 <p style="font-size: smaller">Figure 2. North American Domestic Electricity Supply - Measuring whole-house power.</p>
@@ -477,8 +477,6 @@ Part No.</th>
 
 For consistency with the standard YHDC CT supplied by the shop, connect the white wire to the plug tip and the black wire to the sleeve. There should be no connection to the ring.
 
-Note: [Byram Labs](https://www.byramlabs.com) offer a full range of Wattcore CTs, in particular the WC4 for 100 A, 200 A, 300 A or 400 A input, and in 0.5 V and 1.0 V output versions.
-
 #### Continental Control Systems - ACT-0750 Series Split-Core Current Transformers
 
 <div class="xaxiswrapper">
@@ -780,13 +778,13 @@ to the premises
 (Multiphase: Line 1, Line 2, Line 3 )</td>
 
 <td>Line
-Multiphase: Phase A, Phase B, Phase C</td>
+(Multiphase: Phase A, Phase B, Phase C)</td>
 
 </tr>
 
 <tr>
 
-<td>The supply conductor at or near earth potential</td>
+<td>The supply conductor at or near ground (earth) potential</td>
 
 <td>Neutral</td>
 
@@ -796,7 +794,7 @@ Multiphase: Phase A, Phase B, Phase C</td>
 
 <tr>
 
-<td>A protective conductor connected to the general mass of the earth</td>
+<td>A protective conductor connected to the general mass of the Earth</td>
 
 <td>Earth</td>
 
