@@ -1,4 +1,4 @@
-## Temperature Sensing using DS18B20 Digital Sensors
+## Temperature Sensing Using DS18B20 Digital Sensors
 
 The [DS18B20](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) is a small temperature sensor with a built in 12bit ADC. It can be easily connected to an Arduino digital input. The sensor communicates over a one-wire bus and requires little in the way of additional components.
 
@@ -14,13 +14,13 @@ The sensor can operate in normal or parasite mode. In normal mode, a 3-wire conn
 
 #### Normal Mode
 
-In normal mode, each sensor is connected between a power line (V<sub>dd</sub> pin 3) and ground (GND pin 1), and the data output (DQ pin 2) connects to a third, data, line. The data output is a 3-state or open-drain port (DQ pin 2) and requires a 4k7 pull-up resistor. The data line is connected to an available Arduino digital input or Arduino digital pin 4 in the case of the emonTx.
+In normal mode, each sensor is connected between a power line (V<sub>dd</sub> pin 3) and ground (GND pin 1), and the data output (DQ pin 2) connects to a third, data, line. The data output is a 3-state or open-drain port (DQ pin 2) and requires a 4k7 pull-up resistor. The data line is connected to an available Arduino digital input or Screw Terminal 6 on the emonTx V3, or DIO 4 on the emonTx Shield. GND is available on Screw Terminal 3 and switched power on terminal 5 of the emonTx V3. When using the RJ45 connector on the emonTx V3.4 or the emonPi, the connections are GND: pin 5, power (not switched): pin 2, data: pin 4.
 
 Normal mode is recommended when many devices and/or long cable runs are involved.
 
 #### Parasite Mode
 
-Parasite power mode requires both DS18B20 GND (pin 1) and V<sub>dd</sub> (pin 3) to be connected to ground. The DQ pin (pin 2 - the middle pin) is the data/parasite power line. The data line requires a pull-up resistor of 4k7 connected to + 5 V. The data line is connected to an available Arduino digital input or Arduino digital pin 4 in the case of the emonTx.
+Parasite power mode requires both DS18B20 GND (pin 1) and V<sub>dd</sub> (pin 3) to be connected to ground. The DQ pin (pin 2 - the middle pin) is the data/parasite power line. The data line requires a pull-up resistor of 4k7 connected to + 5 V. The data line is connected to an available Arduino digital input or Screw Terminal 6 on the emonTx V3, or DIO 4 on the emonTx Shield.
 
 Parasite mode should be used only with a small number of devices, over relatively short distances.
 
@@ -49,86 +49,14 @@ For short cable runs, unscreened two or three-core cable, or single-core (parasi
 
 #### Cable Length
 
-Up to 20m cable length has [been successfully reported](https://twitter.com/mharizanov/status/704194316659515392) with a lower pull-up resistor value of 2K. Adding multiple sensors will reduce the practical length, as will non consistent / nonlinear cable runs, [see app note](https://www.maximintegrated.com/en/app-notes/index.mvp/id/148)
+Up to 20m cable length has been successfully reported by Martin Harizanov with a lower pull-up resistor value of 2K. Adding multiple sensors will reduce the practical length, as will non consistent / nonlinear cable runs, [see app note](https://www.maximintegrated.com/en/app-notes/index.mvp/id/148)
 
-#### Temperature Sensing with the emonTx
+#### Temperature Sensing with the emonTx and emonPi
 
 For emonTx V3 and emonPi see Wiki:
 
 - https://wiki.openenergymonitor.org/index.php/EmonPi#DS18B20_Temperature
 - https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#RJ45_Connection
-
-The emonTx supports direct connection of DS18B20 temperature sensors, however, there are significant differences between emonTx V2 and emonTx V3.
-
-#### The emonTx V2
-
-The PCB includes the option to solder a DS18B20 sensor directly onto the PCB for monitoring the temperature where the emonTx is located. A more useful option is to connect DS18B20 temperature sensors to the 3.5mm temperature jack port for monitoring remote temperatures e.g. outside temperature, living room temperature and boiler temperature.
-
-The sensors can be connected either in normal or parasite power mode. We recommend normal power mode for increased reliability. 3-core 22AWG wire is perfect for wiring up sensors. Encapsulated sensors can be purchased. and connected. The 4k7 pull-up resistor is provided on the pcb.
-
-Wire up the sensor(s) to a male 3.5mm jack as follows:
-
-![](files/Temperature-3-wire-jack.png)
-
-<table>
-
-<tbody>
-
-<tr>
-
-<th>Connection</th>
-
-<th>Normal Mode</th>
-
-<th>Parasite Mode</th>
-
-<th>Voltage</th>
-
-</tr>
-
-<tr>
-
-<td>Tip</td>
-
-<td>DQ (data line)</td>
-
-<td>DQ (data line)</td>
-
-<td>3.9 V approx</td>
-
-</tr>
-
-<tr>
-
-<td>Ring</td>
-
-<td>V<sub>dd</sub></td>
-
-<td>no connection</td>
-
-<td>+ 5 V</td>
-
-</tr>
-
-<tr>
-
-<td>Sleeve</td>
-
-<td>GND</td>
-
-<td>GND + V<sub>dd</sub></td>
-
-<td>0 V</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-
-[GitHub emonTx V2 temperature example ](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples)
-(also includes a sketch to extract the serial number from the DS18B20\. (N.B. You must change '#define ONE_WIRE_BUS 4' to '#define ONE_WIRE_BUS 5' for the emonTx V3.4)
 
 #### Software
 
@@ -142,13 +70,13 @@ The OneWire protocol communication library is also required. Version 2.0 can be 
 
 Once the libraries have been extracted to the Arduino libraries folder, and the Arduino IDE restarted, I recommend checking out the ‘simple’ and ‘multiple’ examples which are part of the Dallas Temperature Control Library. These two examples demonstrate two methods to identify and communicate with each sensor.
 
-**Addressing the sensors.**
+##### Addressing the Sensors
 
-Each sensor has a unique serial number assigned by the manufacturer, and your sketch (unless it is the "low-power" sketch that expects a single sensor) must be programmed with these serial numbers so it can identify and interrogate each sensor. Download the examples from [GitHub emonTx V2 temperature example](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples). There you will find the [temperature search test sketch](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples/temperature_search). You need run the sketch only once to extract and list the serial number from each DS18B20\. Then you manually copy the serial numbers into your monitoring sketch.
+Each sensor has a unique serial number assigned by the manufacturer, and your sketch (unless it is the "low-power" sketch that expects a single sensor) must be programmed with these serial numbers so it can identify and interrogate each sensor. Download the examples from [GitHub emonTx V2 temperature example](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples). There you will find the [temperature search test sketch](https://github.com/openenergymonitor/emontx2/tree/master/firmware/emonTx_temperature_examples/temperature_search). You need run the sketch only once to extract and list the serial number from each DS18B20\. Then you manually copy the serial numbers into your monitoring sketch. Alternatively, emonLibCM can report and optionally store the sensor addresses, so that each sensor always maintains its place in the list of sensors.
 
 See [Part 2](DS18B20-temperature-sensing-2) for a description of how the order in which the sensors are discovered is decided.
 
-**Error values.**
+##### Error Values
 
 The sensor works by reading and converting the temperature and storing this value in scratchpad memory. The scratchpad memory is then read via the One-wire bus by the Dallas library.
 
@@ -170,11 +98,17 @@ The following error codes have been defined for use with firmware running on Ope
 
 #### The emonTx V3
 
-If running the standard emonTx V3 firmware see [Temperature tab of Setup Guide](https://guide.openenergymonitor.org/setup/)
+The standard emonTx sketch uses emonLibCM, and temperature sensing is contained within this library. There is provision for up to 3 sensors, which may be connected via the RJ45 connector, the screw terminals, or a combination of both; and a software switch (see the sketch’s documentation for details) allows temperature sensing to be enabled or disabled. The emonLibCM documentation gives full details of the API.
 
-The emonTx V3 has a connection for the temperature sensors on a screw terminal block. Full details can be found on the [Wiki page](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3). The pre-loaded sketch will sense a single temperature sensor at start-up and requires no further configuration. Note: The examples for the emonTx V2 and the temperature search sketch will not work without modification. You will need to edit the sketch due to changed I/O usage in the emonTx V3: You must change "#define ONE_WIRE_BUS 4" to "#define ONE_WIRE_BUS 5".
+#### Cloned or Fake DS18B20 Sensors
 
-#### Notes and further reading
+Cloned or fake DS18B20 sensors are widely available. Many do not meet the specification of genuine Dallas / Maxim sensors and as such there is no guarantee that they will work, and if they work, produce accurate readings. Potential users are strongly advised to obtain their sensors from a reputable and accredited distributor. 
+
+There is a report of an investigation by Dr Chris Petrich, a Research Associate at the University of Alaska, originally published at https://sintef.brage.unit.no/sintef-xmlui/bitstream/handle/11250/2716073/IAHR_2020_CP_A+Note+on+Remote+Temperature+Measurements+with+DS18B20_Digital+Sensorsfinal.pdf?sequence=2 which is also available on Github at https://github.com/cpetrich/counterfeit_DS18B20, and there is a forum discussion thread here, starting at https://community.openenergymonitor.org/t/ds18b20-and-emontx3cm-firmware/14339/78.
+
+Dr. Petrich’s report contains a list of official distributors. 
+
+#### Notes and Further Reading
 
 For large numbers of sensors and longer cable runs, use the [DS2480B](http://www.maxim-ic.com/datasheet/index.mvp/id/2923) 1-wire driver chip. [N.B. Some very helpful information from [ Chris Shucksmith](http://twitter.com/#!/shuckc) appears to have been removed.]
 
