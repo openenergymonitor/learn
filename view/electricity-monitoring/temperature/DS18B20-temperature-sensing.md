@@ -1,5 +1,7 @@
 ## Temperature Sensing Using DS18B20 Digital Sensors
 
+---
+
 The [DS18B20](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) is a small temperature sensor with a built in 12bit ADC. It can be easily connected to an Arduino digital input. The sensor communicates over a one-wire bus and requires little in the way of additional components.
 
 The sensors have a quoted accuracy of +/-0.5 deg C in the range -10 deg C to +85 deg C.
@@ -37,7 +39,7 @@ Parasite mode should be used only with a small number of devices, over relativel
   </tbody>
 </table>
 
-#### Connecting multiple sensors
+#### Connecting Multiple Sensors
 
 If the sensors are located relatively close to the Arduino/emonTx, then satisfactory operation should be achieved by making a parallel connection of the sensors at the connection to the Arduino or emonTx . This is called a radial or 'star' arrangement.
 
