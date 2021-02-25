@@ -138,7 +138,7 @@
                         "url": "electricity-monitoring/networking/rfm12_69"
                     },
                     "sending-data-between-nodes-rfm": {
-                        "nicename": "Sending data between nodes",
+                        "nicename": "Sending Data Between Nodes Using the JeeLib 'Classic' Format",
                         "url": "electricity-monitoring/networking/sending-data-between-nodes-rfm"
                     }
                 }
