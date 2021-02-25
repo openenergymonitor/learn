@@ -1,6 +1,6 @@
 ## Temperature Sensing using DS18B20 Digital Sensors
 
-The [DS18B20](http://datasheets.maxim-ic.com/en/ds/DS18B20.pdf) is a small temperature sensor with a built in 12bit ADC. It can be easily connected to an Arduino digital input. The sensor communicates over a one-wire bus and requires little in the way of additional components.
+The [DS18B20](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) is a small temperature sensor with a built in 12bit ADC. It can be easily connected to an Arduino digital input. The sensor communicates over a one-wire bus and requires little in the way of additional components.
 
 The sensors have a quoted accuracy of +/-0.5 deg C in the range -10 deg C to +85 deg C.
 
