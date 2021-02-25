@@ -1,4 +1,4 @@
-## Sending data between nodes with the RFM12/69
+## Sending Data Between Nodes with the RFM12/69 Using the JeeLib “Classic” Format
 
 ***
 
@@ -6,7 +6,7 @@ The data is sent by radio between the sensor nodes (e.g emonTX, emonTH), the bas
 
 The Arduino & RFM12/69 based OpenEnergyMonitor modules are programmed with application sketches that make use of the [JeeLib library](https://github.com/jcw/jeelib) to handle transmission and reception of the data, using the function calls provided by the library. Appendix 1 contains instructions for configuring the RFM69Pi / RFM12Pi Raspberry Pi module.
 
-RF data is trasmitted using the [JeeLib RF Packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/).
+RF data is transmitted using the [JeeLib RF Packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/).
 
 #### Configuring & Addressing
 
