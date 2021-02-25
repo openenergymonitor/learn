@@ -70,6 +70,20 @@ In the emonGLCD sketch:
 So although both data packets are called `emontx`, the number you put into `power1` at the emonTx end comes out of `Vrms` at the GLCD end.
 (Why? Because those two are **the first 2 bytes** in the data packet).
 
+Or in emonHub.conf, assuming the emonTx is Node 6:
+
+```
+[[6]]
+    nodename = emontx
+    [[[rx]]]
+       names = Vrms, power1, power2, power3
+       datacode = h
+       scales = 0.01,1,1,1,1
+       units = V,W,W,W,W
+```       
+
+In this case, power1 will again come out in emonCMS in first place at the top of the Inputs list and called Vrms, but multiplied by 0.01 and with the unit of volts.
+
 #### Accessing the data
 
 The data in the structure is accessed with the name of the structure and the name of the member joined by the familiar dot operator, e.g. emontx.power1 You assign a value like this:
@@ -162,13 +176,16 @@ The recommended standard for Node IDs is:
 
 | ID | Node Type |
 | ------ | -------------- |
-| 0 | Special allocation in JeeLib RFM12 driver  reserved for OOK use |
-| 1-4 | Control nodes |
-| 5-10 | Energy monitoring nodes |
-| 11-14 | Un-assigned |
-| 15-16 | Base Station & logging nodes |
-| 17-30 | Environmental sensing nodes (temperature humidity etc.) |
-| 31 | Special allocation in JeeLib RFM12 driver Node31 can communicate with nodes on any network group |
+| 0	      | Special allocation in JeeLib RFM12 driver reserved for OOK use
+| 1 – 5     | Base Station & logging nodes
+| 6           | EmonTx Shield
+| 7 – 10   | EmonTx (single-phase)
+| 11 – 14 | EmonTx (3-phase)
+| 15 – 16 | EmonTx (CM)
+| 17 – 18 | unallocated
+| 19 – 26 | EmonTH
+| 27 – 30 | unallocated
+| 31	      | Special allocation in JeeLib RFM12 driver. Node31 can communicate with nodes on any network group
 
 There is no intention to enforce this as a standard. If you choose your own Node IDs you will need to ensure that you change the example sketches to match your numbering scheme.
 
