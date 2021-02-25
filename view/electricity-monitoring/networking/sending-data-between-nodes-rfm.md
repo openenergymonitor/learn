@@ -1,4 +1,4 @@
-## Sending Data Between Nodes with the RFM12/69 Using the JeeLib “Classic” Format
+## Sending Data Between Nodes Using the JeeLib “Classic” Format
 
 ***
 
