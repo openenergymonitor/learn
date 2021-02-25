@@ -28,7 +28,7 @@ In the case of an electricity meter, a pulse output corresponds to a defined amo
 
 _Figure 1_
 
-Figure 1 illustrates a pulse output. The pulse width T_high varies depending on the meter. Some pulse output meters allow T_high to be set. T_high remains constant during operation. For the A100c meter T_high is 50ms. The time between the pulses T_low is what indicates the power measured by the meter.
+Figure 1 illustrates a pulse output. The pulse width T_high varies depending on the meter. Some pulse output meters allow T_high to be set. T_high remains constant during operation. For the A100c meter T_high is 50ms. The time between the pulses T_low varies according to the pulse rate. It is the pulse *rate*, 1/T, that indicates the power measured by the meter.
 
 **Calculating Energy**
 For the A100c meter, each pulse represents 1/1000th of a kWh, i.e. 1 Wh, of energy passing through the meter.
@@ -37,26 +37,32 @@ For the A100c meter, each pulse represents 1/1000th of a kWh, i.e. 1 Wh, of ener
 3600 seconds per hour = 3600J per pulse i.e. 1 Wh = 3600J
 therefore, instantaneous power **P = 3600 / T** where T is the time between the falling edge of each pulse.
 
-### **Optical pulse counting: Flashing LEDs**
+#### Optical Pulse Counting: Flashing LEDs
 
 Many electricity meters do not have pulse output connections or the connections are not accessible due to restrictions imposed by the utility company. All modern meters have an optical pulse output LED. In such cases an optical sensor can be used to interface with the meter.
 
-The red pulse-output LED can be seen in the A100c picture above. To detect the pulses from the LED, you need a light sensor. There is a wealth of documentation on the internet on using an Arduino to detect pulsed LED output.
+The red pulse-output LED can be seen in the A100c picture above. To detect the pulses from the LED, you need a light sensor, such as [link to shop page]. This is supplied complete with a RJ45 plug to give an easy connection to the pulse input of an emonTx or emonPi. 
 
-*   An article by AirSensor: [Arduino Electricity Datalogger](http://www.airsensor.co.uk/component/zoo/item/energy-monitor.html) which uses the TSL261 or TSL257 Light to Voltage sensor, Glyn has found the TSL257 Light to Voltage sensor to be best for detecting LED pulses from a Reporter 5193B meter (see notes on optical sensors below).
+Inside the sensor is a small p.c.b. carrying a photo-diode and a two-transistor amplifier-driver circuit:
 
-*   An article by Eric Sandeen [Energy Monitor Proof of Concept](http://sandeen.net/wordpress/?p=227) using an Axman photoreciever
-*   An article by Ken Boak: [Using an Arduino to measure gas consumption](http://sustburbia.blogspot.com/2009/11/using-arduino-to-monitor-gas.html)
+[circuit diagram https://community.openenergymonitor.org/uploads/default/original/2X/3/39614eb844c93b493390de40abb9a1db0becaf27.png]
+(Thanks to @warrenashcroft for providing the photo, and confirming the circuit details.)
 
-**Notes on optical sensors (results of initial tests)**
+The circuit generally works well, but has a few shortcomings: it is susceptible to ambient light, so it should be shielded from bright lights; the green LED does not accurately reflect the state of the output, so there can be a logic high output without the green LED lighting.
 
-A [TLS257 light-to-voltage converter](http://uk.farnell.com/taos/tsl257-lf/sensor-light-voltage-converter/dp/1226886?Ntt=TSL257) connected directly to an Arduino digital input with a 10K pull down resistor was able to detect a light pulse from Reporter 5193B meter. TLS257 detects light in the visible range. Highly affected by ambient light. Need to good ambient light shielding around sensor. Sensor has the advantage of a built in op-amp to ensure good voltage swing and allow direct Arduino connection. Low cost £1.31 (22/10/10).
+The pulse input of the emonTx and emonPi is configured with the internal pull-up active (to prevent spurious pulses being counted when nothing is connected) but this is quite weak and the resistor R4 is able to pull the output down when the transistor turns off. It should not be necessary to supplement the pull-up resistor, nor to add an external pull-down. If severe interference is experienced, a moderately low-valued capacitor may be connected between the pulse output and GND. Its value will be determined by the pulse width and maximum pulse rate, 100 nF would be a good starting value.
 
-The [TLS261 photo diode](http://uk.farnell.com/taos/tsl261r-lf/photodiode-sensor-l-volts/dp/1182350?whydiditmatch=rel_3&matchedProduct=TSL261&Ntt=TSL261) was also tested. Since this sensor is IR it is not affected as much by ambient light. Was able to detect pulses from a bright LED, but not from the Reporter 5193B meter.</div>
+#### Other Optical Sensors
 
-### **Wired / Switched output pulse detection**
+Other sensors that operate in the visible and infra-red ranges should be usable. A photo-diode or photo-transistor will be suitable, and you will need a similar interface circuit to give a usable pulse output. A light-dependent resistor is unlikely to be satisfactory due to its very slow response time.
 
-Many meters also have wired / switched pulse outputs. Many have connection diagrams similar to this one that comes with the A100c. The two smaller holes are the pulse output connections. I have added V<sub>in</sub> and V<sub>out</sub> labels to make it a little clearer. V<sub>in</sub> is provided by an external power supply. V<sub>out</sub> is the meter output created by toggling an internal solid state relay (like a switch between V<sub>in</sub> and V<sub>out</sub>)
+#### Wired / Switched Output Pulse Detection
+
+Many meters have a wired pulse output. Often, this will be labelled or described in the documentation as “S0”. The S0 interface is a standardised hardware interface, defined in EN62053-31. Inside the meter, there is a switch – possibly a reed relay but more likely an optically isolated transistor. The operating voltage must be supplied by the emonTx or emonPi.
+
+The meter’s “S0-” terminal should connect to GND, and the “S0+” terminal to the pulse input. The internal pull-up might not be strong enough, and in that case a 1 kΩ resistor must be connected between the 3.3 V terminal and the pulse input to provide adequate current.
+
+If the meter’s pulse output is **NOT** labelled as “S0”, then you should assume that it cannot be directly connected to an Arduino, emonTx or emonPi and you need to determine exactly what it is. It is possibly a connection at line voltage and isolation will be required.
 
 ![](files/a100conect.png)
 
@@ -70,18 +76,8 @@ From what I understand, 24V is a fairly standard supply for such meter systems, 
 
 **Live wire proximity: **The pulse outputs are usually very close to live wires, so watch out for those too!
 
-**Circuit**
-
-Pulse output meter to Arduino connection diagram:
-
-**![](files/pocircuit.png)**
-
-The 10k resistor keeps the digital input at GND (digital level 0) when the pulse output 'switch' is open.
-
 ### **Further reading**
 
-- [http://www.btinternet.com/~jon00/electmon.shtml](http://www.btinternet.com/~jon00/electmon.shtml)
-
 - [http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1276096046](http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1276096046)
-
 - [Single optical pulse counting using a JeeNode board and a Hope RFM12 RF module](http://jeelabs.net/projects/cafe/wiki/Electricity_consumption_meter)
+- [Application instructions energy meter Topic: S0-pulse interface](https://sbc-support.com/uploads/tx_srcproducts/Applicationnote_S0puls_output_EN_V1.1_01.pdf)
