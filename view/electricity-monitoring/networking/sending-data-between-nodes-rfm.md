@@ -70,7 +70,7 @@ In the emonGLCD sketch:
 So although both data packets are called `emontx`, the number you put into `power1` at the emonTx end comes out of `Vrms` at the GLCD end.
 (Why? Because those two are **the first 2 bytes** in the data packet).
 
-Or in emonHub.conf, assuming the emonTx is Node 6:
+Or in `emonHub.conf`, assuming the emonTx is Node 6:
 
 ```
 [[6]]
