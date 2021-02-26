@@ -56,6 +56,7 @@ Many libraries are required, this is the full list:
 | GLCD_ST7565        | https://github.com/openenergymonitor/EmonGLCDlib                   | Only required for EmonGLCD   |
 | EtherCard          | https://github.com/openenergymonitor/EtherCardOct2012              | Only required for NanodeRF   |
 | emonLibCM          | https://github.com/openenergymonitor/EmonLibCM                     |       |
+| SI7021             | https://github.com/LowPowerLab/SI7021                              | Only required for emonTH V2  |
 
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub
 the button is on the right-hand side. Click `Clone or download` followed by `Download ZIP`:
