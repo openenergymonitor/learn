@@ -1,5 +1,6 @@
 ## Installing the Arduino Libraries – macOS
 <small>by Jon Murphy</small>
+
 ***
 
 Before you install the libraries, it would be a good idea to think about how you will organise your Emon data. When
@@ -45,27 +46,18 @@ will have to move or copy these libraries. For that reason it is not recommended
 
 Many libraries are required, this is the full list:
 
-* JeeLib - https://github.com/jcw/jeelib
-
-* RFu_JeeLib - https://github.com/openenergymonitor/RFu_jeelib
-  <br>**Note**: RFu JeeLib is only required for emonTx V3.2 and emonTH V1.4 using the RFu328 module.
-
-* EmonLib - https://github.com/openenergymonitor/EmonLib
-
-* OneWire - https://github.com/PaulStoffregen/OneWire
-
-* DallasTemperature - https://github.com/milesburton/Arduino-Temperature-Control-Library
-
-* RTClib - https://github.com/adafruit/RTClib
-  <br>**Note**: Only required for EmonGLCD
-
-* GLCD_ST7565 - https://github.com/openenergymonitor/EmonGLCDlib
-  <br>**Note**: Only required for EmonGLCD
-
-* EtherCard - https://github.com/openenergymonitor/EtherCardOct2012
-  <br>**Note**: Only required for NanodeRF
-  
-* emonLibCM - https://github.com/openenergymonitor/EmonLibCM  
+| Library            | Link                                                               | Notes |
+|--------------------|--------------------------------------------------------------------|-------|
+| JeeLib             | https://github.com/jcw/jeelib                                      |       |
+| RFu_JeeLib         | https://github.com/openenergymonitor/RFu_jeelib                    | Only required for emonTx V3.2 and emonTH V1.4 using the RFu328 module.    |
+| EmonLib            | https://github.com/openenergymonitor/EmonLib                       |       |
+| OneWire            | https://github.com/PaulStoffregen/OneWire                          |       |
+| DallasTemperature  | https://github.com/milesburton/Arduino-Temperature-Control-Library |       |
+| RTClib             | https://github.com/adafruit/RTClib                                 | Only required for EmonGLCD   |
+| GLCD_ST7565        | https://github.com/openenergymonitor/EmonGLCDlib                   | Only required for EmonGLCD   |
+| EtherCard          | https://github.com/openenergymonitor/EtherCardOct2012              | Only required for NanodeRF   |
+| emonLibCM          | https://github.com/openenergymonitor/EmonLibCM                     |       |
+| SI7021             | https://github.com/LowPowerLab/SI7021                              | Only required for emonTH V2  |
 
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub the button is on
 the right-hand side. Click `Clone or Download` followed by `Download ZIP`:
