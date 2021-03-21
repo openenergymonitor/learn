@@ -196,10 +196,6 @@
                         "nicename": "Fixed interval timeseries",
                         "url": "electricity-monitoring/timeseries/Fixed-interval"
                     },
-                    "Fixed-interval-averaging": {
-                        "nicename": "Fixed interval with averaging",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval-averaging"
-                    },
                     "Variable-interval": {
                         "nicename": "Variable interval timeseries",
                         "url": "electricity-monitoring/timeseries/Variable-interval"
