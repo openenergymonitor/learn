@@ -51,36 +51,38 @@ To write fixed interval data there are three steps:
 
 ### Reading from the time series data file.
 
-The get data query parameters at the start time, end time and the data interval of the output data.
+The following example gives a really paired down example of reading data back from the fixed interval data file.
 
-1\) Find the position of the datapoint nearest the query start time and calculate the skip size (number of datapoints we need to skip) in order to output the datapoints at the requested data interval.
-
-    $start_position = ceil(($query_start - $meta->start_time) / $meta->interval);
-    $skip_size = round($out_interval / $meta->interval);
-
-2\) Iterate through the data file from the start position reading data points at the skip size until the end time or the end of the file is reached.
-
-    $data = array();
-    $fh = fopen($this->dir.$meta->id.".dat", 'rb');
-    while($time<=$end)
+    public function get_data($id,$start,$end,$interval)
     {
-        // $position steps forward by skipsize every loop
-        $pos = ($startpos + ($i * $skipsize));
-
-        // Exit the loop if the position is beyond the end of the file
-        if ($pos > $meta->npoints-1) break;
-
-        // read from the file
-        fseek($fh,$pos*4);
-        $val = unpack("f",fread($fh,4));
-
-        // calculate the datapoint time
-        $time = $meta->start_time + $pos * $meta->interval;
-
-        // add to the data array if its not a nan value
-        if (!is_nan($val[1])) $data[] = array($time*1000,$val[1]);
-
-        $i++;
-     }
+        // Fetch feed start_time and interval from meta file
+        $meta = $this->get_meta($id);
+        
+        $data = array();
+        
+        // Open the data file
+        $fh = fopen($this->dir.$id.".dat", 'rb');
+        
+        // For each data point in the query range
+        for ($time=$start; $time<=$end; $time += $interval) {
+            // Find position of timestamp in data file
+            $pos = round(($time - $meta->start_time) / $meta->interval);
+            // Check that position is within range
+            $value = null;
+            if ($pos>=0 && $pos < $meta->npoints) {
+                // Seek to the data point position
+                fseek($fh,$pos*4);
+                // Read value
+                $tmp = unpack("f",fread($fh,4));
+                if (!is_nan($tmp[1])) $value = $tmp[1];
+            }
+            // Add data point to output array
+            $data[] = array($time,$value);
+        }
+        
+        fclose($fh);
+        
+        return $data;
+    }
 
 Full PHPFina source code can be found here: [PHPFina.php](https://github.com/emoncms/emoncms/blob/master/Modules/feed/engine/PHPFina.php)
