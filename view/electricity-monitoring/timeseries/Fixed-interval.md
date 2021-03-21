@@ -10,28 +10,20 @@ There are two main advantage of this approach versus the variable interval appro
 
 2. The second advantage is that in a time series where the data is highly reliable the disk use can be up to half that of the disk use used by a variable interval engine, due to not needing to record a timestamp for each datapoint.
 
-The disadvantage is that when you have a gap in your data, that gap needs to be padded with NAN values, those times need to be allocated even if not used. This isn’t a big a disadvantage as it may first seem because even if you had a gap of 6 months out of a year you would still only consume as much disk space as the variable interval method. Another perhaps more significant disadvantage is that you need to set the interval of the feed when you create the feed.
+The disadvantage is that when you have a gap in your data, that gap needs to be padded with NAN values, those times need to be allocated even if not used. This isn’t a big a disadvantage as it may first seem because even if you had a gap of 6 months out of a year you would still only consume as much disk space as the variable interval method. Another disadvantage is that you need to set the interval of the feed when you create the feed.
 
-Two files are required for each fixed interval feed, a meta file to store the start time and interval and the datafile to store the 4 byte data values:
+The current PHPFina timeseries implementation uses two files for each fixed interval feed, a meta file to store the start time and interval and the datafile to store the 4 byte data values. It would be possible to reduce this to a single file if the first 8 bytes of the data file contained the start_time and interval meta data, this would reduce flexibility to add further meta data in the future. There is not necessarily a right way to do it, it's just a design decision to bear in mind.
 
 **Metafile:**
 
 Meta file: $id.meta:
 
-- id (4 bytes, Unsigned integer)
-- npoints (4 bytes, Unsigned integer, Legacy now moved to seperate file)
+- id (4 bytes, Unsigned integer, Legacy now unused)
+- npoints (4 bytes, Unsigned integer, Legacy now unused)
 - interval (4 bytes, Unsigned integer)
 - start_time (4 bytes, Unsigned integer)
 
-Meta file: $id.npoints
-
-- npoints (4 bytes, Unsigned integer)
-
-The current implementation of PHPFiwa in emoncms uses two meta files, one for storing meta data that only gets changed at creation and the other .$id.npoints stores the number of points in the feed updated each time a datapoint is added to the feed.
-
-Its an open question whether its actually useful to record npoints, it may be sufficient to use the filesystem recorded filesize / 4 bytes to obtain the npoint count. Doing so would reduce the disk write load by another file update.
-
-One simplification would be to drop the recording of the feed id in the meta file as this data is stored in the metafile name.
+Note: The original implementation of PHPFina had two meta files, one containing the interval and start_time and a second holding the number of data points (npoints). The recording of npoints has since been removed and is instead calculated on the fly from the file size which works fine as long as the stats cache is cleared for the file using "clearstatcache($filename);". 
 
 **PHPFINA:**
 
