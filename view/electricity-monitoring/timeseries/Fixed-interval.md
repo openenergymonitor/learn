@@ -75,24 +75,27 @@ The following example gives a really paired down example of reading data back fr
         return $data;
     }
 
-1\. It starts by fetching the start_time and interval of the fixed interval feed from the meta file. We also open the .dat file in read mode.
+1\. We start by fetching the start_time and interval of the fixed interval feed from the meta file. We also open the .dat file so that it's ready to read.
 
     $meta = $this->get_meta($id);
     $fh = fopen($this->dir.$id.".dat", 'rb');
 
-2\. We then itterate through the request range starting at the $start timestamp and advancing at the specified $interval.
+2\. Next, we then iterate through the request range starting at the $start timestamp and advancing at the specified $interval.
 
     for ($time=$start; $time<=$end; $time += $interval) {
 
-3\. We find the nearest data point to each timestamp and check that this is in range:
+3\. We find the nearest data point to each timestamp and check that it is in range:
 
     $pos = round(($time - $meta->start_time) / $meta->interval);
     if ($pos>=0 && $pos < $meta->npoints) {
     
-4\. Reads in the data point value from the file:
+4\. Fseek moves to the position in the file that we want to read and the combination of fread and unpack reads the binary data and converts it to a float value. We return the value if it is a number or otherwise return null.
 
     fseek($fh,$pos*4);
     $tmp = unpack("f",fread($fh,4));
     if (!is_nan($tmp[1])) $value = $tmp[1];
+
+5\. Finally the datapoint is added to the data array ready to be passed back as the result of the feed engine class method. 
+
 
 Full PHPFina source code can be found here: [PHPFina.php](https://github.com/emoncms/emoncms/blob/master/Modules/feed/engine/PHPFina.php)
