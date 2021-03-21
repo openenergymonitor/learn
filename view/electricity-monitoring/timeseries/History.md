@@ -50,14 +50,13 @@ At this point with much reduced mysql load, very fast graph load times thanks to
 - [18th Feb 2014: Emoncms v8, New feed engines, PHPFiwa, PHPFina](http://openenergymonitor.org/emon/node/3868)
 - [Documentation: Variable interval time series](Variable-interval)
 - [Documentation: Fixed interval time series](Fixed-interval)
-- [Documentation: Fixed interval with averaging time series (Depreciated)](Fixed-interval-averaging)
 
 This brings us to the present day with the 2 main emoncms feed engines:
 
 - PHPFina: Fixed interval no averaging *
 - PHPTimeSeries: variable interval time series
 
-Note: For a period of time we used a variation of PHPFina called PHPFiwa, standing for Fixed interval with averaging. This engine generated pre-processed average layers as the data was recorded, the implementation caused a lot of additional write load as multiple average layer files where written on each data point addition to the engine. An averaging option is now added to the methods that fetch data from the phpfina engine as a post-processing step instead and the phpfiwa engine was depreciated.
+**Note:** For a period of time we used a variation of PHPFina called PHPFiwa, standing for Fixed interval with averaging. This engine generated pre-processed average layers as the data was recorded, the implementation caused a lot of additional write load as multiple average layer files where written on each data point addition to the engine. An averaging option is now added to the methods that fetch data from the phpfina engine as a post-processing step instead and the phpfiwa engine was depreciated.
 
 These 2 engines provide between them an implementation that can fit most applications.
 
