@@ -25,7 +25,7 @@ In May 2013 Mike Stirling who wrote the [timestore time series database](http://
 
 [31st Jul 2013: From 1.3 minutes to 196ms: timestore on emoncms.org](http://openenergymonitor.blogspot.com/2013/07/from-13-minutes-to-196ms-timestore-on.html)
 
-Timestore became the engine of choice within emoncms in late July 2013 providing a huge boost in performance but converting the large amounts of mysql time series data to timestore on an already stretched server was very time consuming. I started to experiment with writing time series engines with direct file access from scratch in php and realised that it wasn’t that hard to write an engine that could take the GB's of mysql time series data amassed on emoncms.org move it to another folder and read and write to it directly obtaining significantly improved performance over mysql without requiring timely conversion. This engine became the PHPTimeSeries engine which is a variable interval time series engine documented in full here:
+Timestore became the engine of choice within emoncms in late July 2013 providing a huge boost in performance but converting the large amounts of mysql time series data to timestore on an already stretched server was very time consuming. I started to experiment with writing time series engines with direct file access from scratch in php and realised that it wasn’t that hard to write an engine that could take the GB's of mysql time series data amassed on emoncms.org move it to another folder and read and write to it directly obtaining significantly improved performance over mysql without requiring timely conversion. This engine became the PHPTimeSeries engine which is a variable interval time series engine documented here:
 
 [Documentation: Variable Interval time series implementation](Variable-interval)
 
@@ -50,23 +50,19 @@ At this point with much reduced mysql load, very fast graph load times thanks to
 - [18th Feb 2014: Emoncms v8, New feed engines, PHPFiwa, PHPFina](http://openenergymonitor.org/emon/node/3868)
 - [Documentation: Variable interval time series](Variable-interval)
 - [Documentation: Fixed interval time series](Fixed-interval)
-- [Documentation: Fixed interval with averaging time series](Fixed-interval-averaging)
+- [Documentation: Fixed interval with averaging time series (Depreciated)](Fixed-interval-averaging)
 
-This brings us to the present day with the 3 main emoncms feed engines:
+This brings us to the present day with the 2 main emoncms feed engines:
 
-- PHPFiwa which is based on timestore with a few changes.
-- PHPFina which takes the same fixed interval approach but without the averaging feature.
-- PHPTimeSeries a variable interval engine.
+- PHPFina: Fixed interval no averaging *
+- PHPTimeSeries: variable interval time series
 
-These 3 engines provide between them an implementation that can fit most applications.
+Note: For a period of time we used a variation of PHPFina called PHPFiwa, standing for Fixed interval with averaging. This engine generated pre-processed average layers as the data was recorded, the implementation caused a lot of additional write load as multiple average layer files where written on each data point addition to the engine. An averaging option is now added to the methods that fetch data from the phpfina engine as a post-processing step instead and the phpfiwa engine was depreciated.
 
-- PHPFiwa is great for power and temperature data. Averaging is useful in these cases and the data is highly regular without time shifts.
-- PHPFina is great for accumulating data where averaging provides no benefit.
+These 2 engines provide between them an implementation that can fit most applications.
+
+- PHPFina is great for all regular data that needs to be recorded at a fixed interval, e.g power, temperature, kWh data.
 - PHPTimeSeries is great for irregular data such as state changes, but its also good for daily data while regular for most of the year may need to have an hour time shift due to daylight saving time.
-
-Time Series feed engine development is not yet complete, the current area of research is how best to add write buffering in order to make the writing of the time series data much more efficient.
-
-Due to the way filesystems work writing 9 bytes at a time to each data file in this way is not particularly write efficient. File systems usually have a minimum IO size that is much larger than 9 bytes (i.e 512 bytes), we can improve the engine write implementation by buffering and writing in large blocks that are closer to this minimum IO size. This is the current area of research in emoncms feed engines.
 
 ## Blog posts and related links
 
