@@ -51,7 +51,7 @@ To write fixed interval data there are three steps:
 
 ### Reading from the time series data file.
 
-The get data query parameters are the start time, end time and the data interval of the output data.
+The get data query parameters at the start time, end time and the data interval of the output data.
 
 1) Find the position of the datapoint nearest the query start time and calculate the skip size (number of datapoints we need to skip) in order to output the datapoints at the requested data interval.
 
