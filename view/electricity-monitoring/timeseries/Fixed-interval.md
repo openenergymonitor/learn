@@ -55,34 +55,44 @@ The following example gives a really paired down example of reading data back fr
 
     public function get_data($id,$start,$end,$interval)
     {
-        // Fetch feed start_time and interval from meta file
         $meta = $this->get_meta($id);
-        
-        $data = array();
-        
-        // Open the data file
         $fh = fopen($this->dir.$id.".dat", 'rb');
         
-        // For each data point in the query range
+        $data = array();
         for ($time=$start; $time<=$end; $time += $interval) {
-            // Find position of timestamp in data file
             $pos = round(($time - $meta->start_time) / $meta->interval);
-            // Check that position is within range
+            
             $value = null;
             if ($pos>=0 && $pos < $meta->npoints) {
-                // Seek to the data point position
                 fseek($fh,$pos*4);
-                // Read value
                 $tmp = unpack("f",fread($fh,4));
                 if (!is_nan($tmp[1])) $value = $tmp[1];
             }
-            // Add data point to output array
             $data[] = array($time,$value);
         }
         
         fclose($fh);
-        
         return $data;
     }
+
+1\. It starts by fetching the start_time and interval of the fixed interval feed from the meta file. We also open the .dat file in read mode.
+
+    $meta = $this->get_meta($id);
+    $fh = fopen($this->dir.$id.".dat", 'rb');
+
+2\. We then itterate through the request range starting at the $start timestamp and advancing at the specified $interval.
+
+    for ($time=$start; $time<=$end; $time += $interval) {
+
+3\. We find the nearest data point to each timestamp and check that this is in range:
+
+    $pos = round(($time - $meta->start_time) / $meta->interval);
+    if ($pos>=0 && $pos < $meta->npoints) {
+    
+4\. Reads in the data point value from the file:
+
+    fseek($fh,$pos*4);
+    $tmp = unpack("f",fread($fh,4));
+    if (!is_nan($tmp[1])) $value = $tmp[1];
 
 Full PHPFina source code can be found here: [PHPFina.php](https://github.com/emoncms/emoncms/blob/master/Modules/feed/engine/PHPFina.php)
