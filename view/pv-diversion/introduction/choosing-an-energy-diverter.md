@@ -55,7 +55,7 @@ For the mains section, the choices are:
 1.  a home-built switch principally comprising a trigger IC, triac and heatsink, or
 2.  a commercially produced solid-state relay.
 
-The application of the Arduino Uno and the emonTx V2 and the construction of a home-built switch are described in [Diverting surplus PV Power, by Robin Emley](../mk2/index). Robin is able to supply a range of items, from various special items, to a complete complete kit of parts, or the same design as a finished, tested unit, ready to be installed. [[MK2PVRouter.co.uk](http://MK2PVRouter.co.uk/)]
+The application of the Arduino Uno and the emonTx V2 and the construction of a home-built switch are described in [Diverting surplus PV Power, by Robin Emley](../mk2/index). Robin is able to supply a range of items, from various special items, to a complete kit of parts. [[MK2PVRouter.co.uk](http://MK2PVRouter.co.uk/)]
 
 A slightly different power switch is described by Martin Roberts here: [Diverting surplus PV Power: PLL](../pll/pll)
 
