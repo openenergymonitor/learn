@@ -76,6 +76,6 @@ A split-core CT, especially one that has a ferrite core (such as the ones made b
 
 [2] [Wikipedia article on Galvanic isolation](https://en.wikipedia.org/wiki/Galvanic_isolation)
 
-[3] [CT and AC power adaptor installation and calibration theory](/learn/electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory)
+[3] [CT and AC power adaptor installation and calibration theory](/electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory)
 
 [4] [Current Transformer Installation](installation)
