@@ -600,7 +600,17 @@
                         "url": "pv-diversion/pll/references"
                     }
                 }
+            },
+            "usingmultiplediverters": {
+                "nicename": "Using Multiple Diverters",
+                "pages": {
+                    "usingmultiplediverters": {
+                        "nicename": "Using Multiple Diverters",
+                        "url": "pv-diversion/usingmultiplediverters/usingmultiplediverters"
+                    }
+                }
             }
+            
         }
     },
     "other-utilities": {

@@ -57,6 +57,19 @@ Many libraries are required, this is the full list:
 | EtherCard          | https://github.com/openenergymonitor/EtherCardOct2012              | Only required for NanodeRF   |
 | emonLibCM          | https://github.com/openenergymonitor/EmonLibCM                     |       |
 | SI7021             | https://github.com/LowPowerLab/SI7021                              | Only required for emonTH V2  |
+| emonEProm          | https://community.openenergymonitor.org/uploads/short-url/eSkSOEesXkOL2FtaMCkrzhnUAOF.zip | Manages the EEPROM when saving config & energy values |
+| rfmTxLib           | https://community.openenergymonitor.org/uploads/short-url/2itZ1bA7J0D1bfJO2byhattak9U.zip | Transmit-only - message format is compatible with JeeLib |
+
+<div class="warning">
+
+<p>The following are <strong>NOT</strong> compatible with JeeLib and the RFM12B and the RFM69 in ‘compatibility’ mode (i.e. using “#define RF69_COMPAT 1”):</p>
+
+</div>
+
+| Library            | Link                                                               | Notes |
+|--------------------|--------------------------------------------------------------------|-------|
+| rf69               | https://community.openenergymonitor.org/uploads/short-url/5aI8TKgQAIJqOGOIH5443qD1oz1.zip | RFM69 ‘Native’ format - does not check for a busy radio channel |
+| rfm69nTxLib        | https://community.openenergymonitor.org/uploads/short-url/pv8ewlR5XzEfB8M4Qge6ekUIlOR.zip | RFM69 ‘Native’ format version of rfmTxLib |
 
 Go to each of the websites in turn. Download the zip file for each to your usual place – on GitHub
 the button is on the right-hand side. Click `Clone or download` followed by `Download ZIP`:
