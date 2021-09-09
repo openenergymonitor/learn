@@ -79,3 +79,4 @@ A split-core CT, especially one that has a ferrite core (such as the ones made b
 [3] [CT and AC power adaptor installation and calibration theory](/electricity-monitoring/ctac/ct-and-ac-power-adaptor-installation-and-calibration-theory)
 
 [4] [Current Transformer Installation](installation)
+[info on current transformer5](https://favreadblogs.blogspot.com/2020/01/what--current-transformer-meaning.html)
