@@ -10,7 +10,11 @@ At its simplest, an energy diverter captures excess energy from your private gen
 
 Whether you will benefit from a diverter depends wholly on the local rules that apply, and on the difference between the price that you pay for imported energy and the payments you receive for exported energy.
 
-In the UK, there is a fixed “Feed-in Tariff” paid for energy generated irrespective of whether it is consumed on-site or exported. Although your exported energy may be purchased by the supplier at a rate lower than the one they charge for energy you import, there is often an assumption that 50% of generated energy is exported and payment is made on that basis. Therefore, it makes economic sense to utilise as much of the generated energy as possible, exporting only when no more can be used. The UK Feed-in Tariff closed to new applications on March 31, 2019, making a great incentive to use your own generated electricity. Anyone already recieving the Feed-in Tariff will continue to do so for the term of their agreement (usually 20 years).
+In the UK, from April 2010 a fixed [“Feed-in Tariff”](https://www.ofgem.gov.uk/environmental-and-social-schemes/feed-tariffs-fit) (FIT) paid for energy generated irrespective of whether it is consumed on-site or exported. Although your exported energy may be purchased by the supplier at a rate lower than the one they charge for energy you import, there is often an assumption that 50% of generated energy is exported and payment is made on that basis. Therefore, it makes economic sense to utilise as much of the generated energy as possible, exporting only when no more can be used.
+
+The UK Feed-in Tariff scheme closed to new applications on March 31, 2019, making a great incentive to use your own generated electricity instead of exporting it. Anyone already recieving the Feed-in Tariff will continue to do so for the term of their agreement (usually 20 years).
+
+In January 2020 the [Smart Export Guarantee (SEG)](https://www.ofgem.gov.uk/environmental-and-social-schemes/smart-export-guarantee-seg) was launched to replace the older FIT scheme.
 
 There is no consistent world-wide policy. In some places, it has been reported that exporting electricity is forbidden. In those locations, it is imperative that as much energy is used on-site as possible. Elsewhere, the same tariff rates apply to both imported and exported energy and there is no Feed-in Tariff, hence, no incentive to store energy on-site.
 
