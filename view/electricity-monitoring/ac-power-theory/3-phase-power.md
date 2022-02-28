@@ -20,7 +20,7 @@ The first electrical systems generated direct current by means of dynamos. It wa
 
 #### What is 3-Phase Power?
 
-Three phase power is is comprised of 3 related voltage sources supplying the same load. It is a significant improvement over single or two-phase power. The three voltage or current waves follow each other ⅓ cycle apart, and _(ideally)_ if you sum the currents together at any instant, they balance perfectly. For a mechanical analogy, think of a wheel with three elastic bands fixed to the rim 120° apart, all tied together in the centre. The forces there are perfectly balanced, the knot stays at the centre of the wheel. The bands represent the voltages or currents, and it's easy to see that everything balances perfectly.
+Three phase power is comprised of 3 related voltage sources supplying the same load. It is a significant improvement over single or two-phase power. The three voltage or current waves follow each other ⅓ cycle apart, and _(ideally)_ if you sum the currents together at any instant, they balance perfectly. For a mechanical analogy, think of a wheel with three elastic bands fixed to the rim 120° apart, all tied together in the centre. The forces there are perfectly balanced, the knot stays at the centre of the wheel. The bands represent the voltages or currents, and it's easy to see that everything balances perfectly.
 
 More importantly, the power is continuous and constant, so three phase motors run more smoothly (we've all heard bottles rattling in the refrigerator, which is usually powered by a single phase motor that vibrates as a result of the power pulses at twice mains frequency).
 
