@@ -14,7 +14,7 @@
       var apikey = "<?php print $apikey; ?>";
     </script>
     <title>Learn | OpenEnergyMonitor</title>
-    <link rel="shortcut icon" href="<?php echo $path; ?>theme/favicon.ico" />
+    <link rel="icon" href="<?php echo $path; ?>theme/favicon.ico" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="theme-color" content="#44b3e2" />
     <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>theme/style.php?v=3.2.0" />
