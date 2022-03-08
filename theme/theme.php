@@ -4,14 +4,14 @@
   <head>
     <?php
       global $path, $session, $github_url;
-      $apikey = $session['apikey_read'];
+      // $apikey = $session['apikey_read'];
       $q = "";
       if (isset($_GET['q'])) $q = $_GET['q'];
     ?>
     <script>
       var path = "<?php print $path; ?>";
       var session = JSON.parse('<?php echo json_encode($session); ?>');
-      var apikey = "<?php print $apikey; ?>";
+      // var apikey = "<?php print $apikey; ?>";
     </script>
     <title>Learn | OpenEnergyMonitor</title>
     <link rel="icon" href="<?php echo $path; ?>theme/favicon.ico" />
