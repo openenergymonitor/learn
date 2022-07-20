@@ -43,7 +43,7 @@ therefore, instantaneous power **P = 3600 / T** where T is the time between the 
 
 Many electricity meters do not have pulse output connections or the connections are not accessible due to restrictions imposed by the utility company. All modern meters have an optical pulse output LED. In such cases an optical sensor can be used to interface with the meter.
 
-The red pulse-output LED can be seen in the A100c picture above. To detect the pulses from the LED, you need a light sensor, such as [link to shop page]. This is supplied complete with a RJ45 plug to give an easy connection to the pulse input of an emonTx or emonPi. 
+The red pulse-output LED can be seen in the A100c picture above. To detect the pulses from the LED, you need a light sensor, such as [this one](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/). This is supplied complete with a RJ45 plug to give an easy connection to the pulse input of an emonTx or emonPi. 
 
 Inside the sensor is a small p.c.b. carrying a photo-diode and a two-transistor amplifier-driver circuit:
 
