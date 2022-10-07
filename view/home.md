@@ -101,17 +101,6 @@ h2 {
 		  </a>
 	  </div>
 	</div>
-  <div class="flex-item">
-	  <div class="fcontainer">
-	    <a href="other-utilities/water-and-gas/introduction">
-		    <div class='learnpageIcons'>
-			    <div class='iconCircle'></div>
-		    </div>
-		    <h2 class="headerIgnore">Other<br>Utilities</h2>
-		    <p>Studies on other applications, such as gas and water monitoring.</p>
-		  </a>
-	  </div>
-	</div>
 	
 </div>
 <script>
