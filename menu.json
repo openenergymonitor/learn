@@ -185,48 +185,6 @@
                     }
                 }
             },
-            "timeseries": {
-                "nicename": "Timeseries",
-                "pages": {
-                    "History": {
-                        "nicename": "Timeseries storage history in emoncms",
-                        "url": "electricity-monitoring/timeseries/History"
-                    },
-                    "Fixed-interval": {
-                        "nicename": "Fixed interval timeseries",
-                        "url": "electricity-monitoring/timeseries/Fixed-interval"
-                    },
-                    "Variable-interval": {
-                        "nicename": "Variable interval timeseries",
-                        "url": "electricity-monitoring/timeseries/Variable-interval"
-                    },
-                    "Write-load-investigation": {
-                        "nicename": "Write load investigation",
-                        "url": "electricity-monitoring/timeseries/Write-load-investigation"
-                    }
-                }
-            },
-            "emoncms-internals": {
-                "nicename": "Emoncms Internals",
-                "pages": {
-                    "architecture": {
-                        "nicename": "Architecture",
-                        "url": "electricity-monitoring/emoncms-internals/architecture"
-                    },
-                    "developing_new_module": {
-                        "nicename": "Developing a new module",
-                        "url": "electricity-monitoring/emoncms-internals/developing-a-new-module"
-                    },
-                    "Global variables in EmonCMS": {
-                        "nicename": "Global variables in Emoncms",
-                        "url": "electricity-monitoring/emoncms-internals/global-variables"
-                    },
-                    "developinputproc": {
-                        "nicename": "Input Processing",
-                        "url": "electricity-monitoring/emoncms-internals/input-processing"
-                    }
-                }
-            },
             "arduino-ide": {
                 "nicename": "Using the Arduino IDE",
                 "pages": {
