@@ -129,10 +129,6 @@
             "networking": {
                 "nicename": "Networking",
                 "pages": {
-                    "which-radio-module": {
-                        "nicename": "Which radio module",
-                        "url": "electricity-monitoring/networking/which-radio-module"
-                    },
                     "rfm12_69": {
                         "nicename": "RFM12B & RFM69cw wireless transceiver modules",
                         "url": "electricity-monitoring/networking/rfm12_69"

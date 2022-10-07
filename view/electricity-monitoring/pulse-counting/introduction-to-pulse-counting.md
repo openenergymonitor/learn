@@ -1,13 +1,5 @@
 ## Monitoring energy via utility meter pulse output
 
-- [Interrupt method](interrupt-based-pulse-counter)
-
-- [Interrupt method sleep](interrupt-based-pulse-counter-sleep)
-
-- [12 input pulse counting via direct port manipulation](12-input-pulse-counting)
-
-- [Gas meter monitoring](gas-meter-monitoring)
-
 #### Introduction
 
 Many meters have pulse outputs, examples include: single phase and three phase electrical energy meters, Gas meters, Water meters.
@@ -81,6 +73,7 @@ From what I understand, 24V is a fairly standard supply for such meter systems, 
 
 #### Further Reading
 
+- [Gas meter monitoring](gas-meter-monitoring)
 - [http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1276096046](http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1276096046)
 - [Single optical pulse counting using a JeeNode board and a Hope RFM12 RF module](http://jeelabs.net/projects/cafe/wiki/Electricity_consumption_meter)
 - [Application instructions energy meter Topic: S0-pulse interface](https://sbc-support.com/uploads/tx_srcproducts/Applicationnote_S0puls_output_EN_V1.1_01.pdf)
