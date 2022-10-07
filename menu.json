@@ -214,35 +214,6 @@
                     }
                 }
             },
-            "other-software": {
-                "nicename": "Other Software",
-                "pages": {
-                    "AndroidAppPart1": {
-                        "nicename": "Android App Part 1",
-                        "url": "electricity-monitoring/other-software/AndroidAppPart1"
-                    },
-                    "AndroidAppPart2": {
-                        "nicename": "Android App Part 2",
-                        "url": "electricity-monitoring/other-software/AndroidAppPart2"
-                    },
-                    "DrawingABarChart": {
-                        "nicename": "Drawing A Bar Chart",
-                        "url": "electricity-monitoring/other-software/DrawingABarChart"
-                    },
-                    "graphing-in-kst": {
-                        "nicename": "Graphing in kst",
-                        "url": "electricity-monitoring/other-software/graphing-in-kst"
-                    },
-                    "visampler2": {
-                        "nicename": "VIsampler 2.0",
-                        "url": "electricity-monitoring/other-software/visampler2"
-                    },
-                    "sma-webbox-data-extractor": {
-                        "nicename": "SMA webbox data extractor",
-                        "url": "electricity-monitoring/other-software/sma-webbox-data-extractor"
-                    }
-                }
-            },
             "programmers": {
                 "nicename": "Programmers",
                 "pages": {
