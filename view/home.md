@@ -92,17 +92,6 @@ h2 {
 	</div>
 	<div class="flex-item">
 	  <div class="fcontainer">
-	    <a href="sustainable-energy/energy/introduction">
-		    <div class='learnpageIcons'>
-		    	<div class='iconCircle'></div>
-		    </div>
-		    <h2 class="headerIgnore">Sustainable Energy</h2>
-		    <p>Exploring the context of energy, renewable supply, energy efficiency and zero carbon energy systems.</p>
-		  </a>
-		</div>
-	</div>
-	<div class="flex-item">
-	  <div class="fcontainer">
 	    <a href="pv-diversion/introduction/choosing-an-energy-diverter.md">
 		    <div class='learnpageIcons'>
 			    <div class='iconCircle'></div>
