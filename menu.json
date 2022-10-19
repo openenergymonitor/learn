@@ -213,6 +213,20 @@
             }
         }
     },
+    "sustainable-energy": {
+        "nicename": "Sustainable Energy",
+        "chapters": {
+            "energy": {
+                "nicename": "Energy",
+                "pages": {
+                    "introduction": {
+                        "nicename": "1. Introduction",
+                        "url": "sustainable-energy/energy/introduction"
+                    }
+                }
+            }
+        }
+    },
     "pv-diversion": {
         "nicename": "PV Diversion",
         "chapters": {
