@@ -1,8 +1,6 @@
-## Different AC-AC Power Adapters
+# Different AC-AC Power Adapters
 
-***
-
-#### AC to AC Power Adapters
+## AC to AC Power Adapters
 
 A 9V AC-AC adapter can be connected to the emonTx to supply an AC voltage sample. This can be used to measure the AC RMS voltage which, in turn, can be used to calculate real power, power factor, frequency and detect power flow direction.
 

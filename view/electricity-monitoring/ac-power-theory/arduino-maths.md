@@ -1,8 +1,6 @@
-## AC Power Theory - Arduino Maths
+# AC Power Theory - Arduino Maths
 
-***
-
-#### Instantaneous Voltage and Current
+## Instantaneous Voltage and Current
 
 As the name suggests, AC Voltage and current continually alternate. If we draw a picture of the voltage and current waveform over time, it will look something like the image below. Depending on the type of load consuming power, the current waveform - blue in the diagram below - is what you get if you look at a typical laptop computer power supply. (There's an incandescent light bulb present, as well).
 
@@ -10,9 +8,9 @@ The image was made by sampling the mains voltage and current at high frequency, 
 
 **Each individual sample is an instantaneous voltage or current reading.**
 
-![](files/instvi.png)
+![instvi](files/instvi.png)
 
-#### Calculating Real Power on an Arduino
+## Calculating Real Power on an Arduino
 
 Real power is the average of instantaneous power. The calculation is relatively straightforward.
 
@@ -31,7 +29,7 @@ real_power = sum_inst_power / number_of_samples;
 
 </pre>
 
-#### Root-Mean-Square (RMS) -- Voltage
+## Root-Mean-Square (RMS) -- Voltage
 
 The  root-mean-square (r.m.s) value is important because it represents the value of a direct voltage or direct current that will give the same heating effect in a resistor.
 
@@ -50,7 +48,7 @@ mean_square_voltage = sum_squared_voltage / number_of_samples;
 root_mean_square_voltage = <span style="color: #CC6600;">sqrt</span>(mean_square_voltage);
  </pre>
 
-#### Root-Mean-Square (RMS) -- Current
+## Root-Mean-Square (RMS) -- Current
 
 Same as the RMS voltage calculation:
 
@@ -68,7 +66,7 @@ root_mean_square_current = <span style="color: #CC6600;">sqrt</span>(mean_squa
 
 </pre>
 
-#### Apparent Power
+## Apparent Power
 
 <pre>apparent_power = root_mean_square_voltage * root_mean_square_current;</pre>
 
@@ -83,6 +81,6 @@ The definition of power factor is:
 
 That's the fundamentals of AC power measurement on the emonTx or an Arduino.
 
-#### EmonLib
+## EmonLib
 
 We have packaged these calculations into an Arduino library called EmonLib to simplify Arduino energy monitor sketches. There are two versions. The methods in the original version perform the calculations over a given number of samples or mains cycles and return the average values. This is the simplest version to study for anyone new to discrete maths and energy monitoring. The “Continuous Monitoring” version, as the name suggests, operates continuously in the background and reports the average values at intervals. The libraries can be found on GitHub here: https://github.com/openenergymonitor/EmonLib and https://github.com/openenergymonitor/EmonLibCM.

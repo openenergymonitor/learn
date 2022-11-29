@@ -1,31 +1,31 @@
-## Use in North America
-
-***
+# Use in North America
 
 In order to understand how these units can be used in North America, it might be helpful to give a brief outline of the UK power system and the differences from UK practice.
 
-#### Supply Characteristics – UK
+## Supply Characteristics – UK
 
 In the UK, the final distribution transformer tends to be large. In urban areas, it may be around 1 MVA, and may serve a few hundred homes. It will be three-phase with star-connected secondaries. The star point, which is the neutral, will be earthed (grounded). The secondary voltage is nominally 240 V line–neutral, giving 415 V between phases. The frequency is 50 Hz ± 1%. Although large commercial and industrial premises will have a 3-phase supply, many small industrial units will have only a single phase. Anything other than a single phase supply is very rare for domestic consumers.
 
 The normal rating of the domestic supply will be 80 or 100 A. The supply authority will provide a fuse, a neutral link and a meter. From that point on, the wiring is the responsibility of the consumer. The cables between the meter and the “consumer unit” are called “meter tails” and will normally be 16 mm<sup>2</sup> or 25 mm<sup>2</sup> copper, with a maximum diameter over the sheath of about 10.5 mm. High current appliances, such as cookers or showers, will normally be fed by a dedicated circuit breaker, but the socket outlets for general use with portable appliances are almost always fed by a [“ring final sub-circuit”](https://en.wikipedia.org/wiki/Ring_circuit) – comprising essentially a loop of cable starting and ending at a 32 A circuit breaker, which feeds an unlimited number of socket outlets, subject to a maximum floor area served of 100 m<sup>2</sup>. Each appliance plug is fitted with a fuse rated at between 1 A & 13 A. Lighting points are normally daisy-chained and supplied by a 6 A circuit breaker.
 
-#### Supply Characteristics – North America
+## Supply Characteristics – North America
 
 Compared to the UK, the North American final distribution transformer tends to be quite small, typically 25 kVA, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre-tapped, and the centre tap is the neutral, which is also grounded.
 
 ![N.American Electricity Supply - final transformer voltages](files/N_America_Fig_1.svg)
+
 <p style="font-size: smaller">Figure 1. North American Domestic Electricity Supply - final transformer voltages.</p>
 
 The voltage tolerance is ±5% and the imbalance between the two legs has been reported to be better than 2 V, although there is no actual specification regarding voltage imbalance. Load centre (circuit breaker panel) layout enables an electrician to distribute the loads between the two legs when the wiring is installed. Standard practice among US electricians is to connect the circuits to the breakers in numerical sequence, with odd numbered breakers connected to one leg and even numbered breakers connected to the other leg. Thus, half of them will be on one leg, half on the other leg, with the aim being to balance the load evenly.
 
 The frequency tolerance is ±0.02 Hz. The effect of the higher frequency will, for most purposes, be marginal. Transformers, both current and voltage, will have slightly different losses and phase errors, and the delay between measuring voltage and current will also be different (in terms of angle), all of which will imply slightly different values for phase calibration. Inside the emonTx, capacitors on the a.c. side will have a lower impedance. On the firmware side, the sketches will sample at the same rate, but there will be fewer samples per cycle. In theory, this will mean the highest harmonic number that can be measured is lower, but in practice, the energy that will be missed will be insignificant. The major exceptions are the monitoring sketches that employ the phase locked loop (PLL) principle. These require adjustment to the timing in order to lock to the higher frequency. (That adjustment might be by changing a value in the sketch, or there might be a separate version for each frequency.)
 
-#### Measuring Whole-house Power
+## Measuring Whole-house Power
 
 Because there are three wires (discounting the protective ground conductor), classical theory dictates that two wattmeters are needed, and for ‘wattmeter’ read a pair of voltage and current measurements. Unfortunately, the emonTx has only one voltage input, therefore a compromise is required. Fortunately, because the voltage balance between the two legs is good, little error is introduced by assuming the voltages are equal in magnitude. However, two current measurements are always necessary. Again, in theory it does not matter which voltages and currents are measured, but in general, it will be more convenient to arrange the voltage transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each leg.
 
 ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_2.svg)
+
 <p style="font-size: smaller">Figure 2. North American Domestic Electricity Supply - Measuring whole-house power.</p>
 
 In Fig 2, assume for simplicity the loads are all purely resistive. (If they are not, which will almost certainly be the case in practice, the same principle applies but the maths is a little more complicated.)
@@ -57,7 +57,7 @@ I<sub>CT2</sub> = I<sub>2</sub> - I<sub>1</sub>
 
 Total Power = 2 × V × I<sub>CT1</sub> + V × I<sub>CT2</sub>
 
-#### Measuring Individual Circuits
+## Measuring Individual Circuits
 
 Individual circuits may be either 120 V using a connection between one leg and neutral, or they may be 240 V, i.e. connected to both legs.
 
@@ -79,12 +79,13 @@ If the circuit is “mixed” 120 V and 240 V, i.e. the main load is 240 V but t
 
 If the 120 V load cannot be ignored, i.e. the error is unacceptable, the load should be treated as a “whole house” with one of the arrangements of Fig 3 shown in the section above.
 
-#### Connecting the Current Transformers
+## Connecting the Current Transformers
 
 The obvious way to connect the current transformers is to have each connected directly to an input. This arrangement is necessary if, for example, it is desirable or necessary to be able to balance the currents in each leg of the supply. But if only the total power is required, then a single input can be used, releasing the second for another circuit.
 
 ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5a.svg) ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5b.svg)
 ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5c.svg)
+
 <p style="font-size: smaller">Figure 5a-c. North American Domestic Electricity Supply - Connecting the Current Transformers.
 Fig 5a – One input per CT – voltage type with internal burden or current type with burden in the emonTx
 Fig 5b – CTs in parallel with a common burden in the emonTx – using a single input
@@ -112,12 +113,12 @@ current coefficient = (total CT primary currents) / (total burden voltage)
 
 This arrangement is suitable for ‘voltage output’ CTs, but the output voltage at rated current should be approximately 0.55 V (0.75 V for the emonTx Shield).
 
-#### Suitable Current Transformers
+## Suitable Current Transformers
 
 _Note: The manufacturer adjusts the turns ratio to give the correct output current._
 The burden & calibration coefficient are calculated for Fig 5a arrangement only.
 
-#### Magnelab solid core series
+## Magnelab solid core series
 
 <div class="xaxiswrapper">
 
@@ -230,7 +231,7 @@ Part No.</th>
 
 </div>
 
-#### Magnelab split core series
+## Magnelab split core series
 
 <div class="xaxiswrapper">
 
@@ -347,7 +348,7 @@ Magnelab offers a 1, 2 & 5 Volt output option on both the UCT and the SCT range
 
 For consistency with the standard YHDC CT supplied by the shop, connect the white wire to the plug tip and the black wire to the sleeve. There should be no connection to the ring.
 
-#### Wattcore split core series
+## Wattcore split core series
 
 <div class="xaxiswrapper">
 
@@ -477,7 +478,7 @@ Part No.</th>
 
 For consistency with the standard YHDC CT supplied by the shop, connect the white wire to the plug tip and the black wire to the sleeve. There should be no connection to the ring.
 
-#### Continental Control Systems - ACT-0750 Series Split-Core Current Transformers
+## Continental Control Systems - ACT-0750 Series Split-Core Current Transformers
 
 <div class="xaxiswrapper">
 
@@ -611,7 +612,7 @@ Note that these are calibrated at 60 Hz, “Option 50 Hz” must be specified fo
 
 For consistency with the standard YHDC CT supplied by the shop, connect the white wire to the plug tip and the black wire to the sleeve. There should be no connection to the ring.
 
-#### YHDC 100A/200A/400A Split core current transformer SCT023R
+## YHDC 100A/200A/400A Split core current transformer SCT023R
 
 ![yhdc_sct023r.png](files/yhdc_sct023r.png)
 ![yhdc_sct023r_drawing.png](files/yhdc_sct023r_drawing.png)

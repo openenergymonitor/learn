@@ -1,14 +1,12 @@
-## An Introduction to AC Power
+# An Introduction to AC Power
 
-***
-
-#### Understanding AC Power
+## Understanding AC Power
 
 A whole house energy monitor measures the energy used by appliances connected to the house mains. To understand how it does this, it is useful to know something about how appliances interact with the electrical system.
 
 Not all appliances interact with the electricity system in the same way. This article will first discuss resistive loads and how the power they use is calculated. It then goes on to discuss reactive loads, and a bit about non-linear loads. Finally, it will show how we measure the direction of power flow, which is important if energy is  generated as well as consumed.
 
-#### Resistive Loads
+## Resistive Loads
 
 Incandescent light bulbs, kettles, irons, electric water heaters, electric cookers are all quite straightforward. They use all the energy given to them. They are resistive loads which means their current draw is equal to the voltage divided by their resistance (Ohm's Law). A purely resistive load gives a voltage and current waveform output similar to the following:
 
@@ -18,7 +16,7 @@ Incandescent light bulbs, kettles, irons, electric water heaters, electric cooke
 
 The yellow line is power at a given time (at any given instant it's called **instantaneous power**) which is equal to the product of the voltage and current at a given time. Notice the power is always positive. In this case, the positive direction is energy flowing to the load.
 
-#### Partially Reactive Loads
+## Partially Reactive Loads
 
 However things like fridges, washing machines, pillar drills and arc welders are not so straightforward as these appliances take in a certain amount of energy, then release some energy back into the mains supply. These have inductive (e.g. motors) or capacitive (e.g. arc welders) components in addition to the resistive component. A partially inductive load gives a voltage and current waveform output similar to the following:
 
@@ -30,7 +28,7 @@ Notice the yellow line now goes negative for a period of time, the positive bit 
 
 The other thing to consider is that the voltage and current waveforms have been shifted apart. Imagine charging a fairly large capacitor with a resistor in series (so that it can't charge instantly): To start with, the capacitor is discharged. The supply voltage rises, and is higher than the voltage on the capacitor, so current flows into the capacitor (the positive direction on the graph), which causes the capacitor voltage to rise. The supply voltage falls. Now, the voltage across the charged capacitor is higher than the supply voltage. Current starts to flow back in the direction of the supply (the negative direction on the graph). This causes the current waveform to appear as if it is shifted, as depicted in the graph. (This is referred to as phase shift).
 
-#### Real Power, Reactive Power and Apparent Power
+## Real Power, Reactive Power and Apparent Power
 
 Looking at the voltage, current and power graphs above at mains frequency the power draw fluctuates 50/60 times a second. We can't keep up with change at this speed, so we have a more useful value for power: the average of the instantaneous power, which we call **real** or **active** power.
 
@@ -68,7 +66,7 @@ which is true for pure sine waves, is no longer correct. Neither is _power facto
 
 [Ref: understanding power factor by L Wuidart](files/Wuidart.pdf)
 
-#### Determining the Direction of Power Flow
+## Determining the Direction of Power Flow
 
 Until now, this article has assumed that the load is consuming power. If however, we are generating power, then the direction the current flows is reversed. But because the current is alternating, the direction is reversing anyway, 50 (or 60) times each second. We need a reference to compare the current direction against. Fortunately, we have that in the form of the voltage. In diagram 1, the voltage and current waves both rose and fell together. When the voltage was positive (above the X axis) the current was positive, and when the voltage was negative (below the x axis) the current was negative. Power is equal to the product of the voltage and current, and so the power was always positive - all of the power curve is above the X axis.
 
@@ -80,13 +78,13 @@ If the house is generating power, the direction of the current is reversed compa
 
 The sign of the power therefore indicates whether power is being consumed or generated.
 
-#### To Sum Up
+## To Sum Up
 
 There are many parameters we can measure regarding energy use in AC systems. Each one has its merits. For the household energy metering, real power is likely to be the most useful value, as it is tells you how much power all your appliances are actually consuming, and it is what the utility bills you for.
 
 Next: [AC Power Theory - Arduino maths](arduino-maths) - How real and apparent power, rms voltage and current, and power factor are calculated.
 
-#### Further Reading
+## Further Reading
 
 [https://en.wikipedia.org/wiki/AC_power](https://en.wikipedia.org/wiki/AC_power)
 

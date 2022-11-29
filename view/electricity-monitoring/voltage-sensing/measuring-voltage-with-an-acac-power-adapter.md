@@ -1,6 +1,4 @@
-## Measuring AC Voltage with an AC to AC power adapter
-
-***
+# Measuring AC Voltage with an AC to AC power adapter
 
 An AC voltage measurement is needed to calculate real power, apparent power and power factor. This measurement can be made safely (requiring no high voltage work) by using an AC to AC power adaptor. The transformer in the adapter provides isolation from the high voltage mains.
 
@@ -42,15 +40,15 @@ The 10k and 100k R1 and R2 combination works fine for an emonTx powered at 3.3V,
 
 If you would like detailed information on how to calculate the optimum values for the components, taking component tolerances into account, see [this page](acac-component-tolerances).
 
-### **Arduino sketch**
+## Arduino sketch
 
 To use the above circuit along with a current measurement to measure real power, apparent power, power factor, Vrms and Irms upload the Arduino sketch detailed here: [Arduino sketch - voltage and current](https://github.com/openenergymonitor/EmonLib/blob/master/examples/voltage_and_current/voltage_and_current.ino)
 
-### **Improving the quality of the bias source**
+## Improving the quality of the bias source
 
 This relatively simple voltage bias source does have some limitations. See [Buffered Voltage Bias](../ctac/acac-buffered-voltage-bias) for a circuit that offers enhanced performance.
 
-### Notes on Mains Voltage Limits
+## Notes on Mains Voltage Limits
 
 The standard domestic mains supply for Europe is 230 V ± 10%, giving a lower limit of 207 V and an upper limit of 253 V. It is permissible under BS 7671 to have a voltage drop within the installation of 5%, which would give a lower limit of 195.5 V.
 The UK standard prior to harmonization was 240 V ± 6%, giving an upper limit of 254.4 V.
