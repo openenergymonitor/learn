@@ -2,17 +2,13 @@
 
 Pictured below, is an example of a **split-core** YHDC CT:
 
-<figure>
-<img src="files/current100a.jpg" alt="" />
-<figcaption><i>YHDC Current Transformer SCT-013-000 <a href="yhdc-sct-013-000-ct-sensor-report">(See test report)</a></i></figcaption>
-</figure>
-<br>
+![files/current100a.jpg](files/current100a.jpg)
 
+*YHDC Current Transformer SCT-013-000 [(See test report)](yhdc-sct-013-000-ct-sensor-report)*
 
 Here's an example of a Magnelab **split-core** CT:
 
 ![](files/SCT-1250_CT.jpg)
-
 
 In addition to the split-core type, **solid-core**, (aka **ring-core**) CTs are available.
 Here's an example of a Magnelab **solid-core** CT:

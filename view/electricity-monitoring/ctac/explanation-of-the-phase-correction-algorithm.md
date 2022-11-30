@@ -10,7 +10,7 @@ In the standard library routine, the wave is sampled about 53 times per cycle. T
 
 The first sample is read from the analogue input, filtered, and becomes 'filteredV'. Ignore for now what happens in the remainder of the first loop of the program. At the start of the second loop, that first sample is copied to the program variable 'lastFilteredV'. We now have the first two points on the diagram. The program calculates 'phaseShiftedV' from the formula
 
-<pre>phaseShiftedV = lastFilteredV + PHASECAL * (filteredV - lastFilteredV); </pre>
+    phaseShiftedV = lastFilteredV + PHASECAL * (filteredV - lastFilteredV);
 
 In the diagram, we have chosen a value of 1.5 for PHASECAL. This puts the point phaseShiftedV above the previous point by 1½ times the vertical distance between this point and the previous point. It is shown by the red dot.
 
@@ -18,11 +18,9 @@ The next time around the program loop, this point will become 'lastFilteredV' an
 
 Three special values of PHASECAL stand out:
 
-<div class="rteindent1">1 gives filteredV each time – no change, the waveform is unaltered,</div>
-
-<div class="rteindent1">0 <span class="Apple-tab-span" style="white-space:pre"></span> gives lastFilteredV each time – equivalent to moving the waveform to the _right_ by one sample period,</div>
-
-<div class="rteindent1">2 <span class="Apple-tab-span" style="white-space:pre"></span> gives (approximately) a move to the _left_ of one sample period.</div>
+- 1 gives filteredV each time – no change, the waveform is unaltered
+- 0 gives lastFilteredV each time – equivalent to moving the waveform to the _right_ by one sample period
+- 2 gives (approximately) a move to the _left_ of one sample period
 
 **Theoretical values for PHASECAL.**
 

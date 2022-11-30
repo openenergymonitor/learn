@@ -24,18 +24,7 @@ Parasite power mode requires both DS18B20 GND (pin 1) and V<sub>dd</sub> (pin 3)
 
 Parasite mode should be used only with a small number of devices, over relatively short distances.
 
-<table>
-  <tbody>
-    <tr>
-      <td width="400px"><img src="files/normal-power-connection-diagram.png"><br>Figure 1: Normal Power Connection Diagram</td>
-      <td width="350px"><img src="files/parasite-power-connection-diagram.png"><br>Figure 2: Parasite Power Connection Diagram</td>
-    </tr>
-    <tr>
-      <td width="400px"><img src="files/temp-sensors-connection-diagram-3-wire.png"><br>Figure 3: Three DS18B20's in normal power mode</td>
-      <td width="350px"><img src="files/temp-sensors-connection-diagram.png"><br>Figure 4: Three DS18B20's in parasite power mode</td>
-    </tr>
-  </tbody>
-</table>
+![](files/ds18b20_connections.png)
 
 ## Connecting Multiple Sensors
 

@@ -53,33 +53,27 @@ The input voltage to the microcontroller has a constant bias added to it, but th
 
 Thus the number seen by the microcontroller is:
 
-<pre>
-counts = (input pin voltage ÷ 3.3) × 1024</pre>
+    counts = (input pin voltage ÷ 3.3) × 1024
 
 where
 
-<pre>
-input pin voltage = adapter output voltage ÷ 11  (or 13)</pre>
+    input pin voltage = adapter output voltage ÷ 11  (or 13)
 
 and
 
-<pre>
-adapter output voltage = mains voltage × transformer ratio</pre>
+    adapter output voltage = mains voltage × transformer ratio
 
 In software, in order to convert the count back to a meaningful voltage, it has to be multiplied by a calibration constant.
 
-<pre>
-V<sub>mains</sub> = count × a constant</pre>
+    Vmains = count × a constant
 
 However, the microcontroller is able to measure its own reference voltage, this and the full scale count are already included in the program. This removes these steps and simplifies the calculation, so for the emonTx V2 the constant should be
 
-<pre>
-voltage constant = 230 × 11 ÷ (9 × 1.20) = 234.26</pre>
+    voltage constant = 230 × 11 ÷ (9 × 1.20) = 234.26
 
 This simplifies even further to:
 
-<pre>
-voltage constant = alternating mains voltage ÷ alternating voltage at ADC input pin</pre>
+    voltage constant = alternating mains voltage ÷ alternating voltage at ADC input pin
 
 The calibration constant is passed into the calculation as the second parameter to the method EnergyMonitor::voltage( ) in the file EmonLib.cpp. It is hard-coded as a constant in the call in the sketch.
 
@@ -103,40 +97,29 @@ The input voltage to the microcontroller has a constant bias added to it, but th
 
 Thus the number seen by the processor is:
 
-```
-counts = (input pin voltage ÷ 3.3) × 1024
-```
+    counts = (input pin voltage ÷ 3.3) × 1024
 
 where
 
-```
-input pin voltage = secondary current × burden resistance
-```
+    input pin voltage = secondary current × burden resistance
 
 and
 
-```
-secondary current = primary current ÷ transformer ratio
-```
+    secondary current = primary current ÷ transformer ratio
 
 The CT burden resistor is 18 Ω in the emonTx V2, or 22 Ω  and 120 Ω in the emonTx V3\. The ratio of the current transformer is normally specified by the manufacturer as the ratio of maximum primary current to secondary current, e.g. 100 A : 50 mA.
 
 In software, in order to convert the count back to a meaningful current, it has to be multiplied by a calibration constant.
 
-<pre>
-I<sub>supply</sub> = count × a constant</pre>
+    Isupply = count × a constant
 
 where
 
-```
-a constant = current constant × (3.3 ÷ 1024)
-```
+    a constant = current constant × (3.3 ÷ 1024)
 
 and, for the emonTx V2
 
-```
-current constant = (100 ÷ 0.050) ÷ 18 = 111.11
-```
+    current constant = (100 ÷ 0.050) ÷ 18 = 111.11
 
 Or to put it in words, the current constant is the value of current you want to read when 1 V is produced across the burden resistor.
 
@@ -146,15 +129,11 @@ The calibration constant is passed into the calculation as the second parameter 
 
 Look at the last line of the theory where the current constant is derived:
 
-```
-current constant = (100 ÷ 0.050) ÷ 18 = 111.11
-```
+    current constant = (100 ÷ 0.050) ÷ 18 = 111.11
 
 "100" is the current transformer primary current, and "0.050 × 18" is in fact the voltage across the burden resistor for the standard CT and burden at that current, so to arrive at your current constant you simply substitute your transformer's rated current in place of "100" and the voltage it gives in place of "0.050 × 18". For example, the YHDC SCT-013-030 gives 1 V at a rated current of 30 A, so for this transformer you have:
 
-```
-current constant = 30 ÷ 1 = 30
-```
+    current constant = 30 ÷ 1 = 30
 
 Or to put it in words, the current constant is the value of current you want to read when 1 V is produced at the analogue input.
 

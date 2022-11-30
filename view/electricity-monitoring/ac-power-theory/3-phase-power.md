@@ -2,15 +2,7 @@
 
 <!-----------------------------3PhaseTutorialVideo----------------------------->
 
-<div id="3PhaseVideo" style="width:100%;height:300px;background-color:#000000;margin:10px 0 10px 0;">
-  <div class="loader"></div>
-</div>
-
-<script>
-$(window).bind("load", function() {
-  $('#3PhaseVideo').prepend('<iframe src="https://www.youtube.com/embed/MnH_ifcRJq4" width="100%" height="300px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-});
-</script>
+<iframe src="https://www.youtube.com/embed/MnH_ifcRJq4" width="100%" height="300px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <!----------------------------/3PhaseTutorialVideo----------------------------->
 

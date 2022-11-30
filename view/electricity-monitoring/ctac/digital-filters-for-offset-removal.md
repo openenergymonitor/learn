@@ -22,12 +22,12 @@ Code example:
 
 <span style="color: #CC6600;">double</span> filtered_value = 0;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>()
 {
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">begin</span>(9600);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>()
 {
   <span style="color: #7E7E7E;">// Generate a test signal</span>
   last_sample = sample;
@@ -36,9 +36,9 @@ Code example:
   <span style="color: #7E7E7E;">// Floating maths implementation of high pass filter takes 36-40 microseconds</span>
   filtered_value = 0.996 * (filtered_value + sample - last_sample);    
 
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(sample);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">println</span>(filtered_value);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(sample);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(filtered_value);
   <span style="color: #CC6600;">delay</span>(50);
 }
 
@@ -50,27 +50,22 @@ Notice that it takes a significant amount of time to settle to the point where f
 
 Apart from being close to unity, and therefore suitable for the type of filter we want, the value 0.996 above was selected because you can multiply by 0.996 efficiently using low level operations - bit shifts and subtractions. 0.996 is nearly equal to 255 / 256, and multiplication or division by 256 is easily done with bitwise operators:
 
-```
-n × 256 = n << 8 (bitwise left shift by 8 bits = multiplication by 256)
+    n × 256 = n << 8 (bitwise left shift by 8 bits = multiplication by 256)
 
-n / 256 = n >> 8 (bitwise right shift by 8 bits = division by 256)
+    n / 256 = n >> 8 (bitwise right shift by 8 bits = division by 256)
 
-n × 255 = n × 256 - n = ((n<<8) - n)
-```
+    n × 255 = n × 256 - n = ((n<<8) - n)
 
 We can rewrite the digital high pass filter as:
 
-```
-n = last_filtered_value + sample - last_sample
-filtered_value = 0.996 × n = 255 × n / 256 = (n × 256 - n) / 256
-```
+    n = last_filtered_value + sample - last_sample
+    filtered_value = 0.996 × n = 255 × n / 256 = (n × 256 - n) / 256
+
 
 substituting bitwise operators yields:
 
-```
-n = last_filtered_value + sample - last_sample
-filtered_value = ((n<<8)-n)>>8
-```
+    n = last_filtered_value + sample - last_sample
+    filtered_value = ((n<<8)-n)>>8
 
 Code example:
 
@@ -80,12 +75,12 @@ Code example:
 
 <span style="color: #CC6600;">long</span> filtered_value = 0;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>()
 {
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">begin</span>(9600);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>()
 {
   <span style="color: #7E7E7E;">// Generate a test signal</span>
   last_sample = sample;
@@ -94,9 +89,9 @@ Code example:
   <span style="color: #CC6600;">long</span> n = filtered_value + sample - last_sample;
   filtered_value = ((n<<8)-n)>>8;
 
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(sample);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">println</span>(filtered_value);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(sample);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(filtered_value);
   <span style="color: #CC6600;">delay</span>(50);
 }
 
@@ -109,17 +104,15 @@ filtered_value continues to decrease until it has a positive amplitude of around
 
 This is partly due to rounding error, we can improve things by adding 128 before bit-shifting right, a trick to round to the nearest integer:
 
-```
-128 is  ½ << 8
-```
+    128 is  ½ << 8
 
 Changing the filter line above from
 
-<pre>filtered_value = ((n<<8)-n)>>8;</pre>
+    filtered_value = ((n<<8)-n)>>8;
 
 to 
 
-<pre>filtered_value = ((n<<8)-n+128)>>8;</pre>
+    filtered_value = ((n<<8)-n+128)>>8;
 
 Plotting the result gives:
 
@@ -131,41 +124,41 @@ The solution is to use a scaled filtered_value for the 'evolving' filtered_value
 
 Lets look again at the filter equation above:
 
-<pre>n = last_filtered_value + sample - last_sample
-filtered_value = (n × 256 - n) / 256</pre>
+    n = last_filtered_value + sample - last_sample
+    filtered_value = (n × 256 - n) / 256
 
 With a bit of rearranging, we can bring out filtered_value multiplied by 256 as our higher resolution 'evolving' filtered_value.
 
 If we move the 256 to the left side of the equation, we can rewrite it as:
 
-<pre>256 × filtered_value = n × 256 - n</pre>
+    256 × filtered_value = n × 256 - n
 
 (lets call 256 × filtered_value **shifted_filter,** as multiplying by 256 is the same as bit shifting to the left by eight (<<8))
 
 if we then calculate n × 256 separately:
 
-<pre>shiftedFCL = 256 × filtered_value + 256 × (sample - last_sample)</pre>
+    shiftedFCL = 256 × filtered_value + 256 × (sample - last_sample)
 
 (**shiftedFCL** stands for bit-shifted **F**ilter_value + **C**urrent_sample - **L**ast_sample). By separating out filtered_value from sample - last_sample we can use the **shifted_filter** value:
 
-<pre>shiftedFCL = shifted_filter + 256 × (sample - last_sample)</pre>
+    shiftedFCL = shifted_filter + 256 × (sample - last_sample)
 
 We can now re-write 256 × filtered_value = n × 256 - n as:
 
-<pre>shiftedFCL = shifted_filter + 256 × (sample - last_sample)
-shifted_filter = shiftedFCL - (shiftedFCL/256)</pre>
+    shiftedFCL = shifted_filter + 256 × (sample - last_sample)
+    shifted_filter = shiftedFCL - (shiftedFCL/256)
 
 The final step is to divide shifted_filter by 256 to arrive at the actual filtered_value:
 
-<pre>shiftedFCL = shifted_filter + 256 × (sample - last_sample)
-shifted_filter = shiftedFCL - (shiftedFCL/256)
-filtered_value = shifted_filter / 256;</pre>
+    shiftedFCL = shifted_filter + 256 × (sample - last_sample)
+    shifted_filter = shiftedFCL - (shiftedFCL/256)
+    filtered_value = shifted_filter / 256;
 
 Replacing multiply by 256 and divide by 256 with bit-shift operators the complete filter looks like this:
 
-<pre>long shiftedFCL = shifted_filter + (long)((sample - last_sample)<<8);
-shifted_filter = shiftedFCL - (shiftedFCL>>8);
-long filtered_value = (shifted_filter+128)>>8;</pre>
+    long shiftedFCL = shifted_filter + (long)((sample - last_sample)<<8);
+    shifted_filter = shiftedFCL - (shiftedFCL>>8);
+    long filtered_value = (shifted_filter+128)>>8;
 
 Notice the additional 128 to improve rounding.
 
@@ -177,12 +170,12 @@ Example code:
 
 <span style="color: #CC6600;">long</span> shifted_filter = -10000;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>()
 {
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">begin</span>(9600);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>()
 {
   <span style="color: #7E7E7E;">// Generate a test signal</span>
   last_sample = sample;
@@ -192,9 +185,9 @@ Example code:
   shifted_filter = shiftedFCL - (shiftedFCL>>8);
   <span style="color: #CC6600;">long</span> filtered_value = (shifted_filter+128)>>8;
 
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(sample);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">println</span>(filtered_value);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(sample);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(filtered_value);
   <span style="color: #CC6600;">delay</span>(50);
 }
 </pre>
@@ -213,7 +206,7 @@ Here's an example to show that the filter works well with a more complex wavefor
 
 The floating point implementation of the classic low pass filter looks like this:
 
-<pre>filtered_value = last_filtered_value + 0.004 × (sample - last_filtered_value)</pre>
+    filtered_value = last_filtered_value + 0.004 × (sample - last_filtered_value)
 
 **Why 0.004?** All that is required is a reasonably small number to provide an adequately long time constant so there is little ripple from the 50 Hz fundamental frequency being measured. α = 0.004 gives a filter time constant of (1 - α)/α = 250 sample periods.
 
@@ -225,12 +218,12 @@ Code example:
 <span style="color: #CC6600;">double</span> filtered_value = 0;
 <span style="color: #CC6600;">double</span> last_filtered_value;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**setup**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>()
 {
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">begin</span>(9600);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">begin</span>(9600);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">**loop**</span>()
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>()
 {
   <span style="color: #7E7E7E;">// Generate a test signal</span>
   last_filtered_value = filtered_value;
@@ -239,9 +232,9 @@ Code example:
   <span style="color: #7E7E7E;">// Floating maths implementation of high pass filter takes 32-36 microseconds</span>
   filtered_value = last_filtered_value + 0.004 * (sample - last_filtered_value);    
 
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(sample);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
-  <span style="color: #CC6600;">**Serial**</span>.<span style="color: #CC6600;">println</span>(filtered_value);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(sample);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">' '</span>);
+  <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(filtered_value);
   <span style="color: #CC6600;">delay</span>(50);
 }
 
