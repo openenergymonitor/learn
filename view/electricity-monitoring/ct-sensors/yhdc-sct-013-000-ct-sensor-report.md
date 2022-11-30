@@ -1,6 +1,4 @@
-## YHDC SCT-013-000 Current Transformer
-
-***
+# YHDC SCT-013-000 Current Transformer
 
 A Report on the properties of the *YHDC* current transformer and its suitability for use with the OpenEnergyMonitor system.
 
@@ -10,13 +8,13 @@ _by Robert Wall B.Sc., C.Eng., MIEE._
 
 Datasheet: [download](files/SCT013-000_datasheet_0.pdf)
 
-#### Synopsis
+## Synopsis
 
 The Yhdc current transformer is manufactured by Beijing YaoHuadechang Electronic Co., Ltd and is widely available from many stockists as Non-invasive AC current sensor (100A max), Model SCT-013-000.
 
 It has no internal burden resistor, but a transient voltage suppressor limits the output voltage in the event of accidental disconnection from the burden. It is capable of developing sufficient voltage to fully drive a 5 V input.
 
-#### Test Rig
+## Test Rig
 
 <!----------------------------------------------------------------------------->
 
@@ -38,7 +36,7 @@ When the shape of the waveform was of interest, the primary current and CT volta
 
 Since early 2012, when samples of this CT were first tested, YHDC has made many incremental changes to the design and construction of this device, and apparently the core material has also been changed. The latest model tested (with a single TVS diode instead of firstly, discrete 22 V zener diodes, then SMT zener diodes) is distinguished by the black lead with a moulded-on plug. The unit tested is identified as CT No.6, thereby distinguishing it from the earlier versions.
 
-#### The YHDC Current Transformer
+## The YHDC Current Transformer
 
 Internal Components.
 
@@ -54,7 +52,7 @@ The ring of the plug is not connected.
 
 The purpose of the transient voltage suppressor is to limit the voltage that may appear on the plug and across the windings to a safe value should the transformer be unplugged from the burden in the transmitter/instrument, whilst the primary is energised.
 
-#### Tests
+## Tests
 
 The following tests were conducted:
 
@@ -70,7 +68,7 @@ The following tests were conducted:
 
 Some tests that were carried out on the earlier versions have not been repeated. Details of the results of those tests can be found in the earlier issue of this report, which is available for download as a PDF file [here](files/YhdcCTReportIss6.pdf).
 
-#### **1\. Ratio & Saturation.**
+## **1\. Ratio & Saturation.**
 
 The ratio was checked from 0.5 A to 250 A with a multimeter on the a.c. mA range as the burden.
 
@@ -726,7 +724,7 @@ The saturation curve (showing rms current or voltage) fails to reveal the true s
 
 ![](files/CT6-sat.svg)
 
-#### 2\. Phase error.
+## 2\. Phase error.
 
 The phase error was measured for 3 values of burden resistor. The values chosen were 22 Ω as used in the emonPi and emonTx Version 3; 120 Ω, which is the value used for the high sensitivity input of the emonTx V3; and 220 Ω, which would give a maximum current of about 10 A with the emonTx or 16 A with the emonTx Shield (with the burden resistor changed appropriately).
 
@@ -740,11 +738,11 @@ These results also show that increasing the burden resistor value in order to in
 
 (To put these numbers into perspective, the ‘discrete sample’ sketch samples a voltage and current pair every 7° approximately.)
 
-#### Conclusions
+## Conclusions
 
 The Yhdc current transformer is suitable for use with the OpenEnergy emonTx and emonPi. It can develop sufficient voltage to fully utilise the resolution of the Arduino's analogue input, and waveform distortion due to saturation at this secondary voltage is negligible for normal purposes. The maximum phase error of a little over 4° with the 22 Ω burden is insignificant (representing a power factor error of less than 0.0029 at unity power factor), but the error of nearly 8° with a 120 Ω burden could be troublesome with low current loads having a poor power factor where this input is most likely to be used.
 
-#### Appendix
+## Appendix
 
 Measurements on non-sinusoidal waveforms.
 

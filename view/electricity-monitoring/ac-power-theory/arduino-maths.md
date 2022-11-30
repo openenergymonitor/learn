@@ -72,7 +72,7 @@ root_mean_square_current = <span style="color: #CC6600;">sqrt</span>(mean_squa
 
 As RMS voltage is generally a fixed value such as: 230V (+10% -6% in the UK), it's possible to approximate apparent power without making a voltage measurement by setting the RMS voltage to the nominal supply voltage, 120 V in N. America, 230V in Europe or 240 V in the UK. 110 V and 220 V are also common values but check and use your local voltage. This is a common practice used by commercially available energy monitors.
 
-#### Power Factor
+## Power Factor
 
 The definition of power factor is:
 

@@ -1,15 +1,13 @@
-## FTDI Programmer
+# FTDI Programmer
 
----
-
-#### Purpose
+## Purpose
 
 The Programmer connects the FTDI port on an emonTx, an emonTx Shield, an emonTH, an emonPi
 Shield, or the Shield part of a disassembled emonPi, to the USB port of a computer. This enables the
 device to be programmed or to transfer serial data in each direction between the two, for calibration or
 monitoring.
 
-#### Assembly
+## Assembly
 
 As supplied by Future Technology Devices, the programmer comes as 5 parts: the printed circuit board
 with the voltage selection jumper already fitted in the 3.3 V position, one right-angle 6-way header
@@ -26,7 +24,7 @@ ensuring that it sits as low as possible on the p.c.b.
 
 [FTDI_programmer]: files/FTDI_programmer.jpg "The FTDI Programmer"
 
-#### Install the Drivers
+## Install the Drivers
 
 If your computer’s operating system is Linux, no drivers are needed.
 
@@ -39,7 +37,7 @@ installed the drivers as part of that process. If not, the appropriate part is r
 The FTDI Data Sheet for the LC231X Module has links to comprehensive information about the module
 and drivers.
 
-#### Windows 10 & MacOS
+## Windows 10 & MacOS
 
 Download the drivers from https://www.ftdichip.com/Drivers/VCP.htm.
 
@@ -52,7 +50,7 @@ Scroll down a little way to this table:
 
 [ftdi_drivers]: files/FTDI_drivers.jpg "FTDI Drivers"
 
-#### Windows 10
+## Windows 10
 
 Click on **setup executable** in the “Comments” column against “Windows”.
 
@@ -65,7 +63,7 @@ Programmer data sheet and Driver Installation Guide.]
 
 Make sure you restart the Arduino IDE after installing the drivers.
 
-#### MacOS
+## MacOS
 
 Click on the version **2.x.x** appropriate to your machine architecture and OS version. This will download
 a Disk Image (DMG) file.
@@ -78,7 +76,7 @@ Follow the sections for installing the **VCP** Drivers.
 
 Make sure you restart the Arduino IDE after installing the drivers.
 
-#### Connecting the Programmer
+## Connecting the Programmer
 
 Use a Micro USB cable to connect the programmer to your computer. Before connecting the
 programmer, ensure the jumper link on the programmer is set to the 3.3 V position for the emonTx,
@@ -91,7 +89,7 @@ On the UART connector, the GND pin is labelled on the underside.
 
 [programmer_connections]: files/programmer_connections.jpg "Programmer Connections"
 
-#### EmonTx
+## EmonTx
 
 Plug the programmer into the emonTx with the component side of the board facing up and the GND
 connection aligned with the engraving on the panel; that is, nearest to the aerial socket on the emonTx.
@@ -100,7 +98,7 @@ connection aligned with the engraving on the panel; that is, nearest to the aeri
 
 [programmer_emontx]: files/How_to_connect_the_ftdi_programmer_to_an_emonTx.jpg "Connecting the programmer to an emonTx"
 
-#### EmonTx Shield
+## EmonTx Shield
 
 Set the jumper to the 5 V position. Plug the programmer into the emonTx Shield with the component
 side of the board facing outwards and the GND connection farthest from the jack sockets.
@@ -109,7 +107,7 @@ side of the board facing outwards and the GND connection farthest from the jack 
 
 [programmer_emontx_shield]: files/How_to_connect_the_ftdi_programmer_to_an_emonTx_Shield.jpg "Connecting the programmer to an emonTx shield"
 
-#### EmonTH
+## EmonTH
 
 Plug the programmer into the emonTH with the component side of the board facing outward and the
 GND connection farthest from the corner.
@@ -118,7 +116,7 @@ GND connection farthest from the corner.
 
 [programmer_emonth]: files/How_to_connect_the_ftdi_programmer_to_an_emonTH.jpg "Connecting the programmer to an emonTH"
 
-#### EmonPi Shield
+## EmonPi Shield
 
 Plug the programmer into the emonPi Shield with the component side of the board facing the name
 “RaspberryPi Energy Monitoring”. Note that a separate 5 V USB power supply is needed to program the
@@ -128,14 +126,14 @@ Shield and for the Shield to work.
 
 [programmer_emonpi_shield]: files/How_to_connect_the_ftdi_programmer_to_an_emonPi_Shield.jpg "LEDs on the FTDI Programmer"
 
-#### M-Bus to UART Converter
+## M-Bus to UART Converter
 Plug the programmer onto the header pins with the component side and the LEDs facing the M-Bus to UART converter board.
 
 ![FTDI_MBus.webp][ftdi_mbus]
 
 [ftdi_mbus]: files/FTDI_MBus.webp "Using the FTDI programmer with the M-Bus to UART converter"
 
-#### Powering the Emon Device
+## Powering the Emon Device
 
 While loading and testing a sketch, the programmer can provide power to the emonTx and emonTH,
 using the 5 V VBUS connection.
@@ -147,12 +145,12 @@ required.
 The emonPi Shield does not have the appropriate connection on the FTDI connector, therefore the
 normal USB 5 V d.c. power must be supplied separately.
 
-#### Finding the Computer Port
+## Finding the Computer Port
 
 The general method is: list the ports, plug the programmer in, list the ports again and the new port that
 appears is that which the programmer is connected to. Select it.
 
-#### Linux, MacOS & Windows 10
+## Linux, MacOS & Windows 10
 
 In the Arduino IDE, and before connecting the programmer, check `Tools > Port` [or `Serial Port`].
 If Port is greyed out, that's OK, if not and any COM (serial) ports are listed, make a note of which ones
@@ -160,7 +158,7 @@ they are. Now connect the programmer and your module (emonTx, emonTH, etc). Go b
 menu and select `Tools` again. `[Serial] Port` should be available and showing a new port. Select that
 port. Under MacOS, the port will possibly be called `/dev/cu.SLAB_USBtoUART`.
 
-#### Assigning the Programmer’s Port (Linux Only)
+## Assigning the Programmer’s Port (Linux Only)
 
 Under Linux, it is possible to assign the port that the programmer will appear on. In the directory `/etc/
 udev/rules.d` create a file named `60-emonProgrammer.rules`. There needs to be one line per
@@ -182,7 +180,7 @@ Unfortunately, the Arduino IDE does not recognise the symlinks.
 
 There is a Forum discussion at https://community.openenergymonitor.org/t/how-to-match-a-ttyusbxdevice-to-a-usb-serial-device/8747.
 
-#### LED Activity
+## LED Activity
 
 The programmer has two LEDs that indicate activity on the Tx and Rx data lines. Unlike other types,
 there is no ‘power on’ indication.
@@ -193,7 +191,7 @@ lights to indicate data being sent from the Emon device to the computer.
 
 [programmer_led]: files/FTDI_programmer_LED.png "LEDs on the FTDI Programmer"
 
-#### Programming
+## Programming
 
 If the Emon device is not connected, or the connection is wrong, the green LED flashes 3 times, there is
 a short pause, the green LED flashes once and the familiar message “avrdude: stk500_recv():
@@ -202,7 +200,7 @@ is repeated 8 more times, then the final message and it aborts.
 If the Emon device is connected, then as communication is established there is a green followed by a red
 flash, then while the sketch is being loaded, both red and green LEDs appear to be lit continuously.
 
-#### Monitoring
+## Monitoring
 
 Each time data is sent from the computer to the device, the green LED flashes, and when the Emon
 device responds, the red LED flashes. If the sketch sends data every 10 s (say) then the red LED will

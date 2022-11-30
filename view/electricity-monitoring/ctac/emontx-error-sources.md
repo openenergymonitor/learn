@@ -1,10 +1,8 @@
-## Sources of Error in the emonTx Voltage and Current Inputs
-
-***
+# Sources of Error in the emonTx Voltage and Current Inputs
 
 There are three main sources of error when using the emonTx as a measuring instrument. The input transducers that are the first stage in converting and scaling the quantity to be measured, the input circuitry that completes the task of conditioning the signal, and the A to D converter itself.
 
-#### The Transformers
+## The Transformers
 
 1.  Current transformer.
     The current transformer operates on the magnetic field that surrounds a current-carrying conductor. There are two main parts: a ferromagnetic core that concentrates the flux, and a secondary winding that picks up the changing magnetic flux and generates an electric current. Being a ferro-magnetic material, the flux in the core is only linearly related to the magnetising force of the current at relatively low values, at high values the flux reaches a limit known as 'saturation'. The designer will normally ensure the transformer is linear within acceptable limits over its normal operating range. The standard SCT-013-000 CT is linear to within 3% over its rated current range. The data sheet gives no value for the accuracy of the turns ratio — as it is a matter of counting, we can only assume it is accurate to a very high degree, probably a few turns, or a small fraction of 1%. However, it is normal practice to adjust the turns ratio to account for the energy required to magnetise the core, so it is reasonable to assume that the overall accuracy will still be within 3%. Measurements indicate the maximum error occurs around 70% of maximum current; over a limited current range below this you can expect the linearity to be significantly better, although there will be a ratio error that can be compensated for by calibration. Mention was made of the magnetic flux and the core material: because the core is split, there might be some contamination of the faces of the core that introduces an air gap. This can lead to large and unpredictable errors, but is easily dealt with once it has been detected.
@@ -12,7 +10,7 @@ There are three main sources of error when using the emonTx as a measuring instr
 2.  Voltage transformer.
     The voltage transformer recommended for use in the UK and Europe has its no-load output voltage of 11.6 V specified to an accuracy of ±3%, not to be confused with the difference from the nominal output of 9 V which is specified at full load (both with 240 V input).
 
-#### The Input Circuitry
+## The Input Circuitry
 
 There are two main parts to the input circuitry — the scaling components and the bias components. Only the scaling components are of interest. Although the bias components can affect the measurement range, they do not contribute to any measurement errors.
 
@@ -22,7 +20,7 @@ There are two main parts to the input circuitry — the scaling components and t
 2.  Voltage input.
     The input voltage is applied to a potential divider comprising two resistors, each having a 1% tolerance,. The worst case gives an error in the division ratio of 1.83% (assuming both change in the same proportion due to temperature variations and so their ratio does not change due to temperature).
 
-#### The A-D Converter
+## The A-D Converter
 
 The A-D converter is the final stage of the input process. There are two main sources of error: accuracy of the conversion process and the accuracy of the reference voltage. Possible errors in the conversion process are described in detail in the [Atmel data sheet](https://www.atmel.com/Images/doc8161.pdf) [PDF download – 12 MB] (and in yet more detail in [Atmel Application Note AVR120: Characterization and Calibration of the ADC on an AVR](https://www.atmel.com/images/doc2559.pdf) [PDF download]) and under worst case conditions, the typical error is 4.5 LSB (counts).
 
@@ -35,7 +33,7 @@ Adding all these together, it is possible that external influences — temperatu
 
 For the emonTx V3, the AV<sub>CC</sub> supply voltage is always used as the reference (though you can change this, if you wish). When powered by batteries or USB, the regulator is a XC6206P332MR which has an output accuracy of ±1%, line regulation is 0.25%/V and load regulation is 3 mV for a swing of 100 mA and temperature is 100 ppm per °C (say 0.2%). Adding these up as above, gives around 1.75% variation in the worst case. When powered by the ac adapter, the regulator is a MCP1754, which has a 'typical' voltage tolerance of 0.4%, line regulation of 0.05%/V, load regulation over the range we use of about 0.15%, and a temperature coefficient of 22 ppm/°C. Adding these up we get slightly worse than 1% possible variation from the nominal value.
 
-#### Adding Up the Worst Case Errors…
+## Adding Up the Worst Case Errors…
 
 <table border solid>
 <thead>
@@ -82,7 +80,7 @@ For the emonTx V3, the AV<sub>CC</sub> supply voltage is always used as the refe
 
 </table>
 
-#### Summary
+## Summary
 
 For the emonTx V2, under the worst possible conditions and before calibration, a voltage or current measurement might be in error by nearly 15% and a power (real or apparent) measurement might be in error by about 30%.
 

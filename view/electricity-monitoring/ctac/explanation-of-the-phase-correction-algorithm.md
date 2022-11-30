@@ -1,6 +1,4 @@
-## Explanation of the phase correction algorithm
-
-***
+# Explanation of the phase correction algorithm
 
 The correction algorithm in the software applies a proportion (the constant) of the difference between the present sampled value and the previous sampled value to the previous sample. The result generates a new waveform, shifted in time relative to the original (it also has a small effect on the amplitude, which may need to be corrected).
 

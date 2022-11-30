@@ -1,6 +1,4 @@
-## CT Sensors - Interfacing with an Arduino
-
-***
+# CT Sensors - Interfacing with an Arduino
 
 ![](files/ctarduino.jpg)
 
@@ -16,7 +14,7 @@ This can be achieved with the following circuit which consists of two main parts
 
 ![](files/Arduino_AC_current_input_A.png)
 
-#### Calculating a Suitable Burden Resistor Size
+## Calculating a Suitable Burden Resistor Size
 
 If the CT sensor is a "current output" type such as the _YHDC SCT-013-000_, the current signal needs to be converted to a voltage signal with a burden resistor. If it is a voltage output CT you can skip this step and leave out the burden resistor, as the burden resistor is built into the CT.
 
@@ -74,7 +72,7 @@ If you're using a battery powered emonTx V2, AREF will start at 3.3 V and slowl
 
 (**Note**: this tool does not take into account maximum CT power output. Saturation and distortion will occur if the maximum output is exceeded. Nor does it take into account component tolerances, so the burden resistor value should be decreased by a few (~5) percent allow some "headroom." There is more info about component tolerances at: [ACAC Component tolerances.](../voltage-sensing/acac-component-tolerances "ACAC Component tolerances"))
 
-#### Adding a DC Bias
+## Adding a DC Bias
 
 If you were to connect one of the CT wires to ground and measure the voltage of the second wire, relative to ground, the voltage would vary from positive to negative with respect to ground. However, the Arduino analog inputs require a _positive_ voltage. By connecting the CT lead we connected to ground, to a source at half the supply voltage instead, the CT output voltage will now swing above and below 2.5 V thus remaining positive.
 
@@ -98,6 +96,6 @@ Higher resistance lowers quiescent energy consumption.
 
 We use 10 kΩ resistors for mains powered monitors. The emonTx uses 470 kΩ resistors to keep the power consumption to a minimum, as it is intended to run on batteries for several months.
 
-#### Arduino Sketch
+## Arduino Sketch
 
 To use the above circuit to measure RMS current, with an assumed fixed RMS voltage (e.g. 240V) to indicate approximate apparent power, use this Arduino sketch: [Arduino sketch - current only](https://github.com/openenergymonitor/EmonLib/blob/master/examples/current_only/current_only.ino)

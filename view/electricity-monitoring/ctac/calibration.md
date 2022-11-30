@@ -1,8 +1,6 @@
-## Calibration Procedure
+# Calibration Procedure
 
-***
-
-#### Why calibrate?
+## Why calibrate?
 
 It is impossible to manufacture anything with absolute precision. In general terms, the more precisely something is manufactured, the more expensive it is. Consider the emonTx current input as a relatively simple example. If we assume for now that we don't have any errors in the sketch, we have 3 physical factors that will each contribute to the uncertainty in the value that we read for the current. These are:
 
@@ -20,7 +18,7 @@ Calibration is a means of correcting the first of these, and if performed regula
 
 A full appraisal of the sources of error in the emonTx measurement is [here](emontx-error-sources). In the worst case, the measurement of real or apparent power could be in error by nearly 11.25% without calibration (emonTx V3.4.4). With calibration against a reasonably-priced multimeter, the accuracy should be around 6%.
 
-#### Calibrating the Internal Reference Voltage
+## Calibrating the Internal Reference Voltage
 
 This procedure is not applicable to the emonTx V3 using the default sketch. For all other variants, it is recommended if you are using batteries to power your emonTx; it is optional if you are using a mains power supply. You should do this first, before adjusting the calibration constants. If you change the calibration of the internal reference, the calibration constants will need to be corrected.
 
@@ -28,7 +26,7 @@ Looking at the table in the [Multimeters article](how-good-is-your-multimeter), 
 
 When we do this, we dramatically improve the accuracy within which the value of the internal band-gap reference is known, hence the accuracy of the battery voltage.
 
-#### Recommended Calibration Method
+## Recommended Calibration Method
 
 (This applies equally to the emonPi, the emonTx, the emonTx Shield and an Arduino board, or a custom or prototype version)
 
@@ -45,7 +43,7 @@ Points to be aware of:
 
 If you do not have a multimeter, or you are not confident that you can measure your mains safely, you can use a plug-in energy meter. In that case in the procedure that follows, you use the energy meter's readings for voltage and current instead of the multimeter's. If you don't have any form of meter, then see below for common calibration coefficients. You might then, over time, be able to make small adjustments so that the total energy recorded agrees with your energy supplier's meter.
 
-#### Procedure:
+## Procedure:
 
 If you do not have a programmer and can only edit emonhub.conf in your emonPi, skip to "Calibrating in emonhub.conf". If you wish to fully calibrate your emonTx, emonTx Shield, Arduino or something else, or you are sending data to emonCMS.org without using the emonPi, continue here.
 
@@ -97,7 +95,7 @@ The phase calibration coefficient should not normally go outside the range 0.0 �
 
 5) Check the voltage calibration again. It might need a slight adjustment if the phase angle calibration was altered significantly. Recheck the phase angle calibration.
 
-#### Calibrating in emonhub.conf
+## Calibrating in emonhub.conf
 
 You will first need to determine the error in your present measurements. If you have the appropriate measuring instruments, you will be able to measure voltage and power to establish the correct values. If you do not have these, then you might be able to estimate the error by comparing against your energy supplier's meter readings, for example.
 
@@ -105,10 +103,7 @@ You can adjust most of the calibration by editing the file "emonhub.conf" in you
 
 This opens an editor where you can edit the file. Scroll down a little way until you see something like this:
 
-<pre>
-
-<code>
-
+```
 #######################################################################
 #######################          Nodes          #######################
 #######################################################################
@@ -124,35 +119,41 @@ This opens an editor where you can edit the file. Scroll down a little way until
         datacodes = h, h, h, h, h, h, h, h, h, h, L
         scales = 1,1,1,0.01,0.1,0.1,0.1,0.1,0.1,0.1,1
         units = W,W,W,V,C,C,C,C,C,C,p
-</code></pre>
-<p>
-The block beginning </p>
-<pre><code>
+```
+
+The block beginning
+
+```
 [[5]]
     nodename = emonpi
-</code></pre>
-<p>
-refers to the emonPi. Further down the page are similar blocks for emonTx's (various sketches), emonTH etc.</p>
-<p>
-Two lines here are of interest. The line beginning "names =" lists the names of the data items being received by emonHub, and the line beginning "scales =" lists scaling factors for the corresponding numbers. The original purpose of "scales =" was to be able to restore the original value when, for example, the voltage was multiplied at source by 100 to send the value as an integer whilst retaining a resolution of 0.01 V. In the example above, "power1", "power2" and "power1pluspower2" are multiplied by 1 (the values are in watts, so no pre-scaling has been applied), but "vrms" is multiplied by 0.01 </p>
-<p>However, whilst “scales =” can be used to adjust the amplitude calibration, you cannot adjust any of the values in emonHub to correct the phase error.</p>
-<p>Therefore, if for example you determine that power1 is reading 1% low and the voltage is reading 1.2% low, you change the 1st and 4th values in the line "scales =" so that it reads:</p>
-<pre><code>
-        scales = 1.01,1,1,0.01012,0.1,0.1,0.1,0.1,0.1,0.1,1
-</code></pre>
-<p>
-Important note: The voltage and the three power values are calculated before being sent to emonHub, therefore <em>there is no interaction between any of the scale factors</em>. This is also true for the emonTx.</p>
+```
+
+refers to the emonPi. Further down the page are similar blocks for emonTx's (various sketches), emonTH etc.
+
+Two lines here are of interest. The line beginning "names =" lists the names of the data items being received by emonHub, and the line beginning "scales =" lists scaling factors for the corresponding numbers. The original purpose of "scales =" was to be able to restore the original value when, for example, the voltage was multiplied at source by 100 to send the value as an integer whilst retaining a resolution of 0.01 V. In the example above, "power1", "power2" and "power1pluspower2" are multiplied by 1 (the values are in watts, so no pre-scaling has been applied), but "vrms" is multiplied by 0.01.
+
+However, whilst “scales =” can be used to adjust the amplitude calibration, you cannot adjust any of the values in emonHub to correct the phase error.
+
+Therefore, if for example you determine that power1 is reading 1% low and the voltage is reading 1.2% low, you change the 1st and 4th values in the line "scales =" so that it reads:
+
+```
+scales = 1.01,1,1,0.01012,0.1,0.1,0.1,0.1,0.1,0.1,1
+```
+
+Important note: The voltage and the three power values are calculated before being sent to emonHub, therefore <em>there is no interaction between any of the scale factors</em>. This is also true for the emonTx.
 
 
-#### Theoretical CT Sensor Calibration
+## Theoretical CT Sensor Calibration
 
-<pre>CT Ratio / Burden resistance = (100A / 0.05A) / 18 Ohms = 111.1 (for the emonTx V2)</pre>
+```
+CT Ratio / Burden resistance = (100A / 0.05A) / 18 Ohms = 111.1 (for the emonTx V2)
 
-<pre>CT Ratio / Burden resistance = (100A / 0.05A) / 22 Ohms = 90.9 (for the emonTx V3 CT1-3)</pre>
+CT Ratio / Burden resistance = (100A / 0.05A) / 22 Ohms = 90.9 (for the emonTx V3 CT1-3)
 
-<pre>CT Ratio / Burden resistance = (100A / 0.05A) / 120 Ohms = 16.67 (for the emonTx V3 CT4)
+CT Ratio / Burden resistance = (100A / 0.05A) / 120 Ohms = 16.67 (for the emonTx V3 CT4)
 
-CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx Shield)</pre>
+CT Ratio / Burden resistance = (100A / 0.05A) / 33 Ohms = 60.6 (for the emonTx Shield)
+```
 
 **In practice**
 
@@ -230,7 +231,7 @@ The CT has a stated accuracy of ±3%. The CT burden resistor is a 1% tolerance c
 
 </div>
 
-#### Theoretical AC-AC Adapter calibration
+## Theoretical AC-AC Adapter calibration
 
 **Ideal Power AC-AC Adapters**
 
@@ -249,7 +250,7 @@ Datasheet: [Ideal Power 77DA-10-09](http://files.openenergymonitor.org/77DA-10-
 
 **Note:** The values are derived from manufacturer's data and are subject to normal manufacturing tolerances. The coefficient might be in error by up to ±6% (77DA-10-09 & 77DE-06-09) or ±4% (77DB-06-09) when resistor tolerances are added.
 
-### Other AC-AC Adapters
+## Other AC-AC Adapters
 
 | Ac-AC Adapter | Plug | Voltage Calibration Coefficient |
 | ---- | ---- | ---- |

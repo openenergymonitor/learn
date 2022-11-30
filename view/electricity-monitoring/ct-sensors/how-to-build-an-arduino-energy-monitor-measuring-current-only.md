@@ -1,6 +1,4 @@
-## How to Build an Arduino Energy Monitor - Measuring Mains Current Only
-
-***
+# How to Build an Arduino Energy Monitor - Measuring Mains Current Only
 
 ![](files/currentOnly_bb.png)
 
@@ -8,7 +6,7 @@ This guide details how to build a simple energy monitor on a breadboard that can
 
 Here's how to build it:
 
-#### Step 1: Gather Components
+## Step 1: Gather Components
 
 **You will need:**
 
@@ -25,7 +23,7 @@ Here's how to build it:
 
 A breadboard and some single core wire.
 
-#### Step 2: Assemble the Electronics
+## Step 2: Assemble the Electronics
 
 The monitor consists of the current sensor (which produces a signal proportional to the mains current) and the sensor electronics that convert the signal into a form the Arduino can use.
 
@@ -36,7 +34,7 @@ For a circuit diagram and detailed discussion of sensors and electronics see:
 
 **Assemble the components per the diagram above.**
 
-#### Step 3: Upload the Arduino Sketch
+## Step 3: Upload the Arduino Sketch
 
 The sketch is the software that runs on the Arduino. The Arduino converts the raw data from its analog input into human readable values, then sends them to the serial port monitor.
 

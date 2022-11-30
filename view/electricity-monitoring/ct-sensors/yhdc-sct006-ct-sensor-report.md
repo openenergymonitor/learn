@@ -1,6 +1,4 @@
-## YHDC SCT006 Current Transformer
-
-***
+# YHDC SCT006 Current Transformer
 
 A Report on the properties of the *YHDC SCT006* current transformer and its suitability for use with the OpenEnergyMonitor system.
 
@@ -13,12 +11,12 @@ _by Robert Wall B.Sc., C.Eng., MIEE._
 * [Download report (issue 1) as PDF](files/YhdcSCT006CTReport_issue1.pdf) <br/>
 * [Download YHDC SCT006 datasheet](files/SCT006.pdf)
 
-#### Synopsis
+## Synopsis
 
 The YHDC SCT006 current transformer is manufactured by Beijing YaoHuadechang Electronic Co., Ltd.
 It has no internal burden resistor, but a transient suppressor diode limits the output voltage in the event of accidental disconnection from the burden.
 
-#### Test Rig
+## Test Rig
 
 ![](files/006testrig.png)
 
@@ -30,13 +28,13 @@ The primary current was monitored by the 0.33 Ω shunt. The potentiometers, curr
 
 When the shape of the waveform was of interest, the primary current and CT voltage waveform were recorded using a software oscilloscope (Soundcard Oscilloscope from http://www.zeitnitz.de/Christian/scope_en) and the recorded waveform imported into a spreadsheet for analysis.
 
-#### The YHDC Current Transformer
+## The YHDC Current Transformer
 
-##### Internal Components
+### Internal Components
 
 It is not easy to examine the internal components without damaging the c.t. It is evident that a transient suppressor diode or similar device is connected across the secondary winding, as the output is clipped at about 15.8 V p-p.
 
-##### Circuit Diagram
+### Circuit Diagram
  
 ![](files/006circuitdiagram.png)
  
@@ -44,18 +42,18 @@ The current arrow represents current flowing in the direction of the arrow mould
 
 The ring of the plug is not connected.
 
-#### Tests
+## Tests
 
 The following tests were conducted:
 
-1. [Check the ratio](#test1)
-2. [Establish the useful range](#test2)
-3. [Establish the phase error](#test3)
-4. [Check operation with no external burden](#test4)
-5. [Establish the effect of an air gap](#test5)
-6. [Establish the effect of an adjacent current-carrying conductor](#test6)
+1. Check the ratio
+2. Establish the useful range
+3. Establish the phase error
+4. Check operation with no external burden
+5. Establish the effect of an air gap
+6. Establish the effect of an adjacent current-carrying conductor
 
-<h5 id="test1">1. Ratio & saturation</h5>
+### 1. Ratio & saturation
 
 Two samples of the CT were checked. The currents were measured by the voltage dropped by the meter shunt in the primary circuit, and by the burden voltage in the secondary circuit. Both were calibrated against a true rms digital multimeter. For the ‘upper’ range of currents, so as to satisfactorily illustrate the effect of saturation, the primary current was set in steps of 1 A from 10 A up to 25 A. For the ‘lower’ range of currents expected of smaller appliances, the primary current was set following approximately exponential steps from 20 mA to 10 A. Burden values of 22 Ω, representing the emonTx and emonPi, and 5 Ω (the manufacturer’s specified maximum) were used. The specified minimum current is 10 mA, but measurements below 20 mA with the 22 Ω burden, and below 50 mA with the 5 Ω burden, were unreliable. It is worth noting that these represent voltages of 0.55 mV or 0.3125 mV respectively at the input of the ADC; when one ADC step is 3.22 mV.
 
@@ -67,17 +65,17 @@ The ratio (or linearity) accuracy is within acceptable limits up to 17 A, when u
 
 ![](files/test1c.png)
 
-<h5 id="test2">2. Useful range & effect of burden resistance</h5>
+### 2. Useful range & effect of burden resistance
 
 The maximum burden resistance specified by the manufacturer is just 5 Ω. The effect of increasing the burden resistance is to overload the c.t, resulting in early saturation of the core and, inevitably, distortion of the waveform. Distortion is becoming visible at little more than 6 A with a 120 Ω burden, and at 15 A with a 22 Ω burden. With a 5 Ω burden, both c.t’s are good to the specified maximum current of 20 A.
 
-<h5 id="test3">3. Phase error</h5>
+### 3. Phase error
 
 The phase error was measured for 2 values of burden resistor. The values chosen were 22 Ω, the value used in the emonTx V3 & emonPi, and 120 Ω, which is the value used for the high sensitivity input of the emonTx V3. Phase errors with the 5 Ω burden were not checked, as this value is not realistically usable with the emonTx or emonPi. The phase error when used with the 100 A input is acceptable up to 16 A, where it starts to increase dramatically. When used with the high sensitivity input, the error is on the limit of acceptability over most of the working range of currents, and its use here for real power measurement is strongly discouraged.
 
 ![](files/test3a.png)
 
-<h5 id="test4">4. Operation without an external burden</h5>
+### 4. Operation without an external burden
 
 When operated without an external burden, the core quickly saturates. The protective transient suppressor diode conducts at about 16 V peak-peak and this corresponds to a primary current of about 2 A. At this current, the core is clearly being driven well into saturation, and the errors are large.
 
@@ -106,11 +104,11 @@ figcaption {
   </figcaption>
 </figure>
 
-<h5 id="test5">5. Effect of an air gap</h5>
+### 5. Effect of an air gap
 
 Introducing an air gap of 0.04 mm in one side of the core caused the secondary current to fall by about 15%, and the phase error to increase to around 30°.
 
-<h5 id="test6">6. Effect of an adjacent current-carrying conductor</h5>
+### 6. Effect of an adjacent current-carrying conductor
 
 To measure this, a large coil of 20 turns carrying 5 A, oriented so as to simulate a parallel conductor carrying 100 A, was used. The current transformer under test was outside the coil. The equivalent current is the current that the CT would have measured in a conductor passing through the CT.
 
@@ -121,7 +119,7 @@ To measure this, a large coil of 20 turns carrying 5 A, oriented so as to simula
 | 50 mm    | 3.3 mA             |
 | 100 mm   | 0.4 mA             |
 
-#### Conclusions
+## Conclusions
 
 The YHDC SCT006 current transformer is suitable in limited circumstances for use with the emonTx and emonPi.
 

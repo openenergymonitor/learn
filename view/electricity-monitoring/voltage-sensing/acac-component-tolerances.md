@@ -1,4 +1,4 @@
-## How to take component tolerances into account
+# How to take component tolerances into account
 
 When designing any circuit, it is necessary to take account of the unavoidable variations that arise as part of the manufacturing process which lead to the value of some characteristic of the component - the resistance of a resistor or the voltage of a regulator - differing from the desired value.
 

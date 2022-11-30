@@ -1,6 +1,4 @@
-## How to build an Arduino energy monitor - measuring mains voltage and current
-
-***
+# How to build an Arduino energy monitor - measuring mains voltage and current
 
 Including voltage measurement via AC-AC voltage adapter and current measurement via a CT sensor.
 
@@ -10,7 +8,7 @@ This guide details how to build a simple electricity energy monitor on that can 
 
 The energy monitor can calculate real power, apparent power, power factor, rms voltage, rms current. All the calculations are done in the digital domain on an Arduino.
 
-#### Step One – Gather Components
+## Step One – Gather Components
 
 **You will need:**
 
@@ -35,7 +33,7 @@ The energy monitor can calculate real power, apparent power, power factor, rms v
 
 1x A breadboard and some single core wire.
 
-#### Step Two – Assemble the Electronics
+## Step Two – Assemble the Electronics
 
 The electronics consist of the sensors (which produce signals proportional to the mains voltage and current) and the sensor electronics that convert these signals into a form the Arduino is happy with.
 
@@ -47,7 +45,7 @@ For a circuit diagram and detailed discussion of sensors and electronics see:
 
 **Assemble the components as in the diagram above.**
 
-#### Step Three – Upload the Arduino Sketch
+## Step Three – Upload the Arduino Sketch
 
 The Arduino sketch is the piece of software that runs on the Arduino. The Arduino converts the raw data from its analog input into a nice useful values and then outputs them to serial.
 

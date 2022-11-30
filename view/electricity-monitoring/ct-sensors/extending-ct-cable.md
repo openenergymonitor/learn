@@ -1,6 +1,4 @@
-## Extending the Current Transformer Cable
-
-***
+# Extending the Current Transformer Cable
 
 In some installations, it might be necessary to extend the cable from a current transformer (CT). Often, this is because you want to measure real power, but there is no power socket at, or close, to the only place where you can mount the CT. If this is the case, your only option may be to extend the CT cable.
 
@@ -8,14 +6,14 @@ The output from a true current transformer is a current. The CT will generate wh
 
 There should be no real limit to the maximum length of the cable that you can have. Voltage drop is largely irrelevant, and the main limiting factor is likely to be interference from outside sources.
 
-### Materials
+## Materials
 
 - A length of twin screened “microphone” cable.
 - A 3-pole “stereo” 3.5 mm jack plug.
 - A length of wire to earth the cable screen.
 - Sleeving to insulate & protect the joints.
 
-### Choice of cable
+## Choice of cable
 
 You should choose a cable designed for microphones. This will have twin twisted cores with an overall braided screen. A ‘braided’ screen is better than ‘lapped’. The more tightly the screen is woven, the better it will be at keeping out interference.
 
@@ -27,7 +25,7 @@ Provided that your CT secondary current is small, less than a few hundred millia
 
 If you have a CT with a 1 A or 5 A secondary, and the burden resistor is at the other end of the cable to the CT, then the cable size is important, and you must use a suitably rated cable.
 
-### Wiring
+## Wiring
 
 Remove the 3.5 mm jack plug from your CT (If it is moulded on, you must cut it off. If you do not wish to cut the plug off, obtain an “in-line” socket).
 Install the cable and prepare the ends.
@@ -44,17 +42,17 @@ At the emonTx/emonPi end, connect the two cores of the extension cable to the pl
 
 ![Extending CT leads drawing Extending CT leads](files/extending-ct-leads.png)
 
-### Can I use a ready-made headphone extension lead?
+## Can I use a ready-made headphone extension lead?
 
 This is not ideal. If it is unscreened, then maybe. But it will be liable to pick up interference from adjacent wiring etc. If it is screened, then it is definitely not a good idea. The screen will be connected to the plug sleeve, which is in fact the input connection. So far from screening the wanted signal, the screen can easily make things worse.
 
-### Can I use network cable?
+## Can I use network cable?
 
 If you have a screened cable (FTP/STP or S/UTP, CAT5 or CAT6), then this should be OK, and can be an attractive solution if you have several CT’s at the same location. An unscreened cable is not ideal, and will be more liable to pick up unwanted interference from adjacent wiring etc.
 
 Bear in mind that the cores of the network cable might not be stranded, which would make them liable to break more easily than a stranded conductor.
 
-### I have several CT’s in one place. Can I use a multi-core cable?
+## I have several CT’s in one place. Can I use a multi-core cable?
 
 Yes, but ideally you want a telephony-type cable where pairs of wires are twisted together. Use one pair for each CT.
 
@@ -64,7 +62,7 @@ If you must use a multicore cable that does not have twisted pairs, try to pick 
 
 You should try not to use one common connection for one side of all the CT’s. If it is impossible to avoid a common connection, you must connect the common connection to the ‘earthy’ side of the jack plug at the emonTx or emonPi, which is the plug tip, not the sleeve as you would expect. (Check the circuit diagram for any other device.)
 
-### What if I see a significant power when there should be none?
+## What if I see a significant power when there should be none?
 
 You probably have noise (interference) picked up because the extension is acting as an aerial. Take a careful look at the cable route. Does it run close to another mains cable? If it is, is it possible to route it some distance away? The further you can, the better. 
 
@@ -72,7 +70,7 @@ If that doesn’t help, then if possible try earthing the other end instead.
 
 Also, try earthing the case of the emonTx or emonPi. Check first, the metal case is normally isolated, with no connection to either the d.c. power input or the a.c. voltage sampling input. If there is a connection between the case and any part of the circuity inside (and the easy way to check is to test for continuity between one of the screw heads and the antenna socket body) then there is a possible risk of damage and you should not earth the case. Earthing the case has in one installation significantly reduced the falsely indicated power.
 
-### Theory
+## Theory
 
 There are two routes by which interference can get into the cable, and so be measured along with the wanted signal – as a magnetic field or as an electric field.
 

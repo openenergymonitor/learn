@@ -1,14 +1,12 @@
-## Installation and Calibration
+# Installation and Calibration
 
-***
-
-#### Installation
+## Installation
 
 This section discusses the voltage sensor (alternatively called Potential Transformer, Voltage Transformer, AC Adaptor), and the non-invasive current sensor (alternatively called Current Transformer, CT).
 
 For installations with more than one feed e.g. a 3-phase installation or a photo-voltaic installation, a current sensor is required for each (i.e. a total of 3 for a 3-phase supply without PV, or two for a domestic single phase supply and PV installation).
 
-#### 1\. Voltage Sensor
+### 1\. Voltage Sensor
 
 **(a)** Single phase supply with or without PV:
 Using the Mascot AC Adaptor: A BS.1363 (13 A) socket outlet is required within approximately 1 m of the electricity supply meter or distribution board / consumer unit. Assemble the DC Power Plug so the inner connector goes to the side of the reversible 2-pin plug marked “-”.
@@ -19,7 +17,7 @@ Using the Ideal AC Adaptor: A BS.1363 (13 A) socket outlet is required within ap
 
 **(b)** Three phase supply: The recommended method is to monitor one phase as above, then add software in the sketch to derive an approximation for the voltages of the other two phases. Provided the supply is reasonably solid – it has a high fault level and a low impedance - is balanced and the loads are reasonably balanced, this should be adequate for monitoring purposes (but clearly, it will not be accurate enough for billing).
 
-#### 2\. Non-Invasive Current Sensor
+### 2\. Non-Invasive Current Sensor
 
 Using the YHDC SCT-013-000 split core clip-on current transformer:
 
@@ -29,7 +27,7 @@ Using the YHDC SCT-013-000 split core clip-on current transformer:
 
 **(c)** Single phase supply with PV: Plug the leads from the CTs into the EmonTx then clip one CT around the line cable coming out of the mains supply meter (red or brown insulation might be visible where the cable enters the meter terminal block, and it is normally the outside one of four coming out of the meter), the face of the CT marked “SCT-013-000” should point towards the meter. This will ensure that imported power is shown as positive. Similarly, locate the line feed from the PV inverter where it feeds into the system (possibly into the consumer unit) and clip the CT on. The face of the CT marked “SCT-013-000” should point towards the PV inverter. This will ensure that generated power is shown as positive, and total consumption will be the algebraic sum of the two powers.
 
-#### Accuracy
+### Accuracy
 
 One major factor that can significantly impair the accuracy of a split-core CT is misalignment of the cores, which may introduce an air gap. Even a very small gap might cause the output to drop by 10% or more and is accompanied by a huge phase shift, so it is important to ensure that the faces of the core are clean and properly aligned when the CT is installed.
 
@@ -37,15 +35,13 @@ For example, introducing a thin piece of paper (0.004” - 0.1 mm thick) into on
 
 The core of the YHDC CT is ferrite, a brittle material, so care should also be taken not to chip or break the core.
 
-<br>
+---
 
 ## Calibration Theory
 
-***
-
 (These notes were written with the emonTx V2 in mind. If you have an emonTx V3, the theory remains applicable but changed component values mean the actual numbers may be different.)
 
-#### Voltage Sensor – Calibration Theory
+### Voltage Sensor – Calibration Theory
 
 We are measuring the mains voltage. In order to do that, it is first transformed down to a safe voltage, then divided further before being applied to one of the analog inputs of the microcontroller.
 
@@ -87,7 +83,7 @@ voltage constant = alternating mains voltage ÷ alternating voltage at ADC input
 
 The calibration constant is passed into the calculation as the second parameter to the method EnergyMonitor::voltage( ) in the file EmonLib.cpp. It is hard-coded as a constant in the call in the sketch.
 
-#### Voltage Sensor – Practice
+### Voltage Sensor – Practice
 
 In practice, the constant we calculated can be adjusted to take account of manufacturing tolerances in the components – the transformer and the resistors.
 
@@ -97,7 +93,7 @@ The resistors supplied in the kit have a tolerance of 5%, therefore these might 
 
 Therefore, the expected range for the voltage constant is 182 – 287.6
 
-#### Current Sensor – Calibration Theory
+### Current Sensor – Calibration Theory
 
 The supplied current is measured using a current transformer, and the resulting (small) current converted into a voltage by the burden resistor. This voltage is measured by the analog input of the microcontroller.
 
@@ -107,18 +103,21 @@ The input voltage to the microcontroller has a constant bias added to it, but th
 
 Thus the number seen by the processor is:
 
-<pre>
-counts = (input pin voltage ÷ 3.3) × 1024</pre>
+```
+counts = (input pin voltage ÷ 3.3) × 1024
+```
 
 where
 
-<pre>
-input pin voltage = secondary current × burden resistance</pre>
+```
+input pin voltage = secondary current × burden resistance
+```
 
 and
 
-<pre>
-secondary current = primary current ÷ transformer ratio</pre>
+```
+secondary current = primary current ÷ transformer ratio
+```
 
 The CT burden resistor is 18 Ω in the emonTx V2, or 22 Ω  and 120 Ω in the emonTx V3\. The ratio of the current transformer is normally specified by the manufacturer as the ratio of maximum primary current to secondary current, e.g. 100 A : 50 mA.
 
@@ -129,13 +128,15 @@ I<sub>supply</sub> = count × a constant</pre>
 
 where
 
-<pre>
-a constant = current constant × (3.3 ÷ 1024)</pre>
+```
+a constant = current constant × (3.3 ÷ 1024)
+```
 
 and, for the emonTx V2
 
-<pre>
-current constant = (100 ÷ 0.050) ÷ 18 = 111.11</pre>
+```
+current constant = (100 ÷ 0.050) ÷ 18 = 111.11
+```
 
 Or to put it in words, the current constant is the value of current you want to read when 1 V is produced across the burden resistor.
 
@@ -145,22 +146,25 @@ The calibration constant is passed into the calculation as the second parameter 
 
 Look at the last line of the theory where the current constant is derived:
 
-<pre>
-current constant = (100 ÷ 0.050) ÷ 18 = 111.11</pre>
+```
+current constant = (100 ÷ 0.050) ÷ 18 = 111.11
+```
 
 "100" is the current transformer primary current, and "0.050 × 18" is in fact the voltage across the burden resistor for the standard CT and burden at that current, so to arrive at your current constant you simply substitute your transformer's rated current in place of "100" and the voltage it gives in place of "0.050 × 18". For example, the YHDC SCT-013-030 gives 1 V at a rated current of 30 A, so for this transformer you have:
 
-<pre>current constant = 30 ÷ 1 = 30</pre>
+```
+current constant = 30 ÷ 1 = 30
+```
 
 Or to put it in words, the current constant is the value of current you want to read when 1 V is produced at the analogue input.
 
-#### Current Sensor – Practice
+### Current Sensor – Practice
 
 The CT output is accurate to 1%. The CT burden resistor is a 1% tolerance component. However, the internal 1.1 V reference can be in error by up to 9%, so the total error should less than 11%.  (This is not as bad as it might appear, the reference is very stable even though the actual value is imprecise, so once calibrated the error due to temperature variation and other factors should be less than 2%.)
 
 Therefore, the expected range for the current constant is 98.77 – 123.32
 
-#### Phase Angle (Power Factor) Constant
+### Phase Angle (Power Factor) Constant
 
 Checks of the phase response of the current and voltage sensors reveal that both have a phase error that varies in magnitude. In the case of the voltage sensor, it increases approximately linearly with increasing voltage; in the case of the current sensor, it falls rapidly at first with increasing current, then reaches a minimum before rising again as saturation sets in.
 

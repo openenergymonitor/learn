@@ -1,6 +1,4 @@
-## Sending Data Between Nodes Using the JeeLib “Classic” Format
-
-***
+# Sending Data Between Nodes Using the JeeLib “Classic” Format
 
 The data is sent by radio between the sensor nodes (e.g emonTX, emonTH), the base station (emonPi / emonBase - RFM69Pi). This page describes the way the data is assembled and addressed in order to pass values between units. The same approach could be used when integrating other units with the OpenEnergyMonitor system.
 
@@ -8,7 +6,7 @@ The Arduino & RFM12/69 based OpenEnergyMonitor modules are programmed with appli
 
 RF data is transmitted using the [JeeLib RF Packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/).
 
-#### Configuring & Addressing
+## Configuring & Addressing
 
 All the devices that communicate with each other must use the same frequency. For the Arduino-based devices, this is specified in the software and must be one of the pre-defined constants. It must match the frequency of the hardware. (You should check which frequencies are permitted in your locality. It is possible to operate at the wrong frequency, e.g. 868 MHz hardware at 433 MHz, but the range will be very reduced).
 
@@ -18,7 +16,7 @@ Within each network group, there can be up to 31 Node IDs. Nodes 0 and 31 are re
 
 There is another limitation: As all the devices in all the network groups all use the same frequency, only one transmitter may be active at any time, otherwise, data loss is likely to occur. Data packet transmissions are small, collisions are unlikely to occur.
 
-#### Setting up the RF link
+## Setting up the RF link
 
 To set up the link, we use the function
 
@@ -28,7 +26,7 @@ The `nodeID` is set for each device, and transmitted as part of each message, th
 The `freq` (frequency) must be one of the pre-defined constants mentioned above and listed in the comments in the example sketches.
 The `networkGroup` must be the same for all devices in the system — we have standardised on 210.
 
-#### Assembling the data
+## Assembling the data
 
 The library accepts a variable length data packet. Maximum length is 66 bytes. For data sent by the emonTx, the most convenient way to organise this is to use the 'structure' feature of the C language. The packet set up declaration looks like this:
 
@@ -38,7 +36,7 @@ The library accepts a variable length data packet. Maximum length is 66 bytes. F
 
 This statement creates a new type of variable called `PayloadTX`, and is made up of 4 integers called `power1`, `power2`, `power3` and `Vrms`.
 
-#### Scaling the data
+## Scaling the data
 
 To keep packet size down and make it easier to interpret the data in emonCMS, we have standardised on signed integer data. You must limit maximum packet size to 66 bytes. This introduces a restriction, but there is an easy work around. If you need to transmit a floating point number, (say the temperature, to a tenth of a degree), then it is multiplied by 10 or 100 first, and at the receiving end divided by 10 or 100 to restore the value. Power is in Watts, so can be sent unchanged, but divided by 1000 if display in kW is desired.
 (If you are not using emonCMS, you can put what you like into the structure, but you must still limit the maximum size to 66 bytes. An _integer_ or _word_ is 2 bytes, a _long_, _float_ or _double_ is 4 bytes, a _char_ or _byte_ is one byte. The Arduino IDE Help Reference gives the sizes of all the variable types).
@@ -80,11 +78,11 @@ Or in `emonHub.conf`, assuming the emonTx is Node 6:
        datacode = h
        scales = 0.01,1,1,1,1
        units = V,W,W,W,W
-```       
+```
 
 In this case, power1 will again come out in emonCMS in first place at the top of the Inputs list and called Vrms, but multiplied by 0.01 and with the unit of volts.
 
-#### Accessing the data
+## Accessing the data
 
 The data in the structure is accessed with the name of the structure and the name of the member joined by the familiar dot operator, e.g. emontx.power1 You assign a value like this:
 
@@ -94,11 +92,11 @@ and extract it:
 
     totalPower1 +=  emontx.power1;
 
-#### Sending the data
+## Sending the data
 
 When the members of the data packet structure have had values assigned to them, a simple call to the function `send_rf_data( )`, which already knows what data to send, suffices. (This is the how it’s done in the emonTx – it is slightly different for the base sending the time to emonGLCD).
 
-#### Receiving the data
+## Receiving the data
 
 Receiving the data is somewhat more complicated. Here is the part of the standard emonGLCD code where the data is actually received:
 
@@ -152,7 +150,7 @@ And so the data becomes available in the format it was transmitted.
 **A note about the ‘multinode’ base sketches.**
 These sketches listen for all Node_IDs, assume the data is always a sequence of integers, and forward it to emonCMS prefixed with the node number it originated from, without attempting to interpret it. The assignment to the true variables is done by you, the user, when you configure emonCMS.
 
-#### SUMMARY
+## SUMMARY
 
 *   All units must use the same *frequency*
 *   All units must use the same *networkGroup* number
@@ -162,7 +160,7 @@ These sketches listen for all Node_IDs, assume the data is always a sequence of 
 
 For a simple example of Arduino > Arduino (or emonTx to emonBase) RFM12B transmission sketch see: [https://github.com/openenergymonitor/RFM12B_Simple](https://github.com/openenergymonitor/RFM12B_Simple)
 
-##### Appendix 1 - The RFMPi / RFM69Pi Adapter board
+### Appendix 1 - The RFMPi / RFM69Pi Adapter board
 
 RFMPi / RFM69Pi board adds wireless (433 or 868MHz) RF transceiver capability to the Raspberry Pi. The RFMPi has an on-board ATMega328 microcontroller pre-loaded with firmware to receive and pass the radio payload of the RFM packets from JeeNode and OpenEnergyMonitor modules onto Raspberry Pi’s internal serial UART port. The correct frequency board needs to be purchased to match the rest of your system.
 
@@ -170,25 +168,25 @@ EmonHub then reads the byte data string generated by the RFMPi adapter board fro
 
 See technical Wiki documentation page for the RFM12Pi / RFM69Pi [https://wiki.openenergymonitor.org](https://wiki.openenergymonitor.org)
 
-##### Appendix 2 - Standard Node IDs
+### Appendix 2 - Standard Node IDs
 
 The recommended standard for Node IDs is:
 
-| ID | Node Type |
-| ------ | -------------- |
+| ID      | Node Type      |
+| ------- | -------------- |
 | 0	      | Special allocation in JeeLib RFM12 driver reserved for OOK use
-| 1 – 5     | Base Station & logging nodes
-| 6           | EmonTx Shield
-| 7 – 10   | EmonTx (single-phase)
+| 1 – 5   | Base Station & logging nodes
+| 6       | EmonTx Shield
+| 7 – 10  | EmonTx (single-phase)
 | 11 – 14 | EmonTx (3-phase)
 | 15 – 16 | EmonTx (CM)
-| 17 – 18 | unallocated
+| 17 – 18 | EmonTx4
 | 19 – 26 | EmonTH
 | 27 – 30 | unallocated
-| 31	      | Special allocation in JeeLib RFM12 driver. Node31 can communicate with nodes on any network group
+| 31	    | Special allocation in JeeLib RFM12 driver. Node31 can communicate with nodes on any network group
 
 There is no intention to enforce this as a standard. If you choose your own Node IDs you will need to ensure that you change the example sketches to match your numbering scheme.
 
-##### Extending Range
+### Extending Range
 
 A node can be setup as a packet forwarder to extend the range of a network, see JeeLabs post: [http://jeelabs.org/2011/01/12/relaying-rf12-packets/](http://jeelabs.org/2011/01/12/relaying-rf12-packets/)

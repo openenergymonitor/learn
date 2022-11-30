@@ -1,8 +1,8 @@
-## DS18B20 - Serial Number and Search Algorithm
+# DS18B20 - Serial Number and Search Algorithm
 
 Some users of the DS18B20 sensor have thought that that the functions that detect the sensors do so in random order. In fact, this is not the case and the Search ROM function is deterministic and always returns the devices found in the same order. The algorithm is explained in the [Maxim iButton® Book of Standards](http://www.maxim-ic.com/ibuttonbook). The DallasTemperature Library claims to use the same algorithm, and this indeed appears to be the case. The reason people think the order is random is because the serial numbers are sorted in an order that is not obvious to us. The order is revealed only after we manipulate the numbers.
 
-#### Cracking the code.
+## Cracking the code.
 
 All the information necessary is contained in two Maxim publications, the DS18B20 Data Sheet and the previously mentioned iButton book, as well as the DallasTemperature software library.
 

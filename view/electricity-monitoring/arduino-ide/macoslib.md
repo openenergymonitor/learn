@@ -1,7 +1,6 @@
-## Installing the Arduino Libraries – macOS
-<small>by Jon Murphy</small>
+# Installing the Arduino Libraries – macOS
 
-***
+<small>by Jon Murphy</small>
 
 Before you install the libraries, it would be a good idea to think about how you will organise your Emon data. When
 you installed the Arduino IDE, it created a folder `Arduino` and beneath it a folder `libraries` in your `Home`
@@ -42,7 +41,7 @@ will have to move or copy these libraries. For that reason it is not recommended
 
 </div>
 
-#### Downloading the Libraries
+## Downloading the Libraries
 
 Many libraries are required, this is the full list:
 
@@ -77,13 +76,13 @@ the right-hand side. Click `Clone or Download` followed by `Download ZIP`:
 
 ![windows-lib-2](files/windowslib2.png)
 
-#### Installing the Libraries
+## Installing the Libraries
 
 When you have downloaded all the files, go to your download location and from there you need to extract the
 contents of each Zip file in turn: Double-click on the zip file, a window will open showing the contents. Extract that
 folder into the `libraries` folder.
 
-#### Renaming the Libraries
+## Renaming the Libraries
 
 The Arduino IDE does not allow hyphens '-' in the library folder names.
 
@@ -95,7 +94,7 @@ Therefore you must rename the folders to the names below. You should end up with
 
 **Note**: If you wish, you can now delete the zip files that you downloaded.
 
-####Check the Libraries
+## Check the Libraries
 
 If your Arduino IDE is running, close all open windows and shut it down completely. Start (or restart) the IDE. First
 you must tell the IDE where your `Sketchbook` is located. Click on `File > Preferences` and at the top for `Sketchbook

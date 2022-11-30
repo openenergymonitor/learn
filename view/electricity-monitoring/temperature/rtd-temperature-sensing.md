@@ -1,10 +1,10 @@
-## 4x Multiplexed RTD Temperature sensor module
+# 4x Multiplexed RTD Temperature sensor module
 
-### Description
+## Description
 
 This module can be used to measure temperature using RTD (resistive temperature detectors) sensors. It produces an analog voltage proportional to the probe temperature. The module contains a multiplexer to enable using a maximum of four temperature probes.
 
-### Design
+## Design
 
 **RTD Temperature sensors change their resistance with temperature**.<br>The resistance change is converted to a voltage by a simple voltage divider. The output voltage passes through a low pass filter to remove any unwanted high frequency noise components.
 
@@ -12,7 +12,7 @@ In order to use only one amplifier circuit and one arduino analog input, the tem
 
 Accuracy is maximized by using a difference amplifier to scale the output to the full range of the Arduino analog input.
 
-### Component list
+## Component list
 
 **RTD Input stage**
 
@@ -40,13 +40,13 @@ Accuracy is maximized by using a difference amplifier to scale the output to the
 
 **1x** 220k resistor
 
-### Circuit schematic
+## Circuit schematic
 
 **Download** [png](files/rtdmodule.png) : [kiCad](files/rtdmodule.tar.gz)
 
 [![](files/rtdmodule_small.png)](files/rtdmodule.png)
 
-### Detailed design
+## Detailed design
 
 **Temperature sensing**
 
@@ -145,7 +145,7 @@ In order to save the effort and cost of building multiple amplifier circuits one
 
 The RTD sensor leads are often quite long and may act like aerials, which adds a lot of noise to the voltage signal coming in to the temperature sensing circuit. To get rid of the noise, a capacitor can be connected in parallel with the RTD sensor. The capacitor acts as a low pass filter. A 100uF capacitor gets rid of most of the noise.
 
-### Connecting the module to the Arduino
+## Connecting the module to the Arduino
 
 _**Connection diagram**_
 
@@ -233,6 +233,6 @@ try:
     temperature = sensorName.getTemperatureSmooth(100,4);
 
 
-### Useful reading
+## Useful reading
 
 [MICROCONTROLLER-BASED TEMPERATURE MONITORING AND CONTROL](http://www.elsevier.com/wps/find/bookdescription.cws_home/680245/description#description) by Dogan Ibrahim
