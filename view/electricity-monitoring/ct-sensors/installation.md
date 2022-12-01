@@ -10,11 +10,11 @@ If you put it on a twin-core, or any multi-core cable, as in the right-hand pict
 
 <!-----------------------------Warning----------------------------------------->
 
-<div class="warning">
+```{warning}
 
-<p><strong>Please read the whole of this page, and especially the warnings at the end, before touching the mains cables!</strong> Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct (metallic) contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off prior to installing your sensors, and proceeding slowly and with care. If you have any doubts, seek professional assistance.</p>
+**Please read the whole of this page, and especially the warnings at the end, before touching the mains cables!** Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct (metallic) contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off prior to installing your sensors, and proceeding slowly and with care. If you have any doubts, seek professional assistance.
 
-</div>
+```
 
 <!-----------------------------/Warning---------------------------------------->
 
