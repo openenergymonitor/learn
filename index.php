@@ -11,10 +11,14 @@ http://openenergymonitor.org
 
 */
 
-// echo "<h2>Learn has now moved to <a href='https://docs.openenergymonitor.org/electricity-monitoring/index.html'>OpenEnergyMonitor: Docs</a></h2>";
-header("Location: https://docs.openenergymonitor.org/electricity-monitoring/index.html");
-die();
-    
+if (isset($_GET['q'])) $q = $_GET['q'];
+if (file_exists("view/".$q) || $q=="") {
+    header("Location: https://docs.openenergymonitor.org/electricity-monitoring/index.html");
+    die();
+} else {
+    echo "<h2>Learn has now moved to <a href='https://docs.openenergymonitor.org/electricity-monitoring/index.html'>OpenEnergyMonitor: Docs</a></h2>";
+    die();
+}
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
         
@@ -64,6 +68,8 @@ if (count($filename_parts)==1) {
 }
 
 if (file_exists("view/".$q)) {
+
+    
     
     $content = file_get_contents("view/".$q);
     $github_url="https://github.com/openenergymonitor/learn/blob/master/view/".$q;
