@@ -36,7 +36,20 @@ $q = str_replace(".md","",$q);
 // If a redirected page  
 $redirects = array(
   "electricity-monitoring"=>"electricity-monitoring",
-  "sustainable-energy/energy/introduction"=>"sustainable-energy/introduction.html"
+  "sustainable-energy/introduction"=>"sustainable-energy/introduction.html",
+  "sustainable-energy/energy/introduction"=>"sustainable-energy/introduction.html",
+  "pv-diversion"=>"pv-diversion",
+  "pv-diversion/mk2"=>"pv-diversion/mk2",
+  "pv-diversion/mk2/intro"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/modes"=>"pv-diversion/mk2/modes.html",
+  "pv-diversion/mk2/pvmeasurement"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/switchdev"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/diversion"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/calibration"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/build"=>"pv-diversion/mk2/index.html#building-a-mk2-pv-router",
+  "pv-diversion/mk2/switchdev"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/versions"=>"pv-diversion/mk2/index.html",
+  "pv-diversion/mk2/vimeasurement"=>"pv-diversion/mk2/index.html"
 );
 
 if (isset($redirects[$q])) learn_redirect($redirects[$q]);
