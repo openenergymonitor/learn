@@ -11,14 +11,6 @@ http://openenergymonitor.org
 
 */
 
-if (isset($_GET['q'])) $q = $_GET['q'];
-if (file_exists("view/".$q) || $q=="") {
-    header("Location: https://docs.openenergymonitor.org/electricity-monitoring/index.html");
-    die();
-} else {
-    echo "<h2>Learn has now moved to <a href='https://docs.openenergymonitor.org/electricity-monitoring/index.html'>OpenEnergyMonitor: Docs</a></h2>";
-    die();
-}
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
         
@@ -34,7 +26,7 @@ if (class_exists('Redis')) {
 }
 
 
-$q = "home";
+$q = "";
 if (isset($_GET['q'])) $q = $_GET['q'];
 //$q = rtrim($q,"/");
 
@@ -68,8 +60,9 @@ if (count($filename_parts)==1) {
 }
 
 if (file_exists("view/".$q)) {
-
-    
+    $q_pre_ext = str_replace(".$doc_ext","",$q);
+    header("Location: https://docs.openenergymonitor.org/".$q_pre_ext.".html");
+    die();
     
     $content = file_get_contents("view/".$q);
     $github_url="https://github.com/openenergymonitor/learn/blob/master/view/".$q;
@@ -91,6 +84,9 @@ if (file_exists("view/".$q)) {
     if ($doc_ext=="py") $format = "py";
     if ($doc_ext=="ino") $format = "ino";
     if ($doc_ext=="webp") $format = "webp";
+} else {
+    echo "<h2>Learn has now moved to <a href='https://docs.openenergymonitor.org/electricity-monitoring/index.html'>OpenEnergyMonitor: Docs</a></h2>";
+    die();
 }
 
 if ($redis) {
