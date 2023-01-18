@@ -10,6 +10,9 @@ Part of the OpenEnergyMonitor project:
 http://openenergymonitor.org
 
 */
+
+echo "<h2>Learn has now moved to <a href='https://docs.openenergymonitor.org/electricity-monitoring/index.html'>OpenEnergyMonitor: Docs</a></h2>";
+die();
     
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
