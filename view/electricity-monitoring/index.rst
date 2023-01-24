@@ -12,4 +12,5 @@ Learn: Electricity Monitoring
    pulse-counting/index
    temperature/index
    arduino-ide/index
+   platformio/index.md
    programmers/index
