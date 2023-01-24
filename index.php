@@ -145,6 +145,7 @@ echo "<h2>Learn has now moved to <a href='https://docs.openenergymonitor.org/ele
 die();
 
 function learn_redirect($page) {
-    header("Location: https://docs.openenergymonitor.org/$page");  
+    header("Location: https://docs.openenergymonitor.org/$page");
     die();
 }
+
