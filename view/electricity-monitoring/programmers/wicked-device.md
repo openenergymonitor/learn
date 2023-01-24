@@ -1,9 +1,8 @@
-## Wicked Device / OpenEnergyMonitor Programmer
+# Wicked Device / OpenEnergyMonitor Programmer
+
 (Using the Silicon Labs CP2102 USB-to-UART Bridge Controller)
 
----
-
-#### Purpose
+## Purpose
 
 The Programmer connects the FTDI port on an emonTx, an emonTx Shield, an emonTH, an emonPi Shield, or the
 Shield part of a disassembled emonPi to the USB port of a computer. This enables the device to be programmed or
@@ -44,14 +43,14 @@ Labs website.
   OpenEnergyMonitor programmer.
 </small>
 
-#### Install the Drivers
+## Install the Drivers
 
 If your computer’s operating system is Linux, no drivers are needed.
 
 If your computer’s operating system is Windows or MacOS, you need to install the SI Labs drivers for the CP2102
 USB-to-UART bridge controller.
 
-#### Windows 10 OS
+## Windows 10 OS
 
 **Do not** follow the instructions for installing the drivers on the Arduino website, instead download the drivers from
 https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers. Click `Downloads`, then `CP210x
@@ -74,7 +73,7 @@ your module (emonTx, emonTH, etc). Go back to the main menu and select `Tools` a
 `Port` should be available and showing a new port. Select that port. Under `Tools > Board` ensure
 `Arduino/Genuino Uno` is selected.
 
-#### MacOS
+## MacOS
 
 **Do not** follow the instructions for installing the drivers on the Arduino website, instead download the drivers from
 https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers. Click `Downloads`, then `CP210x VCP Mac OSX Driver`.
@@ -101,7 +100,7 @@ Make sure you restart the Arduino IDE after installing the drivers. Before conne
 
 ![](files/ToolsPortSLAB_v2.png)
 
-#### Connecting the Programmer
+## Connecting the Programmer
 
 Use a USB-A or USB-Mini cable (whichever fits) to connect the programmer to your computer. The blue
 “power” LED will light.
@@ -112,7 +111,7 @@ Use a USB-A or USB-Mini cable (whichever fits) to connect the programmer to your
 
 On the UART connector, the GND pin is labelled on the component side.
 
-#### EmonTx
+## EmonTx
 
 ![emonTx.webp][emontx]
 
@@ -122,7 +121,7 @@ Plug the programmer into the emonTx with the component side of the board and the
 and the GND connection aligned with the engraving on the panel; that is, nearest to the aerial socket on the
 emonTx.
 
-#### EmonTx Shield
+## EmonTx Shield
 
 ![emonTxShield.webp][emontxShield]
 
@@ -131,7 +130,7 @@ emonTx.
 Plug the programmer into the emonTx Shield with the component side of the board facing inwards and the
 GND connection farthest from the jack sockets.
 
-#### EmonTH
+## EmonTH
 
 ![emonTH.webp][emonTH]
 
@@ -140,7 +139,7 @@ GND connection farthest from the jack sockets.
 Plug the programmer into the emonTH with the component side of the board facing inwards and the GND
 connection farthest from the corner.
 
-#### EmonPi Shield
+## EmonPi Shield
 
 Plug the programmer into the emonPi Shield with the component side of the board facing inwards towards the
 centre of the board. Note that a separate 5 V USB power supply is needed to program the Shield, and for the
@@ -150,7 +149,7 @@ Shield to work in the absence of a Raspberry Pi.
 
 [emonpishield]: files/emonPiShield.webp "emonPi Shield"
 
-#### M-Bus to UART Converter
+## M-Bus to UART Converter
 
 Plug the programmer onto the header pins with the component side and the LEDs facing upwards and away from M-Bus to UART converter board.
 
@@ -158,7 +157,7 @@ Plug the programmer onto the header pins with the component side and the LEDs fa
 
 [wd_mbus]: files/WD_MBus.webp "Using the 'OEM' programmer with the M-Bus to UART converter"
 
-#### Powering the Emon Device
+## Powering the Emon Device
 
 While loading and testing a sketch, the programmer can provide power to the emonTx and emonTH, using the
 5 V connection.
@@ -170,12 +169,12 @@ mA.
 The emonPi Shield does not have the appropriate connection on the FTDI connector, therefore the normal
 USB 5 V d.c. power must be supplied separately.
 
-#### Finding the Computer Port
+## Finding the Computer Port
 
 The general method is: list the ports, plug the programmer in, list the ports again and the new port that
 appears is that which the programmer is connected to. Select it.
 
-#### Linux, MacOS & Windows 10
+## Linux, MacOS & Windows 10
 
 In the Arduino IDE, and before connecting the programmer, check `Tools > Port` [or `Serial Port`]. If
 `Port` is greyed out, that's OK, if not and any `COM` (serial) ports are listed, make a note of which ones they
@@ -183,7 +182,7 @@ are. Now connect the programmer and your module (emonTx, emonTH, etc). Go back t
 select `Tools` again. [Serial] `Port` should be available and showing a new port. Select that port. Under
 MacOS, the port will possibly be called `/dev/cu.SLAB_USBtoUART`.
 
-#### Assigning the Programmer’s Port (Linux Only)
+## Assigning the Programmer’s Port (Linux Only)
 
 Under Linux, it is possible to assign the port that the programmer will appear on. In the directory
 `/etc/udev/rules.d` create a file named `60-emonProgrammer.rules`. There needs to be one line per
@@ -204,7 +203,7 @@ Unfortunately, the Arduino IDE does not recognise the symlinks.
 There is a Forum discussion [here](https://community.openenergymonitor.org/t/how-to-match-a-ttyusbx-device-to-
 a-usb-serial-device/8747).
 
-#### LED Activity
+## LED Activity
 
 A blue LED indicates “Power On”. The power may come from either the USB connector or the FTDI
 connector. There is no indication of data flowing.

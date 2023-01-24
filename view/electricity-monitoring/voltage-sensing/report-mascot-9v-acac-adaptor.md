@@ -1,6 +1,4 @@
-## Mascot 9 V AC/AC Adaptor (Voltage Transformer)
-
-***
+# Mascot 9 V AC/AC Adaptor (Voltage Transformer)
 
 A Report on the properties of the Mascot Voltage Transformer and its suitability for use with the OpenEnergy monitor.
 
@@ -8,7 +6,7 @@ _By Robert Wall  B.Sc., C.Eng., MIEE._
 
 ![](files/mascotreport/mascot_report04.jpg)
 
-#### Synopsis
+## Synopsis
 
 The Mascot Adaptor is manufactured in China for Mascot Electronics AS of Norway (www.mascot.no), type 9580, part no. 9580900600.
 
@@ -16,11 +14,11 @@ It has an integral mains plug to BS.1363\. Output is on a flying lead having a t
 
 The rated input is 230 V AC 50 Hz and the output is 9 V a.c, 300 mA. The transformer exhibits a phase lead that varies from 2° at the lower limit of the supply range up to 5.7° at the upper limit.
 
-#### Test Rig
+## Test Rig
 
 ![](files/mascotreport/mascot_report06.png)
 
-#### WARNING
+## WARNING
 
 **In any attempt to replicate these tests, due care must be taken with regard to personal safety as potentially lethal voltages may be encountered.**
 
@@ -34,7 +32,7 @@ The transformer is supplied with a choice of DC Power supply plugs, which may be
 
 ![](files/mascotreport/mascot_report07.png)
 
-#### Tests
+## Tests
 
 The following tests were conducted:
 
@@ -44,11 +42,11 @@ The following tests were conducted:
 
 3\. Establish the phase error
 
-#### 1\. Ratio.
+### 1\. Ratio.
 
 The transformer was checked at 240 V. The open-circuit output voltage was measured at 11.20 V. Output voltage tracked the input voltage exactly over the range 185.5 V to 253 V.
 
-#### 2\. Regulation.
+### 2\. Regulation.
 
 At 240 V input and the rated full-load current of 300 mA, the output voltage fell to 9.37 V. This gives a value for regulation of 19.5%.
 
@@ -60,7 +58,7 @@ Therefore, the maximum uncertainty in the ratio measurement is 2.25% for the pri
 
 The measured output at full load fell well within the band of uncertainty.
 
-#### 3\. Phase error.
+### 3\. Phase error.
 
 As the primary voltage increased, the secondary voltage waveform showed increasing distortion due to saturation of the transformer core. This was accompanied by the output voltage phase advancing. The distortion of the secondary voltage waveform, barely visible at 185 V, is clearly visible at 253 V in the second screen-shot.
 
@@ -74,17 +72,17 @@ Phase lead at 185.5V is 2 degrees                           Phase l
 
 _(The green trace is primary voltage, the red trace is secondary voltage, the flattening is distortion in the mains supply. Note: the vertical scale is uncalibrated)_
 
-#### Conclusions
+## Conclusions
 
 The Mascot Adaptor is sui for use with the OpenEnergy emonTx, though the poor regulation, to be expected of this type of transformer, does mean that the output voltage may be higher than expected (33.4 V peak-peak) at the upper limit of supply voltage. The maximum phase error of 5.75º may be significant in certain circumstances, representing an error of less than 0.05 when the power factor is 0.9 or better, but a greater error as the power factor worsens.
 
-#### Postscript
+## Postscript
 
 Since writing that report, I have checked two more samples of the adapter. Both measured a slightly higher voltage (a little under 2% higher) than reported, but one was phased as reported and one was opposite. Therefore the advice is: if your power direction is wrong, reverse the DC Power plug, or turn your c.t. round.
 
-#### Appendix
+## Appendix
 
-#### Mains voltage limits.
+### Mains voltage limits.
 
 The standard domestic mains supply for Europe is 230 V ±  10%, giving a lower limit of 207 V and an upper limit of 253 V.  It is permissible under BS 7671 to have a voltage drop within the installation of 5%, which would give a lower limit of 195.5 V.
 

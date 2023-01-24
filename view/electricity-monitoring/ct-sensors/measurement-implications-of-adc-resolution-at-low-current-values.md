@@ -1,6 +1,4 @@
-## Measurement Implications of ADC Resolution at Low Current Values
-
-***
+# Measurement Implications of ADC Resolution at Low Current Values
 
 Common questions include:
 

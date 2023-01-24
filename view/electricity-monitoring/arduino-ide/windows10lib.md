@@ -1,6 +1,6 @@
-## Installing the Arduino Libraries – Windows 10
+# Installing the Arduino Libraries – Windows 10
+
 <small>by Robert Wall</small>
-***
 
 Before you install the libraries, it would be a good idea to think about how you will organise your
 Emon data. When you installed the Arduino IDE, it created a folder `Arduino` and beneath it a
@@ -41,7 +41,7 @@ reason it is not recommended</p>
 
 </div>
 
-#### 1) Downloading the Libraries
+## 1) Downloading the Libraries
 
 Many libraries are required, this is the full list:
 
@@ -76,13 +76,13 @@ the button is on the right-hand side. Click `Clone or download` followed by `Dow
 
 ![windows-lib-2](files/windowslib2.png)
 
-#### 2) Installing the Libraries
+## 2) Installing the Libraries
 
 When you have downloaded all the files, go to your download location and from there you need to
 extract the contents of each Zip file in turn: Double-click on the zip file, a window will open
 showing the contents. Drag that folder into the `libraries` folder.
 
-#### 3) Renaming the Libraries
+## 3) Renaming the Libraries
 
 The Arduino IDE does not allow hyphens '-' in the library folder names. Therefore you must rename
 the folders to the names below. You should end up with this:
@@ -91,7 +91,7 @@ the folders to the names below. You should end up with this:
 
 [If you wish, you can now delete the zip files that you downloaded.]
 
-#### 4) Check the Libraries
+## 4) Check the Libraries
 
 If your Arduino IDE is running, close all open windows and shut it down completely. Start (or
 restart) the IDE. First you must tell the IDE where your 'Sketchbook' is located. Click on `File > Preferences`

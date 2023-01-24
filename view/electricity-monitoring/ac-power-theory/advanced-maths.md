@@ -1,12 +1,10 @@
-## AC Power Theory - Advanced Maths
-
-***
+# AC Power Theory - Advanced Maths
 
 This page covers the mathematics behind calculating real power, apparent power, power factor, RMS voltage and RMS current from instantaneous Voltage and Current measurements of single phase AC electricity. Discrete time equations are detailed since the calculations are carried out in the Arduino in the digital domain.
 
 For a much nicer Arduino code snippet version of this page, see: [AC Power theory - Arduino maths](arduino-maths).
 
-#### Real Power
+## Real Power
 
 Real power (also known as active power) is defined as the power used by a device to produce useful work.
 
@@ -36,7 +34,7 @@ N - number of samples.
 
 Real power is calculated simply as the average of N voltage-current products. It can be shown that this method is valid for both sinusoidal and distorted waveforms.
 
-#### RMS Voltage and Current Measurement
+## RMS Voltage and Current Measurement
 
 An RMS value is defined as the square root of the mean value of the squares of the instantaneous values of a periodically varying quantity, averaged over one complete cycle. The discrete time equation for calculating voltage RMS is as follows:
 
@@ -46,7 +44,7 @@ An RMS value is defined as the square root of the mean value of the squares of t
 
 RMS current is calculated using the same equation, substituting voltage samples, u(n), for current samples, i(n).
 
-#### Apparent Power and Power Factor
+## Apparent Power and Power Factor
 
 Apparent power is calculated, as follows:
 
@@ -56,11 +54,11 @@ and the power factor is calculated from the definition:
 
 _Power Factor = Real Power / Apparent Power_
 
-#### Harmonics, Non-Linear Loads and Power Factor
+## Harmonics, Non-Linear Loads and Power Factor
 
 A non-linear load, such as a fluorescent light, a computer power supply or a variable speed drive in a washing machine, will distort the mains current wave and generate harmonics of the fundamental mains frequency, and a side effect is the voltage wave will also be distorted. This leads to power existing not only at the mains frequency, but at harmonics of that frequency too. This has implications for the accuracy of power measurements. References where this is covered are given below.
 
-#### Adding RMS Values
+## Adding RMS Values
 
 The combined r.m.s. value of a signal with harmonic components is the square root of the sum of the squares of each component:
 
@@ -82,9 +80,7 @@ That is the method used in emonLibCM in the rearranged form:
 
 This method is much faster than applying a digital filter to each individual sample, and it is valid because it is reasonable to assume that the offset – the average value of all the samples – will remain sensibly constant for the duration of the sampling period.
 
-***
-
-#### References
+## References
 
 Pages 12-15 of Atmel's application note for the 'AVR465: Single-Phase Power/Energy Meter with Tamper Detection':
 

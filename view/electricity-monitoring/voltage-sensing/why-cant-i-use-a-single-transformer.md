@@ -1,6 +1,4 @@
-## Why Can’t I Use a Single Transformer?
-
-***
+# Why Can’t I Use a Single Transformer?
 
 We often see a circuit submitted where someone has thought it would be a good idea to use the same transformer, or AC adapter, both to supply the power to their Arduino and to monitor the voltage. And the question is always: Why does it not work?
 

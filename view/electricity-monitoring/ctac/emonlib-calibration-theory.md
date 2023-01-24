@@ -1,7 +1,7 @@
 # EmonLib Calibration Theory
 
 
-#### Voltage sensor
+## Voltage sensor
 
 We are measuring the mains voltage. In order to do that, it is first transformed down to a safe voltage, then divided further before being applied to one of the analogue inputs of the processor.
 
@@ -65,7 +65,7 @@ which for the EmonTx & Ideal Power (TDC) UK-plug AC-AC adapter is:
 The calibration constant is passed into the calculation as the second parameter to the method `EnergyMonitor::voltage( )` or the first parameter to `EnergyMonitor::voltageTX( )` in the file `EmonLib.cpp`.
 
  
-#### Current sensor
+## Current sensor
 
 The supplied current is measured using a current transformer, and the resulting (small) current converted into a voltage by the burden resistor. If you are using a device that outputs a voltage, e.g. a current transformer with an internal burden resistor, or a Hall effect transducer, you must not have a burden resistor. This voltage – however it is generated – is then measured by the analogue input of the processor relative to the ADC reference voltage.
 
@@ -144,7 +144,7 @@ For example, the Yhdc SCT-013-030 CT sensor gives 1 V at a rated current of 30 A
 
 `current constant = Ip ÷ Vs = 30 ÷ 1 = 30`
 
-#### Phase angle (power factor) constant
+## Phase angle (power factor) constant
 
 Checks of the phase response of the current and voltage sensors reveal that both have a phase error that varies in magnitude. In the case of the voltage sensor, it increases approximately linearly with increasing voltage; in the case of the current sensor, it falls rapidly at first with increasing current, then reaches a minimum before rising again as saturation sets in. The value of each is heavily dependent on the design and construction of the transformer. Approximate values for the voltage sensor are from 3½° at 225 V to 7° at 253V for an Ideal Power (TDC) 240V AC-AC. adapter; and for the SCT-013-000 current transformer with a 22 Ω burden, around 4°. Fortunately, these errors are in the same direction, so the net error can be very small.
 

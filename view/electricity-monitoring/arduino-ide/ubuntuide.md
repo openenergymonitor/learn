@@ -1,6 +1,6 @@
-## Installing the Arduino IDE – Ubuntu Linux
+# Installing the Arduino IDE – Ubuntu Linux
+
 <small>by Robert Wall</small>
-***
 
 <div class="note">
 
