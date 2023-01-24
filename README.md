@@ -1,5 +1,5 @@
-# OpenEnergyMonitor Learn Resources 
+# OpenEnergyMonitor Learn Resources
 
-https://learn.openenergymonitor.org
+The content of this repository is now included as a git submodule in the OpenEnergyMonitor Docs website.
 
-*Previously Building Blocks*.
+[https://docs.openenergymonitor.org/electricity-monitoring/index.html](https://docs.openenergymonitor.org/electricity-monitoring/index.html)
