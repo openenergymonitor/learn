@@ -50,8 +50,8 @@ Burden resistor sizing for [OpenEnergyMonitor energy monitoring hardware](https:
 
 **emonTx V3** ([see guide](https://guide.openenergymonitor.org/setup))
 
-The emonTx V3 uses a 3.3V regulator, so it's V<sub>CC</sub> and therefore AREF, will always be 3.3V regardless of battery voltage. The standard emonTx V3 uses 22Ω burden resistors for CT 1, 2 and 3, and a 120Ω resistor for CT4, the high sensitivity channel. See the emonTx V3 technical wiki at:
-[https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3#Burden_Resistor_Calculations).
+The emonTx V3 uses a 3.3V regulator, so it's V<sub>CC</sub> and therefore AREF, will always be 3.3V regardless of battery voltage. The standard emonTx V3 uses 22Ω burden resistors for CT 1, 2 and 3, and a 120Ω resistor for CT4, the high sensitivity channel. See the emonTx V3 technical page:
+[https://docs.openenergymonitor.org/emontx3/technical.html](https://docs.openenergymonitor.org/emontx3/technical.html).
 
 **emonPi** ([see guide](https://guide.openenergymonitor.org/setup))
 

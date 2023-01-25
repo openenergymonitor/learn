@@ -49,7 +49,7 @@ In the same way that “Speed is the rate at which Distance is covered”, i.e. 
 
 ## 2: Detection and Measurement of surplus PV
 
-By the use of non-invasive sensors for measuring voltage and current, the rate of energy flow (i.e. Power) is routinely determined in Open Energy Monitor applications. The underlying principles are described in the section “[Different ways of Measuring Voltage and Current](vimeasurement)”.
+By the use of non-invasive sensors for measuring voltage and current, the rate of energy flow (i.e. Power) is routinely determined in Open Energy Monitor applications. The underlying principles are described in the section “[Different ways of Measuring Voltage and Current](../../electricity-monitoring/ctac/index.md)”.
 
 Energy from the grid normally flows **into** the premises where consumption is taking place (when importing power). In this situation, the voltage and current waveforms are in-phase; they always have the same polarity.
 

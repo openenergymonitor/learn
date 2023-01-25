@@ -72,4 +72,4 @@ You should now see two columns of values. Apparent power on the left, RMS curren
 **See also:**
 
 - [How to build an Arduino energy monitor - measuring mains voltage and current](https://learn.openenergymonitor.org/electricity-monitoring/ctac/how-to-build-an-arduino-energy-monitor)
-- [EmonTx Arduino Shield](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield): Our open-hardware energy monitoring Arduino compatible shield featuring the above circuit alongside voltage measurement for real power calculation.
+- [EmonTx Arduino Shield](https://github.com/openenergymonitor/emontx-shield): Our open-hardware energy monitoring Arduino compatible shield featuring the above circuit alongside voltage measurement for real power calculation.

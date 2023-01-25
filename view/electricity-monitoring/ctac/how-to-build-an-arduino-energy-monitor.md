@@ -82,4 +82,4 @@ You should now see a stream of values. These are from left to right: real power,
 **See also:**
 
 - [How to build an Arduino energy monitor - current only](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only)
-- [EmonTx Arduino Shield](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield): Our open-hardware energy monitoring Arduino compatible shield featuring the above circuit.
+- [EmonTx Arduino Shield](https://github.com/openenergymonitor/emontx-shield): Our open-hardware energy monitoring Arduino compatible shield featuring the above circuit.

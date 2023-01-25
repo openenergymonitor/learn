@@ -40,13 +40,6 @@ For short cable runs, unscreened two or three-core cable, or single-core (parasi
 
 Up to 20m cable length has been successfully reported by Martin Harizanov with a lower pull-up resistor value of 2K. Adding multiple sensors will reduce the practical length, as will non consistent / nonlinear cable runs, [see app note](https://www.maximintegrated.com/en/app-notes/index.mvp/id/148)
 
-## Temperature Sensing with the emonTx and emonPi
-
-For emonTx V3 and emonPi see Wiki:
-
-- https://wiki.openenergymonitor.org/index.php/EmonPi#DS18B20_Temperature
-- https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#RJ45_Connection
-
 ## Software
 
 [Dallas Temperature Control Arduino library by Miles Burton.](http://milesburton.com/Dallas_Temperature_Control_Library#The_Library)
