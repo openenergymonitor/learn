@@ -38,3 +38,8 @@ available in OEM Shop 19/12/2022
 \*6 see [https://community.openenergymonitor.org/t/the-emonpicm/18173/15](https://community.openenergymonitor.org/t/the-emonpicm/18173/15) onwards
 
 \*7 The RFM69Pi module has all three formats available at [https://docs.openenergymonitor.org/emonbase/rfm69-pi.html](https://docs.openenergymonitor.org/emonbase/rfm69-pi.html) It can also be programmed from the emomSD software update page.
+
+# RFM Packet Formats
+
+![RFM Formats](files/RF-Formats-compared.png)
+
