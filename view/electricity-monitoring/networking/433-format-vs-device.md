@@ -14,8 +14,8 @@ There are 3 types of Radio Format in use;
 | emonBase V2 (RFM69SPI) \#| available (shop option) | ? | default |
 | emonTx Shield | default | available (DIY) \*2 | ? |
 | emonTx V2 | default | available (DIY) \*2 | ? |
-| emonTx V3.2 | default | available (DIY) \*2 | ? |
-| emonTx V3.4 | default | available (DIY) \*2 | under development |
+| emonTx V3.2 | default | available (DIY) \*2 | available |
+| emonTx V3.4 | default | available (DIY) \*2 | available |
 | emonTx V4 \# | available (shop option) | available (DIY)\*1 | default |
 | emonTH V2 | default | (DIY) \*2 | ? |
 | GLCD Display | default | available (DIY) \*2,\*3,\*6 | ? |
