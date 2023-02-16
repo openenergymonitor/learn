@@ -39,7 +39,7 @@ There are 3 types of Radio Format in use;
 
 \*7 The RFM69Pi module has all three formats available at [https://docs.openenergymonitor.org/emonbase/rfm69-pi.html](https://docs.openenergymonitor.org/emonbase/rfm69-pi.html) It can also be programmed from the emomSD software update page.
 
-# RFM Packet Formats
+## RFM Packet Formats
 
 ![RFM Formats](files/RF-Formats-compared.png)
 
