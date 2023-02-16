@@ -9,7 +9,6 @@ There are 3 types of Radio Format in use;
 | --- | --- | --- | --- |
 | emonPi (discrete sampling) | default | not available | not available |
 | emonPi (continuous monitoring) | not supported | available \*2 | available |
-| emonPi V2 | ? | ? | ? |
 | emonBase (RFM69Pi) | default | available \*2,\*7 | available \*7 |
 | emonBase V2 (RFM69SPI) \#| available (shop option) | ? | default |
 | emonTx Shield | default | available \*2 | ? |
