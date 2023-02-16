@@ -11,19 +11,19 @@ There are 3 types of Radio Format in use;
 | emonPi (continuous monitoring) | not available | available (DIY) \*2 | under development |
 | emonPi V2 | ? | ? | default? |
 | emonBase (RFM69Pi) | default | available (DIY) \*2,\*7 | available \*7 |
-| emonBase V2 (RFM69SPI) | available (shop option) | ? | default |
+| emonBase V2 (RFM69SPI) \#| available (shop option) | ? | default |
 | emonTx Shield | default | available (DIY) \*2 | ? |
 | emonTx V2 | default | available (DIY) \*2 | ? |
 | emonTx V3.2 | default | available (DIY) \*2 | ? |
 | emonTx V3.4 | default | available (DIY) \*2 | under development |
-| emonTx V4 | available (shop option) | available (DIY)\*1 | default |
+| emonTx V4 \# | available (shop option) | available (DIY)\*1 | default |
 | emonTH V2 | default | (DIY) \*2 | ? |
 | GLCD Display | default | available (DIY) \*2,\*3,\*6 | ? |
 | Mk2 PV Router \*4 | optional\*5 | not available | not available |
 
 ? means unknown
 
-available in OEM Shop 19/12/2022
+\# - available in OEM Shop 19/12/2022
 
 \*1 [https://github.com/openenergymonitor/emontx4/tree/main/firmware/EmonTxV4/compiled](https://github.com/openenergymonitor/emontx4/tree/main/firmware/EmonTxV4/compiled) note: files for all three formats are available here
 
