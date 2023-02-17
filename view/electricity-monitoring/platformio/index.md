@@ -29,12 +29,12 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
 
 ![Download PlatfomIO](img/pioopen.png)
 
-### Open emonTx Firmware
+### Open emonTx3 Firmware
 
-- Download [emonTx Firmware GitHub repo](https://github.com/openenergymonitor/emontx3) either via git clone or downloading the zip and extracting. 
+- Download [emonTx3 Firmware GitHub repo](https://github.com/openenergymonitor/emontx3) either via git clone or downloading the zip and extracting. 
 - From the PlatformIO Home screen in Atom IDE choose `Open Project (1)*`
-- Navigate to the standard emonTx Firmware `emontx3/firmware` then chosen `open`
-- You should see the emonTx firmware files in the file-tree on the right-hand-side of the editor
+- Navigate to the standard emonTx Firmware `emontx3/firmware/emonTx34/emonTx34_CM` then chosen `open`
+- You should see the emonTx34_CM firmware files in the file-tree on the right-hand-side of the editor
 
 
 ### Compile Firmware
@@ -45,7 +45,7 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
 ### Upload Firmware
 
 - If code compiles successfully upload the firmware by clicking on `Upload (3)`
- - Note: A [USB to UART cable](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH
+- Note: A [USB to UART cable](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH
 - After successful upload check nodeID has changed by viewing serial output, click `Serial Monitor (4)` and choose `115200 baud`.
 
 ---
