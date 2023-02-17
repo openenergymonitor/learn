@@ -62,20 +62,18 @@ The easiest way if running Linux is to use the install script, this installs pio
 
 ### 2. Clone emonTx / emonPi repo
 
-We'll use the emonTx (V3 discrete sampling) as an example here but the steps are exactly the same for emonPi.
-
 **emonTx V3**
 
 ```
-$ git clone https://github.com/openenergymonitor/emontx3`
-$ cd emontx3/firmware
+git clone https://github.com/openenergymonitor/emontx3
+cd emontx3/firmware/emonTx34/emonTx34_CM
 ```
 
 **emonPi**
 
 ```
-$ git clone https://github.com/openenergymonitor/emonpi`
-cd emonpi/firmware
+git clone https://github.com/openenergymonitor/emonpi
+cd emonpi/firmware/emonPi_CM
 ```
 
 ### 3. Compile with PlatformIO CLI
