@@ -59,6 +59,7 @@ Many libraries are required, this is the full list:
 | SI7021             | https://github.com/LowPowerLab/SI7021                              | Only required for emonTH V2  |
 | emonEProm          | https://community.openenergymonitor.org/uploads/short-url/eSkSOEesXkOL2FtaMCkrzhnUAOF.zip | Manages the EEPROM when saving config & energy values |
 | rfmTxLib           | https://community.openenergymonitor.org/uploads/short-url/2itZ1bA7J0D1bfJO2byhattak9U.zip | Transmit-only - message format is compatible with JeeLib |
+| LiquidCrystal_I2C  | https://github.com/openenergymonitor/LiquidCrystal_I2C             | Only required for emonPi |
 
 <div class="warning">
 
