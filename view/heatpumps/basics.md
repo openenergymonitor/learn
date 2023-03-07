@@ -75,7 +75,7 @@ The correction factor of 0.5 will vary from heat pump to heat pump depending on 
                = (37°C+273K) / ((37°C+273K) - (0°C+273K)) = 8.4
     Practical_COP = 0.5 x  Carnot_COP = 0.5 x 8.4 = 4.2
     
-The carnot COP equation suggests with our practical efficiency and offset assumptions suggest that we might expect a COP of 4.2 from our heat pump.
+The carnot COP equation suggests with our practical efficiency and offset assumptions that we might expect a COP of 4.2 from our heat pump.
 
 **Example calculation 2:** What COP might we expect from a heat pump during typical UK January temperatures when the flow temperature is 45°C?
 
