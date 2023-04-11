@@ -61,7 +61,7 @@ The combination forms a voltage divider, so the voltage received by the first fa
 
 If the loads are unequal, it starts to get complicated so use our phasor diagram. We’ll assume for clarity in the diagram, that the load on Line 3 is very small, but that the other two loads are very large (much larger than would be permitted in the real world). The phasor diagram looks like this:
 
-<img src="files/phasors-unbalanced.svg" />
+<object type="image/svg+xml" data="files/phasors-unbalanced.svg"></object>
 
 In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red) is reduced by the voltage drop in R<sub>line 1</sub>, at the same time the neutral voltage is raised towards line 1 (the short arrows). A similar thing happens to line 2 (yellow). Line 3 (blue) carries a very small current that we ignore, so its voltage remains the same. The result (b) is the neutral point is moved towards the midpoint between lines 1 & 2 (i.e away from line 3), the voltages between Line 1 and neutral, and between Line 2 and neutral, are much reduced while the voltage between Line 3 and neutral is much increased. There is now a voltage on the neutral conductor, in anti-phase with line 3\. The angles between the three voltages are no longer 120°.
 
