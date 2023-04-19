@@ -42,7 +42,7 @@ Traditionally in the UK the three phases were identified by the colours Red, Yel
 Blue; with Black for the neutral and Green for earth. Pan-European harmonisation in 2004 led to the
 standard becoming: Line 1 – Brown, Line 2 – Black, Line 3 – Grey, Neutral – Blue, Earth –
 Green/Yellow stripes. [A comprehensive table of the colours used in various countries can be found
-here: http://en.wikipedia.org/wiki/Three-phase_electric_power].
+here: [http://en.wikipedia.org/wiki/Three-phase_electric_power](http://en.wikipedia.org/wiki/Three-phase_electric_power)].
 
 Note: The phase conductor is “Line”, not “Live”. Live refers to the state of the circuit, a neutral
 conductor that is carrying current is “live” too.
