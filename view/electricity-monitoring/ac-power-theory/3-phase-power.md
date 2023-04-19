@@ -188,8 +188,7 @@ A less accurate alternative would be to use 3 a.c. adapters (transformers) equip
 divider resistors to reduce the voltage to 0.333 V r.m.s, and which connect to the emonTx4 exactly
 like the emonVs. A 5 V d.c. adapter will also be needed to power the emonTx4.
 
-## An Approximate Method to Estimate 3-Phase Power with an Unmodified emonTx V2
-or emonTx V3.x
+## An Approximate Method to Estimate 3-Phase Power with an Unmodified emonTx V2 or emonTx V3.x
 
 If access to measure the voltages of the three phases is difficult, or you do not want to add extra
 hardware or use 3 emonTxs, then it is possible to measure the voltage on one phase and use this to
