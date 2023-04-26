@@ -77,7 +77,7 @@ some reference (that we can choose to suit our circumstances). We can illustrate
 between the three voltages of a 3-phase with three phasors 120° apart. If we connected a 3-channel
 oscilloscope to the supply we might see something like this:
 
-<img src="files/phasors.svg" />
+<object alt="../../_images/phasors.svg" data="../../_images/phasors.svg"></object>
 
 The phasors rotate at the supply frequency. The three phasors are 120° apart, and the three voltage
 waveforms too are 120° apart – 1 complete cycle being 360°.
@@ -116,7 +116,7 @@ assume for clarity in the diagram that the load on Line 3 is very small, but tha
 are very large (much larger that would be permitted in the real world). The phasor diagram looks
 like this:
 
-<object alt="../../_images/phasors.svg" data="../../_images/phasors.svg"></object>
+<object alt="../../_images/phasors-unbalanced.svg" data="../../_images/phasors-unbalanced.svg"></object>
 
 In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red)
 is reduced by voltage drop in Rline 1, at the same time the neutral voltage is raised towards line 1 (the
