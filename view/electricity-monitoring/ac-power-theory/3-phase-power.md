@@ -2,7 +2,7 @@
 
 ## History
 
-<div style="display:none;">
+<div style="display:none !important;">
  <img src="files/phasors.svg">
  <img src="files/phasors-unbalanced.svg">
 </div>
