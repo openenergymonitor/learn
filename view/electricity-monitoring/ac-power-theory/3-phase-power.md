@@ -116,7 +116,7 @@ assume for clarity in the diagram that the load on Line 3 is very small, but tha
 are very large (much larger that would be permitted in the real world). The phasor diagram looks
 like this:
 
-<img src="files/phasors-unbalanced.svg" />
+<object alt="../../_images/phasors.svg" data="../../_images/phasors.svg"></object>
 
 In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red)
 is reduced by voltage drop in Rline 1, at the same time the neutral voltage is raised towards line 1 (the
