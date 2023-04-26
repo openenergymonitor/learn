@@ -222,3 +222,8 @@ There is a less obvious danger from the possibility that one phase may become di
 3-phase motor would be likely to suffer damage as it would be running on only one phase. A linked
 3-pole or 4-pole circuit breaker (breaking also the neutral), is essential for any such load. Fuses,
 which if one fuse 'blows' will also result in single-phasing, are also not a good idea.
+
+![](files/phasors.svg)
+![](files/phasors-unbalanced.svg)
+
+
