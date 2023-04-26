@@ -2,8 +2,10 @@
 
 ## History
 
-<img src="files/phasors.svg" style="display:none;">
-<img src="files/phasors-unbalanced.svg" style="display:none;">
+<div style="display:none;">
+ <img src="files/phasors.svg">
+ <img src="files/phasors-unbalanced.svg">
+</div>
 
 The first electrical systems generated direct current by means of dynamos. It was soon realised that
 there were serious limits to the area and the number of customers that could be served, and
