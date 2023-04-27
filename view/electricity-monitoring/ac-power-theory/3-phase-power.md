@@ -118,7 +118,8 @@ assume for clarity in the diagram that the load on Line 3 is very small, but tha
 are very large (much larger that would be permitted in the real world). The phasor diagram looks
 like this:
 
-<img src="files/phasors-unbalanced.svg" width="0" height="0">
+![](files/phasors-unbalanced.svg)
+
 <object data="/_images/phasors-unbalanced.svg" type="image/svg+xml"></object>
 
 In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red)
