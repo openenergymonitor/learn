@@ -79,7 +79,7 @@ oscilloscope to the supply we might see something like this:
 
 ![](files/phasors.svg)
 
-<object data="files/phasors.svg" type="image/svg+xml"></object>
+<object data="/_images/phasors.svg" type="image/svg+xml"></object>
 
 The phasors rotate at the supply frequency. The three phasors are 120° apart, and the three voltage
 waveforms too are 120° apart – 1 complete cycle being 360°.
