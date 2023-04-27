@@ -120,6 +120,8 @@ like this:
 
 ![](files/phasors-unbalanced.svg)
 
+<object data="/_images/phasors-unbalanced.svg" type="image/svg+xml"></object>
+
 In (a) the long arrows represent the no-load voltages of the transformer. The voltage on line 1 (red)
 is reduced by voltage drop in Rline 1, at the same time the neutral voltage is raised towards line 1 (the
 short arrows). A similar thing happens to line 2 (yellow). Line 3 (blue) takes a very small current
