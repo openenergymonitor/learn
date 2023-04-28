@@ -30,7 +30,7 @@ normally daisy-chained and supplied by a 6 A circuit breaker.
 Compared to the UK, the North American final distribution transformer tends to be quite small,
 typically 25 kVA, serving only a few homes. The normal domestic supply is 240 V, 60 Hz centre tapped, and the centre tap is the neutral, which is also grounded.
 
-![N.American electricity supply - final transformer voltages](files/EINA210423/N_America_Fig_1.webp)
+![N.American electricity supply - final transformer voltages](files/N_America_Fig_1.webp)
 
 <sub>Figure 1. North American domestic electricity supply - final transformer voltages.</sub>
 
@@ -68,7 +68,7 @@ and currents are measured, but in general, it will be more convenient to arrange
 transformer to measure the voltage of one leg to neutral, and to attach a current transformer to each
 leg.
 
-![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_2.webp)
+![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_2.webp)
 
 <sub>Figure 2. North American domestic electricity supply - measuring whole-house power. Note the
 different c.t. orientation for the emonTx V2 & V3 compared to the emonTx V2 & V3 emonTx4.</sub>
@@ -91,7 +91,7 @@ Note that CT 1 faces to the right and CT 2 faces to the left, as indicated by 
 
 Other arrangements are possible:
 
-![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_3a.webp) ![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_3b.webp)
+![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3a.webp) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_3b.webp)
 
 <sub>Figure 3a-b. North American domestic electricity supply - alternative arrangements for measuring whole-house power.</sub>
 
@@ -115,8 +115,8 @@ Fig 3b:
 
 Individual circuits may be either 120 V using a connection between one leg and neutral, or they may be 240 V, i.e. connected to both legs.
 
-![N.American Electricity Supply - Measuring individual circuits](files/EINA210423/N_America_Fig_4a.webp) ![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_4b.webp)
-![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_4c.webp)
+![N.American Electricity Supply - Measuring individual circuits](files/N_America_Fig_4a.webp) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_4b.webp)
+![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_4c.webp)
 
 <sub>Figure 4a-c. North American domestic electricity supply - alternative arrangements for measuring
 individual circuits.</sub>
@@ -149,8 +149,8 @@ This arrangement is necessary if, for example, it is desirable or necessary to b
 currents in each leg of the supply. But if only the total power is required, then a single input can be
 used, releasing the second for another circuit.
 
-![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/EINA210423/N_America_Fig_5a.webp) ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/EINA210423/N_America_Fig_5b.webp)
-![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/EINA210423/N_America_Fig_5c.webp)
+![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5a.webp) ![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5b.webp)
+![N.American Electricity Supply - Measuring whole-house power, CT arrangement](files/N_America_Fig_5c.webp)
 
 <sub>Figure 5a-c. North American domestic electricity supply - connecting the current transformers.</sub>
 
@@ -254,8 +254,8 @@ For consistency with the standard YHDC CT that was supplied by the shop, connect
 
 #### YHDC 100A/200A/400A Split Core Current Transformer SCT023R
 
-![yhdc_sct023r.png](files/EINA210423/yhdc_sct023r.png)
-![yhdc_sct023r_drawing.png](files/EINA210423/yhdc_sct023r_drawing.png)
+![yhdc_sct023r.png](files/yhdc_sct023r.png)
+![yhdc_sct023r_drawing.png](files/yhdc_sct023r_drawing.png)
 
 | Rated Current (IPN) | Maximum Input (IPM) | Rated Output | Maximum Burden | Calibration Coefficient¹ |
 |---------------------|---------------------|--------------|----------------|--------------------------|
@@ -306,7 +306,7 @@ measurements. The emonTx4 has three voltage inputs, only L1 and L2 should be use
 need two current measurements, one on each 'hot' leg of the supply. You do not need a CT on the
 neutral, it will only tell you the current imbalance between the two legs.
 
-![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_6-CTs.webp)
+![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_6-CTs.webp)
 
 <sub>Figure 6. North American domestic electricity supply - measuring whole-house power. Note the
 different CT orientation for the emonTx4 compared to the emonTx V2 & V3.</sub>
@@ -350,7 +350,7 @@ and add the resulting powers to give the total.
 Individual circuits may be either 120 V using a connection between one leg and neutral, or they
 may be 240 V, i.e. connected to both legs.
 
-![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_7a.webp) ![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_7b.webp) ![N.American Electricity Supply - Measuring whole-house power](files/EINA210423/N_America_Fig_7c.webp)
+![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_7a.webp) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_7b.webp) ![N.American Electricity Supply - Measuring whole-house power](files/N_America_Fig_7c.webp)
 
 <sub>Figure 7a-c. North American domestic electricity supply - arrangements for measuring individual
 circuits. Note the different CT orientation for the emonTx4 compared to the emonTx V2 & V3.</sub>
@@ -472,9 +472,9 @@ and the black wire to the sleeve. There should be no connection to the ring.
 
 #### YHDC 50A/100A/200A/300A/400A Split-Core Current Transformer SCT023R Voltage Output Type
 
-![SCT023R_0.333V_Pic.png](files/EINA210423/SCT023R_0.333V_Pic.png)
-![SCT023R_0.333V_Sch.png](files/EINA210423/SCT023R_0.333V_Sch.png)
-![SCT023R_0.333V_Dims.png](files/EINA210423/SCT023R_0.333V_Dims.png)
+![SCT023R_0.333V_Pic.png](files/SCT023R_0.333V_Pic.png)
+![SCT023R_0.333V_Sch.png](files/SCT023R_0.333V_Sch.png)
+![SCT023R_0.333V_Dims.png](files/SCT023R_0.333V_Dims.png)
 
 | Rated Current (IPN) | Maximum Input (IPM) | Rated Output | Calibration Coefficient |
 |---------------------|---------------------|--------------|-------------------------|
