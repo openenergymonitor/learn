@@ -121,11 +121,11 @@ Individual circuits may be either 120 V using a connection between one leg and n
 <sub>Figure 4a-c. North American domestic electricity supply - alternative arrangements for measuring
 individual circuits.</sub>
 
-Fig 4a: Power = V × I = EnergyMonitor::realPower
+Fig 4a: <code>Power = V × I = EnergyMonitor::realPower</code>
 
-Fig 4b: Power = V × I = EnergyMonitor::realPower
+Fig 4b: <code>Power = V × I = EnergyMonitor::realPower</code>
 
-Fig 4c: Power = 2 × V × I = 2 × EnergyMonitor::realPower
+Fig 4c: <code>Power = 2 × V × I = 2 × EnergyMonitor::realPower</code>
 
 If the circuit is 120 V, only one CT is required and the set-up is as shown in Fig 4a or Fig 4b above.
 Note: The orientation of the CT In Fig 4b is not symmetrical with the CT in Fig 4a.
