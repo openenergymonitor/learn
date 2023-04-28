@@ -464,7 +464,7 @@ and the black wire to the sleeve. There should be no connection to the ring.
 Note that these are calibrated at 60 Hz, "Option 50 Hz" must be specified for use on a 50 Hz
 system. "Option C0.6" is the revenue-grade version.
 
-This is an abridged list, see the [manufacturer’s website](https://www.ccontrolsys.com/w/ACT_Series_Split-Core_Current_Transformers#Options) for details. CCS also makes solid-core CTs
+This is an abridged list, see the [manufacturer’s website](https://ctlsys.com/current-transformers/) for details. CCS also makes solid-core CTs
 and CTs that are rated up to 6 kA primary current.
 
 For consistency with the standard CTs supplied by the shop, connect the white wire to the plug tip
