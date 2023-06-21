@@ -236,7 +236,7 @@ As mentioned on the Contents page, two different hardware platforms have been su
 
 Update at 7/3/14:  Since writing this article, I have developed a new hardware platform which has been specifically designed  for this product.  The main board has an integral power supply and RF module, and there is a display to show how much surplus energy has been diverted each day.  Two of the PCBs can be mounted directly inside an enclosure from Schneider Electric; this can be either ABS or polycarbonate.
 
-This new venture of mine is fully described at<a href="http://www.Mk2PVrouter.co.uk"> www.Mk2PVrouter.co.uk </a>where there is a Shop which can supply all of the necessary components either in kit-form or pre-built and tested.  The information below is still entirely valid, and this article is referenced from my website as supporting material.
+As of January 2023, ownership of “Mk2 PV Router” and manufacturing has been transferred to new owners in France, operating as [“mk2pvrouter.com”](http://mk2pvrouter.com/). The English website with full design and construction data for the kits will remain available at [https://mk2pvrouter.co.uk](https://mk2pvrouter.co.uk/) for the foreseeable future. Information regarding parts that might still be available can be found on [the “Shop” page](https://mk2pvrouter.co.uk/shop.html).
 
 </p></div>
 
