@@ -104,14 +104,10 @@ A triac can be turned on at any time, and turns off at the end of each half-cycl
 
 ![](files/triac_phase.svg)
 
-<object data="files/triac_phase.svg" type="image/svg+xml"></object>
-
 **Phase Control:**
 Maximum power is delivered to the load when the triac conducts for all of each half-cycle. The power ramps down continuously (but not linearly) to zero when the triac does not conduct at all.*
 
 ![](files/triac_burst.svg)
-
-<object data="files/triac_burst.svg" type="image/svg+xml"></object>
 
 **Burst Fire:**
 Maximum power is delivered to the load when the triac conducts for every cycle. As fewer cycles conduct, the average power falls in steps (of 20% in this case).*
