@@ -102,12 +102,16 @@ _In order to simplify that description, there are many half-truths above. Triac 
 
 A triac can be turned on at any time, and turns off at the end of each half-cycle. Clearly this enables us to control the current, and hence, the power in the circuit. If the triac is turned on at the beginning of each half-cycle, then current flows all of the time, and maximum power is delivered to the load. If we turn the triac on later in the half-cycle, or if we turn it on only sometimes, then less power is delivered. Depending on when and how often we turn on the triac, gives us two modes of operation. If we turn the triac on at the same relative point in each half-cycle, this is called **phase control**. If we turn the triac on for a cycle or two and then leave it off, it is called **burst fire** or sometimes whole cycle control.
 
-<embed alt="animated diagram of triac phase control waveforms" height="220" src="files/triac_phase.svg" type="image/svg+xml" width="600">
+![](files/triac_phase.svg)
+
+<object data="files/triac_phase.svg" type="image/svg+xml"></object>
 
 **Phase Control:**
 Maximum power is delivered to the load when the triac conducts for all of each half-cycle. The power ramps down continuously (but not linearly) to zero when the triac does not conduct at all.*
 
-<embed alt="animated diagram of triac burst fire control waveforms" height="250" src="files/triac_burst.svg" type="image/svg+xml" width="600">
+![](files/files/triac_burst.svg)
+
+<object data="files/files/triac_burst.svg" type="image/svg+xml"></object>
 
 **Burst Fire:**
 Maximum power is delivered to the load when the triac conducts for every cycle. As fewer cycles conduct, the average power falls in steps (of 20% in this case).*
