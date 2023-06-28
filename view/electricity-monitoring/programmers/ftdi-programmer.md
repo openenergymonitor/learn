@@ -18,7 +18,7 @@ packet.
 If you purchased it pre-assembled, nothing more needs to be done.
 
 Otherwise, insert the right-angled header socket from the component side and solder in position,
-ensuring that it sits as low as possible on the p.c.b.
+ensuring that it sits as low as possible on the PCB.
 
 ![FTDI_programmer.jpg][FTDI_programmer]
 
