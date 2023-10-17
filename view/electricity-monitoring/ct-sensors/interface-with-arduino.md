@@ -6,13 +6,27 @@ To connect a CT sensor to an Arduino, the output signal from the CT sensor needs
 
 **Note:** This page give the example of an Arduino board working at 5 V and of the EmonTx working at 3.3 V. Make sure you use the right supply voltage and bias voltage in your calculations that correspond to your setup.
 
-This can be achieved with the following circuit which consists of two main parts:
+There are two circuit configurations, which in theory obtain the same result. The first was used in the emonTx V2 and the emonPi. It’s been pointed out that many switched-mode power supplies include a capacitor connected between the negative end of the high voltage d.c. rectified a.c. mains supply and the negative of the secondary side output, to reduce electromagnetic interference from the primary switching waveforms. This has the effect of introducing noise into the analogue input. The second configuration, which is used in the emonTx4 and the emonPi2, avoids this problem.
+                                            
+The circuit consists of two main parts, their functions are to change the c.t’s current into a voltage of the correct amplitude, and position this voltage in the centre of the ADC’s input range.
 
-1.  The CT sensor and burden resistor
+The voltages and currents shown are for a 5 V Arduino, with a 0 – 5 V range for the analogue input, about 1.6 V rms for a sine wave. For the emonTx V2 & V3 and the emonPi, the analogue input range is 0 – 3.3 V, so the midpoint voltage is 1.65 V and the analogue input voltage swings between 0 and 3.3 V (approximately 1 V rms for a sine wave). For the emonTx4 and emonPi2, the analogue input range is 0 – 1 V and is intended for use with 0.333 V rms output current transformers, which do not need a burden. so this resistor is omitted.
 
-2.  The biasing voltage divider (_R1 & R2_)
+![ct-sensors-circuit1.png](files/ct-sensors-circuit1.png)
 
-![](files/Arduino_AC_current_input_A.png)
+*Configuration used in the emonTx V2 and the emonPi*
+                                   
+In this configuration, the current from the c.t. flows around the loop comprising the c.t. itself and the burden resistor, which develops a voltage across the burden. (Note: In a voltage-output c.t, the burden is inside the casing of the c.t.) The two bias resistors divide the supply voltage in two and the mid-point and one end of the burden sits at 2.5 V above ground. The capacitor provides a near short-circuit to a.c. which firmly fixes the mid-point voltage with little or no a.c. component superimposed on it. The other end of the burden connects directly to the analogue input, and so the analogue input sees the burden voltage superimposed on the bias voltage.
+                                                                                               
+Here again, the current from the c.t. flows around the loop comprising the c.t. itself and the burden resistor, and so develops a voltage across the burden. (Note: in a voltage-output c.t., the burden is inside the casing of the c.t.) This time, one end of the c.t and burden is connected solidly to ground.
+     
+![ct-sensors-circuit2.png](files/ct-sensors-circuit2.png)
+
+*Configuration used in the emonTx4 and the emonPi2*
+     
+Again, the two bias resistors divide the supply voltage in two, so the mid-point sits at 2.5 V above ground and this point connects to the analogue input. The difference is, the capacitor provides an a.c. path connecting the two sections whilst blocking the d.c. bias from reaching the c.t.  The bias resistors put a very small load on the c.t., but the effect of this is compensated for in the calibration.  The burden voltage is superimposed on the bias voltage, so the analogue input sees the burden voltage varying above and below the 2.5 V mid-point as shown. 
+                                                                                       
+In the emonTx4, a voltage-output c.t. is used whose output voltage is nominally 0.333 V rms, so there is no burden resistor, the bias resistors are unequal and the bias voltage is 0.512 V.
 
 ## Calculating a Suitable Burden Resistor Size
 

@@ -21,22 +21,27 @@ So we need to:
 
 The waveform can be scaled down using a voltage divider connected across the adapter's terminals, and the offset (bias) can be added using a voltage source created by another voltage divider connected across the Arduino's power supply (in the same way we added a bias for the current sensing circuit).
 
-Here's the circuit diagram and the voltage waveforms:
+There are two circuit configurations, which in theory obtain the same result. The first was used in the emonTx V2 and the emonPi. It’s been pointed out that many switched-mode power supplies include a capacitor connected between the negative end of the high voltage d.c. rectified a.c. mains supply and the negative of the secondary side output, to reduce electromagnetic interference from the primary switching waveforms. This has the effect of introducing noise into the analogue input. The second configuration, which is used in the emonTx V3 and in combination with the emonVs in the emonTx4 and the emonPi2, avoids this problem.
+                                            
+The circuit consists of two main parts, their functions are to change the a.c. adapter’s voltage to a lower voltage of the correct amplitude, and position this voltage in the centre of the ADC’s input range.
 
-![Arduino AC voltage input circuit diagram](files/Arduino-AC-voltage-input-1.png)
+The voltages and currents shown are for a 5 V Arduino, with a 0 – 5 V range for the analogue input, about 1.6 V rms for a sine wave. For the emonTx V2 & V3 and the emonPi, the analogue input range is 0 – 3.3 V, so the midpoint voltage is 1.65 V and the analogue input voltage swings between 0 and 3.3 V (approximately 1 V rms for a sine wave). 
 
-Resistors **R1** and **R2** form a voltage divider that scales down the power adapter AC voltage. Resistors **R3** and **R4** provide the voltage bias. Capacitor **C1** provides a low impedance path to ground for the AC signal. The value is not critical, between 1 μF and 10 μF will be satisfactory.
+![voltage-circuit1.png](files/voltage-circuit1.png)
 
-R1 and R2 need to be chosen to give a peak-voltage-output of ~1V. For an AC-AC adapter with an 9V RMS output, a resistor combination of 10k for R1 and 100k for R2 would be suitable:
+*Configuration used in the emonTx V2 and the emonPi*
 
-<pre>peak_voltage_output = R1 / (R1 + R2) x peak_voltage_input =
-10k / (10k + 100k) x 12.7V = 1.15V</pre>
+In this configuration, the a.c. adapter’s output voltage is divided down by the voltage divider comprising R1 & R2 in the ratio 18 / (100 + 18) and the output of the divider is 4.76 V peak-to-peak appearing across R1. The two bias resistors R3 & R4 divide the supply voltage in two, so the mid-point and one end of R1 sits at 2.5 V above ground. The capacitor provides a near short-circuit to a.c., which firmly fixes the mid-point voltage with little or no a.c. component superimposed on it. The other end of R1 connects directly to the analogue input, and so the analogue input sees the voltage across R1 superimposed on the bias voltage. 
 
-The voltage bias provided by R3 and R4 should be half of the Arduino supply voltage. As such, R3 and R4 need to be of equal resistance. Higher resistance lowers energy consumption. For a battery powered emonTx, where low power consumption is important, we use 470k resistors for R3 and R4.
+![voltage-circuit2.png](files/voltage-circuit2.png)
 
-If the Arduino is running at 5V the resultant waveform has a positive peak of 2.5V + 1.15V = 3.65V and negative peak of 1.35V satisfying the Arduino analog input voltage requirements. This also leaves some "headroom" to minimize the risk of over or under voltage.
+*Configuration used in the emonTx4 and the emonPi2*
 
-The 10k and 100k R1 and R2 combination works fine for an emonTx powered at 3.3V, with a positive peak of 2.8V and a negative peak of 0.5V.
+Here, again the a.c. adapter’s output voltage is divided down by the voltage divider comprising R1 & R2 in the ratio 18 / (100 + 18) and the output of the divider, which is 4.76 V peak-to-peak, appears across R1. This time, one end of the a.c. adapter and R1 is connected solidly to ground.
+
+Again, the two bias resistors R3 & R4 divide the supply voltage in two, so the mid-point sits at 2.5 V above ground and this point connects to the analogue input. The difference is, the capacitor provides an a.c. path connecting the two sections whilst blocking the d.c. bias from reaching the voltage divider and a.c adapter.  The bias resistors put a very small load on the voltage divider, but the effect of this is compensated for in the calibration.  The voltage across R1 is superimposed on the bias voltage, so the analogue input sees alternating voltage varying above and below the 2.5 V mid-point as shown. 
+                                             
+For the emonTx4, the a.c. adapter is replaced by a small current transformer whose input current is derived directly from the mains voltage, and its burden resistor replaces R1 (there is no R2). This part is inside the emonVs. The capacitor and bias resistors are in the emonTx4. The bias resistors are unequal and the bias voltage is 0.512 V. The output voltage from the emonVs is nominally 0.333 V rms.
 
 If you would like detailed information on how to calculate the optimum values for the components, taking component tolerances into account, see [this page](acac-component-tolerances).
 
