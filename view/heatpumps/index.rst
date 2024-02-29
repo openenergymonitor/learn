@@ -5,3 +5,4 @@ Learn: Heat pumps
    :maxdepth: 2
    
    basics.md
+   tools.md
