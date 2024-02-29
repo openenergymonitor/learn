@@ -4,11 +4,17 @@ Open source tools to help with heat pump design and understanding.
 
 ## [HeatLoss.js](https://openenergymonitor.org/heatlossjs)
 
-A small open source room by room heat loss calculator based on BS EN 12831:2003
+An open source room by room heat loss calculator based on BS EN 12831:2003. Includes automated internal heat balance & room temperature solver. Save and open projects to your computer locally.
+
+Source code available on github [here](https://github.com/trystanLea/heatlossjs).
 
 ## [SAP.js](https://openenergymonitor.org/sapjs)
 
 An open source javascript implementation of the SAP 2012 monthly building energy model.
+
+This tool builds on previous work on a similar tool called [MyHomeEnergyPlanner](https://github.com/emoncms/MyHomeEnergyPlanner), which started as a collaboration between OpenEnergyMonitor and CarbonCoop, both share the same core SAP model ([OpenBEM](https://github.com/trystanlea/Openbem)). This tool is just a new user interface that focuses on input flexibility as well as pairing things right down to the basics. 
+
+Source code available on github [here](https://github.com/trystanLea/SAPjs).
 
 ---
 
