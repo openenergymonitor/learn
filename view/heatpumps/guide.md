@@ -21,7 +21,7 @@ End-terrace solid stone house in North Wales with a Samsung Gen6 5kW air source 
 
 At 6:54 Glyn discusses how he did his heat loss calculation using [HeatLoss.js](https://openenergymonitor.org/heatlossjs) an open source tool that we have developed at OpenEnergyMonitor. 
 
-Glyn discusses briefly the importance of designing for low flow temperatures (35-40C) when it is -3C outside (design temperature) and the related radiator upgrades that he made to enable running the system at these lower flow temperatures.
+Glyn covers briefly the importance of designing for low flow temperatures (35-40C) when it is -3C outside (design temperature) and the related radiator upgrades that he made to enable running the system at these lower flow temperatures.
 
 Note that Glyn used a particularly low air-change rate for his calculation of 0.3 ACH based on the result from a blower door test. These are far lower than the values given in MCS/CIBSE guidance for pre-2000 properties which are usually around 1.5 ACH for properties of this age (range 1.0-3.0 ACH). 
 
@@ -41,9 +41,9 @@ Note that Glyn used a particularly low air-change rate for his calculation of 0.
 - 19:06 Data Analysis
 - 20:35 Conclusion
 
-In the introduction Glyn discusses how his monitored results so far validates the space heating demand estimate from his heat loss calculation and why it's important to be wary of EPC estimates that in his case over-estimated space heating demand by 2x! At 3:10 Glyn discusses his blower door test in more detail and why we believe this is one of the main causes for over-estimates with standard calculations.
+In the introduction, Glyn addresses the validation of his space heating demand estimate through monitored results, highlighting the discrepancy with EPC estimates that, in his case, doubled the projected space heating demand. Air change rate assumptions are often a key factor in overestimated projections, Glyn discusses the result of his blower door test in more detail at 3:10 which suggests an air change rate as low as 0.3 ACH.
 
-At 15:36 Glyn discusses system performance on the coldest day monitored so far which is a good test of the system design. The outside temperature was -2C, the COP was 3.2 and average heat input was 3.0 kW providing the desired 20C internal temperature during the evening in the Livingroom. Glyn discusses how this result validates his heat loss calculation which came to 3.3 kW based on the lower air change rate assumptions.
+The video presents results from the coldest day monitored so far where the average heat input from the heat pump was 3.0 kW. This agrees well with the calculated heat demand of 3.3 kW at -3C obtained using these lower air change rate values.
 
 ## Case study 2: 1980s Bungalow, Vaillant Arotherm 5kW
 
