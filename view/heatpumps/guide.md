@@ -2,7 +2,7 @@
 
 The following case studies and associated resources discuss what we have learnt so far at OpenEnergyMonitor about heat pump design, installation and resulting real-world performance.
 
-Electric heat pumps are a key technology in enabling the decarbonisation of heating, enabling the efficient conversion of electricity to heat. To unlock the highest efficiencies and lowest energy costs, care needs to be taken to ensure good design, installation and operation.
+Electric heat pumps are a key technology for the decarbonisation of heating, enabling the efficient conversion of electricity to heat. To unlock the highest efficiencies and lowest energy costs, care needs to be taken to ensure good design, installation and operation.
 
 We are interested in an approach that aims for a tight feedback loop between design, installation and monitored results.
 
