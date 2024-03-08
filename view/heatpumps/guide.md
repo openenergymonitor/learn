@@ -41,9 +41,9 @@ Note that Glyn used a particularly low air-change rate for his calculation of 0.
 - 19:06 Data Analysis
 - 20:35 Conclusion
 
-In the introduction, Glyn addresses the validation of his space heating demand estimate through monitored results, highlighting the discrepancy with EPC estimates that, in his case, doubled the projected space heating demand. Air change rate assumptions are often a key factor in overestimated projections, Glyn discusses the result of his blower door test in more detail at 3:10 which suggests an air change rate as low as 0.3 ACH.
+In the introduction, Glyn addresses the validation of his space heating demand estimate through monitored results, highlighting the discrepancy with EPC estimates that, in his case, doubled the projected space heating demand. 
 
-The video presents results from the coldest day monitored so far where the average heat input from the heat pump was 3.0 kW. This agrees well with the calculated heat demand of 3.3 kW at -3C obtained using these lower air change rate values.
+Glyn discusses the result of his blower door test in more detail at 3:10 which suggests an air change rate as low as 0.3 ACH. The video presents results from the coldest day monitored so far where the average heat input from the heat pump was 3.0 kW. This agrees well with the calculated heat demand of 3.3 kW at -3C obtained using these lower air change rate values.
 
 ## Case study 2: 1980s Bungalow, Vaillant Arotherm 5kW
 
