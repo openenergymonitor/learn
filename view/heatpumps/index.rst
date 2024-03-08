@@ -4,5 +4,7 @@ Learn: Heat pumps
 .. toctree::
    :maxdepth: 2
    
-   basics.md
+   Case Studies and Resources <guide.md>
+   Basic Theory <basics.md>
    tools.md
+   heatpumpmonitor.md
