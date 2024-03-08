@@ -41,7 +41,7 @@ Note that Glyn used a particularly low air-change rate for his calculation of 0.
 - 19:06 Data Analysis
 - 20:35 Conclusion
 
-In the introduction Glyn discusses how his monitored results so far validates the space heating demand estimate from his heat loss calculation and why it's important to be vary of EPC estimates that in his case over-estimated space heating demand by 2x! At 3:10 Glyn discusses his blower door test in more detail and why we believe this is one of the main causes for over-estimates with standard calculations.
+In the introduction Glyn discusses how his monitored results so far validates the space heating demand estimate from his heat loss calculation and why it's important to be wary of EPC estimates that in his case over-estimated space heating demand by 2x! At 3:10 Glyn discusses his blower door test in more detail and why we believe this is one of the main causes for over-estimates with standard calculations.
 
 At 15:36 Glyn discusses system performance on the coldest day monitored so far which is a good test of the system design. The outside temperature was -2C, the COP was 3.2 and average heat input was 3.0 kW providing the desired 20C internal temperature during the evening in the Livingroom. Glyn discusses how this result validates his heat loss calculation which came to 3.3 kW based on the lower air change rate assumptions.
 
