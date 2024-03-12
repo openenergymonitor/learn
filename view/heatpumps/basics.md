@@ -97,9 +97,9 @@ A standard [1200mm x 600mm K2 radiator](https://www.toolstation.com/kudox-premiu
 
 The mean water temperature at this rated output is therefore 70°C. *(The standard test procedure for radiators manufactured in Europe is given by the BS EN442 standard. Under this standard the temperature of the water going to the radiator (the flow temperature) is set to 75C, the room is set to 20C and then the flow rate is adjusted until the return temperature is 65C)*
 
-These temperatures are much higher than those that we would target with a heat pump for efficient low cost operation and higher than the maximum temperatures that many heat pumps can achieve. 
+These temperatures are much higher than those that we would target with a heat pump for efficient low cost operation. 
 
-The carnot COP equation above suggests that a heat pump would only achieve a COP of 2.3 at a flow temperature of 75°C (If this temperature could even be achived).
+The carnot COP equation above suggests that a heat pump would only achieve a COP of 2.3 at a flow temperature of 75°C (This would require a high temperature heat pump).
 
 The heat output of a radiator at different water temperatures can be calculated with the following equation:
 
@@ -141,7 +141,7 @@ The carnot COP equation above would suggest a COP of 2.9 at a flow temperature o
     
     flow temperature = MWT + 5K/2 = 37.9°C
     
-Using the carnot COP equation we can work out that our COP would thefore increase to 3.9 at typical January temperatures.
+Using the carnot COP equation we can work out that our COP would therefore increase to 3.9 at typical January temperatures.
 
 **Useful links**
 
